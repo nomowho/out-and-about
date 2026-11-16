@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>世界旅遊新訊｜Out and About</title>
+<meta name="description" id="mdesc" content="Out and About 世界旅遊新訊：編譯國際旅遊媒體的最新目的地消息。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Out and About">
+<meta property="og:title" id="ogt" content="">
+<meta property="og:description" id="ogd" content="">
+<meta property="og:image" id="ogi" content="">
+<link rel="canonical" id="canon" href="">
+<script type="application/ld+json" id="ld"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Montserrat:wght@300;500;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--white:#FFFFFF;--ink:#111111;--gray:#767676;--hair:#DADADA;--mist:#EDEFF5;--new:#E60012;--w:1170px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--ink);font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+h1,h2,h3{text-wrap:balance}
+.box{max-width:var(--w);margin:0 auto;padding:0 24px}
+
+/* 刊頭（同首頁） */
+.head{position:sticky;top:0;z-index:20;background:var(--white)}
+.head .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:12px 24px 4px}
+.head .tools{display:flex;gap:22px;font-size:12px}
+.head .tools.r{justify-content:flex-end}
+.head button{background:none;border:0;cursor:pointer;font:inherit}
+.logo{text-align:center;line-height:1}
+.logo small{font-size:13.5px;letter-spacing:.28em;color:#999;display:block;margin-top:5px}
+.logo b{font-family:'Bodoni Moda',serif;font-weight:700;font-size:26px;letter-spacing:-.01em;display:block}
+.nav{max-width:var(--w);margin:0 auto;display:flex;justify-content:center;gap:36px;padding:8px 24px 10px;border-bottom:1px solid var(--ink);font-family:'Montserrat',sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em}
+.nav a:hover{opacity:.5}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--ink);width:0}
+
+/* 麵包屑 */
+.crumb{font-family:'Montserrat',sans-serif;font-size:11.5px;color:var(--gray);padding:22px 0 0;display:flex;gap:8px}
+.crumb a:hover{color:var(--ink)}
+
+/* 文章頭 */
+.ahead{max-width:820px;margin:0 auto;text-align:center;padding:40px 24px 32px}
+.meta{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;display:flex;gap:10px;justify-content:center;align-items:baseline}
+.meta time{color:var(--gray);font-weight:300}
+.ahead h1{font-size:clamp(26px,3.4vw,40px);font-weight:700;line-height:1.45;margin:18px 0 18px}
+.ahead .dek{font-size:16px;line-height:1.9;color:#444;max-width:40em;margin:0 auto}
+.ahead .by{font-size:12px;color:var(--gray);margin-top:22px}
+.ahead .by b{color:var(--ink);font-weight:500}
+
+.hero{max-width:1100px;margin:0 auto;padding:0 24px}
+.hero figure{aspect-ratio:16/9;overflow:hidden;background:#eee}
+.hero figcaption{font-size:11px;color:var(--gray);margin-top:8px;text-align:right}
+
+/* 內文＋側欄 */
+.wrap{max-width:1100px;margin:56px auto 0;padding:0 24px;display:grid;grid-template-columns:1fr 280px;gap:72px}
+.body{max-width:680px}
+.body h2{font-size:21px;font-weight:700;line-height:1.5;margin:48px 0 16px;padding-top:18px;border-top:1px solid var(--ink);position:relative}
+.body h2:first-child{margin-top:0}
+.body p{font-size:16.5px;line-height:2.05;margin-bottom:1.3em;letter-spacing:.02em}
+.body > p:first-child::first-letter{font-size:3.1em;font-weight:700;float:left;line-height:1;margin:.12em .12em 0 0}
+.qa{margin-top:52px;border-top:1px solid var(--ink);padding-top:18px}
+.qa h2{border:0;padding:0;margin:0 0 6px;display:flex;align-items:baseline;gap:12px}
+.qa h2 .en{font-family:'Montserrat',sans-serif;font-weight:800;font-size:26px}
+.qa h2 span:last-child{font-size:14px;font-weight:500}
+.qa dl{margin-top:14px}
+.qa dt{font-size:16.5px;font-weight:700;line-height:1.7;padding:18px 0 6px 34px;position:relative;border-top:1px solid var(--hair)}
+.qa dt:first-child{border-top:0}
+.qa dd{font-size:15.5px;line-height:1.95;color:#333;padding:0 0 18px 34px;position:relative}
+.qa dt::before,.qa dd::before{position:absolute;left:0;font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px}
+.qa dt::before{content:'Q';top:18px}
+.qa dd::before{content:'A';top:0;color:var(--gray)}
+.also{background:var(--mist);padding:20px 24px;font-size:14px;line-height:1.9;margin-top:36px}
+.also b{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.08em;display:block;margin-bottom:4px}
+
+.side{align-self:start;position:sticky;top:110px}
+.facts{border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:16px 0 18px}
+.facts h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;text-align:center;margin-bottom:10px}
+.facts h3 small{font-family:'Noto Sans TC';font-size:11px;font-weight:500;margin-left:6px}
+.facts dl{display:grid;grid-template-columns:auto 1fr;gap:0 14px}
+.facts dt,.facts dd{font-size:13px;padding:9px 0;border-bottom:1px solid var(--hair)}
+.facts dt{color:var(--gray);white-space:nowrap}
+.facts dl > :nth-last-child(-n+2){border-bottom:0}
+.place{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;margin-top:18px;text-align:center}
+
+.source{max-width:680px;border-top:1px solid var(--ink);margin-top:48px;padding-top:16px;font-size:12.5px;color:var(--gray);line-height:1.9}
+.source b{color:var(--ink);font-weight:500}
+.source a{border-bottom:1px solid var(--hair)}
+.source a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* 延伸閱讀 */
+.more{margin-top:96px;padding:56px 0 64px;background:var(--mist)}
+.more.plain{background:none;margin-top:0;padding-top:72px}
+.sh{display:flex;align-items:baseline;gap:16px;margin-bottom:28px}
+.sh h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;line-height:1}
+.sh span{font-size:14px;font-weight:500}
+.sh a{margin-left:auto;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;border-bottom:1px solid var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card figure{aspect-ratio:3/2;overflow:hidden;background:#ddd}
+.card img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.04)}
+.card .meta{justify-content:flex-start;margin-top:12px;font-size:11.5px}
+.card h3{font-size:15px;font-weight:700;line-height:1.65;margin-top:5px}
+
+.notfound{text-align:center;padding:120px 24px}
+.notfound a{border-bottom:1px solid var(--ink)}
+footer{background:var(--ink);color:#fff;padding:44px 24px 36px;text-align:center}
+footer p{font-size:11px;color:#999;font-family:'Montserrat',sans-serif;margin-top:16px}
+
+@media(max-width:900px){
+  .wrap{grid-template-columns:1fr;gap:40px}
+  .side{position:static;order:-1}
+  .grid{grid-template-columns:1fr 1fr;gap:22px 14px}
+}
+@media(max-width:700px){
+  .head .bar{padding:10px 16px 4px}.head .tools span{display:none}
+  .nav{justify-content:flex-start;overflow-x:auto;gap:24px;padding:8px 16px;white-space:nowrap;scrollbar-width:none}
+  .ahead{padding-top:28px;text-align:left}.meta{justify-content:flex-start}
+  .hero{padding:0}
+  .body p{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="bar">
+    <div class="tools"><button aria-label="開啟選單">☰ <span>Menu</span></button></div>
+    <a class="logo" href="d-magazine.html"><b>Out and About</b><small>我出去一下就回來</small></a>
+    <div class="tools r"><a href="https://www.instagram.com/nomowho/" style="font-family:Montserrat">Instagram</a></div>
+  </div>
+  <nav class="nav" aria-label="分類">
+    <a href="d-magazine.html#latest-news">NEWS</a><a href="category.html#ARCHITECTURE">ARCHITECTURE</a><a href="category.html#ART">ART</a><a href="category.html#HISTORY">HISTORY</a><a href="category.html#NATURE">NATURE</a><a href="category.html#FAITH">FAITH</a><a href="category.html#FOOD">FOOD</a><a href="category.html#GUIDE">GUIDE</a>
+  </nav>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="main"></main>
+
+<footer>
+  <a class="logo" href="d-magazine.html"><b>Out and About</b></a>
+  <p>© 2026 Nomo · 世界旅遊新訊編譯自國際媒體，著作權屬原刊登媒體</p>
+</footer>
+
+<script src="posts-data.js"></script>
+<script src="news-data.js"></script>
+<script>
+const main = document.getElementById('main');
+const newsCard = n => `
+  <a class="card" href="news.html#${n.id}">
+    <figure><img src="${n.img}" alt="" loading="lazy" referrerpolicy="no-referrer"></figure>
+    <div class="meta"><span>NEWS · ${n.region}</span><time>${n.date}</time></div>
+    <h3>${n.title}</h3>
+  </a>`;
+const postCard = p => `
+  <a class="card" href="post.html#${p.id}">
+    <figure><img src="img/${p.id}.jpg" alt="${p.zh}" loading="lazy"></figure>
+    <div class="meta"><span>${p.cat}</span><time>${p.date}</time></div>
+    <h3>${p.title}</h3>
+  </a>`;
+
+function render() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  const i = NEWS.findIndex(n => n.id === id);
+  if (i < 0) {
+    main.innerHTML = `<div class="notfound"><p>找不到這篇新訊。</p><p><a href="d-magazine.html">回首頁看最新消息</a></p></div>`;
+    return;
+  }
+  const n = NEWS[i];
+  document.title = `${n.title}｜Out and About`;
+  setMeta(n);
+  // 延伸閱讀：其他外電依序接在後面
+  const others = [...NEWS.slice(i + 1), ...NEWS.slice(0, i)].slice(0, 3);
+  const picks = ['oirase', 'yamadera', 'sagrada-familia'].map(k => POSTS.find(p => p.id === k)).filter(Boolean);
+
+  main.innerHTML = `
+    <div class="box"><nav class="crumb" aria-label="位置"><a href="d-magazine.html">TOP</a>›<a href="d-magazine.html#latest-news">NEWS</a>›<span>${n.region}</span></nav></div>
+    <header class="ahead">
+      <div class="meta"><span>NEWS · ${n.region}</span><time>${n.date}</time></div>
+      <h1>${n.title}</h1>
+      ${n.dek ? `<p class="dek">${n.dek}</p>` : ''}
+      <p class="by">編譯｜<b>Nomo</b>　<time datetime="${iso(n.date)}">${n.date}</time>　資料來源 ${n.src}</p>
+    </header>
+    <div class="hero"><figure><img src="${n.img}" alt="" referrerpolicy="no-referrer"></figure><figcaption>Photo: ${n.src}</figcaption></div>
+    <div class="wrap">
+      <article class="body">
+        ${n.body.map(s => `${s.h ? `<h2>${s.h}</h2>` : ''}${s.p.map(t => `<p>${t}</p>`).join('')}`).join('')}
+        ${n.faq && n.faq.length ? `<section class="qa" aria-labelledby="qa-h"><h2 id="qa-h"><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${n.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
+        ${n.also ? `<div class="also"><b>ALSO</b>${n.also}</div>` : ''}
+        <div class="source">
+          本文由 Nomo 依下列報導編譯改寫，內容與數據以原文為準。Nomo 是旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」。<br>
+          原文：<b>${n.src}</b>〈${n.srcTitle}〉${n.srcAuthor ? `，${n.srcAuthor}` : ''}，${n.date}　<a href="${n.url}" target="_blank" rel="noopener">原文出處</a>
+        </div>
+      </article>
+      ${n.facts ? `<aside class="side"><div class="facts"><h3>Fact Sheet<small>重點速查</small></h3><dl>${n.facts.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl></div><p class="place">● ${n.place}</p></aside>` : ''}
+    </div>
+    <section class="more"><div class="box">
+      <div class="sh"><h2>More News</h2><span>更多世界旅遊新訊</span><a href="d-magazine.html#latest-news">All News</a></div>
+      <div class="grid">${others.map(newsCard).join('')}</div>
+    </div></section>
+    <section class="more plain"><div class="box">
+      <div class="sh"><h2>PICK UP</h2><span>編輯精選・我的旅行</span></div>
+      <div class="grid">${picks.map(postCard).join('')}</div>
+    </div></section>`;
+  scrollTo(0, 0);
+}
+function iso(d) { return d.replace(/./g, '-'); }
+const SITE = 'https://nomowho.github.io/out-and-about/';   // 正式網址待定
+function setMeta(n) {
+  const url = SITE + 'news/' + n.id;
+  document.getElementById('mdesc').content = n.dek;
+  document.getElementById('ogt').content = n.title;
+  document.getElementById('ogd').content = n.dek;
+  document.getElementById('ogi').content = n.img;
+  document.getElementById('canon').href = url;
+  const ld = [
+    { '@context':'https://schema.org', '@type':'NewsArticle',
+      headline:n.title, description:n.dek, image:[n.img], inLanguage:'zh-Hant-TW',
+      datePublished:iso(n.date), dateModified:iso(n.date), mainEntityOfPage:url,
+      author:{ '@type':'Person', name:'Nomo', url:'https://www.instagram.com/nomowho/' },
+      publisher:{ '@type':'Organization', name:'Out and About', url:SITE },
+      isBasedOn:{ '@type':'NewsArticle', headline:n.srcTitle, url:n.url, publisher:{ '@type':'Organization', name:n.src } },
+      contentLocation:{ '@type':'Place', name:n.place } },
+    { '@context':'https://schema.org', '@type':'BreadcrumbList', itemListElement:[
+      { '@type':'ListItem', position:1, name:'Out and About', item:SITE },
+      { '@type':'ListItem', position:2, name:'世界旅遊新訊', item:SITE + 'news/' },
+      { '@type':'ListItem', position:3, name:n.title, item:url } ] }
+  ];
+  if (n.faq && n.faq.length) ld.push({ '@context':'https://schema.org', '@type':'FAQPage',
+    mainEntity:n.faq.map(([q, a]) => ({ '@type':'Question', name:q, acceptedAnswer:{ '@type':'Answer', text:a } })) });
+  document.getElementById('ld').textContent = JSON.stringify(ld);
+}
+addEventListener('hashchange', render);
+render();
+
+// 閱讀進度條
+const bar = document.getElementById('progress');
+addEventListener('scroll', () => {
+  const art = document.querySelector('.body');
+  if (!art) return;
+  const r = art.getBoundingClientRect();
+  const pct = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight * .6)));
+  bar.style.width = (pct * 100) + '%';
+}, { passive: true });
+</script>
+</body>
+</html>
