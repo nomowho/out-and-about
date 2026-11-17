@@ -8,7 +8,7 @@ body{overflow-x:hidden}
 img{background:#eee}
 
 /* 刊頭 */
-.head{padding-top:env(safe-area-inset-top);background:rgba(255,255,255,.7)!important;-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6)}
+.head{padding-top:env(safe-area-inset-top);background:rgba(255,255,255,.4)!important;-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.head{background:rgba(255,255,255,.96)!important}}
 .head .bar{padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
 .head button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;display:flex;align-items:center;gap:10px;min-height:44px;padding:0}
