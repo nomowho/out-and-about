@@ -249,3 +249,7 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   .ring{width:auto}
   .ring .av{width:70px;height:70px}
 }
+
+/* 避免段落最後一行只剩一個字 */
+.nw{white-space:nowrap}
+p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}

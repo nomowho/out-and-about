@@ -16,7 +16,11 @@ const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.
 const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES } = vm.runInNewContext(code);
 const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
-const newsNew = [...NEWS].sort((a, b) => b.date.localeCompare(a.date));
+// 外電只上架最新 NEWS_MAX 篇；更舊的自動下架（頁面、sitemap、RSS 都拿掉），原始資料仍留在 news-data.js
+const NEWS_MAX = 10;
+const newsNew = [...NEWS].sort((a, b) => b.date.localeCompare(a.date)).slice(0, NEWS_MAX);
+// 網站版上線日：IG 改寫的文章以這天當作網站版的修改日期（除非文章自己有 updated）
+const WEB_LAUNCH = CFG.webLaunch || '2026-11-17';
 const TOP7 = [...POSTS].filter(p => p.photo !== false).sort((a, b) => b.likes - a.likes).slice(0, 7);
 
 const CATS = {
@@ -37,6 +41,8 @@ const regions = REGION_ORDER.filter(r => POSTS.some(p => p.region === r));
 /* ── 小工具 ── */
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = s => String(s).replace(/<[^>]+>/g, '');
+// 避免段落最後一行只剩一個字：段尾最後 3 個中文字（含標點）綁在一起不斷行
+const noOrphan = h => h.replace(/([　-鿿＀-￯]{3})(<\/(?:p|dd|dt|figcaption|li|h2|h3)>)/g, '<span class="nw">$1</span>$2');
 const iso = d => d.replace(/\./g, '-');
 const fixLinks = h => h.replace(/post\.html#([\w-]+)/g, '/stories/$1/').replace(/news\.html#([\w-]+)/g, '/news/$1/');
 const cut = (s, n) => { s = strip(s); if (s.length <= n) return s; const t = s.slice(0, n); const i = Math.max(t.lastIndexOf('。'), t.lastIndexOf('；')); return i > n * 0.5 ? t.slice(0, i + 1) : t.slice(0, n - 1) + '…'; };
@@ -149,7 +155,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
     <p class="drawer-foot"><a href="/about/">關於 Out and About</a><a href="https://www.instagram.com/nomowho/" rel="me noopener">Instagram @nomowho</a></p>
   </div>
 </div>
-<main id="main">${fixLinks(main)}</main>
+<main id="main">${noOrphan(fixLinks(main))}</main>
 <footer>
   <a class="logo" href="/"><b>Out and About</b><small>我出去一下就回來</small></a>
   <nav aria-label="頁尾"><a href="/about/">ABOUT</a>${navLinks('')}<a href="https://www.instagram.com/nomowho/" rel="me noopener">INSTAGRAM</a></nav>
@@ -210,7 +216,8 @@ function placeLd(p, d) {
   if (pl.geo) o.geo = { '@type': 'GeoCoordinates', latitude: pl.geo[0], longitude: pl.geo[1] };
   return o;
 }
-const AUTHOR_BOX =`<aside class="author" aria-label="關於作者"><b>文・攝影｜Nomo</b><p>旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」。文章由親自走訪的紀錄改寫，年代、數字與開放資訊對照官方資料查證。</p><a href="/about/">關於 Out and About ›</a></aside>`;
+const authorBox = hasSrc => `<aside class="author" aria-label="關於作者"><b>文・攝影｜Nomo</b><p>旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」。文章由親自走訪的紀錄改寫${hasSrc ? '，年代、數字與開放資訊的出處列在上方「資料來源」' : ''}。</p><a href="/about/">關於 Out and About ›</a></aside>`;
+const modOf = (p, d) => d.updated || (iso(p.date) > WEB_LAUNCH ? iso(p.date) : WEB_LAUNCH);
 
 for (const p of POSTS) {
   const d = POST_DETAIL[p.id];
@@ -226,7 +233,7 @@ for (const p of POSTS) {
       <div class="meta"><a href="${url.cat(p.cat)}">${p.cat}</a><span>· ${areaEn(p)}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
       <h1>${title}</h1>
       <p class="dek">${d.dek}</p>
-      <div class="by"><span>文・攝影｜<b>Nomo</b></span>${d.visit ? `<span>造訪｜${d.visit}</span>` : ''}${d.updated ? `<span>更新｜<time datetime="${d.updated}">${d.updated.replace(/-/g, '.')}</time></span>` : ''}<span>地點｜${p.zh}，${p.area}</span></div>`;
+      <div class="by"><span>文・攝影｜<b>Nomo</b></span>${d.visit ? `<span>造訪｜${d.visit}</span>` : ''}<span>${d.updated ? '更新' : '網站版'}｜<time datetime="${modOf(p, d)}">${modOf(p, d).replace(/-/g, '.')}</time></span><span>地點｜${p.zh}，${p.area}</span></div>`;
   const split = d.coverLayout === 'split';
   const top = !cover
     ? `<header class="ahead noimg">${head}</header>`
@@ -243,7 +250,7 @@ for (const p of POSTS) {
       ${d.info ? `<section class="info" id="info"><div class="in"><h2><span class="en">Travel Info</span><span>旅行資訊</span></h2><dl>${d.info.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="note">開放時間與費用可能調整，出發前請以官方公告為準。</p></div></section>` : ''}
       ${d.faq ? `<section class="qa" id="qa"><h2><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${d.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
       ${d.sources ? `<section class="refs" id="sources"><h2><span class="en">Sources</span><span>資料來源</span></h2><ol>${d.sources.map(([t, h, note]) => `<li><a href="${h}" target="_blank" rel="noopener">${t}</a>${note ? `<span>${note}</span>` : ''}</li>`).join('')}</ol></section>` : ''}
-      ${AUTHOR_BOX}
+      ${authorBox(!!d.sources)}
       <aside class="orig"><div class="in"><p><b>ORIGINALLY ON INSTAGRAM</b>這篇最早以圖卡形式發在 @nomowho，網站版補上了交通、時間與常見問題。</p><a href="${p.ig ? `https://www.instagram.com/nomowho/p/${p.ig}/` : 'https://www.instagram.com/nomowho/'}" target="_blank" rel="noopener">看 IG 原貼文</a></div></aside>
     </article>
     ${related.length ? `<section class="more"><div class="box">
@@ -254,7 +261,7 @@ for (const p of POSTS) {
   const ld = [
     { '@context': 'https://schema.org', '@type': 'BlogPosting', '@id': abs(u) + '#article', headline: cut(title, 110), name: title, description: desc,
       image: images.length ? images.slice(0, 6).map(s => abs('/' + s)) : [ogImg(p)], inLanguage: 'zh-Hant-TW',
-      datePublished: iso(p.date), dateModified: d.updated || iso(p.date), articleSection: `${p.cat} ${CATS[p.cat] ? CATS[p.cat].zh : ''}`.trim(),
+      datePublished: iso(p.date), dateModified: modOf(p, d), articleSection: `${p.cat} ${CATS[p.cat] ? CATS[p.cat].zh : ''}`.trim(),
       keywords: [p.zh, p.area, REGION_ZH[p.region] || p.region, CATS[p.cat] ? CATS[p.cat].zh : p.cat, '旅遊'].join(', '),
       mainEntityOfPage: { '@type': 'WebPage', '@id': abs(u) }, isPartOf: { '@id': abs('/#website') },
       author: PERSON, publisher: ORG,
@@ -263,12 +270,12 @@ for (const p of POSTS) {
   ];
   if (d.faq) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faq.map(([q, a]) => ({ '@type': 'Question', name: strip(q), acceptedAnswer: { '@type': 'Answer', text: strip(a) } })) });
   page({ file: `stories/${p.id}/index.html`, title: `${title}｜Out and About`, desc, canonical: u, type: 'article', image: cover ? abs('/' + cover) : ogImg(p), style: 'post', nav: p.cat, main, ld, progress: true,
-    extraHead: `<meta property="article:published_time" content="${iso(p.date)}">\n${d.updated ? `<meta property="article:modified_time" content="${d.updated}">\n` : ''}<meta property="article:author" content="Nomo">\n<meta property="article:section" content="${p.cat}">\n` });
-  sitemap.push({ loc: u, lastmod: d.updated || iso(p.date), images: images.map(s => abs('/' + s)) });
+    extraHead: `<meta property="article:published_time" content="${iso(p.date)}">\n${true ? `<meta property="article:modified_time" content="${modOf(p, d)}">\n` : ''}<meta property="article:author" content="Nomo">\n<meta property="article:section" content="${p.cat}">\n` });
+  sitemap.push({ loc: u, lastmod: modOf(p, d), images: images.map(s => abs('/' + s)) });
 }
 
 /* ── 外電頁 ── */
-NEWS.forEach(n => {
+newsNew.forEach(n => {
   const i = newsNew.indexOf(n);
   const others = [...newsNew.slice(i + 1), ...newsNew.slice(0, i)].slice(0, 3);
   const picks = TOP7.slice(0, 3);
@@ -388,7 +395,7 @@ for (const r of regions) {
       <h3>Stories<small>現在動態</small></h3>
       <ul class="rings one">${STORIES.slice(0, 1).map((st, i) => `
         <li><button type="button" class="ring" data-story="${i}" aria-label="看「${esc(st.label)}」動態，共 ${st.items.length} 則">
-          <span class="av">${img(st.items[0].img, '', { sizes: '76px' })}</span><b>${st.label}</b><time datetime="${iso(st.date)}" data-ago>${st.date}</time>
+          <span class="av">${img(st.items[0].img, st.label, { sizes: '76px' })}</span><b>${st.label}</b><time datetime="${iso(st.date)}" data-ago>${st.date}</time>
         </button></li>`).join('')}</ul>
     </div>
     <script type="application/json" id="storiesData">${JSON.stringify(STORIES.slice(0, 1).map(st => ({ label: st.label, date: iso(st.date),
@@ -461,6 +468,12 @@ for (const r of regions) {
       <p>關於建築、藝術、歷史、自然與信仰，也關於城市裡的食物和生活。</p>
       <p>除了記錄值得停留的風景，也整理交通、路線、開放時間與旅途中真正需要知道的細節。</p>
       <p>資訊可能隨時間改變，因此會盡可能標示參訪時間、更新內容與資料來源；若發現有誤，也會持續修正。</p>
+      <h2 id="policy">編輯原則</h2>
+      <p>STORIES 的文章都來自我自己走過的地方，照片除了特別標示的以外都是我拍的；圖說開頭寫「插畫｜」的是插畫，不是現場照片。</p>
+      <p>年代、數字、開放時間與票價，會對照官方網站或可靠的資料來源；有查證的文章，出處列在文末的「資料來源」，並標上查閱日期。頁首的「更新」日期，是這篇文章最後一次改動內容的時間。</p>
+      <p>NEWS 世界旅遊新訊是編譯自國際媒體的報導，整理過程使用 AI 工具協助，每一篇都標明原始媒體並附上原文連結，著作權屬於原刊登媒體。這個單元只保留最新 10 篇。</p>
+      <h2 id="contact">更正與聯絡</h2>
+      <p>如果你發現哪裡寫錯了，或開放資訊已經改變，歡迎到 Instagram <a href="https://www.instagram.com/nomowho/" rel="me noopener">@nomowho</a> 私訊告訴我，確認後會更正並更新日期。</p>
       <p class="pull">旅行終究會結束，但好奇心可以一直在路上。</p>
     </div></article>`;
   const desc = 'Out and About（我出去一下就回來）是 Nomo 的旅行、風景與文化個人誌：走得遠一點，看得深一些。親自走過的建築、藝術、歷史、自然與信仰，一半故事，一半旅行資訊。';
@@ -507,7 +520,7 @@ ${newsNew.map(n => `- [${n.title}](${abs(url.news(n.id))}): ${cut(n.dek || '', 1
 - [RSS](${abs('/feed.xml')})
 `);
 fs.writeFileSync(path.join(ROOT, 'llms-full.txt'), `# Out and About｜我出去一下就回來（完整內文）\n\n作者：Nomo（Instagram @nomowho）　網站：${abs('/')}\n\n` +
-  postsNew.map(p => { const d = POST_DETAIL[p.id]; return `---\n\n# ${d.seoTitle || p.title}\n\n網址：${abs(url.post(p.id))}\n地點：${p.zh}，${p.area}，${REGION_ZH[p.region] || p.region}　分類：${p.cat}　發佈：${iso(p.date)}${d.updated ? `　更新：${d.updated}` : ''}　作者：Nomo\n\n${strip(d.dek)}\n\n${mdBody(d)}\n${d.info ? `## 旅行資訊\n\n${d.info.map(([k, v]) => `- ${strip(k)}：${strip(v)}`).join('\n')}\n\n` : ''}${d.faq ? `## 常見問題\n\n${d.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}${d.sources ? `## 資料來源\n\n${d.sources.map(([t, h]) => `- ${strip(t)}：${h}`).join('\n')}\n\n` : ''}`; }).join('\n') +
+  postsNew.map(p => { const d = POST_DETAIL[p.id]; return `---\n\n# ${d.seoTitle || p.title}\n\n網址：${abs(url.post(p.id))}\n地點：${p.zh}，${p.area}，${REGION_ZH[p.region] || p.region}　分類：${p.cat}　發佈：${iso(p.date)}　更新：${modOf(p, d)}　作者：Nomo\n\n${strip(d.dek)}\n\n${mdBody(d)}\n${d.info ? `## 旅行資訊\n\n${d.info.map(([k, v]) => `- ${strip(k)}：${strip(v)}`).join('\n')}\n\n` : ''}${d.faq ? `## 常見問題\n\n${d.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}${d.sources ? `## 資料來源\n\n${d.sources.map(([t, h]) => `- ${strip(t)}：${h}`).join('\n')}\n\n` : ''}`; }).join('\n') +
   newsNew.map(n => `---\n\n# ${n.title}\n\n網址：${abs(url.news(n.id))}\n類型：世界旅遊新訊（編譯）　地點：${n.place}　發佈：${iso(n.date)}　原文：${n.src}〈${n.srcTitle}〉 ${n.url}\n\n${strip(n.dek || '')}\n\n${n.body.map(s => `${s.h ? `## ${strip(s.h)}\n\n` : ''}${s.p.map(strip).join('\n\n')}`).join('\n\n')}\n\n${n.faq && n.faq.length ? `## 常見問題\n\n${n.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}`).join('\n'));
 const feedItems = [...postsNew.map(p => ({ t: POST_DETAIL[p.id].seoTitle || p.title, u: url.post(p.id), d: strip(POST_DETAIL[p.id].dek), date: p.date, c: p.cat })),
   ...newsNew.map(n => ({ t: n.title, u: url.news(n.id), d: strip(n.dek || ''), date: n.date, c: 'NEWS' }))].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 40);
@@ -521,5 +534,7 @@ ${feedItems.map(f => `<item><title>${xml(f.t)}</title><link>${abs(f.u)}</link><g
 fs.writeFileSync(path.join(ROOT, '.nojekyll'), '');
 if (CFG.domain) fs.writeFileSync(path.join(ROOT, 'CNAME'), CFG.domain + '\n');
 
-console.log(`built: ${POSTS.length} stories, ${NEWS.length} news, ${Object.keys(CATS).length} categories, ${SERIES.length} series, ${regions.length} destinations → ${SITE}`);
+{ const keep = new Set(newsNew.map(n => n.id)); const nd = path.join(ROOT, 'news');
+  if (fs.existsSync(nd)) for (const e of fs.readdirSync(nd, { withFileTypes: true })) if (e.isDirectory() && !keep.has(e.name)) { fs.rmSync(path.join(nd, e.name), { recursive: true, force: true }); console.log('news retired:', e.name); } }
+console.log(`built: ${POSTS.length} stories, ${newsNew.length}/${NEWS.length} news, ${Object.keys(CATS).length} categories, ${SERIES.length} series, ${regions.length} destinations → ${SITE}`);
 if (missing.length) console.warn('MISSING IMAGES:', [...new Set(missing)]);
