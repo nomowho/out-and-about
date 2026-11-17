@@ -199,7 +199,18 @@ function block(b) {
   }
   return '';
 }
-const AUTHOR_BOX = `<aside class="author" aria-label="關於作者"><b>文・攝影｜Nomo</b><p>旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」。文章由親自走訪的紀錄改寫，年代、數字與開放資訊對照官方資料查證。</p><a href="/about/">關於 Out and About ›</a></aside>`;
+// 景點實體：文章有 place 欄位時補上別名、官網、座標與 sameAs（維基數據等），讓搜尋引擎對得上是哪一個地點
+function placeLd(p, d) {
+  const pl = d.place || {};
+  const o = { '@type': 'TouristAttraction', name: p.zh };
+  if (pl.alt) o.alternateName = pl.alt;
+  if (pl.url) o.url = pl.url;
+  if (pl.sameAs) o.sameAs = pl.sameAs;
+  o.address = Object.assign({ '@type': 'PostalAddress', addressRegion: p.area, addressCountry: p.region }, pl.address || {});
+  if (pl.geo) o.geo = { '@type': 'GeoCoordinates', latitude: pl.geo[0], longitude: pl.geo[1] };
+  return o;
+}
+const AUTHOR_BOX =`<aside class="author" aria-label="關於作者"><b>文・攝影｜Nomo</b><p>旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」。文章由親自走訪的紀錄改寫，年代、數字與開放資訊對照官方資料查證。</p><a href="/about/">關於 Out and About ›</a></aside>`;
 
 for (const p of POSTS) {
   const d = POST_DETAIL[p.id];
@@ -215,7 +226,7 @@ for (const p of POSTS) {
       <div class="meta"><a href="${url.cat(p.cat)}">${p.cat}</a><span>· ${areaEn(p)}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
       <h1>${title}</h1>
       <p class="dek">${d.dek}</p>
-      <div class="by"><span>文・攝影｜<b>Nomo</b></span>${d.visit ? `<span>造訪｜${d.visit}</span>` : ''}<span>地點｜${p.zh}，${p.area}</span></div>`;
+      <div class="by"><span>文・攝影｜<b>Nomo</b></span>${d.visit ? `<span>造訪｜${d.visit}</span>` : ''}${d.updated ? `<span>更新｜<time datetime="${d.updated}">${d.updated.replace(/-/g, '.')}</time></span>` : ''}<span>地點｜${p.zh}，${p.area}</span></div>`;
   const split = d.coverLayout === 'split';
   const top = !cover
     ? `<header class="ahead noimg">${head}</header>`
@@ -223,14 +234,15 @@ for (const p of POSTS) {
       ? `<section class="split"><header class="ahead">${head}</header><figure>${img(cover, d.coverCap || p.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 44vw' })}${d.coverCap ? `<figcaption>${d.coverCap}</figcaption>` : ''}</figure></section>`
       : `<div class="cover">${img(cover, d.coverCap || p.zh, { lazy: false, sizes: '100vw' })}</div>${d.coverCap ? `<p class="covercap">${d.coverCap}</p>` : ''}<header class="ahead">${head}</header>`;
   const heads = d.body.filter(b => b.t === 'h');
-  const main = `<article itemscope itemtype="https://schema.org/BlogPosting">${top}
+  const main = `<article>${top}
       <nav class="toc" aria-label="目次"><div class="in"><h2>CONTENTS 目次</h2><ol>
         ${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}
-        ${d.info ? '<li><a href="#info">旅行資訊</a></li>' : ''}${d.faq ? '<li><a href="#qa">常見問題</a></li>' : ''}
+        ${d.info ? '<li><a href="#info">旅行資訊</a></li>' : ''}${d.faq ? '<li><a href="#qa">常見問題</a></li>' : ''}${d.sources ? '<li><a href="#sources">資料來源</a></li>' : ''}
       </ol></div></nav>
-      <div class="body" itemprop="articleBody">${d.body.map(block).join('')}</div>
+      <div class="body">${d.body.map(block).join('')}</div>
       ${d.info ? `<section class="info" id="info"><div class="in"><h2><span class="en">Travel Info</span><span>旅行資訊</span></h2><dl>${d.info.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="note">開放時間與費用可能調整，出發前請以官方公告為準。</p></div></section>` : ''}
       ${d.faq ? `<section class="qa" id="qa"><h2><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${d.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
+      ${d.sources ? `<section class="refs" id="sources"><h2><span class="en">Sources</span><span>資料來源</span></h2><ol>${d.sources.map(([t, h, note]) => `<li><a href="${h}" target="_blank" rel="noopener">${t}</a>${note ? `<span>${note}</span>` : ''}</li>`).join('')}</ol></section>` : ''}
       ${AUTHOR_BOX}
       <aside class="orig"><div class="in"><p><b>ORIGINALLY ON INSTAGRAM</b>這篇最早以圖卡形式發在 @nomowho，網站版補上了交通、時間與常見問題。</p><a href="${p.ig ? `https://www.instagram.com/nomowho/p/${p.ig}/` : 'https://www.instagram.com/nomowho/'}" target="_blank" rel="noopener">看 IG 原貼文</a></div></aside>
     </article>
@@ -246,12 +258,12 @@ for (const p of POSTS) {
       keywords: [p.zh, p.area, REGION_ZH[p.region] || p.region, CATS[p.cat] ? CATS[p.cat].zh : p.cat, '旅遊'].join(', '),
       mainEntityOfPage: { '@type': 'WebPage', '@id': abs(u) }, isPartOf: { '@id': abs('/#website') },
       author: PERSON, publisher: ORG,
-      about: { '@type': 'TouristAttraction', name: p.zh, address: { '@type': 'PostalAddress', addressRegion: p.area, addressCountry: p.region } } },
+      about: placeLd(p, d) },
     crumbLd([['Out and About', '/'], [p.cat, url.cat(p.cat)], [title, u]])
   ];
   if (d.faq) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faq.map(([q, a]) => ({ '@type': 'Question', name: strip(q), acceptedAnswer: { '@type': 'Answer', text: strip(a) } })) });
   page({ file: `stories/${p.id}/index.html`, title: `${title}｜Out and About`, desc, canonical: u, type: 'article', image: cover ? abs('/' + cover) : ogImg(p), style: 'post', nav: p.cat, main, ld, progress: true,
-    extraHead: `<meta property="article:published_time" content="${iso(p.date)}">\n<meta property="article:author" content="Nomo">\n<meta property="article:section" content="${p.cat}">\n` });
+    extraHead: `<meta property="article:published_time" content="${iso(p.date)}">\n${d.updated ? `<meta property="article:modified_time" content="${d.updated}">\n` : ''}<meta property="article:author" content="Nomo">\n<meta property="article:section" content="${p.cat}">\n` });
   sitemap.push({ loc: u, lastmod: d.updated || iso(p.date), images: images.map(s => abs('/' + s)) });
 }
 
@@ -495,7 +507,7 @@ ${newsNew.map(n => `- [${n.title}](${abs(url.news(n.id))}): ${cut(n.dek || '', 1
 - [RSS](${abs('/feed.xml')})
 `);
 fs.writeFileSync(path.join(ROOT, 'llms-full.txt'), `# Out and About｜我出去一下就回來（完整內文）\n\n作者：Nomo（Instagram @nomowho）　網站：${abs('/')}\n\n` +
-  postsNew.map(p => { const d = POST_DETAIL[p.id]; return `---\n\n# ${d.seoTitle || p.title}\n\n網址：${abs(url.post(p.id))}\n地點：${p.zh}，${p.area}，${REGION_ZH[p.region] || p.region}　分類：${p.cat}　發佈：${iso(p.date)}　作者：Nomo\n\n${strip(d.dek)}\n\n${mdBody(d)}\n${d.info ? `## 旅行資訊\n\n${d.info.map(([k, v]) => `- ${strip(k)}：${strip(v)}`).join('\n')}\n\n` : ''}${d.faq ? `## 常見問題\n\n${d.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}`; }).join('\n') +
+  postsNew.map(p => { const d = POST_DETAIL[p.id]; return `---\n\n# ${d.seoTitle || p.title}\n\n網址：${abs(url.post(p.id))}\n地點：${p.zh}，${p.area}，${REGION_ZH[p.region] || p.region}　分類：${p.cat}　發佈：${iso(p.date)}${d.updated ? `　更新：${d.updated}` : ''}　作者：Nomo\n\n${strip(d.dek)}\n\n${mdBody(d)}\n${d.info ? `## 旅行資訊\n\n${d.info.map(([k, v]) => `- ${strip(k)}：${strip(v)}`).join('\n')}\n\n` : ''}${d.faq ? `## 常見問題\n\n${d.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}${d.sources ? `## 資料來源\n\n${d.sources.map(([t, h]) => `- ${strip(t)}：${h}`).join('\n')}\n\n` : ''}`; }).join('\n') +
   newsNew.map(n => `---\n\n# ${n.title}\n\n網址：${abs(url.news(n.id))}\n類型：世界旅遊新訊（編譯）　地點：${n.place}　發佈：${iso(n.date)}　原文：${n.src}〈${n.srcTitle}〉 ${n.url}\n\n${strip(n.dek || '')}\n\n${n.body.map(s => `${s.h ? `## ${strip(s.h)}\n\n` : ''}${s.p.map(strip).join('\n\n')}`).join('\n\n')}\n\n${n.faq && n.faq.length ? `## 常見問題\n\n${n.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}`).join('\n'));
 const feedItems = [...postsNew.map(p => ({ t: POST_DETAIL[p.id].seoTitle || p.title, u: url.post(p.id), d: strip(POST_DETAIL[p.id].dek), date: p.date, c: p.cat })),
   ...newsNew.map(n => ({ t: n.title, u: url.news(n.id), d: strip(n.dek || ''), date: n.date, c: 'NEWS' }))].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 40);

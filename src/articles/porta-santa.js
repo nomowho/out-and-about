@@ -24,6 +24,7 @@ POST_DETAIL['porta-santa'] = {
     { t:'p', text:'現在大家看到的青銅聖門，門上浮雕刻著從人類犯罪到救贖的故事，是 20 世紀中期才換上的現代作品，不是中世紀的古物。' },
     { t:'img', size:'side', src:'img/porta-santa/door.jpg', cap:'敞開的青銅聖門，一格一格的浮雕講的是罪與救贖。' },
     { t:'p', text:'走過聖門，重點或許不在罪真的消了多少，而在於它讓人願意相信：有些門，值得等 25 年。你有沒有一扇等了很久才敢推開的門？' },
+    { t:'p', text:'→ 羅馬的另一段朝聖路：<a href="post.html#scala-santa">信徒跪著爬上去的 28 階聖階</a>' },
     { t:'pair', imgs:['img/porta-santa/dome.jpg','img/porta-santa/statue.jpg'], cap:'左：米開朗基羅設計的大圓頂。右：大殿裡手持十字架的大理石雕像。' }
   ],
   info:[

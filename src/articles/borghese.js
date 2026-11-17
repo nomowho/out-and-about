@@ -2,7 +2,7 @@
 // 查證：Scipione Borghese 樞機主教 17 世紀收藏、位於博爾蓋塞公園內、須預約且每場參觀限時 2 小時、七件作品年代依 IG 原文（與館方標示一致）
 // 照片：Nomo 原檔（output/photos/_web-photos/borghese/），2026-11-17 輸出
 POST_DETAIL['borghese'] = {
-  seoTitle:'羅馬博爾蓋塞美術館：一定要預約、只能待 2 小時，貝尼尼把大理石捏成肉的地方',
+  seoTitle:'羅馬博爾蓋塞美術館：一定要預約、只能待 2 小時，看貝尼尼如何把大理石捏成肉肉',
   dek:'博爾蓋塞美術館（Galleria Borghese）在羅馬博爾蓋塞公園裡，收藏貝尼尼、卡拉瓦喬、卡諾瓦的巔峰之作，最有名的是貝尼尼的《被擄掠的普洛塞庇娜》與《阿波羅與達芙妮》。美術館採預約制，每個時段限時約 2 小時，旺季常提早額滿。',
   cover:'img/borghese/cover.jpg', coverLayout:'split',
   coverCap:'貝尼尼《被擄掠的普洛塞庇娜》，少女奮力掙扎、伸手推開冥王。',
