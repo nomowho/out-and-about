@@ -192,6 +192,15 @@ const sitemap = [];   // { loc, lastmod, images[] }
    後面文字不夠 → 往上移到前一段文字的開頭；前後都不夠 → 改成置中直式圖（tall） */
 const SIDE_MIN = 200;
 const plainLen = b => b.t === 'p' ? strip(b.text).length : 0;
+// 正文結尾落款「我出去一下就回來」：放在最後一段正文之後；文末的「→ 延伸閱讀」連結排在落款下方（外電頁不使用）
+// 落款連到關於頁：每篇文章多一條指向作者介紹的內部連結（E-E-A-T）
+const SIGNOFF = '<p class="signoff"><a href="/about/" aria-label="我出去一下就回來：關於 Out and About 與作者 Nomo"><span class="zh">我出去一下就回來</span><span class="en" lang="en">Out and About</span></a></p>';
+function withSignoff(htmls) {
+  let i = htmls.length;
+  while (i > 0 && /^<p>→/.test(htmls[i - 1])) i--;
+  return [...htmls.slice(0, i), SIGNOFF, ...htmls.slice(i)].join('');
+}
+
 function layoutSides(body) {
   const out = body.map(b => ({ ...b }));
   for (let i = 0; i < out.length; i++) {
@@ -270,7 +279,7 @@ for (const p of POSTS) {
         ${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}
         ${d.info ? '<li><a href="#info">旅行資訊</a></li>' : ''}${d.faq ? '<li><a href="#qa">常見問題</a></li>' : ''}${d.sources ? '<li><a href="#sources">資料來源</a></li>' : ''}
       </ol></div></nav>
-      <div class="body">${layoutSides(d.body).map(block).join('')}</div>
+      <div class="body">${withSignoff(layoutSides(d.body).map(block))}</div>
       ${d.info ? `<section class="info" id="info"><div class="in"><h2><span class="en">Travel Info</span><span>旅行資訊</span></h2><dl>${d.info.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="note">開放時間與費用可能調整，出發前請以官方公告為準。</p></div></section>` : ''}
       ${d.faq ? `<section class="qa" id="qa"><h2><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${d.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
       ${d.sources ? `<section class="refs" id="sources"><h2><span class="en">Sources</span><span>資料來源</span></h2><ol>${d.sources.map(([t, h, note]) => `<li><a href="${h}" target="_blank" rel="noopener">${t}</a>${note ? `<span>${note}</span>` : ''}</li>`).join('')}</ol></section>` : ''}

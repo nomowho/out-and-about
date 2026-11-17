@@ -54,6 +54,12 @@ h1,h2,h3{text-wrap:balance}
 
 /* 內文 */
 .body{max-width:680px;margin:48px auto 0;padding:0 24px}
+.body .signoff{clear:both;text-align:center;margin:56px 0 40px;padding-top:28px;line-height:1}
+.body .signoff::before{content:'';display:block;width:40px;height:1px;background:var(--ink);margin:0 auto 26px}
+.body .signoff a{display:inline-block;padding:4px 8px;text-decoration:none;color:inherit;border:0;transition:opacity .2s}
+.body .signoff a:hover{opacity:.6}
+.body .signoff .zh{display:block;font-size:17px;font-weight:500;letter-spacing:.32em;text-indent:.32em;color:var(--ink)}
+.body .signoff .en{display:block;margin-top:12px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:.3em;text-indent:.3em;text-transform:uppercase;color:var(--gray)}
 .body > p{font-size:16.5px;line-height:2.05;margin-bottom:1.3em;letter-spacing:.02em}
 .body > p:first-child::first-letter{font-size:3.1em;font-weight:700;float:left;line-height:1;margin:.12em .12em 0 0}
 .body h2{font-size:21px;font-weight:700;line-height:1.5;margin:56px 0 16px;padding-top:18px;border-top:1px solid var(--ink);scroll-margin-top:110px}
