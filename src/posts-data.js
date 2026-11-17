@@ -31,7 +31,7 @@ const POSTS = [
   { id:'etna', ig:'DVRHKGCknNz', likes:203, photo:true, cat:'NATURE', date:'2026.02.27', region:'Italy', area:'Sicilia', zh:'埃特納火山', title:'西西里的冰與火之歌：去歐洲最活躍的火山' },
   { id:'catania', ig:'DVOgnOBkkpX', likes:250, photo:true, cat:'ARCHITECTURE', date:'2026.02.26', region:'Italy', area:'Sicilia', zh:'卡塔尼亞', title:'西西里島的黑色巴洛克：用火山岩蓋起來的城市' },
   { id:'tivoli', ig:'DTVAtJgkjM0', likes:318, photo:true, cat:'ARCHITECTURE', date:'2026.01.10', region:'Italy', area:'Lazio', zh:'蒂沃利', title:'古羅馬皇帝的水樂園，美到連丹麥都來借名字' },
-  { id:'scala-santa', ig:'DSfa56ykkwq', likes:6781, photo:false, cat:'HISTORY', date:'2025.12.20', region:'Italy', area:'Roma', zh:'聖階', title:'耶穌受審前走過的 28 階，跪著爬上羅馬的聖階' },
+  { id:'scala-santa', ig:'DSfa56ykkwq', likes:6781, photo:true, cat:'HISTORY', date:'2025.12.20', region:'Italy', area:'Roma', zh:'聖階', title:'耶穌受審前走過的 28 階，跪著爬上羅馬的聖階' },
   { id:'borghese', ig:'DREdslJEqWJ', likes:327, photo:false, cat:'ART', date:'2025.11.15', region:'Italy', area:'Roma', zh:'博爾蓋塞美術館', title:'羅馬最滿足的兩小時：看貝尼尼把大理石捏成肉' },
   { id:'moses', ig:'DQZpFbKkmB6', likes:761, photo:false, cat:'ART', date:'2025.10.29', region:'Italy', area:'Roma', zh:'米開朗基羅摩西像', title:'比大衛還震撼？米開朗基羅的巔峰之作摩西像' },
   { id:'hengchun', ig:'DQLMiqlEjOK', likes:156, photo:false, cat:'NATURE', date:'2025.10.23', region:'Taiwan', area:'屏東', zh:'恆春欖仁溪', title:'跟著老鷹飛過欖仁溪：恆春的秋天是被風推著走的' },
