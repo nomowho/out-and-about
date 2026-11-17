@@ -30,6 +30,7 @@ POST_DETAIL['borghese'] = {
     { t:'h', id:'tips', text:'參觀博爾蓋塞美術館要注意什麼？' },
     { t:'img', size:'side', src:'img/borghese/jerome.jpg', cap:'卡拉瓦喬《聖哲羅姆寫作》，桌上放著一顆頭骨。' },
     { t:'p', text:'美術館一定要事先預約，每個入場時段限時約 2 小時，旺季常常提早好幾週就額滿。大型包包要寄放，一樓雕塑、二樓畫作，建議先看完貝尼尼再上樓。看完別急著走，外面的博爾蓋塞公園很適合散步。' },
+    { t:'img', size:'full', src:'img/borghese/park-temple.jpg', cap:'看完美術館往公園走，湖心的醫神神殿（Tempio di Esculapio）在傍晚亮起燈。' },
     { t:'p', text:'→ 更多卡拉瓦喬：<a href="post.html#caravaggio">羅馬免費看卡拉瓦喬</a>' }
   ],
   info:[
