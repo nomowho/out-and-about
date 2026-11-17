@@ -36,7 +36,7 @@ const POSTS = [
   { id:'moses', ig:'DQZpFbKkmB6', likes:761, photo:true, cat:'ART', date:'2025.10.29', region:'Italy', area:'Roma', zh:'米開朗基羅摩西像', title:'比大衛還震撼？米開朗基羅的巔峰之作摩西像' },
   { id:'hengchun', ig:'DQLMiqlEjOK', likes:156, photo:true, cat:'NATURE', date:'2025.10.23', region:'Taiwan', area:'屏東', zh:'恆春欖仁溪', title:'跟著老鷹飛過欖仁溪：恆春的秋天是被風推著走的' },
   { id:'caravaggio', ig:'DQCSIC8kkGz', likes:264, photo:true, cat:'ART', date:'2025.10.20', region:'Italy', area:'Roma', zh:'聖路易吉法國人教堂', title:'羅馬免費看卡拉瓦喬：三幅用光寫成的聖經' },
-  { id:'aventine', ig:'DPYN2nnEvYx', likes:1561, photo:false, cat:'HISTORY', date:'2025.10.04', region:'Italy', area:'Roma', zh:'亞文提諾山', title:'羅馬的奈米景點：一眼看見三個國家的鑰匙孔' },
+  { id:'aventine', ig:'DPYN2nnEvYx', likes:1561, photo:true, cat:'HISTORY', date:'2025.10.04', region:'Italy', area:'Roma', zh:'亞文提諾山', title:'羅馬的奈米景點：一眼看見三個國家的鑰匙孔' },
   { id:'louvre-pyramid', ig:'DPEq8hpki9x', likes:181, photo:false, cat:'ARCHITECTURE', date:'2025.09.26', region:'France', area:'Paris', zh:'羅浮宮倒金字塔', title:'讓光與時間靜靜下墜：羅浮宮的倒金字塔' },
   { id:'byrne-portugal', ig:'DO2qItPkj88', likes:174, photo:false, cat:'ARCHITECTURE', date:'2025.09.20', region:'Portugal', area:'Alentejo', zh:'阿托萊魯什戰役解說中心', title:'朝聖 Gonçalo Byrne 的紅色混凝土：阿托萊魯什戰役解說中心' },
   { id:'berlengas', ig:'DOjCzGFEvbL', likes:179, photo:false, cat:'NATURE', date:'2025.09.13', region:'Portugal', area:'Peniche', zh:'貝倫加斯群島', title:'大西洋上的海上碉堡：貝倫加斯群島' },
