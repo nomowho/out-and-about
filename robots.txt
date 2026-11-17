@@ -50,4 +50,4 @@ Allow: /
 User-agent: DuckAssistBot
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://nomowho.com/sitemap.xml
