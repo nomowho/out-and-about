@@ -4,14 +4,14 @@
 POST_DETAIL['alberobello'] = {
   seoTitle:'義大利蘑菇屋阿爾貝羅貝洛：1,500 棟 Trulli 為什麼不用水泥？逃稅傳說與兩區怎麼逛',
   dek:'阿爾貝羅貝洛（Alberobello）在義大利南部普利亞大區，山坡上有約 1,500 棟灰色石錐頂的圓形石屋 Trulli，1996 年列入聯合國世界遺產。它們用石頭乾砌、不用灰漿，相傳是為了能快速拆掉、躲避王國的房屋稅。',
-  cover:'img/alberobello/cover.jpg',
-  coverCap:'從觀景台望過去，整片山坡都是灰色的石錐屋頂。',
+  cover:'img/alberobello/cover-v.jpg', coverLayout:'split',
+  coverCap:'Rione Monti 的山坡上，石錐屋頂一頂接著一頂。',
   visit:'4 月',
   body:[
     { t:'p', text:'石板路踩上去是溫的。陽光把每一頂灰色的石錐曬得像剛出爐的麵包，走進巷子的瞬間，你會以為誤入了童話。但這座小鎮真正的故事，比童話現實得多。' },
     { t:'h', id:'what', text:'阿爾貝羅貝洛的蘑菇屋是什麼？' },
     { t:'p', text:'阿爾貝羅貝洛位在義大利南部的普利亞大區（Puglia），山坡上密密麻麻排著約 1,500 棟 Trulli：白色石灰牆、灰色石片疊成的圓錐屋頂。最特別的是，這些房子沒有用水泥或灰漿，每一塊石頭都是乾疊上去的。1996 年，Trulli 被列入聯合國世界遺產。' },
-    { t:'pair', imgs:['img/alberobello/monti.jpg','img/alberobello/lane.jpg'], cap:'左：Rione Monti 山坡上密密麻麻的石錐頂。右：往坡上走的石板巷。' },
+    { t:'img', size:'wide', src:'img/alberobello/cover.jpg', cap:'從觀景台望過去，整片山坡都是灰色的石錐屋頂。' },
     { t:'h', id:'tax', text:'為什麼說它是「逃稅建築」？' },
     { t:'p', text:'流傳最廣的說法是：當年這一帶屬於那不勒斯王國，新蓋的聚落和永久建築都要課稅。當地領主為了逃稅，要求農民用乾砌石頭蓋房子，不用任何黏合劑；稅官要來查的時候，就把屋頂拆掉，讓它看起來「不算房子」，稅官一走再蓋回去。' },
     { t:'p', text:'這段故事有多少誇張成分已經很難考證，但「能隨時拆掉」的乾砌工法是真的。幾百年過去，當年為了省錢的權宜之計，反而成了世界遺產。' },

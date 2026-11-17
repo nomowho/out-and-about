@@ -45,12 +45,14 @@ body.locked{overflow:hidden}
 .split .ahead .crumb{justify-content:flex-start}
 .ahead .meta a{border-bottom:1px solid var(--hair)}
 
-/* 外電文字卡（不放原站照片） */
-.tcard .tx{aspect-ratio:3/2;background:#fff;border:1px solid var(--hair);display:flex;flex-direction:column;padding:18px 20px;transition:border-color .3s}
-.tcard:hover .tx{border-color:var(--ink)}
-.tcard .tx span{font-family:'Montserrat',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.14em;color:var(--gray)}
-.tcard .tx b{font-size:clamp(19px,2vw,24px);font-weight:700;line-height:1.35;margin-top:auto}
-.tcard .tx i{font-style:normal;font-size:11px;color:var(--gray);margin-top:6px;font-family:'Montserrat','Noto Sans TC',sans-serif}
+/* 外電：條列（不放原站照片，也不放方塊） */
+.grid:has(> .tcard){display:block!important}
+.tcard{display:block;padding:18px 0;border-top:1px solid rgba(0,0,0,.14)}
+.tcard:first-child{border-top:0;padding-top:4px}
+.tcard .meta{margin-top:0}
+.tcard h3{font-size:17px;line-height:1.6;margin-top:6px}
+.tcard:hover h3{text-decoration:underline;text-underline-offset:4px}
+.tcard .src{font-size:12px;color:var(--gray);margin-top:4px}
 
 /* 首屏輪播 */
 .slide{display:block;color:inherit}
@@ -107,11 +109,8 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   .pick .sh{flex-wrap:wrap;gap:6px 12px}
   .pick .sh .note{margin-left:0;flex-basis:100%}
   .pick .grid{grid-template-columns:1fr;gap:0}
-  .tcard{display:block;padding:16px 0;border-top:1px solid rgba(0,0,0,.14)}
-  .tcard:first-child{border-top:0;padding-top:0}
-  .tcard .tx{display:none}
-  .tcard .meta{margin-top:0}
-  .tcard h3{font-size:16px;line-height:1.6;margin-top:6px}
+  .tcard{padding:16px 0}
+  .tcard h3{font-size:16px}
   .latest{margin-top:64px}
   .latest .grid{grid-template-columns:1fr;gap:34px}
   .latest .card h3,.list .card h3{font-size:17px;line-height:1.55;margin-top:6px}
@@ -165,7 +164,6 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   .orig a{align-self:stretch;text-align:center;padding:14px}
   .more{margin-top:64px;padding:40px 0 48px}
   .more .grid{grid-template-columns:1fr;gap:28px}
-  .more .tcard{padding:14px 0}
 
   /* 外電頁 */
   .wrap{margin-top:28px;padding:0 20px;gap:32px}

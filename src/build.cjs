@@ -174,9 +174,9 @@ const postCard = (p, { extra = '', place = true, hidden = false } = {}) => `
   </a>`;
 const newsCard = (n, isNew) => `
   <a class="card tcard" href="${url.news(n.id)}">
-    <div class="tx"><span>NEWS · ${n.region}</span><b>${n.place}</b><i>編譯自 ${n.src}</i></div>
     <div class="meta"><span class="cat">NEWS · ${n.region}</span><time datetime="${iso(n.date)}">${n.date}</time>${isNew ? '<span class="new">NEW</span>' : ''}</div>
     <h3>${n.title}</h3>
+    <div class="src">${n.place}｜編譯自 ${n.src}</div>
   </a>`;
 
 const sitemap = [];   // { loc, lastmod, images[] }
