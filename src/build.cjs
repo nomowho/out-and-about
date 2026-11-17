@@ -201,7 +201,11 @@ function block(b) {
   if (b.t === 'pair') {
     const caps = (b.cap || '').split(/右：/);
     const alts = caps.length === 2 ? [caps[0].replace(/^左：/, '').replace(/[。\s]+$/, ''), caps[1].replace(/[。\s]+$/, '')] : [b.cap || '', b.cap || ''];
-    return `<figure class="pair"><div class="two">${b.imgs.map((s, i) => img(s, alts[i], { sizes: '(max-width:700px) 50vw, 490px' })).join('')}</div>${b.cap ? `<figcaption>${b.cap}</figcaption>` : ''}</figure>`;
+    // imgs 裡的某一格可以是陣列：那一格改成上下兩張疊放
+    const cell = (s, i) => Array.isArray(s)
+      ? `<div class="stack">${s.map(x => img(x, alts[i], { sizes: '(max-width:700px) 50vw, 490px' })).join('')}</div>`
+      : img(s, alts[i], { sizes: '(max-width:700px) 50vw, 490px' });
+    return `<figure class="pair"><div class="two">${b.imgs.map(cell).join('')}</div>${b.cap ? `<figcaption>${b.cap}</figcaption>` : ''}</figure>`;
   }
   return '';
 }
@@ -224,7 +228,7 @@ for (const p of POSTS) {
   if (!d) { console.warn('no article for', p.id); continue; }
   const title = d.seoTitle || p.title, desc = cut(d.dek, 155);
   const cover = d.cover || null;
-  const images = [cover, ...d.body.flatMap(b => b.src ? [b.src] : (b.imgs || []))].filter(Boolean);
+  const images = [cover, ...d.body.flatMap(b => b.src ? [b.src] : (b.imgs || []).flat())].filter(Boolean);
   const related = [...POSTS.filter(x => x.id !== p.id && x.region === p.region && x.area === p.area),
     ...POSTS.filter(x => x.id !== p.id && x.region === p.region && x.area !== p.area),
     ...POSTS.filter(x => x.id !== p.id && x.region !== p.region && x.cat === p.cat)].slice(0, 3);

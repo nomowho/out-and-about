@@ -291,3 +291,7 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 }
 .tripmap .leaflet-tile-pane{filter:grayscale(1) contrast(.92) brightness(1.06)}
 .tripmap .leaflet-tile{outline:1px solid transparent}
+/* 並排圖的其中一格改成上下兩張 */
+.body .pair .stack{display:grid;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:4/5}
+.body .pair .stack img{aspect-ratio:auto;height:100%;width:100%;object-fit:cover;min-height:0}
+@media(max-width:700px){.body .pair .stack{gap:4px}}

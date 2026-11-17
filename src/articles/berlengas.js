@@ -16,7 +16,7 @@ POST_DETAIL['berlengas'] = {
     { t:'p', text:'古代航海者早就知道這座島。1513 年，修士在島上建了修道院，想幫助航行與遇難的船員，但孤島生活太艱苦，又常遭海盜侵擾，最後只能放棄。' },
     { t:'img', size:'wide', src:'img/berlengas/village.jpg', cap:'走在石拱橋上，身後是紅色岩壁和藏在底下的小沙灘。' },
     { t:'p', text:'1651 年，葡萄牙國王若昂四世下令用修道院的廢墟石材，在礁岩上蓋起聖若望浸信者堡，守護海岸。1666 年，西班牙艦隊大舉圍攻，堡裡只有二十多名守軍，硬是撐了下來，直到補給和彈藥耗盡才投降。如今堡壘靜靜立在紅色礁岩上，以一座石橋和主島相連，四周只剩浪濤和海鳥。' },
-    { t:'pair', imgs:['img/berlengas/fort-gate.jpg','img/berlengas/courtyard.jpg'], cap:'左：堡壘的入口。右：堡壘裡的石階和紅色木門。' },
+    { t:'pair', imgs:['img/berlengas/fort-gate.jpg',['img/berlengas/cafe.jpg','img/berlengas/arches.jpg']], cap:'左：堡壘的入口。右：堡壘裡的餐廳和一排拱形石屋。' },
     { t:'img', size:'wide', src:'img/berlengas/bridge.jpg', cap:'連接堡壘的石橋，底下是被海水掏空的岩洞。' },
     { t:'h', id:'nature', text:'貝倫加群島有什麼生態？' },
     { t:'p', text:'整座群島在 2011 年被列入 UNESCO 生物圈保護區。天上是盤旋的海鳥，水下透明得誇張，海鰻、章魚和魚群在花崗岩的縫隙裡穿梭。站在石橋上，堡壘在上、大海在下，歷史和自然在同一刻相遇。' },
