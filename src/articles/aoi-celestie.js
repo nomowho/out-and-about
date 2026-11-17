@@ -1,23 +1,30 @@
 // 名古屋 AOI CELESTIE｜由 IG 貼文 DPocihyD8yh（2025-10-11，369 讚）改寫，Nomo 2026-11-17 指示獨立成篇
 // 查證：永山祐子建築設計官網 works/115（2021.10–2024.12、新榮町站前錦通與國道 153 號角地、地下 1 層活動空間＋地上 3 層咖啡、多治見原創溝型磁磚靠釉藥厚薄做藍色漸層、雨水沿溝流入中庭、中庭橄欖林、施工 TSUCHIYA、照明岡安泉、植栽 SOLSO、平面設計脇田あすか）；AOI CELESTIE 官網 About（Celestie＝天空的／最上級、咖啡由東京青山 Little Darling Coffee Roasters 監修、地下可玩地板滾球 Boccia、品牌企劃 TRANSIT HOLDINGS）
 // ⚠️ IG 原文「紅豆吐司起源於 1950 年代喫茶店滿堂紅」更正為大正 10 年（1921）前後榮地區喫茶「滿つ葉」（なごやめし公式サイト、名古屋市図書館）；「28,000 片磁磚」「葵地名與尾張德川家紋」查無官方出處，網站版未採用
-// 照片：⏳ 等 Nomo 放到 output/photos/_web-photos/aoi-celestie/
+// 照片：Nomo 原檔（output/photos/_web-photos/aoi-celestie/），2026-11-17 輸出
 POST_DETAIL['aoi-celestie'] = {
   seoTitle:'名古屋 AOI CELESTIE：永山祐子設計的藍色磁磚屋頂，把天空蓋在新榮町的街角',
   dek:'AOI CELESTIE COFFEE ROASTERY 在名古屋地鐵新榮町站出口旁，由建築師永山祐子設計、2024 年 12 月完工。大屋頂鋪滿岐阜縣多治見燒製的原創藍色漸層磁磚，遠看像把天空映在城市裡；屋頂下是三層挑高的咖啡館與酒吧，中庭種著橄欖樹。',
+  cover:'img/aoi-celestie/cover.jpg', coverLayout:'split',
+  coverCap:'新榮町的街角，藍色漸層屋頂像一片落下來的天空。',
   body:[
     { t:'p', text:'一出新榮町站，抬頭就會看到它：兩側都是高樓公寓的大馬路邊，一片藍色的屋頂像從天空輕輕落下來，停在街角。' },
+    { t:'pair', imgs:['img/aoi-celestie/street.jpg','img/aoi-celestie/courtyard.jpg'], cap:'左：從大馬路走近，清水混凝土牆上印著店名的標誌。右：中庭的橄欖樹，隔著弧形玻璃就是座位區。' },
     { t:'h', id:'who', text:'AOI CELESTIE 是誰設計的？' },
     { t:'p', text:'建築由永山祐子建築設計操刀，從 2021 年 10 月開始規劃，2024 年 12 月完工。委託人是名古屋的一家老字號企業，想做一間讓在地人喜歡、能成為社區地標的咖啡館。永山祐子的回答，是在容積率很高、樓房擠得密密麻麻的市中心，留出一塊包著中庭的空白。' },
     { t:'p', text:'店名裡的 Celestie 有「天空的」「最上等的」意思，所在的這一帶則叫「葵」（AOI）。名字和建築說的是同一件事：在城市裡，替人留一片天空。' },
+    { t:'img', size:'wide', src:'img/aoi-celestie/ceiling.jpg', cap:'屋頂內側是彎曲的清水混凝土，光從一排小開口灑進來。' },
     { t:'h', id:'roof', text:'藍色屋頂為什麼會有漸層？' },
     { t:'p', text:'屋頂的磁磚是在岐阜縣多治見特別燒製的原創款。每一片都是有溝槽的長條磚，靠釉藥塗得厚或薄，燒出深淺不同的藍，鋪在一起就成了從天空延續下來的漸層。' },
     { t:'p', text:'這些溝槽不只是裝飾。下雨的時候，雨水會沿著溝槽一路流下，落進中庭。晴天看它像天空，雨天它就變成一條條小水道，把天上的東西帶回地面。' },
     { t:'h', id:'inside', text:'AOI CELESTIE 裡面長什麼樣子？' },
     { t:'p', text:'大屋頂底下是三層樓挑高的空間。1 樓是咖啡吧台、廚房和烘豆室，有一區座位往下挖低，坐下來視線剛好對著中庭；2 樓的座位正對一片橄欖樹林，和外面大馬路的喧鬧隔出剛好的距離；3 樓是被屋頂包住的酒吧，可以俯看整間店、中庭和外面的街景。' },
+    { t:'pair', imgs:['img/aoi-celestie/counter.jpg','img/aoi-celestie/lamps.jpg'], cap:'左：1 樓的咖啡吧台，紅磚地板鋪成人字紋。右：座位區的黃銅檯燈和木椅。' },
     { t:'p', text:'中庭底下還藏著地下一層的活動空間，庭院邊緣微微翻起，讓光照進地下。這裡可以玩地板滾球（Boccia），也就是帕運的正式項目。咖啡則由東京青山的 Little Darling Coffee Roasters 監修。' },
+    { t:'pair', imgs:['img/aoi-celestie/stairs.jpg','img/aoi-celestie/window.jpg'], cap:'左：往下走的樓梯，盡頭是中庭的綠意。右：大片玻璃窗框住外面的十字路口。' },
     { t:'h', id:'toast', text:'在 AOI CELESTIE 能吃到名古屋早餐嗎？' },
     { t:'p', text:'可以。名古屋的招牌早餐「小倉吐司」，也就是奶油吐司配紅豆，在這裡也點得到。一般認為它起源於大正 10 年（1921 年）前後，榮地區喫茶店「滿つ葉」的店主看到學生把奶油吐司泡進紅豆湯裡吃，因而想出這個吃法。' },
+    { t:'img', size:'wide', src:'img/aoi-celestie/toast.jpg', cap:'厚片奶油吐司，配一小碟紅豆。' },
     { t:'p', text:'在鋼筋水泥的街區裡，有一片會呼吸、會接住雨水的屋頂，底下有人慢慢喝一杯咖啡。這大概就是建築能給一座城市最溫柔的東西。' },
     { t:'p', text:'→ 名古屋的早餐文化：<a href="post.html#nagoya-morning">昭和老喫茶 vs 精品新浪潮，名古屋早餐的兩種面孔</a>' }
   ],
