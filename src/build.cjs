@@ -10,10 +10,10 @@ const abs = p => SITE + p;
 const read = f => fs.readFileSync(path.join(SRC, f), 'utf8');
 
 /* ── 載入資料 ── */
-const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.js'), read('series-data.js'),
+const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.js'), read('series-data.js'), read('stories-data.js'),
   ...fs.readdirSync(path.join(SRC, 'articles')).filter(f => f.endsWith('.js')).map(f => read('articles/' + f)),
-  ';({ POSTS, NEWS, SERIES, POST_DETAIL })'].join('\n');
-const { POSTS, NEWS, SERIES, POST_DETAIL } = vm.runInNewContext(code);
+  ';({ POSTS, NEWS, SERIES, POST_DETAIL, STORIES })'].join('\n');
+const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES } = vm.runInNewContext(code);
 const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
 const newsNew = [...NEWS].sort((a, b) => b.date.localeCompare(a.date));
@@ -372,11 +372,18 @@ for (const r of regions) {
     <div class="grid" id="news">${newsNew.slice(0, 6).map((n, i) => newsCard(n, i === 0)).join('')}</div>
   </div>
   <aside class="side">
-    <div class="dbl">
-      <h3>Now Writing</h3>
-      <figure>${img('img/dolomiti-2.jpg', '秋天的多洛米蒂', { sizes: '(max-width:1000px) 270px, 220px' })}</figure>
-      <p><b>多洛米蒂，秋天</b>2018 年跨年來過一次。八年後的十月再回來，同一座山，換了一個季節。</p>
+    <div class="dbl stories" id="stories">
+      <h3>Stories<small>現在動態</small></h3>
+      <ul class="rings">${STORIES.map((st, i) => `
+        <li><button type="button" class="ring" data-story="${i}" aria-label="看「${esc(st.label)}」動態，共 ${st.items.length} 則">
+          <span class="av">${img(st.items[0].img, '', { sizes: '76px' })}</span><b>${st.label}</b><time datetime="${iso(st.date)}" data-ago>${st.date}</time>
+        </button></li>`).join('')}</ul>
+      <p class="lead">${STORIES[0].items[0].text}</p>
     </div>
+    <script type="application/json" id="storiesData">${JSON.stringify(STORIES.map(st => ({ label: st.label, date: iso(st.date),
+      items: st.items.map(it => { const rel = it.img.replace(/^\//, ''), m = rel.replace(/\.[^.]+$/, '.m.jpg');
+        if (!dims(rel)) missing.push(rel);
+        return { img: '/' + (fs.existsSync(path.join(ROOT, m)) ? m : rel), text: it.text, link: it.link || '' }; }) }))).replace(/</g, '\\u003c')}</script>
     <a class="ig" href="https://www.instagram.com/nomowho/" rel="me noopener">在 Instagram 追蹤 @nomowho</a>
   </aside>
 </section>
