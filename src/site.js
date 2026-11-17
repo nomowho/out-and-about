@@ -132,6 +132,82 @@
     document.addEventListener('visibilitychange', function () { if (!box.hidden) pause(document.hidden); });
   }
 
+  /* 國家頁旅行地圖：縮小看國家、放大看城市 */
+  var mapEl = $('tripmap'), mapData = $('mapData');
+  if (mapEl && mapData) {
+    var startMap = function () {
+      if (!window.L) return setTimeout(startMap, 120);
+      var D = JSON.parse(mapData.textContent), L = window.L;
+      var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+      var map = L.map(mapEl, { scrollWheelZoom: false, worldCopyJump: true, zoomSnap: 1, attributionControl: true });
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 14,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      var pin = function (n, cls, label) {
+        var size = cls === 'country' ? Math.min(64, 34 + n * 1.6) : Math.min(46, 26 + n * 3);
+        return L.divIcon({ className: 'tm-pin ' + cls, iconSize: [size, size], iconAnchor: [size / 2, size / 2],
+          html: '<span class="n">' + n + '</span>' + (label ? '<span class="lb">' + esc(label) + '</span>' : '') });
+      };
+      /* 國家層：位置取該國城市的平均 */
+      var countryLayer = L.layerGroup(), all = [];
+      /* 城市層：靠太近的城市自動合併成一顆，數字是篇數合計，點了放大 */
+      var cityLayer = L.markerClusterGroup ? L.markerClusterGroup({
+        maxClusterRadius: 44, showCoverageOnHover: false, spiderfyOnMaxZoom: true, zoomToBoundsOnClick: true,
+        iconCreateFunction: function (cl) {
+          var n = cl.getAllChildMarkers().reduce(function (a, m) { return a + (m.options.posts || 0); }, 0);
+          return pin(n, 'city cluster');
+        }
+      }) : L.layerGroup();
+      /* 國家太近會疊在一起：縮小時把梵蒂岡併進義大利，放大到城市層再分開 */
+      var MERGE = { Vatican: 'Italy' };
+      var groups = [];
+      D.countries.forEach(function (c) {
+        var host = MERGE[c.r];
+        if (host) return;
+        var members = [c].concat(D.countries.filter(function (x) { return MERGE[x.r] === c.r; }));
+        groups.push({ r: members.map(function (m) { return m.r; }), zh: members.map(function (m) { return m.zh; }).join('・'), n: members.reduce(function (a, m) { return a + m.n; }, 0) });
+      });
+      groups.forEach(function (c) {
+        var cs = D.cities.filter(function (x) { return c.r.indexOf(x.r) > -1; });
+        if (!cs.length) return;
+        var lat = cs.reduce(function (a, x) { return a + x.lat; }, 0) / cs.length;
+        var lng = cs.reduce(function (a, x) { return a + x.lng; }, 0) / cs.length;
+        var bounds = L.latLngBounds(cs.map(function (x) { return [x.lat, x.lng]; }));
+        L.marker([lat, lng], { icon: pin(c.n, 'country', c.zh), title: c.zh + '，' + c.n + ' 篇', keyboard: true })
+          .on('click', function () { map.flyToBounds(bounds.pad(cs.length > 1 ? 0.35 : 0), { maxZoom: cs.length > 1 ? 9 : 8, duration: 0.8 }); })
+          .addTo(countryLayer);
+      });
+      /* 城市層：點開列出文章 */
+      D.cities.forEach(function (c) {
+        all.push([c.lat, c.lng]);
+        var html = '<div class="tm-pop"><p class="tm-h"><b>' + esc(c.zh) + '</b><span>' + esc(c.en) + '・' + c.posts.length + ' 篇</span></p>' +
+          c.posts.map(function (p) {
+            return '<a class="tm-item" href="' + p.u + '">' + (p.img ? '<img src="' + p.img + '" alt="" loading="lazy">' : '<i class="tm-ph"></i>') +
+              '<span><em>' + esc(p.cat) + '</em>' + esc(p.t) + '</span></a>';
+          }).join('') + '</div>';
+        L.marker([c.lat, c.lng], { icon: pin(c.posts.length, 'city', c.zh), title: c.zh, keyboard: true, posts: c.posts.length })
+          .bindPopup(html, { maxWidth: 280, minWidth: 220, autoPanPadding: [20, 60] })
+          .addTo(cityLayer);
+      });
+      var CITY_ZOOM = 5;
+      var sync = function () {
+        var z = map.getZoom();
+        if (z >= CITY_ZOOM) { if (map.hasLayer(countryLayer)) map.removeLayer(countryLayer); if (!map.hasLayer(cityLayer)) map.addLayer(cityLayer); }
+        else { if (map.hasLayer(cityLayer)) map.removeLayer(cityLayer); if (!map.hasLayer(countryLayer)) map.addLayer(countryLayer); }
+        mapEl.classList.toggle('show-labels', z >= 7);
+      };
+      map.on('zoomend', sync);
+      map.fitBounds(L.latLngBounds(all).pad(0.08), { maxZoom: 3 });
+      if (map.getZoom() >= CITY_ZOOM) map.setZoom(CITY_ZOOM - 1);
+      sync();
+      /* 點一下地圖才開滾輪縮放，避免捲頁面時被地圖卡住 */
+      map.once('focus click', function () { map.scrollWheelZoom.enable(); });
+      setTimeout(function () { map.invalidateSize(); }, 300);
+    };
+    startMap();
+  }
+
   /* 首屏輪播：HTML 只有一份，前後各複製一份做無限循環；手機用手指滑 */
   var track = $('track');
   if (track) {

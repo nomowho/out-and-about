@@ -10,10 +10,10 @@ const abs = p => SITE + p;
 const read = f => fs.readFileSync(path.join(SRC, f), 'utf8');
 
 /* ── 載入資料 ── */
-const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.js'), read('series-data.js'), read('stories-data.js'),
+const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.js'), read('series-data.js'), read('stories-data.js'), read('geo-data.js'),
   ...fs.readdirSync(path.join(SRC, 'articles')).filter(f => f.endsWith('.js')).map(f => read('articles/' + f)),
-  ';({ POSTS, NEWS, SERIES, POST_DETAIL, STORIES })'].join('\n');
-const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES } = vm.runInNewContext(code);
+  ';({ POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES })'].join('\n');
+const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES } = vm.runInNewContext(code);
 const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
 // 外電只上架最新 NEWS_MAX 篇；更舊的自動下架（頁面、sitemap、RSS 都拿掉），原始資料仍留在 news-data.js
@@ -379,6 +379,17 @@ for (const r of regions) {
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>COUNTRIES</span></nav>
       <div class="label">COUNTRIES　國家</div><h1>依國家找旅行</h1><p>${cards.length} 個國家、${POSTS.length} 篇文章。點國家看那裡的所有旅行。</p>
     </div></section>
+    <section class="mapwrap box" aria-label="旅行地圖">
+      <div class="maphead"><h2>Map</h2><span>旅行地圖</span><p>放大地圖會從國家展開到城市，點圓點看那裡的文章。</p></div>
+      <div id="tripmap" class="tripmap" role="region" aria-label="旅行地圖，可放大縮小"></div>
+      <noscript><p>這張地圖需要 JavaScript；也可以直接從下方的國家清單進入。</p></noscript>
+    </section>
+    <script type="application/json" id="mapData">${JSON.stringify({
+      countries: regions.map(r => ({ r, zh: REGION_ZH[r], u: url.dest(r), n: POSTS.filter(p => p.region === r).length })),
+      cities: CITIES.map(c => ({ zh: c.zh, en: c.en, r: c.region, lat: c.lat, lng: c.lng,
+        posts: c.posts.map(id => byId[id]).filter(Boolean).map(p => ({ t: p.zh, s: p.title, u: url.post(p.id), cat: p.cat,
+          img: p.photo === false ? '' : (fs.existsSync(path.join(ROOT, 'img', p.id + '.m.jpg')) ? '/img/' + p.id + '.m.jpg' : '/img/' + p.id + '.jpg') })) }))
+    }).replace(/</g, '\\u003c')}</script>
     <section class="list box"><div class="grid countries">${cards.map(c => `
       <a class="card country" href="${url.dest(c.r)}">
         <figure>${c.lead ? img(`img/${c.lead.id}.jpg`, REGION_ZH[c.r], { sizes: CARD_SIZES }) : `<div class="ph"><span>${c.r.toUpperCase()}</span><b>${REGION_ZH[c.r]}</b><i>照片整理中</i></div>`}</figure>
@@ -387,7 +398,8 @@ for (const r of regions) {
       </a>`).join('')}</div></section>`;
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '依國家找旅行', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
     mainEntity: listLd('國家', cards.map(c => ({ u: url.dest(c.r), n: `${REGION_ZH[c.r]}旅行` }))) }, crumbLd([['Out and About', '/'], ['COUNTRIES', u]])];
-  page({ file: 'destinations/index.html', title: `依國家找旅行｜${cards.length} 個國家｜Out and About`, desc, canonical: u, image: ogImg(cards[0].lead), style: 'category', nav: 'COUNTRIES', main, ld });
+  page({ file: 'destinations/index.html', title: `依國家找旅行｜${cards.length} 個國家｜Out and About`, desc, canonical: u, image: ogImg(cards[0].lead), style: 'category', nav: 'COUNTRIES', main, ld,
+    extraHead: '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>\n' });
   sitemap.push({ loc: u, lastmod: BUILD_DATE, images: [] });
 }
 

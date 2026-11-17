@@ -259,3 +259,35 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .countries .card h3{font-size:22px;margin-top:6px}
 .countries .meta span:last-child{color:var(--gray);font-weight:500}
 @media(max-width:700px){.countries .card h3{font-size:20px}}
+
+/* 國家頁旅行地圖 */
+.mapwrap{padding-top:48px}
+.maphead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.maphead h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:28px;line-height:1}
+.maphead span{font-size:14px;font-weight:500}
+.maphead p{flex-basis:100%;font-size:13px;color:var(--gray)}
+.tripmap{height:min(68vh,620px);border:1px solid var(--hair);background:#eef0f2;z-index:1}
+.tm-pin{display:flex!important;align-items:center;justify-content:center;border-radius:50%;background:rgba(17,17,17,.88);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;box-shadow:0 0 0 3px rgba(255,255,255,.9),0 2px 8px rgba(0,0,0,.25);transition:transform .2s;cursor:pointer}
+.tm-pin:hover{transform:scale(1.08)}
+.tm-pin.country{background:rgba(17,17,17,.82);font-size:15px}
+.tm-pin.city{background:#fff;color:var(--ink);box-shadow:0 0 0 2px var(--ink),0 2px 6px rgba(0,0,0,.2);font-size:12px}
+.tm-pin .lb{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:6px;white-space:nowrap;font-family:'Noto Sans TC',sans-serif;font-size:12px;font-weight:700;color:var(--ink);text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff}
+.tm-pin.city .lb{display:none}
+.tripmap.show-labels .tm-pin.city .lb{display:block}
+.tm-pop .tm-h{display:flex;align-items:baseline;gap:8px;margin:0 0 8px!important;border-bottom:1px solid var(--hair);padding-bottom:6px}
+.tm-pop .tm-h b{font-size:15px}
+.tm-pop .tm-h span{font-family:'Montserrat',sans-serif;font-size:11px;color:var(--gray)}
+.tm-item{display:flex;gap:10px;align-items:center;padding:6px 0;color:var(--ink)!important;text-decoration:none}
+.tm-item img,.tm-item .tm-ph{width:56px;height:42px;object-fit:cover;flex:0 0 auto;background:#e4e6e9;display:block}
+.tm-item span{font-size:13px;line-height:1.45;font-weight:700}
+.tm-item em{display:block;font-style:normal;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:500;color:var(--gray);letter-spacing:.06em}
+.tm-item:hover span{text-decoration:underline}
+.leaflet-container{font-family:'Noto Sans TC',sans-serif}
+.leaflet-popup-content{margin:12px 14px}
+@media(max-width:700px){
+  .mapwrap{padding:32px 0 0}
+  .maphead{padding:0 20px}
+  .tripmap{height:62vh;border-left:0;border-right:0}
+}
+.tripmap .leaflet-tile-pane{filter:grayscale(1) contrast(.92) brightness(1.06)}
+.tripmap .leaflet-tile{outline:1px solid transparent}
