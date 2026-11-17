@@ -8,4 +8,4 @@ node src/build.cjs
 git add -A
 if git diff --cached --quiet; then echo "no changes"; exit 0; fi
 git commit -q -m "${1:-update: $(date +%F)}"
-if git remote get-url origin >/dev/null 2>&1; then git push -q origin HEAD && echo "pushed"; else echo "committed locally (no remote yet)"; fi
+if git remote get-url origin >/dev/null 2>&1; then git push -q origin HEAD && echo "pushed" && sleep 60 && node src/indexnow.cjs; else echo "committed locally (no remote yet)"; fi
