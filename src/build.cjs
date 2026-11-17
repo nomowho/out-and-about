@@ -395,7 +395,7 @@ for (const r of regions) {
       <h3>Stories<small>現在動態</small></h3>
       <ul class="rings one">${STORIES.slice(0, 1).map((st, i) => `
         <li><button type="button" class="ring" data-story="${i}" aria-label="看「${esc(st.label)}」動態，共 ${st.items.length} 則">
-          <span class="av">${img(st.items[0].img, st.label, { sizes: '76px' })}</span><b>${st.label}</b><time datetime="${iso(st.date)}" data-ago>${st.date}</time>
+          <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" decoding="async"></span><b>${st.label}</b><time datetime="${iso(st.date)}" data-ago>${st.date}</time>
         </button></li>`).join('')}</ul>
     </div>
     <script type="application/json" id="storiesData">${JSON.stringify(STORIES.slice(0, 1).map(st => ({ label: st.label, date: iso(st.date),

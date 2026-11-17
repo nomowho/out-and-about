@@ -74,7 +74,7 @@
       bars.innerHTML = st.items.map(function (_, k) { return '<i><b style="width:' + (k < idx ? 100 : 0) + '%"></b></i>'; }).join('');
       q('.sv-img').src = it.img;
       q('.sv-img').alt = it.text;
-      q('.sv-av').style.backgroundImage = 'url(' + st.items[0].img + ')';
+      q('.sv-av').style.backgroundImage = 'url(/img/story-avatar.jpg)';
       q('.sv-name').textContent = st.label;
       q('.sv-time').textContent = ago(st.date);
       q('.sv-text').textContent = it.text; q('.sv-text').hidden = !it.text;
