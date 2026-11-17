@@ -8,7 +8,8 @@ body{overflow-x:hidden}
 img{background:#eee}
 
 /* 刊頭 */
-.head{padding-top:env(safe-area-inset-top)}
+.head{padding-top:env(safe-area-inset-top);background:rgba(255,255,255,.7)!important;-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.head{background:rgba(255,255,255,.96)!important}}
 .head .bar{padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
 .head button{background:none;border:0;cursor:pointer;font:inherit;color:inherit;display:flex;align-items:center;gap:10px;min-height:44px;padding:0}
 .head .tools a{display:flex;align-items:center;min-height:44px}
@@ -66,6 +67,11 @@ body.locked{overflow:hidden}
 .about .body a{border-bottom:1px solid var(--ink)}
 .about .body{margin-bottom:96px}
 .about .body > p:first-child::first-letter{all:unset}
+.about .motto{margin-top:18px;display:flex;flex-direction:column;gap:6px}
+.about .motto span{font-size:18px;font-weight:500;letter-spacing:.08em}
+.about .motto span[lang=en]{font-family:'Bodoni Moda',serif;font-size:20px;letter-spacing:.02em;color:var(--gray)}
+.about .pull{font-size:19px!important;font-weight:700;letter-spacing:.06em!important;margin:1.6em 0!important}
+.about .body h2{font-size:20px}
 
 /* 列表頁：分區小標 */
 .grp{font-size:20px;font-weight:700;border-top:1px solid var(--ink);padding-top:16px;margin:56px 0 24px;display:flex;align-items:baseline;gap:12px;scroll-margin-top:120px}
@@ -88,7 +94,7 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   html{scroll-padding-top:104px}
   .head .bar{padding:6px 16px 0}
   .logo b{font-size:24px}
-  .head .logo small{display:none}
+  .head .logo small,.head.slim .logo small{display:block;font-size:10.5px;letter-spacing:.26em;margin-top:4px}
   .head.slim .logo b{font-size:20px}
   .head .tools.r a{font-size:11px;letter-spacing:.04em}
   .nav{gap:26px;padding:4px 16px 6px;font-size:11.5px;-webkit-overflow-scrolling:touch;

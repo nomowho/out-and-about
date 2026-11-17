@@ -424,20 +424,30 @@ for (const r of regions) {
 /* ── 關於／404 ── */
 {
   const main = `<article class="about">
-    <header class="ahead noimg"><div class="meta"><span>ABOUT</span></div><h1>關於 Out and About</h1><p class="dek">Out and About，中文叫「我出去一下就回來」，是 Nomo 的旅行雜誌。這裡寫的都是親自走過的地方：建築、美術館、古蹟、山和海，還有路上吃到的東西。</p></header>
+    <header class="ahead noimg"><div class="meta"><span>About</span></div><h1>關於我出去一下就回來</h1>
+      <p class="motto"><span>走得遠一點，看得深一些。</span><span lang="en">Go Further. Look Closer.</span></p></header>
     <div class="body">
-      <h2 id="who">誰在寫？</h2>
-      <p>我是 Nomo，住在台灣，在 Instagram 上經營旅遊帳號 <a href="https://www.instagram.com/nomowho/" rel="me noopener">@nomowho</a>。我喜歡在出發前把一個地方的歷史讀過一遍，到了現場再對照眼前看到的東西，所以文章裡常常是一半故事、一半旅行資訊。</p>
-      <h2 id="how">文章怎麼寫出來的？</h2>
-      <p>每一篇都從我在 Instagram 發過的貼文出發，改寫成比較完整的長文，補上交通、建議停留時間和常見問題。年代、數字、開放時間這類資訊，會對照官方網站或可靠的資料來源；查到原本貼文寫錯的地方，網站版會直接更正。照片除非另外標示，都是我自己拍的。</p>
-      <h2 id="news">「世界旅遊新訊」是什麼？</h2>
-      <p>首頁的 Latest 區塊，是我每天從國際旅遊媒體挑一則消息，用自己的話編譯成中文。每篇文末都附原文的媒體名稱、標題和連結，內容與數據以原文為準，著作權屬於原刊登媒體。</p>
-      <h2 id="contact">怎麼聯絡？</h2>
-      <p>最快的方式是到 Instagram <a href="https://www.instagram.com/nomowho/" rel="me noopener">@nomowho</a> 傳訊息給我。如果發現文章裡有錯，也歡迎告訴我。</p>
+      <p>Out and About，中文叫「我出去一下就回來」，是一份關於旅行、風景與文化的個人誌。</p>
+      <p>旅行對我而言，不只是抵達某個地方，更是試著理解一座城市的性格、一棟建築的故事，以及那些藏在日常風景裡的歷史。</p>
+      <p>這裡記錄我親自走過的地方，從山海之間的自然景色，到城市裡的建築、藝術、信仰與餐桌。以影像收藏瞬間，以文字延續旅程。</p>
+      <p class="pull">一半故事，一半旅行資訊。</p>
+      <p>希望這些記錄，不只陪你規劃下一趟旅程，也讓你在出發之前，就對世界多一點好奇。</p>
+      <h2 id="who">Who am I？</h2>
+      <p>我是 Nomo，住在台灣，喜歡旅行、攝影，也喜歡那些有故事的地方。</p>
+      <p>比起走遍多少景點，我更在意一個地方為什麼長成現在的模樣。</p>
+      <p>旅行前，我習慣先讀一些歷史；旅行時，用鏡頭記下眼前；回來之後，再把沿途的發現整理成文字。</p>
+      <p>有時是建築背後的時代，有時是美術館裡的一幅畫，也可能只是山谷裡一道剛好落下的光。</p>
+      <p>Instagram：<a href="https://www.instagram.com/nomowho/" rel="me noopener">@nomowho</a></p>
+      <h2 id="what">這裡寫些什麼？</h2>
+      <p>這裡的文章從真實旅程出發，結合旅行故事、文化背景與實用資訊。</p>
+      <p>關於建築、藝術、歷史、自然與信仰，也關於城市裡的食物和生活。</p>
+      <p>除了記錄值得停留的風景，也整理交通、路線、開放時間與旅途中真正需要知道的細節。</p>
+      <p>資訊可能隨時間改變，因此會盡可能標示參訪時間、更新內容與資料來源；若發現有誤，也會持續修正。</p>
+      <p class="pull">旅行終究會結束，但好奇心可以一直在路上。</p>
     </div></article>`;
-  const desc = 'Out and About（我出去一下就回來）是 Nomo 的旅行雜誌，文章由親自走訪的紀錄改寫並對照官方資料查證；世界旅遊新訊編譯自國際媒體並附原文出處。';
-  page({ file: 'about/index.html', title: '關於 Out and About｜Nomo 的旅行雜誌', desc, canonical: '/about/', image: ogImg(TOP7[0]), style: 'post', nav: '', main,
-    ld: [{ '@context': 'https://schema.org', '@type': 'AboutPage', '@id': abs('/about/'), name: '關於 Out and About', inLanguage: 'zh-Hant-TW', mainEntity: PERSON, isPartOf: { '@id': abs('/#website') } }, crumbLd([['Out and About', '/'], ['關於', '/about/']])] });
+  const desc = 'Out and About（我出去一下就回來）是 Nomo 的旅行、風景與文化個人誌：走得遠一點，看得深一些。親自走過的建築、藝術、歷史、自然與信仰，一半故事，一半旅行資訊。';
+  page({ file: 'about/index.html', title: '關於我出去一下就回來｜Out and About', desc, canonical: '/about/', image: ogImg(TOP7[0]), style: 'post', nav: '', main,
+    ld: [{ '@context': 'https://schema.org', '@type': 'AboutPage', '@id': abs('/about/'), name: '關於我出去一下就回來', inLanguage: 'zh-Hant-TW', mainEntity: PERSON, isPartOf: { '@id': abs('/#website') } }, crumbLd([['Out and About', '/'], ['關於', '/about/']])] });
   sitemap.push({ loc: '/about/', lastmod: BUILD_DATE, images: [] });
   const h404 = page({ file: '404.html', title: '找不到這一頁｜Out and About', desc: '這個網址沒有內容。', canonical: '/404.html', image: ogImg(TOP7[0]), style: 'category', nav: '',
     main: `<div class="notfound"><h1>找不到這一頁</h1><p>可能是網址改了，下面是最新的文章。</p><p><a href="/">回首頁</a></p></div>
