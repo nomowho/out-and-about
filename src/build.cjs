@@ -26,9 +26,8 @@ const TOP7 = [...POSTS].filter(p => p.photo !== false).sort((a, b) => b.likes - 
 const CATS = {
   ARCHITECTURE: { zh: '建築', d: '從高第的石頭森林到北歐的當代建築，看人怎麼用空間說故事。' },
   ART:          { zh: '藝術', d: '美術館、雕塑與畫作，走進作品誕生的地方。' },
-  HISTORY:      { zh: '歷史', d: '古希臘劇場、羅馬廢墟與城市的傷疤，每個地方都有它的過去式。' },
+  HISTORY:      { zh: '歷史', d: '古希臘劇場、羅馬廢墟、神社古寺與城市的傷疤，每個地方都有它的過去式。' },
   NATURE:       { zh: '自然', d: '火山、峽灣、雪地與溪流，把自己交給風景的時刻。' },
-  FAITH:        { zh: '信仰', d: '神社、古寺與千年溫泉寺町，人們把願望交給神明的地方。' },
   FOOD:         { zh: '美食', d: '從早餐店到海底餐廳，用味道記住一座城市。' },
   GUIDE:        { zh: '指南', d: '一次整理好的行程與必訪清單。' }
 };
@@ -88,7 +87,7 @@ fs.copyFileSync(path.join(SRC, 'common.css'), path.join(ROOT, 'assets', 'common.
 fs.copyFileSync(path.join(SRC, 'site.js'), path.join(ROOT, 'assets', 'site.js'));
 const ver = Date.now().toString(36);
 
-const navLinks = on => `<a href="/#latest-news"${on === 'NEWS' ? ' class="on" aria-current="page"' : ''}>NEWS</a>` +
+const navLinks = on => `<a href="/#latest-news"${on === 'NEWS' ? ' class="on" aria-current="page"' : ''}>NEWS</a><a href="/destinations/"${on === 'COUNTRIES' ? ' class="on" aria-current="page"' : ''}>COUNTRIES</a>` +
   Object.keys(CATS).map(k => `<a href="${url.cat(k)}"${on === k ? ' class="on" aria-current="page"' : ''}>${k}</a>`).join('');
 
 const PERSON = { '@type': 'Person', '@id': abs('/#nomo'), name: 'Nomo', url: abs('/about/'), sameAs: ['https://www.instagram.com/nomowho/'], description: '旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」，寫建築、藝術、歷史與自然。' };
@@ -150,7 +149,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
       ${Object.entries(CATS).map(([k, v]) => `<li><a href="${url.cat(k)}"><b>${k}</b><span>${v.zh}</span></a></li>`).join('')}</ul>
     <p class="drawer-h">SERIES</p>
     <ul class="sm">${SERIES.map(s => `<li><a href="${url.series(s.id)}">${s.t}</a></li>`).join('')}</ul>
-    <p class="drawer-h">DESTINATIONS</p>
+    <p class="drawer-h"><a href="/destinations/">COUNTRIES</a></p>
     <ul class="sm two">${regions.map(r => `<li><a href="${url.dest(r)}">${REGION_ZH[r]}</a></li>`).join('')}</ul>
     <p class="drawer-foot"><a href="/about/">關於 Out and About</a><a href="https://www.instagram.com/nomowho/" rel="me noopener">Instagram @nomowho</a></p>
   </div>
@@ -361,10 +360,43 @@ for (const s of SERIES) {
 for (const r of regions) {
   const posts = postsNew.filter(p => p.region === r);
   const areas = [...new Set(posts.map(p => p.area))];
-  listPage({ file: `destinations/${r.toLowerCase()}/index.html`, u: url.dest(r), label: `DESTINATION　${r.toUpperCase()}`, h1: `${REGION_ZH[r]}旅行`, desc: `在${REGION_ZH[r]}走過的地方：${areas.join('、')}。`, posts, lead: leadOf(posts), nav: '', crumb: 'DESTINATIONS',
+  listPage({ file: `destinations/${r.toLowerCase()}/index.html`, u: url.dest(r), label: `COUNTRY　${r.toUpperCase()}`, h1: `${REGION_ZH[r]}旅行`, desc: `在${REGION_ZH[r]}走過的地方：${areas.join('、')}。`, posts, lead: leadOf(posts), nav: 'COUNTRIES', crumb: '<a href="/destinations/">COUNTRIES</a>',
     groups: areas.length > 1 ? areas.map(a => [a, posts.filter(p => p.area === a)]) : null,
-    othersTitle: 'Other Destinations', othersZh: '其他目的地',
+    othersTitle: 'Other Countries', othersZh: '其他國家',
     others: regions.filter(x => x !== r).map(x => { const l = POSTS.filter(p => p.region === x); return { u: url.dest(x), t: `${REGION_ZH[x]}`, n: l.length, img: cardImg(leadOf(l)) }; }) });
+}
+
+/* ── 國家總覽 /destinations/ ── */
+{
+  const u = '/destinations/';
+  const cards = regions.map(r => {
+    const l = postsNew.filter(p => p.region === r), lead = leadOf(l), areas = [...new Set(l.map(p => p.area))];
+    return { r, l, lead, areas };
+  }).sort((a, b) => b.l.length - a.l.length);
+  const desc = `Nomo 走過的 ${regions.length} 個國家：${cards.map(c => `${REGION_ZH[c.r]}（${c.l.length} 篇）`).join('、')}。依國家找旅行文章。`;
+  const main = `
+    <section class="top"><div class="box">
+      <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>COUNTRIES</span></nav>
+      <div class="label">COUNTRIES　國家</div><h1>依國家找旅行</h1><p>${cards.length} 個國家、${POSTS.length} 篇文章。點國家看那裡的所有旅行。</p>
+    </div></section>
+    <section class="list box"><div class="grid countries">${cards.map(c => `
+      <a class="card country" href="${url.dest(c.r)}">
+        <figure>${c.lead ? img(`img/${c.lead.id}.jpg`, REGION_ZH[c.r], { sizes: CARD_SIZES }) : `<div class="ph"><span>${c.r.toUpperCase()}</span><b>${REGION_ZH[c.r]}</b><i>照片整理中</i></div>`}</figure>
+        <div class="meta"><span class="cat">${c.r.toUpperCase()}</span><span>${c.l.length} STORIES</span></div>
+        <h3>${REGION_ZH[c.r]}</h3><div class="place">${c.areas.join('・')}</div>
+      </a>`).join('')}</div></section>`;
+  const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '依國家找旅行', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
+    mainEntity: listLd('國家', cards.map(c => ({ u: url.dest(c.r), n: `${REGION_ZH[c.r]}旅行` }))) }, crumbLd([['Out and About', '/'], ['COUNTRIES', u]])];
+  page({ file: 'destinations/index.html', title: `依國家找旅行｜${cards.length} 個國家｜Out and About`, desc, canonical: u, image: ogImg(cards[0].lead), style: 'category', nav: 'COUNTRIES', main, ld });
+  sitemap.push({ loc: u, lastmod: BUILD_DATE, images: [] });
+}
+
+/* ── 已取消的分類：舊網址轉到新分類 ── */
+for (const [oldCat, newCat] of [['faith', 'history']]) {
+  const to = url.cat(newCat.toUpperCase());
+  const out = path.join(ROOT, 'category', oldCat, 'index.html');
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, `<!DOCTYPE html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><title>已移到 ${newCat.toUpperCase()}｜Out and About</title><link rel="canonical" href="${abs(to)}"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p><a href="${to}">這個分類已併入 ${newCat.toUpperCase()}，請點這裡</a></p></body></html>\n`);
 }
 
 /* ── 首頁 ── */

@@ -2,9 +2,16 @@
 // 查證（Dezeen、ArchDaily、AEC Cafe）：Centro de Interpretação da Batalha de Atoleiros，位於上阿連特茹 Fronteira 鎮，Gonçalo Byrne Arquitectos ＋ Oficina Ideias em Linha，2007–2012，紅色混凝土夾片岩層、立面切出尖拱；紀念 1384 年 4 月 6 日阿托萊魯什戰役（努諾．阿爾瓦雷斯．佩雷拉以少勝多擊敗卡斯提亞軍），距古戰場約 2.5 公里
 // ⚠️ IG 原文「戰爭博物館」更正為戰役解說中心；補上名稱與地點（Fronteira）
 // 照片：Nomo 原檔（output/photos/_web-photos/byrne-portugal/），2026-11-17 輸出
+// 2026-11-17 擴寫並補出處：展覽由畫家 Martins Barata 的觀點引導、結尾的弧形木長椅、公園以相同鋪面呼應古戰場、粗面著色混凝土塊呼應中世紀工法、戰役為費爾南多一世無男嗣過世後八年內戰的第一戰出自 Dezeen 2014-01-16；面積 935㎡ 出自 ArchDaily 專案頁（2026-11-17 查）
 POST_DETAIL['byrne-portugal'] = {
   seoTitle:'葡萄牙紅色混凝土建築：Gonçalo Byrne 的阿托萊魯什戰役解說中心，牆上那道裂縫是戰爭的傷痕',
   dek:'阿托萊魯什戰役解說中心（Centro de Interpretação da Batalha de Atoleiros）在葡萄牙阿連特茹的 Fronteira 小鎮，由葡萄牙建築師 Gonçalo Byrne 設計、2012 年完成，紀念 1384 年 4 月 6 日葡萄牙以少勝多擊敗卡斯提亞的戰役。整棟用紅色混凝土澆灌，兩片高牆中間劈出一道縫，作為入口。',
+  updated:'2026-11-17',
+  place:{
+    alt:['Centro de Interpretação da Batalha de Atoleiros','Atoleiros Battle Interpretation Centre','阿托萊魯什戰役解說中心'],
+    sameAs:['https://www.archdaily.com/463140/center-for-interpretation-of-the-battle-of-atoleiros-goncalo-byrne-arquitectos-lda-oficina-ideias-em-linha-arquitectura-e-design-lda'],
+    address:{ addressLocality:'Fronteira', addressRegion:'Alto Alentejo', addressCountry:'PT' }
+  },
   cover:'img/byrne-portugal/cover.jpg',
   coverCap:'紅色混凝土的兩個量體，中間劈開一道縫，玻璃後面就是展區。',
   body:[
@@ -17,19 +24,30 @@ POST_DETAIL['byrne-portugal'] = {
     { t:'h', id:'slit', text:'牆上那道縫是什麼意思？' },
     { t:'p', text:'兩片高大的紅牆，在中央留下一道狹長的縫隙，像戰爭留下的傷痕。這個刻意「劈開」的入口，會吸引你從縫隙裡走進去，一路走向光亮和綠意。' },
     { t:'img', size:'wide', src:'img/byrne-portugal/slit.jpg', cap:'站在縫隙前，才看得出這道「傷痕」有多高。' },
-    { t:'p', text:'在葡萄牙開車，常常會遇到這種藏在小鎮裡、卻值得專程繞路的好建築。' }
+    { t:'p', text:'在葡萄牙開車，常常會遇到這種藏在小鎮裡、卻值得專程繞路的好建築。' },
+    { t:'h', id:'inside', text:'走進去會看到什麼？' },
+    { t:'p', text:'解說中心的面積約 935 平方公尺，用混凝土柱、梁、樓板撐出寬敞的展場。展覽以葡萄牙畫家 Martins Barata 描繪戰役的視角為主軸，帶你從不同角度認識戰場和戰役裡的人物。動線的終點是後方大窗前一張弧形的木長椅，設計者希望你坐在那裡，看著窗外，自己想像當年的戰事。' },
+    { t:'p', text:'外面的公園也是設計的一部分。既然不能蓋在古戰場上，建築師就在鎮上做了一座讓人聯想到戰場的公園，地面用和建築相同的鋪面。外牆用的是表面粗糙的著色混凝土塊，刻意接近中世紀人手砌出來的質感。' },
+    { t:'p', text:'這場戰役的背景是葡萄牙國王費爾南多一世過世時沒有男性繼承人，依 Dezeen 的說法，王位之爭演變成長達八年的內戰，阿托萊魯什是其中的第一場正面交鋒。' },
   ],
   info:[
     ['名稱','阿托萊魯什戰役解說中心 Centro de Interpretação da Batalha de Atoleiros'],
     ['地點','葡萄牙上阿連特茹 Fronteira 鎮'],
     ['建築師','Gonçalo Byrne Arquitectos ＋ Oficina Ideias em Linha'],
     ['完成','2012 年'],
-    ['順遊','Marvão 山城、Évora']
+    ['順遊','Marvão 山城、Évora'],
+    ['規模','約 935 平方公尺'],
   ],
   faq:[
     ['Gonçalo Byrne 的紅色混凝土建築在哪裡？','在葡萄牙阿連特茹的 Fronteira 小鎮，是阿托萊魯什戰役解說中心，2012 年完成。'],
     ['阿托萊魯什戰役是什麼？','1384 年 4 月 6 日，葡萄牙將領努諾．阿爾瓦雷斯．佩雷拉以少勝多擊退卡斯提亞軍，是葡萄牙守住獨立的關鍵戰役之一。'],
     ['建築中間的縫隙代表什麼？','兩片紅牆中間劈開的狹長縫隙象徵戰爭的傷痕，同時也是建築的入口。'],
-    ['怎麼去 Fronteira？','Fronteira 在阿連特茹內陸，大眾運輸不便，建議自駕，可和 Marvão、Évora 串成一條路線。']
+    ['怎麼去 Fronteira？','Fronteira 在阿連特茹內陸，大眾運輸不便，建議自駕，可和 Marvão、Évora 串成一條路線。'],
+    ['阿托萊魯什戰役解說中心裡面有什麼？','裡面是關於 1384 年阿托萊魯什戰役的展覽，以畫家 Martins Barata 的觀點引導參觀，終點是一張面對大窗的弧形木長椅。'],
+  ],
+  sources:[
+    ['Dezeen｜Red concrete visitor centre by Gonçalo Byrne tells the story of a Portuguese civil war battle（展覽內容、材料、公園、戰役背景）','https://www.dezeen.com/2014/01/16/concrete-visitor-centre-goncalo-byrne-battle-of-atoleiros/','2014-01-16'],
+    ['ArchDaily｜Center for Interpretation of the Battle of Atoleiros（設計團隊、面積、完成年）','https://www.archdaily.com/463140/center-for-interpretation-of-the-battle-of-atoleiros-goncalo-byrne-arquitectos-lda-oficina-ideias-em-linha-arquitectura-e-design-lda','查閱日期 2026-11-17'],
+    ['AEC Cafe｜Center for Interpretation of the Battle of Atoleiros in Fronteira, Portugal','https://www10.aeccafe.com/blogs/arch-showcase/2014/02/20/center-for-interpretation-of-the-battle-of-atoleiros-in-fronteira-portugal-by-goncalo-byrne-arquitectos-oficina-ideias-em-linha','2014-02-20'],
   ]
 };

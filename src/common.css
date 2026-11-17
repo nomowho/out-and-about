@@ -253,3 +253,9 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 /* 避免段落最後一行只剩一個字 */
 .nw{white-space:nowrap}
 p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
+
+/* 國家總覽 */
+.countries .card figure{aspect-ratio:4/3}
+.countries .card h3{font-size:22px;margin-top:6px}
+.countries .meta span:last-child{color:var(--gray);font-weight:500}
+@media(max-width:700px){.countries .card h3{font-size:20px}}
