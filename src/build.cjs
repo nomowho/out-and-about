@@ -328,14 +328,14 @@ function listPage({ file, u, label, h1, desc, posts, lead, nav, crumb, groups, o
     <section class="top">${lead ? `<div class="bg" style="background-image:url(/img/${lead.id}.m.jpg)"></div>` : ''}<div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>${crumb}</span>›<span>${h1}</span></nav>
       <div class="grid2">
-        <div><div class="label">${label}</div><h1>${h1}</h1><p>${desc}</p><div class="count">${posts.length} STORIES</div></div>
+        <div><div class="label">${label}</div><h1>${h1}</h1><p>${desc}</p><div class="count">${posts.length} ${posts.length === 1 ? 'STORY' : 'STORIES'}</div></div>
         ${lead ? `<a href="${url.post(lead.id)}" aria-label="${esc(lead.title)}"><figure>${img(`img/${lead.id}.jpg`, lead.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 600px' })}</figure></a>` : ''}
       </div>
     </div></section>
     <section class="list box">${groups ? groups.map(([g, list]) => `<h2 class="grp" id="${esc(g)}">${g}<small>${list.length}</small></h2>${grid(list)}`).join('') : grid(posts)}</section>
     <section class="others box">
       <div class="sh"><h2>${othersTitle}</h2><span>${othersZh}</span></div>
-      <div class="rail">${others.map(o => `<a class="s" href="${o.u}"><figure>${o.img ? img(o.img, o.t, { sizes: '(max-width:900px) 50vw, 270px' }) : ''}</figure><div><h3>${o.t}</h3><span>${o.n} STORIES ›</span></div></a>`).join('')}</div>
+      <div class="rail">${others.map(o => `<a class="s" href="${o.u}"><figure>${o.img ? img(o.img, o.t, { sizes: '(max-width:900px) 50vw, 270px' }) : ''}</figure><div><h3>${o.t}</h3><span>${o.n} ${o.n === 1 ? 'STORY' : 'STORIES'} ›</span></div></a>`).join('')}</div>
     </section>`;
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: h1, description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
     mainEntity: listLd(h1, posts.map(p => ({ u: url.post(p.id), n: (POST_DETAIL[p.id] || {}).seoTitle || p.title }))) },
@@ -382,7 +382,7 @@ for (const r of regions) {
     <section class="list box"><div class="grid countries">${cards.map(c => `
       <a class="card country" href="${url.dest(c.r)}">
         <figure>${c.lead ? img(`img/${c.lead.id}.jpg`, REGION_ZH[c.r], { sizes: CARD_SIZES }) : `<div class="ph"><span>${c.r.toUpperCase()}</span><b>${REGION_ZH[c.r]}</b><i>照片整理中</i></div>`}</figure>
-        <div class="meta"><span class="cat">${c.r.toUpperCase()}</span><span>${c.l.length} STORIES</span></div>
+        <div class="meta"><span class="cat">${c.r.toUpperCase()}</span><span>${c.l.length} ${c.l.length === 1 ? 'STORY' : 'STORIES'}</span></div>
         <h3>${REGION_ZH[c.r]}</h3><div class="place">${c.areas.join('・')}</div>
       </a>`).join('')}</div></section>`;
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '依國家找旅行', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
@@ -458,7 +458,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <div class="rail">${SERIES.map(s => `
     <a class="s" href="${url.series(s.id)}">
       <figure>${img(`img/${s.img}.jpg`, s.t, { sizes: '300px' })}</figure>
-      <div><h3>${s.t}</h3><p>${s.d}</p><span class="n">${s.ids.length} STORIES ›</span></div>
+      <div><h3>${s.t}</h3><p>${s.d}</p><span class="n">${s.ids.length} ${s.ids.length === 1 ? 'STORY' : 'STORIES'} ›</span></div>
     </a>`).join('')}</div>
 </section>
 
