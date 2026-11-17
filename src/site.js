@@ -77,7 +77,7 @@
       q('.sv-av').style.backgroundImage = 'url(' + st.items[0].img + ')';
       q('.sv-name').textContent = st.label;
       q('.sv-time').textContent = ago(st.date);
-      q('.sv-text').textContent = it.text;
+      q('.sv-text').textContent = it.text; q('.sv-text').hidden = !it.text;
       var ln = q('.sv-link'); ln.hidden = !it.link; if (it.link) ln.href = it.link;
       elapsed = 0; t0 = performance.now();
       preload((st.items[idx + 1] || (S[cur + 1] || { items: [] }).items[0] || {}).img);

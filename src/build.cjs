@@ -374,13 +374,12 @@ for (const r of regions) {
   <aside class="side">
     <div class="dbl stories" id="stories">
       <h3>Stories<small>現在動態</small></h3>
-      <ul class="rings">${STORIES.map((st, i) => `
+      <ul class="rings one">${STORIES.slice(0, 1).map((st, i) => `
         <li><button type="button" class="ring" data-story="${i}" aria-label="看「${esc(st.label)}」動態，共 ${st.items.length} 則">
           <span class="av">${img(st.items[0].img, '', { sizes: '76px' })}</span><b>${st.label}</b><time datetime="${iso(st.date)}" data-ago>${st.date}</time>
         </button></li>`).join('')}</ul>
-      <p class="lead">${STORIES[0].items[0].text}</p>
     </div>
-    <script type="application/json" id="storiesData">${JSON.stringify(STORIES.map(st => ({ label: st.label, date: iso(st.date),
+    <script type="application/json" id="storiesData">${JSON.stringify(STORIES.slice(0, 1).map(st => ({ label: st.label, date: iso(st.date),
       items: st.items.map(it => { const rel = it.img.replace(/^\//, ''), m = rel.replace(/\.[^.]+$/, '.m.jpg');
         if (!dims(rel)) missing.push(rel);
         return { img: '/' + (fs.existsSync(path.join(ROOT, m)) ? m : rel), text: it.text, link: it.link || '' }; }) }))).replace(/</g, '\\u003c')}</script>

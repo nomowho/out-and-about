@@ -1,9 +1,9 @@
 // 首頁「Stories 現在動態」：仿 IG 限時動態，一個圓圈一組，點開是全螢幕直式輪播
-// 新的放最前面。每張：img（直式照片，img/ 底下的路徑）、text（一兩句話）、link（選填，站內文章網址）
+// 首頁只秀最前面那一組（Nomo 2026-11-17 指示），其他組留著當存檔。新的放最前面。每張：img（直式照片，img/ 底下的路徑）、text（一兩句話）、link（選填，站內文章網址）
 // date：這組動態的日期（YYYY.MM.DD），首頁會顯示「今天／N 天前」
 const STORIES = [
   { id:'dolomiti', label:'多洛米蒂', date:'2026.11.17', items:[
-    { img:'img/dolomiti-2.jpg', text:'Now Writing｜多洛米蒂，秋天。2018 年跨年來過一次，八年後的十月再回來，同一座山，換了一個季節。' },
+    { img:'img/dolomiti-2.jpg', text:'' },
     { img:'img/dolomiti-winter/c03.jpg', text:'冬天的樣子：雪原後方的 Odle 群峰。', link:'/stories/dolomiti-winter/' },
     { img:'img/dolomiti-winter/c05.jpg', text:'帶狗散步的人，背後是覆雪的岩峰。秋天那一篇正在寫。', link:'/stories/dolomiti-winter/' }
   ]},
