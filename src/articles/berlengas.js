@@ -3,7 +3,7 @@
 // ⚠️ IG 原文「西元前 1000 年腓尼基人聖地」改為「古代航海者早已知道這座島」（無可靠來源）；「17 世紀抵禦北非海盜」改為 1666 年抵抗西班牙艦隊圍攻；「監獄」查無可靠來源已刪
 // 照片：Nomo 原檔（output/photos/_web-photos/berlengas/），2026-11-17 輸出
 POST_DETAIL['berlengas'] = {
-  seoTitle:'葡萄牙貝倫加群島怎麼去？Peniche 搭快艇 30 分鐘，大西洋上像侏羅紀公園的海上碉堡',
+  seoTitle:'葡萄牙 Berlengas 怎麼去？Peniche 搭快艇 30 分鐘，大西洋上的侏羅紀公園',
   dek:'貝倫加群島（Berlengas）在葡萄牙 Peniche 外海約 10 公里，從 Peniche 搭快艇約 30 分鐘。島上的聖若望浸信者堡 1651 年建在礁岩上，以石橋和主島相連；整座群島 2011 年列入 UNESCO 生物圈保護區，登島要事先線上預約並繳費，每日人數有限。',
   cover:'img/berlengas/cover.jpg', coverLayout:'split',
   coverCap:'聖若望浸信者堡立在紅色礁岩上，一座石橋把它和主島接起來。',
