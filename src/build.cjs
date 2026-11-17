@@ -188,6 +188,26 @@ const newsCard = (n, isNew) => `
 const sitemap = [];   // { loc, lastmod, images[] }
 
 /* ── 文章頁 ── */
+/* 直式靠邊圖（side）要有足夠的文字在旁邊繞排，否則桌機會留一大塊空白：
+   後面文字不夠 → 往上移到前一段文字的開頭；前後都不夠 → 改成置中直式圖（tall） */
+const SIDE_MIN = 200;
+const plainLen = b => b.t === 'p' ? strip(b.text).length : 0;
+function layoutSides(body) {
+  const out = body.map(b => ({ ...b }));
+  for (let i = 0; i < out.length; i++) {
+    const b = out[i];
+    if (b.t !== 'img' || b.size !== 'side') continue;
+    let after = 0; for (let j = i + 1; j < out.length && out[j].t === 'p'; j++) after += plainLen(out[j]);
+    if (after >= SIDE_MIN) continue;
+    let k = i - 1, before = 0; while (k >= 0 && out[k].t === 'p') { before += plainLen(out[k]); k--; }
+    if (before + after >= SIDE_MIN && k + 1 < i) {
+      out.splice(i, 1); out.splice(k + 1, 0, b);           // 移到這段文字最前面，讓文字在旁邊繞排
+    } else {
+      b.size = 'tall';
+    }
+  }
+  return out;
+}
 function block(b) {
   if (b.t === 'p') return `<p>${b.text}</p>`;
   if (b.t === 'h') return `<h2 id="${b.id}">${b.text}</h2>`;
@@ -195,7 +215,7 @@ function block(b) {
   if (b.t === 'quote') return `<blockquote><p lang="ja">${b.text}</p>${b.note ? `<cite>${b.note}</cite>` : ''}</blockquote>`;
   if (b.t === 'img') {
     const size = b.size || 'wide';
-    const sizes = size === 'full' ? '100vw' : size === 'side' ? '(max-width:900px) 100vw, 400px' : '(max-width:1000px) 100vw, 980px';
+    const sizes = size === 'full' ? '100vw' : (size === 'side' || size === 'tall') ? '(max-width:900px) 100vw, 440px' : '(max-width:1000px) 100vw, 980px';
     return `<figure class="${size}">${img(b.src, b.cap, { sizes })}${b.cap ? `<figcaption>${b.cap}</figcaption>` : ''}</figure>`;
   }
   if (b.t === 'pair') {
@@ -250,7 +270,7 @@ for (const p of POSTS) {
         ${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}
         ${d.info ? '<li><a href="#info">旅行資訊</a></li>' : ''}${d.faq ? '<li><a href="#qa">常見問題</a></li>' : ''}${d.sources ? '<li><a href="#sources">資料來源</a></li>' : ''}
       </ol></div></nav>
-      <div class="body">${d.body.map(block).join('')}</div>
+      <div class="body">${layoutSides(d.body).map(block).join('')}</div>
       ${d.info ? `<section class="info" id="info"><div class="in"><h2><span class="en">Travel Info</span><span>旅行資訊</span></h2><dl>${d.info.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="note">開放時間與費用可能調整，出發前請以官方公告為準。</p></div></section>` : ''}
       ${d.faq ? `<section class="qa" id="qa"><h2><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${d.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
       ${d.sources ? `<section class="refs" id="sources"><h2><span class="en">Sources</span><span>資料來源</span></h2><ol>${d.sources.map(([t, h, note]) => `<li><a href="${h}" target="_blank" rel="noopener">${t}</a>${note ? `<span>${note}</span>` : ''}</li>`).join('')}</ol></section>` : ''}

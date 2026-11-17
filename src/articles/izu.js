@@ -80,6 +80,6 @@ POST_DETAIL['izu'] = {
   sources:[
     ['Wikipedia 日文版｜修善寺温泉（修禪寺 807 年、日本百名湯、獨鈷之湯、指月殿、交通）','https://ja.wikipedia.org/wiki/%E4%BF%AE%E5%96%84%E5%AF%BA%E6%B8%A9%E6%B3%89','查閱日期 2026-11-17'],
     ['Wikipedia 日文版｜湯ヶ島温泉（泉質、川端康成與湯本館、梶井基次郎、井上靖、交通）','https://ja.wikipedia.org/wiki/%E6%B9%AF%E3%83%B6%E5%B3%B6%E6%B8%A9%E6%B3%89','查閱日期 2026-11-17'],
-    ['旅色｜行列のできる三島の鰻屋！老舗の「桜家」（安政 3 年創業、地址）','https://tabi-mag.jp/sakuraya/','查閱日期 2026-11-17'],
+    ['旅色｜行列のできる三島の鰻屋！老舗の「桜家」（安政 3 年創業、地址）','https://web.archive.org/web/20250114192506/https://tabi-mag.jp/sakuraya/','查閱日期 2026-11-17'],
   ]
 };

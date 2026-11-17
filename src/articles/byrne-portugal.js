@@ -48,6 +48,6 @@ POST_DETAIL['byrne-portugal'] = {
   sources:[
     ['Dezeen｜Red concrete visitor centre by Gonçalo Byrne tells the story of a Portuguese civil war battle（展覽內容、材料、公園、戰役背景）','https://www.dezeen.com/2014/01/16/concrete-visitor-centre-goncalo-byrne-battle-of-atoleiros/','2014-01-16'],
     ['ArchDaily｜Center for Interpretation of the Battle of Atoleiros（設計團隊、面積、完成年）','https://www.archdaily.com/463140/center-for-interpretation-of-the-battle-of-atoleiros-goncalo-byrne-arquitectos-lda-oficina-ideias-em-linha-arquitectura-e-design-lda','查閱日期 2026-11-17'],
-    ['AEC Cafe｜Center for Interpretation of the Battle of Atoleiros in Fronteira, Portugal','https://www10.aeccafe.com/blogs/arch-showcase/2014/02/20/center-for-interpretation-of-the-battle-of-atoleiros-in-fronteira-portugal-by-goncalo-byrne-arquitectos-oficina-ideias-em-linha','2014-02-20'],
+    ['AEC Cafe｜Center for Interpretation of the Battle of Atoleiros in Fronteira, Portugal','https://web.archive.org/web/20140321210847/http://www10.aeccafe.com/blogs/arch-showcase/2014/02/20/center-for-interpretation-of-the-battle-of-atoleiros-in-fronteira-portugal-by-goncalo-byrne-arquitectos-oficina-ideias-em-linha/','2014-02-20'],
   ]
 };

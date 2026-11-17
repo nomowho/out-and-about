@@ -926,7 +926,7 @@ A：知道，但很晚。他是在 1935 年《魯迅選集》出版、收入〈�
 
 ## 資料來源
 
-- 仙台市｜魯迅與仙台（中文頁：1904 年 9 月至 1906 年 3 月在學）：https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html
+- 仙台市｜魯迅與仙台（中文頁：1904 年 9 月至 1906 年 3 月在學）：https://web.archive.org/web/20250823125427/https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html
 - nippon.com｜藤野嚴九郎與魯迅（藤野生平、〈藤野先生〉完稿日期、北京書房照片、蘆原與紹興友好）：https://www.nippon.com/ja/japan-topics/g02066/
 - 東北大學史料館｜魯迅關係資料一覽：https://www.archives.tohoku.ac.jp/old/luxun/pdf/luxun-list-jp.pdf
 - 東北大學學術資源公開平台 ToUDA｜舊仙台醫學專門學校六號教室（魯迅的階梯教室）：https://touda.tohoku.ac.jp/collection/en/database/archives/public/12030000002925
@@ -1249,7 +1249,6 @@ A：中殿拱頂 45 公尺，中央交叉處 60 公尺，後殿最高達 75 公�
 
 - Wikipedia｜Sagrada Família（拱頂高度、柱網、管風琴、耶穌塔進度）：https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia
 - Ajuntament de Barcelona｜Watercolour designs for the stained-glass windows of the Sagrada Família（Vila-Grau 的彩繪玻璃）：https://www.barcelona.cat/barcelonacultura/en/recomanem/stained-glass-sagrada-familia
-- MACBA｜Esboç per a vitrall del creuer de la Sagrada Família, c. 1999（Vila-Grau 十字翼彩繪玻璃草圖）：https://www.macba.cat/en/node/28679
 
 
 ---
@@ -1943,7 +1942,7 @@ A：川端康成在湯島溫泉的旅館「湯本館」寫成，1922 年先有�
 
 - Wikipedia 日文版｜修善寺温泉（修禪寺 807 年、日本百名湯、獨鈷之湯、指月殿、交通）：https://ja.wikipedia.org/wiki/%E4%BF%AE%E5%96%84%E5%AF%BA%E6%B8%A9%E6%B3%89
 - Wikipedia 日文版｜湯ヶ島温泉（泉質、川端康成與湯本館、梶井基次郎、井上靖、交通）：https://ja.wikipedia.org/wiki/%E6%B9%AF%E3%83%B6%E5%B3%B6%E6%B8%A9%E6%B3%89
-- 旅色｜行列のできる三島の鰻屋！老舗の「桜家」（安政 3 年創業、地址）：https://tabi-mag.jp/sakuraya/
+- 旅色｜行列のできる三島の鰻屋！老舗の「桜家」（安政 3 年創業、地址）：https://web.archive.org/web/20250114192506/https://tabi-mag.jp/sakuraya/
 
 
 ---
@@ -3405,6 +3404,15 @@ A：廣場、教堂與鑰匙孔看出去的視角，都出自 18 世紀版畫家
 
 下午逆光的時候。陽光從玻璃斜斜灑進來，光影在石牆和地面上碎成一片一片，整座地下空間都亮了起來。
 
+
+## 倒金字塔有多大？怎麼懸在空中？
+
+它是大羅浮宮計畫第二期的一部分。整座倒金字塔掛在一個 13.3 公尺見方、重約 30 噸的鋼箱框架上，夾層玻璃靠張力繃在框架上，接縫用 38 公分長的不鏽鋼十字件固定。金字塔本身的玻璃厚 10 公釐，上方廣場那層要讓人踩的玻璃，則厚達 30 公釐。
+
+玻璃尖端離地 1.4 公尺，正下方那座小石金字塔高約 1 公尺，兩個尖點就差這一點距離。它的位置也不是隨便選的：倒金字塔剛好標出兩條主要地下通道的交會點，替人指出往羅浮宮入口的方向。1995 年，它入圍了建築夾層玻璃獎 Benedictus Awards 的決選。
+
+至於《達文西密碼》：丹．布朗 2003 年的小說暗示，那座小石金字塔是地底一座更大密室的頂端，2006 年的電影也照這個想像拍了出來。真實的情況務實得多：它就是一座獨立的小石塊，維修人員清潔玻璃時，可以把它推到一旁。
+
 ## 旅行資訊
 
 - 名稱：倒金字塔 La Pyramide Inversée
@@ -3412,6 +3420,7 @@ A：廣場、教堂與鑰匙孔看出去的視角，都出自 18 世紀版畫家
 - 設計：貝聿銘事務所，1993 年完工
 - 門票：位於商場區，免門票
 - 最佳時段：下午逆光
+- 規模：鋼框 13.3 公尺見方、約 30 噸；尖端離地 1.4 公尺
 
 ## 常見問題
 
@@ -3426,6 +3435,13 @@ A：是，倒金字塔出自貝聿銘事務所，1993 年隨地下商場完工�
 
 Q：羅浮宮金字塔有幾塊玻璃？
 A：羅浮宮官方說主金字塔有 673 塊玻璃（603 塊菱形、70 塊三角形）；這是主金字塔的數字，不是倒金字塔的。
+
+Q：倒金字塔下面真的有密室嗎？
+A：沒有。那是《達文西密碼》的情節，真實的小石金字塔高約 1 公尺，是獨立的石塊，清潔玻璃時可以推到一旁。
+
+## 資料來源
+
+- Wikipedia｜La Pyramide Inversée（設計與完工、結構尺寸、小石金字塔、位置意義、《達文西密碼》）：https://en.wikipedia.org/wiki/La_Pyramide_Invers%C3%A9e
 
 
 ---
@@ -3495,7 +3511,7 @@ A：裡面是關於 1384 年阿托萊魯什戰役的展覽，以畫家 Martins B
 
 - Dezeen｜Red concrete visitor centre by Gonçalo Byrne tells the story of a Portuguese civil war battle（展覽內容、材料、公園、戰役背景）：https://www.dezeen.com/2014/01/16/concrete-visitor-centre-goncalo-byrne-battle-of-atoleiros/
 - ArchDaily｜Center for Interpretation of the Battle of Atoleiros（設計團隊、面積、完成年）：https://www.archdaily.com/463140/center-for-interpretation-of-the-battle-of-atoleiros-goncalo-byrne-arquitectos-lda-oficina-ideias-em-linha-arquitectura-e-design-lda
-- AEC Cafe｜Center for Interpretation of the Battle of Atoleiros in Fronteira, Portugal：https://www10.aeccafe.com/blogs/arch-showcase/2014/02/20/center-for-interpretation-of-the-battle-of-atoleiros-in-fronteira-portugal-by-goncalo-byrne-arquitectos-oficina-ideias-em-linha
+- AEC Cafe｜Center for Interpretation of the Battle of Atoleiros in Fronteira, Portugal：https://web.archive.org/web/20140321210847/http://www10.aeccafe.com/blogs/arch-showcase/2014/02/20/center-for-interpretation-of-the-battle-of-atoleiros-in-fronteira-portugal-by-goncalo-byrne-arquitectos-oficina-ideias-em-linha/
 
 
 ---
@@ -3528,6 +3544,20 @@ A：裡面是關於 1384 年阿托萊魯什戰役的展覽，以畫家 Martins B
 
 在這裡，像穿越了時空。
 
+
+## 島上除了堡壘，還有什麼？
+
+群島由主島 Berlenga Grande 和兩組小島 Estelas、Farilhões-Forcadas 組成。主島長約 1.5 公里、寬約 0.8 公里，最高點 88 公尺，大部分是富含長石的粉紅色花崗岩，所以礁岩在陽光下會透出紅色。島上現在沒有常住居民。
+
+島的高處有一座 1841 年蓋的燈塔，當地人叫它「布拉干薩公爵」，光束能照到約 50 公里外。這片海也不總是溫柔：1808 年，英國軍艦 HMS Milbrook 就在主島觸礁，所幸沒有人罹難。
+
+生態的家底比想像中厚。整個群島約有 100 種植物，其中 Armeria berlengensis 等幾種只長在這裡；兩次科學調查記錄到的魚至少 44 種。海鳥則有黃腳銀鷗、小黑背鷗、崖海鴉等。
+
+
+## 登島要怎麼預約？
+
+預約要透過官方平台 BerlengasPass，訂位時一起繳入島費。這筆費用從 2022 年開始收，每人每天 3 歐元，6 到 18 歲和 65 歲以上半價，收入投入保護區。依法規，島上同一時間最多只能有 550 名遊客，旺季常常是船位還有、通行證先沒了，所以建議先訂好 BerlengasPass 再訂船。
+
 ## 旅行資訊
 
 - 地點：葡萄牙 Peniche 外海約 10 公里
@@ -3535,6 +3565,9 @@ A：裡面是關於 1384 年阿托萊魯什戰役的展覽，以畫家 Martins B
 - 登島：須事先線上預約並繳費，每日人數有上限
 - 保護：2011 年 UNESCO 生物圈保護區
 - 季節：夏季船班較多，冬季海象不佳常停駛
+- 入島費：BerlengasPass 線上預約，每人每天 3 歐元（2022 年起；6–18 歲、65 歲以上半價）
+- 人數上限：島上同時最多 550 名遊客
+- 主島：長約 1.5 公里、寬約 0.8 公里，最高點 88 公尺
 
 ## 常見問題
 
@@ -3549,6 +3582,18 @@ A：聖若望浸信者堡在 1651 年由葡萄牙國王若昂四世下令興建�
 
 Q：貝倫加群島什麼季節去最好？
 A：夏季船班多、海象較穩；冬季風浪大，船班常停駛。
+
+Q：貝倫加群島入島費多少？
+A：透過 BerlengasPass 預約時繳費，2022 年起每人每天 3 歐元，6 到 18 歲與 65 歲以上半價。
+
+Q：貝倫加群島一天能去多少人？
+A：法規規定島上同一時間最多 550 名遊客，旺季通行證常比船位先額滿，建議先訂通行證再訂船。
+
+## 資料來源
+
+- Wikipedia｜Berlengas（群島組成、地形與地質、燈塔、生態、修道院與堡壘、生物圈保護區）：https://en.wikipedia.org/wiki/Berlengas
+- Observador｜Acesso às Berlengas passa a ter uma taxa de acesso de 3 euros（入島費與半價對象）：https://observador.pt/2022/01/05/acesso-as-berlengas-passa-a-ter-uma-taxa-de-acesso-de-3-euros/
+- The Portugal News｜Berlengas visitors limited to 550 a day（人數上限）：https://web.archive.org/web/20250319062201/https://www.theportugalnews.com/news/berlengas-visitors-limited-to-550-a-day/49623
 
 
 ---

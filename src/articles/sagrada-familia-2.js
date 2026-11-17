@@ -66,6 +66,5 @@ POST_DETAIL['sagrada-familia-2'] = {
   sources:[
     ['Wikipedia｜Sagrada Família（拱頂高度、柱網、管風琴、耶穌塔進度）','https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia','查閱日期 2026-11-17'],
     ['Ajuntament de Barcelona｜Watercolour designs for the stained-glass windows of the Sagrada Família（Vila-Grau 的彩繪玻璃）','https://www.barcelona.cat/barcelonacultura/en/recomanem/stained-glass-sagrada-familia','查閱日期 2026-11-17'],
-    ['MACBA｜Esboç per a vitrall del creuer de la Sagrada Família, c. 1999（Vila-Grau 十字翼彩繪玻璃草圖）','https://www.macba.cat/en/node/28679','查閱日期 2026-11-17'],
   ]
 };

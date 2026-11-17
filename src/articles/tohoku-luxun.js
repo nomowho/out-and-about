@@ -63,7 +63,7 @@ POST_DETAIL['tohoku-luxun'] = {
     ['藤野先生知道魯迅寫了他嗎？','知道，但很晚。他是在 1935 年《魯迅選集》出版、收入〈藤野先生〉之後才得知，1937 年發表了追憶文章。兩人分別後沒有再見面。'],
   ],
   sources:[
-    ['仙台市｜魯迅與仙台（中文頁：1904 年 9 月至 1906 年 3 月在學）','https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html','查閱日期 2026-11-17'],
+    ['仙台市｜魯迅與仙台（中文頁：1904 年 9 月至 1906 年 3 月在學）','https://web.archive.org/web/20250823125427/https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html','查閱日期 2026-11-17'],
     ['nippon.com｜藤野嚴九郎與魯迅（藤野生平、〈藤野先生〉完稿日期、北京書房照片、蘆原與紹興友好）','https://www.nippon.com/ja/japan-topics/g02066/','查閱日期 2026-11-17'],
     ['東北大學史料館｜魯迅關係資料一覽','https://www.archives.tohoku.ac.jp/old/luxun/pdf/luxun-list-jp.pdf','查閱日期 2026-11-17'],
     ['東北大學學術資源公開平台 ToUDA｜舊仙台醫學專門學校六號教室（魯迅的階梯教室）','https://touda.tohoku.ac.jp/collection/en/database/archives/public/12030000002925','查閱日期 2026-11-17'],

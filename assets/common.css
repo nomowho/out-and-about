@@ -295,3 +295,12 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .body .pair .stack{display:grid;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:4/5}
 .body .pair .stack img{aspect-ratio:auto;height:100%;width:100%;object-fit:cover;min-height:0}
 @media(max-width:700px){.body .pair .stack{gap:4px}}
+/* 小字放大到可讀：封面圖說、旅行資訊提醒 */
+.covercap,.split figcaption{font-size:12px}
+.info .note{font-size:12.5px}
+@media(max-width:700px){.covercap,.split figcaption{font-size:12.5px}.info .note{font-size:13px}}
+/* 置中直式圖：旁邊文字不夠繞排時用 */
+.body .tall{width:min(440px,100%);margin:40px auto;clear:both}
+.body .tall img{aspect-ratio:3/4;height:auto}
+.body .tall figcaption{text-align:left}
+@media(max-width:700px){.body .tall{width:auto;margin:30px -20px}.body .tall img{aspect-ratio:4/5}.body .tall figcaption{padding:0 20px}}
