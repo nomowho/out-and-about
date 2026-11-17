@@ -1,8 +1,17 @@
 // 聖家堂（內部光線）｜由 IG 貼文（2026-06-21，344 讚）改寫
 // 資料來源：中殿樹狀柱、東藍綠西暖色彩繪玻璃、Joan Vila-Grau 接手彩繪玻璃取自 Nomo IG 原文；耶穌塔 2026-02-20 完成見 sagrada-familia.js 來源
+// 2026-11-17 擴寫並補出處：拱頂高度（中殿 45 m、側廊 30 m、中央 60 m、後殿 75 m）、7.5 m 柱網、2010 年管風琴 26 音栓 1,492 支管出自英文維基百科 Sagrada Família；Vila-Grau 1999 年受託出自 MACBA 典藏資料與巴塞隆納市文化網站（2026-11-17 查）
 POST_DETAIL['sagrada-familia-2'] = {
   seoTitle:'聖家堂內部為什麼像森林？高第的樹狀柱與彩繪玻璃，早上和傍晚各看一次',
   dek:'走進聖家堂，中殿的柱子往上分叉成樹枝，撐起像樹冠一樣的天花板。東側彩繪玻璃是藍綠冷色、迎接早晨的光；西側是橙黃暖色、接住傍晚的夕陽。同一個空間，上午和下午看起來完全不一樣，最好早晚各來一次。',
+  updated:'2026-11-17',
+  place:{
+    alt:['Sagrada Família','Basílica de la Sagrada Família','聖家族大教堂'],
+    url:'https://sagradafamilia.org/',
+    sameAs:['https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia'],
+    address:{ streetAddress:'Carrer de Mallorca, 401', addressLocality:'Barcelona', addressCountry:'ES' },
+    geo:[41.4036, 2.1744]
+  },
   cover:'img/sagrada-familia-2/00_cover.jpg', coverLayout:'split',
   coverCap:'抬頭看，柱子像樹幹一樣往上分叉。',
   body:[
@@ -30,7 +39,12 @@ POST_DETAIL['sagrada-familia-2'] = {
     { t:'p', text:'參觀動線的最後會經過地下的博物館，可以看到高第留下的模型、照片，還有工作人員正在製作石膏模型的工作室。1936 年內戰時工作室被焚毀，今天看到的許多模型，是後來從碎片一點一點拼回來的。' },
     { t:'pair', imgs:['img/sagrada-familia-2/06.jpg','img/sagrada-familia-2/08.jpg'], cap:'左：地下的模型工作室。右：通往地下空間的門。' },
     { t:'p', text:'2026 年 2 月，中央的耶穌塔完成，聖家堂成為世界最高的教堂；這一年，也剛好是高第逝世一百週年。' },
-    { t:'p', text:'→ 從外面看聖家堂：<a href="post.html#sagrada-familia">聖家堂為什麼蓋了 144 年？</a>' }
+    { t:'h', id:'height', text:'這座森林有多高？' },
+    { t:'p', text:'中殿的拱頂高 45 公尺，兩側的側廊是 30 公尺；中央交叉處的拱頂升到 60 公尺，後殿那一段最高，達 75 公尺。所有柱子落在邊長 7.5 公尺的網格上，所以從任何一個角度看，柱子都像一片排得整整齊齊、卻又各自分叉的樹林。' },
+    { t:'p', text:'彩繪玻璃的故事也比想像中晚。Joan Vila-Grau 是在 1999 年受託負責整座教堂的彩繪玻璃，從十字翼、後殿到中殿，一做就是將近二十年。你今天在裡面看到的光，大部分是 21 世紀才裝上去的。' },
+    { t:'h', id:'organ', text:'聖家堂裡聽得到管風琴嗎？' },
+    { t:'p', text:'有機會，但主要在彌撒和特別活動時。2010 年祝聖那年裝了第一座管風琴，有 26 個音栓、1,492 支音管。依計畫，之後還會陸續增設，全部完成時總數約 8,000 支。' },
+    { t:'p', text:'→ 從外面看聖家堂：<a href="post.html#sagrada-familia">聖家堂為什麼蓋了 144 年？</a>' },
   ],
   info:[
     ['名稱','聖家堂 Basílica de la Sagrada Família'],
@@ -38,12 +52,20 @@ POST_DETAIL['sagrada-familia-2'] = {
     ['最佳時段','早上看東側藍綠光、傍晚看西側暖色光，晴天效果最好'],
     ['彩繪玻璃','高第去世後由藝術家 Joan Vila-Grau 接手完成'],
     ['交通','地鐵 L2／L5「Sagrada Família」站出站即到'],
-    ['門票','建議提前在官網預約時段票']
+    ['門票','建議提前在官網預約時段票'],
+    ['拱頂高度','中殿 45 公尺、側廊 30 公尺、中央 60 公尺、後殿 75 公尺'],
+    ['管風琴','2010 年安裝，26 音栓、1,492 支音管'],
   ],
   faq:[
     ['聖家堂裡面為什麼像森林？','高第把中殿的柱子設計成像樹一樣往上分叉，撐起像樹冠的天花板，讓人走進去像站在林子裡。'],
     ['聖家堂什麼時候去光線最美？','早上東側藍綠色的彩繪玻璃最亮，傍晚西側的橙黃暖色最戲劇化，建議早晚各去一次，或選晴天午後。'],
     ['聖家堂的彩繪玻璃是誰做的？','高第 1926 年去世後，由加泰隆尼亞藝術家 Joan Vila-Grau 接手，花了幾十年陸續完成。'],
-    ['聖家堂為什麼不需要飛扶壁？','高第的樹狀柱模仿樹木的受力方式，把屋頂重量分散到分叉的柱子上，所以不需要哥德式教堂的飛扶壁。']
+    ['聖家堂為什麼不需要飛扶壁？','高第的樹狀柱模仿樹木的受力方式，把屋頂重量分散到分叉的柱子上，所以不需要哥德式教堂的飛扶壁。'],
+    ['聖家堂裡面有多高？','中殿拱頂 45 公尺，中央交叉處 60 公尺，後殿最高達 75 公尺。'],
+  ],
+  sources:[
+    ['Wikipedia｜Sagrada Família（拱頂高度、柱網、管風琴、耶穌塔進度）','https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia','查閱日期 2026-11-17'],
+    ['Ajuntament de Barcelona｜Watercolour designs for the stained-glass windows of the Sagrada Família（Vila-Grau 的彩繪玻璃）','https://www.barcelona.cat/barcelonacultura/en/recomanem/stained-glass-sagrada-familia','查閱日期 2026-11-17'],
+    ['MACBA｜Esboç per a vitrall del creuer de la Sagrada Família, c. 1999（Vila-Grau 十字翼彩繪玻璃草圖）','https://www.macba.cat/en/node/28679','查閱日期 2026-11-17'],
   ]
 };
