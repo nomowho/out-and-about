@@ -162,6 +162,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
   <p>© 2026 Nomo · ${footNote}</p>
 </footer>
 <script src="/assets/site.js?v=${ver}" defer></script>
+${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${CFG.cfBeacon}"}'></script>` : ''}
 </body>
 </html>
 `;
