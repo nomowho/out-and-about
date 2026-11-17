@@ -1,9 +1,16 @@
 // 冬天的多洛米蒂｜由 IG 貼文（2026-09-21，929 讚）改寫
 // 資料來源：IG 草稿 2026-09-20_dolomiti-winter-ig-post.md 的「已查證事實」表（Seceda、Alpe di Siusi、Ortisei、St. Valentin、Säben、Val di Funes、Dolomiti Superski，各列出處）；
 // 網站版修正：冬奧改為「2026 米蘭－科爾蒂納冬奧高山滑雪在 Cortina」、Seceda 線上預約註明為夏季制度、St. Valentin 依官方寫 1244 年首見文獻
+// 2026-11-17 擴寫並補出處：本文已有完整查證（IG 草稿「已查證事實」表），本次只把出處列到文末，未新增段落
 POST_DETAIL['dolomiti-winter'] = {
   seoTitle:'冬天的多洛米蒂怎麼玩？Seceda、Alpe di Siusi、Funes 教堂與世界最大雪場全攻略',
   dek:'多洛米蒂（Dolomiti）在義大利東北，冬天有全世界最大的滑雪區 Dolomiti Superski：一張通行證通用 12 個雪區、1,246 公里雪道。本篇整理 Ortisei、Seceda、歐洲最大高山牧場 Alpe di Siusi、Val di Funes 的 Santa Maddalena 教堂、St. Valentin 與冬季自駕注意事項。',
+  updated:'2026-11-17',
+  place:{
+    alt:['Dolomiti','Dolomites','Dolomiten','多洛米蒂山脈'],
+    sameAs:['https://whc.unesco.org/en/list/1237/','https://en.wikipedia.org/wiki/Dolomites'],
+    address:{ addressRegion:'Trentino-Alto Adige', addressCountry:'IT' }
+  },
   cover:'img/dolomiti-winter/c02.jpg',
   coverCap:'坐在雪地上，對面是 Sassolungo 的岩峰。',
   visit:'2018 年 12 月底跨年',
@@ -57,7 +64,7 @@ POST_DETAIL['dolomiti-winter'] = {
 
     { t:'h', id:'drive', text:'冬天自駕多洛米蒂要注意什麼？' },
     { t:'p', text:'交通和住宿都要提早安排。開車的話先確認雪胎：義大利多數山區道路從 11 月 15 日到隔年 4 月 15 日，規定要裝雪胎或車上備雪鏈，實際以各路段公告為準。幾條高山埡口，像 Sella、Gardena、Pordoi、Falzarego，冬天可能因雪況封閉，繞路會多花非常多時間。' },
-    { t:'p', text:'如果只能挑一個季節去多洛米蒂，你會選冬天的雪、夏天的翠綠，還是秋天金色的落葉松？' }
+    { t:'p', text:'如果只能挑一個季節去多洛米蒂，你會選冬天的雪、夏天的翠綠，還是秋天金色的落葉松？' },
   ],
   info:[
     ['地區','義大利東北，Trentino–Alto Adige 與 Veneto 一帶'],
@@ -66,13 +73,22 @@ POST_DETAIL['dolomiti-winter'] = {
     ['Seceda','海拔約 2,519 公尺，從 Ortisei 搭纜車約 10 分鐘'],
     ['Alpe di Siusi','海拔 1,680–2,350 公尺、52 平方公里，歐洲最大高山牧場'],
     ['冬季自駕','約 11/15–4/15 需雪胎或備雪鏈；Sella、Gardena、Pordoi、Falzarego 等埡口可能封閉'],
-    ['日落','12 月約 16:30，enrosadira 最鮮明約 3 分鐘']
+    ['日落','12 月約 16:30，enrosadira 最鮮明約 3 分鐘'],
   ],
   faq:[
     ['多洛米蒂冬天好玩嗎？','好玩。冬天有全世界最大的滑雪區 Dolomiti Superski，也能看雪中的 Seceda、Alpe di Siusi 和 Funes 教堂，跨年還有火把滑雪與煙火。'],
     ['Dolomiti Superski 有多大？','Dolomiti Superski 一張通行證通用 12 個雪區、1,246 公里雪道，範圍約三千平方公里，是全世界最大的滑雪區域。'],
     ['多洛米蒂日落為什麼是粉紅色？','白雲岩含鎂，傍晚映著低角度的陽光會透出玫瑰紅，當地 Ladin 語稱為 enrosadira，最鮮明約三分鐘。'],
     ['冬天開車去多洛米蒂要雪胎嗎？','要。義大利多數山區道路約從 11 月 15 日到 4 月 15 日規定要裝雪胎或備雪鏈，高山埡口冬天也可能封閉。'],
-    ['Santa Maddalena 教堂在哪裡？','Santa Maddalena 在 Val di Funes 山谷，教堂後方就是 Odle 群峰，是多洛米蒂最經典的明信片畫面之一。']
+    ['Santa Maddalena 教堂在哪裡？','Santa Maddalena 在 Val di Funes 山谷，教堂後方就是 Odle 群峰，是多洛米蒂最經典的明信片畫面之一。'],
+  ],
+  sources:[
+    ['UNESCO World Heritage Centre｜The Dolomites（2009 年列入世界自然遺產）','https://whc.unesco.org/en/list/1237/','名錄編號 1237'],
+    ['Seceda 纜車官方網站（海拔、纜車、夏季線上預約制度）','https://www.seceda.it/','查閱日期 2026-09-20'],
+    ['Seiser Alm／Alpe di Siusi 官方旅遊網站（St. Valentin 教堂、7 號步道、導覽期間）','https://www.seiseralm.it/','查閱日期 2026-09-20'],
+    ['Wikipedia｜Seiser Alm（海拔、面積、放牧歷史、自然公園）','https://en.wikipedia.org/wiki/Seiser_Alm','查閱日期 2026-09-20'],
+    ['Wikipedia｜Urtijëi（Ortisei 三種語言名稱、人口、木雕傳統）','https://en.wikipedia.org/wiki/Urtij%C3%ABi','查閱日期 2026-09-20'],
+    ['Wikipedia｜Säben Abbey（主教座年代、本篤會修女進駐與離開）','https://en.wikipedia.org/wiki/S%C3%A4ben_Abbey','查閱日期 2026-09-20'],
+    ['Wikipedia｜Dolomiti Superski（1974 年成立、12 雪區、1,246 公里雪道）','https://en.wikipedia.org/wiki/Dolomiti_Superski','查閱日期 2026-09-20'],
   ]
 };
