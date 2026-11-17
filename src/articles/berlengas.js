@@ -22,7 +22,7 @@ POST_DETAIL['berlengas'] = {
     { t:'p', text:'整座群島在 2011 年被列入 UNESCO 生物圈保護區。天上是盤旋的海鳥，水下透明得誇張，海鰻、章魚和魚群在花崗岩的縫隙裡穿梭。站在石橋上，堡壘在上、大海在下，歷史和自然在同一刻相遇。' },
     { t:'img', size:'wide', src:'img/berlengas/beach.jpg', cap:'從崖上往下看，藏在岩壁間的小沙灘。' },
     { t:'p', text:'在這裡，像穿越了時空。' },
-    { t:'pair', imgs:['img/berlengas/cove.jpg','img/berlengas/rocks.jpg'], cap:'左：清澈見底的海灣，有人在裡面游泳。右：覆著地衣和植物的紅色岩石。' }
+    { t:'pair', imgs:['img/berlengas/end-fort.jpg','img/berlengas/end-bridge.jpg'], cap:'左：沿著石階往下，堡壘就浮在海面上。右：走過石拱橋，橋下是深藍色的海水。' }
   ],
   info:[
     ['地點','葡萄牙 Peniche 外海約 10 公里'],
