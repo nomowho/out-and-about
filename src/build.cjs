@@ -306,7 +306,7 @@ newsNew.forEach(n => {
       <div class="grid">${others.map(x => newsCard(x)).join('')}</div>
     </div></section>
     <section class="more plain"><div class="box">
-      <div class="sh"><h2>PICK UP</h2><span>編輯精選・我的旅行</span></div>
+      <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
       <div class="grid">${picks.map(x => postCard(x, { place: false })).join('')}</div>
     </div></section>`;
   const ld = [
@@ -408,7 +408,7 @@ for (const r of regions) {
 </section>
 
 <section class="latest box" aria-label="編輯精選">
-  <div class="sh"><h2>PICK UP</h2><span>編輯精選・我的旅行</span></div>
+  <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
   <div class="grid" id="picks">${postsNew.slice(0, 50).map((p, i) => postCard(p, { hidden: i >= FIRST })).join('')}</div>
   <div class="morewrap"><button class="morebtn" id="picksMore" type="button">MORE<small>看更多旅行</small></button></div>
 </section>
