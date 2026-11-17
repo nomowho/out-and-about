@@ -29,7 +29,7 @@ const POSTS = [
   { id:'siracusa', ig:'DV1CQnREgE3', likes:327, photo:true, cat:'HISTORY', date:'2026.03.13', region:'Italy', area:'Sicilia', zh:'錫拉庫薩', title:'古希臘最偉大的城市在西西里？阿基米德的故鄉錫拉庫薩' },
   { id:'ear-of-dionysius', ig:'DVd0kzaEj0R', likes:2883, photo:true, cat:'HISTORY', date:'2026.03.04', region:'Italy', area:'Sicilia', zh:'狄奧尼修斯之耳', title:'上帝遺落在西西里的耳朵，居然是暴君的竊聽器' },
   { id:'etna', ig:'DVRHKGCknNz', likes:203, photo:true, cat:'NATURE', date:'2026.02.27', region:'Italy', area:'Sicilia', zh:'埃特納火山', title:'西西里的冰與火之歌：去歐洲最活躍的火山' },
-  { id:'catania', ig:'DVOgnOBkkpX', likes:250, photo:false, cat:'ARCHITECTURE', date:'2026.02.26', region:'Italy', area:'Sicilia', zh:'卡塔尼亞', title:'西西里島的黑色巴洛克：用火山岩蓋起來的城市' },
+  { id:'catania', ig:'DVOgnOBkkpX', likes:250, photo:true, cat:'ARCHITECTURE', date:'2026.02.26', region:'Italy', area:'Sicilia', zh:'卡塔尼亞', title:'西西里島的黑色巴洛克：用火山岩蓋起來的城市' },
   { id:'tivoli', ig:'DTVAtJgkjM0', likes:318, photo:true, cat:'ARCHITECTURE', date:'2026.01.10', region:'Italy', area:'Lazio', zh:'蒂沃利', title:'古羅馬皇帝的水樂園，美到連丹麥都來借名字' },
   { id:'scala-santa', ig:'DSfa56ykkwq', likes:6781, photo:false, cat:'HISTORY', date:'2025.12.20', region:'Italy', area:'Roma', zh:'聖階', title:'耶穌受審前走過的 28 階，跪著爬上羅馬的聖階' },
   { id:'borghese', ig:'DREdslJEqWJ', likes:327, photo:false, cat:'ART', date:'2025.11.15', region:'Italy', area:'Roma', zh:'博爾蓋塞美術館', title:'羅馬最滿足的兩小時：看貝尼尼把大理石捏成肉' },
