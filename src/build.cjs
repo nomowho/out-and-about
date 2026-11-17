@@ -409,7 +409,7 @@ for (const r of regions) {
 
 <section class="latest box" aria-label="編輯精選">
   <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
-  <div class="grid" id="picks">${postsNew.slice(0, 50).map((p, i) => postCard(p, { hidden: i >= FIRST })).join('')}</div>
+  <div class="grid" id="picks">${postsNew.map((p, i) => postCard(p, { hidden: i >= FIRST })).join('')}</div>
   <div class="morewrap"><button class="morebtn" id="picksMore" type="button">MORE<small>看更多旅行</small></button></div>
 </section>
 
