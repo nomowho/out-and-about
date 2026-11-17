@@ -40,7 +40,7 @@ const POSTS = [
   { id:'aventine', ig:'DPYN2nnEvYx', likes:1561, photo:true, cat:'HISTORY', date:'2025.10.04', region:'Italy', area:'Roma', zh:'亞文提諾山', title:'羅馬的奈米景點：一眼看見三個國家的鑰匙孔' },
   { id:'louvre-pyramid', ig:'DPEq8hpki9x', likes:181, photo:true, cat:'ARCHITECTURE', date:'2025.09.26', region:'France', area:'Paris', zh:'羅浮宮倒金字塔', title:'讓光與時間靜靜下墜：羅浮宮的倒金字塔' },
   { id:'byrne-portugal', ig:'DO2qItPkj88', likes:174, photo:true, cat:'ARCHITECTURE', date:'2025.09.20', region:'Portugal', area:'Alentejo', zh:'阿托萊魯什戰役解說中心', title:'朝聖 Gonçalo Byrne 的紅色混凝土：阿托萊魯什戰役解說中心' },
-  { id:'berlengas', ig:'DOjCzGFEvbL', likes:179, photo:false, cat:'NATURE', date:'2025.09.13', region:'Portugal', area:'Peniche', zh:'貝倫加斯群島', title:'大西洋上的海上碉堡：貝倫加斯群島' },
+  { id:'berlengas', ig:'DOjCzGFEvbL', likes:179, photo:true, cat:'NATURE', date:'2025.09.13', region:'Portugal', area:'Peniche', zh:'貝倫加斯群島', title:'大西洋上的海上碉堡：貝倫加斯群島' },
   { id:'munch', ig:'DOdmoSGEs_r', likes:115, photo:false, cat:'ART', date:'2025.09.11', region:'Norway', area:'Oslo', zh:'孟克美術館', title:'奧斯陸港邊的沙蟲：孟克美術館與《吶喊》' },
   { id:'the-twist', ig:'C_p04DwBvvK', likes:482, photo:false, cat:'ART', date:'2025.09.07', region:'Norway', area:'Jevnaker', zh:'The Twist 美術館', title:'被巨人扭轉的橋：橫跨河面的漂浮美術館 The Twist' },
   { id:'under', ig:'C_XmPDEhft9', likes:310, photo:false, cat:'FOOD', date:'2025.08.31', region:'Norway', area:'Lindesnes', zh:'Under 海底餐廳', title:'全世界最美的海底餐廳 Under：在海平面下吃米其林' },
