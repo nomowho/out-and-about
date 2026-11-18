@@ -307,3 +307,5 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 /* Stories 頭像下方的自介 */
 .stories .bio{text-align:center;margin:4px auto 6px;max-width:300px;font-size:14px;line-height:1.75;color:#444}
 .stories .bio span[lang]{display:block;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:14px;line-height:1.55;color:#222;margin-bottom:6px}
+/* 內文左右對齊（Nomo 2026-11-18）：中文逐字撐開、英文長字可斷字；:where 讓特例（落款、置中段落）仍可覆寫 */
+:where(.body p,.body li,.qa dd,article > .dek,.split .dek){text-align:justify;text-justify:inter-character;hyphens:auto;-webkit-hyphens:auto}
