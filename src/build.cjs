@@ -72,7 +72,7 @@ function img(src, alt, { lazy = true, sizes = '100vw', cls = '', small = false }
   const srcset = parts.length > 1 ? ` srcset="${parts.join(', ')}" sizes="${sizes}"` : '';
   return `<img src="/${srcset && m ? mrel : rel}"${srcset} alt="${esc(alt || '')}"${d ? ` width="${d.w}" height="${d.h}"` : ''}${lazy ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async"${cls ? ` class="${cls}"` : ''}>`;
 }
-const CARD_SIZES = '(max-width:560px) 100vw, (max-width:1000px) 50vw, 380px';
+const CARD_SIZES = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 50vw, 380px';   // 手機卡片左右各 20px 留白，標準確才會選 720px 縮圖（PageSpeed 11-18）
 const thumb = (p, lazy = true) => p.photo === false
   ? `<div class="ph"><span>${p.region.toUpperCase()} · ${p.area}</span><b>${p.zh}</b><i>照片整理中</i></div>`
   : img(`img/${p.id}.jpg`, p.zh, { lazy, sizes: CARD_SIZES, small: true });   // small＝600px 縮圖，手機與小卡片自動選用（PageSpeed 11-18）
@@ -179,7 +179,7 @@ ${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beaco
 /* ── 卡片 ── */
 const postCard = (p, { extra = '', place = true, hidden = false, cls = '', cover = false } = {}) => `
   <a class="card${cls ? ' ' + cls : ''}"${hidden ? ' hidden' : ''} href="${url.post(p.id)}">
-    <figure>${extra}${cover && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cover, p.zh, { sizes: '(max-width:1000px) 100vw, 560px' }) : thumb(p)}</figure>
+    <figure>${extra}${cover && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cover, p.zh, { sizes: '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 100vw, 560px', small: true }) : thumb(p)}</figure>
     <div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
     <h3>${p.title}</h3>${place ? `<div class="place">${p.zh}，${p.area}</div>` : ''}
   </a>`;
