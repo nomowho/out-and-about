@@ -210,8 +210,10 @@
   if (hl && hl.classList.contains('headlines')) {
     var ht = hl.querySelector('.hl-track'), HL_SPEED = 35.2;   // 每秒 px（原 32 再快 10%）
     [].slice.call(ht.children).forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; ht.appendChild(d); });
-    var hlSize = function () { var half = ht.scrollWidth / 2; ht.style.setProperty('--hl-shift', -half + 'px'); ht.style.setProperty('--hl-dur', (half / HL_SPEED) + 's'); ht.classList.add('run'); };
-    hlSize(); addEventListener('load', hlSize); addEventListener('resize', function () { clearTimeout(hl._rz); hl._rz = setTimeout(hlSize, 200); });
+    var hlHalf = 0;
+    var hlSize = function () { var half = Math.round(ht.scrollWidth / 2); if (half === hlHalf) return; hlHalf = half; ht.style.setProperty('--hl-shift', -half + 'px'); ht.style.setProperty('--hl-dur', (half / HL_SPEED) + 's'); ht.classList.add('run'); };   // 寬度沒變就不重設，避免整排跳動
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(hlSize); else hlSize();   // 等字型載入完才開始，卡片寬度不會中途改變
+    addEventListener('resize', function () { clearTimeout(hl._rz); hl._rz = setTimeout(hlSize, 200); });
     hl.addEventListener('touchstart', function () { ht.classList.add('hold'); }, { passive: true });
     var hlGo = function () { setTimeout(function () { ht.classList.remove('hold'); }, 1500); };
     hl.addEventListener('touchend', hlGo, { passive: true }); hl.addEventListener('touchcancel', hlGo, { passive: true });
