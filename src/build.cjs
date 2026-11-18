@@ -573,6 +573,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       const must = ok.filter(([src]) => J_FEAT.has(src)), rest = ok.filter(([src]) => !J_FEAT.has(src)).slice(0, Math.max(0, J_MAX - must.length));   // 指定滿版的一定收，其餘補到 J_MAX
       ok.filter(x => must.includes(x) || rest.includes(x)).forEach(([src, cap]) => items.push({ p, src, cap }));
     });
+    (J_LAYOUT.swap || []).forEach(([x, y]) => { const i = items.findIndex(it => it.src === x), k = items.findIndex(it => it.src === y); if (i >= 0 && k >= 0) [items[i], items[k]] = [items[k], items[i]]; });   // 兩張直接對調位置
     const jRegions = regions.filter(r => items.some(it => it.p.region === r));
     const u = '/journal/';
     const strip = t => String(t).replace(/<[^>]+>/g, '');
