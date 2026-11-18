@@ -396,3 +396,5 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .top.jtop{background:#fff}
 .top.jtop::after{display:none}
 .top.jtop .box{padding-bottom:4px}
+/* 閱讀進度條：螢光綠（品牌色 #C8F500），白底上加到 3px 才看得清楚 */
+.head .progress{background:#C8F500;height:3px;bottom:-2px}
