@@ -361,3 +361,18 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
   .areas::-webkit-scrollbar{display:none}
   .areas a{flex:0 0 auto}
 }
+/* 首頁 Photo Journal 入口：只有 logo，不放照片 */
+.journal-entry .ring{display:inline-flex;text-decoration:none}
+.journal-entry .jlink{display:block;text-align:center;font-size:12px;letter-spacing:.06em;color:var(--gray);margin:2px 0 4px;padding:6px 0}
+.journal-entry .jlink:hover{color:var(--ink)}
+/* /journal/ 瀑布流：照片原比例，欄內由上往下排 */
+.masonry{column-count:4;column-gap:16px;margin-top:28px}
+.masonry .jp{display:block;break-inside:avoid;margin:0 0 22px;color:inherit}
+.masonry .jp[hidden]{display:none}
+.masonry figure{background:#eee;overflow:hidden}
+.masonry img{width:100%;height:auto;display:block;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.masonry .jp:hover img{transform:scale(1.03)}
+.masonry .jc{display:block;margin-top:8px;font-size:12px;line-height:1.5;color:var(--gray);letter-spacing:.02em}
+.masonry .jc b{color:var(--ink);font-weight:600;margin-right:6px}
+@media(max-width:1100px){.masonry{column-count:3}}
+@media(max-width:700px){.masonry{column-count:2;column-gap:10px;margin-top:20px}.masonry .jp{margin-bottom:16px}.masonry .jc{font-size:11px}}

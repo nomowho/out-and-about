@@ -149,6 +149,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
       ${Object.entries(CATS).map(([k, v]) => `<li><a href="${url.cat(k)}"><b>${k}</b><span>${v.zh}</span></a></li>`).join('')}</ul>
     <p class="drawer-h">SERIES</p>
     <ul class="sm">${SERIES.map(s => `<li><a href="${url.series(s.id)}">${s.t}</a></li>`).join('')}</ul>
+    <p class="drawer-h"><a href="/journal/">PHOTO JOURNAL</a></p>
     <p class="drawer-h"><a href="/destinations/">COUNTRIES</a></p>
     <ul class="sm two">${regions.map(r => `<li><a href="${url.dest(r)}">${REGION_ZH[r]}</a></li>`).join('')}</ul>
     <p class="drawer-foot"><a href="/about/">關於 Out and About</a><a href="https://www.instagram.com/nomowho/" rel="me noopener">Instagram @nomowho</a></p>
@@ -469,18 +470,14 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     <div class="grid" id="news">${newsNew.slice(0, 6).map((n, i) => newsCard(n, i === 0)).join('')}</div>
   </div>
   <aside class="side">
-    <div class="dbl stories" id="stories">
-      <h3>Stories<small>最新動態</small></h3>
-      <ul class="rings one">${STORIES.slice(0, 1).map((st, i) => `
-        <li><button type="button" class="ring" data-story="${i}" aria-label="看「${esc(st.label)}」動態，共 ${st.items.length} 則">
+    <div class="dbl stories journal-entry" id="journal">
+      <h3>Photo Journal<small>攝影日誌</small></h3>
+      <ul class="rings one"><li><a class="ring" href="/journal/" aria-label="打開 Photo Journal 攝影日誌，看全部旅行照片">
           <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" decoding="async"></span>
-        </button></li>`).join('')}</ul>
+        </a></li></ul>
       <p class="bio"><span lang="en">🪐 Drifting through the world, framing the moment, exploring beyond.</span>在世界亂走，拍下眼前，無盡探索。</p>
+      <a class="jlink" href="/journal/">點 logo 看全部照片 ›</a>
     </div>
-    <script type="application/json" id="storiesData">${JSON.stringify(STORIES.slice(0, 1).map(st => ({ label: st.label, date: iso(st.date),
-      items: st.items.map(it => { const rel = it.img.replace(/^\//, ''), m = rel.replace(/\.[^.]+$/, '.m.jpg');
-        if (!dims(rel)) missing.push(rel);
-        return { img: '/' + (fs.existsSync(path.join(ROOT, m)) ? m : rel), text: it.text, link: it.link || '' }; }) }))).replace(/</g, '\\u003c')}</script>
     <a class="ig" href="https://www.instagram.com/nomowho/" rel="me noopener">在 Instagram 追蹤 @nomowho</a>
   </aside>
 </section>
@@ -559,6 +556,37 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   page({ file: 'about/index.html', title: '關於我出去一下就回來｜Out and About', desc, canonical: '/about/', image: ogImg(TOP7[0]), style: 'post', nav: '', main,
     ld: [{ '@context': 'https://schema.org', '@type': 'AboutPage', '@id': abs('/about/'), name: '關於我出去一下就回來', inLanguage: 'zh-Hant-TW', mainEntity: PERSON, isPartOf: { '@id': abs('/#website') } }, crumbLd([['Out and About', '/'], ['關於', '/about/']])] });
   sitemap.push({ loc: '/about/', lastmod: BUILD_DATE, images: [] });
+
+  /* ── Photo Journal /journal/：全站照片瀑布流，點照片進文章 ── */
+  {
+    const J_MAX = 6;   // 每篇最多取幾張，避免單篇洗版
+    const items = [];
+    postsNew.filter(p => p.photo !== false && POST_DETAIL[p.id]).forEach(p => {
+      const d = POST_DETAIL[p.id], list = [];
+      if (d.cover) list.push([d.cover, d.coverCap || '']);
+      d.body.forEach(bk => { if (bk.src) list.push([bk.src, bk.cap || '']); else if (bk.imgs) bk.imgs.flat().forEach(x => list.push([x, ''])); });
+      list.filter(([src]) => fs.existsSync(path.join(ROOT, src))).slice(0, J_MAX).forEach(([src, cap]) => items.push({ p, src, cap }));
+    });
+    const jRegions = regions.filter(r => items.some(it => it.p.region === r));
+    const u = '/journal/';
+    const strip = t => String(t).replace(/<[^>]+>/g, '');
+    const main = `
+    <section class="top"><div class="box">
+      <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>PHOTO JOURNAL</span></nav>
+      <div class="label">PHOTO JOURNAL　攝影日誌</div><h1>在世界亂走，拍下眼前</h1>
+      <p>${items.length} 張照片、${new Set(items.map(it => it.p.id)).size} 篇旅行，全部由 Nomo 拍攝。點照片進入那篇故事。</p>
+    </div></section>
+    <section class="list box">
+      <nav class="areas jfilter" id="areas" aria-label="依國家篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="#${r.toLowerCase()}" data-area="${r.toLowerCase()}">${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
+      <div class="masonry" id="masonry">${items.map(it => `
+        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px' })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
+      </div>
+    </section>`;
+    const desc = `Nomo 的旅行攝影日誌：${items.length} 張照片，走過${jRegions.map(r => REGION_ZH[r]).join('、')}，每張都連到背後的旅行故事。`;
+    page({ file: 'journal/index.html', title: `Photo Journal 攝影日誌｜${items.length} 張旅行照片｜Out and About`, desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: '', main,
+      ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: 'Photo Journal 攝影日誌', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') }, author: PERSON }] });
+    sitemap.push({ loc: u, lastmod: BUILD_DATE, images: items.slice(0, 20).map(it => abs('/' + it.src)) });
+  }
   const h404 = page({ file: '404.html', title: '找不到這一頁｜Out and About', desc: '這個網址沒有內容。', canonical: '/404.html', image: ogImg(TOP7[0]), style: 'category', nav: '',
     main: `<div class="notfound"><h1>找不到這一頁</h1><p>可能是網址改了，下面是最新的文章。</p><p><a href="/">回首頁</a></p></div>
     <section class="list box"><div class="grid">${postsNew.slice(0, 6).map(p => postCard(p)).join('')}</div></section>` });
