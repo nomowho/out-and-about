@@ -480,7 +480,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     <div class="dbl stories journal-entry" id="journal">
       <h3>Photo Journal<small>攝影日誌</small></h3>
       <ul class="rings one"><li><a class="ring" href="/journal/" aria-label="打開 Photo Journal 攝影日誌，看全部旅行照片">
-          <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" decoding="async"></span>
+          <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" loading="lazy" decoding="async"></span>
         </a></li></ul>
       <p class="bio"><span lang="en">🪐 Drifting through the world, framing the moment, exploring beyond.</span>在世界亂走，拍下眼前，無盡探索。</p>
     </div>
