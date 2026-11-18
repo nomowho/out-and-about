@@ -439,3 +439,5 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
   #picks>.pk-big h3{font-size:24px;line-height:1.5;margin-top:8px}
   #picks>.pk-side h3{font-size:15px;line-height:1.55}
 }
+/* 首頁 Photo Journal 自介下方的品牌句：字距拉開、置中 */
+.journal-entry .tagline{text-align:center;font-size:13px;letter-spacing:.5em;text-indent:.5em;color:#333;margin:6px 0 4px}

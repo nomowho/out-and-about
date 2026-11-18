@@ -477,6 +477,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
           <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" decoding="async"></span>
         </a></li></ul>
       <p class="bio"><span lang="en">🪐 Drifting through the world, framing the moment, exploring beyond.</span>在世界亂走，拍下眼前，無盡探索。</p>
+      <p class="tagline">我出去一下就回來</p>
     </div>
     <a class="ig" href="https://www.instagram.com/nomowho/" rel="me noopener">在 Instagram 追蹤 @nomowho</a>
   </aside>
