@@ -365,7 +365,7 @@ function listPage({ file, u, label, h1, desc, posts, lead, nav, crumb, groups, o
         ${lead ? `<a href="${url.post(lead.id)}" aria-label="${esc(lead.title)}"><figure>${img(`img/${lead.id}.jpg`, lead.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 600px' })}</figure></a>` : ''}
       </div>
     </div></section>
-    <section class="list box">${groups ? groups.map(([g, list]) => `<h2 class="grp" id="${esc(g)}">${g}<small>${list.length}</small></h2>${grid(list)}`).join('') : grid(posts)}</section>
+    <section class="list box">${groups ? `<nav class="areas" id="areas" aria-label="依地區篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${posts.length}</small></a>${groups.map(([g, list]) => `<a href="#${encodeURIComponent(g)}" data-area="${esc(g)}">${g}<small>${list.length}</small></a>`).join('')}</nav>` + groups.map(([g, list]) => `<div class="grpsec" data-area="${esc(g)}"><h2 class="grp" id="${esc(g)}">${g}<small>${list.length}</small></h2>${grid(list)}</div>`).join('') : grid(posts)}</section>
     <section class="others box">
       <div class="sh"><h2>${othersTitle}</h2><span>${othersZh}</span></div>
       <div class="rail">${others.map(o => `<a class="s" href="${o.u}"><figure>${o.img ? img(o.img, o.t, { sizes: '(max-width:900px) 50vw, 270px' }) : ''}</figure><div><h3>${o.t}</h3><span>${o.n} ${o.n === 1 ? 'STORY' : 'STORIES'} ›</span></div></a>`).join('')}</div>
@@ -424,11 +424,11 @@ for (const r of regions) {
           img: p.photo === false ? '' : (fs.existsSync(path.join(ROOT, 'img', p.id + '.m.jpg')) ? '/img/' + p.id + '.m.jpg' : '/img/' + p.id + '.jpg') })) }))
     }).replace(/</g, '\\u003c')}</script>
     <section class="list box"><div class="grid countries">${cards.map(c => `
-      <a class="card country" href="${url.dest(c.r)}">
+      <div class="card country"><a class="cv" href="${url.dest(c.r)}">
         <figure>${c.lead ? img(`img/${c.lead.id}.jpg`, REGION_ZH[c.r], { sizes: CARD_SIZES }) : `<div class="ph"><span>${c.r.toUpperCase()}</span><b>${REGION_ZH[c.r]}</b><i>照片整理中</i></div>`}</figure>
         <div class="meta"><span class="cat">${c.r.toUpperCase()}</span><span>${c.l.length} ${c.l.length === 1 ? 'STORY' : 'STORIES'}</span></div>
-        <h3>${REGION_ZH[c.r]}</h3><div class="place">${c.areas.join('・')}</div>
-      </a>`).join('')}</div></section>`;
+        <h3>${REGION_ZH[c.r]}</h3></a><div class="place areas-in">${c.areas.map(a => `<a href="${url.dest(c.r)}${c.areas.length > 1 ? '#' + encodeURIComponent(a) : ''}">${a}</a>`).join('<span aria-hidden="true">・</span>')}</div>
+      </div>`).join('')}</div></section>`;
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '依國家找旅行', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
     mainEntity: listLd('國家', cards.map(c => ({ u: url.dest(c.r), n: `${REGION_ZH[c.r]}旅行` }))) }, crumbLd([['Out and About', '/'], ['COUNTRIES', u]])];
   page({ file: 'destinations/index.html', title: `依國家找旅行｜${cards.length} 個國家｜Out and About`, desc, canonical: u, image: ogImg(cards[0].lead), style: 'category', nav: 'COUNTRIES', main, ld,

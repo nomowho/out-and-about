@@ -84,6 +84,28 @@
     document.addEventListener('click', function (e) { if (!sm.hidden && !sm.contains(e.target)) menu(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sm.hidden) { menu(false); sb.focus(); } });
   }
+
+  /* 國家頁：依地區篩選（網址 #地區 可直接帶入，例如從國家總覽點「青森」） */
+  var areas = $('areas');
+  if (areas) {
+    var chips = [].slice.call(areas.querySelectorAll('a')), secs = [].slice.call(document.querySelectorAll('.grpsec'));
+    var pick = function (name, scroll) {
+      if (name && !secs.some(function (x) { return x.getAttribute('data-area') === name; })) name = '';
+      chips.forEach(function (c) { var on = c.getAttribute('data-area') === name; c.classList.toggle('on', on); if (on) { c.setAttribute('aria-current', 'true'); if (c.scrollIntoView && areas.scrollWidth > areas.clientWidth) areas.scrollLeft = c.offsetLeft - 20; } else c.removeAttribute('aria-current'); });
+      secs.forEach(function (x) { x.hidden = !!name && x.getAttribute('data-area') !== name; });
+      areas.classList.toggle('filtered', !!name);
+      if (scroll) areas.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    };
+    var fromHash = function () { var h = decodeURIComponent(location.hash.slice(1)); return h === 'areas' ? '' : h; };
+    areas.addEventListener('click', function (e) {
+      var a = e.target.closest('a'); if (!a) return; e.preventDefault();
+      var name = a.getAttribute('data-area');
+      history.replaceState(null, '', name ? '#' + encodeURIComponent(name) : location.pathname);
+      pick(name, true);
+    });
+    addEventListener('hashchange', function () { pick(fromHash(), true); });
+    if (location.hash) { pick(fromHash(), false); setTimeout(function () { areas.scrollIntoView({ block: 'start' }); }, 0); }
+  }
   /* 分類列：把目前分類捲到看得見的位置 */
   var on = document.querySelector('.nav a.on');
   if (on && on.parentElement.scrollWidth > on.parentElement.clientWidth) on.parentElement.scrollLeft = on.offsetLeft - 16;

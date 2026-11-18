@@ -341,3 +341,23 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
   .head .share{margin-right:-10px}
   .tools.r:has(.share) .ig{display:none}   /* 手機文章頁：右上只放分享，Instagram 在選單與文末都有 */
 }
+/* 國家總覽卡：地區名稱各自可點 */
+.card.country .cv{display:block;color:inherit}
+.card.country .areas-in{line-height:1.9}
+.card.country .areas-in a{color:inherit;border-bottom:1px solid transparent;padding:4px 0;transition:border-color .2s,color .2s}
+.card.country .areas-in a:hover{border-bottom-color:currentColor;color:var(--ink)}
+.card.country .areas-in span{margin:0 2px;opacity:.6}
+/* 國家頁：地區篩選列 */
+.areas{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 8px;scroll-margin-top:110px}
+.areas a{display:inline-flex;align-items:baseline;gap:6px;min-height:40px;align-items:center;padding:0 16px;border:1px solid #d4d4d4;border-radius:999px;font-size:14px;color:var(--ink);transition:background .2s,border-color .2s,color .2s}
+.areas a small{font-family:'Montserrat',sans-serif;font-size:11px;color:var(--gray)}
+.areas a:hover{border-color:var(--ink)}
+.areas a.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.areas a.on small{color:rgba(255,255,255,.7)}
+.grpsec[hidden]{display:none}
+.areas.filtered + .grpsec .grp{margin-top:32px}
+@media(max-width:700px){
+  .areas{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:4px -20px 4px;padding:4px 20px}
+  .areas::-webkit-scrollbar{display:none}
+  .areas a{flex:0 0 auto}
+}
