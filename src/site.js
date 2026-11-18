@@ -94,6 +94,7 @@
       chips.forEach(function (c) { var on = c.getAttribute('data-area') === name; c.classList.toggle('on', on); if (on) { c.setAttribute('aria-current', 'true'); if (c.scrollIntoView && areas.scrollWidth > areas.clientWidth) areas.scrollLeft = c.offsetLeft - 20; } else c.removeAttribute('aria-current'); });
       secs.forEach(function (x) { x.hidden = !!name && x.getAttribute('data-area') !== name; });
       areas.classList.toggle('filtered', !!name);
+      areas.dispatchEvent(new Event('areachange'));
       if (scroll) areas.scrollIntoView({ block: 'start', behavior: 'smooth' });
     };
     var fromHash = function () { var h = decodeURIComponent(location.hash.slice(1)); return h === 'areas' ? '' : h; };
@@ -105,6 +106,65 @@
     });
     addEventListener('hashchange', function () { pick(fromHash(), true); });
     if (location.hash) { pick(fromHash(), false); setTimeout(function () { areas.scrollIntoView({ block: 'start' }); }, 0); }
+  }
+
+  /* Photo Journal：瀑布流（每張放進目前最矮的那一欄，欄底較齊）＋每隔幾張穿插一張橫式滿版；篩選或換欄數時重排 */
+  var jw = document.querySelector('.journal');
+  if (jw) {
+    var jall = [].slice.call(jw.querySelectorAll('.jp'));
+    var cols = function () { return innerWidth > 1100 ? 4 : innerWidth > 700 ? 3 : 2; };
+    var ratio = function (it) { var im = it.querySelector('img'); var w = +im.getAttribute('width'), h = +im.getAttribute('height'); return w && h ? h / w : 1.25; };
+    var lastK = 0;
+    var jlayout = function () {
+      var K = cols(), EVERY = K * 2; lastK = K;
+      var frag = document.createDocumentFragment(), run = [], sim = [];
+      var reset = function () { sim = []; for (var i = 0; i < K; i++) sim.push(0); }; reset();
+      var flush = function () {
+        if (!run.length) return;
+        var blk = document.createElement('div'); blk.className = 'masonry m' + K;
+        var cs = [], hs = [];
+        for (var i = 0; i < K; i++) { var c = document.createElement('div'); c.className = 'mcol'; blk.appendChild(c); cs.push(c); hs.push(0); }
+        run.forEach(function (it) { var k = hs.indexOf(Math.min.apply(null, hs)); cs[k].appendChild(it); hs[k] += ratio(it) + 0.12; });
+        frag.appendChild(blk); run = []; reset();
+      };
+      var n = Infinity;
+      jall.forEach(function (it) {
+        var im = it.querySelector('img');
+        if (it.hidden) { frag.appendChild(it); return; }
+        var spread = Math.max.apply(null, sim) - Math.min.apply(null, sim);
+        if (it.hasAttribute('data-land') && (n === Infinity || (n >= EVERY && spread < 0.5 + 0.08 * (n - EVERY)))) {   // 欄底差不多齊了才插滿版
+          flush(); it.classList.add('feat'); if (im) im.sizes = '(max-width:1100px) 100vw, 1100px';
+          frag.appendChild(it); n = 0;
+        } else {
+          it.classList.remove('feat'); if (im) im.sizes = '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px';
+          run.push(it); n++; var k = sim.indexOf(Math.min.apply(null, sim)); sim[k] += ratio(it) + 0.12;
+        }
+      });
+      flush();
+      jw.innerHTML = ''; jw.appendChild(frag); evenUp();
+    };
+    /* 每段瀑布流的欄底對齊：較短的欄把差距平均分給欄內每張照片（裁切 object-fit），每張只多一點點 */
+    var evenUp = function () {
+      [].forEach.call(jw.querySelectorAll('.masonry'), function (b) {
+        var cs = [].slice.call(b.children);
+        [].forEach.call(b.querySelectorAll('figure'), function (fg) { fg.style.height = ''; fg.classList.remove('fill'); });
+        for (var pass = 0; pass < 4; pass++) {   // 拉高一欄可能影響鄰欄量測，重複到全部齊為止
+        var hs = cs.map(function (c) { return c.getBoundingClientRect().height; }), mx = Math.max.apply(null, hs), changed = false;
+        cs.forEach(function (c, i) {
+          var d = mx - hs[i]; if (d < 2) return; changed = true;
+          var fgs = [].slice.call(c.querySelectorAll('figure')), hh = fgs.map(function (fg) { return fg.getBoundingClientRect().height; });
+          var tot = hh.reduce(function (x, y) { return x + y; }, 0); if (!tot) return;
+          fgs.forEach(function (fg, k) { fg.style.height = (hh[k] + d * hh[k] / tot) + 'px'; fg.classList.add('fill'); });
+        });
+        if (!changed) break;
+        }
+      });
+    };
+    jlayout();
+    addEventListener('load', evenUp); if (document.fonts && document.fonts.ready) document.fonts.ready.then(evenUp);
+    var ev; jw.addEventListener('load', function () { clearTimeout(ev); ev = setTimeout(evenUp, 120); }, true);   // 延遲載入的照片若實際比例和標記不同，載入後再對齊一次
+    var jareas = $('areas'); if (jareas) jareas.addEventListener('areachange', jlayout);
+    var rz; addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(function () { if (cols() !== lastK) jlayout(); else evenUp(); }, 150); });
   }
   /* 分類列：把目前分類捲到看得見的位置 */
   var on = document.querySelector('.nav a.on');

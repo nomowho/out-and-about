@@ -376,3 +376,19 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .masonry .jc b{color:var(--ink);font-weight:600;margin-right:6px}
 @media(max-width:1100px){.masonry{column-count:3}}
 @media(max-width:700px){.masonry{column-count:2;column-gap:10px;margin-top:20px}.masonry .jp{margin-bottom:16px}.masonry .jc{font-size:11px}}
+/* Photo Journal：橫式滿版穿插 */
+.journal{margin-top:28px}
+.journal .masonry{margin-top:0}
+.journal .jp[hidden]{display:none}
+.journal .jp.feat{display:block;margin:6px 0 40px;color:inherit}
+.journal .jp.feat figure{background:#eee;overflow:hidden}
+.journal .jp.feat img{width:100%;height:auto;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.journal .jp.feat:hover img{transform:scale(1.02)}
+.journal .jp.feat .jc{display:block;margin-top:10px;font-size:13px;color:var(--gray)}
+.journal .jp.feat .jc b{color:var(--ink);font-weight:600;margin-right:8px}
+@media(max-width:700px){
+  .journal{margin-top:20px}
+  .journal .jp.feat{margin:4px -20px 30px}
+  .journal .jp.feat .jc{padding:0 20px;font-size:12px}
+}
+.journal figure.fill img{height:100%;object-fit:cover}

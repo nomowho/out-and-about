@@ -578,9 +578,9 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     </div></section>
     <section class="list box">
       <nav class="areas jfilter" id="areas" aria-label="依國家篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="#${r.toLowerCase()}" data-area="${r.toLowerCase()}">${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
-      <div class="masonry" id="masonry">${items.map(it => `
-        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px' })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
-      </div>
+      <div class="journal" id="masonry"><div class="masonry">${items.map(it => `
+        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${(() => { const d = dims(it.src); return d && d.w / d.h >= 1.3 ? ' data-land="1"' : ''; })()}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px' })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
+      </div></div>
     </section>`;
     const desc = `Nomo 的旅行攝影日誌：${items.length} 張照片，走過${jRegions.map(r => REGION_ZH[r]).join('、')}，每張都連到背後的旅行故事。`;
     page({ file: 'journal/index.html', title: `Photo Journal 攝影日誌｜${items.length} 張旅行照片｜Out and About`, desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: '', main,
