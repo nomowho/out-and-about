@@ -454,3 +454,6 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .pick .band{--gray:#555}
 .pick .band .meta time,.pick .band .src,.pick .band .note{color:#555}
 .pick .band .new{color:#C4000F}
+/* 輪播箭頭先用 CSS 固定在兩側，JS 只用 transform 微調：避免載入時右箭頭從左邊跳到右邊（PageSpeed 桌機 CLS 0.11） */
+.hero .arr.l{left:0}
+.hero .arr.r{right:0}

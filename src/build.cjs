@@ -70,7 +70,7 @@ function img(src, alt, { lazy = true, sizes = '100vw', cls = '', small = false }
   if (!d) missing.push(rel);
   const parts = [sm && d && sm.w < d.w && (!m || sm.w < m.w) ? `/${srel} ${sm.w}w` : '', d && m && m.w < d.w ? `/${mrel} ${m.w}w` : '', d ? `/${rel} ${d.w}w` : ''].filter(Boolean);   // small＝另加 600px 縮圖（Photo Journal 瀑布流用）
   const srcset = parts.length > 1 ? ` srcset="${parts.join(', ')}" sizes="${sizes}"` : '';
-  return `<img src="/${srcset ? mrel : rel}"${srcset} alt="${esc(alt || '')}"${d ? ` width="${d.w}" height="${d.h}"` : ''}${lazy ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async"${cls ? ` class="${cls}"` : ''}>`;
+  return `<img src="/${srcset && m ? mrel : rel}"${srcset} alt="${esc(alt || '')}"${d ? ` width="${d.w}" height="${d.h}"` : ''}${lazy ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async"${cls ? ` class="${cls}"` : ''}>`;
 }
 const CARD_SIZES = '(max-width:560px) 100vw, (max-width:1000px) 50vw, 380px';
 const thumb = (p, lazy = true) => p.photo === false
@@ -460,7 +460,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 <section class="hero" aria-label="精選文章" aria-roledescription="carousel">
   <div class="track" id="track">${TOP7.map((p, i) => `
     <a class="slide" href="${url.post(p.id)}" data-i="${i}">
-      <figure>${img(`img/${p.id}.jpg`, p.zh, { lazy: i > 0, small: true, sizes: '(max-width:700px) 84vw, 480px' })}</figure>
+      <figure>${i === 0 ? img(`img/${p.id}.jpg`, p.zh, { lazy: false, small: true, sizes: '(max-width:700px) 84vw, 480px' }) : img(`img/${p.id}.jpg`, p.zh, { lazy: false, small: true, sizes: '(max-width:700px) 84vw, 480px' }).replace(' fetchpriority="high"', '').replace(/ (src|srcset)="/g, ' data-$1="')}</figure>
       <div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div>
     </a>`).join('')}</div>
   <button class="arr l" id="prev" type="button" aria-label="上一則"><svg viewBox="0 0 34 14" aria-hidden="true"><path d="M34 7H1M7 1 1 7l6 6"/></svg></button>
