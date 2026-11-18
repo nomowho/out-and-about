@@ -36,7 +36,7 @@ h1,h2,h3,h4{text-wrap:balance}
 .hero .arr.l:hover svg{transform:translateX(-5px)}
 .hero .arr.r:hover svg{transform:translateX(5px)}
 .hero .arr:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
-.track{display:flex;gap:24px;transition:transform .8s cubic-bezier(.22,.7,.2,1);will-change:transform}
+.track{display:flex;gap:24px;transition:transform .8s cubic-bezier(.22,.7,.2,1)}
 .slide{flex:0 0 auto;width:var(--sw);cursor:pointer}
 .hero{--sh:min(66vh,600px);--sw:calc(var(--sh) * .8)}
 .slide figure{height:var(--sh);overflow:hidden;background:#eee}
