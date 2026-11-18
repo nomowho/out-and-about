@@ -204,28 +204,18 @@
     var jareas = $('areas'); if (jareas) jareas.addEventListener('areachange', jlayout);
     var rz; addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(function () { if (cols() !== lastK) jlayout(); else evenUp(); }, 150); });
   }
-  /* 首頁 Latest 橫向卡：持續往左滑（複製一份接在後面形成無縫循環）；滑鼠移上、手指觸碰、鍵盤聚焦時暫停，可手動左右滑 */
+  /* 首頁 Latest 橫向卡：CSS 動畫持續往左滑（GPU 次像素移動，比逐格改 scrollLeft 平滑）；
+     滑鼠移上不暫停（Nomo 11-18），只有手指按住時暫停；複製一份接在後面形成無縫循環 */
   var hl = $('news');
   if (hl && hl.classList.contains('headlines')) {
-    var ht = hl.querySelector('.hl-track');
+    var ht = hl.querySelector('.hl-track'), HL_SPEED = 35.2;   // 每秒 px（原 32 再快 10%）
     [].slice.call(ht.children).forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; ht.appendChild(d); });
-    var hpos = 0, hstop = 0, hlast = 0, SPEED = 32;   // 每秒 32px
-    var hold = function (ms) { hstop = Date.now() + ms; };
-    ['mouseenter', 'touchstart', 'focusin', 'wheel'].forEach(function (ev) { hl.addEventListener(ev, function () { hold(ev === 'mouseenter' ? 1e9 : 2500); }, { passive: true }); });
-    hl.addEventListener('mouseleave', function () { hold(600); });
-    hl.addEventListener('touchend', function () { hold(2500); }, { passive: true });
-    hl.addEventListener('scroll', function () { if (Date.now() < hstop) hpos = hl.scrollLeft; }, { passive: true });
-    var tick = function (now) {
-      var dt = hlast ? Math.min(500, now - hlast) : 16; hlast = now;
-      var half = ht.scrollWidth / 2;
-      if (Date.now() >= hstop && half > hl.clientWidth) {
-        hpos += SPEED * dt / 1000;
-        if (hpos >= half) hpos -= half;
-        hl.scrollLeft = hpos;
-      } else if (hl.scrollLeft >= half) { hpos = hl.scrollLeft - half; hl.scrollLeft = hpos; }
-      requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
+    var hlSize = function () { var half = ht.scrollWidth / 2; ht.style.setProperty('--hl-shift', -half + 'px'); ht.style.setProperty('--hl-dur', (half / HL_SPEED) + 's'); ht.classList.add('run'); };
+    hlSize(); addEventListener('load', hlSize); addEventListener('resize', function () { clearTimeout(hl._rz); hl._rz = setTimeout(hlSize, 200); });
+    hl.addEventListener('touchstart', function () { ht.classList.add('hold'); }, { passive: true });
+    var hlGo = function () { setTimeout(function () { ht.classList.remove('hold'); }, 1500); };
+    hl.addEventListener('touchend', hlGo, { passive: true }); hl.addEventListener('touchcancel', hlGo, { passive: true });
+    hl.addEventListener('focusin', function () { ht.classList.add('hold'); }); hl.addEventListener('focusout', function () { ht.classList.remove('hold'); });
   }
 
   /* 分類列：把目前分類捲到看得見的位置 */

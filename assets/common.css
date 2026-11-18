@@ -478,3 +478,9 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .pick>.band{min-width:0}
 .headlines{max-width:100%;min-width:0}
 .hl-track{padding-left:24px}
+/* Latest 自動左滑：CSS 動畫（平滑），速度由 JS 依寬度算出 --hl-dur；滑鼠移上不停，手指按住才停 */
+@keyframes hlScroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(var(--hl-shift),0,0)}}
+.hl-track.run{animation:hlScroll var(--hl-dur) linear infinite;will-change:transform}
+.hl-track.run.hold{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.hl-track.run{animation:hlScroll var(--hl-dur) linear infinite!important}}
+.headlines{overflow:hidden}
