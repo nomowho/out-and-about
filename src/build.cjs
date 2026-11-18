@@ -484,7 +484,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 
 <section class="latest box" aria-label="編輯精選">
   <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
-  <div class="grid" id="picks">${(() => { /* 桌機中間大圖：取最新一篇「文章封面（主圖）是直式」的文章放第一（Nomo 11-18） */ const L = [...postsNew], k = L.findIndex(p => { const c = p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover, d = c && dims(c); return d && d.h > d.w * 1.1; }); if (k > 0) L.unshift(...L.splice(k, 1)); return L; })().map((p, i) => postCard(p, { hidden: i >= FIRST, cls: i === 0 ? 'pk-big' : i < 5 ? 'pk-side' : i < FIRST ? 'dt-more' : '', cover: i === 0 })).join('')}</div>
+  <div class="grid" id="picks">${(() => { /* 桌機中間大圖：取最新一篇「文章封面（主圖）是直式」的文章放第一（Nomo 11-18） */ const L = [...postsNew], k = CFG.pickCenter && L.some(p => p.id === CFG.pickCenter) ? L.findIndex(p => p.id === CFG.pickCenter) /* site.config.json 的 pickCenter 可指定中間那篇 */ : L.findIndex(p => { const c = p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover, d = c && dims(c); return d && d.h > d.w * 1.1; }); if (k > 0) L.unshift(...L.splice(k, 1)); return L; })().map((p, i) => postCard(p, { hidden: i >= FIRST, cls: i === 0 ? 'pk-big' : i < 5 ? 'pk-side' : i < FIRST ? 'dt-more' : '', cover: i === 0 })).join('')}</div>
   <div class="morewrap"><button class="morebtn" id="picksMore" type="button">MORE<small>看更多旅行</small></button></div>
 </section>
 
