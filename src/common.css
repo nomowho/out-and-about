@@ -490,3 +490,6 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 /* READ MORE 改回純螢光綠字（Nomo 11-18 指定；已告知淺底上對比僅約 1.2:1） */
 .hl-more{color:#C8F500;background:none;padding:0}
 .hl-more svg{stroke:#C8F500}
+/* READ MORE 改用 Casa BRUTUS 同款綠 #00FF00、Helvetica Neue 12px 500（Nomo 11-18：比 #C8F500 清楚） */
+.hl-more{color:#00FF00;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:500;letter-spacing:0}
+.hl-more svg{stroke:#00FF00}
