@@ -193,7 +193,7 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   .card:hover img{transform:none}
   .nav a:hover{opacity:1}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.hero .track{transition:transform .8s cubic-bezier(.22,.7,.2,1)!important}}
 @media print{.head,.drawer,footer,.more,.orig,.toc{display:none!important}.body{max-width:none}}
 
 /* ── Stories：仿 IG 限時動態 ── */

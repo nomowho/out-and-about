@@ -233,7 +233,7 @@
       if (e.target !== track) return;
       if (pos < N || pos >= 2 * N) { pos = N + (pos % N); place(false); }
     });
-    var auto = function () { clearInterval(timer); if (!reduce) timer = setInterval(function () { if (!document.hidden) go(pos + 1); }, 6000); };
+    var auto = function () { clearInterval(timer); timer = setInterval(function () { if (!document.hidden) go(pos + 1); }, 3000); };   // Nomo 指定：每 3 秒往左換一篇
     prev.onclick = function () { go(pos - 1); auto(); };
     next.onclick = function () { go(pos + 1); auto(); };
     track.addEventListener('mouseenter', function () { clearInterval(timer); });
