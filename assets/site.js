@@ -216,7 +216,7 @@
     hl.addEventListener('touchend', function () { hold(2500); }, { passive: true });
     hl.addEventListener('scroll', function () { if (Date.now() < hstop) hpos = hl.scrollLeft; }, { passive: true });
     var tick = function (now) {
-      var dt = hlast ? Math.min(64, now - hlast) : 16; hlast = now;
+      var dt = hlast ? Math.min(500, now - hlast) : 16; hlast = now;
       var half = ht.scrollWidth / 2;
       if (Date.now() >= hstop && half > hl.clientWidth) {
         hpos += SPEED * dt / 1000;
