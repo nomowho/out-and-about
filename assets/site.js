@@ -114,30 +114,56 @@
     var jall = [].slice.call(jw.querySelectorAll('.jp'));
     var cols = function () { return innerWidth > 1100 ? 4 : innerWidth > 700 ? 3 : 2; };
     var ratio = function (it) { var im = it.querySelector('img'); var w = +im.getAttribute('width'), h = +im.getAttribute('height'); return w && h ? h / w : 1.25; };
+    /* 把一段照片分到 K 欄：直橫依比例穿插 → 挑「差不多矮、且上一張方向不同」的欄 → 最後把最高欄的尾巴搬到最矮欄，直到不能再更平 */
+    var EXTRA = 0.17;   // 圖說＋間距約 48px，換算成「欄寬的倍數」，jlayout 時依實際欄寬更新
+    var place = function (items, K) {
+      var P = [], L = [], mix = [];
+      items.forEach(function (it) { (ratio(it) > 1 ? P : L).push(it); });
+      P.forEach(function (it, i) { mix.push([(i + 0.5) / P.length, it]); }); L.forEach(function (it, i) { mix.push([(i + 0.5) / L.length + 1e-6, it]); });
+      mix = mix.sort(function (x, y) { return x[0] - y[0]; }).map(function (x) { return x[1]; });
+      var cols = [], hs = [], last = [];
+      for (var c = 0; c < K; c++) { cols.push([]); hs.push(0); last.push(''); }
+      mix.forEach(function (it) {
+        var r = ratio(it) + EXTRA, o = r > 1 + EXTRA ? 'P' : 'L', mn = Math.min.apply(null, hs), best = -1;
+        for (var c = 0; c < K; c++) if (hs[c] <= mn + 0.45 && last[c] !== o && (best < 0 || hs[c] < hs[best])) best = c;
+        if (best < 0) best = hs.indexOf(mn);
+        cols[best].push(it); hs[best] += r; last[best] = o;
+      });
+      for (var guard = 0; guard < 40; guard++) {
+        var hi = hs.indexOf(Math.max.apply(null, hs)), lo = hs.indexOf(Math.min.apply(null, hs)), gap = hs[hi] - hs[lo];
+        var x = cols[hi][cols[hi].length - 1]; if (!x || cols[hi].length < 2) break;
+        var r = ratio(x) + EXTRA; if (Math.abs(gap - 2 * r) >= gap - 0.01) break;
+        cols[hi].pop(); hs[hi] -= r; cols[lo].push(x); hs[lo] += r;
+      }
+      for (var sw = 0; sw < 30; sw++) {   // 再試著在最高欄與最矮欄之間交換一對照片，讓高低差更小
+        var hi2 = hs.indexOf(Math.max.apply(null, hs)), lo2 = hs.indexOf(Math.min.apply(null, hs)), g2 = hs[hi2] - hs[lo2], bestD = g2 - 0.02, bi = -1, bj = -1;
+        for (var i = 0; i < cols[hi2].length; i++) for (var j = 0; j < cols[lo2].length; j++) { var dd = ratio(cols[hi2][i]) - ratio(cols[lo2][j]); if (dd > 0 && Math.abs(g2 - 2 * dd) < bestD) { bestD = Math.abs(g2 - 2 * dd); bi = i; bj = j; } }
+        if (bi < 0) break;
+        var A = cols[hi2][bi], B = cols[lo2][bj], dA = ratio(A) - ratio(B); cols[hi2][bi] = B; cols[lo2][bj] = A; hs[hi2] -= dA; hs[lo2] += dA;
+      }
+      return { cols: cols, spread: Math.max.apply(null, hs) - Math.min.apply(null, hs) };
+    };
     var lastK = 0;
     var jlayout = function () {
       var K = cols(), EVERY = K * 2; lastK = K;
-      var frag = document.createDocumentFragment(), run = [], sim = [];
-      var reset = function () { sim = []; for (var i = 0; i < K; i++) sim.push(0); }; reset();
+      var gapPx = K > 2 ? 16 : 10, colW = (jw.clientWidth - gapPx * (K - 1)) / K; if (colW > 0) EXTRA = 48 / colW;
+      var frag = document.createDocumentFragment(), run = [];
       var flush = function () {
         if (!run.length) return;
-        var blk = document.createElement('div'); blk.className = 'masonry m' + K;
-        var cs = [], hs = [];
-        for (var i = 0; i < K; i++) { var c = document.createElement('div'); c.className = 'mcol'; blk.appendChild(c); cs.push(c); hs.push(0); }
-        run.forEach(function (it) { var k = hs.indexOf(Math.min.apply(null, hs)); cs[k].appendChild(it); hs[k] += ratio(it) + 0.12; });
-        frag.appendChild(blk); run = []; reset();
+        var res = place(run, K), blk = document.createElement('div'); blk.className = 'masonry m' + K;
+        res.cols.forEach(function (list) { var c = document.createElement('div'); c.className = 'mcol'; list.forEach(function (it) { c.appendChild(it); }); blk.appendChild(c); });
+        frag.appendChild(blk); run = [];
       };
-      var n = Infinity, pend = null;
+      var n = Infinity, pend = null, pendN = 0;
       var feature = function (it) { var im = it.querySelector('img'); flush(); it.classList.add('feat'); if (im) im.sizes = '(max-width:1100px) 100vw, 1100px'; frag.appendChild(it); n = 0; };
       jall.forEach(function (it) {
         var im = it.querySelector('img');
         if (it.hidden) { frag.appendChild(it); return; }
-        if (it.hasAttribute('data-feat') && n !== Infinity && n < K) { pend = it; return; }   // 指定滿版但離上一張太近：等至少一排再放，避免出現空欄
-        var spread = Math.max.apply(null, sim) - Math.min.apply(null, sim);
-        if (!pend && (it.hasAttribute('data-feat') || it.hasAttribute('data-land') && (n === Infinity || (n >= EVERY && spread < 0.5 + 0.08 * (n - EVERY))))) { feature(it); return; }   // 欄底差不多齊了才插滿版
+        if (it.hasAttribute('data-feat') && n !== Infinity && (n < K || place(run, K).spread > 0.25)) { pend = it; pendN = n; return; }   // 指定滿版但欄底還不平：往後延幾張再放
+        if (!pend && (it.hasAttribute('data-feat') || it.hasAttribute('data-land') && (n === Infinity || (n >= EVERY && place(run, K).spread < 0.25 + 0.04 * (n - EVERY))))) { feature(it); return; }   // 欄底能排平才插滿版
         it.classList.remove('feat'); if (im) im.sizes = '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px';
-        run.push(it); n++; var k = sim.indexOf(Math.min.apply(null, sim)); sim[k] += ratio(it) + 0.12;
-        if (pend && n >= K) { feature(pend); pend = null; }
+        run.push(it); n++;
+        if (pend && n >= K && (place(run, K).spread <= 0.25 || n - pendN >= K * 6)) { feature(pend); pend = null; }
       });
       if (pend) feature(pend);
       flush();
@@ -147,14 +173,16 @@
     var evenUp = function () {
       [].forEach.call(jw.querySelectorAll('.masonry'), function (b) {
         var cs = [].slice.call(b.children);
-        [].forEach.call(b.querySelectorAll('figure'), function (fg) { fg.style.height = ''; fg.classList.remove('fill'); });
+        [].forEach.call(b.querySelectorAll('figure'), function (fg) { fg.style.height = ''; fg.classList.remove('fill'); fg.removeAttribute('data-h'); });
         for (var pass = 0; pass < 4; pass++) {   // 拉高一欄可能影響鄰欄量測，重複到全部齊為止
         var hs = cs.map(function (c) { return c.getBoundingClientRect().height; }), mx = Math.max.apply(null, hs), changed = false;
         cs.forEach(function (c, i) {
           var d = mx - hs[i]; if (d < 2) return; changed = true;
-          var fgs = [].slice.call(c.querySelectorAll('figure')), hh = fgs.map(function (fg) { return fg.getBoundingClientRect().height; });
-          var tot = hh.reduce(function (x, y) { return x + y; }, 0); if (!tot) return;
-          fgs.forEach(function (fg, k) { fg.style.height = (hh[k] + d * hh[k] / tot) + 'px'; fg.classList.add('fill'); });
+          var fgs = [].slice.call(c.querySelectorAll('figure'));
+          var cap = fgs.map(function (fg) { var im = fg.querySelector('img'), base = parseFloat(fg.getAttribute('data-h')) || fg.getBoundingClientRect().height; fg.setAttribute('data-h', base); var land = +im.getAttribute('width') > +im.getAttribute('height'); return base * (land ? 0.25 : 0.06) - (fg.getBoundingClientRect().height - base); });
+          var room = cap.reduce(function (x, y) { return x + Math.max(0, y); }, 0); if (room < 1) return;
+          var use = Math.min(d, room);
+          fgs.forEach(function (fg, k) { if (cap[k] <= 0) return; fg.style.height = (fg.getBoundingClientRect().height + use * cap[k] / room) + 'px'; fg.classList.add('fill'); });   // 不夠補就留一點空，不硬拉變形
         });
         if (!changed) break;
         }
