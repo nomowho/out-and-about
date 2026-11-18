@@ -408,3 +408,17 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .series::before,.series::after{display:none}
 .series .s{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid #e4e4e4}
 .series .s:hover{background:#fafafa;border-color:#cfcfcf}
+/* 首頁 SERIES：雜誌式卡片（直式大圖＋左下系列圖示＋分類／標題／作者／日期），不加框（Nomo 11-18） */
+.series .s{flex:0 0 300px;background:none;border:0;-webkit-backdrop-filter:none;backdrop-filter:none;color:inherit;display:block}
+.series .s:hover{background:none}
+.series .s figure{aspect-ratio:4/5;overflow:hidden;position:relative;background:#eee;margin-bottom:16px}
+.series .s figure img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.series .s:hover figure img{transform:scale(1.03)}
+.series .s .stk{position:absolute;left:12px;bottom:12px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.88);display:flex;align-items:center;justify-content:center}
+.series .s .stk svg{width:18px;height:18px;fill:none;stroke:#222;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
+.series .s .k{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;color:#333;margin-bottom:8px}
+.series .s h3{font-size:18px;font-weight:700;line-height:1.5;margin:0 0 12px}
+.series .s .by{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;color:#333;margin-bottom:4px}
+.series .s time{font-size:13px;color:#555}
+@media(max-width:700px){.series .s{flex-basis:72vw}.series .s h3{font-size:17px}}
+.series .s .k,.series .s .by{padding:0}

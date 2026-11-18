@@ -500,8 +500,11 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <div class="box"><div class="sh"><h2>SERIES</h2><span>系列專題</span></div></div>
   <div class="rail">${SERIES.map(s => `
     <a class="s" href="${url.series(s.id)}">
-      <figure>${img(`img/${s.img}.jpg`, s.t, { sizes: '300px' })}</figure>
-      <div><h3>${s.t}</h3><p>${s.d}</p><span class="n">${s.ids.length} ${s.ids.length === 1 ? 'STORY' : 'STORIES'} ›</span></div>
+      <figure>${img(`img/${s.img}.jpg`, s.t, { sizes: '(max-width:700px) 72vw, 300px' })}<span class="stk" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7.5" y="7.5" width="12" height="10" rx="1.6"/><path d="M4.5 14.5V6.1c0-.9.7-1.6 1.6-1.6h10.4"/></svg></span></figure>
+      <div class="k">SERIES · ${s.ids.length} ${s.ids.length === 1 ? 'STORY' : 'STORIES'}</div>
+      <h3>${s.t}</h3>
+      <div class="by">BY NOMO</div>
+      ${(() => { const d = s.ids.map(id => byId[id]).filter(Boolean).map(p => p.date).sort().pop(); if (!d) return ''; const [y, m, dd] = d.split('.').map(Number); return `<time datetime="${iso(d)}">${y}年${m}月${dd}日</time>`; })()}
     </a>`).join('')}</div>
 </section>
 
