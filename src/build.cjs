@@ -88,8 +88,9 @@ fs.copyFileSync(path.join(SRC, 'common.css'), path.join(ROOT, 'assets', 'common.
 fs.copyFileSync(path.join(SRC, 'site.js'), path.join(ROOT, 'assets', 'site.js'));
 const ver = Date.now().toString(36);
 
-const navLinks = on => `<a href="/#latest-news"${on === 'NEWS' ? ' class="on" aria-current="page"' : ''}>NEWS</a><a href="/destinations/"${on === 'COUNTRIES' ? ' class="on" aria-current="page"' : ''}>COUNTRIES</a>` +
-  Object.keys(CATS).map(k => `<a href="${url.cat(k)}"${on === k ? ' class="on" aria-current="page"' : ''}>${k}</a>`).join('');
+const LITE = new Set(['FOOD', 'GUIDE']);   // A3b：篇數還少的分類，選單字色較淡（Nomo 11-18）
+const navLinks = on => `<a href="/news/"${on === 'NEWS' ? ' class="on" aria-current="page"' : ''}>NEWS</a><a href="/destinations/"${on === 'COUNTRIES' ? ' class="on" aria-current="page"' : ''}>DESTINATIONS</a>` +
+  Object.keys(CATS).map(k => { const c = [on === k ? 'on' : '', LITE.has(k) ? 'lite' : ''].filter(Boolean).join(' '); return `<a href="${url.cat(k)}"${c ? ` class="${c}"` : ''}${on === k ? ' aria-current="page"' : ''}>${k}</a>`; }).join('');
 
 const PERSON = { '@type': 'Person', '@id': abs('/#nomo'), name: 'Nomo', url: abs('/about/'), sameAs: ['https://www.instagram.com/nomowho/'], description: '旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」，寫建築、藝術、歷史與自然。' };
 const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: 'Out and About', alternateName: '我出去一下就回來', url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/logo.png') }, sameAs: ['https://www.instagram.com/nomowho/'] };
@@ -122,6 +123,8 @@ function page({ file, title, desc, canonical, type = 'website', image, style, na
 <meta name="twitter:description" content="${esc(desc)}">
 <meta name="twitter:image" content="${image}">
 <meta name="theme-color" content="#ffffff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/logo.png">
 ${extraHead}<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,12 +149,12 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
   <div class="drawer-in">
     <button type="button" class="drawer-x" id="menuClose" aria-label="關閉選單">✕</button>
     <p class="drawer-h">CATEGORY</p>
-    <ul><li><a href="/#latest-news"><b>NEWS</b><span>世界旅遊新訊</span></a></li>
+    <ul><li><a href="/news/"><b>NEWS</b><span>世界旅遊新訊</span></a></li>
       ${Object.entries(CATS).map(([k, v]) => `<li><a href="${url.cat(k)}"><b>${k}</b><span>${v.zh}</span></a></li>`).join('')}</ul>
     <p class="drawer-h">SERIES</p>
     <ul class="sm">${SERIES.map(s => `<li><a href="${url.series(s.id)}">${s.t}</a></li>`).join('')}</ul>
     <p class="drawer-h"><a href="/journal/">PHOTO JOURNAL</a></p>
-    <p class="drawer-h"><a href="/destinations/">COUNTRIES</a></p>
+    <p class="drawer-h"><a href="/destinations/">DESTINATIONS</a></p>
     <ul class="sm two">${regions.map(r => `<li><a href="${url.dest(r)}">${REGION_ZH[r]}</a></li>`).join('')}</ul>
     <p class="drawer-foot"><a href="/about/">關於 Out and About</a><a href="https://www.instagram.com/nomowho/" rel="me noopener">Instagram @nomowho</a></p>
   </div>
@@ -316,7 +319,7 @@ newsNew.forEach(n => {
   const picks = TOP7.slice(0, 3);
   const u = url.news(n.id), desc = cut(n.dek || n.title, 155);
   const main = `<article>
-    <div class="box"><nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<a href="/#latest-news">NEWS</a>›<span>${n.region}</span></nav></div>
+    <div class="box"><nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<a href="/news/">NEWS</a>›<span>${n.region}</span></nav></div>
     <header class="ahead">
       <div class="meta"><span>NEWS · ${n.region}</span><time datetime="${iso(n.date)}">${n.date}</time></div>
       <h1>${n.title}</h1>
@@ -336,7 +339,7 @@ newsNew.forEach(n => {
       ${n.facts ? `<aside class="side"><div class="facts"><h3>Fact Sheet<small>重點速查</small></h3><dl>${n.facts.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl></div><p class="place">● ${n.place}</p></aside>` : ''}
     </div></article>
     <section class="more"><div class="box">
-      <div class="sh"><h2>More News</h2><span>更多世界旅遊新訊</span><a href="/#latest-news">All News</a></div>
+      <div class="sh"><h2>More News</h2><span>更多世界旅遊新訊</span><a href="/news/">All News</a></div>
       <div class="grid">${others.map(x => newsCard(x)).join('')}</div>
     </div></section>
     <section class="more plain"><div class="box">
@@ -348,7 +351,7 @@ newsNew.forEach(n => {
       datePublished: iso(n.date), dateModified: iso(n.date), image: [ogImg(null)], mainEntityOfPage: { '@type': 'WebPage', '@id': abs(u) },
       author: PERSON, publisher: ORG, contentLocation: { '@type': 'Place', name: n.place },
       isBasedOn: { '@type': 'NewsArticle', headline: n.srcTitle, url: n.url, publisher: { '@type': 'Organization', name: n.src } } },
-    crumbLd([['Out and About', '/'], ['NEWS', '/#latest-news'], [n.title, u]])
+    crumbLd([['Out and About', '/'], ['NEWS', '/news/'], [n.title, u]])
   ];
   if (n.faq && n.faq.length) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: n.faq.map(([q, a]) => ({ '@type': 'Question', name: strip(q), acceptedAnswer: { '@type': 'Answer', text: strip(a) } })) });
   page({ file: `news/${n.id}/index.html`, title: `${n.title}｜Out and About`, desc, canonical: u, type: 'article', image: ogImg(null), style: 'news', nav: 'NEWS', main, ld, progress: true,
@@ -395,7 +398,7 @@ for (const s of SERIES) {
 for (const r of regions) {
   const posts = postsNew.filter(p => p.region === r);
   const areas = [...new Set(posts.map(p => p.area))];
-  listPage({ file: `destinations/${r.toLowerCase()}/index.html`, u: url.dest(r), label: `COUNTRY　${r.toUpperCase()}`, h1: `${REGION_ZH[r]}旅行`, desc: `在${REGION_ZH[r]}走過的地方：${areas.join('、')}。`, posts, lead: leadOf(posts), nav: 'COUNTRIES', crumb: '<a href="/destinations/">COUNTRIES</a>',
+  listPage({ file: `destinations/${r.toLowerCase()}/index.html`, u: url.dest(r), label: `DESTINATION　${r.toUpperCase()}`, h1: `${REGION_ZH[r]}旅行`, desc: `在${REGION_ZH[r]}走過的地方：${areas.join('、')}。`, posts, lead: leadOf(posts), nav: 'COUNTRIES', crumb: '<a href="/destinations/">DESTINATIONS</a>',
     groups: areas.length > 1 ? areas.map(a => [a, posts.filter(p => p.area === a)]) : null,
     othersTitle: 'Other Countries', othersZh: '其他國家',
     others: regions.filter(x => x !== r).map(x => { const l = POSTS.filter(p => p.region === x); return { u: url.dest(x), t: `${REGION_ZH[x]}`, n: l.length, img: cardImg(leadOf(l)) }; }) });
@@ -411,8 +414,8 @@ for (const r of regions) {
   const desc = `Nomo 走過的 ${regions.length} 個國家：${cards.map(c => `${REGION_ZH[c.r]}（${c.l.length} 篇）`).join('、')}。依國家找旅行文章。`;
   const main = `
     <section class="top"><div class="box">
-      <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>COUNTRIES</span></nav>
-      <div class="label">COUNTRIES　國家</div><h1>依國家找旅行</h1><p>${cards.length} 個國家、${POSTS.length} 篇文章。點國家看那裡的所有旅行。</p>
+      <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>DESTINATIONS</span></nav>
+      <div class="label">DESTINATIONS　目的地</div><h1>依國家找旅行</h1><p>${cards.length} 個國家、${POSTS.length} 篇文章。點國家看那裡的所有旅行。</p>
     </div></section>
     <section class="mapwrap box" aria-label="旅行地圖">
       <div class="maphead"><h2>Map</h2><span>旅行地圖</span><p>放大地圖會從國家展開到城市，點圓點看那裡的文章。</p></div>
@@ -432,7 +435,7 @@ for (const r of regions) {
         <h3>${REGION_ZH[c.r]}</h3></a><div class="place areas-in">${c.areas.map(a => `<a href="${url.dest(c.r)}${c.areas.length > 1 ? '#' + encodeURIComponent(a) : ''}">${a}</a>`).join('<span aria-hidden="true">・</span>')}</div>
       </div>`).join('')}</div></section>`;
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '依國家找旅行', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
-    mainEntity: listLd('國家', cards.map(c => ({ u: url.dest(c.r), n: `${REGION_ZH[c.r]}旅行` }))) }, crumbLd([['Out and About', '/'], ['COUNTRIES', u]])];
+    mainEntity: listLd('國家', cards.map(c => ({ u: url.dest(c.r), n: `${REGION_ZH[c.r]}旅行` }))) }, crumbLd([['Out and About', '/'], ['DESTINATIONS', u]])];
   page({ file: 'destinations/index.html', title: `依國家找旅行｜${cards.length} 個國家｜Out and About`, desc, canonical: u, image: ogImg(cards[0].lead), style: 'category', nav: 'COUNTRIES', main, ld,
     extraHead: '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>\n' });
   sitemap.push({ loc: u, lastmod: BUILD_DATE, images: [] });
@@ -560,6 +563,23 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   page({ file: 'about/index.html', title: '關於我出去一下就回來｜Out and About', desc, canonical: '/about/', image: ogImg(TOP7[0]), style: 'post', nav: '', main,
     ld: [{ '@context': 'https://schema.org', '@type': 'AboutPage', '@id': abs('/about/'), name: '關於我出去一下就回來', inLanguage: 'zh-Hant-TW', mainEntity: PERSON, isPartOf: { '@id': abs('/#website') } }, crumbLd([['Out and About', '/'], ['關於', '/about/']])] });
   sitemap.push({ loc: '/about/', lastmod: BUILD_DATE, images: [] });
+
+  /* ── NEWS 列表 /news/（A2，Nomo 11-18）：上架中的外電，每天跟著外電排程自動更新 ── */
+  {
+    const u = '/news/';
+    const main = `
+    <section class="top jtop"><div class="box">
+      <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>NEWS</span></nav>
+      <div class="label">NEWS　世界旅遊新訊</div><h1>世界旅遊新訊</h1>
+      <p>編譯自 Condé Nast Traveler、Dezeen 等國際旅遊與設計媒體，每天更新，每則都附原文出處。</p>
+    </div></section>
+    <section class="list box newslist"><div class="grid">${newsNew.map((n, i) => newsCard(n, i === 0)).join('')}</div></section>`;
+    const desc = `Out and About 世界旅遊新訊：${newsNew.slice(0, 3).map(n => n.title).join('；')}。`.slice(0, 160);
+    page({ file: 'news/index.html', title: '世界旅遊新訊 NEWS｜Out and About', desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: 'NEWS', main,
+      ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '世界旅遊新訊', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
+        mainEntity: listLd('世界旅遊新訊', newsNew.map(n => ({ u: url.news(n.id), n: n.title }))) }, crumbLd([['Out and About', '/'], ['NEWS', u]])] });
+    sitemap.push({ loc: u, lastmod: newsNew.length ? iso(newsNew[0].date) : BUILD_DATE, images: [] });
+  }
 
   /* ── Photo Journal /journal/：全站照片瀑布流，點照片進文章 ── */
   {

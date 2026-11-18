@@ -15,7 +15,17 @@
   if (btn) btn.addEventListener('click', function () { openMenu(true); });
   if (x) x.addEventListener('click', function () { openMenu(false); });
   if (drawer) drawer.addEventListener('click', function (e) { if (e.target.closest('a')) openMenu(false); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer && !drawer.hidden) openMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (!drawer || drawer.hidden) return;
+    if (e.key === 'Escape') { openMenu(false); return; }
+    if (e.key === 'Tab') {   // B4：選單開著時 Tab 只在選單內循環，不會跑到被遮住的頁面
+      var f = [].slice.call(drawer.querySelectorAll('a[href], button:not([disabled])')).filter(function (el) { return el.offsetParent !== null; });
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && (document.activeElement === first || !drawer.contains(document.activeElement))) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && (document.activeElement === last || !drawer.contains(document.activeElement))) { e.preventDefault(); first.focus(); }
+    }
+  });
 
   /* 刊頭變窄＋閱讀進度 */
   var head = $('head'), bar = $('progress'), ticking = false, lastY = scrollY, navOff = false, navT = 0;
