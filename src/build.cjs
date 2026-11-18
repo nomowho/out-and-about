@@ -560,6 +560,8 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   {
     const J_MAX = 6;   // 每篇最多取幾張，避免單篇洗版
     // 精選規則（Nomo 11-18）：只放有主題、美、構圖好的照片；資訊型（告示、菜單、地圖、便當特寫）與插畫一律不放 → 名單在 src/journal-exclude.json
+    const J_LAYOUT = fs.existsSync(path.join(__dirname, 'journal-layout.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'journal-layout.json'), 'utf8')) : {};
+    const J_FEAT = new Set(J_LAYOUT.feature || []), J_NOFEAT = new Set(J_LAYOUT.nofeature || []);
     const J_SKIP = new Set(fs.existsSync(path.join(__dirname, 'journal-exclude.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'journal-exclude.json'), 'utf8')) : []);
     if (process.env.JOURNAL_DUMP) { const all = []; postsNew.filter(p => p.photo !== false && POST_DETAIL[p.id]).forEach(p => { const d = POST_DETAIL[p.id]; if (d.cover) all.push([p.id, d.cover, d.coverCap || '']); d.body.forEach(bk => { if (bk.src) all.push([p.id, bk.src, bk.cap || '']); else if (bk.imgs) bk.imgs.flat().forEach(x => all.push([p.id, x, ''])); }); }); fs.writeFileSync(process.env.JOURNAL_DUMP, JSON.stringify(all.filter(([, src]) => fs.existsSync(path.join(ROOT, src))))); }
     const items = [];
@@ -580,7 +582,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     <section class="list box">
       <nav class="areas jfilter" id="areas" aria-label="依國家篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="#${r.toLowerCase()}" data-area="${r.toLowerCase()}">${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
       <div class="journal" id="masonry"><div class="masonry">${items.map(it => `
-        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${(() => { const d = dims(it.src); return d && d.w / d.h >= 1.3 ? ' data-land="1"' : ''; })()}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px' })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
+        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${(() => { const d = dims(it.src); return J_FEAT.has(it.src) ? ' data-land="1" data-feat="1"' : d && d.w / d.h >= 1.3 && !J_NOFEAT.has(it.src) ? ' data-land="1"' : ''; })()}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px' })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
       </div></div>
     </section>`;
     const desc = `Nomo 的旅行攝影日誌：${items.length} 張照片，走過${jRegions.map(r => REGION_ZH[r]).join('、')}，每張都連到背後的旅行故事。`;

@@ -1,0 +1,5 @@
+{
+ "_說明": "Photo Journal 版面微調。feature＝一定當橫式滿版；nofeature＝不准當滿版（仍會出現在瀑布流裡）",
+ "feature": ["img/sagrada-familia/content-card01.jpg"],
+ "nofeature": ["img/sagrada-familia-2/03.jpg"]
+}

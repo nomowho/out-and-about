@@ -132,7 +132,7 @@
         var im = it.querySelector('img');
         if (it.hidden) { frag.appendChild(it); return; }
         var spread = Math.max.apply(null, sim) - Math.min.apply(null, sim);
-        if (it.hasAttribute('data-land') && (n === Infinity || (n >= EVERY && spread < 0.5 + 0.08 * (n - EVERY)))) {   // 欄底差不多齊了才插滿版
+        if (it.hasAttribute('data-feat') || it.hasAttribute('data-land') && (n === Infinity || (n >= EVERY && spread < 0.5 + 0.08 * (n - EVERY)))) {   // 欄底差不多齊了才插滿版
           flush(); it.classList.add('feat'); if (im) im.sizes = '(max-width:1100px) 100vw, 1100px';
           frag.appendChild(it); n = 0;
         } else {
