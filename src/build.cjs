@@ -75,7 +75,7 @@ function img(src, alt, { lazy = true, sizes = '100vw', cls = '', small = false }
 const CARD_SIZES = '(max-width:560px) 100vw, (max-width:1000px) 50vw, 380px';
 const thumb = (p, lazy = true) => p.photo === false
   ? `<div class="ph"><span>${p.region.toUpperCase()} · ${p.area}</span><b>${p.zh}</b><i>照片整理中</i></div>`
-  : img(`img/${p.id}.jpg`, p.zh, { lazy, sizes: CARD_SIZES });
+  : img(`img/${p.id}.jpg`, p.zh, { lazy, sizes: CARD_SIZES, small: true });   // small＝600px 縮圖，手機與小卡片自動選用（PageSpeed 11-18）
 const ogImg = p => abs(p && p.photo !== false ? `/img/${p.id}.jpg` : `/img/${TOP7[0].id}.jpg`);
 
 /* ── 共用版型 ── */
@@ -460,7 +460,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 <section class="hero" aria-label="精選文章" aria-roledescription="carousel">
   <div class="track" id="track">${TOP7.map((p, i) => `
     <a class="slide" href="${url.post(p.id)}" data-i="${i}">
-      <figure>${img(`img/${p.id}.jpg`, p.zh, { lazy: i > 1, sizes: '(max-width:700px) 84vw, 480px' })}</figure>
+      <figure>${img(`img/${p.id}.jpg`, p.zh, { lazy: i > 0, small: true, sizes: '(max-width:700px) 84vw, 480px' })}</figure>
       <div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div>
     </a>`).join('')}</div>
   <button class="arr l" id="prev" type="button" aria-label="上一則"><svg viewBox="0 0 34 14" aria-hidden="true"><path d="M34 7H1M7 1 1 7l6 6"/></svg></button>

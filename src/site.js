@@ -408,7 +408,7 @@
       track.style.transform = 'translateX(' + xx + 'px)';
       var peek = (wrap.clientWidth - w) / 2 - gap - w, bw = prev.offsetWidth;
       var ax = peek >= bw + 16 ? (peek - bw) / 2 : 10;
-      prev.style.left = ax + 'px'; next.style.right = ax + 'px';
+      prev.style.left = '0px'; next.style.right = '0px'; prev.style.transform = 'translate(' + ax + 'px,-50%)'; next.style.transform = 'translate(' + (-ax) + 'px,-50%)';   // 用 transform 定位箭頭，字型載入後重算也不算版面位移
       if (count) count.textContent = (mod(v) + 1) + ' / ' + N;
     };
     var go = function (d) { v += d; place(true); };

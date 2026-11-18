@@ -445,7 +445,7 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .card:focus-visible,.slide:focus-visible,.jp:focus-visible,.series .s:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 /* A3b：篇數還少的分類（FOOD、GUIDE）選單字色較淡 */
-.nav a.lite{color:#8a8a8a}
+.nav a.lite{color:#666}
 .nav a.lite:hover,.nav a.lite.on{color:var(--ink)}
 /* A2：/news/ 列表頁 */
 .newslist{max-width:820px;margin:8px auto 40px}
