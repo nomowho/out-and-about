@@ -500,3 +500,46 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .journal-entry .bio{margin-bottom:0}
 .side .ig{display:block;border:0;padding:6px 0;margin-top:14px;text-align:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;letter-spacing:.04em;color:#555;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#ccc}
 .side .ig:hover{color:var(--ink);text-decoration-color:currentColor}
+/* ── 首頁 Cover Story（取代輪播，Nomo 11-18）：最新一篇橫式主圖滿版開場 ── */
+.cover-story{max-width:1440px;margin:0 auto;padding:28px 24px 0}
+.cover-story>a{display:block;color:inherit}
+.cover-story figure{aspect-ratio:21/9;overflow:hidden;background:#eee;margin:0}
+.cover-story figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.cover-story>a:hover figure img{transform:scale(1.015)}
+.cs-cap{max-width:860px;margin:26px auto 0;text-align:center}
+.cs-k{display:flex;justify-content:center;align-items:center;gap:14px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;letter-spacing:.18em}
+.cs-k span:first-child{font-weight:700}
+.cs-k time{color:#555;letter-spacing:.06em;font-weight:300}
+.cs-cap h2{font-size:clamp(24px,3vw,36px);font-weight:700;line-height:1.45;margin:12px 0 0}
+.cs-cap p{font-size:15.5px;line-height:1.9;color:#444;margin:14px auto 0;max-width:720px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cs-more{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;letter-spacing:.12em;border-bottom:1px solid currentColor;padding-bottom:3px}
+.cs-more svg{width:22px;height:10px;fill:none;stroke:currentColor;stroke-width:1.3;transition:transform .3s}
+.cover-story>a:hover .cs-more svg{transform:translateX(4px)}
+@media(max-width:700px){
+  .cover-story{padding:14px 20px 0}
+  .cover-story figure{aspect-ratio:4/3}
+  .cs-cap{margin-top:18px;text-align:left}
+  .cs-k{justify-content:flex-start;gap:10px;font-size:11px}
+  .cs-cap p{font-size:15px}
+}
+/* ── PICK UP 第 6 篇起：依主圖方向不對稱編排（橫式跨兩欄、直式一欄，自動補位） ── */
+#picks>.card.port figure{aspect-ratio:4/5}
+#picks>.card.land figure{aspect-ratio:3/2}
+#picks>.card.land figure img,#picks>.card.port figure img{width:100%;height:100%;object-fit:cover}
+@media(min-width:701px) and (max-width:1000px){
+  #picks{grid-auto-flow:row dense}
+  #picks>.card.land{grid-column:span 2}
+  #picks>.card.land figure{aspect-ratio:2/1.24}
+}
+@media(min-width:1001px){
+  #picks{grid-auto-flow:row dense}
+  #picks>.card.land{grid-column:span 8}
+  #picks>.card.port{grid-column:span 4}
+  #picks>.card.land figure{aspect-ratio:5/3}
+}
+/* 平板（三欄）前 5 篇：第 1 篇跨兩欄（2+1／1+1+1），剛好排滿兩排不留空格 */
+@media(min-width:701px) and (max-width:1000px){
+  #picks>.pk-big{grid-column:span 2}
+  #picks>.pk-big figure{aspect-ratio:5/3}
+  #picks>.pk-big figure img{width:100%;height:100%;object-fit:cover}
+}

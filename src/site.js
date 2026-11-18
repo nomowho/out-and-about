@@ -224,21 +224,29 @@
   var on = document.querySelector('.nav a.on');
   if (on && on.parentElement.scrollWidth > on.parentElement.clientWidth) on.parentElement.scrollLeft = on.offsetLeft - 16;
 
-  /* PICK UP：MORE 每次多 9 篇 */
-  var more = $('picksMore');
-  if (more) {
-    var rest = function () { return document.querySelectorAll('#picks .card[hidden]'); };
-    var dt = function () { return document.querySelectorAll('#picks .card.dt-more'); };   // 桌機預設只顯示 5 篇，第 6–9 篇等 MORE 才出現
-    if (!rest().length && !dt().length) more.parentElement.hidden = true;
+  /* PICK UP：預設 5 篇，MORE 每次多約 9 篇（不對稱編排：橫式跨兩欄、直式一欄）。
+     放出後實際量每一排，沒填滿就再補一張剛好塞得進去的（缺一欄補直式、缺兩欄補橫式），直到每排都滿 */
+  var more = $('picksMore'), picks = $('picks');
+  if (more && picks) {
+    var rest = function () { return [].slice.call(picks.querySelectorAll('.card[hidden]')); };
+    if (!rest().length) more.parentElement.hidden = true;
+    var gaps = function () {
+      var W = picks.getBoundingClientRect().width, cards = [].slice.call(picks.children).filter(function (c) { return !c.hidden && !(innerWidth > 1000 && (c.classList.contains('pk-big') || c.classList.contains('pk-side'))); });   // 只有桌機雜誌版型時前 5 篇獨立成區，不列入量測
+      if (!cards.length) return 0;
+      var unit = cards.filter(function (c) { return c.classList.contains('port'); }).map(function (c) { return c.getBoundingClientRect().width; })[0] || W / 3;
+      if (unit > W * 0.6) return 0;   // 手機單欄：沒有空格問題
+      var rows = {}; cards.forEach(function (c) { var r = c.getBoundingClientRect(), k = Math.round(r.top); rows[k] = (rows[k] || 0) + r.width; });
+      var worst = 0; Object.keys(rows).forEach(function (k) { var miss = W - rows[k]; if (miss > unit * 0.6) worst = Math.max(worst, Math.round(miss / unit)); });
+      return worst;   // 某排還缺幾欄
+    };
     more.addEventListener('click', function () {
-      var held = [].slice.call(dt()), shownBefore = held.length && getComputedStyle(held[0]).display !== 'none';
-      held.forEach(function (c) { c.classList.remove('dt-more'); });
-      if (held.length && !shownBefore) {   // 桌機第一次 MORE：第 6–9 篇＋再補到 3 的倍數，不留空格
-        var need = (3 - held.length % 3) % 3, extra = rest(); for (var j = 0; j < need && j < extra.length; j++) extra[j].hidden = false;
-        if (!rest().length) more.parentElement.hidden = true; held[0].focus({ preventScroll: true }); return;
-      }
       var list = rest(), first = list[0];
       for (var i = 0; i < 9 && i < list.length; i++) list[i].hidden = false;
+      for (var guard = 0; guard < 30; guard++) {
+        var miss = gaps(), pool = rest(); if (!miss || !pool.length) break;
+        var pick = pool.filter(function (c) { return c.classList.contains(miss >= 2 ? 'land' : 'port'); })[0] || pool[0];
+        pick.hidden = false;
+      }
       if (!rest().length) more.parentElement.hidden = true;
       if (first) first.focus({ preventScroll: true });
     });
