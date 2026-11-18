@@ -207,7 +207,10 @@
     more.addEventListener('click', function () {
       var held = [].slice.call(dt()), shownBefore = held.length && getComputedStyle(held[0]).display !== 'none';
       held.forEach(function (c) { c.classList.remove('dt-more'); });
-      if (held.length && !shownBefore) { if (!rest().length) more.parentElement.hidden = true; held[0].focus({ preventScroll: true }); return; }
+      if (held.length && !shownBefore) {   // 桌機第一次 MORE：第 6–9 篇＋再補到 3 的倍數，不留空格
+        var need = (3 - held.length % 3) % 3, extra = rest(); for (var j = 0; j < need && j < extra.length; j++) extra[j].hidden = false;
+        if (!rest().length) more.parentElement.hidden = true; held[0].focus({ preventScroll: true }); return;
+      }
       var list = rest(), first = list[0];
       for (var i = 0; i < 9 && i < list.length; i++) list[i].hidden = false;
       if (!rest().length) more.parentElement.hidden = true;
