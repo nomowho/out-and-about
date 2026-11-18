@@ -58,6 +58,32 @@
     };
     g.addEventListener('scroll', function () { requestAnimationFrame(mark); }, { passive: true }); mark();
   });
+
+  /* 刊頭分享：手機用系統分享面板（LINE、IG、訊息⋯），不支援就跳出小選單 */
+  var sb = $('shareBtn'), sm = $('shareMenu');
+  if (sb) {
+    var canon = document.querySelector('link[rel=canonical]'), url = canon ? canon.href : location.href;
+    var h1 = document.querySelector('main h1'), ttl = (h1 ? h1.textContent : document.title).trim();
+    var enc = encodeURIComponent;
+    var links = { line: 'https://social-plugins.line.me/lineit/share?url=' + enc(url), fb: 'https://www.facebook.com/sharer/sharer.php?u=' + enc(url), x: 'https://twitter.com/intent/tweet?url=' + enc(url) + '&text=' + enc(ttl) };
+    [].forEach.call(sm.querySelectorAll('a[data-share]'), function (a) { a.href = links[a.getAttribute('data-share')]; });
+    var toast = function (msg) { var t = document.createElement('div'); t.className = 'sharetoast'; t.setAttribute('role', 'status'); t.textContent = msg; document.body.appendChild(t); requestAnimationFrame(function () { t.classList.add('on'); }); setTimeout(function () { t.classList.remove('on'); setTimeout(function () { t.remove(); }, 300); }, 1800); };
+    var menu = function (open) { sm.hidden = !open; sb.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+    var coarse = matchMedia('(pointer:coarse)').matches;
+    sb.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (navigator.share && coarse) { navigator.share({ title: ttl, url: url }).catch(function () {}); return; }
+      menu(sm.hidden);
+    });
+    sm.querySelector('[data-share=copy]').addEventListener('click', function () {
+      var done = function () { menu(false); toast('已複製連結'); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('複製這個連結', url); menu(false); });
+      else { prompt('複製這個連結', url); menu(false); }
+    });
+    sm.addEventListener('click', function (e) { if (e.target.closest('a')) menu(false); });
+    document.addEventListener('click', function (e) { if (!sm.hidden && !sm.contains(e.target)) menu(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sm.hidden) { menu(false); sb.focus(); } });
+  }
   /* 分類列：把目前分類捲到看得見的位置 */
   var on = document.querySelector('.nav a.on');
   if (on && on.parentElement.scrollWidth > on.parentElement.clientWidth) on.parentElement.scrollLeft = on.offsetLeft - 16;

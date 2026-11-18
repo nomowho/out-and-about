@@ -136,7 +136,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
   <div class="bar">
     <div class="tools"><button type="button" id="menuBtn" aria-label="開啟選單" aria-expanded="false" aria-controls="drawer"><i class="burger" aria-hidden="true"></i><span>Menu</span></button></div>
     <a class="logo" href="/" aria-label="Out and About 首頁"><b>Out and About</b><small>我出去一下就回來</small></a>
-    <div class="tools r"><a class="en" href="https://www.instagram.com/nomowho/" rel="me noopener">Instagram</a></div>
+    <div class="tools r">${progress ? `<button type="button" class="share" id="shareBtn" aria-label="分享這篇文章" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14.5V3.5M7.75 7.5 12 3.25l4.25 4.25"/><path d="M8.5 10.5H6v10h12v-10h-2.5"/></svg><span>Share</span></button><div class="sharemenu" id="shareMenu" hidden><button type="button" data-share="copy">複製連結</button><a data-share="line" target="_blank" rel="noopener">LINE</a><a data-share="fb" target="_blank" rel="noopener">Facebook</a><a data-share="x" target="_blank" rel="noopener">X</a></div>` : ""}<a class="en ig" href="https://www.instagram.com/nomowho/" rel="me noopener">Instagram</a></div>
   </div>
   <nav class="nav" aria-label="分類">${navLinks(nav)}</nav>
   ${progress ? '<div class="progress" id="progress"></div>' : ''}
