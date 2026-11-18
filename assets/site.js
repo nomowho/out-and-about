@@ -208,7 +208,7 @@
      滑鼠移上不暫停（Nomo 11-18），只有手指按住時暫停；複製一份接在後面形成無縫循環 */
   var hl = $('news');
   if (hl && hl.classList.contains('headlines')) {
-    var ht = hl.querySelector('.hl-track'), HL_SPEED = 35.2;   // 每秒 px（原 32 再快 10%）
+    var ht = hl.querySelector('.hl-track'), HL_SPEED = 42.24;   // 每秒 px（32 → +10% → 再 +20%，Nomo 11-18）
     [].slice.call(ht.children).forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; ht.appendChild(d); });
     var hlHalf = 0;
     var hlSize = function () { var half = Math.round(ht.scrollWidth / 2); if (half === hlHalf) return; hlHalf = half; ht.style.setProperty('--hl-shift', -half + 'px'); ht.style.setProperty('--hl-dur', (half / HL_SPEED) + 's'); ht.classList.add('run'); };   // 寬度沒變就不重設，避免整排跳動
