@@ -450,3 +450,7 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 /* A2：/news/ 列表頁 */
 .newslist{max-width:820px;margin:8px auto 40px}
 .newslist .tcard .meta .new{margin-left:10px}
+/* 無障礙對比：首頁 Latest 灰底區塊的小字（日期、出處、說明、NEW）加深到 4.5:1 以上（PageSpeed 11-18） */
+.pick .band{--gray:#555}
+.pick .band .meta time,.pick .band .src,.pick .band .note{color:#555}
+.pick .band .new{color:#C4000F}

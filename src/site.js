@@ -392,32 +392,26 @@
     startMap();
   }
 
-  /* 首屏輪播：不複製投影片（iOS Safari 對超寬圖層會漏畫，複製的頭尾變空白），
-     改成「旋轉 DOM」：目前這張永遠排在中間，換頁動畫結束後把頭尾那張搬到另一端，兩邊永遠有鄰居可滑 */
+  /* 首屏輪播（11-18 第三版）：投影片在 DOM 裡完全不動（不複製、不搬移），
+     每張用自己的 translateX 移到「離目前位置最近」的那一圈，形成無限循環。
+     舊版搬移 DOM 會讓 Lighthouse 每 3 秒算一次新的 LCP 與版面位移（手機 LCP 17 秒、CLS 0.2），transform 則都不算 */
   var track = $('track');
   if (track) {
-    var N = track.children.length, M = Math.floor(N / 2), c = 0, timer, settle, count = $('count');
+    var S = [].slice.call(track.children), N = S.length, v = 0, timer, count = $('count');
     var prev = $('prev'), next = $('next'), wrap = track.parentElement;
+    var mod = function (x) { return ((x % N) + N) % N; };
     var place = function (animate, dx) {
       track.style.transition = animate ? '' : 'none';
-      var s = track.children[c], gap = parseFloat(getComputedStyle(track).columnGap) || 24;
-      var xx = wrap.clientWidth / 2 - (s.offsetLeft + s.offsetWidth / 2) + (dx || 0);
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 24, w = S[0].offsetWidth, step = w + gap;
+      S.forEach(function (el, k) { var p = k + N * Math.round((v - k) / N); el.style.transform = p === k ? '' : 'translateX(' + (p - k) * step + 'px)'; el.classList.toggle('on', mod(v) === k); });
+      var xx = wrap.clientWidth / 2 - (S[0].offsetLeft + v * step + w / 2) + (dx || 0);
       track.style.transform = 'translateX(' + xx + 'px)';
-      var peek = (wrap.clientWidth - s.offsetWidth) / 2 - gap - s.offsetWidth, bw = prev.offsetWidth;
+      var peek = (wrap.clientWidth - w) / 2 - gap - w, bw = prev.offsetWidth;
       var ax = peek >= bw + 16 ? (peek - bw) / 2 : 10;
       prev.style.left = ax + 'px'; next.style.right = ax + 'px';
-      [].forEach.call(track.children, function (el, k) { el.classList.toggle('on', k === c); });
-      if (count) count.textContent = (+s.getAttribute('data-i') + 1) + ' / ' + N;
+      if (count) count.textContent = (mod(v) + 1) + ' / ' + N;
     };
-    var normalize = function () {
-      clearTimeout(settle);
-      if (c === M) return;
-      while (c > M) { track.appendChild(track.firstElementChild); c--; }
-      while (c < M) { track.insertBefore(track.lastElementChild, track.firstElementChild); c++; }
-      place(false); void track.offsetWidth;
-    };
-    var go = function (d) { normalize(); c += d; place(true); settle = setTimeout(normalize, 900); };
-    track.addEventListener('transitionend', function (e) { if (e.target === track) normalize(); });
+    var go = function (d) { v += d; place(true); };
     var auto = function () { clearInterval(timer); timer = setInterval(function () { if (!document.hidden) go(1); }, 3000); };   // Nomo 指定：每 3 秒往左換一篇
     prev.onclick = function () { go(-1); auto(); };
     next.onclick = function () { go(1); auto(); };
@@ -427,7 +421,7 @@
 
     /* 觸控滑動：水平拖曳超過 40px 換頁；有拖曳就不觸發點擊 */
     var sx = 0, sy = 0, dx = 0, dragging = false, moved = false;
-    track.addEventListener('touchstart', function (e) { normalize(); sx = e.touches[0].clientX; sy = e.touches[0].clientY; dx = 0; dragging = true; moved = false; clearInterval(timer); }, { passive: true });
+    track.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; dx = 0; dragging = true; moved = false; clearInterval(timer); }, { passive: true });
     track.addEventListener('touchmove', function (e) {
       if (!dragging) return;
       dx = e.touches[0].clientX - sx; var dy = e.touches[0].clientY - sy;
@@ -442,6 +436,6 @@
 
     addEventListener('resize', function () { place(false); });
     addEventListener('load', function () { place(false); });
-    normalize(); place(false); auto();
+    place(false); auto();
   }
 })();
