@@ -1,33 +1,17 @@
 {
- "_說明": "Photo Journal 版面微調。feature＝一定當橫式滿版；nofeature＝不准當滿版；swap＝兩張直接對調位置（其他不動）",
+ "_說明": "Photo Journal 版面：feature＝固定的橫式滿版（照這個順序平均穿插，其他照片不會變成滿版）；小圖一律隨機排列（固定亂數種子，每次發佈版面不跳動，換 seed 就重新洗牌）",
+ "seed": "nomowho-2026-11-18",
  "feature": [
+  "img/dolomiti-winter/c02.jpg",
+  "img/aomori-top10/05_brick.jpg",
+  "img/aomori-museum/04_card_L.jpg",
+  "img/matera/cover.jpg",
   "img/sagrada-familia/content-card01.jpg",
+  "img/izu/content-katsuragi-2.jpg",
+  "img/terme-di-caracalla/IMG_1116.jpg",
   "img/porta-santa/volunteers.jpg",
   "img/ear-of-dionysius/blue-water.jpg",
   "img/tivoli/cover.jpg",
-  "img/terme-di-caracalla/IMG_1116.jpg",
-  "img/byrne-portugal/cover.jpg",
-  "img/matera/cover.jpg"
- ],
- "nofeature": [
-  "img/sagrada-familia-2/03.jpg",
-  "img/terme-di-caracalla/IMG_1085.jpg",
-  "img/ear-of-dionysius/quarry.jpg",
-  "img/tivoli/grounds.jpg",
-  "img/hoshino-oirase/03_card.jpg",
-  "img/caravaggio/right-wall.jpg",
-  "img/izu/content-shuzenji-1.jpg",
-  "img/caravaggio/cover.jpg",
-  "img/hoshino-oirase/01_card_A.jpg"
- ],
- "swap": [
-  [
-   "img/caravaggio/cover.jpg",
-   "img/byrne-portugal/cover.jpg"
-  ],
-  [
-   "img/hoshino-oirase/01_card_A.jpg",
-   "img/matera/cover.jpg"
-  ]
+  "img/byrne-portugal/cover.jpg"
  ]
 }

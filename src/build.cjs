@@ -573,7 +573,16 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       const must = ok.filter(([src]) => J_FEAT.has(src)), rest = ok.filter(([src]) => !J_FEAT.has(src)).slice(0, Math.max(0, J_MAX - must.length));   // 指定滿版的一定收，其餘補到 J_MAX
       ok.filter(x => must.includes(x) || rest.includes(x)).forEach(([src, cap]) => items.push({ p, src, cap }));
     });
-    (J_LAYOUT.swap || []).forEach(([x, y]) => { const i = items.findIndex(it => it.src === x), k = items.findIndex(it => it.src === y); if (i >= 0 && k >= 0) [items[i], items[k]] = [items[k], items[i]]; });   // 兩張直接對調位置
+    { // 小圖隨機排列（固定種子）、滿版照 feature 順序平均穿插（Nomo 11-18：照片牆不必照地點，滿版固定那 11 張）
+      let h = 2166136261; for (const ch of String(J_LAYOUT.seed || 'nomowho')) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); }
+      const rnd = () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 1e6) / 1e6; };
+      const feats = [...J_FEAT].map(src => items.find(it => it.src === src)).filter(Boolean);
+      const others = items.filter(it => !J_FEAT.has(it.src));
+      for (let i = others.length - 1; i > 0; i--) { const k = Math.floor(rnd() * (i + 1)); [others[i], others[k]] = [others[k], others[i]]; }
+      const per = Math.ceil(others.length / Math.max(1, feats.length)); items.length = 0;
+      feats.forEach((ft, i) => { items.push(ft, ...others.slice(i * per, (i + 1) * per)); });
+      if (!feats.length) items.push(...others);
+    }
     const jRegions = regions.filter(r => items.some(it => it.p.region === r));
     const u = '/journal/';
     const strip = t => String(t).replace(/<[^>]+>/g, '');
@@ -585,7 +594,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     <section class="list box">
       <nav class="areas jfilter" id="areas" aria-label="依國家篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="#${r.toLowerCase()}" data-area="${r.toLowerCase()}">${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
       <div class="journal" id="masonry"><div class="masonry">${items.map(it => `
-        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${(() => { const d = dims(it.src); return J_FEAT.has(it.src) ? ' data-land="1" data-feat="1"' : d && d.w / d.h >= 1.3 && !J_NOFEAT.has(it.src) ? ' data-land="1"' : ''; })()}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px' })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
+        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${(() => { const d = dims(it.src); return J_FEAT.has(it.src) ? ' data-land="1" data-feat="1"' : ''; })()}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px' })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
       </div></div>
     </section>`;
     const desc = `Nomo 的旅行攝影日誌：${items.length} 張照片，走過${jRegions.map(r => REGION_ZH[r]).join('、')}，每張都連到背後的旅行故事。`;
