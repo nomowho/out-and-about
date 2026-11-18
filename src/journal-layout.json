@@ -5,9 +5,9 @@
   "img/porta-santa/volunteers.jpg",
   "img/ear-of-dionysius/blue-water.jpg",
   "img/tivoli/cover.jpg",
-  "img/hoshino-oirase/01_card_A.jpg",
   "img/terme-di-caracalla/IMG_1116.jpg",
-  "img/byrne-portugal/cover.jpg"
+  "img/byrne-portugal/cover.jpg",
+  "img/matera/cover.jpg"
  ],
  "nofeature": [
   "img/sagrada-familia-2/03.jpg",
@@ -17,12 +17,17 @@
   "img/hoshino-oirase/03_card.jpg",
   "img/caravaggio/right-wall.jpg",
   "img/izu/content-shuzenji-1.jpg",
-  "img/caravaggio/cover.jpg"
+  "img/caravaggio/cover.jpg",
+  "img/hoshino-oirase/01_card_A.jpg"
  ],
  "swap": [
   [
    "img/caravaggio/cover.jpg",
    "img/byrne-portugal/cover.jpg"
+  ],
+  [
+   "img/hoshino-oirase/01_card_A.jpg",
+   "img/matera/cover.jpg"
   ]
  ]
 }
