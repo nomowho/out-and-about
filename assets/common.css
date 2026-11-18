@@ -392,3 +392,7 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
   .journal .jp.feat .jc{padding:0 20px;font-size:12px}
 }
 .journal figure.fill img{height:100%;object-fit:cover}
+/* Photo Journal 頁首：白底（Nomo 11-18） */
+.top.jtop{background:#fff}
+.top.jtop::after{display:none}
+.top.jtop .box{padding-bottom:4px}

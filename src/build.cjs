@@ -476,7 +476,6 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
           <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" decoding="async"></span>
         </a></li></ul>
       <p class="bio"><span lang="en">🪐 Drifting through the world, framing the moment, exploring beyond.</span>在世界亂走，拍下眼前，無盡探索。</p>
-      <a class="jlink" href="/journal/">點 logo 看全部照片 ›</a>
     </div>
     <a class="ig" href="https://www.instagram.com/nomowho/" rel="me noopener">在 Instagram 追蹤 @nomowho</a>
   </aside>
@@ -560,21 +559,23 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   /* ── Photo Journal /journal/：全站照片瀑布流，點照片進文章 ── */
   {
     const J_MAX = 6;   // 每篇最多取幾張，避免單篇洗版
+    // 精選規則（Nomo 11-18）：只放有主題、美、構圖好的照片；資訊型（告示、菜單、地圖、便當特寫）與插畫一律不放 → 名單在 src/journal-exclude.json
+    const J_SKIP = new Set(fs.existsSync(path.join(__dirname, 'journal-exclude.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'journal-exclude.json'), 'utf8')) : []);
+    if (process.env.JOURNAL_DUMP) { const all = []; postsNew.filter(p => p.photo !== false && POST_DETAIL[p.id]).forEach(p => { const d = POST_DETAIL[p.id]; if (d.cover) all.push([p.id, d.cover, d.coverCap || '']); d.body.forEach(bk => { if (bk.src) all.push([p.id, bk.src, bk.cap || '']); else if (bk.imgs) bk.imgs.flat().forEach(x => all.push([p.id, x, ''])); }); }); fs.writeFileSync(process.env.JOURNAL_DUMP, JSON.stringify(all.filter(([, src]) => fs.existsSync(path.join(ROOT, src))))); }
     const items = [];
     postsNew.filter(p => p.photo !== false && POST_DETAIL[p.id]).forEach(p => {
       const d = POST_DETAIL[p.id], list = [];
       if (d.cover) list.push([d.cover, d.coverCap || '']);
       d.body.forEach(bk => { if (bk.src) list.push([bk.src, bk.cap || '']); else if (bk.imgs) bk.imgs.flat().forEach(x => list.push([x, ''])); });
-      list.filter(([src]) => fs.existsSync(path.join(ROOT, src))).slice(0, J_MAX).forEach(([src, cap]) => items.push({ p, src, cap }));
+      list.filter(([src, cap]) => fs.existsSync(path.join(ROOT, src)) && !J_SKIP.has(src) && !/^插畫/.test(cap)).slice(0, J_MAX).forEach(([src, cap]) => items.push({ p, src, cap }));
     });
     const jRegions = regions.filter(r => items.some(it => it.p.region === r));
     const u = '/journal/';
     const strip = t => String(t).replace(/<[^>]+>/g, '');
     const main = `
-    <section class="top"><div class="box">
+    <section class="top jtop"><div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>PHOTO JOURNAL</span></nav>
       <div class="label">PHOTO JOURNAL　攝影日誌</div><h1>在世界亂走，拍下眼前</h1>
-      <p>${items.length} 張照片、${new Set(items.map(it => it.p.id)).size} 篇旅行，全部由 Nomo 拍攝。點照片進入那篇故事。</p>
     </div></section>
     <section class="list box">
       <nav class="areas jfilter" id="areas" aria-label="依國家篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="#${r.toLowerCase()}" data-area="${r.toLowerCase()}">${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
