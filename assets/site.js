@@ -18,15 +18,46 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer && !drawer.hidden) openMenu(false); });
 
   /* 刊頭變窄＋閱讀進度 */
-  var head = $('head'), bar = $('progress'), ticking = false;
+  var head = $('head'), bar = $('progress'), ticking = false, lastY = scrollY, navOff = false, navT = 0;
+  function setNav(off) { if (off === navOff) return; navOff = off; navT = Date.now(); head.classList.toggle('navoff', off); }
   function onScroll() {
     ticking = false;
     if (head) head.classList.toggle('slim', scrollY > 120);
+    /* 文章頁：往下讀時收起分類列，往上滑或回到頂端再出現（切換後 400ms 內不反向，避免頁面高度變化造成抖動） */
+    if (head && bar) {
+      var y = scrollY, d = y - lastY, now = Date.now();
+      var nearEnd = y + innerHeight >= document.documentElement.scrollHeight - 80;
+      if (now - navT > 400) {
+        if (y < 200) setNav(false);
+        else if (d > 8 && !navOff) setNav(true);
+        else if (d < -8 && navOff && !nearEnd) setNav(false);
+      }
+      if (Math.abs(d) > 8 || y < 200) lastY = y;
+    }
     if (bar) { var h = document.documentElement.scrollHeight - innerHeight; bar.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%'; }
   }
   addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
 
+
+  /* 文末 More Stories：手機左右滑＋短線指示 */
+  [].forEach.call(document.querySelectorAll('.more:not(.plain) .grid'), function (g) {
+    var cards = g.children; if (cards.length < 2) return;
+    var d = document.createElement('div'); d.className = 'dashes';
+    for (var i = 0; i < cards.length; i++) (function (i) {
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', '第 ' + (i + 1) + ' 篇');
+      b.onclick = function () { g.scrollTo({ left: cards[i].offsetLeft - cards[0].offsetLeft, behavior: 'smooth' }); };
+      d.appendChild(b);
+    })(i);
+    g.parentNode.insertBefore(d, g.nextSibling);
+    var mark = function () {
+      var k = 0, best = 1e9, x = g.scrollLeft;
+      for (var i = 0; i < cards.length; i++) { var dd = Math.abs(cards[i].offsetLeft - cards[0].offsetLeft - x); if (dd < best) { best = dd; k = i; } }
+      if (x + g.clientWidth >= g.scrollWidth - 4) k = cards.length - 1;
+      [].forEach.call(d.children, function (b, i) { b.classList.toggle('on', i === k); });
+    };
+    g.addEventListener('scroll', function () { requestAnimationFrame(mark); }, { passive: true }); mark();
+  });
   /* 分類列：把目前分類捲到看得見的位置 */
   var on = document.querySelector('.nav a.on');
   if (on && on.parentElement.scrollWidth > on.parentElement.clientWidth) on.parentElement.scrollLeft = on.offsetLeft - 16;

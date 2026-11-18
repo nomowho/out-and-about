@@ -309,3 +309,18 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .stories .bio span[lang]{display:block;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:14px;line-height:1.55;color:#222;margin-bottom:6px}
 /* 內文左右對齊（Nomo 2026-11-18）：中文逐字撐開、英文長字可斷字；:where 讓特例（落款、置中段落）仍可覆寫 */
 :where(.body p,.body li,.qa dd,article > .dek,.split .dek){text-align:justify;text-justify:inter-character;hyphens:auto;-webkit-hyphens:auto}
+/* 文章頁往下讀時收起分類列（site.js 加 .navoff），進度條留著 */
+.head .nav{max-height:64px;transition:max-height .3s ease,padding .3s ease,opacity .2s ease}
+.head.navoff .nav{max-height:0;padding-top:0;padding-bottom:0;opacity:0;overflow:hidden;pointer-events:none}
+/* 文末 More Stories：手機改左右滑，下方短線顯示目前位置 */
+.dashes{display:none}
+@media(max-width:700px){
+  .more:not(.plain) .grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px;scroll-padding:0 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .more:not(.plain) .grid::-webkit-scrollbar{display:none}
+  .more:not(.plain) .grid>.card{flex:0 0 86%;scroll-snap-align:start}
+  .more:not(.plain) .grid>.card:last-child{margin-right:6px}
+  .dashes{display:flex;justify-content:center;gap:10px;margin-top:26px}
+  .dashes button{width:32px;height:20px;border:0;padding:0;background:none;cursor:pointer;position:relative}
+  .dashes button::before{content:"";position:absolute;left:0;right:0;top:9px;height:3px;background:#d6d6d6;transition:background .3s}
+  .dashes button.on::before{background:#7d8a8a}
+}
