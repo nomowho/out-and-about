@@ -154,18 +154,18 @@
         res.cols.forEach(function (list) { var c = document.createElement('div'); c.className = 'mcol'; list.forEach(function (it) { c.appendChild(it); }); blk.appendChild(c); });
         frag.appendChild(blk); run = [];
       };
-      var n = Infinity, pend = null, pendN = 0;
+      var n = Infinity, pend = [], pendN = 0;
       var feature = function (it) { var im = it.querySelector('img'); flush(); it.classList.add('feat'); if (im) im.sizes = '(max-width:1100px) 100vw, 1100px'; frag.appendChild(it); n = 0; };
       jall.forEach(function (it) {
         var im = it.querySelector('img');
         if (it.hidden) { frag.appendChild(it); return; }
-        if (it.hasAttribute('data-feat') && n !== Infinity && (n < K || place(run, K).spread > 0.25)) { pend = it; pendN = n; return; }   // 指定滿版但欄底還不平：往後延幾張再放
-        if (!pend && (it.hasAttribute('data-feat') || it.hasAttribute('data-land') && (n === Infinity || (n >= EVERY && place(run, K).spread < 0.25 + 0.04 * (n - EVERY))))) { feature(it); return; }   // 欄底能排平才插滿版
+        if (it.hasAttribute('data-feat') && (pend.length || n !== Infinity && (n < K || place(run, K).spread > 0.25))) { if (!pend.length) pendN = n; pend.push(it); return; }   // 指定滿版但欄底還不平：往後延幾張再放
+        if (!pend.length && (it.hasAttribute('data-feat') || it.hasAttribute('data-land') && (n === Infinity || (n >= EVERY && place(run, K).spread < 0.25 + 0.04 * (n - EVERY))))) { feature(it); return; }   // 欄底能排平才插滿版
         it.classList.remove('feat'); if (im) im.sizes = '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px';
         run.push(it); n++;
-        if (pend && n >= K && (place(run, K).spread <= 0.25 || n - pendN >= K * 6)) { feature(pend); pend = null; }
+        if (pend.length && n >= K && (place(run, K).spread <= 0.3 || n - pendN >= K * 9)) { feature(pend.shift()); pendN = 0; }   // 排隊中的指定滿版一張一張放，絕不遺漏
       });
-      if (pend) feature(pend);
+      while (pend.length) { if (run.length || !frag.lastChild || !frag.lastChild.classList || !frag.lastChild.classList.contains('feat')) feature(pend.shift()); else feature(pend.shift()); }
       flush();
       jw.innerHTML = ''; jw.appendChild(frag); evenUp();
     };

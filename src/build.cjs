@@ -569,7 +569,9 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       const d = POST_DETAIL[p.id], list = [];
       if (d.cover) list.push([d.cover, d.coverCap || '']);
       d.body.forEach(bk => { if (bk.src) list.push([bk.src, bk.cap || '']); else if (bk.imgs) bk.imgs.flat().forEach(x => list.push([x, ''])); });
-      list.filter(([src, cap]) => fs.existsSync(path.join(ROOT, src)) && !J_SKIP.has(src) && !/^插畫/.test(cap)).slice(0, J_MAX).forEach(([src, cap]) => items.push({ p, src, cap }));
+      const ok = list.filter(([src, cap]) => fs.existsSync(path.join(ROOT, src)) && !J_SKIP.has(src) && !/^插畫/.test(cap));
+      const must = ok.filter(([src]) => J_FEAT.has(src)), rest = ok.filter(([src]) => !J_FEAT.has(src)).slice(0, Math.max(0, J_MAX - must.length));   // 指定滿版的一定收，其餘補到 J_MAX
+      ok.filter(x => must.includes(x) || rest.includes(x)).forEach(([src, cap]) => items.push({ p, src, cap }));
     });
     const jRegions = regions.filter(r => items.some(it => it.p.region === r));
     const u = '/journal/';
