@@ -204,6 +204,30 @@
     var jareas = $('areas'); if (jareas) jareas.addEventListener('areachange', jlayout);
     var rz; addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(function () { if (cols() !== lastK) jlayout(); else evenUp(); }, 150); });
   }
+  /* 首頁 Latest 橫向卡：持續往左滑（複製一份接在後面形成無縫循環）；滑鼠移上、手指觸碰、鍵盤聚焦時暫停，可手動左右滑 */
+  var hl = $('news');
+  if (hl && hl.classList.contains('headlines')) {
+    var ht = hl.querySelector('.hl-track');
+    [].slice.call(ht.children).forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; ht.appendChild(d); });
+    var hpos = 0, hstop = 0, hlast = 0, SPEED = 32;   // 每秒 32px
+    var hold = function (ms) { hstop = Date.now() + ms; };
+    ['mouseenter', 'touchstart', 'focusin', 'wheel'].forEach(function (ev) { hl.addEventListener(ev, function () { hold(ev === 'mouseenter' ? 1e9 : 2500); }, { passive: true }); });
+    hl.addEventListener('mouseleave', function () { hold(600); });
+    hl.addEventListener('touchend', function () { hold(2500); }, { passive: true });
+    hl.addEventListener('scroll', function () { if (Date.now() < hstop) hpos = hl.scrollLeft; }, { passive: true });
+    var tick = function (now) {
+      var dt = hlast ? Math.min(64, now - hlast) : 16; hlast = now;
+      var half = ht.scrollWidth / 2;
+      if (Date.now() >= hstop && half > hl.clientWidth) {
+        hpos += SPEED * dt / 1000;
+        if (hpos >= half) hpos -= half;
+        hl.scrollLeft = hpos;
+      } else if (hl.scrollLeft >= half) { hpos = hl.scrollLeft - half; hl.scrollLeft = hpos; }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
   /* 分類列：把目前分類捲到看得見的位置 */
   var on = document.querySelector('.nav a.on');
   if (on && on.parentElement.scrollWidth > on.parentElement.clientWidth) on.parentElement.scrollLeft = on.offsetLeft - 16;

@@ -460,3 +460,21 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 /* logo 兩行固定高度：Google 字型載入前後（系統字型 ↔ Bodoni／Noto）不再改變刊頭高度，避免整頁被往下推（PageSpeed 桌機 CLS 0.084） */
 .logo b{height:1em;line-height:1}
 .logo small{height:1em;line-height:1}
+/* 首頁 Latest：編號橫向卡，自動往左滑（參考 Casa BRUTUS Headlines，11-18） */
+.headlines{overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-top:6px;mask-image:linear-gradient(90deg,transparent 0,#000 24px,#000 calc(100% - 24px),transparent 100%)}
+.headlines::-webkit-scrollbar{display:none}
+.hl-track{display:flex;width:max-content}
+.hl{flex:0 0 300px;display:grid;grid-template-columns:30px 1fr;gap:0 8px;padding:6px 26px 6px 0;color:var(--ink)}
+.hl-n{font-family:'Bodoni Moda',serif;font-weight:700;font-style:italic;font-size:24px;line-height:1.1}
+.hl h3{font-size:15.5px;font-weight:700;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:3.2em}
+.hl p{font-size:13px;line-height:1.75;color:#555;margin-top:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:5.25em}
+.hl-f{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.hl-src{font-size:11px;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.hl-more{flex:none;display:inline-flex;align-items:center;gap:6px;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:.04em;color:#0B7A35}
+.hl-more svg{width:20px;height:10px;fill:none;stroke:currentColor;stroke-width:1.3;transition:transform .3s}
+.hl:hover h3{text-decoration:underline;text-underline-offset:4px}
+.hl:hover .hl-more svg{transform:translateX(4px)}
+@media(max-width:700px){.hl{flex-basis:76vw;padding-right:20px}}
+.pick>.band{min-width:0}
+.headlines{max-width:100%;min-width:0}
+.hl-track{padding-left:24px}

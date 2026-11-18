@@ -183,6 +183,9 @@ const postCard = (p, { extra = '', place = true, hidden = false, cls = '', cover
     <div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
     <h3>${p.title}</h3>${place ? `<div class="place">${p.zh}，${p.area}</div>` : ''}
   </a>`;
+/* 首頁 Latest：編號橫向卡（參考 Casa BRUTUS Headlines，Nomo 11-18） */
+const hlCard = (n, k) => `
+  <a class="hl" href="${url.news(n.id)}"><span class="hl-n">${k}.</span><div class="hl-b"><h3>${n.title}</h3><p>${n.dek}</p><div class="hl-f"><span class="hl-src">${n.place}｜${n.src}</span><span class="hl-more">READ MORE<svg viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg></span></div></div></a>`;
 const newsCard = (n, isNew) => `
   <a class="card tcard" href="${url.news(n.id)}">
     <div class="meta"><span class="cat">NEWS · ${n.region}</span><time datetime="${iso(n.date)}">${n.date}</time>${isNew ? '<span class="new">NEW</span>' : ''}</div>
@@ -471,7 +474,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 <section class="pick" id="latest-news">
   <div class="band">
     <div class="sh"><h2>Latest</h2><span>世界旅遊新訊</span><span class="note">編譯自國際旅遊媒體</span></div>
-    <div class="grid" id="news">${newsNew.slice(0, 6).map((n, i) => newsCard(n, i === 0)).join('')}</div>
+    <div class="headlines" id="news" role="region" aria-label="世界旅遊新訊，會自動左右輪播"><div class="hl-track">${newsNew.map((n, i) => hlCard(n, i + 1)).join('')}</div></div>
   </div>
   <aside class="side">
     <div class="dbl stories journal-entry" id="journal">
