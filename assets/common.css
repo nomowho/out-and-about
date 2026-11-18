@@ -493,3 +493,10 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 /* READ MORE 改用 Casa BRUTUS 同款綠 #00FF00、Helvetica Neue 12px 500（Nomo 11-18：比 #C8F500 清楚） */
 .hl-more{color:#00FF00;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:500;letter-spacing:0}
 .hl-more svg{stroke:#00FF00}
+/* Photo Journal 入口極簡化（Nomo 11-18）：雙線→單一細線、頭像細灰圈、IG 改成小字連結 */
+.journal-entry.dbl{border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;padding:22px 0 22px}
+.journal-entry .ring .av{background:none;padding:0;border:1px solid #d9d9d9}
+.journal-entry .ring .av img{border:4px solid #fff}
+.journal-entry .bio{margin-bottom:0}
+.side .ig{display:block;border:0;padding:6px 0;margin-top:14px;text-align:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;letter-spacing:.04em;color:#555;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#ccc}
+.side .ig:hover{color:var(--ink);text-decoration-color:currentColor}
