@@ -403,3 +403,8 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .journal .jraw .jp{display:block;break-inside:avoid;margin:0 0 22px}
 @media(max-width:1100px){.journal .jraw{column-count:3}}
 @media(max-width:700px){.journal .jraw{column-count:2;column-gap:10px}}
+/* 首頁 SERIES 系列專題：白底（Nomo 11-18），卡片改細框白卡 */
+.series{background:#fff}
+.series::before,.series::after{display:none}
+.series .s{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid #e4e4e4}
+.series .s:hover{background:#fafafa;border-color:#cfcfcf}
