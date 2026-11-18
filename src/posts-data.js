@@ -1,7 +1,7 @@
 // IG 最新 20 篇貼文（2026-11-16 從 IG 抓取，likes＝當日按讚數；原始文案存在 100_Todo/drafts/data/ig-latest20-2026-11-16.json）
 // 首頁首屏：按讚數前 7 名；PICK UP：全部 20 篇（新到舊）
 const POSTS = [
-  { id:'dolomiti-winter',    ig:'Ddjk1TSEshH', likes:929,  cat:'NATURE',       date:'2026.09.21', region:'Italy', area:'Dolomiti',  zh:'多洛米蒂',           title:'為什麼都沒人介紹過冬天的多洛米蒂？' },
+  { id:'dolomiti-winter',    ig:'Ddjk1TSEshH', likes:929,  cat:'NATURE',       date:'2026.09.21', region:'Italy', area:'Dolomiti',  zh:'多洛米蒂',           title:'冬天的多洛米蒂，到底在美什麼？' },
   { id:'aomori-top10',       ig:'DdMbnYWEg5E', likes:2681, cat:'GUIDE',        date:'2026.09.12', region:'Japan', area:'青森',       zh:'青森冬日必訪 TOP10',  title:'青森冬日必訪 TOP10：除了蘋果跟雪，這裡還有什麼？' },
   { id:'geibikei',           ig:'Dc8iHDiEvy_', likes:265,  cat:'NATURE',       date:'2026.09.06', region:'Japan', area:'岩手',       zh:'猊鼻溪',             title:'窩著暖桌吃火鍋，穿進大雪裡的百米峭壁' },
   { id:'aomori-museum',      ig:'DctJPoikhen', likes:1114, cat:'ART',          date:'2026.08.31', region:'Japan', area:'青森',       zh:'青森縣立美術館',      title:'青森犬戴上厚厚白帽子，冬天才看得到' },

@@ -3,7 +3,7 @@
 // 網站版修正：冬奧改為「2026 米蘭－科爾蒂納冬奧高山滑雪在 Cortina」、Seceda 線上預約註明為夏季制度、St. Valentin 依官方寫 1244 年首見文獻
 // 2026-11-17 擴寫並補出處：本文已有完整查證（IG 草稿「已查證事實」表），本次只把出處列到文末，未新增段落
 POST_DETAIL['dolomiti-winter'] = {
-  seoTitle:'冬天的多洛米蒂　到底在美什麼？',
+  seoTitle:'冬天的多洛米蒂，到底在美什麼？',
   dek:'多洛米蒂（Dolomiti）在義大利東北，冬天有全世界最大的滑雪區 Dolomiti Superski：一張通行證通用 12 個雪區、1,246 公里雪道。本篇整理 Ortisei、Seceda、歐洲最大高山牧場 Alpe di Siusi、Val di Funes 的 Santa Maddalena 教堂、St. Valentin 與冬季自駕注意事項。',
   updated:'2026-11-17',
   place:{
