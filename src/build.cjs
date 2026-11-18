@@ -65,10 +65,11 @@ function dims(rel) {
   return dimCache[rel] = out;
 }
 const missing = [];
-function img(src, alt, { lazy = true, sizes = '100vw', cls = '' } = {}) {
-  const rel = src.replace(/^\//, ''), d = dims(rel), mrel = rel.replace(/\.[^.]+$/, '.m.jpg'), m = dims(mrel);
+function img(src, alt, { lazy = true, sizes = '100vw', cls = '', small = false } = {}) {
+  const rel = src.replace(/^\//, ''), d = dims(rel), mrel = rel.replace(/\.[^.]+$/, '.m.jpg'), m = dims(mrel), srel = rel.replace(/\.[^.]+$/, '.s.jpg'), sm = small ? dims(srel) : null;
   if (!d) missing.push(rel);
-  const srcset = d && m && m.w < d.w ? ` srcset="/${mrel} ${m.w}w, /${rel} ${d.w}w" sizes="${sizes}"` : '';
+  const parts = [sm && d && sm.w < d.w && (!m || sm.w < m.w) ? `/${srel} ${sm.w}w` : '', d && m && m.w < d.w ? `/${mrel} ${m.w}w` : '', d ? `/${rel} ${d.w}w` : ''].filter(Boolean);   // small＝另加 600px 縮圖（Photo Journal 瀑布流用）
+  const srcset = parts.length > 1 ? ` srcset="${parts.join(', ')}" sizes="${sizes}"` : '';
   return `<img src="/${srcset ? mrel : rel}"${srcset} alt="${esc(alt || '')}"${d ? ` width="${d.w}" height="${d.h}"` : ''}${lazy ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async"${cls ? ` class="${cls}"` : ''}>`;
 }
 const CARD_SIZES = '(max-width:560px) 100vw, (max-width:1000px) 50vw, 380px';
@@ -593,8 +594,8 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     </div></section>
     <section class="list box">
       <nav class="areas jfilter" id="areas" aria-label="依國家篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="#${r.toLowerCase()}" data-area="${r.toLowerCase()}">${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
-      <div class="journal" id="masonry"><div class="masonry">${items.map(it => `
-        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${(() => { const d = dims(it.src); return J_FEAT.has(it.src) ? ' data-land="1" data-feat="1"' : ''; })()}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px' })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
+      <div class="journal" id="masonry"><div class="jraw">${items.map(it => `
+        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${(() => { const d = dims(it.src); return J_FEAT.has(it.src) ? ' data-land="1" data-feat="1"' : ''; })()}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: J_FEAT.has(it.src) ? '(max-width:1060px) 100vw, 1000px' : '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px', small: !J_FEAT.has(it.src), lazy: it !== items[0] })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
       </div></div>
     </section>`;
     const desc = `Nomo 的旅行攝影日誌：${items.length} 張照片，走過${jRegions.map(r => REGION_ZH[r]).join('、')}，每張都連到背後的旅行故事。`;

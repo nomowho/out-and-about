@@ -398,3 +398,8 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .top.jtop .box{padding-bottom:4px}
 /* 閱讀進度條：螢光綠（品牌色 #C8F500），白底上加到 3px 才看得清楚 */
 .head .progress{background:#C8F500;height:3px;bottom:-2px}
+/* Journal 初始版面（JS 排版前／沒有 JS 時）：直向欄位，避免全部照片擠在第一列被判定為可見而一次下載 */
+.journal .jraw{column-count:4;column-gap:16px}
+.journal .jraw .jp{display:block;break-inside:avoid;margin:0 0 22px}
+@media(max-width:1100px){.journal .jraw{column-count:3}}
+@media(max-width:700px){.journal .jraw{column-count:2;column-gap:10px}}
