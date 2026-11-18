@@ -304,3 +304,6 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .body .tall img{aspect-ratio:3/4;height:auto}
 .body .tall figcaption{text-align:left}
 @media(max-width:700px){.body .tall{width:auto;margin:30px -20px}.body .tall img{aspect-ratio:4/5}.body .tall figcaption{padding:0 20px}}
+/* Stories 頭像下方的自介 */
+.stories .bio{text-align:center;margin:4px auto 6px;max-width:300px;font-size:14px;line-height:1.75;color:#444}
+.stories .bio span[lang]{display:block;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:14px;line-height:1.55;color:#222;margin-bottom:6px}
