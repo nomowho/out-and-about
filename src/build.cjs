@@ -174,8 +174,8 @@ ${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beaco
 }
 
 /* ── 卡片 ── */
-const postCard = (p, { extra = '', place = true, hidden = false } = {}) => `
-  <a class="card"${hidden ? ' hidden' : ''} href="${url.post(p.id)}">
+const postCard = (p, { extra = '', place = true, hidden = false, cls = '' } = {}) => `
+  <a class="card${cls ? ' ' + cls : ''}"${hidden ? ' hidden' : ''} href="${url.post(p.id)}">
     <figure>${extra}${thumb(p)}</figure>
     <div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
     <h3>${p.title}</h3>${place ? `<div class="place">${p.zh}，${p.area}</div>` : ''}
@@ -484,7 +484,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 
 <section class="latest box" aria-label="編輯精選">
   <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
-  <div class="grid" id="picks">${postsNew.map((p, i) => postCard(p, { hidden: i >= FIRST })).join('')}</div>
+  <div class="grid" id="picks">${postsNew.map((p, i) => postCard(p, { hidden: i >= FIRST, cls: i === 0 ? 'pk-big' : i < 5 ? 'pk-side' : i < FIRST ? 'dt-more' : '' })).join('')}</div>
   <div class="morewrap"><button class="morebtn" id="picksMore" type="button">MORE<small>看更多旅行</small></button></div>
 </section>
 

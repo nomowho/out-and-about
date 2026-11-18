@@ -202,8 +202,12 @@
   var more = $('picksMore');
   if (more) {
     var rest = function () { return document.querySelectorAll('#picks .card[hidden]'); };
-    if (!rest().length) more.parentElement.hidden = true;
+    var dt = function () { return document.querySelectorAll('#picks .card.dt-more'); };   // 桌機預設只顯示 5 篇，第 6–9 篇等 MORE 才出現
+    if (!rest().length && !dt().length) more.parentElement.hidden = true;
     more.addEventListener('click', function () {
+      var held = [].slice.call(dt()), shownBefore = held.length && getComputedStyle(held[0]).display !== 'none';
+      held.forEach(function (c) { c.classList.remove('dt-more'); });
+      if (held.length && !shownBefore) { if (!rest().length) more.parentElement.hidden = true; held[0].focus({ preventScroll: true }); return; }
       var list = rest(), first = list[0];
       for (var i = 0; i < 9 && i < list.length; i++) list[i].hidden = false;
       if (!rest().length) more.parentElement.hidden = true;
