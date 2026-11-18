@@ -484,3 +484,6 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .hl-track.run.hold{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.hl-track.run{animation:hlScroll var(--hl-dur) linear infinite!important}}
 .headlines{overflow:hidden}
+/* READ MORE 改螢光綠（Nomo 11-18）：品牌色 #C8F500 當底、黑字，像螢光筆標記；純綠字在淺底上幾乎看不見 */
+.hl-more{color:var(--ink);background:#C8F500;padding:3px 8px 3px 9px;border-radius:2px;letter-spacing:.06em}
+.hl-more svg{stroke:var(--ink)}
