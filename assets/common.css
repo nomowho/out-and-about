@@ -659,3 +659,9 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .tser-arr.l{left:max(24px,calc((100% - var(--w,1200px)) / 2 + 24px))}
 .tser-arr.r{right:max(24px,calc((100% - var(--w,1200px)) / 2 + 24px))}
 @media(max-width:700px){.tser-arr.l{left:20px}.tser-arr.r{right:20px}}
+/* /stories/ 標題縮小 30%（Nomo 11-19 第二次調整），並取消 balance：第一行先排滿，不留右側空白 */
+#all>.card h3{font-size:21px;line-height:1.5;text-wrap:wrap}
+#all>.card.land h3{font-size:24px}
+@media(min-width:701px) and (max-width:1000px){#all>.card h3,#all>.card.land h3{font-size:17px}}
+@media(max-width:700px){#all>.card h3{font-size:15px;line-height:1.6}#all>.card.big h3{font-size:21px;line-height:1.5}}
+.list .card h3{text-wrap:wrap}
