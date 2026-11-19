@@ -614,3 +614,4 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 /* SERIES 卡片左上角螢光綠編號標籤（Nomo 11-19）：品牌色 #C8F500 實心底、黑字，只當填色不做外框 */
 .series .s .s-no{position:absolute;top:12px;left:12px;z-index:2;background:#C8F500;color:#111;font-family:'Montserrat',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.16em;line-height:1;padding:6px 8px 5px 9px}
 @media(max-width:700px){.series .s .s-no{top:10px;left:10px;font-size:10px}}
+.top .grid2 p{line-height:1.95;text-align:justify;max-width:32em}   /* 系列／分類頁引言（約 100 字）好讀一點 */

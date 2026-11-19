@@ -396,7 +396,7 @@ for (const [k, c] of Object.entries(CATS)) {
 }
 for (const s of SERIES) {
   const posts = s.ids.map(i => byId[i]).filter(Boolean);
-  listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.d, posts, lead: byId[s.img] || leadOf(posts), nav: '', crumb: 'SERIES',
+  listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, posts, lead: byId[s.img] || leadOf(posts), nav: '', crumb: 'SERIES',
     othersTitle: 'More Series', othersZh: '其他系列專題',
     others: SERIES.filter(x => x.id !== s.id).map(x => ({ u: url.series(x.id), t: x.t, n: x.ids.length, img: fs.existsSync(path.join(ROOT, 'img', x.img + '.jpg')) ? `img/${x.img}.jpg` : null })) });
 }
