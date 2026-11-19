@@ -655,3 +655,7 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 #all>.card.land h3{font-size:34px}
 @media(min-width:701px) and (max-width:1000px){#all>.card h3,#all>.card.land h3{font-size:24px}}
 @media(max-width:700px){#all>.card h3{font-size:22px;line-height:1.45;margin-top:8px}#all>.card.big h3{font-size:30px;line-height:1.4}}
+/* 專題大圖箭頭內縮到內容區左右邊界（跟 PICK UP 同一條線，Nomo 11-19） */
+.tser-arr.l{left:max(24px,calc((100% - var(--w,1200px)) / 2 + 24px))}
+.tser-arr.r{right:max(24px,calc((100% - var(--w,1200px)) / 2 + 24px))}
+@media(max-width:700px){.tser-arr.l{left:20px}.tser-arr.r{right:20px}}
