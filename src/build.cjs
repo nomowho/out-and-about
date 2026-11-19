@@ -592,9 +592,11 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const coverOf2 = p => p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover;
     const isLand2 = p => { const c = coverOf2(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
     const cats = Object.keys(CATS).filter(k => postsNew.some(p => p.cat === k));
-    const cards = postsNew.map(p => (isLand2(p)
+    const cards = postsNew.map((p, i) => (isLand2(p)
       ? postCard(p, { cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' })
-      : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-area="${p.cat.toLowerCase()}" class="card`)).join('');
+      : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-area="${p.cat.toLowerCase()}" class="card${i % 6 === 0 ? ' big' : ''}`)
+      .replace('<div class="meta"><span class="cat">', `<div class="meta"><b class="ini" aria-hidden="true">${p.cat[0]}</b><span class="cat">`)
+      .replace(/(max-width:(?:560|700)px) calc(100vw - 40px)/, i % 6 === 0 ? '(max-width:700px) 100vw' : '(max-width:700px) 45vw')).join('');
     const main = `
     <section class="top jtop"><div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>STORIES</span></nav>

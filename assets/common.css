@@ -620,3 +620,20 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 @media(max-width:700px){.series .s .s-no{right:10px;bottom:10px;font-size:9.5px}}
 /* 防孤字 span 不可被卡片的 .s span 小字樣式波及 */
 .nw{font:inherit!important;display:inline!important;margin:0!important;letter-spacing:inherit!important;color:inherit!important;text-transform:inherit!important}
+/* /stories/ 手機版（Nomo 11-19，參考 Casa BRUTUS）：每 6 篇一組，第一篇直式滿版大圖，接 5 篇左圖右字小卡 */
+#all .ini{display:none}
+@media(max-width:700px){
+  #all{display:block}
+  #all>.card{display:grid;grid-template-columns:44% auto 1fr;grid-template-rows:auto 1fr;grid-template-areas:"f i c" "f h h";column-gap:0;margin:0 0 30px;align-items:start}
+  #all>.card figure{grid-area:f;aspect-ratio:4/5!important;margin:0 16px 0 0}
+  #all>.card .meta{display:contents}
+  #all>.card time,#all>.card .place{display:none}
+  #all .ini{display:block;grid-area:i;font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-weight:700;font-size:44px;line-height:1;color:#fff;-webkit-text-stroke:1px #111;padding:0 10px 0 2px;margin:0}
+  #all>.card .cat{grid-area:c;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;font-size:14px;letter-spacing:.02em;color:#111;align-self:start;padding-top:4px;margin:0}
+  #all>.card h3{grid-area:h;font-size:16px;line-height:1.6;font-weight:700;margin:10px 0 0}
+  #all>.card.big{grid-template-columns:auto 1fr;grid-template-rows:auto auto 1fr;grid-template-areas:"f f" "i c" "i h";margin-bottom:40px}
+  #all>.card.big figure{width:100vw;margin:0 0 22px calc(50% - 50vw);aspect-ratio:4/5!important}
+  #all>.card.big .ini{font-size:84px;padding:0 18px 0 6px}
+  #all>.card.big .cat{font-size:16px;padding-top:6px}
+  #all>.card.big h3{font-size:19px;line-height:1.55;margin-top:8px}
+}
