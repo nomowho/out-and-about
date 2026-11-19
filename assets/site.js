@@ -232,6 +232,21 @@
     addEventListener('resize', upd); upd();
   });
 
+  /* 首頁 Countries：方圖列持續往左循環（同 Latest 做法：CSS 動畫＋複製一份；滑鼠移上不停，手指按住暫停） */
+  var cw = document.querySelector('.cty-track');
+  if (cw) {
+    [].slice.call(cw.children).forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; cw.appendChild(d); });
+    var ctyHalf = 0, CTY_SPEED = 42.24;
+    var ctySize = function () { var half = Math.round(cw.scrollWidth / 2); if (half === ctyHalf) return; ctyHalf = half; cw.style.setProperty('--hl-shift', -half + 'px'); cw.style.setProperty('--hl-dur', (half / CTY_SPEED) + 's'); cw.classList.add('run'); };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(ctySize); else ctySize();
+    addEventListener('resize', function () { clearTimeout(cw._rz); cw._rz = setTimeout(ctySize, 200); });
+    var cwrap = cw.parentElement;
+    cwrap.addEventListener('touchstart', function () { cw.classList.add('hold'); }, { passive: true });
+    var cgo = function () { setTimeout(function () { cw.classList.remove('hold'); }, 1500); };
+    cwrap.addEventListener('touchend', cgo, { passive: true }); cwrap.addEventListener('touchcancel', cgo, { passive: true });
+    cwrap.addEventListener('focusin', function () { cw.classList.add('hold'); }); cwrap.addEventListener('focusout', function () { cw.classList.remove('hold'); });
+  }
+
   /* 分類列：把目前分類捲到看得見的位置 */
   var on = document.querySelector('.nav a.on');
   if (on && on.parentElement.scrollWidth > on.parentElement.clientWidth) on.parentElement.scrollLeft = on.offsetLeft - 16;

@@ -592,3 +592,17 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 /* 首頁輪播圖片放大 20%（Nomo 11-19）：桌機高 600→720px（66vh→79vh），平板 78vw→90vw；手機原本 84vw，再放大會超出螢幕，維持 */
 @media(min-width:1001px){.hero{--sh:min(79.2vh,720px);--sw:calc(var(--sh) * .8)}}
 @media(min-width:701px) and (max-width:1000px){.hero{--sw:min(90vw,calc(79.2vh * .8));--sh:calc(var(--sw) * 1.25)}}
+/* 首頁 Countries：正方形大圖＋國名，持續往左循環（版型參考 Casa BRUTUS Select 10） */
+.cty{margin-top:96px}
+.cty-wrap{overflow:hidden;margin-top:26px}
+.cty-track{display:flex;width:max-content;gap:26px;padding-left:24px}
+.cty-track.run{animation:hlScroll var(--hl-dur) linear infinite;will-change:transform}
+.cty-track.run.hold{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.cty-track.run{animation:hlScroll var(--hl-dur) linear infinite!important}}
+.ct{flex:0 0 260px;color:inherit;display:block}
+.ct figure{aspect-ratio:1/1;overflow:hidden;background:#eee;margin:0}
+.ct figure img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.ct:hover figure img{transform:scale(1.04)}
+.ct b{display:block;font-size:15px;font-weight:700;margin-top:12px}
+.ct span{display:block;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;color:#555;margin-top:4px}
+@media(max-width:700px){.cty{margin-top:64px}.ct{flex-basis:62vw}.cty-track{gap:14px;padding-left:20px}}
