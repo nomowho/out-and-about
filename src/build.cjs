@@ -459,6 +459,8 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   const groups = {};
   POSTS.forEach(p => { (groups[p.region] ??= {}); groups[p.region][p.area] = (groups[p.region][p.area] || 0) + 1; });
   const tohoku = ['oirase', 'hoshino-oirase', 'kaneja', 'geibikei'].map(i => byId[i]).filter(Boolean);
+  /* TOHOKU 區改橫式大圖（Nomo 11-19）：每篇挑橫式又美的一張；直式原圖用 object-position 裁出最好看的橫式段落 */
+  const TOHOKU_PICS = { oirase: ['img/oirase/content-01_card.jpg', '50% 50%'], 'hoshino-oirase': ['img/hoshino-oirase/01_card_A.jpg', '50% 50%'], kaneja: ['img/kaneja/cover-03.jpg', '50% 64%'], geibikei: ['img/geibikei.jpg', '50% 52%'] };
   const FIRST = 5;   // PICK UP 預設 5 篇（Nomo 11-18），其餘按 MORE
   const coverOf = p => p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover;
   const isLand = p => { const c = coverOf(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
@@ -503,7 +505,10 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <div class="dash"></div>
   <h2>TOHOKU</h2>
   <p class="sub">東北，冬天去才對</p>
-  <div class="row">${tohoku.map(p => postCard(p, { extra: `<span class="vlab">${p.cat[0] + p.cat.slice(1).toLowerCase()}</span>` })).join('')}</div>
+  <div class="row tohoku-land">${tohoku.map(p => { const pic = TOHOKU_PICS[p.id] || [`img/${p.id}.jpg`, '50% 50%']; return `
+    <a class="card" href="${url.post(p.id)}"><figure><span class="vlab">${p.cat[0] + p.cat.slice(1).toLowerCase()}</span>${img(pic[0], p.zh, { small: true, sizes: '(max-width:700px) calc(100vw - 40px), 680px' }).replace('<img ', `<img style="object-position:${pic[1]}" `)}</figure>
+      <div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
+      <h3>${p.title}</h3><div class="place">${p.zh}，${p.area}</div></a>`; }).join('')}</div>
   <a class="viewmore" href="${url.series('tohoku-winter')}">View More　›</a>
 </section>
 

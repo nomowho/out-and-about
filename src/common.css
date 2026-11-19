@@ -558,3 +558,10 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .morewrap{text-align:center;margin-top:44px}
 .morewrap .viewmore{margin-top:0}
 .sh .viewmore{margin-top:0;margin-left:auto;font-size:12px;padding:0 2px 4px}
+/* TOHOKU：橫式大圖 2×2（手機單欄），3:2 滿版圖 */
+.row.tohoku-land{grid-template-columns:repeat(2,1fr);gap:40px 24px;max-width:1240px}
+.tohoku-land .card figure{aspect-ratio:3/2;position:relative;overflow:hidden;background:#eee}
+.tohoku-land .card figure img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.tohoku-land .card:hover figure img{transform:scale(1.03)}
+.tohoku-land .card h3{font-size:17px;line-height:1.6;margin-top:6px}
+@media(max-width:700px){.row.tohoku-land{grid-template-columns:1fr;gap:30px;padding:0 20px}}
