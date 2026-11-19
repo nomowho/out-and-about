@@ -460,7 +460,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   POSTS.forEach(p => { (groups[p.region] ??= {}); groups[p.region][p.area] = (groups[p.region][p.area] || 0) + 1; });
   const tohoku = ['oirase', 'hoshino-oirase', 'kaneja', 'geibikei'].map(i => byId[i]).filter(Boolean);
   /* TOHOKU 區改橫式大圖（Nomo 11-19）：每篇挑橫式又美的一張；直式原圖用 object-position 裁出最好看的橫式段落 */
-  const TOHOKU_ONE = 'hoshino-oirase';   // TOHOKU 區只秀一篇、滿版大圖（Nomo 11-19）
+  const TOHOKU_ONE = 'oirase';   // TOHOKU 區只秀一篇、滿版大圖（Nomo 11-19）
   const TOHOKU_PICS = { oirase: ['img/oirase/content-01_card.jpg', '50% 50%'], 'hoshino-oirase': ['img/hoshino-oirase/01_card_A.jpg', '50% 50%'], kaneja: ['img/kaneja/cover-03.jpg', '50% 64%'], geibikei: ['img/geibikei.jpg', '50% 52%'] };
   const FIRST = 5;   // PICK UP 預設 5 篇（Nomo 11-18），其餘按 MORE
   const coverOf = p => p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover;
