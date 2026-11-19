@@ -461,22 +461,19 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   const FIRST = 5;   // PICK UP 預設 5 篇（Nomo 11-18），其餘按 MORE
   const coverOf = p => p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover;
   const isLand = p => { const c = coverOf(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
-  /* Cover Story：最新一篇「主圖是橫式」的文章（site.config.json 的 coverStory 可指定） */
-  const COVER = (CFG.coverStory && postsNew.find(p => p.id === CFG.coverStory)) || postsNew.find(isLand) || postsNew[0];
-  const CD = POST_DETAIL[COVER.id] || {};
+
   const main = `
 <h1 class="vh">Out and About｜我出去一下就回來：Nomo 的旅行雜誌</h1>
-<section class="cover-story" aria-label="Cover Story">
-  <a href="${url.post(COVER.id)}">
-    <figure>${img(coverOf(COVER) || `img/${COVER.id}.jpg`, COVER.zh, { lazy: false, small: true, sizes: '(max-width:1440px) calc(100vw - 48px), 1392px' })}</figure>
-    <div class="cs-cap">
-      <div class="cs-k"><span>COVER STORY</span><span class="cat">${COVER.cat}</span><time datetime="${iso(COVER.date)}">${COVER.date}</time></div>
-      <h2>${COVER.title}</h2>
-      ${CD.dek ? `<p>${CD.dek.replace(/<[^>]+>/g, '')}</p>` : ''}
-      <span class="cs-more">READ STORY<svg viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg></span>
-    </div>
-  </a>
+<section class="hero" aria-label="精選文章" aria-roledescription="carousel">
+  <div class="track" id="track">${TOP7.map((p, i) => `
+    <a class="slide" href="${url.post(p.id)}" data-i="${i}">
+      <figure>${i === 0 ? img(`img/${p.id}.jpg`, p.zh, { lazy: false, small: true, sizes: '(max-width:700px) 84vw, 480px' }) : img(`img/${p.id}.jpg`, p.zh, { lazy: false, small: true, sizes: '(max-width:700px) 84vw, 480px' }).replace(' fetchpriority="high"', '').replace(/ (src|srcset)="/g, ' data-$1="')}</figure>
+      <div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div>
+    </a>`).join('')}</div>
+  <button class="arr l" id="prev" type="button" aria-label="上一則"><svg viewBox="0 0 34 14" aria-hidden="true"><path d="M34 7H1M7 1 1 7l6 6"/></svg></button>
+  <button class="arr r" id="next" type="button" aria-label="下一則"><svg viewBox="0 0 34 14" aria-hidden="true"><path d="M0 7h33M27 1l6 6-6 6"/></svg></button>
 </section>
+<div class="pager"><div class="in"><span class="count" id="count">1 / ${TOP7.length}</span></div></div>
 
 <section class="pick" id="latest-news">
   <div class="band">
@@ -497,7 +494,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 
 <section class="latest box" aria-label="編輯精選">
   <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
-  <div class="grid" id="picks">${(() => { /* 桌機中間大圖：取最新一篇「文章封面（主圖）是直式」的文章放第一（Nomo 11-18） */ const L = postsNew.filter(p => p.id !== COVER.id), k = CFG.pickCenter && L.some(p => p.id === CFG.pickCenter) ? L.findIndex(p => p.id === CFG.pickCenter) /* site.config.json 的 pickCenter 可指定中間那篇 */ : L.findIndex(p => { const c = p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover, d = c && dims(c); return d && d.h > d.w * 1.1; }); if (k > 0) L.unshift(...L.splice(k, 1)); return L; })().map((p, i) => (i < FIRST ? postCard(p, { hidden: false, cls: i === 0 ? 'pk-big' : 'pk-side', cover: i === 0 }) : isLand(p) ? postCard(p, { hidden: true, cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' }) : postCard(p, { hidden: true, cls: 'port' }))).join('')}</div>
+  <div class="grid" id="picks">${(() => { /* 桌機中間大圖：取最新一篇「文章封面（主圖）是直式」的文章放第一（Nomo 11-18） */ const L = [...postsNew], k = CFG.pickCenter && L.some(p => p.id === CFG.pickCenter) ? L.findIndex(p => p.id === CFG.pickCenter) /* site.config.json 的 pickCenter 可指定中間那篇 */ : L.findIndex(p => { const c = p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover, d = c && dims(c); return d && d.h > d.w * 1.1; }); if (k > 0) L.unshift(...L.splice(k, 1)); return L; })().map((p, i) => (i < FIRST ? postCard(p, { hidden: false, cls: i === 0 ? 'pk-big' : 'pk-side', cover: i === 0 }) : isLand(p) ? postCard(p, { hidden: true, cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' }) : postCard(p, { hidden: true, cls: 'port' }))).join('')}</div>
   <div class="morewrap"><button class="morebtn" id="picksMore" type="button">MORE<small>看更多旅行</small></button></div>
 </section>
 
