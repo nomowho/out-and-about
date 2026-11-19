@@ -494,3 +494,22 @@
     place(false); auto();
   }
 })();
+
+/* 首頁專題大圖：左右滑動＋毛玻璃箭頭（到底循環），標題／副標／View More 跟著目前那張換 */
+(function () {
+  var tk = document.querySelector('.tser-track'); if (!tk) return;
+  var sec = tk.closest('.tser'), sl = [].slice.call(tk.children), h = sec.querySelector('.tser-h'), sub = sec.querySelector('.tser-sub'), more = sec.querySelector('.tser-more'), cur = 0;
+  var idx = function () { return Math.max(0, Math.min(sl.length - 1, Math.round(tk.scrollLeft / tk.clientWidth))); };
+  var go = function (i) { i = (i + sl.length) % sl.length; tk.scrollTo({ left: i * tk.clientWidth, behavior: 'smooth' }); };
+  var sync = function () {
+    var i = idx(); if (i === cur) return; cur = i; var a = sl[i];
+    h.style.opacity = sub.style.opacity = 0;
+    setTimeout(function () { h.textContent = a.getAttribute('data-en'); sub.textContent = a.getAttribute('data-tag'); h.style.opacity = sub.style.opacity = 1; }, 200);
+    more.href = a.getAttribute('href');
+  };
+  var t; tk.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(sync, 80); }, { passive: true });
+  sec.querySelector('.tser-arr.l').addEventListener('click', function () { go(idx() - 1); });
+  sec.querySelector('.tser-arr.r').addEventListener('click', function () { go(idx() + 1); });
+  tk.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') { e.preventDefault(); go(idx() - 1); } else if (e.key === 'ArrowRight') { e.preventDefault(); go(idx() + 1); } });
+  addEventListener('resize', function () { tk.scrollLeft = cur * tk.clientWidth; });
+})();

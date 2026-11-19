@@ -31,7 +31,7 @@ const CATS = {
   FOOD:         { zh: '美食', d: '從早餐店到海底餐廳，用味道記住一座城市。' },
   GUIDE:        { zh: '指南', d: '一次整理好的行程與必訪清單。' }
 };
-const REGION_ORDER = ['Japan', 'Taiwan', 'Italy', 'Vatican', 'Spain', 'France', 'Portugal', 'Norway', 'Denmark'];
+const REGION_ORDER = ['Japan', 'Taiwan', 'Italy', 'Spain', 'France', 'Portugal', 'Norway', 'Denmark', 'Vatican'];   // 梵蒂岡沒有子地區，放最後（Nomo 11-19）
 const REGION_ZH = { Japan: '日本', Taiwan: '台灣', Italy: '義大利', Vatican: '梵蒂岡', Spain: '西班牙', France: '法國', Portugal: '葡萄牙', Norway: '挪威', Denmark: '丹麥' };
 const AREA_EN = { '青森': 'AOMORI', '岩手': 'IWATE', '宮城': 'MIYAGI', '山形': 'YAMAGATA', '愛知': 'AICHI', '東京': 'TOKYO', '靜岡': 'SHIZUOKA', '屏東': 'PINGTUNG' };
 const areaEn = p => AREA_EN[p.area] || p.area.toUpperCase();
@@ -504,15 +504,18 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <div class="morewrap"><a class="viewmore" href="/stories/">View More　›</a></div>
 </section>
 
-<section class="region">
+<section class="region tser">
   <div class="dash"></div>
-  <h2>TOHOKU</h2>
-  <p class="sub">東北，冬天去才對</p>
-  ${(() => { const p = byId[TOHOKU_ONE] || tohoku[0], pic = TOHOKU_PICS[p.id] || [`img/${p.id}.jpg`, '50% 50%']; return `<a class="toh-one" href="${url.series('tohoku-winter')}" aria-label="冬天的東北 系列專題">
-    <figure>${img(pic[0], p.zh, { small: true, sizes: '100vw' }).replace('<img ', `<img style="object-position:${pic[1]}" `)}</figure>
-    ${(() => { const S = SERIES.find(x => x.id === 'tohoku-winter'); return `<div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span></div><h3>${S.t}</h3><div class="place">${S.d}</div></div>`; })()}
-  </a>`; })()}
-  <a class="viewmore" href="${url.series('tohoku-winter')}">View More　›</a>
+  <h2 class="tser-h">${esc(SERIES[0].en)}</h2>
+  <p class="sub tser-sub">${esc(SERIES[0].tag)}</p>
+  <div class="tser-wrap">
+    <div class="tser-track" tabindex="0" aria-label="系列專題，左右滑動">${SERIES.map((S, si) => `<a class="toh-one" href="${url.series(S.id)}" data-en="${esc(S.en)}" data-tag="${esc(S.tag)}" aria-label="${esc(S.t)} 系列專題">
+      <figure>${img(S.wide, S.t, { small: true, sizes: '100vw', lazy: si > 0 }).replace('<img ', `<img style="object-position:${S.widePos}" `)}</figure>
+      <div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span></div><h3>${esc(S.t)}</h3><div class="place">${esc(S.d)}</div></div>
+    </a>`).join('')}</div>
+    <button class="tser-arr l" type="button" aria-label="上一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="tser-arr r" type="button" aria-label="下一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <a class="viewmore tser-more" href="${url.series(SERIES[0].id)}">View More　›</a>
 </section>
 
 <section class="series">

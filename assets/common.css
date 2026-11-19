@@ -637,3 +637,16 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
   #all>.card.big .cat{font-size:16px;padding-top:6px}
   #all>.card.big h3{font-size:19px;line-height:1.55;margin-top:8px}
 }
+/* 首頁專題大圖：可左右滑所有系列專題（Nomo 11-19），圓形毛玻璃箭頭 */
+.tser-wrap{position:relative;margin-top:40px}
+.tser-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.tser-track::-webkit-scrollbar{display:none}
+.tser-track:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.tser .toh-one{flex:0 0 100%;min-width:0;margin-top:0;scroll-snap-align:start;scroll-snap-stop:always}
+.tser-arr{position:absolute;top:calc(min(100vw * 9 / 21, 78vh) / 2);transform:translateY(-50%);z-index:3;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.22);-webkit-backdrop-filter:blur(14px) saturate(1.5);backdrop-filter:blur(14px) saturate(1.5);box-shadow:0 4px 18px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .25s,transform .25s}
+.tser-arr:hover{background:rgba(255,255,255,.38)}
+.tser-arr.l{left:28px}.tser-arr.r{right:28px}
+.tser-arr svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+.tser-arr:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.tser-h,.tser-sub{transition:opacity .25s}
+@media(max-width:700px){.tser-wrap{margin-top:26px}.tser-arr{top:calc(100vw * 3 / 8);width:40px;height:40px}.tser-arr.l{left:14px}.tser-arr.r{right:14px}.tser-arr svg{width:18px;height:18px}}
