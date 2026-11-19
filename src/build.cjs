@@ -154,6 +154,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
       ${Object.entries(CATS).map(([k, v]) => `<li><a href="${url.cat(k)}"><b>${k}</b><span>${v.zh}</span></a></li>`).join('')}</ul>
     <p class="drawer-h">SERIES</p>
     <ul class="sm">${SERIES.map(s => `<li><a href="${url.series(s.id)}">${s.t}</a></li>`).join('')}</ul>
+    <p class="drawer-h"><a href="/stories/">ALL STORIES</a></p>
     <p class="drawer-h"><a href="/journal/">PHOTO JOURNAL</a></p>
     <p class="drawer-h"><a href="/destinations/">DESTINATIONS</a></p>
     <ul class="sm two">${regions.map(r => `<li><a href="${url.dest(r)}">${REGION_ZH[r]}</a></li>`).join('')}</ul>
@@ -163,7 +164,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
 <main id="main">${noOrphan(fixLinks(main))}</main>
 <footer>
   <a class="logo" href="/"><b>Out and About</b><small>我出去一下就回來</small></a>
-  <nav aria-label="頁尾"><a href="/about/">ABOUT</a>${navLinks('')}<a href="https://www.instagram.com/nomowho/" rel="me noopener">INSTAGRAM</a></nav>
+  <nav aria-label="頁尾"><a href="/about/">ABOUT</a><a href="/stories/">ALL STORIES</a>${navLinks('')}<a href="https://www.instagram.com/nomowho/" rel="me noopener">INSTAGRAM</a></nav>
   <p>© 2026 Nomo · ${footNote}</p>
 </footer>
 <script src="/assets/site.js?v=${ver}" defer></script>
@@ -494,8 +495,8 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 
 <section class="latest box" aria-label="編輯精選">
   <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
-  <div class="grid" id="picks">${(() => { /* 桌機中間大圖：取最新一篇「文章封面（主圖）是直式」的文章放第一（Nomo 11-18） */ const L = [...postsNew], k = CFG.pickCenter && L.some(p => p.id === CFG.pickCenter) ? L.findIndex(p => p.id === CFG.pickCenter) /* site.config.json 的 pickCenter 可指定中間那篇 */ : L.findIndex(p => { const c = p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover, d = c && dims(c); return d && d.h > d.w * 1.1; }); if (k > 0) L.unshift(...L.splice(k, 1)); return L; })().map((p, i) => (i < FIRST ? postCard(p, { hidden: false, cls: i === 0 ? 'pk-big' : 'pk-side', cover: i === 0 }) : isLand(p) ? postCard(p, { hidden: true, cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' }) : postCard(p, { hidden: true, cls: 'port' }))).join('')}</div>
-  <div class="morewrap"><button class="morebtn" id="picksMore" type="button">MORE<small>看更多旅行</small></button></div>
+  <div class="grid" id="picks">${(() => { /* 桌機中間大圖：取最新一篇「文章封面（主圖）是直式」的文章放第一（Nomo 11-18） */ const L = [...postsNew], k = CFG.pickCenter && L.some(p => p.id === CFG.pickCenter) ? L.findIndex(p => p.id === CFG.pickCenter) /* site.config.json 的 pickCenter 可指定中間那篇 */ : L.findIndex(p => { const c = p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover, d = c && dims(c); return d && d.h > d.w * 1.1; }); if (k > 0) L.unshift(...L.splice(k, 1)); return L; })().slice(0, FIRST).map((p, i) => postCard(p, { hidden: false, cls: i === 0 ? 'pk-big' : 'pk-side', cover: i === 0 })).join('')}</div>
+  <div class="morewrap"><a class="morebtn" href="/stories/">看全部文章 ›<small>${POSTS.length} 篇旅行故事</small></a></div>
 </section>
 
 <section class="region">
@@ -569,6 +570,32 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   page({ file: 'about/index.html', title: '關於我出去一下就回來｜Out and About', desc, canonical: '/about/', image: ogImg(TOP7[0]), style: 'post', nav: '', main,
     ld: [{ '@context': 'https://schema.org', '@type': 'AboutPage', '@id': abs('/about/'), name: '關於我出去一下就回來', inLanguage: 'zh-Hant-TW', mainEntity: PERSON, isPartOf: { '@id': abs('/#website') } }, crumbLd([['Out and About', '/'], ['關於', '/about/']])] });
   sitemap.push({ loc: '/about/', lastmod: BUILD_DATE, images: [] });
+
+  /* ── 全部文章 /stories/（Nomo 11-19）：首頁 PICK UP「看全部文章」連過來；依主圖方向不對稱（橫式跨兩欄、直式一欄），上方分類篩選 ── */
+  {
+    const u = '/stories/';
+    const coverOf2 = p => p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover;
+    const isLand2 = p => { const c = coverOf2(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
+    const cats = Object.keys(CATS).filter(k => postsNew.some(p => p.cat === k));
+    const cards = postsNew.map(p => (isLand2(p)
+      ? postCard(p, { cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' })
+      : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-area="${p.cat.toLowerCase()}" class="card`)).join('');
+    const main = `
+    <section class="top jtop"><div class="box">
+      <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>STORIES</span></nav>
+      <div class="label">STORIES　全部文章</div><h1>全部旅行故事</h1>
+      <p>${POSTS.length} 篇，都是我親自走過的地方。可以依主題篩選。</p>
+    </div></section>
+    <section class="list box">
+      <nav class="areas" id="areas" aria-label="依主題篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${POSTS.length}</small></a>${cats.map(k => `<a href="#${k.toLowerCase()}" data-area="${k.toLowerCase()}">${k}<small>${POSTS.filter(p => p.cat === k).length}</small></a>`).join('')}</nav>
+      <div class="grid allgrid" id="all">${cards}</div>
+    </section>`;
+    const desc = `Out and About 全部 ${POSTS.length} 篇旅行故事：建築、藝術、歷史、自然、美食與旅行指南，遍及${regions.map(r => REGION_ZH[r]).join('、')}。`;
+    page({ file: 'stories/index.html', title: `全部旅行故事｜${POSTS.length} 篇｜Out and About`, desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: '', main,
+      ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '全部旅行故事', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
+        mainEntity: listLd('全部旅行故事', postsNew.map(p => ({ u: url.post(p.id), n: p.title }))) }, crumbLd([['Out and About', '/'], ['STORIES', u]])] });
+    sitemap.push({ loc: u, lastmod: postsNew.length ? iso(postsNew[0].date) : BUILD_DATE, images: [] });
+  }
 
   /* ── NEWS 列表 /news/（A2，Nomo 11-18）：上架中的外電，每天跟著外電排程自動更新 ── */
   {

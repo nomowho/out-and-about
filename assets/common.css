@@ -543,3 +543,13 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
   #picks>.pk-big figure{aspect-ratio:5/3}
   #picks>.pk-big figure img{width:100%;height:100%;object-fit:cover}
 }
+/* /stories/ 全部文章：依主圖方向不對稱（橫式跨兩欄 5:3、直式一欄 4:5），dense 自動補位 */
+#all{grid-auto-flow:row dense}
+#all>.card[hidden]{display:none}
+#all>.card.port figure{aspect-ratio:4/5}
+#all>.card.land figure{aspect-ratio:3/2}
+#all>.card figure img{width:100%;height:100%;object-fit:cover}
+#all .ph{height:100%}
+@media(min-width:701px) and (max-width:1000px){#all{grid-template-columns:repeat(3,1fr)}#all>.card.land{grid-column:span 2}#all>.card.land figure{aspect-ratio:2/1.24}}
+@media(min-width:1001px){#all{grid-template-columns:repeat(12,1fr);gap:44px 28px}#all>.card.land{grid-column:span 8}#all>.card.port{grid-column:span 4}#all>.card.land figure{aspect-ratio:5/3}}
+a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit}

@@ -98,7 +98,7 @@
   /* 國家頁：依地區篩選（網址 #地區 可直接帶入，例如從國家總覽點「青森」） */
   var areas = $('areas');
   if (areas) {
-    var chips = [].slice.call(areas.querySelectorAll('a')), secs = [].slice.call(document.querySelectorAll('.grpsec, .masonry .jp'));
+    var chips = [].slice.call(areas.querySelectorAll('a')), secs = [].slice.call(document.querySelectorAll('.grpsec, .masonry .jp, #all > .card'));
     var pick = function (name, scroll) {
       if (name && !secs.some(function (x) { return x.getAttribute('data-area') === name; })) name = '';
       chips.forEach(function (c) { var on = c.getAttribute('data-area') === name; c.classList.toggle('on', on); if (on) { c.setAttribute('aria-current', 'true'); if (c.scrollIntoView && areas.scrollWidth > areas.clientWidth) areas.scrollLeft = c.offsetLeft - 20; } else c.removeAttribute('aria-current'); });
