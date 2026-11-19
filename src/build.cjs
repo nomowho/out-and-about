@@ -557,7 +557,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     <header class="ahead noimg"><div class="meta"><span>About</span></div><h1>關於我出去一下就回來</h1>
       <p class="motto"><span>走得遠一點，看得深一些。</span><span lang="en">Go Further. Look Closer.</span></p></header>
     <div class="body">
-      <p>Out and About，中文叫「我出去一下就回來」，是一份關於旅行、風景與文化的個人誌。</p>
+      <p>Out and About　我出去一下就回來，是一份關於旅行、風景與文化的個人誌。</p>
       <p>旅行對我而言，不只是抵達某個地方，更是試著理解一座城市的性格、一棟建築的故事，以及那些藏在日常風景裡的歷史。</p>
       <p>這裡記錄我親自走過的地方，從山海之間的自然景色，到城市裡的建築、藝術、信仰與餐桌。以影像收藏瞬間，以文字延續旅程。</p>
       <p class="pull">一半故事，一半旅行資訊。</p>
