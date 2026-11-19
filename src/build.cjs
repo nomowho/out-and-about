@@ -603,7 +603,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const main = `
     <section class="top jtop"><div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>STORIES</span></nav>
-      <div class="label">STORIES　全部文章</div><h1>全部旅行故事</h1>
+      <div class="label">STORIES　全部文章</div><h1>世界的幾個角落</h1>
       <p>${POSTS.length} 篇，都是我親自走過的地方。可以依主題篩選。</p>
     </div></section>
     <section class="list box">
@@ -611,9 +611,9 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <div class="grid allgrid" id="all">${cards}</div>
     </section>`;
     const desc = `Out and About 全部 ${POSTS.length} 篇旅行故事：建築、藝術、歷史、自然、美食與旅行指南，遍及${regions.map(r => REGION_ZH[r]).join('、')}。`;
-    page({ file: 'stories/index.html', title: `全部旅行故事｜${POSTS.length} 篇｜Out and About`, desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: '', main,
-      ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '全部旅行故事', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
-        mainEntity: listLd('全部旅行故事', postsNew.map(p => ({ u: url.post(p.id), n: p.title }))) }, crumbLd([['Out and About', '/'], ['STORIES', u]])] });
+    page({ file: 'stories/index.html', title: `世界的幾個角落｜${POSTS.length} 篇｜Out and About`, desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: '', main,
+      ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '世界的幾個角落', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
+        mainEntity: listLd('世界的幾個角落', postsNew.map(p => ({ u: url.post(p.id), n: p.title }))) }, crumbLd([['Out and About', '/'], ['STORIES', u]])] });
     sitemap.push({ loc: u, lastmod: postsNew.length ? iso(postsNew[0].date) : BUILD_DATE, images: [] });
   }
 

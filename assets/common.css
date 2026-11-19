@@ -650,3 +650,8 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .tser-arr:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .tser-h,.tser-sub{transition:opacity .25s}
 @media(max-width:700px){.tser-wrap{margin-top:26px}.tser-arr{top:calc(100vw * 3 / 8);width:40px;height:40px}.tser-arr.l{left:14px}.tser-arr.r{right:14px}.tser-arr svg{width:18px;height:18px}}
+/* /stories/ 標題放大（Nomo 11-19） */
+#all>.card h3{font-size:30px;line-height:1.4;margin-top:10px;letter-spacing:.01em}
+#all>.card.land h3{font-size:34px}
+@media(min-width:701px) and (max-width:1000px){#all>.card h3,#all>.card.land h3{font-size:24px}}
+@media(max-width:700px){#all>.card h3{font-size:22px;line-height:1.45;margin-top:8px}#all>.card.big h3{font-size:30px;line-height:1.4}}
