@@ -553,3 +553,8 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 @media(min-width:701px) and (max-width:1000px){#all{grid-template-columns:repeat(3,1fr)}#all>.card.land{grid-column:span 2}#all>.card.land figure{aspect-ratio:2/1.24}}
 @media(min-width:1001px){#all{grid-template-columns:repeat(12,1fr);gap:44px 28px}#all>.card.land{grid-column:span 8}#all>.card.port{grid-column:span 4}#all>.card.land figure{aspect-ratio:5/3}}
 a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit}
+/* 「更多」按鈕全站統一成 View More › 底線樣式（Nomo 11-19） */
+.viewmore{display:inline-block;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--ink);padding:0 4px 6px;letter-spacing:.02em}
+.morewrap{text-align:center;margin-top:44px}
+.morewrap .viewmore{margin-top:0}
+.sh .viewmore{margin-top:0;margin-left:auto;font-size:12px;padding:0 2px 4px}
