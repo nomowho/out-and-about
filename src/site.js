@@ -220,6 +220,18 @@
     hl.addEventListener('focusin', function () { ht.classList.add('hold'); }); hl.addEventListener('focusout', function () { ht.classList.remove('hold'); });
   }
 
+  /* SERIES 卡片列：桌機用左右箭頭一次移一張（到頭／到尾箭頭變淡），手機用手指滑（原生捲動＋停在卡片開頭） */
+  [].forEach.call(document.querySelectorAll('.railwrap'), function (w) {
+    var rail = w.querySelector('.rail'), L = w.querySelector('.rail-arr.l'), R = w.querySelector('.rail-arr.r');
+    if (!rail || !L || !R) return;
+    var step = function () { var c = rail.querySelector('.s'); return c ? c.getBoundingClientRect().width + (parseFloat(getComputedStyle(rail).columnGap) || 20) : 300; };
+    var upd = function () { var max = rail.scrollWidth - rail.clientWidth - 2; L.disabled = rail.scrollLeft <= 2; R.disabled = rail.scrollLeft >= max; };
+    L.addEventListener('click', function () { rail.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    R.addEventListener('click', function () { rail.scrollBy({ left: step(), behavior: 'smooth' }); });
+    rail.addEventListener('scroll', function () { requestAnimationFrame(upd); }, { passive: true });
+    addEventListener('resize', upd); upd();
+  });
+
   /* 分類列：把目前分類捲到看得見的位置 */
   var on = document.querySelector('.nav a.on');
   if (on && on.parentElement.scrollWidth > on.parentElement.clientWidth) on.parentElement.scrollLeft = on.offsetLeft - 16;

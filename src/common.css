@@ -575,3 +575,20 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .toh-cap h3{font-size:clamp(20px,2.4vw,28px);font-weight:700;line-height:1.5;margin-top:8px}
 .toh-cap .place{font-size:13px;color:#555;margin-top:6px}
 @media(max-width:700px){.toh-one{margin-top:26px}.toh-one figure{aspect-ratio:4/3}.toh-cap{padding:0 20px}}
+/* SERIES：卡片列左右滿版、不顯示捲軸；桌機一次並排 4 張＋左右箭頭，平板 2.5 張，手機手指滑（Nomo 11-19） */
+.railwrap{position:relative}
+.series .rail{--gut:24px;padding:0 24px 4px;scroll-padding-inline:24px;scrollbar-width:none;gap:20px;scroll-behavior:smooth}
+.series .rail::-webkit-scrollbar{display:none}
+.series .rail::after{display:none}
+.series .s{flex:0 0 calc((100% - 60px) / 4)}
+.rail-arr{position:absolute;z-index:3;top:calc((100vw - 48px - 60px) / 4 * 1.25 / 2);transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid #d9d9d9;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:opacity .2s,background .2s}
+.rail-arr svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.rail-arr.l{left:8px}
+.rail-arr.r{right:8px}
+.rail-arr:hover{background:#fff}
+.rail-arr:disabled{opacity:0;pointer-events:none}
+@media(max-width:1000px){.series .s{flex-basis:calc((100% - 32px) / 2.5)}.rail-arr{top:calc((100vw - 48px - 32px) / 2.5 * 1.25 / 2)}}
+@media(max-width:700px){.series .rail{padding:0 20px 4px;scroll-padding-inline:20px;gap:12px}.series .s{flex-basis:72vw}.rail-arr{display:none}}
+/* 首頁輪播圖片放大 20%（Nomo 11-19）：桌機高 600→720px（66vh→79vh），平板 78vw→90vw；手機原本 84vw，再放大會超出螢幕，維持 */
+@media(min-width:1001px){.hero{--sh:min(79.2vh,720px);--sw:calc(var(--sh) * .8)}}
+@media(min-width:701px) and (max-width:1000px){.hero{--sw:min(90vw,calc(79.2vh * .8));--sh:calc(var(--sw) * 1.25)}}
