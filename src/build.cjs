@@ -348,7 +348,7 @@ newsNew.forEach(n => {
       <div class="grid">${others.map(x => newsCard(x)).join('')}</div>
     </div></section>
     <section class="more plain"><div class="box">
-      <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
+      <div class="sh"><h2>PICK UP</h2></div>
       <div class="grid">${picks.map(x => postCard(x, { place: false })).join('')}</div>
     </div></section>`;
   const ld = [
@@ -483,7 +483,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 
 <section class="pick" id="latest-news">
   <div class="band">
-    <div class="sh"><h2>Latest</h2><span>世界旅遊新訊</span><span class="note">編譯自國際旅遊媒體</span></div>
+    <div class="sh"><h2>Latest</h2><span class="note">編譯自國際旅遊媒體</span></div>
     <div class="headlines" id="news" role="region" aria-label="世界旅遊新訊，會自動左右輪播"><div class="hl-track">${newsNew.map((n, i) => hlCard(n, i + 1)).join('')}</div></div>
   </div>
   <aside class="side">
@@ -499,7 +499,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 </section>
 
 <section class="latest box" aria-label="編輯精選">
-  <div class="sh"><h2>PICK UP</h2><span>編輯精選・我出去一下</span></div>
+  <div class="sh"><h2>PICK UP</h2></div>
   <div class="grid" id="picks">${(() => { /* 桌機中間大圖：取最新一篇「文章封面（主圖）是直式」的文章放第一（Nomo 11-18） */ const L = [...postsNew], k = CFG.pickCenter && L.some(p => p.id === CFG.pickCenter) ? L.findIndex(p => p.id === CFG.pickCenter) /* site.config.json 的 pickCenter 可指定中間那篇 */ : L.findIndex(p => { const c = p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover, d = c && dims(c); return d && d.h > d.w * 1.1; }); if (k > 0) L.unshift(...L.splice(k, 1)); return L; })().slice(0, FIRST).map((p, i) => postCard(p, { hidden: false, cls: i === 0 ? 'pk-big' : 'pk-side', cover: i === 0 })).join('')}</div>
   <div class="morewrap"><a class="viewmore" href="/stories/">View More　›</a></div>
 </section>
@@ -516,7 +516,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 </section>
 
 <section class="series">
-  <div class="box"><div class="sh"><h2>SERIES</h2><span>系列專題</span></div></div>
+  <div class="box"><div class="sh"><h2>SERIES</h2></div></div>
   <div class="railwrap"><button class="rail-arr l" type="button" aria-label="上一組系列" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="rail-arr r" type="button" aria-label="下一組系列"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   <div class="rail">${SERIES.map(s => `
     <a class="s" href="${url.series(s.id)}">
@@ -529,13 +529,13 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 </section>
 
 <section class="cty" aria-label="走過的國家">
-  <div class="box"><div class="sh"><h2>Countries</h2><span>走過的 ${CTY_PICS.length} 個國家</span></div></div>
+  <div class="box"><div class="sh"><h2>Countries</h2></div></div>
   <div class="cty-wrap"><div class="cty-track">${CTY_PICS.map(([r, src, pos]) => { const n = POSTS.filter(p => p.region === r).length; return `
     <a class="ct" href="${url.dest(r)}"><figure>${img(src, REGION_ZH[r], { small: true, sizes: '280px' }).replace('<img ', `<img style="object-position:${pos}" `)}</figure><b>${REGION_ZH[r]}</b><span>${r.toUpperCase()} · ${n} ${n === 1 ? 'STORY' : 'STORIES'}</span></a>`; }).join('')}</div></div>
 </section>
 
 <section class="dest box" id="dest">
-  <div class="sh"><h2>Destinations</h2><span>去過的地方</span></div>
+  <div class="sh"><h2>Destinations</h2></div>
   <div class="cols">${regions.map(r => `
     <div class="col"><h3><a href="${url.dest(r)}">${r.toUpperCase()}　${REGION_ZH[r]}</a></h3><ul>
       ${Object.entries(groups[r]).map(([a, n]) => `<li><a href="${url.dest(r)}${Object.keys(groups[r]).length > 1 ? '#' + encodeURIComponent(a) : ''}">${a}</a><span>${n}</span></li>`).join('')}
