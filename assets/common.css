@@ -607,3 +607,7 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .ct span{display:block;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;color:#555;margin-top:4px}
 @media(max-width:700px){.cty{margin-top:64px}.ct{flex-basis:62vw}.cty-track{gap:14px;padding-left:20px}}
 .side .ig:hover{background:none;color:var(--ink);text-decoration-color:currentColor}   /* IG 連結滑過不反黑（Nomo 11-19） */
+/* 分類／國家／系列等列表頁頂端改白底，拿掉灰色色塊與模糊背景圖（Nomo 11-19） */
+.top{background:#fff}
+.top::after{display:none}
+.top .bg{display:none}

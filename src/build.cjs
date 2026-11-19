@@ -488,7 +488,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   </div>
   <aside class="side">
     <div class="dbl stories journal-entry" id="journal">
-      <h3>Photo Journal<small>攝影日誌</small></h3>
+      <h3>Photo Journal</h3>
       <ul class="rings one"><li><a class="ring" href="/journal/" aria-label="打開 Photo Journal 攝影日誌，看全部旅行照片">
           <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" loading="lazy" decoding="async"></span>
         </a></li></ul>
@@ -662,7 +662,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const main = `
     <section class="top jtop"><div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>PHOTO JOURNAL</span></nav>
-      <div class="label">PHOTO JOURNAL　攝影日誌</div><h1>在世界亂走，拍下眼前</h1>
+      <div class="label">PHOTO JOURNAL</div><h1>在世界亂走，拍下眼前</h1>
     </div></section>
     <section class="list box">
       <nav class="areas jfilter" id="areas" aria-label="依國家篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="#${r.toLowerCase()}" data-area="${r.toLowerCase()}">${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
