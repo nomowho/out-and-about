@@ -518,9 +518,9 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 <section class="series">
   <div class="box"><div class="sh"><h2>SERIES</h2></div></div>
   <div class="railwrap"><button class="rail-arr l" type="button" aria-label="上一組系列" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="rail-arr r" type="button" aria-label="下一組系列"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-  <div class="rail">${SERIES.map(s => `
+  <div class="rail">${SERIES.map((s, si) => `
     <a class="s" href="${url.series(s.id)}">
-      <figure>${img(`img/${s.img}.jpg`, s.t, { sizes: '(max-width:700px) 72vw, 300px' })}<span class="stk" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7.5" y="7.5" width="12" height="10" rx="1.6"/><path d="M4.5 14.5V6.1c0-.9.7-1.6 1.6-1.6h10.4"/></svg></span></figure>
+      <figure>${img(`img/${s.img}.jpg`, s.t, { sizes: '(max-width:700px) 72vw, 300px' })}<span class="s-no">No.${String(si + 1).padStart(2, '0')}</span><span class="stk" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7.5" y="7.5" width="12" height="10" rx="1.6"/><path d="M4.5 14.5V6.1c0-.9.7-1.6 1.6-1.6h10.4"/></svg></span></figure>
       <div class="k">SERIES · ${s.ids.length} ${s.ids.length === 1 ? 'STORY' : 'STORIES'}</div>
       <h3>${s.t}</h3>
       <div class="by">BY NOMO</div>
