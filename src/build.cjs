@@ -461,7 +461,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   const tohoku = ['oirase', 'hoshino-oirase', 'kaneja', 'geibikei'].map(i => byId[i]).filter(Boolean);
   /* TOHOKU 區改橫式大圖（Nomo 11-19）：每篇挑橫式又美的一張；直式原圖用 object-position 裁出最好看的橫式段落 */
   /* 首頁 Countries：每國一張最特別的照片（Nomo 11-19 指定版型＝Casa BRUTUS Select 10），自動往左循環；挪威尚無照片先不放 */
-  const CTY_PICS = [['Japan', 'img/aomori-museum/02_card.jpg', '50% 50%'], ['Italy', 'img/matera/cover.jpg', '50% 50%'], ['Vatican', 'img/porta-santa/volunteers.jpg', '40% 50%'], ['Spain', 'img/sagrada-familia/content-card01.jpg', '50% 50%'], ['Portugal', 'img/berlengas/bridge.jpg', '70% 50%'], ['France', 'img/louvre-pyramid/cover.jpg', '50% 50%'], ['Taiwan', 'img/hengchun/falls.jpg', '50% 50%']].filter(([r]) => regions.includes(r));
+  const CTY_PICS = [['Japan', 'img/aomori-museum/02_card.jpg', '50% 50%'], ['Italy', 'img/matera/cover.jpg', '50% 50%'], ['Vatican', 'img/porta-santa/volunteers.jpg', '40% 50%'], ['Spain', 'img/sagrada-familia/content-card01.jpg', '50% 50%'], ['Portugal', 'img/berlengas/end-fort.jpg', '50% 100%'], ['France', 'img/louvre-pyramid/cover.jpg', '50% 50%'], ['Taiwan', 'img/hengchun/falls.jpg', '50% 50%']].filter(([r]) => regions.includes(r));
   const TOHOKU_ONE = 'oirase';   // TOHOKU 區只秀一篇、滿版大圖（Nomo 11-19）
   const TOHOKU_PICS = { oirase: ['img/oirase/content-01_card.jpg', '50% 50%'], 'hoshino-oirase': ['img/hoshino-oirase/01_card_A.jpg', '50% 50%'], kaneja: ['img/kaneja/cover-03.jpg', '50% 64%'], geibikei: ['img/geibikei.jpg', '50% 52%'] };
   const FIRST = 5;   // PICK UP 預設 5 篇（Nomo 11-18），其餘按 MORE
