@@ -508,7 +508,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <p class="sub">東北，冬天去才對</p>
   ${(() => { const p = byId[TOHOKU_ONE] || tohoku[0], pic = TOHOKU_PICS[p.id] || [`img/${p.id}.jpg`, '50% 50%']; return `<a class="toh-one" href="${url.series('tohoku-winter')}" aria-label="冬天的東北 系列專題">
     <figure>${img(pic[0], p.zh, { small: true, sizes: '100vw' }).replace('<img ', `<img style="object-position:${pic[1]}" `)}</figure>
-    <div class="toh-cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h3>${p.title}</h3><div class="place">${p.zh}，${p.area}</div></div>
+    ${(() => { const S = SERIES.find(x => x.id === 'tohoku-winter'); return `<div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span></div><h3>${S.t}</h3><div class="place">${S.d}</div></div>`; })()}
   </a>`; })()}
   <a class="viewmore" href="${url.series('tohoku-winter')}">View More　›</a>
 </section>
