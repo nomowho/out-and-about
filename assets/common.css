@@ -618,3 +618,5 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 /* SERIES 標籤改右下角直排英文（Nomo 11-19）：螢光綠 70% 不透明（＝加 30% 透明度）、黑字 */
 .series .s .s-no{top:auto;left:auto;right:12px;bottom:12px;writing-mode:vertical-rl;text-orientation:mixed;background:rgba(200,245,0,.7);padding:9px 6px 8px;font-size:10px;letter-spacing:.18em;white-space:nowrap}
 @media(max-width:700px){.series .s .s-no{right:10px;bottom:10px;font-size:9.5px}}
+/* 防孤字 span 不可被卡片的 .s span 小字樣式波及 */
+.nw{font:inherit!important;display:inline!important;margin:0!important;letter-spacing:inherit!important;color:inherit!important;text-transform:inherit!important}
