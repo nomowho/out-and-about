@@ -665,3 +665,5 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 @media(min-width:701px) and (max-width:1000px){#all>.card h3,#all>.card.land h3{font-size:17px}}
 @media(max-width:700px){#all>.card h3{font-size:15px;line-height:1.6}#all>.card.big h3{font-size:21px;line-height:1.5}}
 .list .card h3{text-wrap:wrap}
+/* 箭頭去白邊（Nomo 11-19） */
+.tser-arr{border:0;box-shadow:0 4px 18px rgba(0,0,0,.12)}
