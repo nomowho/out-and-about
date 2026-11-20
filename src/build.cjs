@@ -16,6 +16,11 @@ const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.
 const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES } = vm.runInNewContext(code);
 const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
+// 系列專題：region／cat 型的系列自動收錄（新到舊）；沒有照片的系列（img 或 wide 為空）首頁先不放
+for (const s of SERIES) if (!s.ids) s.ids = postsNew.filter(p => (s.region && p.region === s.region) || (s.cat && p.cat === s.cat)).map(p => p.id);
+const SERIES_SHOWN = SERIES.filter(s => s.img && s.wide);
+// 已刪除的系列：舊網址轉到新系列（Nomo 11-20），避免 Google 已收錄的連結變 404
+const SERIES_MOVED = { 'europe-architecture': 'architecture-walk', 'architecture-museum': 'architecture-walk' };
 // 外電只上架最新 NEWS_MAX 篇；更舊的自動下架（頁面、sitemap、RSS 都拿掉），原始資料仍留在 news-data.js
 const NEWS_MAX = 10;
 const newsNew = [...NEWS].sort((a, b) => b.date.localeCompare(a.date)).slice(0, NEWS_MAX);
@@ -398,7 +403,12 @@ for (const s of SERIES) {
   const posts = s.ids.map(i => byId[i]).filter(Boolean);
   listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, posts, lead: byId[s.img] || leadOf(posts), nav: '', crumb: 'SERIES',
     othersTitle: 'More Series', othersZh: '其他系列專題',
-    others: SERIES.filter(x => x.id !== s.id).map(x => ({ u: url.series(x.id), t: x.t, n: x.ids.length, img: fs.existsSync(path.join(ROOT, 'img', x.img + '.jpg')) ? `img/${x.img}.jpg` : null })) });
+    others: SERIES_SHOWN.filter(x => x.id !== s.id).map(x => ({ u: url.series(x.id), t: x.t, n: x.ids.length, img: fs.existsSync(path.join(ROOT, 'img', x.img + '.jpg')) ? `img/${x.img}.jpg` : null })) });
+}
+for (const [from, to] of Object.entries(SERIES_MOVED)) {   // 舊系列網址 → 新系列（meta refresh＋canonical，Google 視同轉址）
+  const dest = url.series(to), out = path.join(ROOT, 'series', from, 'index.html');
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, `<!DOCTYPE html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><title>這個系列已搬家｜Out and About</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="${abs(dest)}"><meta http-equiv="refresh" content="0; url=${dest}"></head><body><p>這個系列已整併，請前往 <a href="${dest}">${esc(SERIES.find(x => x.id === to).t)}</a>。</p></body></html>`);
 }
 for (const r of regions) {
   const posts = postsNew.filter(p => p.region === r);
@@ -506,22 +516,22 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 
 <section class="region tser">
   <div class="dash"></div>
-  <h2 class="tser-h">${esc(SERIES[0].en)}</h2>
-  <p class="sub tser-sub">${esc(SERIES[0].tag)}</p>
+  <h2 class="tser-h">${esc(SERIES_SHOWN[0].en)}</h2>
+  <p class="sub tser-sub">${esc(SERIES_SHOWN[0].tag)}</p>
   <div class="tser-wrap">
-    <div class="tser-track" tabindex="0" aria-label="系列專題，左右滑動">${SERIES.map((S, si) => `<a class="toh-one" href="${url.series(S.id)}" data-en="${esc(S.en)}" data-tag="${esc(S.tag)}" aria-label="${esc(S.t)} 系列專題">
+    <div class="tser-track" tabindex="0" aria-label="系列專題，左右滑動">${SERIES_SHOWN.map((S, si) => `<a class="toh-one" href="${url.series(S.id)}" data-en="${esc(S.en)}" data-tag="${esc(S.tag)}" aria-label="${esc(S.t)} 系列專題">
       <figure>${img(S.wide, S.t, { small: true, sizes: '100vw', lazy: si > 0 }).replace('<img ', `<img style="object-position:${S.widePos}" `)}</figure>
       <div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span></div><h3>${esc(S.t)}</h3><div class="place">${esc(S.d)}</div></div>
     </a>`).join('')}</div>
     <button class="tser-arr l" type="button" aria-label="上一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="tser-arr r" type="button" aria-label="下一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
-  <a class="viewmore tser-more" href="${url.series(SERIES[0].id)}">View More　›</a>
+  <a class="viewmore tser-more" href="${url.series(SERIES_SHOWN[0].id)}">View More　›</a>
 </section>
 
 <section class="series">
   <div class="box"><div class="sh"><h2>SERIES</h2></div></div>
   <div class="railwrap"><button class="rail-arr l" type="button" aria-label="上一組系列" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="rail-arr r" type="button" aria-label="下一組系列"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-  <div class="rail">${SERIES.map((s, si) => `
+  <div class="rail">${SERIES_SHOWN.map((s, si) => `
     <a class="s" href="${url.series(s.id)}">
       <figure>${img(`img/${s.img}.jpg`, s.t, { sizes: '(max-width:700px) 72vw, 300px' })}<span class="s-no" aria-hidden="true">${esc(s.en || ('No.' + String(si + 1).padStart(2, '0')))}</span><span class="stk" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7.5" y="7.5" width="12" height="10" rx="1.6"/><path d="M4.5 14.5V6.1c0-.9.7-1.6 1.6-1.6h10.4"/></svg></span></figure>
       <div class="k">SERIES · ${s.ids.length} ${s.ids.length === 1 ? 'STORY' : 'STORIES'}</div>
