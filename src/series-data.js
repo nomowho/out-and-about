@@ -4,7 +4,7 @@
 // 首頁順序＝這裡的排列順序（Nomo 11-20 指定，不再依篇數自動排）
 // 2026-11-20 Nomo 調整：刪除「歐洲建築巡禮」「建築與美術館」（舊網址轉到建築散策），新增深見系列＋建築散策＋藝術漫遊
 const SERIES = [
-  { id:'japan', t:'深見　日本', en:'JAPAN', tag:'從雪國走到喫茶店', wide:'img/tokyo-kaminarimon/cover.jpg', widePos:'50% 35%', img:'seiryuji',
+  { id:'japan', t:'深見　日本', en:'JAPAN', tag:'從雪國走到喫茶店', wide:'img/tokyo-kaminarimon/cover.jpg', widePos:'50% 58%', img:'seiryuji',
     d:'從東北的雪國到東京、名古屋、伊豆，一個國家慢慢走。',
     intro:'日本是我去最多次的國家，但每次都還有沒看過的角落。從青森的雪地大佛、奧入瀨的溪流，到東京鐵塔、淺草雷門，再到名古屋的喫茶店早餐與伊豆的古寺，這個系列收錄我在日本走過的地方，寫給想看見觀光地圖以外那一面的人。',
     region:'Japan' },
