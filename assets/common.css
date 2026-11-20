@@ -674,3 +674,8 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
   .cty{margin-top:96px}
   .dest{margin-top:96px}
 }
+/* 首頁專題大圖加高到 16:9（Nomo 11-20），最高到螢幕 90%；箭頭跟著置中 */
+@media(min-width:701px){
+  .tser .toh-one figure{aspect-ratio:16/9;max-height:90vh}
+  .tser-arr{top:calc(min(100vw * 9 / 16, 90vh) / 2)}
+}
