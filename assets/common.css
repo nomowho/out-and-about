@@ -667,3 +667,10 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .list .card h3{text-wrap:wrap}
 /* 箭頭去白邊（Nomo 11-19） */
 .tser-arr{border:0;box-shadow:0 4px 18px rgba(0,0,0,.12)}
+/* 首頁區塊間距統一 96px（Nomo 11-20：專題大圖到 SERIES 太遠） */
+@media(min-width:701px){
+  .region.tser{margin-top:72px}
+  .series{margin-top:96px;padding-top:0;padding-bottom:0}
+  .cty{margin-top:96px}
+  .dest{margin-top:96px}
+}
