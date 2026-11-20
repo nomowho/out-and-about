@@ -184,9 +184,11 @@ ${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beaco
 }
 
 /* ── 卡片 ── */
-const postCard = (p, { extra = '', place = true, hidden = false, cls = '', cover = false, csizes = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 100vw, 560px' } = {}) => `
+/* 橫式卡片格（3:2）：卡片圖是直式、主圖是橫式時改用主圖（Nomo 11-20） */
+const landCover = p => { const d = POST_DETAIL[p.id], c = p.photo !== false && d && d.cover, cd = c && dims(c), k = dims('img/' + p.id + '.jpg'); return !!(cd && cd.w > cd.h * 1.15 && k && k.h > k.w); };
+const postCard = (p, { extra = '', place = true, hidden = false, cls = '', cover = false, land = false, csizes = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 100vw, 560px' } = {}) => `
   <a class="card${cls ? ' ' + cls : ''}"${hidden ? ' hidden' : ''} href="${url.post(p.id)}">
-    <figure>${extra}${cover && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cover, p.zh, { sizes: csizes, small: true }) : thumb(p)}</figure>
+    <figure>${extra}${(cover || (land && landCover(p))) && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cover, p.zh, { sizes: csizes, small: true }) : thumb(p)}</figure>
     <div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
     <h3>${p.title}</h3>${place ? `<div class="place">${p.zh}，${p.area}</div>` : ''}
   </a>`;
@@ -303,7 +305,7 @@ for (const p of POSTS) {
     </article>
     ${related.length ? `<section class="more"><div class="box">
       <div class="sh"><h2>More Stories</h2><span>接著讀</span></div>
-      <div class="grid">${related.map(x => postCard(x, { place: false })).join('')}</div>
+      <div class="grid">${related.map(x => postCard(x, { place: false, land: true })).join('')}</div>
     </div></section>` : ''}`;
   const u = url.post(p.id);
   const ld = [
@@ -354,7 +356,7 @@ newsNew.forEach(n => {
     </div></section>
     <section class="more plain"><div class="box">
       <div class="sh"><h2>PICK UP</h2></div>
-      <div class="grid">${picks.map(x => postCard(x, { place: false })).join('')}</div>
+      <div class="grid">${picks.map(x => postCard(x, { place: false, land: true })).join('')}</div>
     </div></section>`;
   const ld = [
     { '@context': 'https://schema.org', '@type': 'NewsArticle', '@id': abs(u) + '#article', headline: cut(n.title, 110), description: desc, inLanguage: 'zh-Hant-TW',
@@ -371,7 +373,7 @@ newsNew.forEach(n => {
 
 /* ── 列表頁（分類／系列／目的地） ── */
 function listPage({ file, u, label, h1, desc, posts, lead, nav, crumb, groups, othersTitle, othersZh, others }) {
-  const grid = list => `<div class="grid">${list.map(p => postCard(p)).join('')}</div>`;
+  const grid = list => `<div class="grid">${list.map(p => postCard(p, { land: true })).join('')}</div>`;
   const main = `
     <section class="top">${lead ? `<div class="bg" style="background-image:url(/img/${lead.id}.m.jpg)"></div>` : ''}<div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>${crumb}</span>›<span>${h1}</span></nav>
@@ -604,7 +606,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   {
     const u = '/stories/';
     const coverOf2 = p => p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover;
-    const isLand2 = p => { const c = coverOf2(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
+    const isLand2 = p => { if (POST_DETAIL[p.id] && POST_DETAIL[p.id].cardV) return false; /* cardV：用直式卡片圖 img/<id>.jpg 當 /stories/ 封面（Nomo 11-20 維也納） */ const c = coverOf2(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
     const cats = Object.keys(CATS).filter(k => postsNew.some(p => p.cat === k));
     const cards = postsNew.map((p, i) => (isLand2(p)
       ? postCard(p, { cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' })
@@ -693,7 +695,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   }
   const h404 = page({ file: '404.html', title: '找不到這一頁｜Out and About', desc: '這個網址沒有內容。', canonical: '/404.html', image: ogImg(TOP7[0]), style: 'category', nav: '',
     main: `<div class="notfound"><h1>找不到這一頁</h1><p>可能是網址改了，下面是最新的文章。</p><p><a href="/">回首頁</a></p></div>
-    <section class="list box"><div class="grid">${postsNew.slice(0, 6).map(p => postCard(p)).join('')}</div></section>` });
+    <section class="list box"><div class="grid">${postsNew.slice(0, 6).map(p => postCard(p, { land: true })).join('')}</div></section>` });
   fs.writeFileSync(path.join(ROOT, '404.html'), h404.replace('content="index, follow', 'content="noindex, follow'));
 }
 

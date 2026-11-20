@@ -9,7 +9,8 @@ POST_DETAIL['vienna-christmas'] = {
   seoTitle:'維也納聖誕市集怎麼逛？市政廳廣場、聖史蒂芬大教堂、格拉本大街，一晚走完三個市集',
   dek:'維也納的聖誕市集從 11 月中一路開到聖誕節前後，最大的一座在市政廳廣場（Wiener Christkindlmarkt），有旋轉木馬、溜冰道和整排木屋攤位。往內城走，聖史蒂芬大教堂前、瑪麗亞特蕾莎廣場也各有一座，格拉本大街頭頂掛滿水晶燈。逛的時候手上一定要有一杯熱紅酒，杯子每年都有新造型。',
   updated:'2026-11-20',
-  cover:'img/vienna-christmas/cover.jpg',
+  cover:'img/vienna-christmas/night.jpg',
+  cardV:true,  // 直式封面＝img/vienna-christmas.jpg（Nomo 11-20 指定 C1E480EB 夜景直式）
   coverCap:'夜裡的市政廳廣場：紅色蝴蝶結燈拱寫著 Wiener Christkindlmarkt，後面是亮燈的市政廳、旋轉木馬和掛滿燈泡的大樹。',
   place:{
     alt:['Wiener Christkindlmarkt','Vienna Christmas Market','Rathausplatz Christmas Market','維也納市政廳聖誕市集'],
