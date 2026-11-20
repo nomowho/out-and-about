@@ -4,7 +4,7 @@
 // 首頁順序＝這裡的排列順序（Nomo 11-20 指定，不再依篇數自動排）
 // 2026-11-20 Nomo 調整：刪除「歐洲建築巡禮」「建築與美術館」（舊網址轉到建築散策），新增深見系列＋建築散策＋藝術漫遊
 const SERIES = [
-  { id:'japan', card:'img/tokyo-kaminarimon/cover.jpg', t:'深見　日本', en:'JAPAN', tag:'從雪國走到喫茶店', wide:'img/tokyo-kaminarimon/wide.jpg', widePos:'50% 50%', img:'seiryuji',
+  { id:'japan', card:'img/tokyo-kaminarimon/wide.jpg', cardPos:'50% 50%', t:'深見　日本', en:'JAPAN', tag:'從雪國走到喫茶店', wide:'img/hoshino-oirase/01_card_A.jpg', widePos:'50% 50%', img:'seiryuji',
     d:'從東北的雪國到東京、名古屋、伊豆，一個國家慢慢走。',
     intro:'日本是我去最多次的國家，但每次都還有沒看過的角落。從青森的雪地大佛、奧入瀨的溪流，到東京鐵塔、淺草雷門，再到名古屋的喫茶店早餐與伊豆的古寺，這個系列收錄我在日本走過的地方，寫給想看見觀光地圖以外那一面的人。',
     region:'Japan' },
@@ -12,7 +12,7 @@ const SERIES = [
     d:'從北邊的多洛米蒂到南邊的西西里，一路往深處走。',
     intro:'義大利很長，從北邊雪白的多洛米蒂山區，到羅馬的古蹟與教堂、普利亞的蘑菇屋、馬泰拉的石窟城，一路往南走到西西里的火山與古希臘遺跡。這個系列收錄我在義大利走過的地方，看兩千年的歷史怎麼和日常生活疊在一起。',
     region:'Italy' },
-  { id:'portugal', card:'img/berlengas/cover.jpg', t:'深見　葡萄牙', en:'PORTUGAL', tag:'大西洋邊上的葡萄牙', wide:'img/berlengas/cover.jpg', widePos:'50% 22%', img:'berlengas',
+  { id:'portugal', card:'img/berlengas/cover.jpg', t:'深見　葡萄牙', en:'PORTUGAL', tag:'大西洋邊上的葡萄牙', wide:'img/berlengas/end-fort.jpg', widePos:'50% 62%', img:'berlengas',
     d:'大西洋外海的碉堡小島，和阿連特茹平原上的建築。',
     intro:'葡萄牙的風景，總和大西洋脫不了關係。從佩尼謝外海、只能搭船抵達的貝倫加斯群島與海上碉堡，到阿連特茹平原上的現代建築，這個系列收錄我在葡萄牙走過的地方，寫給想避開人潮、往海邊與內陸走得更遠一點的人。',
     region:'Portugal' },
@@ -20,7 +20,7 @@ const SERIES = [
     d:'從奧斯陸、南岸到羅弗敦群島，照片整理中。',
     intro:'挪威的風景很大，人很少。從奧斯陸的孟克美術館、耶夫納克橫跨河面的美術館 The Twist，到南岸的海底餐廳 Under、斯塔萬格的聖壇岩，一路往北到羅弗敦群島的山與鱈魚乾。這個系列收錄我在挪威走過的地方，照片正在整理中。',
     region:'Norway' },
-  { id:'architecture-walk', card:'img/byrne-portugal/front-v.jpg', t:'建築散策', en:'ARCHITECTURE', tag:'為一棟建築，出發一趟旅行', wide:'img/byrne-portugal/cover.jpg', widePos:'50% 50%', img:'tokyo-tower',
+  { id:'architecture-walk', card:'img/byrne-portugal/cover.jpg', t:'建築散策', en:'ARCHITECTURE', tag:'為一棟建築，出發一趟旅行', wide:'img/byrne-portugal/slit.jpg', widePos:'50% 50%', img:'tokyo-tower',
     d:'從高第的聖家堂到山本理顯的校園，看建築怎麼改變一座城市。',
     intro:'有些旅行，是為了一棟建築才出發的。從巴塞隆納蓋了一百多年的聖家堂、羅浮宮的玻璃金字塔、東京鐵塔，到山本理顯的名古屋造形大學與永山祐子的 AOI CELESTIE，這個系列整理我走過的建築，記下空間、光線和人之間的關係。',
     cat:'ARCHITECTURE' },
