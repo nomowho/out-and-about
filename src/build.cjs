@@ -18,7 +18,6 @@ const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
 // 系列專題：region／cat 型的系列自動收錄（新到舊）；沒有照片的系列（img 或 wide 為空）首頁先不放
 for (const s of SERIES) if (!s.ids) s.ids = postsNew.filter(p => (s.region && p.region === s.region) || (s.cat && p.cat === s.cat)).map(p => p.id);
-SERIES.sort((a, b) => b.ids.length - a.ids.length);   // 依收錄篇數多到少排（Nomo 11-20），同篇數維持資料順序
 const SERIES_SHOWN = SERIES.filter(s => s.img && s.wide);
 // 已刪除的系列：舊網址轉到新系列（Nomo 11-20），避免 Google 已收錄的連結變 404
 const SERIES_MOVED = { 'europe-architecture': 'architecture-walk', 'architecture-museum': 'architecture-walk' };
