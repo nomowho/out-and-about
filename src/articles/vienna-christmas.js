@@ -4,11 +4,13 @@
 //   廣場同時有 Wiener Eistraum 溜冰場；聖誕樹自 1959 年起每年由奧地利不同地方捐贈（wien.gv.at、old.christkindlmarkt.at）
 // ⚠️ IG 原文更正：「起源可追溯到中世紀」改為「最早有紀錄的維也納聖誕市集約在 1600 年前後，常見的『七百年歷史』說法市政府並不採用」；「聖誕樹高達數十米」查無數字，不寫
 // 造訪時間：12 月
-// 照片：Nomo 2026-11-20 指示先不放；原始 IG 圖在 output/photos/_ig-import/DD3vyUChf9z/、DSMtrLWkpTS/
+// 照片：2026-11-20 Nomo 補原檔 11 張（output/photos/vienna-christmas/），用 8 張：封面＝市政廳市集燈拱藍調時刻、卡片圖＝同景直式；未用：燈拱另一角度（與封面重複）、內城燈飾一張（無法確認地點）
 POST_DETAIL['vienna-christmas'] = {
   seoTitle:'維也納聖誕市集怎麼逛？市政廳廣場、聖史蒂芬大教堂、格拉本大街，一晚走完三個市集',
   dek:'維也納的聖誕市集從 11 月中一路開到聖誕節前後，最大的一座在市政廳廣場（Wiener Christkindlmarkt），有旋轉木馬、溜冰道和整排木屋攤位。往內城走，聖史蒂芬大教堂前、瑪麗亞特蕾莎廣場也各有一座，格拉本大街頭頂掛滿水晶燈。逛的時候手上一定要有一杯熱紅酒，杯子每年都有新造型。',
   updated:'2026-11-20',
+  cover:'img/vienna-christmas/cover.jpg',
+  coverCap:'市政廳廣場的燈拱，紅色蝴蝶結下寫著 Wiener Christkindlmarkt，後面是亮燈的市政廳與旋轉木馬。',
   place:{
     alt:['Wiener Christkindlmarkt','Vienna Christmas Market','Rathausplatz Christmas Market','維也納市政廳聖誕市集'],
     url:'https://www.christkindlmarkt.at/',
@@ -18,13 +20,17 @@ POST_DETAIL['vienna-christmas'] = {
     { t:'p', text:'走進市政廳廣場的那一刻，第一個看到的是一座巨大的燈拱，正中間一個紅色蝴蝶結，上面用金色燈泡寫著 Wiener Christkindlmarkt。拱門後面是整棟亮起來的哥德式市政廳，前面一座兩層樓的旋轉木馬，人多到要側身才擠得過去。' },
     { t:'h', id:'rathaus', text:'維也納最大的聖誕市集在哪裡？' },
     { t:'p', text:'在市政廳廣場（Rathausplatz）。這座市集 1975 年搬到這裡，現在是維也納規模最大、最具代表性的聖誕市集，一季湧進的人潮以百萬計。廣場上有上百個木屋攤位，賣木雕、玻璃球、毛織品和各種聖誕點心；旁邊的公園裡，每一棵大樹都纏滿燈泡，有一棵掛的全是紅色愛心。' },
+    { t:'pair', imgs:['img/vienna-christmas/ornaments.jpg','img/vienna-christmas/landtmann.jpg'], cap:'左：攤位上一籃一籃的聖誕玻璃球。右：環城大道上的 Café Landtmann，門口也立起一棵聖誕樹。' },
     { t:'p', text:'市集期間，廣場上還會鋪出一條穿過樹林的溜冰道，大人小孩都可以在燈下溜冰。廣場正中央的聖誕樹也有來頭：從 1959 年起，每年都由奧地利不同的地方捐贈。' },
     { t:'h', id:'history', text:'維也納聖誕市集真的有七百年歷史嗎？' },
     { t:'p', text:'很多介紹會說維也納的聖誕市集源自中世紀、有七百多年歷史，但維也納市政府自己的說法是：這個說法站不住腳。有紀錄可查的聖誕市集大約在 1600 年前後，地點也換過好幾次；1842 年搬到 Am Hof 廣場時，才開始叫做 Christkindlmarkt（聖嬰市集）。從賣冬季日用品的市場，慢慢變成今天這種以氣氛為主的節慶活動。' },
     { t:'h', id:'more', text:'除了市政廳，維也納還有哪些聖誕市集？' },
     { t:'p', text:'從市政廳往內城走，一路都是聖誕景色。聖史蒂芬大教堂前的廣場也有一座市集，哥德式的大教堂在燈光下泛著紅光，下雨的晚上地面全是倒影。格拉本大街上頭掛著一盞盞巨大的水晶燈，旁邊是巴洛克的黑死病紀念柱；精品店的整面外牆也會掛上聖誕樹。博物館區之間的瑪麗亞特蕾莎廣場，在女皇雕像下也擺滿了木屋攤位。' },
+    { t:'pair', imgs:['img/vienna-christmas/stephansdom.jpg','img/vienna-christmas/fiaker.jpg'], cap:'左：雨夜的聖史蒂芬大教堂，聖誕樹就立在大門旁。右：白天的大教堂，觀光馬車從門前經過。' },
+    { t:'img', size:'wide', src:'img/vienna-christmas/maria-theresien.jpg', cap:'瑪麗亞特蕾莎廣場，女皇雕像下的聖誕市集。' },
     { t:'h', id:'punsch', text:'在維也納聖誕市集要喝什麼？' },
-    { t:'p', text:'冷到手指發麻的晚上，一定要點一杯熱紅酒（Glühwein）或潘趣酒（Punsch）。飲料會裝在陶瓷馬克杯裡，杯錢另外收押金，喝完可以退杯拿回押金，也可以直接把杯子帶回家。每個市集的杯子造型都不一樣，而且每年換新設計，所以很多人是一個市集收一個杯子。' },
+    { t:'p', text:'冷到手指發麻的晚上，一定要點一杯熱紅酒（Glühwein）或潘趣酒（Punsch）。飲料會裝在陶瓷馬克杯裡，杯錢另外收押金，喝完可以退杯拿回押金，也可以直接把杯子帶回家。每個市集的杯子造型都不一樣，而且每年換新設計，所以很多人是一個市集收一個杯子。攤位也賣熱湯，一碗紅椒牛肉湯（Gulaschsuppe）配個麵包，就是冬夜裡最實在的一餐。' },
+    { t:'pair', imgs:['img/vienna-christmas/mugs.jpg','img/vienna-christmas/soup.jpg'], cap:'左：跨年期間的杯子換成馬蹄鐵造型，杯身寫著 Happy New Year Vienna。右：賣紅椒牛肉湯和大蒜奶油湯的木屋攤位。' },
     { t:'p', text:'→ 同一趟旅行：<a href="/stories/salzburg/">薩爾茲堡</a>｜<a href="/stories/hallstatt/">哈修塔特</a>' }
   ],
   info:[
