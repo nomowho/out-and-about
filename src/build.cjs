@@ -502,7 +502,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <ul class="rings one"><li><a class="ring" href="/journal/" aria-label="打開 Photo Journal 攝影日誌，看全部旅行照片">
           <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" loading="lazy" decoding="async"></span>
         </a></li></ul>
-      <p class="bio"><span lang="en">🪐 Drifting through the world, framing the moment, exploring beyond.</span>在世界亂走，拍下眼前，無盡探索。</p>
+      <p class="bio"><span lang="en">🪐 Places, light, and passing moments.</span>在世界亂走，拍下眼前，無盡探索。</p>
     </div>
     <a class="ig" href="https://www.instagram.com/nomowho/" rel="me noopener">在 Instagram 追蹤 @nomowho</a>
   </aside>
