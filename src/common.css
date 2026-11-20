@@ -679,3 +679,11 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
   .tser .toh-one figure{aspect-ratio:16/9;max-height:90vh}
   .tser-arr{top:calc(min(100vw * 9 / 16, 90vh) / 2)}
 }
+/* 專題標題兩側的極簡小箭頭（Nomo 11-20） */
+.tser-mini{position:absolute;top:0;left:0;z-index:3;width:34px;height:34px;margin-top:-17px;border:0;background:none;padding:0;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transition:opacity .3s,transform .25s}
+.tser-mini.on{opacity:.55}
+.tser-mini:hover{opacity:1}
+.tser-mini.l:hover{transform:translateX(-3px)}.tser-mini.r:hover{transform:translateX(3px)}
+.tser-mini svg{width:22px;height:22px;fill:none;stroke:#111;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.tser-mini:focus-visible{outline:2px solid var(--ink);outline-offset:2px;opacity:1}
+@media(max-width:700px){.tser-mini{width:30px;height:30px;margin-top:-15px}.tser-mini svg{width:20px;height:20px}}

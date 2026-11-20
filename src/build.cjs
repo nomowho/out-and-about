@@ -524,6 +524,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span></div><h3>${esc(S.t)}</h3><div class="place">${esc(S.d)}</div></div>
     </a>`).join('')}</div>
     <button class="tser-arr l" type="button" aria-label="上一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="tser-arr r" type="button" aria-label="下一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    <button class="tser-mini l" type="button" aria-label="上一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5L9 12l5.5 5.5"/></svg></button><button class="tser-mini r" type="button" aria-label="下一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6.5L15 12l-5.5 5.5"/></svg></button>
   </div>
   <a class="viewmore tser-more" href="${url.series(SERIES_SHOWN[0].id)}">View More　›</a>
 </section>
