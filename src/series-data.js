@@ -7,7 +7,7 @@ const SERIES = [
     d:'十二月底的青森、岩手、宮城、山形，雪把一切都變安靜。',
     intro:'十二月底，我沿著青森、岩手、宮城、山形一路往北。雪把聲音都收走了，只剩奧入瀨的溪水、青龍寺大佛肩上的積雪，和猊鼻溪小船裡的暖桌火鍋。這個系列收錄十段冬日旅程，從神社、美術館到溫泉旅館，寫給想在最冷的季節認識東北的人。',
     ids:['aomori-top10','seiryuji','towada','oirase','hoshino-oirase','aomori-museum','geibikei','kaneja','tohoku-luxun','yamadera'] },
-  { id:'nagoya', t:'被低估的城市　名古屋', en:'NAGOYA', tag:'名古屋，比你想的有趣', wide:'img/nagoya-morning/card5_IMG_8027.jpg', widePos:'50% 50%', img:'nagoya-morning',
+  { id:'nagoya', t:'被低估的城市　名古屋', en:'NAGOYA', tag:'名古屋，比你想的有趣', wide:'img/hotei-daibutsu/cover.jpg', widePos:'50% 47%', img:'nagoya-morning',
     d:'早餐、大學、大佛，名古屋比你想的有趣。',
     intro:'很多人只把名古屋當轉運站，我卻在這裡待得比預期還久。從昭和喫茶店到精品咖啡的早餐文化、永山祐子的藍色屋頂 AOI CELESTIE、山本理顯的校園，到被電車戴上墨鏡的布袋大佛，這個系列寫給願意多停一天、慢慢認識名古屋的人。',
     ids:['nagoya-morning','aoi-celestie','nagoya-zokei','hotei-daibutsu'] },
