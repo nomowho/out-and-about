@@ -18,6 +18,19 @@
 - [葡萄牙紅色混凝土建築：Gonçalo Byrne 的阿托萊魯什戰役解說中心，牆上那道裂縫是戰爭的傷痕](https://nomowho.com/stories/byrne-portugal/): 阿托萊魯什戰役解說中心（Centro de Interpretação da Batalha de Atoleiros）在葡萄牙阿連特茹的 Fronteira 小鎮，由葡萄牙建築師 Gonçalo Byrne 設計、2012 年完成，紀念…
 - [挪威 Kilden 表演藝術中心：一片波浪形的橡木牆，像城市送給大海的禮物盒](https://nomowho.com/stories/kilden/): Kilden 表演藝術中心在挪威南部 Kristiansand 的入海口，由芬蘭 ALA Architects 與挪威 SMS Arkitekter 設計，2012 年開幕。
 - [羅浮敦 Trevarefabrikken：北極圈裡的老木工廠，蒸完 80 度桑拿直接跳進 8 度的海](https://nomowho.com/stories/trevarefabrikken/): Trevarefabrikken 在挪威羅浮敦群島的 Henningsvær 漁村，原本是一座面海的老木材加工廠，荒廢多年後被年輕創業者改成結合住宿、咖啡、餐廳和藝文活動的空間。建築後方的岩岸有一間桑拿，蒸完可以直接跳進北極海。
+- [匈牙利國會大廈參觀攻略：96 公尺高、40 公斤黃金，多瑙河畔最華麗的立法院](https://nomowho.com/stories/budapest-parliament/): 匈牙利國會大廈（Országház）在布達佩斯多瑙河東岸，1885 年動工、1904 年完工，是匈牙利最大的建築。中央圓頂高 96 公尺，裡面有 691 個房間，用了約 4,000 萬塊磚和 40 公斤黃金。
+- [維也納國家圖書館國事廳：比霍格華茲還魔幻的巴洛克大廳，20 萬冊古書與查理六世的天頂](https://nomowho.com/stories/vienna-library/): 奧地利國家圖書館的國事廳（Prunksaal）在維也納霍夫堡皇宮的約瑟夫廣場旁，1723 到 1726 年為哈布斯堡皇帝查理六世興建。
+- [維也納百水公寓：沒有直線、沒有一扇窗一樣，還有人住的童話公宅](https://nomowho.com/stories/hundertwasser/): 百水公寓（Hundertwasserhaus）在維也納第三區，是藝術家百水先生和建築師 Krawina 合作、1985 年完工的市政府公宅。整棟樓沒有一條直線，每扇窗都不一樣，屋頂和陽台種了約 250 棵樹和灌木。
+- [辛特拉蒙塞拉特宮：蕾絲般的摩爾式長廊，英國富商打造的浪漫主義夏宮與 33 公頃植物園](https://nomowho.com/stories/monserrate/): 蒙塞拉特宮（Palácio de Monserrate）在葡萄牙辛特拉山區，是十九世紀英國紡織富商 Francis Cook 請建築師 James Knowles 打造的夏宮，混合了哥德式、摩爾式和印度風格，室內的石雕細到像蕾絲。
+- [辛特拉雷加萊拉宮：走下螺旋啟蒙井、鑽進地道，像闖進魔戒的矮人王國](https://nomowho.com/stories/regaleira/): 雷加萊拉宮（Quinta da Regaleira）在葡萄牙辛特拉，是富商 Carvalho Monteiro 在 1890 年代買下後，請義大利建築師兼舞台設計師 Luigi Manini 打造的神祕莊園。
+- [里斯本 MAAT 博物館：15,000 片白色陶磚像魚鱗，可以走上屋頂看太加斯河](https://nomowho.com/stories/maat/): MAAT（藝術、建築與科技博物館）在里斯本貝倫區的太加斯河畔，是英國建築師 Amanda Levete 的事務所 AL_A 設計、2016 年開幕的曲線新館。外牆貼著 15,000 片白色立體陶磚，像魚鱗一樣隨著光線和河面變化；
+- [里斯本尚帕利莫未知中心：蓋在航海家出航處的研究醫院，Charles Correa 設計、一半土地開放民眾](https://nomowho.com/stories/champalimaud/): 尚帕利莫未知中心（Champalimaud Centre for the Unknown）在里斯本貝倫的太加斯河出海口，是一座結合醫院與生醫研究的中心，2010 年開幕，研究重點是神經科學和癌症。
+- [波多萊羅書店 Livraria Lello：紅色旋轉樓梯與哈利波特傳說，門票可以折抵買書](https://nomowho.com/stories/livraria-lello/): 萊羅書店（Livraria Lello）在葡萄牙波多市中心，1906 年開幕，是常被列入世界最美書店的雙層書店。木雕書牆、彩繪玻璃天窗和那座紅色的分岔旋轉樓梯，讓它被說成是霍格華茲的靈感來源，不過羅琳本人說她從沒進去過。
+- [葡萄牙最美的藍白磁磚教堂？科爾特加薩聖瑪琳娜教堂，奧瓦爾路上的意外驚喜](https://nomowho.com/stories/cortegaca/): 聖瑪琳娜教堂（Igreja de Santa Marinha de Cortegaça）在葡萄牙北部奧瓦爾附近的小鎮科爾特加薩，建於二十世紀初，整棟外牆從上到下貼滿藍白瓷磚，畫著一幕幕聖經故事。
+- [哥本哈根 Urban Rigger：BIG 用貨櫃蓋的漂浮學生宿舍，住在港口上的平價海景房](https://nomowho.com/stories/urban-rigger/): Urban Rigger 是丹麥建築事務所 BIG（Bjarke Ingels Group）設計的漂浮學生宿舍，2016 年進駐哥本哈根港。它把廢棄貨櫃堆成兩層、錯開排列，中間圍出一座共享花園，屋頂是太陽能板、露台和草皮。
+- [斯德哥爾摩林地墓園 Skogskyrkogården：二十世紀最美的墓園，走進森林慢慢告別](https://nomowho.com/stories/skogskyrkogarden/): 林地墓園（Skogskyrkogården）在斯德哥爾摩南郊，由建築師 Asplund 和 Lewerentz 從 1917 年起花了二十多年設計，把墓園蓋進一整片松樹林裡。一座巨大的花崗岩十字架立在草坡上，指向火葬場；
+- [花蓮豐濱「緩慢尋路 石梯灣118」：像沒蓋完的清水模民宿，把主角全留給太平洋](https://nomowho.com/stories/shitiwan-118/): 石梯灣 118 在花蓮豐濱鄉港口村，是建築師陳冠華設計的清水模民宿，粗獷的灰色牆面和長長的水平線條，乍看會以為是還沒完工的工地。設計理念是「少即是多，空即是滿」，拿掉多餘的裝飾，把主角全部留給窗外的太平洋和石梯坪的海岸。
+- [馬爾默散步：Henning Larsen 的「光之曆」圖書館，和石板路上吹喇叭的銅像樂隊](https://nomowho.com/stories/malmo/): 馬爾默是瑞典南部、隔著厄勒海峽和哥本哈根相望的城市。市立圖書館由一座 1901 年的「城堡」老館，和丹麥建築師 Henning Larsen 1997 年設計的玻璃新館「光之曆」組成，大面落地窗把公園的光整片引進閱覽室。
 
 ## ART 藝術
 
@@ -28,6 +41,14 @@
 - [奧斯陸 MUNCH 蒙克美術館：港邊的金屬沙蟲，全世界最多蒙克作品，《吶喊》為什麼要輪流展？](https://nomowho.com/stories/munch/): MUNCH 蒙克美術館在奧斯陸港邊，由西班牙建築事務所 Estudio Herreros 設計、2021 年開館，13 層高的塔樓頂端向海灣傾斜，外面包覆回收鋁製的穿孔板。館內收藏蒙克一生逾 26,000 件作品，是全世界最大的蒙克收藏；
 - [挪威 The Twist：BIG 設計、扭轉 90 度的橋上美術館，奧斯陸開車一小時的建築朝聖地](https://nomowho.com/stories/the-twist/): The Twist 在挪威 Jevnaker 的 Kistefos 雕塑公園裡，是丹麥建築事務所 BIG 設計、2019 年開幕的「可以住人的橋」。整座美術館橫跨 Randselva 河，由一端到另一端扭轉 90 度，牆壁慢慢變成天花板。
 - [挪威 Kunstsilo：1935 年的穀倉變成美術館，全球最大北歐現代藝術收藏就在 Kristiansand 港邊](https://nomowho.com/stories/kunstsilo/): Kunstsilo 在挪威南部 Kristiansand 港邊，由一座 1935 年的功能主義穀倉改建，2024 年 5 月開館。
+- [維也納分離派會館怎麼看？金色高麗菜圓頂與克林姆《貝多芬飾帶》，戴上耳機聽快樂頌](https://nomowho.com/stories/secession/): 維也納分離派會館（Secession）是 1898 年一群反叛學院的藝術家為自己蓋的展覽館，由建築師 Olbrich 設計，屋頂是約 3,000 片鍍金月桂葉組成的圓頂。
+- [美景宮上宮怎麼看克林姆？《吻》《茱蒂絲》都在這裡，全世界最大的克林姆收藏](https://nomowho.com/stories/belvedere/): 美景宮（Belvedere）是 18 世紀初為歐根親王蓋的巴洛克夏宮，上宮在 1717 到 1723 年間完成，後來成為哈布斯堡皇室的收藏館，也是世界最早的公共美術館之一。
+- [植田正治寫真美術館：高松伸用清水模框住大山，鳥取攝影巨匠的「植田調」](https://nomowho.com/stories/ueda-shoji-museum/): 植田正治寫真美術館在鳥取縣伯耆町的大山山腳，1995 年開館，由建築師高松伸設計。清水模的高牆把有「伯耆富士」之稱的大山框成一幅畫，水池倒映著山影。
+- [足立美術館：連續 22 年日本庭園第一，窗框就是畫框，島根最值得專程去的美術館](https://nomowho.com/stories/adachi-museum/): 足立美術館在島根縣安來市，1970 年由在地實業家足立全康創立。約 16.5 公頃的日本庭園，從 2003 年起被美國日本庭園專門誌連續 22 年評為日本第一。他說「庭園也是一幅畫」，所以館內的窗戶都被當成畫框，把遠山和白砂青松裝進去。
+- [馬爾默街邊的老鼠商店街 Anonymouse：牆角裡的迷你餐廳、堅果店和藥局](https://nomowho.com/stories/anonymouse/): Anonymouse 是一個瑞典的匿名藝術團體，2016 年在馬爾默的牆角蓋了第一家「給老鼠的」迷你義大利餐廳 Il Topolino，旁邊還有一家堅果店。
+- [哥本哈根尋找六個被遺忘的巨人：Thomas Dambo 用回收木頭做的森林巨人，我走了四萬步只找到三個](https://nomowho.com/stories/forgotten-giants/): 「六個被遺忘的巨人」（The Six Forgotten Giants）是丹麥藝術家 Thomas Dambo 散落在哥本哈根西郊森林裡的六座大型木雕，全部用回收木材做成，每一個都以幫忙製作的志工命名。沒有指示牌，要靠地圖和線索自己去找。
+- [瑞典最美車站：斯德哥爾摩 Solna Centrum 的紅色天空，與馬爾默 Triangeln 的地下玻璃穹頂](https://nomowho.com/stories/sweden-stations/): 瑞典的車站可以美得像美術館。斯德哥爾摩地鐵 Solna Centrum 站，整個岩洞被畫成火紅的天空和綠色的森林，1975 年完成，還藏著當年對砍伐森林和污染的提醒。
+- [尋找梵谷：聖雷米療養院的小房間，他在這裡一年畫了約 150 幅，包括《星夜》](https://nomowho.com/stories/van-gogh-saint-remy/): 1889 年 5 月，梵谷在亞爾割耳事件後，自願住進聖雷米的聖保羅療養院（Saint-Paul de Mausole）。他在這裡待了一年，留下約 150 幅畫，《星夜》、《鳶尾花》、《有絲柏的麥田》都誕生在這段時間。
 
 ## HISTORY 歷史
 
@@ -49,6 +70,20 @@
 - [羅馬亞文提諾鑰匙孔：一個洞看見三個國家，排隊多久？順遊橘園看聖彼得穹頂](https://nomowho.com/stories/aventine/): 亞文提諾鑰匙孔（Aventine Keyhole）在羅馬亞文提諾山的馬爾他騎士團大門上。從鑰匙孔望進去，前景是享有治外法權的騎士團花園、中景是羅馬市區、盡頭是梵蒂岡聖彼得大教堂的圓頂，一眼看見三個「國度」。
 - [斯塔萬格石中劍 Sverd i fjell：三把巨劍插進峽灣，紀念 872 年維京人統一挪威的一戰](https://nomowho.com/stories/stavanger/): 斯塔萬格（Stavanger）在挪威西南部，是北海石油之都，也是爬聖壇岩的出發城市。城外哈弗斯峽灣邊的「石中劍」（Sverd i fjell）是三把約 10 公尺高的青銅巨劍，1983 年揭幕，紀念 872 年金髮王哈拉爾一世在這裡打贏統…
 - [挪威卑爾根：一年下雨 200 多天的城市，布呂根彩色木屋為什麼是世界遺產？](https://nomowho.com/stories/bergen/): 卑爾根（Bergen）是挪威第二大城、峽灣之旅的門戶，一年下雨超過 200 天。港邊的布呂根（Bryggen）是中世紀漢薩同盟商人留下的彩色木造碼頭，1979 年列入世界遺產；搭弗洛伊恩山纜車上山，可以俯瞰整片鋪進海灣的屋頂。
+- [薩爾茲堡一日散步：千年沒被攻下的霍亨薩爾茲堡要塞、穀物街鐵招牌與莫札特出生地](https://nomowho.com/stories/salzburg/): 薩爾茲堡在奧地利西部、靠近德國邊境，因鹽而富，由總主教統治了上千年。舊城 1996 年列入世界遺產，地標是 1077 年動工的霍亨薩爾茲堡要塞，官方說它從未被武力攻下。
+- [哈修塔特人骨屋怎麼看？1,200 顆頭骨、610 顆彩繪，奧地利湖畔小鎮最安靜的角落](https://nomowho.com/stories/hallstatt-beinhaus/): 哈修塔特人骨屋（Beinhaus）在天主教堂旁的聖米迦勒小禮拜堂地下，收著約 1,200 顆頭骨，其中約 610 顆畫上了花葉、十字架和名字。因為夾在湖和山之間的小鎮墓地不夠用，遺骨入土十幾年後會被請出來，洗淨、日曬，再整齊地排上架子。
+- [哈修塔特為什麼叫上帝的明信片？七千年鹽礦、鐵器時代文化與冬天的湖景](https://nomowho.com/stories/hallstatt/): 哈修塔特（Hallstatt）在奧地利上奧地利邦，夾在哈爾施塔特湖和達赫斯坦山之間。小鎮因鹽而生，考古顯示這裡的鹽礦已開採約七千年，歐洲早期鐵器時代的「哈修塔特文化」就以它命名。
+- [《馬德里不思議》MV 拍攝地其實在匈牙利：布達佩斯近郊的藝術小鎮聖安德烈](https://nomowho.com/stories/szentendre/): 聖安德烈（Szentendre）在布達佩斯北方的多瑙河畔，搭郊區火車約 40 分鐘。蔡依林《馬德里不思議》的 MV 就是在這裡拍的，不是馬德里。1690 年塞爾維亞人逃離鄂圖曼戰火遷居到此，留下好幾座東正教堂；
+- [出雲大社參拜攻略：日本最大注連繩 5.2 噸、二禮四拍手、眾神開會的神在月](https://nomowho.com/stories/izumo-taisha/): 出雲大社在島根縣出雲市，供奉結緣之神大國主大神，起源可追溯到《古事記》裡的國讓神話。神樂殿前的大注連繩長 13.6 公尺、重 5.2 噸，是日本最大的注連繩。
+- [三德山投入堂登山全紀錄：日本最危險的國寶，鎖鏈攀岩、草鞋翻船與入山 8 條規定](https://nomowho.com/stories/nageiredo/): 三德山三佛寺在鳥取縣三朝町，傳說 706 年由修驗道開祖役行者開山。最深處的奧院「投入堂」是國寶，整座木造佛堂卡在懸崖的凹洞裡，傳說是役行者用法力把它丟進去的。
+- [布拉加山上仁慈耶穌朝聖所：之字形巴洛克天梯、五感噴泉與伊比利半島第一條纜車](https://nomowho.com/stories/bom-jesus/): 山上仁慈耶穌朝聖所（Bom Jesus do Monte）在葡萄牙北部古城布拉加的山坡上，2019 年列入世界遺產。最有名的是一道之字形往上爬約 116 公尺的白色巴洛克階梯，中途的「五感階梯」噴泉，水從雕像的眼睛、耳朵、鼻子和嘴巴流出來。
+- [葡萄牙鄉間的巨大廢墟 Obras do Fidalgo：只蓋了一道立面的巴洛克豪宅，停工原因至今成謎](https://nomowho.com/stories/obras-do-fidalgo/): Obras do Fidalgo（貴族的作品）在葡萄牙北部 Marco de Canaveses 的 Vila Boa de Quires 村，又叫「未完成之屋」。
+- [托馬爾基督修道院：聖殿騎士的圓形教堂與曼努埃爾大窗，葡萄牙保存最完整的騎士城堡](https://nomowho.com/stories/tomar/): 托馬爾的基督修道院（Convento de Cristo）在葡萄牙中部，1160 年由聖殿騎士團建立，是騎士團在葡萄牙的大本營，1983 年列入世界遺產。最震撼的是十二世紀的圓形教堂 Charola，騎士們據說能騎著馬進去望彌撒。
+- [伊比利半島的天空之城馬爾旺 Marvão：海拔 843 公尺的城牆小鎮，一眼望進西班牙](https://nomowho.com/stories/marvao/): 馬爾旺（Marvão）在葡萄牙東部阿連特茹、緊貼西班牙邊境，整座中世紀小鎮蓋在聖馬梅德山脈一塊巨岩的頂端，城堡海拔 843 公尺，厚重的城牆把房子和城堡緊緊圍在一起。從城堡往東看，西班牙的平原一路延伸到天邊。
+- [艾佛拉一日散步：人骨禮拜堂 5,000 具遺骸、1186 年的主教座堂與屋頂坐著巨人的恩典聖母堂](https://nomowho.com/stories/evora/): 艾佛拉（Évora）在葡萄牙南部阿連特茹，整個歷史中心在 1986 年列入世界遺產。這座城最有名的是聖方濟教堂旁的人骨禮拜堂，牆面和柱子嵌著約 5,000 具遺骸，入口寫著「我們的骨頭在這裡，等著你們的骨頭」。
+- [斯德哥爾摩北歐博物館：像城堡的博物館，大廳坐著 6 公尺高的古斯塔夫・瓦薩國王](https://nomowho.com/stories/nordiska-museet/): 北歐博物館（Nordiska museet）在斯德哥爾摩的動物園島上，是瑞典最大的文化史博物館，收藏從十六世紀到今天的瑞典人生活。建築由 Isak Gustaf Clason 設計、1907 年落成，外觀像一座文藝復興城堡。
+- [莫斯科聖巴西爾大教堂：九個彩色洋蔥頂，恐怖伊凡弄瞎建築師其實是傳說](https://nomowho.com/stories/st-basil/): 聖巴西爾大教堂在莫斯科紅場南端，是伊凡四世（恐怖伊凡）為了紀念攻下喀山而建，1555 年動工、1561 年完成。九座禮拜堂像積木一樣組合在一起，每一座都頂著顏色、花紋都不一樣的洋蔥圓頂。
+- [嘉德水道橋 Pont du Gard：古羅馬人為了喝水，蓋了 50 公里、每公里只降 25 公分的輸水道](https://nomowho.com/stories/pont-du-gard/): 嘉德水道橋在南法尼姆附近，是古羅馬人在西元一世紀蓋的輸水道橋，三層石拱、高約 48.8 公尺。它只是一條 50 公里長輸水道的其中一段：整條水道從于澤的泉水一路送水到尼姆，平均每公里只往下降約 25 公分。
 
 ## NATURE 自然
 
@@ -62,16 +97,37 @@
 - [挪威聖壇岩 Preikestolen 怎麼爬？604 公尺高、沒有護欄的峽灣石台，《不可能的任務》在這裡拍結局](https://nomowho.com/stories/preikestolen/): 聖壇岩（Preikestolen）在挪威西南部的呂瑟峽灣（Lysefjord）上方約 604 公尺，是一塊約 25×25 公尺、四周沒有護欄的天然石台。從停車場出發單程約 4 公里，走 2 到 2.5 小時，難度中等。
 - [羅浮敦的馬特洪峰 Volandstind：457 公尺的三角尖峰，幸運的話會戴上一頂雲做的帽子](https://nomowho.com/stories/volandstind/): Volandstind 在挪威羅浮敦群島的 Flakstadøya 島上，海拔約 457 公尺，形狀尖銳、孤立在海灣和橋邊，被稱為「羅浮敦的馬特洪峰」。最好的觀景點在 Fredvang 雙橋附近；天氣對的時候，山頂會出現一圈蓋帽雲。
 - [羅浮敦 Reinebringen 怎麼爬？1,500 多階雪巴石階、一小時直上 448 公尺，看見最經典的 Reine 全景](https://nomowho.com/stories/reinebringen/): Reinebringen 在挪威羅浮敦群島 Reine 村旁，海拔約 448 公尺。過去的土石路又陡又滑、事故頻傳，2016 年起由尼泊爾雪巴工匠鋪設了 1,500 多階石階，現在約 1 到 1.5 小時就能登頂，俯瞰羅浮敦最經典的 Re…
+- [國王湖冰教堂 Eiskapelle：冬天爬到雪腰深，才發現它被雪崩埋了；2025 年已完全崩塌](https://nomowho.com/stories/eiskapelle/): 冰教堂（Eiskapelle）是德國貝希特斯加登國家公園裡、瓦茨曼山東壁山腳下的一片萬年雪原，夏天融水會在冰裡掏出一座拱形冰洞。從國王湖的聖巴爾多祿茂教堂出發就能走到。我在 12 月去，積雪深到腰，終點的冰洞卻被雪崩整個蓋住；
+- [德國國王湖冬天值得去嗎？只准電動船的湖、小號回音與紅蔥頭教堂](https://nomowho.com/stories/koenigssee/): 國王湖（Königssee）在德國巴伐利亞東南角、靠近薩爾茲堡，是冰河切出來的狹長山湖。從 1909 年起湖上只准電動船，水清到看得見湖底。船開到一半，船夫會停下來對著山壁吹小號，聽回音在山谷裡彈好幾次；
+- [鳥取沙丘怎麼玩？爬上 47 公尺的馬之背看日本海，順遊隈研吾設計的 TAKAHAMA CAFE](https://nomowho.com/stories/tottori-dunes/): 鳥取沙丘在鳥取市的日本海岸，東西約 16 公里，是千代川帶下來的沙被季風吹上岸堆成的海岸沙丘，1955 年列為國家天然紀念物。最高的沙稜「馬之背」超過 47 公尺，爬上去就能看到整片日本海。
+- [羅浮敦自駕 E10 國王之路：一條路串起整個群島，終點是名字只有一個字的 Å](https://nomowho.com/stories/lofoten-e10/): E10 是貫穿挪威羅浮敦群島的主幹道，挪威人叫它「國王奧拉夫之路」（Kong Olavs vei），往西一路開到最南端的小村 Å 就是終點。2007 年 Lofast 道路通車後，從挪威本島開車進羅浮敦不必再搭渡輪。
+- [羅浮敦 Reine 與 Hamnøy：明信片頭版的紅色漁屋村，夏天夜裡的粉紅色山頭](https://nomowho.com/stories/reine/): Reine 是挪威羅浮敦群島最常出現在明信片上的漁村，紅白相間的漁屋貼著海岸，背後是從海面直直拔起的尖峰。往東 6 公里的 Hamnøy，從橋上看出去的紅色漁屋島，是全挪威最常被拍的畫面之一；旁邊的 Sakrisøy 則是一排黃色漁屋。
+- [Henningsvær：北極圈的威尼斯，世界最美的島尖足球場與魚子醬工廠改建的美術館](https://nomowho.com/stories/henningsvaer/): Henningsvær 是挪威羅浮敦群島上的小漁村，整個村子蓋在 Heimøya 和 Hellandsøya 兩座小島上，有「羅浮敦的威尼斯」之稱。島尖那座被岩石和大海包圍的足球場，常被說是世界最美的球場；
+- [葡萄牙帕伊瓦步道與 Arouca 516：沿河 8 公里木棧道，再走一趟懸空 175 公尺的世界級吊橋](https://nomowho.com/stories/paiva-arouca/): 帕伊瓦步道（Passadiços do Paiva）在葡萄牙北部的 Arouca，是沿著帕伊瓦河谷蓋的 8 公里多木棧道。步道旁的 Arouca 516 是一座長 516 公尺、離河面約 175 公尺高的行人吊橋，2021 年開放時是世界…
+- [葡萄牙納扎雷：世界最大浪 26.21 公尺的海灘，海底峽谷把浪推成十層樓高](https://nomowho.com/stories/nazare/): 納扎雷（Nazaré）在葡萄牙中部西海岸，北海灘是全世界衝浪者朝聖的大浪聖地。外海一道深長的海底峽谷，把大西洋的湧浪集中推向岸邊，冬天能疊出好幾層樓高的巨浪。金氏世界紀錄最大浪 26.21 公尺，就是 2020 年在這裡衝出來的。
+- [阿爾加維貝納吉爾海蝕洞：頂上開天窗的大西洋之眼，2024 年起禁止上沙灘的新規定](https://nomowho.com/stories/benagil/): 貝納吉爾海蝕洞（Algar de Benagil）在葡萄牙南部阿爾加維海岸，是一個被海浪掏空的巨大石灰岩洞，洞頂破了一個圓形天窗，陽光從上面灑在洞裡的金色沙灘上，被叫做「大西洋之眼」。
+- [野柳名字的由來：西班牙人叫它「魔鬼岬」，上千萬年的砂岩被海浪雕成女王頭](https://nomowho.com/stories/yehliu/): 野柳在新北市萬里區，是一道伸進海裡約 1,700 公尺的海岬。十七世紀西班牙人的船常在這裡觸礁，就把它叫做 Punto Diablos（魔鬼岬），後來漢人用閩南語音譯成「iá-liú」，也就是今天的野柳。
+- [冬天的法羅群島：下午三點天就黑、跨年夜漁船一起發射求救信號彈，還有直落大海的 Múlafossur 瀑布](https://nomowho.com/stories/faroe-winter/): 法羅群島在冰島和挪威之間的北大西洋上，冬天一天只有三、四個小時的日照。我在跨年時去，下了飛機先開車去看海上的「女巫的手指」，再去 Gásadalur 看直接落進大海的 Múlafossur 瀑布。
+- [南法紅土之城 Roussillon：整座村子被赭石染紅，傳說是一位城堡夫人的血](https://nomowho.com/stories/roussillon/): 胡西雍（Roussillon）是南法呂貝宏山區的一座小山城，整個村子坐落在赭石峭壁上，房子漆成橘、紅、粉、黃，遠看像一團燒起來的夕陽。地質學說紅色來自富含鐵的赭土；當地傳說則說，是一位城堡夫人從懸崖一躍而下，鮮血染紅了這片土地。
+- [南法碧泉村 Fontaine-de-Vaucluse：號稱「法國九寨溝」，藏著世界第五大的湧泉](https://nomowho.com/stories/fontaine-de-vaucluse/): 碧泉村（Fontaine-de-Vaucluse）在南法呂貝宏山腳，清澈碧綠的索格河從村子中間流過。河的源頭就在村子盡頭的峭壁下，是法國最大、世界第五大的湧泉。號稱「法國九寨溝」其實有點言過其實，但它清清幽幽的，很適合慢慢待上兩個小時。
 
 ## FOOD 美食
 
 - [名古屋早餐モーニング怎麼吃？點咖啡送吐司的兩間店：昭和喫茶 Kako 與精品 AOI CELESTIE](https://nomowho.com/stories/nagoya-morning/): 名古屋的「モーニング」是點一杯咖啡，就免費附上吐司、水煮蛋等早餐的喫茶店文化。本篇介紹兩種風格：名古屋站附近的昭和老店 Coffee House Kako（約 ¥500–650），和東區的精品烘豆店 AOI CELESTIE COFFEE…
 - [挪威 Under 海底餐廳：歐洲第一間水下米其林，在海面下 5 公尺看魚吃飯是什麼感覺？](https://nomowho.com/stories/under/): Under 在挪威本土最南端的 Lindesnes，是 Snøhetta 設計、2019 年開業的歐洲第一間海底餐廳，2020 年起獲得米其林星級。
 - [羅浮敦群島風乾鱈魚：掛在木架上吹三個月的海風，為什麼一路賣到義大利和奈及利亞？](https://nomowho.com/stories/lofoten-stockfish/): 風乾鱈魚（Stockfish）是挪威羅浮敦群島千年以上的傳統。每年冬末春初，洄游上岸的北極鱈被成對掛在海邊木架上，靠寒冷、乾燥又不結冰的海風自然風乾約三個月，不加鹽也不會壞，至今仍大量出口到義大利、奈及利亞與克羅埃西亞。
+- [維也納 Aufzug Café：坐在百年老電梯裡喝咖啡，中央車站旁的電梯主題咖啡館](https://nomowho.com/stories/aufzug-cafe/): Aufzug Café 在維也納中央車站斜對面，是老闆 Christian Tauss 把自己收藏的老電梯車廂搬進店裡、當成座位的咖啡館。
+- [世界上名字最短的村子 Å：羅浮敦 E10 終點，1844 年老麵包坊的肉桂捲](https://nomowho.com/stories/a-lofoten/): Å 是挪威羅浮敦群島最南端的小漁村，也是 E10 公路的終點。名字只有一個字母，意思是「小河」，是世界上最短的地名之一。村裡保留著老漁村的木屋和魚乾架，還有一間建於 1844 年的老麵包坊 Bakeriet på Å，夏天每天烤肉桂捲，晚…
+- [里斯本貝倫蛋塔創始店 Pastéis de Belém：1837 年的修道院祕方，只有幾個師傅知道](https://nomowho.com/stories/pasteis-de-belem/): Pastéis de Belém 在里斯本貝倫區、熱羅尼莫斯修道院旁邊，從 1837 年開始照著修道院的古老配方做蛋塔，被公認是葡式蛋塔的創始店。配方至今只在店內的「祕密工坊」裡製作，只有極少數師傅知道。
 
 ## GUIDE 指南
 
 - [青森冬天必去景點 TOP10：昭和大佛、奧入瀨冰瀑、青森犬，三區行程這樣排](https://nomowho.com/stories/aomori-top10/): 青森冬天最值得去的 10 個地方：青龍寺昭和大佛、奧入瀨溪流、十和田湖、弘前洋館與前川國男建築、弘前紅磚倉庫美術館、青森縣立美術館、睡魔之家 WA RASSE、廣田神社、A-FACTORY 和青森港 AOMORI 地標。
+- [維也納聖誕市集怎麼逛？市政廳廣場、聖史蒂芬大教堂、格拉本大街，一晚走完三個市集](https://nomowho.com/stories/vienna-christmas/): 維也納的聖誕市集從 11 月中一路開到聖誕節前後，最大的一座在市政廳廣場（Wiener Christkindlmarkt），有旋轉木馬、溜冰道和整排木屋攤位。往內城走，聖史蒂芬大教堂前、瑪麗亞特蕾莎廣場也各有一座，格拉本大街頭頂掛滿水晶燈。
+- [哈修塔特住哪裡？Hallstatt Hideaway 開箱：1740 年老宅改建的湖景套房](https://nomowho.com/stories/hallstatt-hideaway/): Hallstatt Hideaway 是哈修塔特山腰上的成人限定小旅館，建築是 1740 年奧地利皇室森林官的住宅，2014 年整修成幾間獨立套房。窗外就是哈爾施塔特湖和雪山，從碼頭走上去大約十分鐘。景觀無可挑剔，服務則比較隨性。
+- [科莫聖誕市集與光雕秀：整座城的牆都在演童話，義大利北部最有趣的聖誕夜](https://nomowho.com/stories/como-christmas/): 科莫（Como）在義大利北部、緊鄰瑞士邊境的科莫湖南端。每年冬天，老城的主教座堂廣場擺滿聖誕市集木屋，入夜後 Broletto 塔樓、主教座堂和整排老房子的外牆都會被投影成會動的童話插畫。
+- [奧斯陸街拍筆記：挪威人不是冷酷，只是比較慢熟，保持距離也是一種體貼](https://nomowho.com/stories/oslo-people/): 在奧斯陸街上拍了一個下午的人，最大的感受是：挪威人很少大聲說話，等紅燈會自動站開一段距離，朋友見面也不太擁抱。一開始會覺得冷，看久了才發現，那種彼此留白的距離，其實是一種讓人很放鬆的體貼。
+- [里斯本 28 號電車怎麼坐？從 Martim Moniz 上車，一路爬過阿法瑪、主教座堂與太陽門觀景台](https://nomowho.com/stories/tram-28/): 28 號黃色電車是里斯本的招牌，1914 年通車，從 Martim Moniz 一路開到西邊的 Campo de Ourique，全程約 7 公里。
 
 ## NEWS 世界旅遊新訊
 

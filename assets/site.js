@@ -500,7 +500,7 @@
 (function () {
   var tk = document.querySelector('.tser-track'); if (!tk) return;
   var sec = tk.closest('.tser'), sl = [].slice.call(tk.children), h = sec.querySelector('.tser-h'), sub = sec.querySelector('.tser-sub'), more = sec.querySelector('.tser-more'), cur = 0;
-  var idx = function () { return Math.max(0, Math.min(sl.length - 1, Math.round(tk.scrollLeft / tk.clientWidth))); };
+  var idx = function () { var w = tk.clientWidth; return w ? Math.max(0, Math.min(sl.length - 1, Math.round(tk.scrollLeft / w))) : 0; };
   var go = function (i) { i = (i + sl.length) % sl.length; tk.scrollTo({ left: i * tk.clientWidth, behavior: 'smooth' }); };
   var sync = function () {
     var i = idx(); if (i === cur) return; cur = i; var a = sl[i];
@@ -513,7 +513,7 @@
   /* 標題兩側的極簡小箭頭：跟著目前那張的標題高度、貼在標題左右 */
   var ml = sec.querySelector('.tser-mini.l'), mr = sec.querySelector('.tser-mini.r'), wrap = sec.querySelector('.tser-wrap');
   var place = function () {
-    var h3 = sl[idx()].querySelector('h3'); if (!h3 || !ml) return;
+    var cs = sl[idx()], h3 = cs && cs.querySelector('h3'); if (!h3 || !ml) return;
     var w = wrap.getBoundingClientRect(), r = h3.getBoundingClientRect(), range = document.createRange(); range.selectNodeContents(h3);
     var t = range.getBoundingClientRect(), mid = r.top + r.height / 2 - w.top, gap = 22;
     ml.style.top = mr.style.top = mid + 'px';

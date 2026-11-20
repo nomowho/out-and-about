@@ -36,8 +36,8 @@ const CATS = {
   FOOD:         { zh: '美食', d: '從早餐店到海底餐廳，用味道記住一座城市。' },
   GUIDE:        { zh: '指南', d: '一次整理好的行程與必訪清單。' }
 };
-const REGION_ORDER = ['Japan', 'Taiwan', 'Italy', 'Spain', 'France', 'Portugal', 'Norway', 'Denmark', 'Vatican'];   // 梵蒂岡沒有子地區，放最後（Nomo 11-19）
-const REGION_ZH = { Japan: '日本', Taiwan: '台灣', Italy: '義大利', Vatican: '梵蒂岡', Spain: '西班牙', France: '法國', Portugal: '葡萄牙', Norway: '挪威', Denmark: '丹麥' };
+const REGION_ORDER = ['Japan', 'Taiwan', 'Italy', 'Spain', 'France', 'Portugal', 'Austria', 'Germany', 'Hungary', 'Norway', 'Sweden', 'Denmark', 'Faroe', 'Russia', 'Vatican'];   // 梵蒂岡沒有子地區，放最後（Nomo 11-19）
+const REGION_ZH = { Japan: '日本', Taiwan: '台灣', Italy: '義大利', Vatican: '梵蒂岡', Spain: '西班牙', France: '法國', Portugal: '葡萄牙', Norway: '挪威', Denmark: '丹麥', Austria: '奧地利', Germany: '德國', Hungary: '匈牙利', Sweden: '瑞典', Faroe: '法羅群島', Russia: '俄羅斯' };
 const AREA_EN = { '青森': 'AOMORI', '岩手': 'IWATE', '宮城': 'MIYAGI', '山形': 'YAMAGATA', '愛知': 'AICHI', '東京': 'TOKYO', '靜岡': 'SHIZUOKA', '屏東': 'PINGTUNG' };
 const areaEn = p => AREA_EN[p.area] || p.area.toUpperCase();
 const regions = REGION_ORDER.filter(r => POSTS.some(p => p.region === r));

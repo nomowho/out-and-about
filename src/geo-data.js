@@ -35,14 +35,62 @@ const CITIES = [
   { id:'fronteira', zh:'Fronteira', en:'Fronteira',  region:'Portugal', lat:39.057, lng:-7.649, posts:['byrne-portugal'] },
   { id:'peniche',  zh:'貝倫加斯群島', en:'Berlengas', region:'Portugal', lat:39.414, lng:-9.508, posts:['berlengas'] },
   // 挪威
-  { id:'oslo',     zh:'奧斯陸',     en:'Oslo',       region:'Norway', lat:59.907, lng:10.755, posts:['munch'] },
+  { id:'oslo',     zh:'奧斯陸',     en:'Oslo',       region:'Norway', lat:59.907, lng:10.755, posts:['munch','oslo-people'] },
   { id:'jevnaker', zh:'Jevnaker',   en:'Jevnaker',   region:'Norway', lat:60.330, lng:10.370, posts:['the-twist'] },
   { id:'lindesnes', zh:'Lindesnes', en:'Lindesnes',  region:'Norway', lat:58.000, lng:7.050, posts:['under'] },
   { id:'kristiansand', zh:'克里斯蒂安桑', en:'Kristiansand', region:'Norway', lat:58.146, lng:7.996, posts:['kunstsilo','kilden'] },
   { id:'stavanger', zh:'斯塔萬格',  en:'Stavanger',  region:'Norway', lat:58.970, lng:5.731, posts:['stavanger'] },
   { id:'preikestolen', zh:'聖壇岩', en:'Preikestolen', region:'Norway', lat:58.986, lng:6.190, posts:['preikestolen'] },
   { id:'bergen',   zh:'卑爾根',     en:'Bergen',     region:'Norway', lat:60.391, lng:5.322, posts:['bergen'] },
-  { id:'reine',    zh:'羅浮敦・Reine', en:'Reine',   region:'Norway', lat:67.932, lng:13.089, posts:['reinebringen'] },
-  { id:'flakstad', zh:'羅浮敦・Flakstad', en:'Flakstad', region:'Norway', lat:68.090, lng:13.300, posts:['volandstind'] },
-  { id:'henningsvaer', zh:'羅浮敦・Henningsvær', en:'Henningsvær', region:'Norway', lat:68.155, lng:14.210, posts:['trevarefabrikken','lofoten-stockfish'] }
+  { id:'reine',    zh:'羅浮敦・Reine', en:'Reine',   region:'Norway', lat:67.932, lng:13.089, posts:['reinebringen','reine'] },
+  { id:'flakstad', zh:'羅浮敦・Flakstad', en:'Flakstad', region:'Norway', lat:68.090, lng:13.300, posts:['volandstind','lofoten-e10'] },
+  { id:'henningsvaer', zh:'羅浮敦・Henningsvær', en:'Henningsvær', region:'Norway', lat:68.155, lng:14.210, posts:['trevarefabrikken','lofoten-stockfish','henningsvaer'] },
+  // 挪威（追加）
+  { id:'a-village', zh:'羅浮敦・Å', en:'Å', region:'Norway', lat:67.879, lng:12.983, posts:['a-lofoten'] },
+  // 日本・山陰
+  { id:'tottori', zh:'鳥取', en:'Tottori', region:'Japan', lat:35.54, lng:134.228, posts:['ueda-shoji-museum','tottori-dunes'] },
+  { id:'misasa', zh:'三朝・三德山', en:'Misasa', region:'Japan', lat:35.398, lng:133.89, posts:['nageiredo'] },
+  { id:'izumo', zh:'出雲', en:'Izumo', region:'Japan', lat:35.402, lng:132.686, posts:['izumo-taisha'] },
+  { id:'yasugi', zh:'安來', en:'Yasugi', region:'Japan', lat:35.384, lng:133.191, posts:['adachi-museum'] },
+  // 台灣（追加）
+  { id:'yehliu', zh:'野柳', en:'Yehliu', region:'Taiwan', lat:25.206, lng:121.69, posts:['yehliu'] },
+  { id:'shitiwan', zh:'花蓮豐濱', en:'Fengbin', region:'Taiwan', lat:23.47, lng:121.51, posts:['shitiwan-118'] },
+  // 義大利（追加）
+  { id:'como', zh:'科莫', en:'Como', region:'Italy', lat:45.81, lng:9.086, posts:['como-christmas'] },
+  // 法國（追加）
+  { id:'saint-remy', zh:'聖雷米', en:'Saint-Rémy-de-Provence', region:'France', lat:43.789, lng:4.832, posts:['van-gogh-saint-remy'] },
+  { id:'roussillon', zh:'胡西雍', en:'Roussillon', region:'France', lat:43.902, lng:5.293, posts:['roussillon'] },
+  { id:'fontaine-de-vaucluse', zh:'碧泉村', en:'Fontaine-de-Vaucluse', region:'France', lat:43.922, lng:5.128, posts:['fontaine-de-vaucluse'] },
+  { id:'pont-du-gard', zh:'嘉德水道橋', en:'Pont du Gard', region:'France', lat:43.947, lng:4.535, posts:['pont-du-gard'] },
+  // 葡萄牙（追加）
+  { id:'lisboa', zh:'里斯本', en:'Lisbon', region:'Portugal', lat:38.716, lng:-9.14, posts:['pasteis-de-belem','tram-28','maat','champalimaud'] },
+  { id:'sintra', zh:'辛特拉', en:'Sintra', region:'Portugal', lat:38.797, lng:-9.39, posts:['monserrate','regaleira'] },
+  { id:'porto', zh:'波多', en:'Porto', region:'Portugal', lat:41.147, lng:-8.611, posts:['livraria-lello'] },
+  { id:'braga', zh:'布拉加', en:'Braga', region:'Portugal', lat:41.554, lng:-8.377, posts:['bom-jesus'] },
+  { id:'marco-de-canaveses', zh:'Marco de Canaveses', en:'Marco de Canaveses', region:'Portugal', lat:41.185, lng:-8.15, posts:['obras-do-fidalgo'] },
+  { id:'arouca', zh:'阿羅卡', en:'Arouca', region:'Portugal', lat:40.929, lng:-8.247, posts:['paiva-arouca'] },
+  { id:'ovar', zh:'奧瓦爾', en:'Ovar', region:'Portugal', lat:40.88, lng:-8.64, posts:['cortegaca'] },
+  { id:'nazare', zh:'納札雷', en:'Nazaré', region:'Portugal', lat:39.601, lng:-9.071, posts:['nazare'] },
+  { id:'tomar', zh:'托馬爾', en:'Tomar', region:'Portugal', lat:39.603, lng:-8.418, posts:['tomar'] },
+  { id:'marvao', zh:'馬爾旺', en:'Marvão', region:'Portugal', lat:39.394, lng:-7.377, posts:['marvao'] },
+  { id:'evora', zh:'艾佛拉', en:'Évora', region:'Portugal', lat:38.571, lng:-7.908, posts:['evora'] },
+  { id:'benagil', zh:'貝納吉爾', en:'Benagil', region:'Portugal', lat:37.087, lng:-8.426, posts:['benagil'] },
+  // 奧地利
+  { id:'salzburg', zh:'薩爾茲堡', en:'Salzburg', region:'Austria', lat:47.8, lng:13.044, posts:['salzburg'] },
+  { id:'hallstatt', zh:'哈修塔特', en:'Hallstatt', region:'Austria', lat:47.562, lng:13.649, posts:['hallstatt-beinhaus','hallstatt-hideaway','hallstatt'] },
+  { id:'wien', zh:'維也納', en:'Vienna', region:'Austria', lat:48.208, lng:16.373, posts:['vienna-christmas','vienna-library','secession','hundertwasser','belvedere','aufzug-cafe'] },
+  // 德國
+  { id:'koenigssee', zh:'國王湖', en:'Königssee', region:'Germany', lat:47.553, lng:12.977, posts:['koenigssee','eiskapelle'] },
+  // 匈牙利
+  { id:'budapest', zh:'布達佩斯', en:'Budapest', region:'Hungary', lat:47.507, lng:19.046, posts:['budapest-parliament'] },
+  { id:'szentendre', zh:'聖安德烈', en:'Szentendre', region:'Hungary', lat:47.669, lng:19.076, posts:['szentendre'] },
+  // 瑞典
+  { id:'stockholm', zh:'斯德哥爾摩', en:'Stockholm', region:'Sweden', lat:59.329, lng:18.069, posts:['skogskyrkogarden','sweden-stations','nordiska-museet'] },
+  { id:'malmo', zh:'馬爾默', en:'Malmö', region:'Sweden', lat:55.605, lng:13.004, posts:['malmo','anonymouse'] },
+  // 丹麥
+  { id:'copenhagen', zh:'哥本哈根', en:'Copenhagen', region:'Denmark', lat:55.676, lng:12.568, posts:['forgotten-giants','urban-rigger'] },
+  // 法羅群島
+  { id:'faroe', zh:'法羅群島', en:'Faroe Islands', region:'Faroe', lat:62.01, lng:-6.771, posts:['faroe-winter'] },
+  // 俄羅斯
+  { id:'moscow', zh:'莫斯科', en:'Moscow', region:'Russia', lat:55.754, lng:37.62, posts:['st-basil'] }
 ];
