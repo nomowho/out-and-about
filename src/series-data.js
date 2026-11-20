@@ -20,7 +20,7 @@ const SERIES = [
     d:'從奧斯陸、南岸到羅弗敦群島，照片整理中。',
     intro:'挪威的風景很大，人很少。從奧斯陸的孟克美術館、耶夫納克橫跨河面的美術館 The Twist，到南岸的海底餐廳 Under、斯塔萬格的聖壇岩，一路往北到羅弗敦群島的山與鱈魚乾。這個系列收錄我在挪威走過的地方，照片正在整理中。',
     region:'Norway' },
-  { id:'architecture-walk', card:'img/byrne-portugal/cover.jpg', t:'建築散策', en:'ARCHITECTURE', tag:'為一棟建築，出發一趟旅行', wide:'img/byrne-portugal/slit.jpg', widePos:'50% 50%', img:'tokyo-tower',
+  { id:'architecture-walk', card:'img/louvre-pyramid/cover.jpg', t:'建築散策', en:'ARCHITECTURE', tag:'為一棟建築，出發一趟旅行', wide:'img/byrne-portugal/slit.jpg', widePos:'50% 50%', img:'tokyo-tower',
     d:'從高第的聖家堂到山本理顯的校園，看建築怎麼改變一座城市。',
     intro:'有些旅行，是為了一棟建築才出發的。從巴塞隆納蓋了一百多年的聖家堂、羅浮宮的玻璃金字塔、東京鐵塔，到山本理顯的名古屋造形大學與永山祐子的 AOI CELESTIE，這個系列整理我走過的建築，記下空間、光線和人之間的關係。',
     cat:'ARCHITECTURE' },
