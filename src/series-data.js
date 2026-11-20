@@ -15,7 +15,7 @@ const SERIES = [
     d:'從東北的雪國到東京、名古屋、伊豆，一個國家慢慢走。',
     intro:'日本是我去最多次的國家，但每次都還有沒看過的角落。從青森的雪地大佛、奧入瀨的溪流，到東京鐵塔、淺草雷門，再到名古屋的喫茶店早餐與伊豆的古寺，這個系列收錄我在日本走過的地方，寫給想看見觀光地圖以外那一面的人。',
     region:'Japan' },
-  { id:'italy-drive', t:'深見　義大利', en:'ITALY', tag:'從阿爾卑斯山走到西西里', wide:'img/dolomiti-winter/c07.jpg', widePos:'50% 50%', img:'dolomiti-2',
+  { id:'italy-drive', t:'深見　義大利', en:'ITALY', tag:'從阿爾卑斯山走到西西里', wide:'img/alberobello/cover-v.jpg', widePos:'50% 62%', img:'dolomiti-2',
     d:'從北邊的多洛米蒂到南邊的西西里，一路往深處走。',
     intro:'義大利很長，從北邊雪白的多洛米蒂山區，到羅馬的古蹟與教堂、普利亞的蘑菇屋、馬泰拉的石窟城，一路往南走到西西里的火山與古希臘遺跡。這個系列收錄我在義大利走過的地方，看兩千年的歷史怎麼和日常生活疊在一起。',
     region:'Italy' },
