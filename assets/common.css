@@ -687,3 +687,19 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .tser-mini svg{width:22px;height:22px;fill:none;stroke:#111;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
 .tser-mini:focus-visible{outline:2px solid var(--ink);outline-offset:2px;opacity:1}
 @media(max-width:700px){.tser-mini{width:30px;height:30px;margin-top:-15px}.tser-mini svg{width:20px;height:20px}}
+
+/* /stories/ 桌機・平板改 Casa BRUTUS 式（Nomo 11-20 附圖）：統一 4:5 直式、桌機 4 欄／平板 3 欄；
+   左下斜體空心大首字＋斜體分類名，標題縮排對齊分類名；日期、地點不顯示（手機版維持原樣） */
+@media(min-width:701px){
+  #all{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 32px;grid-auto-flow:row}
+  #all>.card,#all>.card.land,#all>.card.port{grid-column:auto;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto 1fr;grid-template-areas:"f f" "i c" "i h";align-content:start;margin:0}
+  #all>.card figure,#all>.card.land figure,#all>.card.port figure{grid-area:f;aspect-ratio:4/5;margin:0 0 22px;overflow:hidden}
+  #all>.card figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  #all>.card:hover figure img{transform:scale(1.03)}
+  #all>.card .meta{display:contents}
+  #all>.card time,#all>.card .place{display:none}
+  #all .ini{display:block;grid-area:i;font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-weight:700;font-size:46px;line-height:.9;color:#fff;-webkit-text-stroke:1px #111;padding:0 10px 0 2px;margin:0}
+  #all>.card .cat{grid-area:c;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;font-size:17px;letter-spacing:.01em;color:#111;padding-top:2px;margin:0}
+  #all>.card h3,#all>.card.land h3{grid-area:h;font-size:20px;line-height:1.75;font-weight:700;letter-spacing:.04em;margin:12px 0 0;text-wrap:wrap}
+}
+@media(min-width:1001px){#all{grid-template-columns:repeat(4,1fr);gap:64px 36px}#all>.card h3,#all>.card.land h3{font-size:21px}}
