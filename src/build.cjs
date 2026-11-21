@@ -14,10 +14,11 @@ const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.
   ...fs.readdirSync(path.join(SRC, 'articles')).filter(f => f.endsWith('.js')).map(f => read('articles/' + f)),
   ';({ POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES })'].join('\n');
 const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES } = vm.runInNewContext(code);
+function hasCat(p, cat) { return p.cat === cat || (p.extraCats || []).includes(cat); }
 const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
 // 系列專題：region／cat 型的系列自動收錄（新到舊）；沒有照片的系列（img 或 wide 為空）首頁先不放
-for (const s of SERIES) if (!s.ids) s.ids = postsNew.filter(p => (s.region && p.region === s.region) || (s.cat && p.cat === s.cat)).map(p => p.id);
+for (const s of SERIES) if (!s.ids) s.ids = postsNew.filter(p => (s.region && p.region === s.region) || (s.cat && hasCat(p, s.cat))).map(p => p.id);
 const SERIES_SHOWN = SERIES.filter(s => s.img && s.wide);
 // 已刪除的系列：舊網址轉到新系列（Nomo 11-20），避免 Google 已收錄的連結變 404
 const SERIES_MOVED = { 'europe-architecture': 'architecture-walk', 'architecture-museum': 'architecture-walk' };
@@ -396,10 +397,10 @@ function listPage({ file, u, label, h1, desc, posts, lead, nav, crumb, groups, o
 const leadOf = list => [...list].filter(p => p.photo !== false).sort((a, b) => b.likes - a.likes)[0];
 const cardImg = p => p ? `img/${p.id}.jpg` : null;
 for (const [k, c] of Object.entries(CATS)) {
-  const posts = postsNew.filter(p => p.cat === k);
+  const posts = postsNew.filter(p => hasCat(p, k));
   listPage({ file: `category/${k.toLowerCase()}/index.html`, u: url.cat(k), label: 'CATEGORY　分類', h1: `${k} ${c.zh}`, desc: c.d, posts, lead: leadOf(posts), nav: k, crumb: 'CATEGORY',
     othersTitle: 'Other Categories', othersZh: '其他分類',
-    others: Object.entries(CATS).filter(([x]) => x !== k).map(([x, v]) => { const l = POSTS.filter(p => p.cat === x); return { u: url.cat(x), t: `${x}　${v.zh}`, n: l.length, img: cardImg(leadOf(l)) }; }) });
+    others: Object.entries(CATS).filter(([x]) => x !== k).map(([x, v]) => { const l = POSTS.filter(p => hasCat(p, x)); return { u: url.cat(x), t: `${x}　${v.zh}`, n: l.length, img: cardImg(leadOf(l)) }; }) });
 }
 for (const s of SERIES) {
   const posts = s.ids.map(i => byId[i]).filter(Boolean);
@@ -607,10 +608,10 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const u = '/stories/';
     const coverOf2 = p => p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover;
     const isLand2 = p => { if (POST_DETAIL[p.id] && POST_DETAIL[p.id].cardV) return false; /* cardV：用直式卡片圖 img/<id>.jpg 當 /stories/ 封面（Nomo 11-20 維也納） */ const c = coverOf2(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
-    const cats = Object.keys(CATS).filter(k => postsNew.some(p => p.cat === k));
+    const cats = Object.keys(CATS).filter(k => postsNew.some(p => hasCat(p, k)));
     const cards = postsNew.map((p, i) => (isLand2(p)
       ? postCard(p, { cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' })
-      : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-area="${p.cat.toLowerCase()}" class="card`)
+      : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-area="${[p.cat, ...(p.extraCats || [])].map(k => k.toLowerCase()).join(' ')}" class="card`)
       .replace('<div class="meta"><span class="cat">', `<div class="meta"><b class="ini" aria-hidden="true">${p.cat[0]}</b><span class="cat">`)
       .replace(/(max-width:(?:560|700)px) calc(100vw - 40px)/, '(max-width:700px) 45vw') /* 手機統一小圖（Nomo 11-20），不再每 6 篇一張大圖 */).join('');
     const main = `
@@ -620,7 +621,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <p>${POSTS.length} 篇，都是我親自走過的地方。可以依主題篩選。</p>
     </div></section>
     <section class="list box">
-      <nav class="areas" id="areas" aria-label="依主題篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${POSTS.length}</small></a>${cats.map(k => `<a href="#${k.toLowerCase()}" data-area="${k.toLowerCase()}">${k}<small>${POSTS.filter(p => p.cat === k).length}</small></a>`).join('')}</nav>
+      <nav class="areas" id="areas" aria-label="依主題篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${POSTS.length}</small></a>${cats.map(k => `<a href="#${k.toLowerCase()}" data-area="${k.toLowerCase()}">${k}<small>${POSTS.filter(p => hasCat(p, k)).length}</small></a>`).join('')}</nav>
       <div class="grid allgrid" id="all">${cards}</div>
     </section>`;
     const desc = `Out and About 全部 ${POSTS.length} 篇旅行故事：建築、藝術、歷史、自然、美食與旅行指南，遍及${regions.map(r => REGION_ZH[r]).join('、')}。`;
@@ -721,7 +722,7 @@ fs.writeFileSync(path.join(ROOT, 'llms.txt'), `# Out and About｜我出去一下
 
 完整內文（純文字）：${abs('/llms-full.txt')}
 
-${Object.entries(CATS).map(([k, c]) => { const l = postsNew.filter(p => p.cat === k); return l.length ? `## ${k} ${c.zh}\n\n${l.map(p => `- [${POST_DETAIL[p.id].seoTitle || p.title}](${abs(url.post(p.id))}): ${cut(POST_DETAIL[p.id].dek, 120)}`).join('\n')}\n` : ''; }).join('\n')}
+${Object.entries(CATS).map(([k, c]) => { const l = postsNew.filter(p => hasCat(p, k)); return l.length ? `## ${k} ${c.zh}\n\n${l.map(p => `- [${POST_DETAIL[p.id].seoTitle || p.title}](${abs(url.post(p.id))}): ${cut(POST_DETAIL[p.id].dek, 120)}`).join('\n')}\n` : ''; }).join('\n')}
 ## NEWS 世界旅遊新訊
 
 ${newsNew.map(n => `- [${n.title}](${abs(url.news(n.id))}): ${cut(n.dek || '', 120)}`).join('\n')}

@@ -100,9 +100,9 @@
   if (areas) {
     var chips = [].slice.call(areas.querySelectorAll('a')), secs = [].slice.call(document.querySelectorAll('.grpsec, .masonry .jp, #all > .card'));
     var pick = function (name, scroll) {
-      if (name && !secs.some(function (x) { return x.getAttribute('data-area') === name; })) name = '';
+      if (name && !secs.some(function (x) { return (x.getAttribute('data-area') || '').split(' ').indexOf(name) !== -1; })) name = '';
       chips.forEach(function (c) { var on = c.getAttribute('data-area') === name; c.classList.toggle('on', on); if (on) { c.setAttribute('aria-current', 'true'); if (c.scrollIntoView && areas.scrollWidth > areas.clientWidth) areas.scrollLeft = c.offsetLeft - 20; } else c.removeAttribute('aria-current'); });
-      secs.forEach(function (x) { x.hidden = !!name && x.getAttribute('data-area') !== name; });
+      secs.forEach(function (x) { x.hidden = !!name && (x.getAttribute('data-area') || '').split(' ').indexOf(name) === -1; });
       areas.classList.toggle('filtered', !!name);
       var vis = 0; secs.forEach(function (x) { if (x.parentNode && x.parentNode.id === 'all') { x.classList.toggle('big', !x.hidden && vis % 6 === 0); if (!x.hidden) vis++; } });
       areas.dispatchEvent(new Event('areachange'));
