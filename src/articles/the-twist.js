@@ -28,6 +28,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/river-view.jpg",
+      "fit": "natural",
       "cap": "沿著河岸看過去，The Twist 的扭轉輪廓從樹林間露出來。"
     },
     {

@@ -243,7 +243,7 @@ function block(b) {
   if (b.t === 'img') {
     const size = b.size || 'wide';
     const sizes = size === 'full' ? '100vw' : (size === 'side' || size === 'tall') ? '(max-width:900px) 100vw, 440px' : '(max-width:1000px) 100vw, 980px';
-    return `<figure class="${size}">${img(b.src, b.cap, { sizes })}${b.cap ? `<figcaption>${b.cap}</figcaption>` : ''}</figure>`;
+    return `<figure class="${size}${b.fit === 'natural' ? ' natural' : ''}">${img(b.src, b.cap, { sizes })}${b.cap ? `<figcaption>${b.cap}</figcaption>` : ''}</figure>`;
   }
   if (b.t === 'pair') {
     const caps = (b.cap || '').split(/右：/);

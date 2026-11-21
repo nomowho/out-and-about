@@ -717,3 +717,6 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .tser .toh-cap .tser-count{margin-left:auto;display:inline-flex;gap:9px;align-items:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.08em;color:#111}
 .tser-count i{font-style:normal;font-weight:400;color:#999}
 @media(max-width:700px){.tser-arr{width:44px;height:44px}.tser-arr.l{left:16px}.tser-arr.r{right:16px}.tser-arr svg{width:21px;height:21px}.tser .toh-cap .tser-count{font-size:11px;gap:7px}}
+
+/* Preserve the complete frame for article photos explicitly marked natural. */
+.body figure.natural img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
