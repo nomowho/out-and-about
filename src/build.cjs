@@ -188,7 +188,7 @@ ${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beaco
 const landCover = p => { const d = POST_DETAIL[p.id], c = p.photo !== false && d && d.cover, cd = c && dims(c), k = dims('img/' + p.id + '.jpg'); return !!(cd && cd.w > cd.h * 1.15 && k && k.h > k.w); };
 const postCard = (p, { extra = '', place = true, hidden = false, cls = '', cover = false, land = false, csizes = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 100vw, 560px' } = {}) => `
   <a class="card${cls ? ' ' + cls : ''}"${hidden ? ' hidden' : ''} href="${url.post(p.id)}">
-    <figure>${extra}${(cover || (land && landCover(p))) && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cover, p.zh, { sizes: csizes, small: true }) : thumb(p)}</figure>
+    <figure>${extra}${(cover || (land && landCover(p))) && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cardH || POST_DETAIL[p.id].cover, p.zh, { sizes: csizes, small: true }) : thumb(p)}</figure>
     <div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
     <h3>${p.title}</h3>${place ? `<div class="place">${p.zh}，${p.area}</div>` : ''}
   </a>`;
