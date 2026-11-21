@@ -27,8 +27,8 @@ POST_DETAIL['the-twist'] = {
     {
       "t": "img",
       "size": "wide",
-      "src": "img/the-twist/park.jpg",
-      "cap": "樹林、河水與戶外作品之間，The Twist 從遠處露出銀白色的身影。"
+      "src": "img/the-twist/river-view.jpg",
+      "cap": "沿著河岸看過去，The Twist 的扭轉輪廓從樹林間露出來。"
     },
     {
       "t": "h",
@@ -71,6 +71,12 @@ POST_DETAIL['the-twist'] = {
       "cap": "從空中看，The Twist 把兩邊的樹林和步道接了起來。"
     },
     {
+      "t": "img",
+      "size": "wide",
+      "src": "img/the-twist/overhead.jpg",
+      "cap": "從正上方俯看，橋身中段的扭轉和兩端不同的寬度格外清楚。"
+    },
+    {
       "t": "p",
       "text": "2019 年落成的 The Twist，被 Bjarke Ingels 稱作「可以進入使用的橋」。它能過河、能看展，站在岸邊看過去，本身也像一件大型雕塑。圖卡裡那句「型隨機能的誕生」，用在這裡很貼切，造型和怎麼使用它，是一起想出來的。"
     },
@@ -88,6 +94,12 @@ POST_DETAIL['the-twist'] = {
       "size": "wide",
       "src": "img/the-twist/south.jpg",
       "cap": "站到入口前，才看見這棟建築一端立起來的高度。"
+    },
+    {
+      "t": "img",
+      "size": "tall",
+      "src": "img/the-twist/entry-walk.jpg",
+      "cap": "沿著入口前的步道走近，銀白色板條一路延伸到高挑的門口。"
     },
     {
       "t": "p",
@@ -148,10 +160,10 @@ POST_DETAIL['the-twist'] = {
     {
       "t": "pair",
       "imgs": [
-        "img/the-twist/sculpture.jpg",
+        "img/the-twist/red-sculpture.jpg",
         "img/the-twist/bear.jpg"
       ],
-      "cap": "左：樹林裡亮黃色的大型作品。右：步道旁坐著一隻有著孩子身體的熊。"
+      "cap": "左：紅色雕塑站在老廠房前。右：步道旁坐著一隻有著孩子身體的熊。"
     },
     {
       "t": "p",
