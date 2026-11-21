@@ -43,7 +43,7 @@ const POSTS = [
   { id:'berlengas', ig:'DOjCzGFEvbL', likes:179, photo:true, cat:'NATURE', date:'2025.09.13', region:'Portugal', area:'Peniche', zh:'貝倫加斯群島', title:'大西洋上的海上碉堡：貝倫加斯群島' },
   { id:'munch', ig:'DOdmoSGEs_r', likes:115, cat:'ART', date:'2025.09.11', region:'Norway', area:'Oslo', zh:'孟克美術館', title:'奧斯陸港邊的沙蟲：孟克美術館與《吶喊》' },
   { id:'the-twist', ig:'C_p04DwBvvK', likes:482, photo:false, cat:'ART', date:'2025.09.07', region:'Norway', area:'Jevnaker', zh:'The Twist 美術館', title:'被巨人扭轉的橋：橫跨河面的漂浮美術館 The Twist' },
-  { id:'under', ig:'C_XmPDEhft9', likes:310, cat:'FOOD', date:'2025.08.31', region:'Norway', area:'Lindesnes', zh:'Under 海底餐廳', title:'在海怪的肚子裡吃晚餐：挪威 Under 海底餐廳' },
+  { id:'under', ig:'C_XmPDEhft9', likes:310, cat:'FOOD', date:'2025.08.31', region:'Norway', area:'Lindesnes', zh:'Under 海底餐廳', title:'挪威 Under 海底餐廳：在海怪的肚子裡，吃一頓深海饗宴' },
   { id:'kunstsilo', ig:'DM-i1q_Bnnl', likes:109, cat:'ART', date:'2025.08.05', region:'Norway', area:'Kristiansand', zh:'Kunstsilo 美術館', title:'老港口的第二次人生：挪威 Kunstsilo 穀倉美術館' },
   { id:'kilden', ig:'DM4j60HhbS-', likes:124, photo:false, cat:'ARCHITECTURE', date:'2025.08.03', region:'Norway', area:'Kristiansand', zh:'Kilden 表演藝術中心', title:'送給大海的禮物盒：Kilden 表演藝術中心' },
   { id:'preikestolen', ig:'DMajndyBKd7', likes:136, photo:false, cat:'NATURE', date:'2025.07.22', region:'Norway', area:'Rogaland', zh:'聖壇岩', title:'懸在峽灣上 604 公尺的石壇：挪威聖壇岩' },
