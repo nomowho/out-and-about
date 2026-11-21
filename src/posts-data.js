@@ -44,7 +44,7 @@ const POSTS = [
   { id:'munch', ig:'DOdmoSGEs_r', likes:115, cat:'ART', date:'2025.09.11', region:'Norway', area:'Oslo', zh:'孟克美術館', title:'奧斯陸港邊的沙蟲：孟克美術館與《吶喊》' },
   { id:'the-twist', ig:'C_p04DwBvvK', likes:482, photo:false, cat:'ART', date:'2025.09.07', region:'Norway', area:'Jevnaker', zh:'The Twist 美術館', title:'被巨人扭轉的橋：橫跨河面的漂浮美術館 The Twist' },
   { id:'under', ig:'C_XmPDEhft9', likes:310, photo:false, cat:'FOOD', date:'2025.08.31', region:'Norway', area:'Lindesnes', zh:'Under 海底餐廳', title:'全世界最美的海底餐廳 Under：在海平面下吃米其林' },
-  { id:'kunstsilo', ig:'DM-i1q_Bnnl', likes:109, photo:false, cat:'ART', date:'2025.08.05', region:'Norway', area:'Kristiansand', zh:'Kunstsilo 美術館', title:'1935 年的穀倉變成美術館：斯卡格拉克海峽畔的 Kunstsilo' },
+  { id:'kunstsilo', ig:'DM-i1q_Bnnl', likes:109, cat:'ART', date:'2025.08.05', region:'Norway', area:'Kristiansand', zh:'Kunstsilo 美術館', title:'1935 年的穀倉變成美術館：斯卡格拉克海峽畔的 Kunstsilo' },
   { id:'kilden', ig:'DM4j60HhbS-', likes:124, photo:false, cat:'ARCHITECTURE', date:'2025.08.03', region:'Norway', area:'Kristiansand', zh:'Kilden 表演藝術中心', title:'送給大海的禮物盒：Kilden 表演藝術中心' },
   { id:'preikestolen', ig:'DMajndyBKd7', likes:136, photo:false, cat:'NATURE', date:'2025.07.22', region:'Norway', area:'Rogaland', zh:'聖壇岩', title:'懸在峽灣上 604 公尺的石壇：挪威聖壇岩' },
   { id:'stavanger', ig:'DLuuNh0Bi7E', likes:120, photo:false, cat:'HISTORY', date:'2025.07.05', region:'Norway', area:'Stavanger', zh:'斯塔萬格三劍紀念碑', title:'三把巨劍插進峽灣：斯塔萬格與維京人的統一之戰' },
