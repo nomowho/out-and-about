@@ -1,4 +1,4 @@
-// Under：Nomo 親訪紀錄；主圖與橫直縮圖分別設定。
+// Under：Nomo 親訪紀錄；主圖與各分類縮圖分別設定。
 POST_DETAIL['under'] = {
   "seoTitle": "挪威 Under 海底餐廳：在海怪的肚子裡，吃一頓深海饗宴",
   "dek": "推開厚實的木門，聞到橡木的香味，沿著階梯慢慢往下，整片海突然佔據眼球。挪威 Under 海底餐廳把餐桌放進海中，窗外是魚群、水母，桌上是南挪威的海鮮、蔬菜與果實。從岸邊走進海裡，這頓晚餐的體驗真是念念不忘呀!",
@@ -464,5 +464,8 @@ POST_DETAIL['under'] = {
     ]
   ],
   "cardV": true,
-  "cardH": "img/under/dining-wide.jpg"
+  "cardH": "img/under/dining-wide.jpg",
+  "cardsByCategory": {
+    "ARCHITECTURE": "img/under/aerial.jpg"
+  }
 };

@@ -187,9 +187,9 @@ ${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beaco
 /* ── 卡片 ── */
 /* 橫式卡片格（3:2）：卡片圖是直式、主圖是橫式時改用主圖（Nomo 11-20） */
 const landCover = p => { const d = POST_DETAIL[p.id], c = p.photo !== false && d && d.cover, cd = c && dims(c), k = dims('img/' + p.id + '.jpg'); return !!(cd && cd.w > cd.h * 1.15 && k && k.h > k.w); };
-const postCard = (p, { extra = '', place = true, hidden = false, cls = '', cover = false, land = false, csizes = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 100vw, 560px' } = {}) => `
+const postCard = (p, { extra = '', place = true, hidden = false, cls = '', cover = false, land = false, cardImage = '', csizes = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 100vw, 560px' } = {}) => `
   <a class="card${cls ? ' ' + cls : ''}"${hidden ? ' hidden' : ''} href="${url.post(p.id)}">
-    <figure>${extra}${(cover || (land && landCover(p))) && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cardH || POST_DETAIL[p.id].cover, p.zh, { sizes: csizes, small: true }) : thumb(p)}</figure>
+    <figure>${extra}${cardImage ? img(cardImage, p.zh, { sizes: csizes, small: true }) : (cover || (land && landCover(p))) && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cardH || POST_DETAIL[p.id].cover, p.zh, { sizes: csizes, small: true }) : thumb(p)}</figure>
     <div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
     <h3>${p.title}</h3>${place ? `<div class="place">${p.zh}，${p.area}</div>` : ''}
   </a>`;
@@ -374,7 +374,7 @@ newsNew.forEach(n => {
 
 /* ── 列表頁（分類／系列／目的地） ── */
 function listPage({ file, u, label, h1, desc, posts, lead, nav, crumb, groups, othersTitle, othersZh, others }) {
-  const grid = list => `<div class="grid">${list.map(p => postCard(p, { land: true })).join('')}</div>`;
+  const grid = list => `<div class="grid">${list.map(p => postCard(p, { land: true, cardImage: u.startsWith('/category/') && POST_DETAIL[p.id] && (POST_DETAIL[p.id].cardsByCategory || {})[nav] })).join('')}</div>`;
   const main = `
     <section class="top">${lead ? `<div class="bg" style="background-image:url(/img/${lead.id}.m.jpg)"></div>` : ''}<div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>${crumb}</span>›<span>${h1}</span></nav>
