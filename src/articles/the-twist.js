@@ -122,12 +122,6 @@ POST_DETAIL['the-twist'] = {
       "text": "The Twist 裡面有三種展廳：Closed Gallery、Twist Gallery 和 Panorama Gallery。從南端進去，先是挑高、較封閉的展覽空間；走到中段，牆面和天花板開始轉向；北端則是一整排面向河流的大窗。"
     },
     {
-      "t": "img",
-      "size": "wide",
-      "src": "img/the-twist/gallery.jpg",
-      "cap": "較方正的展廳裡，作品掛在白牆上，光從上方進來。"
-    },
-    {
       "t": "p",
       "text": "中間的 Twist Gallery 很難只看展不看建築。抬頭是逐漸轉向的板條，沿著牆一路看，它又慢慢接到另一個方向。人仍走在地板上，轉動的是四周的空間，牆和天花板的界線變得不太好分。"
     },
@@ -148,6 +142,45 @@ POST_DETAIL['the-twist'] = {
       "size": "full",
       "src": "img/the-twist/bridge.jpg",
       "cap": "回到河岸看 The Twist，兩端的差別和中間那一扭，都看得很清楚。"
+    },
+    {
+      "t": "h",
+      "id": "restrooms",
+      "text": "連上廁所，都還在看展"
+    },
+    {
+      "t": "p",
+      "text": "The Twist 還有一個別錯過的地方：廁所。從北端沿著玻璃樓梯往下，來到更靠近河面的下層，白色展廳換成了裸露的混凝土、玻璃和燈光。洗手台旁的牆面一層層往外折，鏡面又把線條反射出去，連這裡都很值得停下來看。"
+    },
+    {
+      "t": "img",
+      "size": "wide",
+      "fit": "natural",
+      "src": "img/the-twist/restroom.jpg",
+      "cap": "下層廁所區的洗手台、玻璃與鏡面，把空間的線條延伸出去。"
+    },
+    {
+      "t": "p",
+      "text": "走進廁所隔間，牆上竟然還有投影的臉；抬頭看，天花板懸著的球體上也出現了一隻眼睛。這是美國藝術家 Tony Oursler 的多媒體裝置《Scat Skat Skatt》，用影像與聲音介入公共廁所。原本只是想上個廁所，結果反而像是自己被作品看著，實在有點荒謬，也很好玩。"
+    },
+    {
+      "t": "pair",
+      "imgs": [
+        "img/the-twist/projection.jpg",
+        "img/the-twist/eyeball.jpg"
+      ],
+      "cap": "左：隔間牆上的人臉投影。右：投射在球體上的眼睛，讓上廁所也成了有點超現實的體驗。"
+    },
+    {
+      "t": "p",
+      "text": "窗外還站著一個人，雙手舉到眼前，朝玻璃裡面望。這是藝術家雙人組 Elmgreen & Dragset 的《Points of View – Part 2》。他就站在河邊的石頭上，隔著窗和裡面的人對看；剛才在樓上看風景，到了這裡，自己也成了被看的對象。"
+    },
+    {
+      "t": "img",
+      "size": "wide",
+      "fit": "natural",
+      "src": "img/the-twist/point-of-view.jpg",
+      "cap": "Elmgreen & Dragset 的《Points of View – Part 2》，隔著玻璃朝室內張望。"
     },
     {
       "t": "h",
@@ -257,7 +290,7 @@ POST_DETAIL['the-twist'] = {
     [
       "Kistefos：The Twist",
       "https://www.kistefosmuseum.com/art/the-twist-gallery",
-      "三種展廳、尺度與直板形成曲面的作法；查閱日期 2026-11-21"
+      "三種展廳、直板形成曲面的作法、下層廁所與窗外作品；查閱日期 2026-11-21"
     ],
     [
       "Kistefos：The history of Kistefos",
@@ -278,6 +311,11 @@ POST_DETAIL['the-twist'] = {
       "Saint-Gobain Glass：The Twist",
       "https://www.saint-gobain-glass.com/the-twist-kistefos-norway",
       "2019 年 9 月開幕、鋁與玻璃外牆；查閱日期 2026-11-21"
+    ],
+    [
+      "Tony Oursler：Scat Skat Skatt",
+      "https://tonyoursler.com/scat-skat-skatt",
+      "公共廁所多媒體裝置、球體眼睛與投影；查閱日期 2026-11-21"
     ]
   ]
 };
