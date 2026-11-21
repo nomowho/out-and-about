@@ -132,6 +132,7 @@ POST_DETAIL['kilden'] = {
   ],
   "updated": "2026-11-21",
   "cover": "img/kilden/cover.jpg",
+  "coverPos": "50% 85%",
   "cardH": "img/kilden/cover.jpg",
   "cardV": true,
   "coverCap": "Kilden 面向港灣的正面，波浪形橡木屋簷覆在整片玻璃立面上。"
