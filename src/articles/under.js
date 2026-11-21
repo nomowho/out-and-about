@@ -14,9 +14,8 @@ POST_DETAIL['under'] = {
       "addressCountry": "NO"
     }
   },
-  "cover": "img/under/cover-aerial.jpg",
-  "coverLayout": "split",
-  "coverCap": "從空中望向 Under，步道連著岩岸，一端露出海面，另一端斜斜潛入水裡。",
+  "cover": "img/under/aerial.jpg",
+  "coverCap": "從空中望向 Under，步道連著岩岸，混凝土建築斜斜伸入海裡。",
   "body": [
     {
       "t": "p",
@@ -435,5 +434,6 @@ POST_DETAIL['under'] = {
       "https://noma.dk/science-bunker-creations-for-noma-mexico/",
       "豌豆製類味噌發酵醬；查閱日期 2026-11-21"
     ]
-  ]
+  ],
+  "cardV": true
 };
