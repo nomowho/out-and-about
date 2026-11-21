@@ -6,8 +6,8 @@ POST_DETAIL['kunstsilo'] = {
   seoTitle:'挪威 Kunstsilo：1935 年的穀倉變成美術館，全球最大北歐現代藝術收藏就在 Kristiansand 港邊',
   dek:'Kunstsilo 在挪威南部 Kristiansand 港邊，由一座 1935 年的功能主義穀倉改建，2024 年 5 月開館。核心館藏是挪威主權基金執行長 Nicolai Tangen 捐出的北歐現代藝術收藏，涵蓋 1920 到 1990 年代，號稱全球最大。原本的混凝土筒倉被保留下來，成了美術館的中庭。',
   updated:'2026-11-21',
-  cover:'img/kunstsilo/cover.jpg', coverLayout:'split',
-  coverCap:'藍天下的 Kunstsilo，白色筒倉與深色玻璃立面並排，舊穀倉有了新的入口。',
+  cover:'img/kunstsilo/cover-waterfront.jpg', coverLayout:'split',
+  coverCap:'從港邊望向 Kunstsilo，整排白色筒倉映著藍天，前方就是水面。',
   body:[
     { t:'p', text:'在斯卡格拉克海峽邊，一座裝了八十多年穀物的倉庫，現在裝的是一個國家的藝術記憶。' },
     { t:'img', size:'wide', src:'img/kunstsilo/harbor.jpg', cap:'從水邊望向 Kunstsilo，白色穀倉與港灣並列，左側是 Kilden 的屋頂。' },
