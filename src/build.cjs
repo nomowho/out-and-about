@@ -524,7 +524,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <div class="tser-wrap">
     <div class="tser-track" tabindex="0" aria-label="系列專題，左右滑動">${SERIES_SHOWN.map((S, si) => `<a class="toh-one" href="${url.series(S.id)}" data-en="${esc(S.en)}" data-tag="${esc(S.tag)}" aria-label="${esc(S.t)} 系列專題">
       <figure>${img(S.wide, S.t, { small: true, sizes: '100vw', lazy: si > 0 }).replace('<img ', `<img style="object-position:${S.widePos}" `)}</figure>
-      <div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span></div><h3>${esc(S.t)}</h3><div class="place">${esc(S.d)}</div></div>
+      <div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span><span class="tser-count" aria-label="第 ${si + 1} 個專題，共 ${SERIES_SHOWN.length} 個">${String(si + 1).padStart(2, '0')}<i>/</i>${String(SERIES_SHOWN.length).padStart(2, '0')}</span></div><h3>${esc(S.t)}</h3><div class="place">${esc(S.d)}</div></div>
     </a>`).join('')}</div>
     <button class="tser-arr l" type="button" aria-label="上一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="tser-arr r" type="button" aria-label="下一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     <button class="tser-mini l" type="button" aria-label="上一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5L9 12l5.5 5.5"/></svg></button><button class="tser-mini r" type="button" aria-label="下一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6.5L15 12l-5.5 5.5"/></svg></button>
