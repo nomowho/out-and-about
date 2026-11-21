@@ -45,7 +45,7 @@ const POSTS = [
   { id:'the-twist', ig:'C_p04DwBvvK', likes:482, cat:'ART', extraCats:['ARCHITECTURE'], date:'2025.09.07', region:'Norway', area:'Jevnaker', zh:'The Twist 美術館', title:'被扭轉 90 度的橋：挪威 The Twist 美術館與森林散步' },
   { id:'under', ig:'C_XmPDEhft9', likes:310, cat:'FOOD', extraCats:['ARCHITECTURE'], date:'2025.08.31', region:'Norway', area:'Lindesnes', zh:'Under 海底餐廳', title:'挪威 Under 海底餐廳：在海怪的肚子裡，吃一頓深海饗宴' },
   { id:'kunstsilo', ig:'DM-i1q_Bnnl', likes:109, cat:'ART', date:'2025.08.05', region:'Norway', area:'Kristiansand', zh:'Kunstsilo 美術館', title:'老港口的第二次人生：挪威 Kunstsilo 穀倉美術館' },
-  { id:'kilden', ig:'DM4j60HhbS-', likes:124, photo:false, cat:'ARCHITECTURE', date:'2025.08.03', region:'Norway', area:'Kristiansand', zh:'Kilden 表演藝術中心', title:'送給大海的禮物盒：Kilden 表演藝術中心' },
+  { id:'kilden', ig:'DM4j60HhbS-', likes:124, photo:true, cat:'ARCHITECTURE', date:'2025.08.03', region:'Norway', area:'Kristiansand', zh:'Kilden 表演藝術中心', title:'送給大海的禮物盒：Kilden 表演藝術中心' },
   { id:'preikestolen', ig:'DMajndyBKd7', likes:136, photo:false, cat:'NATURE', date:'2025.07.22', region:'Norway', area:'Rogaland', zh:'聖壇岩', title:'懸在峽灣上 604 公尺的石壇：挪威聖壇岩' },
   { id:'stavanger', ig:'DLuuNh0Bi7E', likes:120, photo:false, cat:'HISTORY', date:'2025.07.05', region:'Norway', area:'Stavanger', zh:'斯塔萬格三劍紀念碑', title:'三把巨劍插進峽灣：斯塔萬格與維京人的統一之戰' },
   { id:'bergen', ig:'DLnNW0nBrf4', likes:110, photo:false, cat:'HISTORY', date:'2025.07.02', region:'Norway', area:'Bergen', zh:'卑爾根', title:'一年下兩百多天雨的城市：卑爾根把雨過成生活' },
