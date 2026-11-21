@@ -14,9 +14,9 @@ POST_DETAIL['under'] = {
       "addressCountry": "NO"
     }
   },
-  "cover": "img/under/cover.jpg",
+  "cover": "img/under/cover-aerial.jpg",
   "coverLayout": "split",
-  "coverCap": "你敢坐在海怪的肚子裡用餐嗎？從橡木階梯往下，晚餐就在這片藍綠色的海旁展開。",
+  "coverCap": "從空中望向 Under，步道連著岩岸，一端露出海面，另一端斜斜潛入水裡。",
   "body": [
     {
       "t": "p",
@@ -50,6 +50,12 @@ POST_DETAIL['under'] = {
       "size": "wide",
       "src": "img/under/aerial.jpg",
       "cap": "從上方看，步道連著岸邊與入口，餐廳沿著岩岸沉入水中。"
+    },
+    {
+      "t": "img",
+      "size": "wide",
+      "src": "img/under/aerial-overhead.jpg",
+      "cap": "換成垂直俯視，餐廳、步道與岩岸的關係更加清楚，水色也隨深淺改變。"
     },
     {
       "t": "h",
@@ -96,6 +102,12 @@ POST_DETAIL['under'] = {
       "size": "full",
       "src": "img/under/window.jpg",
       "cap": "幽暗的用餐區裡，海底的藍綠色成了最亮的一面牆。"
+    },
+    {
+      "t": "img",
+      "size": "wide",
+      "src": "img/under/dining-wide.jpg",
+      "cap": "從階梯上方看向用餐區，圓桌沿著海底觀景窗展開，藍綠色的光一路映進室內。"
     },
     {
       "t": "h",
