@@ -147,5 +147,5 @@ POST_DETAIL['bergen'] = {
   "cardH": "img/bergen/cover.jpg",
   "cardV": true,
   "coverCap": "從水邊看布呂根，彩色尖頂木屋沿著碼頭排開，船停在前方。",
-  "cardPortrait": "img/bergen/portrait-rainbow.jpg"
+  "cardPortrait": "img/bergen/portrait-avenue.jpg"
 };
