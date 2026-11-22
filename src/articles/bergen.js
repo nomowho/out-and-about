@@ -20,7 +20,7 @@ POST_DETAIL['bergen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/bergen/bryggen.jpg",
-      "cap": "近看布呂根的尖頂木屋，重建的立面背後仍保留中世紀碼頭聚落的街巷格局。"
+      "cap": "布呂根港邊的尖頂立面，如今容納旅館、餐飲與商店，呈現老港區持續被使用的商業空間。"
     },
     {
       "t": "p",
@@ -35,7 +35,7 @@ POST_DETAIL['bergen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/bergen/quay.jpg",
-      "cap": "從港灣對岸回望布呂根，能看清昔日倉庫與碼頭相依的配置；鱈魚乾曾從這裡運往歐洲。"
+      "cap": "從港灣對岸回望布呂根，旅館與餐飲店沿舊港區展開；昔日貿易碼頭，也是今日旅人住宿與用餐的地方。"
     },
     {
       "t": "h",
