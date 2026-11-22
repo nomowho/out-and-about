@@ -720,3 +720,8 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .drag-scroll{cursor:grab}
 .drag-scroll.dragging,#track.dragging,.headlines.dragging{cursor:grabbing;user-select:none}
 .drag-scroll img,#track img,.headlines img{-webkit-user-drag:none}
+
+/* 專題大圖只保留箭頭，移除圓形底、框線與按鈕陰影。 */
+.tser-arr,.tser-arr:hover,.tser-arr:focus-visible{background:transparent;border:0;border-radius:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.tser-arr svg{stroke:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.75))}
+.tser-arr:focus-visible svg{outline:2px solid #fff;outline-offset:4px}
