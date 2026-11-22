@@ -133,7 +133,7 @@ POST_DETAIL['stavanger'] = {
     ]
   ],
   "cover": "img/stavanger/fjord.jpg",
-  "coverPos": "50% 20%",
+  "coverPos": "50% 0%",
   "cardH": "img/stavanger/cover.jpg",
   "cardV": true,
   "updated": "2026-11-22",
