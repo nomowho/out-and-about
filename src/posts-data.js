@@ -47,7 +47,7 @@ const POSTS = [
   { id:'kunstsilo', ig:'DM-i1q_Bnnl', likes:109, cat:'ART', date:'2025.08.05', region:'Norway', area:'Kristiansand', zh:'Kunstsilo 美術館', title:'老港口的第二次人生：挪威 Kunstsilo 穀倉美術館' },
   { id:'kilden', ig:'DM4j60HhbS-', likes:124, photo:true, cat:'ARCHITECTURE', date:'2025.08.03', region:'Norway', area:'Kristiansand', zh:'Kilden 表演藝術中心', title:'挪威 Kilden 表演藝術中心：沿著港邊，走進波浪形的橡木屋簷下' },
   { id:'preikestolen', ig:'DMajndyBKd7', likes:136, photo:true, cat:'NATURE', date:'2025.07.22', region:'Norway', area:'Rogaland', zh:'聖壇岩', title:'懸在峽灣上 604 公尺的石壇：挪威聖壇岩' },
-  { id:'stavanger', ig:'DLuuNh0Bi7E', likes:120, photo:false, cat:'HISTORY', date:'2025.07.05', region:'Norway', area:'Stavanger', zh:'斯塔萬格三劍紀念碑', title:'三把巨劍插進峽灣：斯塔萬格與維京人的統一之戰' },
+  { id:'stavanger', ig:'DLuuNh0Bi7E', likes:120, photo:true, cat:'HISTORY', date:'2025.07.05', region:'Norway', area:'Stavanger', zh:'斯塔萬格三劍紀念碑', title:'三把巨劍插進峽灣：斯塔萬格與維京人的統一之戰' },
   { id:'bergen', ig:'DLnNW0nBrf4', likes:110, photo:false, cat:'HISTORY', date:'2025.07.02', region:'Norway', area:'Bergen', zh:'卑爾根', title:'一年下兩百多天雨的城市：卑爾根把雨過成生活' },
   { id:'lofoten-stockfish', ig:'DLCkhwDBTK3', likes:108, photo:false, cat:'FOOD', date:'2025.06.18', region:'Norway', area:'Lofoten', zh:'羅浮敦鱈魚乾', title:'風乾的藝術：羅浮敦群島的鱈魚乾架' },
   { id:'volandstind', ig:'DK3j6V4BfCl', likes:136, photo:false, cat:'NATURE', date:'2025.06.13', region:'Norway', area:'Lofoten', zh:'Volandstind', title:'羅浮敦的馬特洪峰：雲霧裡的 Volandstind' },
