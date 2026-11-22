@@ -1,4 +1,3 @@
-// 卑爾根｜既有旅行紀錄配入 Nomo 原圖，圖說依實景撰寫。
 POST_DETAIL['bergen'] = {
   "seoTitle": "挪威卑爾根：一年下雨 200 多天的城市，布呂根彩色木屋為什麼是世界遺產？",
   "dek": "卑爾根（Bergen）是挪威第二大城、峽灣之旅的門戶，一年下雨超過 200 天。港邊的布呂根（Bryggen）是中世紀漢薩同盟商人留下的彩色木造碼頭，1979 年列入世界遺產；搭弗洛伊恩山纜車上山，可以俯瞰整片鋪進海灣的屋頂。",
@@ -93,7 +92,7 @@ POST_DETAIL['bergen'] = {
     },
     {
       "t": "img",
-      "size": "wide",
+      "size": "tall",
       "fit": "natural",
       "src": "img/bergen/square.jpg",
       "cap": "廣場前方鋪著彩虹色塊，後面是升著旗子的建築。"
@@ -147,5 +146,6 @@ POST_DETAIL['bergen'] = {
   "cover": "img/bergen/cover.jpg",
   "cardH": "img/bergen/cover.jpg",
   "cardV": true,
-  "coverCap": "從水邊看布呂根，彩色尖頂木屋沿著碼頭排開，船停在前方。"
+  "coverCap": "從水邊看布呂根，彩色尖頂木屋沿著碼頭排開，船停在前方。",
+  "cardPortrait": "img/bergen/portrait-rainbow.jpg"
 };
