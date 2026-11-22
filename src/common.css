@@ -734,3 +734,8 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .hero.native-hero .slide img{transform:none;transition:none}
 .headlines.native-news{overflow-x:auto;overflow-y:hidden;touch-action:auto;scroll-behavior:auto;scroll-snap-type:none;overscroll-behavior-x:contain;mask-image:none;-webkit-overflow-scrolling:touch}
 .headlines.native-news .hl-track{transform:none;animation:none!important;will-change:auto}
+
+/* 文章中的延伸閱讀：黑字搭配品牌螢光綠底線，多行連結逐行保留。 */
+.body a[href^="/stories/"],.body a[href^="https://nomowho.com/stories/"]{color:var(--ink);text-decoration-line:underline;text-decoration-color:#C8F500;text-decoration-thickness:3px;text-underline-offset:.22em;text-decoration-skip-ink:none}
+@media(hover:hover){.body a[href^="/stories/"]:hover,.body a[href^="https://nomowho.com/stories/"]:hover{background-color:rgba(200,245,0,.2)}}
+.body a[href^="/stories/"]:focus-visible,.body a[href^="https://nomowho.com/stories/"]:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
