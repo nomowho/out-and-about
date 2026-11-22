@@ -226,11 +226,15 @@
     function paint() { if (!half) return; distance = ((distance % half) + half) % half; cw.style.transform = 'translate3d(' + (-distance) + 'px,0,0)'; }
     function measure() { half = cw.children[originals.length].offsetLeft - cw.children[0].offsetLeft; paint(); }
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure); else measure();
-    addEventListener('resize', measure);
-    function frame(time) { var dt = lastTime ? Math.min(time - lastTime, 50) : 0; lastTime = time; if (!reduce && pointer === null && !focused && time >= resumeAt) { distance += dt * 0.04224; paint(); } requestAnimationFrame(frame); }
+    var marqueeWidth = cwrap.clientWidth;
+    addEventListener('resize', function () {
+      var w = cwrap.clientWidth; if (w === marqueeWidth) return;
+      marqueeWidth = w; measure();
+    });
+    function frame(time) { var dt = lastTime ? Math.min(time - lastTime, 50) : 0; lastTime = time; if (!reduce && pointer === null && !focused && time >= resumeAt) { distance += dt * 0.04224; paint(); } else if (pointer !== null && moved) { paint(); } requestAnimationFrame(frame); }
     requestAnimationFrame(frame);
     cwrap.addEventListener('pointerdown', function (e) { if (!e.isPrimary || e.button !== 0 || pointer !== null) return; pointer = e.pointerId; startX = e.clientX; startY = e.clientY; startDistance = distance; moved = false; });
-    cwrap.addEventListener('pointermove', function (e) { if (pointer !== e.pointerId) return; var dx = e.clientX - startX, dy = e.clientY - startY; if (!moved && Math.abs(dx) > 7 && Math.abs(dx) > Math.abs(dy)) { moved = true; cwrap.setPointerCapture(pointer); cwrap.classList.add('dragging'); } if (!moved) return; e.preventDefault(); distance = startDistance - dx; paint(); });
+    cwrap.addEventListener('pointermove', function (e) { if (pointer !== e.pointerId) return; var dx = e.clientX - startX, dy = e.clientY - startY; if (!moved && Math.abs(dx) > 7 && Math.abs(dx) > Math.abs(dy)) { moved = true; cwrap.setPointerCapture(pointer); cwrap.classList.add('dragging'); } if (!moved) return; e.preventDefault(); distance = startDistance - dx; });
     function release(e) { if (pointer !== e.pointerId) return; if (cwrap.hasPointerCapture(pointer)) cwrap.releasePointerCapture(pointer); pointer = null; cwrap.classList.remove('dragging'); resumeAt = performance.now() + 1500; }
     cwrap.addEventListener('pointerup', release); cwrap.addEventListener('pointercancel', release);
     cwrap.addEventListener('lostpointercapture', release);
@@ -447,14 +451,14 @@
     var heroRest = function () { [].forEach.call(track.querySelectorAll('img[data-src]'), function (im) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }); };
     if (document.readyState === 'complete') heroRest(); else addEventListener('load', heroRest);
     var S = [].slice.call(track.children), N = S.length, v = 0, timer, count = $('count');
-    var prev = $('prev'), next = $('next'), wrap = track.parentElement;
+    var prev = $('prev'), next = $('next'), wrap = track.parentElement, heroX = 0, dragFrame = 0;
     var mod = function (x) { return ((x % N) + N) % N; };
     var place = function (animate, dx) {
       track.style.transition = animate ? '' : 'none';
       var gap = parseFloat(getComputedStyle(track).columnGap) || 24, w = S[0].offsetWidth, step = w + gap;
       S.forEach(function (el, k) { var p = k + N * Math.round((v - k) / N); el.style.transform = p === k ? '' : 'translateX(' + (p - k) * step + 'px)'; el.classList.toggle('on', mod(v) === k); });
       var xx = wrap.clientWidth / 2 - (S[0].offsetLeft + v * step + w / 2) + (dx || 0);
-      track.style.transform = 'translateX(' + xx + 'px)';
+      heroX = xx; track.style.transform = 'translateX(' + xx + 'px)';
       var peek = (wrap.clientWidth - w) / 2 - gap - w, bw = prev.offsetWidth;
       var ax = peek >= bw + 16 ? (peek - bw) / 2 : 10;
       prev.style.left = '0px'; next.style.right = '0px'; prev.style.transform = 'translate(' + ax + 'px,-50%)'; next.style.transform = 'translate(' + (-ax) + 'px,-50%)';   // 用 transform 定位箭頭，字型載入後重算也不算版面位移
@@ -480,11 +484,17 @@
       dx = e.clientX - sx; var dy = e.clientY - sy;
       if (!moved && Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 8) { pointer = null; auto(); return; }
       if (!moved && Math.abs(dx) > 8) { moved = true; track.setPointerCapture(pointer); track.classList.add('dragging'); }
-      if (moved) { e.preventDefault(); place(false, dx); }
+      if (moved) {
+        e.preventDefault(); track.style.transition = 'none';
+        if (!dragFrame) dragFrame = requestAnimationFrame(function () {
+          dragFrame = 0; track.style.transform = 'translateX(' + (heroX + dx) + 'px)';
+        });
+      }
     });
     function endHero(e) {
       if (pointer !== e.pointerId) return;
       var id = pointer; pointer = null;
+      if (dragFrame) { cancelAnimationFrame(dragFrame); dragFrame = 0; }
       if (moved) { if (e.type !== 'pointercancel' && dx < -40) go(1); else if (e.type !== 'pointercancel' && dx > 40) go(-1); else place(true); }
       if (track.hasPointerCapture(id)) track.releasePointerCapture(id);
       track.classList.remove('dragging'); auto();
@@ -493,7 +503,11 @@
     track.addEventListener('pointerleave', function (e) { if (!moved) endHero(e); });
     track.addEventListener('click', function (e) { if (moved && e.detail !== 0) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
 
-    addEventListener('resize', function () { place(false); });
+    var heroWidth = wrap.clientWidth;
+    addEventListener('resize', function () {
+      var w = wrap.clientWidth; if (w === heroWidth) return;
+      heroWidth = w; place(false);
+    });
     addEventListener('load', function () { place(false); });
     place(false); auto();
   }
@@ -515,7 +529,11 @@
   sec.querySelector('.tser-arr.l').addEventListener('click', function () { go(idx() - 1); });
   sec.querySelector('.tser-arr.r').addEventListener('click', function () { go(idx() + 1); });
   tk.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') { e.preventDefault(); go(idx() - 1); } else if (e.key === 'ArrowRight') { e.preventDefault(); go(idx() + 1); } });
-  addEventListener('resize', function () { tk.scrollLeft = cur * tk.clientWidth; });
+  var trackWidth = tk.clientWidth;
+  addEventListener('resize', function () {
+    var w = tk.clientWidth; if (w === trackWidth) return;
+    trackWidth = w; tk.scrollLeft = cur * w;
+  });
 })();
 
 /* 原生橫向捲動列：觸控由瀏覽器處理，滑鼠可直接按住卡片拖曳。 */
