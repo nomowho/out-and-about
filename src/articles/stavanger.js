@@ -1,4 +1,3 @@
-// 斯塔萬格三劍紀念碑｜原有旅行紀錄配入 Nomo 原圖。
 POST_DETAIL['stavanger'] = {
   "seoTitle": "斯塔萬格石中劍 Sverd i fjell：三把巨劍插進峽灣，紀念 872 年維京人統一挪威的一戰",
   "dek": "斯塔萬格（Stavanger）在挪威西南部，是北海石油之都，也是爬聖壇岩的出發城市。城外哈弗斯峽灣邊的「石中劍」（Sverd i fjell）是三把約 10 公尺高的青銅巨劍，1983 年揭幕，紀念 872 年金髮王哈拉爾一世在這裡打贏統一挪威的關鍵戰役。",
@@ -9,10 +8,10 @@ POST_DETAIL['stavanger'] = {
     },
     {
       "t": "img",
-      "size": "wide",
+      "size": "tall",
       "fit": "natural",
-      "src": "img/stavanger/fjord.jpg",
-      "cap": "從水邊看過去，三劍紀念碑立在伸入峽灣的岩岸上。"
+      "src": "img/stavanger/swords-close.jpg",
+      "cap": "Fritz Røed 的三劍紀念碑，以一大兩小的青銅劍象徵交戰的國王；劍固定在岩石中，表達和平的意義。"
     },
     {
       "t": "h",
@@ -32,7 +31,7 @@ POST_DETAIL['stavanger'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/stavanger/shore.jpg",
-      "cap": "從稍遠處看，紀念碑、岩岸與水面一起入鏡。"
+      "cap": "退遠觀看斯塔萬格三劍紀念碑，能把青銅巨劍與哈弗斯峽灣的地理背景放在一起理解。"
     },
     {
       "t": "h",
@@ -48,7 +47,7 @@ POST_DETAIL['stavanger'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/stavanger/park.jpg",
-      "cap": "紀念碑旁的岸邊，草地、樹林和沙灘接在一起。"
+      "cap": "三劍紀念碑周邊的草地與沙灘，讓歷史紀念空間也成為斯塔萬格日常使用的水岸公園。"
     },
     {
       "t": "pair",
@@ -56,7 +55,7 @@ POST_DETAIL['stavanger'] = {
         "img/stavanger/walk.jpg",
         "img/stavanger/beach.jpg"
       ],
-      "cap": "左：沿岸散步與遛狗的人。右：水邊的沙灘。"
+      "cap": "左：哈弗斯峽灣岸邊的散步路線，適合接續三劍紀念碑參觀。右：近旁沙灘提供與青銅紀念碑不同的親水尺度。"
     },
     {
       "t": "p",
@@ -68,7 +67,7 @@ POST_DETAIL['stavanger'] = {
         "img/stavanger/tents.jpg",
         "img/stavanger/gathering.jpg"
       ],
-      "cap": "左：岸邊草地上的帳篷。右：聚在桌邊的人們。"
+      "cap": "左：造訪時草地上的帳篷，記錄紀念碑周邊的當地活動。右：桌邊聚會讓這處戰役紀念地保有生活氣息。"
     },
     {
       "t": "h",
@@ -136,6 +135,6 @@ POST_DETAIL['stavanger'] = {
   "coverPos": "50% 0%",
   "cardH": "img/stavanger/cover.jpg",
   "cardV": true,
-  "updated": "2026-11-22",
-  "coverCap": "從峽灣邊看向三劍紀念碑，三把巨劍立在伸入水面的岩岸上。"
+  "updated": "2026-11-23",
+  "coverCap": "斯塔萬格三劍紀念碑 Sverd i fjell 立於哈弗斯峽灣旁，以插入岩石的巨劍，紀念與挪威統一相關的戰役。"
 };

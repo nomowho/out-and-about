@@ -21,7 +21,7 @@ POST_DETAIL['kilden'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/kilden/oak.jpg",
-      "cap": "抬頭看，橡木板條沿著屋簷的起伏排列，玻璃上映著藍天。"
+      "cap": "Kilden 的楔形橡木板隨曲面排列，材料與聲學考量共同塑造這片表演藝術中心的門面。"
     },
     {
       "t": "p",
@@ -32,7 +32,7 @@ POST_DETAIL['kilden'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/kilden/walk.jpg",
-      "cap": "走在屋簷下，巨大的木色曲面一路延伸到港邊。"
+      "cap": "走進 Kilden 屋簷下，能近看橡木立面的尺度，以及大廳如何沿港灣展開。"
     },
     {
       "t": "h",
@@ -48,7 +48,7 @@ POST_DETAIL['kilden'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/kilden/roof.jpg",
-      "cap": "換個方向仰望，才看見屋簷向外伸出的弧線。"
+      "cap": "Kilden 外挑的木色屋簷，讓原本收納多座表演廳的量體，在入口呈現柔和的曲面。"
     },
     {
       "t": "h",
@@ -65,7 +65,7 @@ POST_DETAIL['kilden'] = {
         "img/kilden/glass.jpg",
         "img/kilden/waterfront.jpg"
       ],
-      "cap": "左：屋簷與玻璃在轉角交接。右：從港邊看橡木立面的波浪。"
+      "cap": "左：橡木曲面與玻璃在 Kilden 轉角相接，內外視線互通。右：從港灣回看，更能辨識立面與黑色後方量體的對比。"
     },
     {
       "t": "p",
@@ -76,7 +76,7 @@ POST_DETAIL['kilden'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/kilden/foyer.jpg",
-      "cap": "大廳裡也能看見延續進室內的木色曲面。"
+      "cap": "Kilden 的橡木牆面延伸至大廳，讓室內公共空間與港邊入口保有連續的材料表情。"
     },
     {
       "t": "h",
@@ -109,7 +109,7 @@ POST_DETAIL['kilden'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/kilden/harbour.jpg",
-      "cap": "港灣邊的長椅，坐下來看一會兒海。"
+      "cap": "Kilden 周邊的港灣步行空間，可與鄰近 Kunstsilo 美術館串成 Kristiansand 水岸建築散步路線。"
     },
     {
       "t": "p",
@@ -186,7 +186,7 @@ POST_DETAIL['kilden'] = {
   "coverPos": "50% 85%",
   "cardH": "img/kilden/cover.jpg",
   "cardV": true,
-  "coverCap": "Kilden 面向港灣的正面，波浪形橡木屋簷覆在整片玻璃立面上。",
+  "coverCap": "挪威 Kilden 表演藝術中心以波浪形橡木立面面向港灣，木材也呼應 Kristiansand 昔日的橡木出口歷史。",
   "sources": [
     [
       "Kilden：This is Kilden",

@@ -7,6 +7,10 @@ POST_DETAIL['bergen'] = {
       "text": "來卑爾根之前，記得最多的就是它很愛下雨。這次卻很幸運遇到晴天，港邊有人散步，山坡上的白色房子也看得清楚。先沿著水邊走，再鑽進彩色木屋之間，是很適合慢慢逛的一座城市。"
     },
     {
+      "t": "p",
+      "text": "卑爾根在 1070 年建城，也曾是挪威的王都。港口把北方鱈魚乾與歐洲商路接起來，城市沿著碼頭發展，再慢慢爬上四周山坡。"
+    },
+    {
       "t": "h",
       "id": "bryggen",
       "text": "布呂根為什麼是世界遺產？"
@@ -16,7 +20,7 @@ POST_DETAIL['bergen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/bergen/bryggen.jpg",
-      "cap": "走近布呂根，幾棟木屋的顏色、招牌與尖頂各不相同。"
+      "cap": "近看布呂根的尖頂木屋，重建的立面背後仍保留中世紀碼頭聚落的街巷格局。"
     },
     {
       "t": "p",
@@ -31,7 +35,16 @@ POST_DETAIL['bergen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/bergen/quay.jpg",
-      "cap": "港灣對面的布呂根，木屋前方就是碼頭與水面。"
+      "cap": "從港灣對岸回望布呂根，能看清昔日倉庫與碼頭相依的配置；鱈魚乾曾從這裡運往歐洲。"
+    },
+    {
+      "t": "h",
+      "id": "colours",
+      "text": "為什麼這裡有那麼多彩色木屋？"
+    },
+    {
+      "t": "p",
+      "text": "可愛的房子有一部分來自老木造街區的保存。布呂根經火災重建，仍沿用狹長屋列與木造通道；別的街區則留下不同年代的色彩。市府在 Hollendergaten 刮開舊漆研究，發現紅、赭黃、綠等土質顏料的歷史。今天的修復也會參考這些漆層，並非整座城為觀光統一上色。"
     },
     {
       "t": "h",
@@ -48,14 +61,14 @@ POST_DETAIL['bergen'] = {
         "img/bergen/flowers.jpg",
         "img/bergen/street.jpg"
       ],
-      "cap": "左：白牆旁開著花的街角。右：沿著街道看過去，後方就是山坡。"
+      "cap": "左：離開布呂根碼頭，卑爾根散步路線轉入住宅街角。右：沿坡延伸的街道，呈現港城依山發展的地形。"
     },
     {
       "t": "img",
       "src": "img/bergen/window-seat.jpg",
       "size": "tall",
       "fit": "natural",
-      "cap": "窗邊的長椅與盆栽，坐下來休息一下。"
+      "cap": "卑爾根街角的窗邊座位，讓港口與世界遺產之外的市區散步，多了一處可以停留的地方。"
     },
     {
       "t": "h",
@@ -72,7 +85,7 @@ POST_DETAIL['bergen'] = {
         "img/bergen/avenue.jpg",
         "img/bergen/hillside.jpg"
       ],
-      "cap": "左：街道兩側的樹把港灣框在遠處。右：山坡上層層排列的房子。"
+      "cap": "左：從卑爾根市區街道看港灣，不必登山也能找到視線開闊的位置。右：山坡住宅一路接到樹林，顯出城市與山的距離。"
     },
     {
       "t": "pair",
@@ -80,7 +93,7 @@ POST_DETAIL['bergen'] = {
         "img/bergen/tree-lined-path.jpg",
         "img/bergen/stepped-gable.jpg"
       ],
-      "cap": "左：沿著綠蔭步道往下看，街道與房子就在樹叢之間。右：階梯狀山牆後方，是一路延伸到山坡的屋頂。"
+      "cap": "左：綠蔭步道沿坡而下，把卑爾根街景分成遠近幾層。右：階梯山牆與後方屋頂，適合放在同一段市區建築散步中細看。"
     },
     {
       "t": "h",
@@ -96,21 +109,34 @@ POST_DETAIL['bergen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/bergen/market.jpg",
-      "cap": "魚市場攤位裡的海鮮與料理，頭頂還掛著魚乾。"
+      "cap": "卑爾根魚市場集合海鮮與即食料理，也是從布呂根延伸認識港城飲食的方便一站。"
     },
     {
       "t": "img",
       "size": "wide",
       "fit": "natural",
       "src": "img/bergen/gulls.jpg",
-      "cap": "港邊不只有散步的人，海鷗和鴿子也在腳邊活動。"
+      "cap": "卑爾根港邊的海鳥與行人，共享碼頭外的步行空間；沿水岸慢走，也能看見城市日常。"
     },
     {
       "t": "img",
       "size": "tall",
       "fit": "natural",
       "src": "img/bergen/square.jpg",
-      "cap": "廣場前方鋪著彩虹色塊，後面是升著旗子的建築。"
+      "cap": "彩虹斑馬線為卑爾根市區散步添了鮮明色彩，與港邊木屋呈現不同的街道表情。"
+    },
+    {
+      "t": "h",
+      "id": "rain-and-life",
+      "text": "雨天、肉桂捲，還有五月的鼓聲"
+    },
+    {
+      "t": "p",
+      "text": "北大西洋的濕潤空氣遇山抬升，讓卑爾根多雨。雨大時可以轉進美術館，或找家咖啡館吃 skillingsbolle。這種肉桂捲是當地人的日常點心，配杯咖啡就能坐一會兒。"
+    },
+    {
+      "t": "p",
+      "text": "想看地方傳統，可以留意 Buekorps 少年鼓隊，春天會在街區練習，5 月 17 日國慶尤其熱鬧。五、六月另有始於 1953 年的卑爾根國際藝術節，音樂、戲劇與舞蹈輪流登場。"
     },
     {
       "t": "p",
@@ -157,10 +183,42 @@ POST_DETAIL['bergen'] = {
       "適合，卑爾根是挪威峽灣之旅的主要門戶，可以接火車、渡輪和沿岸快輪。"
     ]
   ],
-  "updated": "2026-11-22",
-  "cover": "img/bergen/cover.jpg",
-  "cardH": "img/bergen/cover.jpg",
+  "updated": "2026-11-23",
+  "cover": "img/bergen/harbour-panorama.jpg",
+  "cardH": "img/bergen/bryggen.jpg",
   "cardV": true,
-  "coverCap": "從水邊看布呂根，彩色尖頂木屋沿著碼頭排開，船停在前方。",
-  "cardPortrait": "img/bergen/portrait-avenue.jpg"
+  "coverCap": "卑爾根港灣前的布呂根木屋與山坡住宅，呈現城市由貿易碼頭向山地展開的格局。",
+  "cardPortrait": "img/bergen/portrait-bryggen.jpg",
+  "sources": [
+    [
+      "Visit Bergen｜World Heritage City",
+      "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/bergen-world-heritage-city",
+      "建城、港口貿易與木造街區"
+    ],
+    [
+      "Bergen kommune｜Hollendergaten 色彩計畫",
+      "https://www.regjeringen.no/globalassets/upload/kilde/md/bro/1999/0045/ddd/pdfv/15347-hollende.pdf",
+      "市府舊漆層調查與歷史色彩修復"
+    ],
+    [
+      "挪威氣象研究所｜Bergen 降雨研究",
+      "https://www.met.no/publikasjoner/met-report/met-report-2016/_/attachment/download/6cea9a39-b622-43ef-8442-9e389ec456b5%3A0b169633a775a6779a3fdceaaaa939fcd01c30f0/MET-report-06-2016.pdf",
+      "濕潤海氣與地形抬升"
+    ],
+    [
+      "Visit Bergen｜Skillingsbolle",
+      "https://en.visitbergen.com/food-and-drink/bergen-city-of-gastronomy/skillingsbolle-favourite-pastry-in-Bergen",
+      "在地點心與咖啡習慣"
+    ],
+    [
+      "Buekorps 非物質文化遺產紀錄",
+      "https://www.immateriellkulturarv.no/en/bidrag/buekorps-2/",
+      "少年鼓隊的社區活動與國慶傳統"
+    ],
+    [
+      "Visit Bergen｜Bergen International Festival",
+      "https://en.visitbergen.com/whats-on/bergen-international-festival-p782923",
+      "藝術節沿革與表演類型"
+    ]
+  ]
 };

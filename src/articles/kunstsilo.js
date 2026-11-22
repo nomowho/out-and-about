@@ -5,7 +5,7 @@ POST_DETAIL["kunstsilo"] = {
   "updated": "2026-11-21",
   "cover": "img/kunstsilo/cover-waterfront.jpg",
   "coverLayout": "split",
-  "coverCap": "從港邊望向 Kunstsilo，整排白色筒倉映著藍天，前方就是水面。",
+  "coverCap": "Kristiansand 的 Kunstsilo 將港邊舊穀倉改為美術館，白色筒倉保留了城市糧食運輸產業的建築記憶。",
   "body": [
     {
       "t": "p",
@@ -14,7 +14,7 @@ POST_DETAIL["kunstsilo"] = {
     {
       "t": "img",
       "src": "img/kunstsilo/harbor.jpg",
-      "cap": "白色的 Kunstsilo 站在水邊，左側是 Kilden 的木色屋頂。",
+      "cap": "Kunstsilo 與左側 Kilden 表演藝術中心相鄰，讓舊港區形成可步行串連的藝術文化據點。",
       "size": "wide"
     },
     {
@@ -42,7 +42,7 @@ POST_DETAIL["kunstsilo"] = {
     {
       "t": "img",
       "src": "img/kunstsilo/ceiling.jpg",
-      "cap": "筒倉切開後留下的圓形斷面，成了中庭的天花板。",
+      "cap": "Kunstsilo 切開原有混凝土筒倉，將儲糧空間轉成可供觀看、通行的挑高中庭。",
       "size": "wide"
     },
     {
@@ -55,7 +55,7 @@ POST_DETAIL["kunstsilo"] = {
         "img/kunstsilo/atrium.jpg",
         "img/kunstsilo/stairs.jpg"
       ],
-      "cap": "左：老筒倉之間，新的樓層與開口一層層展開。右：沿著樓梯往上，暖光勾出轉折。"
+      "cap": "左：新樓層與開口穿插於 Kunstsilo 舊筒倉之間。右：樓梯把展覽動線接入保留下來的混凝土結構。"
     },
     {
       "t": "p",
@@ -64,7 +64,7 @@ POST_DETAIL["kunstsilo"] = {
     {
       "t": "img",
       "src": "img/kunstsilo/history.jpg",
-      "cap": "牆上投映著舊穀倉的影像，頭頂就是留下來的混凝土結構。",
+      "cap": "舊穀倉影像在 Kunstsilo 原有結構下展出，讓參觀者同時閱讀工業遺產與改建後的美術館。",
       "size": "tall"
     },
     {

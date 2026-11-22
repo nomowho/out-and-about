@@ -18,7 +18,7 @@ POST_DETAIL['the-twist'] = {
   "cover": "img/the-twist/cover.jpg",
   "cardH": "img/the-twist/cover.jpg",
   "cardV": true,
-  "coverCap": "The Twist 橫跨 Randselva 河，銀白色的量體在中間扭轉，兩端接回樹林。",
+  "coverCap": "BIG 設計的 The Twist 橫跨 Randselva 河，以 90 度扭轉接合兩岸，同時作為 Kistefos 的展館與橋梁。",
   "body": [
     {
       "t": "p",
@@ -29,7 +29,7 @@ POST_DETAIL['the-twist'] = {
       "size": "wide",
       "src": "img/the-twist/river-view.jpg",
       "fit": "natural",
-      "cap": "沿著河岸看過去，The Twist 的扭轉輪廓從樹林間露出來。"
+      "cap": "從河岸看 The Twist，能讀出建築兩端不同的高度與寬度，造型直接回應跨河與展覽需求。"
     },
     {
       "t": "h",
@@ -44,7 +44,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/entrance.jpg",
-      "cap": "Kistefos 的入口，混凝土門框站在樹林前。"
+      "cap": "Kistefos 入口連接樹林、雕塑與工業遺產路線；The Twist 是其中串連兩岸的重要節點。"
     },
     {
       "t": "p",
@@ -54,7 +54,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "tall",
       "src": "img/the-twist/mill.jpg",
-      "cap": "Nybruket 的紅磚外牆，保留了老廠區的樣子。"
+      "cap": "Nybruket 紅磚建築保留 Kistefos 的老廠區尺度，與 The Twist 並置，呈現木漿產業到藝術園區的轉變。"
     },
     {
       "t": "h",
@@ -69,13 +69,13 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/loop.jpg",
-      "cap": "從空中看，The Twist 把兩邊的樹林和步道接了起來。"
+      "cap": "The Twist 將兩岸步道接成環形參觀路線，增加展覽空間的同時，也減少遊客沿原路折返。"
     },
     {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/overhead.jpg",
-      "cap": "從正上方俯看，橋身中段的扭轉和兩端不同的寬度格外清楚。"
+      "cap": "俯看 The Twist 的中段扭轉，能清楚辨識兩端展覽空間如何在跨河處轉換方向。"
     },
     {
       "t": "p",
@@ -94,13 +94,13 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/south.jpg",
-      "cap": "站到入口前，才看見這棟建築一端立起來的高度。"
+      "cap": "The Twist 入口的高挑量體，與另一端較低寬的空間形成對比，是扭轉造型帶來的空間差異。"
     },
     {
       "t": "img",
       "size": "tall",
       "src": "img/the-twist/entry-walk.jpg",
-      "cap": "沿著入口前的步道走近，銀白色板條一路延伸到高挑的門口。"
+      "cap": "沿步道走近 The Twist，連續銀白板條讓入口、外牆與扭轉段的關係逐漸清楚。"
     },
     {
       "t": "p",
@@ -110,7 +110,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/inside.jpg",
-      "cap": "直線一條條排開，在中間轉出一個像被扭動的空間。"
+      "cap": "The Twist 以直線構件排列出連續扭轉，室內牆面與天花板在行進中逐步交換方向。"
     },
     {
       "t": "h",
@@ -131,7 +131,7 @@ POST_DETAIL['the-twist'] = {
         "img/the-twist/twist.jpg",
         "img/the-twist/window.jpg"
       ],
-      "cap": "左：走到扭轉處，牆面與頂部的線條一起轉向。右：大窗把河水和樹林帶進室內。"
+      "cap": "左：The Twist 扭轉段讓牆面與頂部連續轉向。右：大窗沿 Randselva 河展開，把看展動線接回園區景觀。"
     },
     {
       "t": "p",
@@ -141,7 +141,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "full",
       "src": "img/the-twist/bridge.jpg",
-      "cap": "回到河岸看 The Twist，兩端的差別和中間那一扭，都看得很清楚。"
+      "cap": "回到 Kistefos 河岸，The Twist 的橋梁功能與雕塑般外形可以同時觀看。"
     },
     {
       "t": "h",
@@ -157,7 +157,7 @@ POST_DETAIL['the-twist'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/the-twist/restroom.jpg",
-      "cap": "下層廁所區的洗手台、玻璃與鏡面，把空間的線條延伸出去。"
+      "cap": "The Twist 下層廁所以玻璃與鏡面延伸洗手區視線，建築參觀也延續到容易被忽略的服務空間。"
     },
     {
       "t": "p",
@@ -169,7 +169,7 @@ POST_DETAIL['the-twist'] = {
         "img/the-twist/projection.jpg",
         "img/the-twist/eyeball.jpg"
       ],
-      "cap": "左：隔間牆上的嘴唇特寫投影。右：投射在球體上的眼睛，讓上廁所也成了有點超現實的體驗。"
+      "cap": "左：廁所隔間的嘴唇影像，讓日常設施加入觀看內容。右：球體上的眼睛投影，改變了參觀者與影像彼此注視的關係。"
     },
     {
       "t": "p",
@@ -180,7 +180,7 @@ POST_DETAIL['the-twist'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/the-twist/point-of-view.jpg",
-      "cap": "Elmgreen & Dragset 的《Points of View – Part 2》，隔著玻璃朝室內張望。"
+      "cap": "Elmgreen & Dragset 的《Points of View – Part 2》隔窗朝向室內，將觀看者與被觀看者的位置反轉。"
     },
     {
       "t": "h",
@@ -197,7 +197,7 @@ POST_DETAIL['the-twist'] = {
         "img/the-twist/red-sculpture.jpg",
         "img/the-twist/bear.jpg"
       ],
-      "cap": "左：紅色雕塑站在老廠房前。右：步道旁坐著一隻有著孩子身體的熊。"
+      "cap": "左：當代雕塑與 Kistefos 舊廠房並置，形成不同年代的對話。右：熊頭與孩童身體的組合，讓林間散步多了一次辨認形象的停頓。"
     },
     {
       "t": "p",

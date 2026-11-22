@@ -22,7 +22,7 @@ POST_DETAIL['volandstind'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/volandstind/landscape.jpg",
-      "cap": "沿著岸邊看 Volandstind，水面、草地與尖峰一起入鏡。"
+      "cap": "從海岸觀看 Volandstind，山峰從水灣與草地間拔起，也說明它為何有「羅浮敦馬特洪峰」的暱稱。"
     },
     {
       "t": "h",
@@ -38,7 +38,7 @@ POST_DETAIL['volandstind'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/volandstind/cloud.jpg",
-      "cap": "低雲貼著山坡移動，逆光下的山峰只露出部分輪廓。"
+      "cap": "海風帶來的低雲沿 Volandstind 山坡移動，山峰輪廓隨天候改變，是這次停留觀看的重點。"
     },
     {
       "t": "pair",
@@ -46,7 +46,7 @@ POST_DETAIL['volandstind'] = {
         "img/volandstind/village.jpg",
         "img/volandstind/tidal.jpg"
       ],
-      "cap": "左：從村子裡看山，前方是木造涼亭和草皮屋頂。右：沿岸的淺水與草地。"
+      "cap": "左：從村落看 Volandstind，木造設施與草皮屋頂提供近景。右：沿岸淺水與草地呈現這座尖峰周圍的低地環境。"
     },
     {
       "t": "h",
@@ -62,7 +62,7 @@ POST_DETAIL['volandstind'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/volandstind/bridges.jpg",
-      "cap": "Fredvang 橋跨過海灣，橋身下方的水色由淺綠轉成深藍。"
+      "cap": "Fredvang 橋跨越羅浮敦海灣，連接島嶼道路；抬高的橋身也成為觀看 Volandstind 時鮮明的地景線條。"
     },
     {
       "t": "p",
@@ -118,5 +118,5 @@ POST_DETAIL['volandstind'] = {
   "coverLayout": "split",
   "cardV": true,
   "cardH": "img/volandstind/landscape.jpg",
-  "coverCap": "Volandstind 的尖峰露出雲層，下方是海灣與 Fredvang 橋。"
+  "coverCap": "羅浮敦 Volandstind 的三角尖峰與 Fredvang 橋同框，457 公尺的山形在臨海低地上格外醒目。"
 };

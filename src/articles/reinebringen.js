@@ -22,7 +22,7 @@ POST_DETAIL['reinebringen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/reinebringen/stairs.jpg",
-      "cap": "石階沿著山坡往上，兩旁是草地與裸露的岩石。"
+      "cap": "Reinebringen 的雪巴石階沿陡坡爬升，改善了原有土石路的路面，也將人流集中在較明確的路線上。"
     },
     {
       "t": "p",
@@ -33,7 +33,7 @@ POST_DETAIL['reinebringen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/reinebringen/trail-sign.jpg",
-      "cap": "入口看板：單程 1.1 公里、1,978 階、總爬升 448 公尺，建議時間 2–4 小時。"
+      "cap": "Reinebringen 入口看板列出 1,978 階與總爬升 448 公尺；這是現場步道資訊，並非山峰海拔的同一數值。"
     },
     {
       "t": "h",
@@ -54,7 +54,7 @@ POST_DETAIL['reinebringen'] = {
         "img/reinebringen/cliff.jpg",
         "img/reinebringen/descent.jpg"
       ],
-      "cap": "左：步道旁陡峭的山壁。右：回頭看走過的石階，下方就是海面。"
+      "cap": "左：Reinebringen 山壁呈現步道所處的陡峭地形。右：下山回望石階，能看見短距離內累積的爬升。"
     },
     {
       "t": "h",
@@ -70,7 +70,7 @@ POST_DETAIL['reinebringen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/reinebringen/fjord.jpg",
-      "cap": "尖峰圍著深藍色的峽灣，村子與道路落在山腳的平地上。"
+      "cap": "Reinebringen 下方的漁村集中在山腳平地，尖峰與峽灣限制了聚落和道路的發展位置。"
     },
     {
       "t": "p",
@@ -81,14 +81,14 @@ POST_DETAIL['reinebringen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/reinebringen/village.jpg",
-      "cap": "把鏡頭拉近，能看清楚島上的房子、道路和兩側不同顏色的水面。"
+      "cap": "近看 Reine 的房舍與跨海道路，能理解羅浮敦小島之間如何以橋梁連接生活與交通。"
     },
     {
       "t": "img",
       "size": "tall",
       "fit": "natural",
       "src": "img/reinebringen/portrait.jpg",
-      "cap": "站在觀景處，身後就是山腳的漁村與峽灣。"
+      "cap": "Reinebringen 觀景處把人物、漁村與峽灣放在同一畫面，呈現這趟連續爬階後抵達的高度。"
     },
     {
       "t": "h",
@@ -104,7 +104,7 @@ POST_DETAIL['reinebringen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/reinebringen/ridge.jpg",
-      "cap": "從高處看山稜與步道，兩側的坡度都很陡。"
+      "cap": "Reinebringen 上方山稜兩側坡面陡峭，觀景點之外的地形仍需和正式步道區分。"
     },
     {
       "t": "h",
@@ -120,7 +120,7 @@ POST_DETAIL['reinebringen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/reinebringen/road-sign.jpg",
-      "cap": "沿海舊路旁的 Reinebringen 標示。"
+      "cap": "沿海舊路上的 Reinebringen 指標，將停車後的步行段接到登山入口，也是安排全程時間的一部分。"
     },
     {
       "t": "p",
@@ -213,7 +213,7 @@ POST_DETAIL['reinebringen'] = {
   "cover": "img/reinebringen/cover.jpg",
   "cardH": "img/reinebringen/cover.jpg",
   "cardV": true,
-  "coverCap": "從 Reinebringen 看下去，Reine 漁村與跨海橋連著幾座小島，外圍是峽灣與尖峰。",
+  "coverCap": "從 Reinebringen 觀景處俯瞰 Reine，跨海橋、漁村與小島交錯，是羅浮敦南端極具辨識度的峽灣景觀。",
   "place": {
     "alt": [
       "Reinebringen hike"

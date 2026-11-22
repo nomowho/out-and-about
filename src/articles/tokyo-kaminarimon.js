@@ -13,7 +13,7 @@ POST_DETAIL['tokyo-kaminarimon'] = {
     address:{ streetAddress:'淺草 2-3-1', addressLocality:'台東區', addressRegion:'東京都', addressCountry:'JP' }
   },
   cover:'img/tokyo-kaminarimon/cover.jpg', coverLayout:'split',
-  coverCap:'雷門的大紅燈籠下，三社祭的人潮。',
+  coverCap:"淺草三社祭的人流穿過雷門，祭典將淺草寺起源的故事，帶回今日東京的街道。",
   visit:'2026 年 5 月三社祭',
   body:[
     { t:'p', text:'經過雷門底下，抬頭看那盞大紅燈籠，只覺得是個有點歷史的熱門景點。但雷門其實是一座城市誕生的起點，是一個跨越 1,400 年的約定，每年五月，被三社祭重新打開。' },
@@ -21,7 +21,7 @@ POST_DETAIL['tokyo-kaminarimon'] = {
     { t:'h', id:'origin', text:'三個人、一尊觀音，怎麼變成一座城市？' },
     { t:'p', text:'根據淺草寺的寺傳，628 年（推古天皇 36 年）3 月 18 日清晨，住在宮戶川（今天的隅田川）邊的漁夫兄弟檜前濱成、竹成，在撒網捕魚時撈起了一尊佛像。他們拿去給當地的長老土師中知看，才知道這是聖觀世音菩薩。土師中知後來出家，把自己的家改成寺來供奉，這就是淺草寺的起源。' },
     { t:'p', text:'這三個人後來被奉為淺草神社的祭神，三社祭的「三社」，指的就是他們。一次偶然的撒網，撈出了整座淺草。' },
-    { t:'img', size:'wide', src:'img/tokyo-kaminarimon/card1.jpg', cap:'穿著祭典半纏的人排成一列，等待出發。' },
+    { t:'img', size:'wide', src:'img/tokyo-kaminarimon/card1.jpg', cap:"穿著半纏的祭典參與者準備出發，三社祭由町會共同支撐，街區身分也呈現在服裝與隊伍中。" },
 
     { t:'h', id:'kaminarimon', text:'雷門是什麼時候蓋的？' },
     { t:'p', text:'現在看到的雷門，是 1960 年（昭和 35 年）由松下電器（今天的 Panasonic）社長松下幸之助捐建的。在那之前，雷門在 1865 年（慶應元年）燒毀後，整整 95 年都沒有重建。' },
@@ -34,21 +34,21 @@ POST_DETAIL['tokyo-kaminarimon'] = {
       ['第二天（週六）','舉行例大祭式典，接著是「町內神轎連合渡御」：44 個町會約百座神轎聚集到神社境內，一座一座接受祓除，再回到各町巡行。'],
       ['第三天（週日）','清晨「宮出」，三座宮神轎「一之宮」「二之宮」「三之宮」從神社扛出，白天分三路巡行各町，日落後回到神社「宮入」，祭典結束。'],
     ]},
-    { t:'pair', imgs:['img/tokyo-kaminarimon/card2.jpg','img/tokyo-kaminarimon/card6.jpg'], cap:'左：金色的神轎。右：神轎和遠處的晴空塔同框。' },
+    { t:'pair', imgs:['img/tokyo-kaminarimon/card2.jpg','img/tokyo-kaminarimon/card6.jpg'], cap:"左：三社祭神轎是祭神巡行的載具。右：神轎與晴空塔同框，呈現淺草祭典與現代東京的並存。" },
 
     { t:'h', id:'shake', text:'為什麼神轎要搖得那麼用力？' },
     { t:'p', text:'三社祭的神轎常被扛得劇烈搖晃，這不是失控，是刻意的。淺草神社的說法是：把神轎上下左右用力搖動，是在替神轎裡的神明「魂振」（たまふり），提升祂的靈威，祈求豐收、漁獲和疫病退散。晃得越厲害，神明越有力量。' },
     { t:'p', text:'三座宮神轎分別迎請三位祭神的神靈：一之宮是土師中知，二之宮是檜前濱成，三之宮是檜前竹成。1,400 年前那一次撒網，此刻就扛在每個人的肩膀上。' },
-    { t:'img', size:'wide', src:'img/tokyo-kaminarimon/card4.jpg', cap:'神轎在人群上方晃動。' },
+    { t:'img', size:'wide', src:'img/tokyo-kaminarimon/card4.jpg', cap:"三社祭扛轎時的劇烈搖動稱為魂振，透過身體動作讓祭典的祈願在街道中具體發生。" },
 
     { t:'h', id:'history', text:'三社祭以前是什麼樣子？' },
     { t:'p', text:'江戶時代，祭典和淺草寺是一體的，叫「觀音祭」或「淺草祭」。相傳從 1312 年起還有「船祭」：把神轎抬到隅田川邊，放上船，沿著河往上划，再從駒形上岸扛回神社，重演當年從河裡撈起觀音的故事。船祭一直延續到江戶末期，明治以後才改成今天在各町巡行神轎的形式。' },
     { t:'p', text:'戰前，神社還有德川家光捐贈的宮神轎，可惜在二戰空襲中全部燒毀。現在的一之宮、二之宮是 1950 年、三之宮是 1953 年由氏子們重新奉納的。' },
-    { t:'pair', imgs:['img/tokyo-kaminarimon/card5a.jpg','img/tokyo-kaminarimon/card5b.jpg'], cap:'左：頭戴紅色裝飾的行列角色。右：穿著祭典服裝的人走在街上。' },
+    { t:'pair', imgs:['img/tokyo-kaminarimon/card5a.jpg','img/tokyo-kaminarimon/card5b.jpg'], cap:"左：行列中的裝飾與角色，展現三社祭的表演性。右：祭典服裝進入日常街道，讓淺草街區整體成為儀式空間。" },
 
     { t:'h', id:'tips', text:'第一次去三社祭，怎麼看最好？' },
     { t:'p', text:'想看最熱血的場面，就早起去看週日清晨的「宮出」，但人潮非常驚人，要有心理準備。想輕鬆一點，可以在週六下午沿著淺草各町的街道走，到處都會遇到町內神轎。仲見世和雷門一帶是最擠的地方，帶小孩或行李的話，避開人潮最集中的時段。' },
-    { t:'img', size:'wide', src:'img/tokyo-kaminarimon/card7.jpg', cap:'擠滿人的仲見世，盡頭是寶藏門。' },
+    { t:'img', size:'wide', src:'img/tokyo-kaminarimon/card7.jpg', cap:"仲見世通向寶藏門，三社祭期間密集的人流，也呈現淺草寺與周邊商店街緊密相連的關係。" },
     { t:'p', text:'淺草迷人的地方，在於它從來不假裝自己只是給人看的。它是有人真正住著、拜著、吵著的地方，而三社祭，就是這一切最誠實的證明。' },
     { t:'p', text:'如果你在五月來東京，願意為了一個祭典多留一天嗎？' },
     { t:'h', id:'shrine', text:'淺草神社本身也是國寶級的建築嗎？' },

@@ -1,4 +1,3 @@
-// 羅浮敦鱈魚乾｜既有旅行紀錄配入 Nomo 原圖。
 POST_DETAIL['lofoten-stockfish'] = {
   "seoTitle": "羅浮敦群島風乾鱈魚：掛在木架上吹三個月的海風，為什麼一路賣到義大利和奈及利亞？",
   "dek": "風乾鱈魚（Stockfish）是挪威羅浮敦群島千年以上的傳統。每年冬末春初，洄游上岸的北極鱈被成對掛在海邊木架上，靠寒冷、乾燥又不結冰的海風自然風乾約三個月，不加鹽也不會壞，至今仍大量出口到義大利、奈及利亞與克羅埃西亞。",
@@ -6,14 +5,14 @@ POST_DETAIL['lofoten-stockfish'] = {
   "body": [
     {
       "t": "p",
-      "text": "在羅浮敦開車，路邊常常會出現一整片木架，上面密密麻麻掛著魚。遠看是一排排架子，從下方抬頭看，才看清楚魚身和成束的魚頭，連木樑之間都掛得滿滿的。"
+      "text": "在羅浮敦開車，路邊常常會出現一整片木架，上面密密麻麻掛著魚。下車走近，濃重的魚腥臭味就撲鼻而來，還沒站到架子底下，鼻子已經先感受到這座漁村的產業了。從下方抬頭看，才看清楚魚身和成束的魚頭，連木樑之間都掛得滿滿的。"
     },
     {
       "t": "img",
       "size": "wide",
       "fit": "natural",
       "src": "img/lofoten-stockfish/rows.jpg",
-      "cap": "成排的魚乾掛在海邊木架上，後方就是海灣。"
+      "cap": "捕撈後的鱈魚掛上戶外木架，不加鹽風乾約三個月；海灣旁的架子仍是漁村生產空間。"
     },
     {
       "t": "h",
@@ -27,10 +26,10 @@ POST_DETAIL['lofoten-stockfish'] = {
     {
       "t": "pair",
       "imgs": [
-        "img/lofoten-stockfish/under-rack.jpg",
+        "img/lofoten-stockfish/rack-portrait.jpg",
         "img/lofoten-stockfish/boats.jpg"
       ],
-      "cap": "左：從木架下方仰看，一層層橫樑上都掛著魚乾。右：木架下方停著小船。"
+      "cap": "左：鱈魚成對掛上羅浮敦魚架，以海風自然乾燥，不需加鹽。右：魚架下方停著小船，捕撈與加工緊鄰同一段漁港水岸。"
     },
     {
       "t": "h",
@@ -46,7 +45,7 @@ POST_DETAIL['lofoten-stockfish'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/lofoten-stockfish/cloud.jpg",
-      "cap": "木架後方的山腰覆著低雲，前景是岸邊草地。"
+      "cap": "羅浮敦山海之間的魚架，所依賴的是冷而不過度冰凍的冬春氣候，並非只為觀光保留的裝置。"
     },
     {
       "t": "h",
@@ -62,7 +61,7 @@ POST_DETAIL['lofoten-stockfish'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/lofoten-stockfish/close.jpg",
-      "cap": "木架下方的近景，成束魚頭的輪廓看得很清楚。"
+      "cap": "成束魚頭也被掛上魚架乾燥，讓羅浮敦鱈魚加工不只利用魚身，並連向不同的出口市場。"
     },
     {
       "t": "h",
@@ -78,14 +77,14 @@ POST_DETAIL['lofoten-stockfish'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/lofoten-stockfish/packaged-stockfish.jpg",
-      "cap": "商店裡的袋裝鱈魚乾與魚乾零食，包裝上寫著 Tørrfisk。"
+      "cap": "包裝上的 Tørrfisk 就是挪威風乾魚；從海邊木架到商店零食，同一項漁產發展出不同食用形式。"
     },
     {
       "t": "img",
       "size": "wide",
       "fit": "natural",
       "src": "img/lofoten-stockfish/bundles.jpg",
-      "cap": "仰看橫樑上的成束魚乾，陽光穿過木架的空隙。"
+      "cap": "從魚架下方看風乾鱈魚，能理解成束懸掛的加工方式，也能近看漁村貿易延續至今的現場。"
     },
     {
       "t": "p",
@@ -132,9 +131,9 @@ POST_DETAIL['lofoten-stockfish'] = {
       "最大的市場是義大利，奈及利亞和克羅埃西亞也是重要的出口國。"
     ]
   ],
-  "updated": "2026-11-22",
-  "cover": "img/lofoten-stockfish/cover.jpg",
+  "updated": "2026-11-23",
+  "cover": "img/lofoten-stockfish/fish-heads-cover.jpg",
   "cardH": "img/lofoten-stockfish/cover.jpg",
   "cardV": true,
-  "coverCap": "海邊木架上掛滿魚乾，架子之間看得見水面與遠山。"
+  "coverCap": "羅浮敦魚架上的成束鱈魚頭，與魚身一樣利用海風乾燥，是漁村加工與出口產業的一部分。"
 };

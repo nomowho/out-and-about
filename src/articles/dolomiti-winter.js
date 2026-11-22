@@ -12,55 +12,55 @@ POST_DETAIL['dolomiti-winter'] = {
     address:{ addressRegion:'Trentino-Alto Adige', addressCountry:'IT' }
   },
   cover:'img/dolomiti-winter/c02.jpg',
-  coverCap:'坐在雪地上，對面是 Sassolungo 的岩峰。',
+  coverCap:"冬季多洛米蒂的 Sassolungo 群峰，從覆雪高地拔起，裸露岩壁與雪原之間的落差格外鮮明。",
   visit:'2018 年 12 月底跨年',
   body:[
     { t:'p', text:'冬日雲霧散開，群峰才慢慢露出輪廓。灰白岩壁從雪裡拔起，稜線鋒利，像把天空推遠了一截。2018 年跨年，零下 15 度，相機冷到關機，我站在山前還是捨不得走。「好美」兩個字，輕得接不住眼前這一幕。' },
 
     { t:'h', id:'sea', text:'多洛米蒂的山，為什麼兩億年前是一片海？' },
     { t:'p', text:'大約兩億五千萬年前，這裡是三疊紀的熱帶淺海，珊瑚礁後來成了白雲岩的來源。非洲板塊往北擠，把海底推上三千公尺高。18 世紀末，法國地質學家 Déodat de Dolomieu 採樣化驗，發現這種岩石含有碳酸鈣鎂，岩石 dolomite 和山脈 Dolomiti 後來都以他命名。多洛米蒂也在 2009 年登錄為聯合國世界自然遺產。' },
-    { t:'img', size:'side', src:'img/dolomiti-winter/c03.jpg', cap:'雪原後方的 Odle 群峰。' },
+    { t:'img', size:'side', src:'img/dolomiti-winter/c03.jpg', cap:"Odle 群峰的鋸齒稜線，是多洛米蒂最具辨識度的山景之一，冬季積雪更凸顯岩壁輪廓。" },
 
     { t:'h', id:'enrosadira', text:'日落時山為什麼會變成粉紅色？' },
     { t:'p', text:'傍晚，含鎂的白雲岩映著低角度的陽光，會慢慢透出玫瑰紅。當地 Ladin 語把這個現象叫 enrosadira，意思是「變成粉紅」。冬天空氣乾、日落角度低，顏色格外清楚，但最鮮明的時間大約只有三分鐘，還得看天氣。12 月的日落約在 16:30，提早找好位置，讓眼睛跟著光走。' },
-    { t:'img', size:'side', src:'img/dolomiti-winter/c04.jpg', cap:'午後的光打在雪坡和岩壁上。' },
+    { t:'img', size:'side', src:'img/dolomiti-winter/c04.jpg', cap:"低角度陽光讓多洛米蒂的雪坡與白雲岩顯出層次，也是等待傍晚山色變化時值得觀察的細節。" },
 
     { t:'h', id:'ortisei', text:'Ortisei：一個村子，三個名字' },
     { t:'p', text:'走在 Ortisei 街上，同一塊招牌常常掛著三種語言：義大利文 Ortisei、德文 St. Ulrich、Ladin 語 Urtijëi。這是 Val Gardena 山谷的主村，只住了 4,637 人。從 17 世紀起，村裡一大半的人靠木雕維生，聖像、祭壇、木頭玩具都做；19 世紀末村裡開了木雕學校，工匠被送去維也納和慕尼黑的美術學院受訓，宗教木雕在世紀之交達到高峰。' },
     { t:'p', text:'這個小村還出了好幾位名人：「迪斯可之父」、拿過 3 座奧斯卡的作曲家 Giorgio Moroder，登山家兼導演 Luis Trenker，還有 2012 年花式滑冰世界冠軍 Carolina Kostner。' },
-    { t:'img', size:'wide', src:'img/dolomiti-winter/cort-b.jpg', cap:'雪中的 Ortisei 村落。' },
+    { t:'img', size:'wide', src:'img/dolomiti-winter/cort-b.jpg', cap:"Ortisei 位於 Val Gardena 山谷，是前往 Seceda 與周邊高山景區的重要據點，也保有木雕工藝傳統。" },
 
     { t:'h', id:'seceda', text:'Seceda：最經典的鋸齒山脊' },
     { t:'p', text:'從 Ortisei 搭纜車，大約十分鐘就能上到海拔約 2,519 公尺的 Seceda。一邊是陡峭的鋸齒岩壁，後面接著整排 Odle 群峰，是多洛米蒂最常出現在明信片上的稜線。夏季旺季為了分散人潮，纜車改成線上時段預約；冬季的營運與滑雪路線請以 Val Gardena 官網公告為準。' },
-    { t:'img', size:'side', src:'img/dolomiti-winter/c05.jpg', cap:'帶狗散步的人，背後是覆雪的岩峰。' },
+    { t:'img', size:'side', src:'img/dolomiti-winter/c05.jpg', cap:"冬日山景中的散步者，提供觀察多洛米蒂岩峰尺度的參照；山谷生活與雪季活動就在群峰腳下。" },
 
     { t:'h', id:'siusi', text:'Alpe di Siusi：歐洲最大的高山牧場' },
     { t:'p', text:'Alpe di Siusi（德語 Seiser Alm）海拔 1,680 到 2,350 公尺、面積 52 平方公里，是歐洲最大的高山牧場。青銅器時代就有人把牛趕上來吃草，羅馬人還修了一條騾道從山下接上高原；東側從 1975 年起納入 Sciliar 自然公園。夏天是牧場，冬天整片鋪成雪原，抬頭就是 Sassolungo 和 Sciliar 兩道稜線。' },
     { t:'p', text:'上山以纜車為主，山上道路對一般車輛有時段管制，出發前到官網確認最新規定。' },
-    { t:'img', size:'full', src:'img/dolomiti-winter/c06.jpg', cap:'Alpe di Siusi 的雪原和滑雪客，遠處是 Sassolungo。' },
+    { t:'img', size:'full', src:'img/dolomiti-winter/c06.jpg', cap:"Alpe di Siusi 高山牧場冬季轉為雪地活動場域，開闊雪原前方可望見 Sassolungo 的岩峰。" },
 
     { t:'h', id:'funes', text:'Val di Funes：明信片上那座小教堂' },
     { t:'p', text:'我是冒著暴風雪走進 Val di Funes 的，Santa Maddalena 和後方的 Odle 群峰全躲在雲裡。就在準備放棄的時候，Odle 才從雲裡露出來，明信片上的畫面終於出現。' },
     { t:'p', text:'Funes 整個山谷只住了兩千五百多人，登山家 Reinhold Messner 就在這裡的 St. Peter 長大，他是人類第一個無氧登頂聖母峰、第一個完攀全部十四座八千公尺高峰的人。' },
-    { t:'pair', imgs:['img/dolomiti-winter/c07a.jpg','img/dolomiti-winter/c07b.jpg'], cap:'左：雲還沒散的 Santa Maddalena。右：雲散開後，Odle 群峰出現在教堂後方。' },
+    { t:'pair', imgs:['img/dolomiti-winter/c07a.jpg','img/dolomiti-winter/c07b.jpg'], cap:"左：雲層暫時遮住 Santa Maddalena 的山景。右：天候轉開後，Odle 群峰成為教堂後方的背景。" },
 
     { t:'h', id:'valentin', text:'St. Valentin：走過草坡才看見的教堂' },
     { t:'p', text:'從 Siusi 沿 7 號步道往山坡上走，先是一片空曠的草地，接著 St. Valentin 才出現，Sciliar（Schlern）山群就在背後。這座教堂在 1244 年首次出現在文獻裡，鐘樓建於 13 世紀；外牆畫著 14、15 世紀的濕壁畫，站在外面就看得到。教堂平時不開放，夏季（約 6 月底到 9 月初）有導覽可以進去。' },
-    { t:'img', size:'wide', src:'img/dolomiti-winter/c07.jpg', cap:'St. Valentin 與後方的 Sciliar 山群。' },
+    { t:'img', size:'wide', src:'img/dolomiti-winter/c07.jpg', cap:"St. Valentin 教堂與 Sciliar 山群同框，呈現多洛米蒂山區聚落和岩峰彼此依存的景觀。" },
 
     { t:'h', id:'saeben', text:'Säben（Sabiona）：被叫作聖山的岩丘' },
     { t:'p', text:'車開進 Klausen（Chiusa），抬頭就會看到修道院站在岩丘頂上。新石器時代這裡就有人生活，6 世紀到大約 960 年是主教座所在地，之後才遷到 Brixen。1687 年本篤會修女進駐，一住三百多年，最後一批修女到 2021 年才離開。' },
-    { t:'img', size:'wide', src:'img/dolomiti-winter/csab.jpg', cap:'岩丘頂上的 Säben 修道院。' },
+    { t:'img', size:'wide', src:'img/dolomiti-winter/csab.jpg', cap:"Säben 修道院坐落岩丘高處，是多洛米蒂行程中，從高山自然景觀轉向歷史聚落的一站。" },
 
     { t:'h', id:'ski', text:'Dolomiti Superski：世界最大的滑雪區' },
     { t:'p', text:'Dolomiti Superski 成立於 1974 年，一張通行證通用 12 個雪區、1,246 公里雪道，分布在約三千平方公里的範圍裡，是全世界最大的滑雪區域。這裡也常辦高山滑雪世界盃，2026 年米蘭－科爾蒂納冬季奧運的高山滑雪項目，就在 Cortina d\'Ampezzo 舉行。' },
-    { t:'img', size:'wide', src:'img/dolomiti-winter/c09b.jpg', cap:'雪道上的滑雪客，後方是連綿的岩峰。' },
+    { t:'img', size:'wide', src:'img/dolomiti-winter/c09b.jpg', cap:"冬季多洛米蒂的雪道沿群峰展開，滑雪者與遠處岩壁形成鮮明的尺度對比。" },
 
     { t:'h', id:'nye', text:'跨年夜在多洛米蒂做什麼？' },
     { t:'p', text:'天黑之後別急著進屋。很多雪場跨年會辦 fiaccolata：滑雪教練舉著火把從山上一路滑下來，在雪坡上連成一條移動的光。各村也會放煙火，Cortina、Val Gardena、Alta Badia 的場次和時間每年不同，出發前再到各村官網確認。' },
-    { t:'img', size:'wide', src:'img/dolomiti-winter/c09.jpg', cap:'跨年夜，煙火在教堂鐘樓上方炸開。' },
+    { t:'img', size:'wide', src:'img/dolomiti-winter/c09.jpg', cap:"教堂鐘樓上方的跨年煙火，記錄了這趟冬季多洛米蒂旅行的節慶時刻。" },
     { t:'p', text:'走在村子裡，溪床上還可能遇到一根冰塔：水從高處一點一點滴下來，在零下的空氣裡一層層凍住，外層是半透明的青白色，表面掛滿垂直的冰稜。' },
-    { t:'img', size:'wide', src:'img/dolomiti-winter/cice.jpg', cap:'村子溪邊的冰塔。' },
+    { t:'img', size:'wide', src:'img/dolomiti-winter/cice.jpg', cap:"村落溪邊的冰塔，讓多洛米蒂冬日行程除了雪景，也能近看低溫形成的冰體。" },
 
     { t:'h', id:'drive', text:'冬天自駕多洛米蒂要注意什麼？' },
     { t:'p', text:'交通和住宿都要提早安排。開車的話先確認雪胎：義大利多數山區道路從 11 月 15 日到隔年 4 月 15 日，規定要裝雪胎或車上備雪鏈，實際以各路段公告為準。幾條高山埡口，像 Sella、Gardena、Pordoi、Falzarego，冬天可能因雪況封閉，繞路會多花非常多時間。' },

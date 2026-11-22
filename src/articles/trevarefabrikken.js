@@ -19,7 +19,7 @@ POST_DETAIL['trevarefabrikken'] = {
     {
       "t": "img",
       "src": "img/trevarefabrikken/sauna-window.jpg",
-      "cap": "木造桑拿屋裡的熱石爐，窗外就是海。",
+      "cap": "Trevarefabrikken 桑拿屋的熱石爐與面海大窗，將熱浴、觀景和下海體驗安排在相鄰的空間。",
       "size": "tall",
       "fit": "natural"
     },
@@ -33,12 +33,12 @@ POST_DETAIL['trevarefabrikken'] = {
         "img/trevarefabrikken/rock-sauna.jpg",
         "img/trevarefabrikken/sea-dip.jpg"
       ],
-      "cap": "左：桑拿屋就在岩岸上。右：走到水邊，準備下海。"
+      "cap": "左：岩岸上的 Trevarefabrikken 桑拿屋，保留與自然地形的直接接觸。右：由岩石走向海面，是這次冷熱交替體驗的一部分。"
     },
     {
       "t": "img",
       "src": "img/trevarefabrikken/waterline.jpg",
-      "cap": "從海面看回岩岸，桑拿屋藏在石壁旁。",
+      "cap": "從海面回看 Trevarefabrikken，桑拿屋、露台與工廠仍在同一段岩岸，呈現改造後的空間連續性。",
       "size": "wide",
       "fit": "natural"
     },
@@ -47,7 +47,7 @@ POST_DETAIL['trevarefabrikken'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/trevarefabrikken/sea-swim.jpg",
-      "cap": "跳進 0 度的海，再衝回岩岸上的桑拿屋。"
+      "cap": "這次在 Trevarefabrikken，我們跳進 0 度的海，再衝回岩岸上的桑拿屋；冷熱交替是整段體驗最難忘的部分。"
     },
     {
       "t": "p",
@@ -69,7 +69,7 @@ POST_DETAIL['trevarefabrikken'] = {
     {
       "t": "img",
       "src": "img/trevarefabrikken/factory.jpg",
-      "cap": "這次拍到的工廠外觀，部分立面仍有施工覆蓋。",
+      "cap": "造訪時 Trevarefabrikken 外牆仍有施工覆蓋，老工廠的修繕與新用途，是分階段持續推進的。",
       "size": "tall",
       "fit": "natural"
     },
@@ -85,14 +85,14 @@ POST_DETAIL['trevarefabrikken'] = {
     {
       "t": "img",
       "src": "img/trevarefabrikken/cafe.jpg",
-      "cap": "咖啡館的長吧台與座位，屋頂保留外露的構件與管線。",
+      "cap": "Trevarefabrikken 咖啡館保留柱列、管線與開闊尺度，讓工業建築直接容納今日的餐飲與聚會。",
       "size": "wide",
       "fit": "natural"
     },
     {
       "t": "img",
       "src": "img/trevarefabrikken/coffee.jpg",
-      "cap": "咖啡、飲品、麵包和甜點擺滿桌面。",
+      "cap": "在 Trevarefabrikken 喝咖啡、吃麵包，是參與這座文化工廠最簡單的方式，不必住宿也能停留。",
       "size": "wide",
       "fit": "natural"
     },
@@ -107,7 +107,7 @@ POST_DETAIL['trevarefabrikken'] = {
     {
       "t": "img",
       "src": "img/trevarefabrikken/terrace.jpg",
-      "cap": "面海的戶外長桌，桌上放著小盆花。",
+      "cap": "Trevarefabrikken 面海長桌提供共享座位，讓餐飲與聚會從老工廠室內延伸到戶外露台。",
       "size": "wide",
       "fit": "natural"
     },
@@ -135,7 +135,7 @@ POST_DETAIL['trevarefabrikken'] = {
     {
       "t": "img",
       "src": "img/trevarefabrikken/shore.jpg",
-      "cap": "工廠後方的岩岸、戶外座位與海面。",
+      "cap": "工廠後方岩岸同時容納桑拿、座位與聚會空間，讓 Trevarefabrikken 的地方創生落在實際可用的場所。",
       "size": "wide",
       "fit": "natural"
     },
@@ -192,7 +192,7 @@ POST_DETAIL['trevarefabrikken'] = {
   "cover": "img/trevarefabrikken/rock-sauna.jpg",
   "cardH": "img/trevarefabrikken/waterline.jpg",
   "cardV": true,
-  "coverCap": "桑拿屋就在岩岸上，走下梯子就是海。",
+  "coverCap": "羅浮敦 Trevarefabrikken 把桑拿設在工廠後方岩岸，讓 Henningsvær 老工廠的新用途延伸到海邊。",
   "sources": [
     [
       "Trevarefabrikken｜Our Story",
