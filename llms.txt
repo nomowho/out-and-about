@@ -43,7 +43,7 @@
 - [挪威 Kilden 表演藝術中心：沿著港邊，走進波浪形的橡木屋簷下](https://nomowho.com/stories/kilden/): 在 Kristiansand 港邊，Kilden 最醒目的就是那片往外翻起的橡木屋簷。走近看，木板的線條一路轉彎，底下的玻璃映著船和藍天。這裡有交響樂、戲劇和歌劇，旁邊就是 Kunstsilo；
 - [挪威卑爾根：一年下雨 200 多天的城市，布呂根彩色木屋為什麼是世界遺產？](https://nomowho.com/stories/bergen/): 卑爾根（Bergen）是挪威第二大城、峽灣之旅的門戶，一年下雨超過 200 天。港邊的布呂根（Bryggen）是中世紀漢薩同盟商人留下的彩色木造碼頭，1979 年列入世界遺產；搭弗洛伊恩山纜車上山，可以俯瞰整片鋪進海灣的屋頂。
 - [羅浮敦的馬特洪峰 Volandstind：457 公尺的三角尖峰，幸運的話會戴上一頂雲做的帽子](https://nomowho.com/stories/volandstind/): Volandstind 在挪威羅浮敦群島的 Flakstadøya 島上，海拔約 457 公尺，形狀尖銳、孤立在海灣和橋邊，被稱為「羅浮敦的馬特洪峰」。最好的觀景點在 Fredvang 雙橋附近；天氣對的時候，山頂會出現一圈蓋帽雲。
-- [挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常](https://nomowho.com/stories/trevarefabrikken/): 位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。這次來到建築後方的臨海桑拿屋，蒸著 80 幾度的熱石桑拿，接著跳進 8 度的海，很熱血，也很慶幸我還活著！
+- [挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常](https://nomowho.com/stories/trevarefabrikken/): 位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。
 - [薩爾茲堡一日散步：千年沒被攻下的霍亨薩爾茲堡要塞、穀物街鐵招牌與莫札特出生地](https://nomowho.com/stories/salzburg/): 薩爾茲堡在奧地利西部、靠近德國邊境，因鹽而富，由總主教統治了上千年。舊城 1996 年列入世界遺產，地標是 1077 年動工的霍亨薩爾茲堡要塞，官方說它從未被武力攻下。
 - [哈修塔特住哪裡？Hallstatt Hideaway 開箱：1740 年老宅改建的湖景套房](https://nomowho.com/stories/hallstatt-hideaway/): Hallstatt Hideaway 是哈修塔特山腰上的成人限定小旅館，建築是 1740 年奧地利皇室森林官的住宅，2014 年整修成幾間獨立套房。窗外就是哈爾施塔特湖和雪山，從碼頭走上去大約十分鐘。景觀無可挑剔，服務則比較隨性。
 - [哈修塔特為什麼叫上帝的明信片？七千年鹽礦、鐵器時代文化與冬天的湖景](https://nomowho.com/stories/hallstatt/): 哈修塔特（Hallstatt）在奧地利上奧地利邦，夾在哈爾施塔特湖和達赫斯坦山之間。小鎮因鹽而生，考古顯示這裡的鹽礦已開採約七千年，歐洲早期鐵器時代的「哈修塔特文化」就以它命名。
@@ -184,7 +184,7 @@
 - [斯塔萬格石中劍 Sverd i fjell：三把巨劍插進峽灣，紀念 872 年維京人統一挪威的一戰](https://nomowho.com/stories/stavanger/): 斯塔萬格（Stavanger）在挪威西南部，是北海石油之都，也是爬聖壇岩的出發城市。城外哈弗斯峽灣邊的「石中劍」（Sverd i fjell）是三把約 10 公尺高的青銅巨劍，1983 年揭幕，紀念 872 年金髮王哈拉爾一世在這裡打贏統…
 - [挪威卑爾根：一年下雨 200 多天的城市，布呂根彩色木屋為什麼是世界遺產？](https://nomowho.com/stories/bergen/): 卑爾根（Bergen）是挪威第二大城、峽灣之旅的門戶，一年下雨超過 200 天。港邊的布呂根（Bryggen）是中世紀漢薩同盟商人留下的彩色木造碼頭，1979 年列入世界遺產；搭弗洛伊恩山纜車上山，可以俯瞰整片鋪進海灣的屋頂。
 - [羅浮敦群島風乾鱈魚：掛在木架上吹三個月的海風，為什麼一路賣到義大利和奈及利亞？](https://nomowho.com/stories/lofoten-stockfish/): 風乾鱈魚（Stockfish）是挪威羅浮敦群島千年以上的傳統。每年冬末春初，洄游上岸的北極鱈被成對掛在海邊木架上，靠寒冷、乾燥又不結冰的海風自然風乾約三個月，不加鹽也不會壞，至今仍大量出口到義大利、奈及利亞與克羅埃西亞。
-- [挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常](https://nomowho.com/stories/trevarefabrikken/): 位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。這次來到建築後方的臨海桑拿屋，蒸著 80 幾度的熱石桑拿，接著跳進 8 度的海，很熱血，也很慶幸我還活著！
+- [挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常](https://nomowho.com/stories/trevarefabrikken/): 位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。
 - [薩爾茲堡一日散步：千年沒被攻下的霍亨薩爾茲堡要塞、穀物街鐵招牌與莫札特出生地](https://nomowho.com/stories/salzburg/): 薩爾茲堡在奧地利西部、靠近德國邊境，因鹽而富，由總主教統治了上千年。舊城 1996 年列入世界遺產，地標是 1077 年動工的霍亨薩爾茲堡要塞，官方說它從未被武力攻下。
 - [哈修塔特人骨屋怎麼看？1,200 顆頭骨、610 顆彩繪，奧地利湖畔小鎮最安靜的角落](https://nomowho.com/stories/hallstatt-beinhaus/): 哈修塔特人骨屋（Beinhaus）在天主教堂旁的聖米迦勒小禮拜堂地下，收著約 1,200 顆頭骨，其中約 610 顆畫上了花葉、十字架和名字。因為夾在湖和山之間的小鎮墓地不夠用，遺骨入土十幾年後會被請出來，洗淨、日曬，再整齊地排上架子。
 - [哈修塔特住哪裡？Hallstatt Hideaway 開箱：1740 年老宅改建的湖景套房](https://nomowho.com/stories/hallstatt-hideaway/): Hallstatt Hideaway 是哈修塔特山腰上的成人限定小旅館，建築是 1740 年奧地利皇室森林官的住宅，2014 年整修成幾間獨立套房。窗外就是哈爾施塔特湖和雪山，從碼頭走上去大約十分鐘。景觀無可挑剔，服務則比較隨性。
@@ -287,7 +287,7 @@
 - [挪威 Kilden 表演藝術中心：沿著港邊，走進波浪形的橡木屋簷下](https://nomowho.com/stories/kilden/): 在 Kristiansand 港邊，Kilden 最醒目的就是那片往外翻起的橡木屋簷。走近看，木板的線條一路轉彎，底下的玻璃映著船和藍天。這裡有交響樂、戲劇和歌劇，旁邊就是 Kunstsilo；
 - [挪威卑爾根：一年下雨 200 多天的城市，布呂根彩色木屋為什麼是世界遺產？](https://nomowho.com/stories/bergen/): 卑爾根（Bergen）是挪威第二大城、峽灣之旅的門戶，一年下雨超過 200 天。港邊的布呂根（Bryggen）是中世紀漢薩同盟商人留下的彩色木造碼頭，1979 年列入世界遺產；搭弗洛伊恩山纜車上山，可以俯瞰整片鋪進海灣的屋頂。
 - [羅浮敦群島風乾鱈魚：掛在木架上吹三個月的海風，為什麼一路賣到義大利和奈及利亞？](https://nomowho.com/stories/lofoten-stockfish/): 風乾鱈魚（Stockfish）是挪威羅浮敦群島千年以上的傳統。每年冬末春初，洄游上岸的北極鱈被成對掛在海邊木架上，靠寒冷、乾燥又不結冰的海風自然風乾約三個月，不加鹽也不會壞，至今仍大量出口到義大利、奈及利亞與克羅埃西亞。
-- [挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常](https://nomowho.com/stories/trevarefabrikken/): 位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。這次來到建築後方的臨海桑拿屋，蒸著 80 幾度的熱石桑拿，接著跳進 8 度的海，很熱血，也很慶幸我還活著！
+- [挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常](https://nomowho.com/stories/trevarefabrikken/): 位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。
 - [科莫聖誕市集與光雕秀：整座城的牆都在演童話，義大利北部最有趣的聖誕夜](https://nomowho.com/stories/como-christmas/): 科莫（Como）在義大利北部、緊鄰瑞士邊境的科莫湖南端。每年冬天，老城的主教座堂廣場擺滿聖誕市集木屋，入夜後 Broletto 塔樓、主教座堂和整排老房子的外牆都會被投影成會動的童話插畫。
 - [維也納 Aufzug Café：坐在百年老電梯裡喝咖啡，中央車站旁的電梯主題咖啡館](https://nomowho.com/stories/aufzug-cafe/): Aufzug Café 在維也納中央車站斜對面，是老闆 Christian Tauss 把自己收藏的老電梯車廂搬進店裡、當成座位的咖啡館。
 - [鳥取沙丘怎麼玩？爬上 47 公尺的馬之背看日本海，順遊隈研吾設計的 TAKAHAMA CAFE](https://nomowho.com/stories/tottori-dunes/): 鳥取沙丘在鳥取市的日本海岸，東西約 16 公里，是千代川帶下來的沙被季風吹上岸堆成的海岸沙丘，1955 年列為國家天然紀念物。最高的沙稜「馬之背」超過 47 公尺，爬上去就能看到整片日本海。
@@ -322,7 +322,7 @@
 - [斯塔萬格石中劍 Sverd i fjell：三把巨劍插進峽灣，紀念 872 年維京人統一挪威的一戰](https://nomowho.com/stories/stavanger/): 斯塔萬格（Stavanger）在挪威西南部，是北海石油之都，也是爬聖壇岩的出發城市。城外哈弗斯峽灣邊的「石中劍」（Sverd i fjell）是三把約 10 公尺高的青銅巨劍，1983 年揭幕，紀念 872 年金髮王哈拉爾一世在這裡打贏統…
 - [挪威卑爾根：一年下雨 200 多天的城市，布呂根彩色木屋為什麼是世界遺產？](https://nomowho.com/stories/bergen/): 卑爾根（Bergen）是挪威第二大城、峽灣之旅的門戶，一年下雨超過 200 天。港邊的布呂根（Bryggen）是中世紀漢薩同盟商人留下的彩色木造碼頭，1979 年列入世界遺產；搭弗洛伊恩山纜車上山，可以俯瞰整片鋪進海灣的屋頂。
 - [挪威羅浮敦 Reinebringen：近兩千階雪巴石階，爬上 Reine 峽灣全景](https://nomowho.com/stories/reinebringen/): Reinebringen 不到五百公尺高，爬起來卻一點也不輕鬆。石階沿著山坡一路往上，連續爬升很考驗體力與肺活量。到了觀景處，Reine 漁村、海灣、跨海橋和四周的尖峰一起出現在眼前，這趟真的值得。
-- [挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常](https://nomowho.com/stories/trevarefabrikken/): 位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。這次來到建築後方的臨海桑拿屋，蒸著 80 幾度的熱石桑拿，接著跳進 8 度的海，很熱血，也很慶幸我還活著！
+- [挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常](https://nomowho.com/stories/trevarefabrikken/): 位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。
 - [薩爾茲堡一日散步：千年沒被攻下的霍亨薩爾茲堡要塞、穀物街鐵招牌與莫札特出生地](https://nomowho.com/stories/salzburg/): 薩爾茲堡在奧地利西部、靠近德國邊境，因鹽而富，由總主教統治了上千年。舊城 1996 年列入世界遺產，地標是 1077 年動工的霍亨薩爾茲堡要塞，官方說它從未被武力攻下。
 - [哈修塔特住哪裡？Hallstatt Hideaway 開箱：1740 年老宅改建的湖景套房](https://nomowho.com/stories/hallstatt-hideaway/): Hallstatt Hideaway 是哈修塔特山腰上的成人限定小旅館，建築是 1740 年奧地利皇室森林官的住宅，2014 年整修成幾間獨立套房。窗外就是哈爾施塔特湖和雪山，從碼頭走上去大約十分鐘。景觀無可挑剔，服務則比較隨性。
 - [科莫聖誕市集與光雕秀：整座城的牆都在演童話，義大利北部最有趣的聖誕夜](https://nomowho.com/stories/como-christmas/): 科莫（Como）在義大利北部、緊鄰瑞士邊境的科莫湖南端。每年冬天，老城的主教座堂廣場擺滿聖誕市集木屋，入夜後 Broletto 塔樓、主教座堂和整排老房子的外牆都會被投影成會動的童話插畫。
