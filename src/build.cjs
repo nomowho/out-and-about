@@ -82,7 +82,7 @@ function img(src, alt, { lazy = true, sizes = '100vw', cls = '', small = false }
 const CARD_SIZES = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 50vw, 380px';   // 手機卡片左右各 20px 留白，標準確才會選 720px 縮圖（PageSpeed 11-18）
 const thumb = (p, lazy = true) => p.photo === false
   ? `<div class="ph"><span>${p.region.toUpperCase()} · ${p.area}</span><b>${p.zh}</b><i>照片整理中</i></div>`
-  : img(`img/${p.id}.jpg`, p.zh, { lazy, sizes: CARD_SIZES, small: true });   // small＝600px 縮圖，手機與小卡片自動選用（PageSpeed 11-18）
+  : img((POST_DETAIL[p.id] && POST_DETAIL[p.id].cardPortrait) || `img/${p.id}.jpg`, p.zh, { lazy, sizes: CARD_SIZES, small: true });   // small＝600px 縮圖，手機與小卡片自動選用（PageSpeed 11-18）
 const ogImg = p => abs(p && p.photo !== false ? `/img/${p.id}.jpg` : `/img/${TOP7[0].id}.jpg`);
 
 /* ── 共用版型 ── */

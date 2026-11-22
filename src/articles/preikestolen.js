@@ -240,6 +240,7 @@ POST_DETAIL['preikestolen'] = {
   "cover": "img/preikestolen/summit-portrait.jpg",
   "cardH": "img/preikestolen/plateau.jpg",
   "cardV": true,
+  "cardPortrait": "img/preikestolen/portrait-tight.jpg",
   "coverCap": "從高處看聖壇岩，石台、垂直岩壁與遠處的呂瑟峽灣一起入鏡。",
   "coverLayout": "split",
   "sources": [
