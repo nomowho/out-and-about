@@ -137,8 +137,9 @@ POST_DETAIL['preikestolen'] = {
     ]
   ],
   "updated": "2026-11-21",
-  "cover": "img/preikestolen/cover.jpg",
+  "cover": "img/preikestolen/summit-portrait.jpg",
   "cardH": "img/preikestolen/cover.jpg",
   "cardV": true,
-  "coverCap": "聖壇岩的垂直岩壁，下方是呂瑟峽灣，遠處山稜沒入雲層。"
+  "coverCap": "從高處看聖壇岩，石台、垂直岩壁與遠處的呂瑟峽灣一起入鏡。",
+  "coverLayout": "split"
 };
