@@ -50,7 +50,7 @@ const POSTS = [
   { id:'stavanger', ig:'DLuuNh0Bi7E', likes:120, photo:true, cat:'HISTORY', extraCats:['ART','GUIDE'], date:'2025.07.05', region:'Norway', area:'Stavanger', zh:'斯塔萬格三劍紀念碑', title:'三把巨劍插進峽灣：斯塔萬格與維京人的統一之戰' },
   { id:'bergen', ig:'DLnNW0nBrf4', likes:110, photo:false, cat:'HISTORY', extraCats:['ARCHITECTURE','FOOD','NATURE','GUIDE'], date:'2025.07.02', region:'Norway', area:'Bergen', zh:'卑爾根', title:'一年下兩百多天雨的城市：卑爾根把雨過成生活' },
   { id:'lofoten-stockfish', ig:'DLCkhwDBTK3', likes:108, photo:false, cat:'FOOD', extraCats:['HISTORY'], date:'2025.06.18', region:'Norway', area:'Lofoten', zh:'羅浮敦鱈魚乾', title:'風乾的藝術：羅浮敦群島的鱈魚乾架' },
-  { id:'volandstind', ig:'DK3j6V4BfCl', likes:136, photo:false, cat:'NATURE', extraCats:['ARCHITECTURE'], date:'2025.06.13', region:'Norway', area:'Lofoten', zh:'Volandstind', title:'羅浮敦的馬特洪峰：雲霧裡的 Volandstind' },
+  { id:'volandstind', ig:'DK3j6V4BfCl', likes:136, photo:true, cat:'NATURE', extraCats:['ARCHITECTURE'], date:'2025.06.13', region:'Norway', area:'Lofoten', zh:'Volandstind', title:'羅浮敦的馬特洪峰：雲霧裡的 Volandstind' },
   { id:'reinebringen', ig:'DKhfyZRB6_y', likes:123, photo:false, cat:'NATURE', extraCats:['GUIDE'], date:'2025.06.05', region:'Norway', area:'Lofoten', zh:'Reinebringen', title:'北極圈最危險的風景步道：爬上 Reinebringen' },
   { id:'trevarefabrikken', ig:'DJRmcQqhJ1M', likes:169, photo:false, cat:'ARCHITECTURE', extraCats:['FOOD','HISTORY','GUIDE'], date:'2025.05.05', region:'Norway', area:'Lofoten', zh:'Trevarefabrikken', title:'北極圈裡的靈魂工廠：老木工廠改成的旅館 Trevarefabrikken' },
   // ── 2026-11-20 舊 IG 匯入（56 篇，純文字版、photo:false；草稿與查證註記在 100_Todo/drafts/ig-import-2026-11/）──

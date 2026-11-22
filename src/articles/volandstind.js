@@ -1,32 +1,122 @@
-// Volandstind｜由 IG 貼文（2025-06-13，136 讚）與雲霧貼文（2025-06-11）合併改寫
-// 查證：位於羅浮敦 Flakstadøya 島、海拔約 457 公尺、外型尖銳被暱稱「羅浮敦的馬特洪峰」；Fredvang 雙橋（1988 年通車）連接 Flakstadøya 與 Moskenesøya；蓋帽雲（cap cloud）為濕潤氣流爬升遇冷凝結於山頂
-// 照片：等 Nomo 提供原圖
+// Volandstind｜既有旅行紀錄配入 Nomo 原圖。
 POST_DETAIL['volandstind'] = {
-  seoTitle:'羅浮敦的馬特洪峰 Volandstind：457 公尺的三角尖峰，幸運的話會戴上一頂雲做的帽子',
-  dek:'Volandstind 在挪威羅浮敦群島的 Flakstadøya 島上，海拔約 457 公尺，形狀尖銳、孤立在海灣和橋邊，被稱為「羅浮敦的馬特洪峰」。最好的觀景點在 Fredvang 雙橋附近；天氣對的時候，山頂會出現一圈蓋帽雲。',
-  visit:'6 月（午夜太陽季）',
-  body:[
-    { t:'p', text:'我們太習慣仰望高樓，卻忘了仰望山；太習慣追逐訊息，卻忘了靜下來，看雲在群峰之間滑行。' },
-    { t:'h', id:'what', text:'Volandstind 為什麼叫羅浮敦的馬特洪峰？' },
-    { t:'p', text:'Volandstind 海拔約 457 公尺，不算特別高，但形狀非常尖，像一座三角金字塔，從綠地和海灣裡直直拔起，又孤零零地站在橋邊，很容易讓人聯想到阿爾卑斯山的馬特洪峰。' },
-    { t:'h', id:'cloud', text:'山頂的「蓋帽雲」是什麼？' },
-    { t:'p', text:'那天我們很幸運，看到山頂戴上了一頂蓋帽雲。濕潤的海風沿著山坡往上爬，遇冷凝結，就在山尖上形成一圈像帽子一樣的雲，好像大自然替它戴上面紗或皇冠。六月的羅浮敦，雲霧常常替群山換上新的面具，看著它慢慢變化，非常療癒。' },
-    { t:'h', id:'bridge', text:'羅浮敦的橋為什麼這樣設計？' },
-    { t:'p', text:'挪威的造橋工藝非常厲害。羅浮敦的橋要對抗強風、冰雪和海流，常用單跨或雙跨的拱形結構，橋身也帶著弧度，用來分散風壓，也順著山海的線條。通往 Volandstind 的 Fredvang 雙橋就是這樣：看起來很低調，卻非常精準。它強調的是尊重風景，而不是凌駕風景。' },
-    { t:'p', text:'又想念挪威了。' },
-    { t:'p', text:'→ 同在羅浮敦：<a href="post.html#reinebringen">北極圈最陡的步道 Reinebringen</a>' }
+  "seoTitle": "羅浮敦的馬特洪峰 Volandstind：457 公尺的三角尖峰，幸運的話會戴上一頂雲做的帽子",
+  "dek": "Volandstind 在挪威羅浮敦群島的 Flakstadøya 島上，海拔約 457 公尺，形狀尖銳、孤立在海灣和橋邊，被稱為「羅浮敦的馬特洪峰」。最好的觀景點在 Fredvang 雙橋附近；天氣對的時候，山頂會出現一圈蓋帽雲。",
+  "visit": "6 月（午夜太陽季）",
+  "body": [
+    {
+      "t": "p",
+      "text": "我們太習慣仰望高樓，卻忘了仰望山；太習慣追逐訊息，卻忘了靜下來，看雲在群峰之間滑行。"
+    },
+    {
+      "t": "h",
+      "id": "what",
+      "text": "Volandstind 為什麼叫羅浮敦的馬特洪峰？"
+    },
+    {
+      "t": "p",
+      "text": "Volandstind 海拔約 457 公尺，不算特別高，但形狀非常尖，像一座三角金字塔，從綠地和海灣裡直直拔起，又孤零零地站在橋邊，很容易讓人聯想到阿爾卑斯山的馬特洪峰。"
+    },
+    {
+      "t": "img",
+      "size": "wide",
+      "fit": "natural",
+      "src": "img/volandstind/landscape.jpg",
+      "cap": "沿著岸邊看 Volandstind，水面、草地與尖峰一起入鏡。"
+    },
+    {
+      "t": "h",
+      "id": "cloud",
+      "text": "山頂的「蓋帽雲」是什麼？"
+    },
+    {
+      "t": "p",
+      "text": "那天我們很幸運，看到山頂戴上了一頂蓋帽雲。濕潤的海風沿著山坡往上爬，遇冷凝結，就在山尖上形成一圈像帽子一樣的雲，好像大自然替它戴上面紗或皇冠。六月的羅浮敦，雲霧常常替群山換上新的面具，看著它慢慢變化，非常療癒。"
+    },
+    {
+      "t": "img",
+      "size": "wide",
+      "fit": "natural",
+      "src": "img/volandstind/cloud.jpg",
+      "cap": "低雲貼著山坡移動，逆光下的山峰只露出部分輪廓。"
+    },
+    {
+      "t": "pair",
+      "imgs": [
+        "img/volandstind/village.jpg",
+        "img/volandstind/tidal.jpg"
+      ],
+      "cap": "左：從村子裡看山，前方是木造涼亭和草皮屋頂。右：沿岸的淺水與草地。"
+    },
+    {
+      "t": "h",
+      "id": "bridge",
+      "text": "羅浮敦的橋為什麼這樣設計？"
+    },
+    {
+      "t": "p",
+      "text": "挪威的造橋工藝非常厲害。羅浮敦的橋要對抗強風、冰雪和海流，常用單跨或雙跨的拱形結構，橋身也帶著弧度，用來分散風壓，也順著山海的線條。通往 Volandstind 的 Fredvang 雙橋就是這樣：看起來很低調，卻非常精準。它強調的是尊重風景，而不是凌駕風景。"
+    },
+    {
+      "t": "img",
+      "size": "tall",
+      "fit": "natural",
+      "src": "img/volandstind/bridges.jpg",
+      "cap": "Fredvang 橋跨過海灣，橋身下方的水色由淺綠轉成深藍。"
+    },
+    {
+      "t": "p",
+      "text": "又想念挪威了。"
+    },
+    {
+      "t": "p",
+      "text": "→ 同在羅浮敦：<a href=\"/stories/reinebringen/\">北極圈最陡的步道 Reinebringen</a>"
+    }
   ],
-  info:[
-    ['山名','Volandstind（約 457 公尺）'],
-    ['地點','挪威羅浮敦群島 Flakstadøya 島'],
-    ['觀景點','Fredvang 雙橋周邊'],
-    ['登山','有步道可登頂，路徑陡且部分濕滑，需登山經驗'],
-    ['最佳季節','6 月至 8 月']
+  "info": [
+    [
+      "山名",
+      "Volandstind（約 457 公尺）"
+    ],
+    [
+      "地點",
+      "挪威羅浮敦群島 Flakstadøya 島"
+    ],
+    [
+      "觀景點",
+      "Fredvang 雙橋周邊"
+    ],
+    [
+      "登山",
+      "有步道可登頂，路徑陡且部分濕滑，需登山經驗"
+    ],
+    [
+      "最佳季節",
+      "6 月至 8 月"
+    ]
   ],
-  faq:[
-    ['Volandstind 在哪裡？','在挪威羅浮敦群島的 Flakstadøya 島上，靠近 Fredvang 雙橋。'],
-    ['Volandstind 有多高？','海拔約 457 公尺，因為形狀尖銳，被稱為「羅浮敦的馬特洪峰」。'],
-    ['蓋帽雲是怎麼形成的？','濕潤的海風沿山坡爬升、遇冷凝結，就會在山頂形成一圈像帽子一樣的雲。'],
-    ['在哪裡拍 Volandstind 最好？','Fredvang 雙橋周邊可以同時拍到橋、海灣和尖峰，是最經典的角度。']
-  ]
+  "faq": [
+    [
+      "Volandstind 在哪裡？",
+      "在挪威羅浮敦群島的 Flakstadøya 島上，靠近 Fredvang 雙橋。"
+    ],
+    [
+      "Volandstind 有多高？",
+      "海拔約 457 公尺，因為形狀尖銳，被稱為「羅浮敦的馬特洪峰」。"
+    ],
+    [
+      "蓋帽雲是怎麼形成的？",
+      "濕潤的海風沿山坡爬升、遇冷凝結，就會在山頂形成一圈像帽子一樣的雲。"
+    ],
+    [
+      "在哪裡拍 Volandstind 最好？",
+      "Fredvang 雙橋周邊可以同時拍到橋、海灣和尖峰，是最經典的角度。"
+    ]
+  ],
+  "updated": "2026-11-22",
+  "cover": "img/volandstind/cover.jpg",
+  "coverLayout": "split",
+  "cardV": true,
+  "cardH": "img/volandstind/landscape.jpg",
+  "coverCap": "Volandstind 的尖峰露出雲層，下方是海灣與 Fredvang 橋。"
 };
