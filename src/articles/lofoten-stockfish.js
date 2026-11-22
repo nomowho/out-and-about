@@ -75,6 +75,13 @@ POST_DETAIL['lofoten-stockfish'] = {
     },
     {
       "t": "img",
+      "size": "tall",
+      "fit": "natural",
+      "src": "img/lofoten-stockfish/packaged-stockfish.jpg",
+      "cap": "商店裡的袋裝鱈魚乾與魚乾零食，包裝上寫著 Tørrfisk。"
+    },
+    {
+      "t": "img",
       "size": "wide",
       "fit": "natural",
       "src": "img/lofoten-stockfish/bundles.jpg",
