@@ -132,9 +132,9 @@ POST_DETAIL['stavanger'] = {
       "從斯塔萬格開車約 40 到 50 分鐘就能到聖壇岩步道口，是最常用的出發城市。"
     ]
   ],
-  "cover": "img/stavanger/cover.jpg",
+  "cover": "img/stavanger/fjord.jpg",
   "cardH": "img/stavanger/cover.jpg",
   "cardV": true,
   "updated": "2026-11-22",
-  "coverCap": "三把青銅巨劍立在岩石上，站在下方的人讓紀念碑的尺度更清楚。"
+  "coverCap": "從峽灣邊看向三劍紀念碑，三把巨劍立在伸入水面的岩岸上。"
 };
