@@ -714,3 +714,9 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 
 /* Preserve the complete frame for article photos explicitly marked natural. */
 .body figure.natural img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+
+/* 可直接拖曳的橫向區塊；縱向捲頁保留給瀏覽器。 */
+#track,.cty-wrap,.headlines{touch-action:pan-y;cursor:grab;user-select:none}
+.drag-scroll{cursor:grab}
+.drag-scroll.dragging,#track.dragging,.headlines.dragging{cursor:grabbing;user-select:none}
+.drag-scroll img,#track img,.headlines img{-webkit-user-drag:none}

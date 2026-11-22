@@ -205,22 +205,6 @@
     var jareas = $('areas'); if (jareas) jareas.addEventListener('areachange', jlayout);
     var rz; addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(function () { if (cols() !== lastK) jlayout(); else evenUp(); }, 150); });
   }
-  /* 首頁 Latest 橫向卡：CSS 動畫持續往左滑（GPU 次像素移動，比逐格改 scrollLeft 平滑）；
-     滑鼠移上不暫停（Nomo 11-18），只有手指按住時暫停；複製一份接在後面形成無縫循環 */
-  var hl = $('news');
-  if (hl && hl.classList.contains('headlines')) {
-    var ht = hl.querySelector('.hl-track'), HL_SPEED = 42.24;   // 每秒 px（32 → +10% → 再 +20%，Nomo 11-18）
-    [].slice.call(ht.children).forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; ht.appendChild(d); });
-    var hlHalf = 0;
-    var hlSize = function () { var half = Math.round(ht.scrollWidth / 2); if (half === hlHalf) return; hlHalf = half; ht.style.setProperty('--hl-shift', -half + 'px'); ht.style.setProperty('--hl-dur', (half / HL_SPEED) + 's'); ht.classList.add('run'); };   // 寬度沒變就不重設，避免整排跳動
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(hlSize); else hlSize();   // 等字型載入完才開始，卡片寬度不會中途改變
-    addEventListener('resize', function () { clearTimeout(hl._rz); hl._rz = setTimeout(hlSize, 200); });
-    hl.addEventListener('touchstart', function () { ht.classList.add('hold'); }, { passive: true });
-    var hlGo = function () { setTimeout(function () { ht.classList.remove('hold'); }, 1500); };
-    hl.addEventListener('touchend', hlGo, { passive: true }); hl.addEventListener('touchcancel', hlGo, { passive: true });
-    hl.addEventListener('focusin', function () { ht.classList.add('hold'); }); hl.addEventListener('focusout', function () { ht.classList.remove('hold'); });
-  }
-
   /* SERIES 卡片列：桌機用左右箭頭一次移一張，可循環（到最後一張再按右回到第一張、在第一張按左跳到最後），手機用手指滑（原生捲動＋停在卡片開頭） */
   [].forEach.call(document.querySelectorAll('.railwrap'), function (w) {
     var rail = w.querySelector('.rail'), L = w.querySelector('.rail-arr.l'), R = w.querySelector('.rail-arr.r');
@@ -234,9 +218,8 @@
     addEventListener('resize', upd); upd();
   });
 
-  /* Countries：保留自動循環，手指與滑鼠可直接左右拖曳。 */
-  var cw = document.querySelector('.cty-track');
-  if (cw) {
+  /* Countries 與 Latest 共用：自動循環、滑鼠及觸控拖曳。 */
+  function draggableMarquee(cw) {
     var originals = [].slice.call(cw.children), cwrap = cw.parentElement;
     originals.forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; cw.appendChild(d); });
     var distance = 0, half = 0, pointer = null, startX = 0, startY = 0, startDistance = 0, moved = false, focused = false, resumeAt = 0, lastTime = 0;
@@ -256,6 +239,8 @@
     cwrap.addEventListener('dragstart', function(e) { e.preventDefault(); });
     cwrap.addEventListener('focusin', function () { focused = true; }); cwrap.addEventListener('focusout', function () { focused = false; });
   }
+
+  document.querySelectorAll('.cty-track, .hl-track').forEach(draggableMarquee);
 
   /* 分類列：把目前分類捲到看得見的位置 */
   var on = document.querySelector('.nav a.on');
@@ -483,20 +468,30 @@
     track.addEventListener('mouseleave', auto);
     wrap.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') prev.click(); if (e.key === 'ArrowRight') next.click(); });
 
-    /* 觸控滑動：水平拖曳超過 40px 換頁；有拖曳就不觸發點擊 */
-    var sx = 0, sy = 0, dx = 0, dragging = false, moved = false;
-    track.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; dx = 0; dragging = true; moved = false; clearInterval(timer); }, { passive: true });
-    track.addEventListener('touchmove', function (e) {
-      if (!dragging) return;
-      dx = e.touches[0].clientX - sx; var dy = e.touches[0].clientY - sy;
-      if (!moved && Math.abs(dy) > Math.abs(dx)) { dragging = false; return; }   // 直向捲動交還給頁面
-      if (Math.abs(dx) > 8) { moved = true; place(false, dx); }
-    }, { passive: true });
-    track.addEventListener('touchend', function () {
-      if (moved) { if (dx < -40) go(1); else if (dx > 40) go(-1); else place(true); }
-      dragging = false; auto();
+    /* Pointer Events 同時處理滑鼠、手指及觸控筆；直向手勢留給頁面。 */
+    var sx = 0, sy = 0, dx = 0, pointer = null, moved = false;
+    track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    track.addEventListener('pointerdown', function (e) {
+      if (!e.isPrimary || e.button !== 0 || pointer !== null) return;
+      pointer = e.pointerId; sx = e.clientX; sy = e.clientY; dx = 0; moved = false; clearInterval(timer);
     });
-    track.addEventListener('click', function (e) { if (moved) { e.preventDefault(); moved = false; } }, true);
+    track.addEventListener('pointermove', function (e) {
+      if (pointer !== e.pointerId) return;
+      dx = e.clientX - sx; var dy = e.clientY - sy;
+      if (!moved && Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 8) { pointer = null; auto(); return; }
+      if (!moved && Math.abs(dx) > 8) { moved = true; track.setPointerCapture(pointer); track.classList.add('dragging'); }
+      if (moved) { e.preventDefault(); place(false, dx); }
+    });
+    function endHero(e) {
+      if (pointer !== e.pointerId) return;
+      var id = pointer; pointer = null;
+      if (moved) { if (e.type !== 'pointercancel' && dx < -40) go(1); else if (e.type !== 'pointercancel' && dx > 40) go(-1); else place(true); }
+      if (track.hasPointerCapture(id)) track.releasePointerCapture(id);
+      track.classList.remove('dragging'); auto();
+    }
+    track.addEventListener('pointerup', endHero); track.addEventListener('pointercancel', endHero); track.addEventListener('lostpointercapture', endHero);
+    track.addEventListener('pointerleave', function (e) { if (!moved) endHero(e); });
+    track.addEventListener('click', function (e) { if (moved && e.detail !== 0) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
 
     addEventListener('resize', function () { place(false); });
     addEventListener('load', function () { place(false); });
@@ -521,4 +516,40 @@
   sec.querySelector('.tser-arr.r').addEventListener('click', function () { go(idx() + 1); });
   tk.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') { e.preventDefault(); go(idx() - 1); } else if (e.key === 'ArrowRight') { e.preventDefault(); go(idx() + 1); } });
   addEventListener('resize', function () { tk.scrollLeft = cur * tk.clientWidth; });
+})();
+
+/* 原生橫向捲動列：觸控由瀏覽器處理，滑鼠可直接按住卡片拖曳。 */
+(function () {
+  document.querySelectorAll('.tser-track, .series .rail, .nav, .areas, .rings, .more .grid').forEach(function (el) {
+    var pointer = null, startX = 0, startY = 0, origin = 0, moved = false, snap = '', behavior = '';
+    el.classList.add('drag-scroll');
+    el.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    el.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'touch' || !e.isPrimary || e.button !== 0 || el.scrollWidth <= el.clientWidth + 2 || pointer !== null) return;
+      pointer = e.pointerId; startX = e.clientX; startY = e.clientY; origin = el.scrollLeft; moved = false;
+    });
+    el.addEventListener('pointermove', function (e) {
+      if (pointer !== e.pointerId) return;
+      var dx = e.clientX - startX, dy = e.clientY - startY;
+      if (!moved && Math.abs(dx) > 7 && Math.abs(dx) > Math.abs(dy)) {
+        moved = true; snap = el.style.scrollSnapType; behavior = el.style.scrollBehavior;
+        el.style.scrollSnapType = 'none'; el.style.scrollBehavior = 'auto';
+        el.setPointerCapture(pointer); el.classList.add('dragging');
+      }
+      if (moved) { e.preventDefault(); el.scrollLeft = origin - dx; }
+    });
+    function release(e) {
+      if (pointer !== e.pointerId) return;
+      var id = pointer; pointer = null;
+      if (moved) {
+        var x = el.scrollLeft;
+        el.style.scrollSnapType = snap; el.style.scrollBehavior = behavior; el.classList.remove('dragging');
+        if (el.classList.contains('tser-track')) el.scrollTo({left: Math.round(x / el.clientWidth) * el.clientWidth, behavior: 'smooth'});
+      }
+      if (el.hasPointerCapture(id)) el.releasePointerCapture(id);
+    }
+    el.addEventListener('pointerup', release); el.addEventListener('pointercancel', release); el.addEventListener('lostpointercapture', release);
+    el.addEventListener('pointerleave', function (e) { if (!moved) release(e); });
+    el.addEventListener('click', function (e) { if (moved && e.detail !== 0) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+  });
 })();
