@@ -721,3 +721,8 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .drag-scroll.dragging,#track.dragging,.headlines.dragging{cursor:grabbing;user-select:none}
 .drag-scroll img,#track img,.headlines img{-webkit-user-drag:none}
 
+
+/* 手機國家列交由原生捲動處理，不攔截水平手勢或慣性。 */
+.cty-wrap.native-countries{overflow-x:auto;overflow-y:hidden;touch-action:auto;scroll-behavior:auto;scroll-snap-type:none;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.cty-wrap.native-countries::-webkit-scrollbar{display:none}
+.cty-wrap.native-countries .cty-track{transform:none;will-change:auto}
