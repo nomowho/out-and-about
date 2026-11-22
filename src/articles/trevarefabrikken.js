@@ -182,10 +182,10 @@ POST_DETAIL['trevarefabrikken'] = {
     ]
   ],
   "updated": "2026-11-22",
-  "cover": "img/trevarefabrikken/cover.jpg",
-  "cardH": "img/trevarefabrikken/cover.jpg",
+  "cover": "img/trevarefabrikken/rock-sauna.jpg",
+  "cardH": "img/trevarefabrikken/waterline.jpg",
   "cardV": true,
-  "coverCap": "從桑拿屋看出去，熱石爐前方就是岩岸與海。",
+  "coverCap": "桑拿屋就在岩岸上，走下梯子就是海。",
   "sources": [
     [
       "Trevarefabrikken｜Our Story",
@@ -222,5 +222,6 @@ POST_DETAIL['trevarefabrikken'] = {
       "https://www.trevarefabrikken.no/pizza",
       "回收磚披薩窯"
     ]
-  ]
+  ],
+  "coverLayout": "split"
 };
