@@ -244,7 +244,7 @@ POST_DETAIL['preikestolen'] = {
   ],
   "updated": "2026-11-22",
   "cover": "img/preikestolen/summit-portrait.jpg",
-  "cardH": "img/preikestolen/cover.jpg",
+  "cardH": "img/preikestolen/plateau.jpg",
   "cardV": true,
   "coverCap": "從高處看聖壇岩，石台、垂直岩壁與遠處的呂瑟峽灣一起入鏡。",
   "coverLayout": "split",
