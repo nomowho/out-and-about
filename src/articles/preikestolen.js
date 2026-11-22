@@ -53,18 +53,12 @@ POST_DETAIL['preikestolen'] = {
       "text": "這條路來回約 8 公里、累計爬升約 500 公尺，官網首頁估計要走 4 到 5 小時。這還沒算上在石台拍照、坐著看風景的時間，行程別排得太緊。腳下有石階，也有高低不平的岩面，下山仍得留意每一步。"
     },
     {
-      "t": "img",
-      "size": "tall",
-      "fit": "natural",
-      "src": "img/preikestolen/boardwalk.jpg",
-      "cap": "木棧道接過較低窪的地面，前面又回到岩地。"
-    },
-    {
-      "t": "img",
-      "size": "tall",
-      "fit": "natural",
-      "src": "img/preikestolen/tarn.jpg",
-      "cap": "岩地間的水潭映著天空，沿途的景色也值得停下來看。"
+      "t": "pair",
+      "imgs": [
+        "img/preikestolen/boardwalk.jpg",
+        "img/preikestolen/tarn.jpg"
+      ],
+      "cap": "左：木棧道接過較低窪的地面，前面又回到岩地。右：岩地間的水潭映著天空。"
     },
     {
       "t": "img",
