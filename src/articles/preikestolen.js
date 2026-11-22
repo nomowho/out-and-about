@@ -149,7 +149,7 @@ POST_DETAIL['preikestolen'] = {
     },
     {
       "t": "p",
-      "text": "自駕可以導航到 Preikestolen Parking。主要停車場是 P1，滿位時會引導至 P2；兩處都滿了，就得依現場指示等待。停車費在下山後、離場前繳交，最新費率請看<a href=\"https://preikestolen365.com/parking-at-preikestolen/\" target=\"_blank\" rel=\"noopener\">官網停車資訊</a>，不用把整趟行程賭在剛好有車位。"
+      "text": "自駕可以導航到 Preikestolen Parking。主要停車場是 P1，滿位時會引導至 P2；兩處都滿了，就得依現場指示等待。停車費在下山後、離場前繳交，最新費率請看<a href=\"https://preikestolen365.com/parking-at-preikestolen/\" target=\"_blank\" rel=\"noopener\">官網停車資訊</a>。"
     },
     {
       "t": "img",
