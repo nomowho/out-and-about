@@ -51,6 +51,13 @@ POST_DETAIL['bergen'] = {
       "cap": "左：白牆旁開著花的街角。右：沿著街道看過去，後方就是山坡。"
     },
     {
+      "t": "img",
+      "src": "img/bergen/window-seat.jpg",
+      "size": "tall",
+      "fit": "natural",
+      "cap": "窗邊的長椅與盆栽，坐下來休息一下。"
+    },
+    {
       "t": "h",
       "id": "view",
       "text": "在卑爾根哪裡看全景？"
@@ -66,6 +73,14 @@ POST_DETAIL['bergen'] = {
         "img/bergen/hillside.jpg"
       ],
       "cap": "左：街道兩側的樹把港灣框在遠處。右：山坡上層層排列的房子。"
+    },
+    {
+      "t": "pair",
+      "imgs": [
+        "img/bergen/tree-lined-path.jpg",
+        "img/bergen/stepped-gable.jpg"
+      ],
+      "cap": "左：沿著綠蔭步道往下看，街道與房子就在樹叢之間。右：階梯狀山牆後方，是一路延伸到山坡的屋頂。"
     },
     {
       "t": "h",
