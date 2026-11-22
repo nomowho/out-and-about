@@ -230,5 +230,6 @@ POST_DETAIL['trevarefabrikken'] = {
       "回收磚披薩窯"
     ]
   ],
-  "coverLayout": "split"
+  "coverLayout": "split",
+  "cardPortrait": "img/trevarefabrikken/rock-sauna.jpg"
 };
