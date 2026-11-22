@@ -726,3 +726,11 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .cty-wrap.native-countries{overflow-x:auto;overflow-y:hidden;touch-action:auto;scroll-behavior:auto;scroll-snap-type:none;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
 .cty-wrap.native-countries::-webkit-scrollbar{display:none}
 .cty-wrap.native-countries .cty-track{transform:none;will-change:auto}
+
+/* 手機首屏與新聞：使用瀏覽器原生慣性，保留直向捲頁及縮放。 */
+.hero.native-hero #track{overflow-x:auto;overflow-y:hidden;transform:none!important;transition:none!important;padding-inline:calc((100% - var(--sw)) / 2);scroll-padding-inline:calc((100% - var(--sw)) / 2);scroll-snap-type:x mandatory;scroll-behavior:auto;touch-action:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.hero.native-hero #track::-webkit-scrollbar,.headlines.native-news::-webkit-scrollbar{display:none}
+.hero.native-hero .slide{scroll-snap-align:center;transform:none!important}
+.hero.native-hero .slide img{transform:none;transition:none}
+.headlines.native-news{overflow-x:auto;overflow-y:hidden;touch-action:auto;scroll-behavior:auto;scroll-snap-type:none;overscroll-behavior-x:contain;mask-image:none;-webkit-overflow-scrolling:touch}
+.headlines.native-news .hl-track{transform:none;animation:none!important;will-change:auto}

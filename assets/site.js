@@ -218,11 +218,13 @@
     addEventListener('resize', upd); upd();
   });
 
-  /* 手機 Countries：瀏覽器負責觸控與慣性，停穩後才恢復自動輪播。 */
+  /* 手機 Countries / Latest：瀏覽器負責觸控與慣性，停穩後才恢復自動輪播。 */
   function nativeCountries(cw) {
     var wrap = cw.parentElement, originals = [].slice.call(cw.children), half = 0;
     var held = false, interacting = false, focused = false, resumeAt = 0, lastTime = 0, position = 0;
-    wrap.classList.add('native-countries');
+    wrap.classList.add(cw.classList.contains('hl-track') ? 'native-news' : 'native-countries');
+    var visible = true;
+    if (typeof IntersectionObserver !== 'undefined') new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }, { threshold: 0 }).observe(wrap);
     for (var copy = 0; copy < 2; copy++) originals.forEach(function (c) {
       var clone = c.cloneNode(true); clone.setAttribute('aria-hidden', 'true'); clone.tabIndex = -1; cw.appendChild(clone);
     });
@@ -245,7 +247,7 @@
     wrap.addEventListener('focusout', function () { focused = false; });
     function frame(time) {
       var dt = lastTime ? Math.min(time - lastTime, 50) : 0; lastTime = time;
-      if (half && !held && !focused && time >= resumeAt && !document.hidden) {
+      if (half && !held && !focused && time >= resumeAt && !document.hidden && visible) {
         if (interacting) { position = wrap.scrollLeft; interacting = false; }
         if (!reduce) position += dt * 0.04224;
         if (position >= 2 * half) position -= half;
@@ -259,7 +261,7 @@
 
   /* Countries 與 Latest 共用：自動循環、滑鼠及觸控拖曳。 */
   function draggableMarquee(cw) {
-    if (cw.classList.contains('cty-track') && (matchMedia('(pointer:coarse)').matches || innerWidth <= 700)) { nativeCountries(cw); return; }
+    if (matchMedia('(pointer:coarse)').matches || innerWidth <= 700) { nativeCountries(cw); return; }
     var originals = [].slice.call(cw.children), cwrap = cw.parentElement;
     originals.forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; cw.appendChild(d); });
     var distance = 0, half = 0, pointer = null, startX = 0, startY = 0, startDistance = 0, moved = false, focused = false, resumeAt = 0, lastTime = 0;
@@ -482,6 +484,68 @@
     startMap();
   }
 
+  /* 手機首屏：原生捲動與吸附，手勢及慣性期間不寫入捲動位置。 */
+  function nativeHero(track) {
+    var wrap = track.parentElement, originals = [].slice.call(track.children), n = originals.length;
+    if (!n) return;
+    var held = false, focused = false, visible = true, resumeAt = 0, step = 0, current = -1, pending = 0, settleTimer;
+    var count = $('count'), prev = $('prev'), next = $('next');
+    wrap.classList.add('native-hero');
+    for (var copy = 0; copy < 2; copy++) originals.forEach(function (slide) {
+      var clone = slide.cloneNode(true); clone.setAttribute('aria-hidden', 'true'); clone.tabIndex = -1; track.appendChild(clone);
+    });
+    var slides = [].slice.call(track.children);
+    function sync() {
+      pending = 0; if (!step) return;
+      var i = Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / step)));
+      if (i === current) return; current = i;
+      slides.forEach(function (slide, k) { slide.classList.toggle('on', i === k); });
+      if (count) count.textContent = (i % n + 1) + ' / ' + n;
+    }
+    function normalize() {
+      if (!step || held || focused || performance.now() < resumeAt) return;
+      var i = Math.round(track.scrollLeft / step);
+      if (i < n || i >= 2 * n) {
+        track.scrollTo({ left: (n + ((i % n) + n) % n) * step, behavior: 'instant' });
+      }
+      sync();
+    }
+    function settle() { clearTimeout(settleTimer); settleTimer = setTimeout(normalize, 1850); }
+    function measure() {
+      var i = current < 0 ? 0 : current % n;
+      step = originals[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 12);
+      track.scrollLeft = (n + i) * step; current = -1; sync();
+    }
+    measure();
+    var width = track.clientWidth;
+    addEventListener('resize', function () { if (track.clientWidth !== width) { width = track.clientWidth; measure(); } });
+    function begin() { held = true; clearTimeout(settleTimer); }
+    function end() { held = false; resumeAt = performance.now() + 1800; settle(); }
+    track.addEventListener('touchstart', begin, { passive: true });
+    track.addEventListener('touchend', end, { passive: true });
+    track.addEventListener('touchcancel', end, { passive: true });
+    track.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'touch') begin(); }, { passive: true });
+    addEventListener('pointerup', function (e) { if (e.pointerType !== 'touch' && held) end(); }, { passive: true });
+    track.addEventListener('scroll', function () {
+      resumeAt = performance.now() + 1800;
+      if (!pending) pending = requestAnimationFrame(sync);
+      settle();
+    }, { passive: true });
+    track.addEventListener('focusin', function () { focused = true; });
+    track.addEventListener('focusout', function () { focused = false; resumeAt = performance.now() + 1800; settle(); });
+    function go(direction) {
+      normalize(); if (!step) return;
+      track.scrollTo({ left: (Math.round(track.scrollLeft / step) + direction) * step, behavior: reduce ? 'instant' : 'smooth' });
+    }
+    if (prev) prev.onclick = function () { go(-1); };
+    if (next) next.onclick = function () { go(1); };
+    wrap.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); go(e.key === 'ArrowLeft' ? -1 : 1); }
+    });
+    if (typeof IntersectionObserver !== 'undefined') new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }, { threshold: 0 }).observe(wrap);
+    setInterval(function () { if (!reduce && !document.hidden && visible && !held && !focused && performance.now() >= resumeAt) go(1); }, 3000);
+  }
+
   /* 首屏輪播（11-18 第三版）：投影片在 DOM 裡完全不動（不複製、不搬移），
      每張用自己的 translateX 移到「離目前位置最近」的那一圈，形成無限循環。
      舊版搬移 DOM 會讓 Lighthouse 每 3 秒算一次新的 LCP 與版面位移（手機 LCP 17 秒、CLS 0.2），transform 則都不算 */
@@ -490,6 +554,7 @@
     /* 第 2–7 張輪播圖等整頁載入完才下載，不跟第一張大圖（LCP）搶頻寬 */
     var heroRest = function () { [].forEach.call(track.querySelectorAll('img[data-src]'), function (im) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }); };
     if (document.readyState === 'complete') heroRest(); else addEventListener('load', heroRest);
+    if (matchMedia('(pointer:coarse)').matches || innerWidth <= 700) { nativeHero(track); } else {
     var S = [].slice.call(track.children), N = S.length, v = 0, timer, count = $('count');
     var prev = $('prev'), next = $('next'), wrap = track.parentElement, heroX = 0, dragFrame = 0;
     var mod = function (x) { return ((x % N) + N) % N; };
@@ -550,6 +615,7 @@
     });
     addEventListener('load', function () { place(false); });
     place(false); auto();
+    }
   }
 })();
 
@@ -578,7 +644,7 @@
 
 /* 原生橫向捲動列：觸控由瀏覽器處理，滑鼠可直接按住卡片拖曳。 */
 (function () {
-  document.querySelectorAll('.tser-track, .series .rail, .nav, .areas, .rings, .more .grid, .cty-wrap.native-countries').forEach(function (el) {
+  document.querySelectorAll('.tser-track, .series .rail, .nav, .areas, .rings, .more .grid, .cty-wrap.native-countries, .headlines.native-news, .hero.native-hero .track').forEach(function (el) {
     var pointer = null, startX = 0, startY = 0, origin = 0, moved = false, snap = '', behavior = '';
     el.classList.add('drag-scroll');
     el.addEventListener('dragstart', function (e) { e.preventDefault(); });
