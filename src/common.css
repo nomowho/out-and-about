@@ -700,10 +700,11 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 @media(max-width:700px){#all>.card.land h3{font-size:15px;line-height:1.6}}
 
 /* 專題輪播：清晰白底按鈕與照片下方頁碼 */
-.tser-arr{width:64px;height:64px;background:#fff;color:#111;border:1px solid rgba(0,0,0,.08);box-shadow:0 2px 10px rgba(0,0,0,.16);-webkit-backdrop-filter:none;backdrop-filter:none;transition:background .2s,box-shadow .2s,transform .2s}
+.tser-arr{width:64px;height:64px;background:#fff;color:#111;border:0;box-shadow:0 2px 10px rgba(0,0,0,.16);-webkit-backdrop-filter:none;backdrop-filter:none;transition:background .2s,box-shadow .2s,transform .2s}
 .tser-arr svg{width:26px;height:26px;stroke:currentColor;stroke-width:2.2;filter:none}
 .tser-arr.l{left:24px}.tser-arr.r{right:24px}
-.tser-arr:focus-visible{outline:3px solid #111;outline-offset:4px;box-shadow:0 0 0 7px #fff}
+.tser-arr:focus-visible{outline:none;box-shadow:0 2px 10px rgba(0,0,0,.16)}
+.tser-arr:focus-visible svg{outline:2px solid currentColor;outline-offset:4px}
 .tser-arr:active{transform:translateY(-50%) scale(.94)}
 @media(hover:hover){.tser-arr:hover{background:#C8F500;box-shadow:0 3px 14px rgba(0,0,0,.2)}}
 .tser .toh-cap .meta{display:flex;align-items:center}
