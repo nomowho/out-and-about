@@ -492,7 +492,9 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     // object-fit:cover：橫圖填直框時，選圖寬度要包含左右被裁掉的部分。
     const mobileWidth = Math.ceil(Math.max(.84, 1.008 * ratio) * 100 * 1.02);
     const desktopRatio = Math.max(.8, ratio) * 1.02;
-    const heroSizes = `(max-width:700px) ${mobileWidth}vw, min(${(66 * desktopRatio).toFixed(2)}vh, ${Math.ceil(600 * desktopRatio)}px)`;
+    const heroSizes = detail.heroImage
+      ? `(max-width:700px) ${mobileWidth}vw, min(${(66 * desktopRatio).toFixed(2)}vh, ${Math.ceil(600 * desktopRatio)}px)`
+      : '(max-width:700px) 84vw, 480px';
     let photo = img(src, p.zh, { lazy: false, small: true, sizes: heroSizes });
     const sources = [];
     if (detail.heroMobileImage) {
