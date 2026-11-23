@@ -91,6 +91,7 @@ for (const t of ['home', 'post', 'news', 'category']) {
   css[t] = read(`templates/${t}.html`).match(/<style>([\s\S]*?)<\/style>/)[1].trim();
   fs.writeFileSync(path.join(ROOT, 'assets', `${t}.css`), css[t] + '\n');
 }
+fs.copyFileSync(path.join(SRC, 'brand', 'home-logo.png'), path.join(ROOT, 'assets', 'home-logo.png'));
 fs.copyFileSync(path.join(SRC, 'common.css'), path.join(ROOT, 'assets', 'common.css'));
 fs.copyFileSync(path.join(SRC, 'site.js'), path.join(ROOT, 'assets', 'site.js'));
 const ver = Date.now().toString(36);
@@ -100,7 +101,7 @@ const navLinks = on => `<a href="/news/"${on === 'NEWS' ? ' class="on" aria-curr
   Object.keys(CATS).map(k => { const c = [on === k ? 'on' : '', LITE.has(k) ? 'lite' : ''].filter(Boolean).join(' '); return `<a href="${url.cat(k)}"${c ? ` class="${c}"` : ''}${on === k ? ' aria-current="page"' : ''}>${k}</a>`; }).join('');
 
 const PERSON = { '@type': 'Person', '@id': abs('/#nomo'), name: 'Nomo', url: abs('/about/'), sameAs: ['https://www.instagram.com/nomowho/'], description: '旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」，寫建築、藝術、歷史與自然。' };
-const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/logo.png') }, sameAs: ['https://www.instagram.com/nomowho/'] };
+const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/home-logo.png') }, sameAs: ['https://www.instagram.com/nomowho/'] };
 const crumbLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(p) })) });
 const listLd = (name, list) => ({ '@type': 'ItemList', name, numberOfItems: list.length, itemListElement: list.map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(x.u), name: x.n })) });
 
@@ -132,8 +133,8 @@ function page({ file, title, desc, canonical, type = 'website', image, style, na
 <meta name="theme-color" content="#ffffff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
-<link rel="icon" href="/assets/logo.png" type="image/png" sizes="512x512">
-<link rel="apple-touch-icon" href="/assets/logo.png">
+<link rel="icon" href="/assets/home-logo.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="/assets/home-logo.png">
 ${extraHead}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Montserrat:wght@300;500;700;800&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
