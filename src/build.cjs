@@ -100,7 +100,7 @@ const navLinks = on => `<a href="/news/"${on === 'NEWS' ? ' class="on" aria-curr
   Object.keys(CATS).map(k => { const c = [on === k ? 'on' : '', LITE.has(k) ? 'lite' : ''].filter(Boolean).join(' '); return `<a href="${url.cat(k)}"${c ? ` class="${c}"` : ''}${on === k ? ' aria-current="page"' : ''}>${k}</a>`; }).join('');
 
 const PERSON = { '@type': 'Person', '@id': abs('/#nomo'), name: 'Nomo', url: abs('/about/'), sameAs: ['https://www.instagram.com/nomowho/'], description: '旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」，寫建築、藝術、歷史與自然。' };
-const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: 'Out and About', alternateName: ['我出去一下就回來', '我出去一下', 'nomowho'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/logo.png') }, sameAs: ['https://www.instagram.com/nomowho/'] };
+const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/logo.png') }, sameAs: ['https://www.instagram.com/nomowho/'] };
 const crumbLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(p) })) });
 const listLd = (name, list) => ({ '@type': 'ItemList', name, numberOfItems: list.length, itemListElement: list.map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(x.u), name: x.n })) });
 
@@ -119,7 +119,7 @@ function page({ file, title, desc, canonical, type = 'website', image, style, na
 <link rel="alternate" hreflang="x-default" href="${abs(canonical)}">
 <link rel="alternate" type="application/rss+xml" title="Out and About" href="${abs('/feed.xml')}">
 <meta property="og:type" content="${type}">
-<meta property="og:site_name" content="Out and About｜我出去一下就回來">
+<meta property="og:site_name" content="我出去一下就回來">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
@@ -132,7 +132,7 @@ function page({ file, title, desc, canonical, type = 'website', image, style, na
 <meta name="theme-color" content="#ffffff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/logo.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="/assets/logo.png">
 ${extraHead}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -559,7 +559,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 </section>`;
   const desc = 'Out and About「我出去一下就回來」（簡稱「我出去一下」）是 Nomo（@nomowho）的旅行雜誌：親自走訪的建築、藝術、歷史、自然與信仰之地，每篇附交通、旅行資訊與常見問題，另有每日世界旅遊新訊。';
   const ld = [{ '@context': 'https://schema.org', '@graph': [
-    { '@type': 'WebSite', '@id': abs('/#website'), url: abs('/'), name: 'Out and About', alternateName: ['我出去一下就回來', '我出去一下', 'nomowho', 'Out and About 旅行雜誌'], description: desc, inLanguage: 'zh-Hant-TW', publisher: { '@id': abs('/#org') }, author: { '@id': abs('/#nomo') } },
+    { '@type': 'WebSite', '@id': abs('/#website'), url: abs('/'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho', 'Out and About 旅行雜誌'], description: desc, inLanguage: 'zh-Hant-TW', publisher: { '@id': abs('/#org') }, author: { '@id': abs('/#nomo') } },
     ORG, PERSON,
     Object.assign({ '@id': abs('/#latest') }, listLd('最新旅行文章', postsNew.slice(0, 20).map(p => ({ u: url.post(p.id), n: (POST_DETAIL[p.id] || {}).seoTitle || p.title }))))
   ] }];
