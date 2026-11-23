@@ -12,6 +12,7 @@ POST_DETAIL['siracusa'] = {
     address:{ addressLocality:'Siracusa', addressRegion:'Sicilia', addressCountry:'IT' }
   },
   cover:'img/siracusa/cover.jpg',
+  cardPortrait:'img/siracusa/portrait-sea-alley.jpg',
   coverCap:"西西里錫拉庫薩的奧提伽島，以沿城牆展開的海岸散步與咖啡座，連結古城生活和地中海。",
   body:[
     { t:'p', text:'在奧提伽島的小巷裡穿梭，踩著曬得暖烘烘的白色石板路，迎面是地中海的風和豔陽。找一間開在巴洛克建築陰影下的露天咖啡座，點一杯西西里的檸檬冰沙（granita），配一塊溫熱的布里歐麵包。一切都慢得好舒服。' },
