@@ -185,7 +185,7 @@ POST_DETAIL['bergen'] = {
     ]
   ],
   "updated": "2026-11-23",
-  "cover": "img/bergen/harbour-panorama.jpg",
+  "cover": "img/bergen/harbour-cover-hq.jpg",
   "coverPos": "50% 100%",
   "coverSaturation": 1.15,
   "cardH": "img/bergen/bryggen.jpg",
