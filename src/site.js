@@ -552,8 +552,6 @@
   var track = $('track');
   if (track) {
     var mobileHeroMode = matchMedia('(pointer:coarse)').matches || innerWidth <= 700;
-    var mobileHeroSlides = $('mobileHeroSlides');
-    if (mobileHeroMode && mobileHeroSlides) track.replaceChildren(mobileHeroSlides.content.cloneNode(true));
     /* 其餘輪播圖等整頁載入完才下載，不跟第一張大圖（LCP）搶頻寬 */
     var heroRest = function () { [].forEach.call(track.querySelectorAll('img[data-src]'), function (im) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }); };
     if (document.readyState === 'complete') heroRest(); else addEventListener('load', heroRest);

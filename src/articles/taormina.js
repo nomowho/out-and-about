@@ -14,6 +14,7 @@ POST_DETAIL['taormina'] = {
     geo:[37.8522, 15.2922]
   },
   cover:'img/taormina/cover.jpg',
+  cardV:true,
   cardPortrait:'img/taormina/portrait-evening.jpg',
   coverCap:"陶爾米納古劇場的舞台遺構面向愛奧尼亞海，保留希臘選址與羅馬改建交疊的觀景視野。",
   body:[

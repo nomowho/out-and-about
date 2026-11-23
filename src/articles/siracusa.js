@@ -12,6 +12,7 @@ POST_DETAIL['siracusa'] = {
     address:{ addressLocality:'Siracusa', addressRegion:'Sicilia', addressCountry:'IT' }
   },
   cover:'img/siracusa/cover.jpg',
+  cardV:true,
   cardPortrait:'img/siracusa/portrait-sea-alley.jpg',
   coverCap:"西西里錫拉庫薩的奧提伽島，以沿城牆展開的海岸散步與咖啡座，連結古城生活和地中海。",
   body:[

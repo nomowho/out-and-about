@@ -482,10 +482,10 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   const coverOf = p => p.photo !== false && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover;
   const isLand = p => { const c = coverOf(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
 
-  const mobileHero = (CFG.heroMobileIds || TOP7.map(p => p.id)).map(id => {
-    const p = byId[id]; if (!p || p.photo === false) throw new Error('Invalid mobile hero article: ' + id); return p;
+  const heroPosts = (CFG.heroIds || TOP7.map(p => p.id)).map(id => {
+    const p = byId[id]; if (!p || p.photo === false) throw new Error('Invalid hero article: ' + id); return p;
   });
-  const mobileHeroSlides = mobileHero.map((p, i) => {
+  const heroSlides = heroPosts.map((p, i) => {
     const src = (POST_DETAIL[p.id] || {}).cardPortrait || `img/${p.id}.jpg`;
     const photo = img(src, p.zh, { lazy: false, small: true, sizes: '(max-width:700px) 84vw, 480px' });
     return `<a class="slide" href="${url.post(p.id)}" data-i="${i}"><figure>${i === 0 ? photo : photo.replace(' fetchpriority="high"', '').replace(/ (src|srcset)="/g, ' data-$1="')}</figure><div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div></a>`;
@@ -493,16 +493,11 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   const main = `
 <h1 class="vh">我出去一下就回來｜Out and About：Nomo（nomowho）的旅行雜誌</h1>
 <section class="hero" aria-label="精選文章" aria-roledescription="carousel">
-  <div class="track" id="track">${TOP7.map((p, i) => `
-    <a class="slide" href="${url.post(p.id)}" data-i="${i}">
-      <figure>${i === 0 ? img(`img/${p.id}.jpg`, p.zh, { lazy: false, small: true, sizes: '(max-width:700px) 84vw, 480px' }) : img(`img/${p.id}.jpg`, p.zh, { lazy: false, small: true, sizes: '(max-width:700px) 84vw, 480px' }).replace(' fetchpriority="high"', '').replace(/ (src|srcset)="/g, ' data-$1="')}</figure>
-      <div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div>
-    </a>`).join('')}</div>
+  <div class="track" id="track">${heroSlides}</div>
   <button class="arr l" id="prev" type="button" aria-label="上一則"><svg viewBox="0 0 34 14" aria-hidden="true"><path d="M34 7H1M7 1 1 7l6 6"/></svg></button>
   <button class="arr r" id="next" type="button" aria-label="下一則"><svg viewBox="0 0 34 14" aria-hidden="true"><path d="M0 7h33M27 1l6 6-6 6"/></svg></button>
 </section>
-<div class="pager"><div class="in"><span class="count" id="count">1 / ${TOP7.length}</span></div></div>
-<template id="mobileHeroSlides">${mobileHeroSlides}</template>
+<div class="pager"><div class="in"><span class="count" id="count">1 / ${heroPosts.length}</span></div></div>
 
 <section class="pick" id="latest-news">
   <div class="band">
