@@ -186,6 +186,7 @@ POST_DETAIL['bergen'] = {
   ],
   "updated": "2026-11-23",
   "cover": "img/bergen/harbour-panorama.jpg",
+  "coverPos": "50% 100%",
   "cardH": "img/bergen/bryggen.jpg",
   "cardV": true,
   "coverCap": "卑爾根港灣前的布呂根木屋與山坡住宅，呈現城市由貿易碼頭向山地展開的格局。",
