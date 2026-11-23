@@ -119,11 +119,12 @@ POST_DETAIL['bergen'] = {
       "cap": "卑爾根港邊的海鳥與行人，共享碼頭外的步行空間；沿水岸慢走，也能看見城市日常。"
     },
     {
-      "t": "img",
-      "size": "tall",
-      "fit": "natural",
-      "src": "img/bergen/square.jpg",
-      "cap": "彩虹斑馬線為卑爾根市區散步添了鮮明色彩，與港邊木屋呈現不同的街道表情。"
+      "t": "pair",
+      "imgs": [
+        "img/bergen/blue-door.jpg",
+        "img/bergen/square.jpg"
+      ],
+      "cap": "左：卑爾根住宅街區的粉藍立面與老木門，適合在離開碼頭後慢慢步行尋訪。右：市中心的彩虹斑馬線，和布呂根彩色木屋一起串起這趟港城散步。"
     },
     {
       "t": "h",
