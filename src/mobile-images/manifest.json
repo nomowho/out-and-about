@@ -1,0 +1,4517 @@
+{
+  "img/alberobello.jpg": [
+    {
+      "file": "b45c826e92216314.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/alberobello/corner.jpg": [
+    {
+      "file": "79fe15f9292be7d3.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/alberobello/cover-v.jpg": [
+    {
+      "file": "e2238eece9d2a7ac.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/alberobello/cover.jpg": [
+    {
+      "file": "96514d7ef15e04b4.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/alberobello/dusk.jpg": [
+    {
+      "file": "e4c5f48d5664e075.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/alberobello/roofs.jpg": [
+    {
+      "file": "3391021f5fe58900.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/alberobello/symbols.jpg": [
+    {
+      "file": "7d65424ab403c2bf.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/alberobello/symbols2.jpg": [
+    {
+      "file": "80bda3b036a1129e.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aoi-celestie.jpg": [
+    {
+      "file": "e2b9f0a35d18be2a.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/aoi-celestie/ceiling.jpg": [
+    {
+      "file": "ff2e636dd0c46ce5.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/aoi-celestie/counter.jpg": [
+    {
+      "file": "432b547ae554f97d.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aoi-celestie/courtyard.jpg": [
+    {
+      "file": "037b8f22ef37af5f.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aoi-celestie/cover.jpg": [
+    {
+      "file": "7442ee0059ea1f40.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aoi-celestie/lamps.jpg": [
+    {
+      "file": "7029b1ad64f5faef.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aoi-celestie/stairs.jpg": [
+    {
+      "file": "5282333f552a2bcc.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/aoi-celestie/street.jpg": [
+    {
+      "file": "c358a89caed46ccc.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aoi-celestie/toast.jpg": [
+    {
+      "file": "cc9afc4858d45f7b.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/aoi-celestie/window.jpg": [
+    {
+      "file": "41bdcfc5baa97c25.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-museum.jpg": [
+    {
+      "file": "2feb80bc01192a49.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aomori-museum/02_card.jpg": [
+    {
+      "file": "1d52d697dce89726.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aomori-museum/04_card_L.jpg": [
+    {
+      "file": "7fb739393cb26142.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/aomori-museum/05_card.jpg": [
+    {
+      "file": "3b14fc95d541fb38.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/aomori-museum/06_card.jpg": [
+    {
+      "file": "7ff6a58ce80f4fb3.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/aomori-museum/07_card.jpg": [
+    {
+      "file": "cd8287b55d3b1754.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/aomori-museum/08_card.jpg": [
+    {
+      "file": "de954bf494cbad8f.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-museum/09_card.jpg": [
+    {
+      "file": "7f260c96b4831494.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-museum/10_card.jpg": [
+    {
+      "file": "16c4e87f296deaca.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-museum/car_card.jpg": [
+    {
+      "file": "bb5d0867d8a4fcdf.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-museum/cover-01.jpg": [
+    {
+      "file": "c0313bdfe9914f09.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aomori-museum/cover-03.jpg": [
+    {
+      "file": "d07ccd493e4f70d9.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aomori-top10.jpg": [
+    {
+      "file": "359454b6d14c0458.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aomori-top10/01_seiryuji.jpg": [
+    {
+      "file": "e4c48b6a2a7cc3db.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aomori-top10/02_oirase.jpg": [
+    {
+      "file": "cddeeee76889091f.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aomori-top10/03_towada.jpg": [
+    {
+      "file": "398acb23e51cc11a.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/aomori-top10/04_hirosaki_meiji.jpg": [
+    {
+      "file": "e42982df0db0d224.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aomori-top10/04_hirosaki_showa.jpg": [
+    {
+      "file": "8f9aa7a5480c56d9.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-top10/05_brick.jpg": [
+    {
+      "file": "0bdb978e5a0ac03d.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/aomori-top10/06_aomoriken.jpg": [
+    {
+      "file": "f905f8bb23a446d8.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-top10/07_nebuta_L.jpg": [
+    {
+      "file": "ff580bc0a3a6b2c6.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/aomori-top10/07_nebuta_R.jpg": [
+    {
+      "file": "7dad5149b2dc79d2.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/aomori-top10/08_afactory.jpg": [
+    {
+      "file": "aab0a98cfd795f33.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/aomori-top10/09_hirota_BR.jpg": [
+    {
+      "file": "a5c93a41da0efe2e.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-top10/09_hirota_TL.jpg": [
+    {
+      "file": "f16554eabebf1cd8.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-top10/10_shinaomori.jpg": [
+    {
+      "file": "34b4751ef7c2c19b.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/aomori-top10/11_closing.jpg": [
+    {
+      "file": "5a591ebb4d739180.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aomori-top10/cover.jpg": [
+    {
+      "file": "c062b3dc13cdcd9b.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aventine.jpg": [
+    {
+      "file": "ea4c38151d17a05c.webp",
+      "width": 720,
+      "height": 1156
+    }
+  ],
+  "img/aventine/cover.jpg": [
+    {
+      "file": "2c273161fbde52a9.webp",
+      "width": 720,
+      "height": 1156
+    }
+  ],
+  "img/aventine/crest.jpg": [
+    {
+      "file": "d8e67b46a437d263.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aventine/gate.jpg": [
+    {
+      "file": "0f1d4fbfdae28f33.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aventine/keyhole.jpg": [
+    {
+      "file": "38d79b0de45a5860.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/aventine/peek.jpg": [
+    {
+      "file": "451a06d2eab38f32.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aventine/queue.jpg": [
+    {
+      "file": "cda46d3a3cdb3fc4.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/bergen/avenue.jpg": [
+    {
+      "file": "d7e570c40724ef70.webp",
+      "width": 600,
+      "height": 1025
+    },
+    {
+      "file": "00032a00a265c05a.webp",
+      "width": 720,
+      "height": 1229
+    }
+  ],
+  "img/bergen/blue-door.jpg": [
+    {
+      "file": "af058abd1e0db41d.webp",
+      "width": 600,
+      "height": 931
+    },
+    {
+      "file": "0b75283245fbbe6a.webp",
+      "width": 720,
+      "height": 1117
+    }
+  ],
+  "img/bergen/bryggen.jpg": [
+    {
+      "file": "c338b522699b5808.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "03acc9cb740b29cc.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/bergen/flowers.jpg": [
+    {
+      "file": "55fc22d5f0e2b371.webp",
+      "width": 600,
+      "height": 980
+    },
+    {
+      "file": "c27e16c05c3e49c2.webp",
+      "width": 720,
+      "height": 1175
+    }
+  ],
+  "img/bergen/gulls.jpg": [
+    {
+      "file": "ac94ec7215ba9ff3.webp",
+      "width": 600,
+      "height": 384
+    },
+    {
+      "file": "23f09d9fbd1385db.webp",
+      "width": 720,
+      "height": 461
+    }
+  ],
+  "img/bergen/harbour-cover-hq.jpg": [
+    {
+      "file": "6982db0798fc1de1.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "354038c855e3a607.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/bergen/market.jpg": [
+    {
+      "file": "3383a5952eef0db0.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "7040bb87597ddded.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/bergen/quay.jpg": [
+    {
+      "file": "6a0e022bcfb4fd68.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "773219dddfd0ee6c.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/bergen/square.jpg": [
+    {
+      "file": "e3f33ac665242480.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "12feb8d13cdbe177.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/bergen/stepped-gable.jpg": [
+    {
+      "file": "3b41b85a366afc10.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "79d89dd38d6208c7.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/bergen/street.jpg": [
+    {
+      "file": "9d76a183db3a3bb3.webp",
+      "width": 600,
+      "height": 1065
+    },
+    {
+      "file": "6e0723598b05dc7f.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/bergen/tree-lined-path.jpg": [
+    {
+      "file": "4ed88f005bd3883c.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "304c40472eb24a01.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/bergen/waterfront-hillside.jpg": [
+    {
+      "file": "2c73b72142171883.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "624314df4b54dbbd.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/bergen/window-seat.jpg": [
+    {
+      "file": "73dadb09ab9965c9.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "f80cc5efde84e63c.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/berlengas.jpg": [
+    {
+      "file": "75bab90f36a8392f.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/berlengas/arches.jpg": [
+    {
+      "file": "abe953e1cfa41acc.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/berlengas/beach.jpg": [
+    {
+      "file": "600124e3ee3da185.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/berlengas/bridge.jpg": [
+    {
+      "file": "a2fb1c5da78413b2.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/berlengas/cafe.jpg": [
+    {
+      "file": "3bc20928f774d3a3.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/berlengas/cover.jpg": [
+    {
+      "file": "2cac7fc8c9c4775d.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/berlengas/end-bridge.jpg": [
+    {
+      "file": "050afc32232d6610.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/berlengas/end-fort.jpg": [
+    {
+      "file": "e8f61eed6753c9cd.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/berlengas/fort-gate.jpg": [
+    {
+      "file": "87d10ea5d9bd0118.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/berlengas/harbor.jpg": [
+    {
+      "file": "e1f7c6c7a09f5af3.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/berlengas/trail.jpg": [
+    {
+      "file": "053e4bf9b8255970.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/berlengas/village.jpg": [
+    {
+      "file": "d6d44b477a8d431f.webp",
+      "width": 720,
+      "height": 432
+    }
+  ],
+  "img/borghese.jpg": [
+    {
+      "file": "a38ad074fe79c635.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/borghese/bacchus.jpg": [
+    {
+      "file": "51e8d0181823afae.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/borghese/cerberus.jpg": [
+    {
+      "file": "5df777314081b736.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/borghese/cover.jpg": [
+    {
+      "file": "d8eb3d959757de78.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/borghese/daphne.jpg": [
+    {
+      "file": "ecc7c304ebd60a7c.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/borghese/david-goliath.jpg": [
+    {
+      "file": "8e436f6aa0dd2f89.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/borghese/hall.jpg": [
+    {
+      "file": "4484442c572f602d.webp",
+      "width": 720,
+      "height": 416
+    }
+  ],
+  "img/borghese/jerome.jpg": [
+    {
+      "file": "ed8e45d06e222139.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/borghese/park-temple.jpg": [
+    {
+      "file": "0c2b0c2b0e8c38fa.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/borghese/proserpina.jpg": [
+    {
+      "file": "6532e784dcc0f393.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/borghese/salone.jpg": [
+    {
+      "file": "adbef8ef87559945.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/byrne-portugal.jpg": [
+    {
+      "file": "6cf5577252903db1.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/byrne-portugal/cover.jpg": [
+    {
+      "file": "8066c33ff7c59e8d.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/byrne-portugal/front-v.jpg": [
+    {
+      "file": "d50b414d72124ea4.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/byrne-portugal/slit.jpg": [
+    {
+      "file": "8c099a8955b5126f.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/byrne-portugal/wall.jpg": [
+    {
+      "file": "fa84fa322eb22471.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/caravaggio.jpg": [
+    {
+      "file": "875501e69c572670.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/caravaggio/altar.jpg": [
+    {
+      "file": "8ca79fb473ba40b7.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/caravaggio/calling.jpg": [
+    {
+      "file": "7273f887f03dd433.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/caravaggio/ceiling.jpg": [
+    {
+      "file": "442363142d9ac70f.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/caravaggio/cover.jpg": [
+    {
+      "file": "0b35c881134a80d5.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/caravaggio/inspiration.jpg": [
+    {
+      "file": "c0421efd76f51752.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/caravaggio/nave.jpg": [
+    {
+      "file": "1eb3654be251ffaf.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/caravaggio/right-wall.jpg": [
+    {
+      "file": "34e48886cdf8778e.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/catania.jpg": [
+    {
+      "file": "cbab6ab5fb20f303.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/catania/black.jpg": [
+    {
+      "file": "c67eea4d7db0acd7.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/catania/cat.jpg": [
+    {
+      "file": "42f7b5ce08069a56.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/catania/cave.jpg": [
+    {
+      "file": "b66a17aba81716a1.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/catania/cover.jpg": [
+    {
+      "file": "d876e2a3ab18a5d2.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/catania/duomo.jpg": [
+    {
+      "file": "46766860521935e0.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/catania/lane.jpg": [
+    {
+      "file": "23ef5834881580b9.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/catania/lane2.jpg": [
+    {
+      "file": "136d7f8b1d333b9b.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/catania/lights.jpg": [
+    {
+      "file": "184ca52d42277949.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/catania/messy.jpg": [
+    {
+      "file": "e91b0f23ba08f777.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/catania/theatre.jpg": [
+    {
+      "file": "889819c9faa1d332.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/catania/umbrellas.jpg": [
+    {
+      "file": "13f7c52537b7ba2a.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/dolomiti-winter/c02.jpg": [
+    {
+      "file": "3914688ce0c52de6.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/c03.jpg": [
+    {
+      "file": "c16489fd8fb14280.webp",
+      "width": 720,
+      "height": 978
+    }
+  ],
+  "img/dolomiti-winter/c04.jpg": [
+    {
+      "file": "c5b081e4bb64035b.webp",
+      "width": 720,
+      "height": 962
+    }
+  ],
+  "img/dolomiti-winter/c05.jpg": [
+    {
+      "file": "69847ab5e20e7715.webp",
+      "width": 720,
+      "height": 1297
+    }
+  ],
+  "img/dolomiti-winter/c06.jpg": [
+    {
+      "file": "6f59dd456eaec1e7.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/c07.jpg": [
+    {
+      "file": "20a3f73bb2d2fddd.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/c07a.jpg": [
+    {
+      "file": "50bfd5e4a8547b83.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/c07b.jpg": [
+    {
+      "file": "6239f4fb5c9aeac3.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/c09.jpg": [
+    {
+      "file": "551096c7e4bf98a5.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/c09b.jpg": [
+    {
+      "file": "beb6b965f7ae55e8.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/cice.jpg": [
+    {
+      "file": "7b773b514e8a2663.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/cort-b.jpg": [
+    {
+      "file": "657d23a7a1e6c5bf.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/dolomiti-winter/csab.jpg": [
+    {
+      "file": "2d0c57ff335164b2.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/ear-of-dionysius.jpg": [
+    {
+      "file": "726cf3fb0afb83c6.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/ear-of-dionysius/angel.jpg": [
+    {
+      "file": "865332b1bdbc7959.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/ear-of-dionysius/blue-face.jpg": [
+    {
+      "file": "66a7daf140338323.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/ear-of-dionysius/blue-water.jpg": [
+    {
+      "file": "f7aecb9593956e45.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/ear-of-dionysius/bronze-head.jpg": [
+    {
+      "file": "0f5e2fb306d607dd.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/ear-of-dionysius/cover.jpg": [
+    {
+      "file": "89cdeb469a69282d.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/ear-of-dionysius/curve.jpg": [
+    {
+      "file": "cbb6b04e9eb78d46.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/ear-of-dionysius/entrance.jpg": [
+    {
+      "file": "80b77b0bfc947435.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/ear-of-dionysius/inside.jpg": [
+    {
+      "file": "48b99774396d8cc2.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/ear-of-dionysius/pool.jpg": [
+    {
+      "file": "98949f458d6747e1.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/ear-of-dionysius/quarry.jpg": [
+    {
+      "file": "ec81ec08243e10bc.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/etna.jpg": [
+    {
+      "file": "97f506863941c8d5.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/etna/bw.jpg": [
+    {
+      "file": "dcb9fb9dbde3b9ca.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/etna/clouds.jpg": [
+    {
+      "file": "b25a2db01b91fcd8.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/etna/cover.jpg": [
+    {
+      "file": "01d28e677dd5d3a5.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/etna/hikers.jpg": [
+    {
+      "file": "e7c54de3071392ce.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/etna/rifugio.jpg": [
+    {
+      "file": "ddddc1e078af9fe4.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/etna/snowcat.jpg": [
+    {
+      "file": "50a7c0bfc2a2b90d.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/etna/summit.jpg": [
+    {
+      "file": "3f7aab6538b9b61b.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/etna/summit2.jpg": [
+    {
+      "file": "2958d979298167e2.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/etna/sun.jpg": [
+    {
+      "file": "b8379a5a49fd9c17.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/geibikei.jpg": [
+    {
+      "file": "f56053e418dc8b1b.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/geibikei/content-02_card.jpg": [
+    {
+      "file": "935a009ea089bdec.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/geibikei/content-03_card.jpg": [
+    {
+      "file": "5178b14c2e02c307.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/geibikei/content-04_card.jpg": [
+    {
+      "file": "5cfabe3c75aee7e3.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/geibikei/content-05_card.jpg": [
+    {
+      "file": "9e800408ef9b8f31.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/geibikei/content-06_card.jpg": [
+    {
+      "file": "f0171c666047b79b.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/geibikei/content-07_card.jpg": [
+    {
+      "file": "648ddca8097390cf.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/geibikei/content-08_card.jpg": [
+    {
+      "file": "3d517c0818eb19b4.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/geibikei/content-pokemon_card_L.jpg": [
+    {
+      "file": "3878a172f5132e92.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/geibikei/content-pokemon_card_R.jpg": [
+    {
+      "file": "ba599ae1ff8b63dd.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/geibikei/content-undama_card.jpg": [
+    {
+      "file": "fc459b225a7583ea.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/geibikei/cover-03.jpg": [
+    {
+      "file": "f3ef3e5b63d8bbc2.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hengchun.jpg": [
+    {
+      "file": "8bc6301b3bd77424.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/hengchun/buffalo.jpg": [
+    {
+      "file": "aad45955dfd9de6a.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/hengchun/cover.jpg": [
+    {
+      "file": "7ebc761e6f44b683.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hengchun/creek.jpg": [
+    {
+      "file": "6b5185b11b437008.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hengchun/falls.jpg": [
+    {
+      "file": "724aa4a3ca7a981b.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hengchun/forest.jpg": [
+    {
+      "file": "484e1d01b1b4dadc.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hengchun/guide.jpg": [
+    {
+      "file": "339efe56860233ec.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hengchun/hawk.jpg": [
+    {
+      "file": "34e8ca775f4609ec.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/hengchun/stream.jpg": [
+    {
+      "file": "3993cf1741709411.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hoshino-oirase.jpg": [
+    {
+      "file": "e2c06ba883adcb08.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hoshino-oirase/01_card_A.jpg": [
+    {
+      "file": "778024ad2c67de38.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/hoshino-oirase/02_card_L.jpg": [
+    {
+      "file": "2d3be4d38a9f45d2.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/hoshino-oirase/03_card.jpg": [
+    {
+      "file": "53fc5dae73f8dcd4.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/hoshino-oirase/04_card_L.jpg": [
+    {
+      "file": "df96dbf25dd03327.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hoshino-oirase/04_card_R.jpg": [
+    {
+      "file": "9d09198c5ed758a9.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hoshino-oirase/05_card_R.jpg": [
+    {
+      "file": "6013a7284f414ca4.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/hoshino-oirase/06_card.jpg": [
+    {
+      "file": "095513a189cf142a.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/hoshino-oirase/07_card.jpg": [
+    {
+      "file": "e99cfe9c6fb0e194.webp",
+      "width": 720,
+      "height": 528
+    }
+  ],
+  "img/hoshino-oirase/08_card_TL.jpg": [
+    {
+      "file": "045f4e255ffa9f57.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/hoshino-oirase/09_card_L.jpg": [
+    {
+      "file": "a65272bc5ae97902.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/hoshino-oirase/09_card_R.jpg": [
+    {
+      "file": "6a9613cd4edaaaf7.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/hoshino-oirase/cover-01.jpg": [
+    {
+      "file": "324f5ae1ad733f50.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hotei-daibutsu.jpg": [
+    {
+      "file": "cac9eff39bf3a69f.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hotei-daibutsu/c01.jpg": [
+    {
+      "file": "7882cdc0042236e0.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hotei-daibutsu/c02.jpg": [
+    {
+      "file": "9449993b5fc3568e.webp",
+      "width": 720,
+      "height": 514
+    }
+  ],
+  "img/hotei-daibutsu/c03.jpg": [
+    {
+      "file": "102b62d99c9010d5.webp",
+      "width": 720,
+      "height": 1299
+    }
+  ],
+  "img/hotei-daibutsu/cover.jpg": [
+    {
+      "file": "ef3d9e14f1c932c8.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/izu.jpg": [
+    {
+      "file": "132c3a070b5511ec.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/izu/content-katsuragi-1.jpg": [
+    {
+      "file": "d696132350796c2a.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/izu/content-katsuragi-2.jpg": [
+    {
+      "file": "1764d2c48c77d396.webp",
+      "width": 720,
+      "height": 388
+    }
+  ],
+  "img/izu/content-katsuragi-3.jpg": [
+    {
+      "file": "94f498420db01c28.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/izu/content-kawadoko.jpg": [
+    {
+      "file": "4dd87b349968fc2e.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/izu/content-ryokan-1.jpg": [
+    {
+      "file": "f1adfdca920d04fd.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/izu/content-ryokan-2.jpg": [
+    {
+      "file": "bd5d68f472c52677.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/izu/content-ryokan-3.jpg": [
+    {
+      "file": "b7a19505254626a0.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/izu/content-shuzenji-1.jpg": [
+    {
+      "file": "8da8c62b1c8214a3.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/izu/content-shuzenji-2.jpg": [
+    {
+      "file": "7ee494db25593c89.webp",
+      "width": 720,
+      "height": 496
+    }
+  ],
+  "img/izu/content-shuzenji-3.jpg": [
+    {
+      "file": "25fe15eaefab6241.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/izu/content-unagi.jpg": [
+    {
+      "file": "5156b8fe5beaa04e.webp",
+      "width": 720,
+      "height": 987
+    }
+  ],
+  "img/izu/cover-cover.jpg": [
+    {
+      "file": "5cb80afc11d4f789.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/kaneja.jpg": [
+    {
+      "file": "b74063171d0299e3.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/kaneja/01_card.jpg": [
+    {
+      "file": "62b8b5bf8d42fa61.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/kaneja/03_card.jpg": [
+    {
+      "file": "dba2474a6ca3ccd2.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kaneja/04_card_L.jpg": [
+    {
+      "file": "7a398dd5a7f105ea.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kaneja/06_card.jpg": [
+    {
+      "file": "a52ba391fa75440d.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/kaneja/07_card.jpg": [
+    {
+      "file": "558d47b0b542fc25.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/kaneja/08_card.jpg": [
+    {
+      "file": "ae9f00810b40d015.webp",
+      "width": 720,
+      "height": 720
+    }
+  ],
+  "img/kaneja/09_card.jpg": [
+    {
+      "file": "ec3a5f5b1f6f18b3.webp",
+      "width": 720,
+      "height": 477
+    }
+  ],
+  "img/kaneja/10_card.jpg": [
+    {
+      "file": "ffabea231f4d1b83.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/kaneja/cover-01.jpg": [
+    {
+      "file": "2b5ced3f93eaeee1.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kaneja/cover-02.jpg": [
+    {
+      "file": "2182e13f41156751.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kaneja/cover-03.jpg": [
+    {
+      "file": "c382b622f0103853.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/kilden.jpg": [
+    {
+      "file": "5c69d313baec4f2d.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "e824ea24f8d3dd30.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kilden/cover.jpg": [
+    {
+      "file": "23a736ed0b8f4503.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "70d881fd3b392132.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/kilden/foyer.jpg": [
+    {
+      "file": "8a38167a437daa7b.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "09fcf0adc05bd105.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/kilden/glass.jpg": [
+    {
+      "file": "9050b4e713930abe.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "242a648a34dee44c.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kilden/harbour.jpg": [
+    {
+      "file": "e078f3031a0447cf.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "0cadee4e47dc5da9.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kilden/oak.jpg": [
+    {
+      "file": "206437409774d447.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "74353cb9157b3513.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/kilden/roof.jpg": [
+    {
+      "file": "f5fe98c8a295a016.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "dfdc7f1c27518568.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/kilden/walk.jpg": [
+    {
+      "file": "794a4faeb1b04439.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "0ec6f1855dfa8d46.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kilden/waterfront.jpg": [
+    {
+      "file": "05a67103be12463c.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "8d264a2c2ecedc11.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kunstsilo.jpg": [
+    {
+      "file": "0fb9ac3acb9ea2f1.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "3a293f162674983f.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kunstsilo/atrium.jpg": [
+    {
+      "file": "463e6c67e96f9f1e.webp",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "file": "bd5618eba9842f26.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/kunstsilo/ceiling.jpg": [
+    {
+      "file": "48da06e88efff543.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "611080da2b7f5b9a.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/kunstsilo/cover-waterfront.jpg": [
+    {
+      "file": "a4d539867b6df947.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "55a96cf602872a85.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kunstsilo/harbor.jpg": [
+    {
+      "file": "75cdb0bd7b42597b.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "6b74beb070847a2c.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/kunstsilo/history.jpg": [
+    {
+      "file": "2e27943163027b7c.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "e96b6afda17bd2c3.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/kunstsilo/stairs.jpg": [
+    {
+      "file": "3226304d69359fdf.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "5899b71fa2ec12ab.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/lofoten-stockfish.jpg": [
+    {
+      "file": "bdac00a75d27ebff.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "8bce0231990f5c3d.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/lofoten-stockfish/boats.jpg": [
+    {
+      "file": "58ffa6c600c4b428.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "6fd7d0411d01ff58.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/lofoten-stockfish/bundles.jpg": [
+    {
+      "file": "ba041f18a827b336.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "68b912200158f7c0.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/lofoten-stockfish/close.jpg": [
+    {
+      "file": "1b04512d6326450f.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "676222e2000599ff.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/lofoten-stockfish/cloud.jpg": [
+    {
+      "file": "246334260344071a.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "4d022721717593c2.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/lofoten-stockfish/cover.jpg": [
+    {
+      "file": "201ea2d00fe7b2e6.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "b6e4fbcc0931fd1f.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/lofoten-stockfish/fish-heads-cover.jpg": [
+    {
+      "file": "76d9f4fffd8e1bd2.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "dada6f8ac9b44f40.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/lofoten-stockfish/packaged-stockfish.jpg": [
+    {
+      "file": "80fc03404643cf5b.webp",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "file": "6ec6ef3f0d6dfb90.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/lofoten-stockfish/rack-portrait.jpg": [
+    {
+      "file": "a3307baac1f2a4fe.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "9912af17f3926eb6.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/lofoten-stockfish/rows.jpg": [
+    {
+      "file": "27535319e7e84c40.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "5bf9a24f0ac259ed.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/louvre-pyramid.jpg": [
+    {
+      "file": "59e753cd73296d7e.webp",
+      "width": 720,
+      "height": 900
+    }
+  ],
+  "img/louvre-pyramid/cover.jpg": [
+    {
+      "file": "3ba19ea89ec9d4a0.webp",
+      "width": 720,
+      "height": 900
+    }
+  ],
+  "img/matera.jpg": [
+    {
+      "file": "7cdad45da8cc2178.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/matera/alley.jpg": [
+    {
+      "file": "79dfe5039d1155de.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/matera/canyon.jpg": [
+    {
+      "file": "bcb7b35894c6e15d.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/matera/cliff.jpg": [
+    {
+      "file": "cd09a7525c6be2fd.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/matera/courtyard.jpg": [
+    {
+      "file": "80c562b850e9603c.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/matera/cover.jpg": [
+    {
+      "file": "3942a117663a237f.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/matera/drop.jpg": [
+    {
+      "file": "03cc55ab78a36dca.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/matera/night.jpg": [
+    {
+      "file": "b564f0a08e74ddac.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/matera/roofs.jpg": [
+    {
+      "file": "abaef5065e360920.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/matera/sassi.jpg": [
+    {
+      "file": "dad67f7431501430.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/matera/series-card.jpg": [
+    {
+      "file": "077d62a14f151dd1.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/matera/stairs.jpg": [
+    {
+      "file": "18a3bc4784e40d41.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/moses.jpg": [
+    {
+      "file": "34f14dc021e858a9.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/moses/chains.jpg": [
+    {
+      "file": "3effac5282893706.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/moses/cover.jpg": [
+    {
+      "file": "7c5a2636420d7ee0.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/moses/monument.jpg": [
+    {
+      "file": "d7d1be043eae45ab.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/moses/nave.jpg": [
+    {
+      "file": "52ae0962e583e9ec.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/moses/stairs.jpg": [
+    {
+      "file": "f3d248b9110a55ca.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/moses/tomb.jpg": [
+    {
+      "file": "1d92c9427bf50548.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/munch.jpg": [
+    {
+      "file": "f2d989d794017b15.webp",
+      "width": 600,
+      "height": 750
+    },
+    {
+      "file": "ff19c08de3e2f9b8.webp",
+      "width": 720,
+      "height": 900
+    }
+  ],
+  "img/munch/cafe.jpg": [
+    {
+      "file": "40e66c309859d490.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "e1ad32502b3cfae7.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/munch/cover.jpg": [
+    {
+      "file": "08fcf4e4235c9378.webp",
+      "width": 600,
+      "height": 750
+    },
+    {
+      "file": "c91c9334fafe2e6d.webp",
+      "width": 720,
+      "height": 900
+    }
+  ],
+  "img/munch/facade.jpg": [
+    {
+      "file": "192afba9e5b4e225.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "e36b61c5fb118024.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/munch/gallery-viewer-2.jpg": [
+    {
+      "file": "e6b413e15e1b4272.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "94481d9332025c01.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/munch/gallery-viewer.jpg": [
+    {
+      "file": "e1bb01369c7965e3.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "892044e3a19594ee.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/munch/gallery-wide.jpg": [
+    {
+      "file": "abf1b367d6b37fa2.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "39c126fed7be42ee.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/munch/scream.jpg": [
+    {
+      "file": "14f4a4a9c383e733.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "c2c9d2d9a5ce6818.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/nagoya-morning.jpg": [
+    {
+      "file": "eae05f24701ebf39.webp",
+      "width": 720,
+      "height": 900
+    }
+  ],
+  "img/nagoya-morning/IMG_7234.jpg": [
+    {
+      "file": "6d54e9c58c8a8a0f.webp",
+      "width": 720,
+      "height": 900
+    }
+  ],
+  "img/nagoya-morning/card1_IMG_7255.jpg": [
+    {
+      "file": "b3d43e3a6898bfb6.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/nagoya-morning/card2_IMG_7230.jpg": [
+    {
+      "file": "e71bbae7f23c7296.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/nagoya-morning/card3_IMG_7262.jpg": [
+    {
+      "file": "58a7fcdb0559dd81.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/nagoya-morning/card4_IMG_8088.jpg": [
+    {
+      "file": "6019614014a709b1.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/nagoya-morning/card5_IMG_8027.jpg": [
+    {
+      "file": "06c26f8ca41b10ec.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/nagoya-morning/card6_IMG_7974.jpg": [
+    {
+      "file": "a12fc71bf84aa9bb.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/nagoya-zokei.jpg": [
+    {
+      "file": "b0c6e624deb90a1f.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/nagoya-zokei/S__71868420.jpg": [
+    {
+      "file": "340ffe050e21db5c.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/nagoya-zokei/S__71868421.jpg": [
+    {
+      "file": "9a72b60b205eb2bb.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/nagoya-zokei/S__71868422.jpg": [
+    {
+      "file": "c84ff62c8cebe76f.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/nagoya-zokei/S__71868423.jpg": [
+    {
+      "file": "e296c7d3abac54bb.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/nagoya-zokei/S__71868425.jpg": [
+    {
+      "file": "10177d059624a68e.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/nagoya-zokei/S__71868426.jpg": [
+    {
+      "file": "0708426bc9620698.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/nagoya-zokei/cover.jpg": [
+    {
+      "file": "540fbae9f871517b.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/oirase.jpg": [
+    {
+      "file": "73d92812e0f42241.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/oirase/content-01_card.jpg": [
+    {
+      "file": "2825a8ed8b77418f.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/oirase/content-02_card.jpg": [
+    {
+      "file": "5b00c1ee28f36add.webp",
+      "width": 720,
+      "height": 1560
+    }
+  ],
+  "img/oirase/content-03_card.jpg": [
+    {
+      "file": "48ad6e0c4ffdd730.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/oirase/content-04_card_BR.jpg": [
+    {
+      "file": "aab9a804e3182727.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/oirase/content-04_card_TL.jpg": [
+    {
+      "file": "e154af030f5de3bf.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/oirase/content-05_card_BR.jpg": [
+    {
+      "file": "5b1621cea9b36d49.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/oirase/content-05_card_TL.jpg": [
+    {
+      "file": "bc431daa93cbeeb6.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/oirase/content-06_card_L.jpg": [
+    {
+      "file": "d1aa0fbecfb04873.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/oirase/content-06_card_R.jpg": [
+    {
+      "file": "f5455d5f1ecadafe.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/oirase/content-07_card.jpg": [
+    {
+      "file": "af8ea36cff45f605.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/oirase/cover-02.jpg": [
+    {
+      "file": "077ea9b3239b3fd4.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/porta-santa.jpg": [
+    {
+      "file": "abaf79b97fd6bbc0.webp",
+      "width": 720,
+      "height": 900
+    }
+  ],
+  "img/porta-santa/cover.jpg": [
+    {
+      "file": "704b242dcbe33e2c.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/porta-santa/cross.jpg": [
+    {
+      "file": "b9019b244f351154.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/porta-santa/dome.jpg": [
+    {
+      "file": "92b7cee5a79c167b.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/porta-santa/door.jpg": [
+    {
+      "file": "bb0453d26f91befc.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/porta-santa/guard.jpg": [
+    {
+      "file": "8ba40de98b80f499.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/porta-santa/guard2.jpg": [
+    {
+      "file": "47be7d45df7493db.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/porta-santa/mass.jpg": [
+    {
+      "file": "6ce85f56afe56f12.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/porta-santa/queue.jpg": [
+    {
+      "file": "f6ccee1e43f37afb.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/porta-santa/statue.jpg": [
+    {
+      "file": "86bc7a9a6475231a.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/porta-santa/volunteers.jpg": [
+    {
+      "file": "e7a0cbda03c9f4b7.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/preikestolen/approach.jpg": [
+    {
+      "file": "c02f3f1c0db2e876.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "53932fff07e8d22b.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/preikestolen/basecamp-lake.jpg": [
+    {
+      "file": "12b7938725eae075.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "916982ed15cf2b50.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/preikestolen/boardwalk.jpg": [
+    {
+      "file": "2c5471bc83741276.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "9c6ef86e098ec2bd.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/preikestolen/cliff.jpg": [
+    {
+      "file": "f3b5a9a0c729d7bf.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "76a06723608dc244.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/preikestolen/fjord-monochrome.jpg": [
+    {
+      "file": "f85db5444f395cfc.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "c79d5ec4945d3515.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/preikestolen/plateau.jpg": [
+    {
+      "file": "0d9db7158c727659.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "161fd55d65c08789.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/preikestolen/portrait-tight.jpg": [
+    {
+      "file": "6636b4424455c0b5.webp",
+      "width": 600,
+      "height": 750
+    },
+    {
+      "file": "96d072ebd34d2895.webp",
+      "width": 720,
+      "height": 900
+    }
+  ],
+  "img/preikestolen/rock-face.jpg": [
+    {
+      "file": "973de8a037ae27dc.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "25ff21eba4bd8b65.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/preikestolen/rock-trail.jpg": [
+    {
+      "file": "8fb281f117f2d230.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "ccf14d9fa0e0877d.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/preikestolen/silhouette.jpg": [
+    {
+      "file": "e2c552c780c3f688.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "7326c0924afac6ed.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/preikestolen/steps.jpg": [
+    {
+      "file": "67de2119e5092a72.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "728d07c3beaef396.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/preikestolen/summit-portrait.jpg": [
+    {
+      "file": "6302f47f6227908c.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "475c00bfb99344b8.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/preikestolen/tarn.jpg": [
+    {
+      "file": "bada2cdedcf09594.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "204f272579b8ccd0.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/preikestolen/trailhead.jpg": [
+    {
+      "file": "946d276b19621825.webp",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "file": "30435f6d6a4afe47.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/reinebringen.jpg": [
+    {
+      "file": "69302b6b253dc244.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "4a8fa362a36d4020.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/reinebringen/cliff.jpg": [
+    {
+      "file": "691f35b5834839e7.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "92066981720ebd26.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/reinebringen/cover.jpg": [
+    {
+      "file": "21ef0212cebaee8c.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "3069258224c642f7.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/reinebringen/descent.jpg": [
+    {
+      "file": "0dfd134a46750dd2.webp",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "file": "5e03e8ae4d48ce85.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/reinebringen/fjord.jpg": [
+    {
+      "file": "845808ab6bd2ddd2.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "590a32aa0e873c63.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/reinebringen/norway-series.jpg": [
+    {
+      "file": "3a112fec0caeb3b1.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "12c53e7546a76987.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/reinebringen/portrait.jpg": [
+    {
+      "file": "4b461309ea0ec273.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "c6731354e2cda9dd.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/reinebringen/ridge.jpg": [
+    {
+      "file": "7132c946ef3f08b0.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "4115597f14baba41.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/reinebringen/road-sign.jpg": [
+    {
+      "file": "3e36159b021c226c.webp",
+      "width": 600,
+      "height": 825
+    },
+    {
+      "file": "0e3fefbcdda38a9a.webp",
+      "width": 720,
+      "height": 990
+    }
+  ],
+  "img/reinebringen/stairs.jpg": [
+    {
+      "file": "ea981931433d1e9f.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "99c0754820aea805.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/reinebringen/trail-sign.jpg": [
+    {
+      "file": "ff80a3da909b2ff9.webp",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "file": "69684b9dd363c8c1.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/reinebringen/village.jpg": [
+    {
+      "file": "da20b71fed10c21d.webp",
+      "width": 600,
+      "height": 1138
+    },
+    {
+      "file": "d182d59027f3f419.webp",
+      "width": 720,
+      "height": 1366
+    }
+  ],
+  "img/sagrada-familia-2.jpg": [
+    {
+      "file": "4d26871767792602.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/sagrada-familia-2/00_cover.jpg": [
+    {
+      "file": "48cc734a132d65c7.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/sagrada-familia-2/01.jpg": [
+    {
+      "file": "05aae1f1249e0c56.webp",
+      "width": 720,
+      "height": 1284
+    }
+  ],
+  "img/sagrada-familia-2/02.jpg": [
+    {
+      "file": "2b527c6fcf870cc5.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/sagrada-familia-2/03.jpg": [
+    {
+      "file": "5e9b99a9f812c1f7.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/sagrada-familia-2/04.jpg": [
+    {
+      "file": "05022c54db471460.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/sagrada-familia-2/05.jpg": [
+    {
+      "file": "c1309d8ddaf040fd.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/sagrada-familia-2/06.jpg": [
+    {
+      "file": "94dbf5f9d0b0ac45.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/sagrada-familia-2/07.jpg": [
+    {
+      "file": "4cd0d6733396033a.webp",
+      "width": 720,
+      "height": 1008
+    }
+  ],
+  "img/sagrada-familia-2/08.jpg": [
+    {
+      "file": "2701be2530bed249.webp",
+      "width": 720,
+      "height": 1056
+    }
+  ],
+  "img/sagrada-familia/content-card01.jpg": [
+    {
+      "file": "31a43f9fc9f67517.webp",
+      "width": 720,
+      "height": 404
+    }
+  ],
+  "img/sagrada-familia/content-card02.jpg": [
+    {
+      "file": "4d190b5537f06c6b.webp",
+      "width": 720,
+      "height": 1284
+    }
+  ],
+  "img/sagrada-familia/content-card03.jpg": [
+    {
+      "file": "cdbb0b7d69b42586.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/sagrada-familia/content-card04.jpg": [
+    {
+      "file": "a103113bcd018299.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/sagrada-familia/content-card05b.jpg": [
+    {
+      "file": "3a3b3d0161476d1c.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/sagrada-familia/content-card06.jpg": [
+    {
+      "file": "709a8e69c937ab68.webp",
+      "width": 720,
+      "height": 1084
+    }
+  ],
+  "img/sagrada-familia/content-card07.jpg": [
+    {
+      "file": "20a30a9429debbb7.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/sagrada-familia/content-card09b.jpg": [
+    {
+      "file": "eb11bb884d757d99.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/sagrada-familia/content-card13.jpg": [
+    {
+      "file": "1e9e460dbaaad3e3.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/sagrada-familia/content-card14.jpg": [
+    {
+      "file": "a4da2391c53e2cf6.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/sagrada-familia/content-card15.jpg": [
+    {
+      "file": "00dd5bf9675ed0c1.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/scala-santa.jpg": [
+    {
+      "file": "c1baad9d4dfa47ae.webp",
+      "width": 720,
+      "height": 1264
+    }
+  ],
+  "img/scala-santa/cover.jpg": [
+    {
+      "file": "ae6cc058ef867b94.webp",
+      "width": 720,
+      "height": 1264
+    }
+  ],
+  "img/scala-santa/ill-cross.jpg": [
+    {
+      "file": "decc264ce10d15c6.webp",
+      "width": 720,
+      "height": 894
+    }
+  ],
+  "img/scala-santa/ill-facade.jpg": [
+    {
+      "file": "7558aabeb3a97be5.webp",
+      "width": 720,
+      "height": 893
+    }
+  ],
+  "img/scala-santa/ill-helena.jpg": [
+    {
+      "file": "bfba7799016628ac.webp",
+      "width": 720,
+      "height": 893
+    }
+  ],
+  "img/scala-santa/ill-kneel.jpg": [
+    {
+      "file": "a52c2d57135067d0.webp",
+      "width": 720,
+      "height": 893
+    }
+  ],
+  "img/scala-santa/ill-pilate.jpg": [
+    {
+      "file": "22c0ad80839ff2ad.webp",
+      "width": 720,
+      "height": 894
+    }
+  ],
+  "img/seiryuji.jpg": [
+    {
+      "file": "e6ad3d3d6b781b52.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/seiryuji/01_card.jpg": [
+    {
+      "file": "1475238b5eb72450.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/seiryuji/02_card.jpg": [
+    {
+      "file": "b538f31b604f5fee.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/seiryuji/03_card.jpg": [
+    {
+      "file": "9b34bac4258c381e.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/seiryuji/04_card.jpg": [
+    {
+      "file": "9e3671704f5441f5.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/seiryuji/05_card.jpg": [
+    {
+      "file": "d73f6d91ed44bef3.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/seiryuji/06_card.jpg": [
+    {
+      "file": "23a5acfb9af763a6.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/seiryuji/07_card.jpg": [
+    {
+      "file": "07947be591e78bad.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/seiryuji/08_card_TL.jpg": [
+    {
+      "file": "7cc237202d242955.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/seiryuji/09_card.jpg": [
+    {
+      "file": "8e51e2917a25e251.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/seiryuji/cover.jpg": [
+    {
+      "file": "e2ed06238e4768a9.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/siracusa/alley.jpg": [
+    {
+      "file": "516ff89ed4598901.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/siracusa/ape.jpg": [
+    {
+      "file": "099d5948c25eaf7d.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/siracusa/archimedes.jpg": [
+    {
+      "file": "9cf2dcdda9051033.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/siracusa/baroque.jpg": [
+    {
+      "file": "ac06e863c0287674.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/siracusa/castle.jpg": [
+    {
+      "file": "59ef6a8b24459da1.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/siracusa/cover.jpg": [
+    {
+      "file": "4fa50bb0ed9c9d20.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/siracusa/duomo-in.jpg": [
+    {
+      "file": "e3b08a15abcdca4a.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/siracusa/duomo-steps.jpg": [
+    {
+      "file": "cfaf5ae1a2f158f8.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/siracusa/portrait-sea-alley.jpg": [
+    {
+      "file": "bba6d60b574128c5.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "452765b119d9508e.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/siracusa/seafront.jpg": [
+    {
+      "file": "5aafec991474db22.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/stavanger.jpg": [
+    {
+      "file": "713f4533cec3cd20.webp",
+      "width": 600,
+      "height": 1074
+    },
+    {
+      "file": "0d4ae84052945bf0.webp",
+      "width": 720,
+      "height": 1289
+    }
+  ],
+  "img/stavanger/beach.jpg": [
+    {
+      "file": "40100d9354ef75e5.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "b566f731f2db316c.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/stavanger/cover.jpg": [
+    {
+      "file": "141dbe6fd5caf9c1.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "078c7da3b27ac916.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/stavanger/fjord.jpg": [
+    {
+      "file": "6b7bebda11ef33a1.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "1e94e8a9593068f7.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/stavanger/gathering.jpg": [
+    {
+      "file": "4b33f788c61239ee.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "9c1da4806c9a0a57.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/stavanger/park.jpg": [
+    {
+      "file": "8973471ec79cffc4.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "d485db3349dd1444.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/stavanger/shore.jpg": [
+    {
+      "file": "de9716d0ef4ec8eb.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "16cc7d736b857301.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/stavanger/swords-close.jpg": [
+    {
+      "file": "e0d635e4a74f37ff.webp",
+      "width": 600,
+      "height": 1074
+    },
+    {
+      "file": "268489b079437b7d.webp",
+      "width": 720,
+      "height": 1289
+    }
+  ],
+  "img/stavanger/tents.jpg": [
+    {
+      "file": "f6c3f4858d9a816d.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "80b6c0bbfa187466.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/stavanger/walk.jpg": [
+    {
+      "file": "8edfa9163d6e5852.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "8b5051cf6e1d571e.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/taormina/cavea.jpg": [
+    {
+      "file": "9490ac6c6ad57862.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/taormina/cavea2.jpg": [
+    {
+      "file": "88491ad41daa2d5d.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/taormina/corso.jpg": [
+    {
+      "file": "6a15589b91f6ef01.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/taormina/cover.jpg": [
+    {
+      "file": "415770490049b172.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/taormina/etna.jpg": [
+    {
+      "file": "1d0f4ca3cec0312c.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/taormina/lights.jpg": [
+    {
+      "file": "b6cf3c6550a413d0.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/taormina/olive.jpg": [
+    {
+      "file": "47d2f2b14324f927.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/taormina/piazza.jpg": [
+    {
+      "file": "78449791ad10f902.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/taormina/portrait-evening.jpg": [
+    {
+      "file": "eb1716ac8be97344.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "94d1cf7dc43c8cd3.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/taormina/tree.jpg": [
+    {
+      "file": "beaf4ecbdf3f0189.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1043.jpg": [
+    {
+      "file": "2cacd1f72f9cec6c.webp",
+      "width": 720,
+      "height": 1084
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1047.jpg": [
+    {
+      "file": "fdf37e7e5573141e.webp",
+      "width": 720,
+      "height": 1084
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1085.jpg": [
+    {
+      "file": "14ad43e951448c87.webp",
+      "width": 720,
+      "height": 478
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1086.jpg": [
+    {
+      "file": "19f60e83d70bc414.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1090.jpg": [
+    {
+      "file": "cb10ef222f603c53.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1093.jpg": [
+    {
+      "file": "caea899b56399c14.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1108.jpg": [
+    {
+      "file": "9f6e196e526f2cb5.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1115.jpg": [
+    {
+      "file": "63cfb5489eb0752c.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1116.jpg": [
+    {
+      "file": "4a550befd2354083.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/terme-di-caracalla/IMG_1124.jpg": [
+    {
+      "file": "95717eee5b62b252.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist.jpg": [
+    {
+      "file": "e619345067ca128c.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "ab4c860cd57425b3.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/the-twist/bear.jpg": [
+    {
+      "file": "1859aa72d614b6d0.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "e4210d174415a823.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/the-twist/bridge.jpg": [
+    {
+      "file": "65ece119030624a7.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "e4b5a25174f234c7.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/cover.jpg": [
+    {
+      "file": "1b6f6ad65e51935d.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "e0c62862ae8bb261.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/entrance.jpg": [
+    {
+      "file": "820b2f5f571368c9.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "69a35eab39e1b5f0.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/entry-walk.jpg": [
+    {
+      "file": "aeb49a17bdf503fd.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "7278502829900dd0.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/the-twist/eyeball.jpg": [
+    {
+      "file": "70ab7b8f1741e034.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "2780cdb281f26ee1.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/the-twist/inside.jpg": [
+    {
+      "file": "019bf6837de37323.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "50fae763a9acea23.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/loop.jpg": [
+    {
+      "file": "72b79efa503dc32e.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "353e6e90e8768bc6.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/mill.jpg": [
+    {
+      "file": "96dfeb32369977fc.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "907c2644faca71de.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/the-twist/overhead.jpg": [
+    {
+      "file": "cd1ec3c0c7c0280a.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "ba9902916b5d3f95.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/point-of-view.jpg": [
+    {
+      "file": "a961c453edff327e.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "392ec45dfdeb4f15.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/projection.jpg": [
+    {
+      "file": "e65ae21fa07e1f3c.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "f2401c907218d676.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/the-twist/red-sculpture.jpg": [
+    {
+      "file": "c9e4bdeb2b070363.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "fb9de9d1441b9907.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/the-twist/restroom.jpg": [
+    {
+      "file": "da728881693a1bec.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "cdd7b36b2c18f663.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/river-view.jpg": [
+    {
+      "file": "170aa37b9feab5a4.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "a6299467b9bc3c0f.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/south.jpg": [
+    {
+      "file": "f51bc6e73f6d54df.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "4cd2220b39b37128.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/the-twist/twist.jpg": [
+    {
+      "file": "ae652604f5d6f3d8.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "2c25a415d42ec525.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/the-twist/window.jpg": [
+    {
+      "file": "a5c890ac98531f03.webp",
+      "width": 600,
+      "height": 1033
+    },
+    {
+      "file": "78b3eff038ee578d.webp",
+      "width": 720,
+      "height": 1240
+    }
+  ],
+  "img/tivoli.jpg": [
+    {
+      "file": "1431e59df0ffc529.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/tivoli/canopus.jpg": [
+    {
+      "file": "325d6e7378510cc7.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tivoli/caryatid.jpg": [
+    {
+      "file": "c3bdc8f2bc7ccb70.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tivoli/cover.jpg": [
+    {
+      "file": "938f2fa27ebe9089.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/tivoli/cypress.jpg": [
+    {
+      "file": "8af74930a8e7c1fa.webp",
+      "width": 720,
+      "height": 1277
+    }
+  ],
+  "img/tivoli/este-stairs.jpg": [
+    {
+      "file": "4970d8f6a031eb1c.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tivoli/grounds.jpg": [
+    {
+      "file": "cbe6848242e29e08.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/tivoli/loggia.jpg": [
+    {
+      "file": "e38df187544b6af0.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tivoli/maritime.jpg": [
+    {
+      "file": "b8428a235690b9e1.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tivoli/organ.jpg": [
+    {
+      "file": "40296cafefc11b2e.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tivoli/river-god.jpg": [
+    {
+      "file": "6212fb2a4317d932.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tohoku-luxun.jpg": [
+    {
+      "file": "88bf36feff61459f.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tohoku-luxun/02_card.jpg": [
+    {
+      "file": "b417600feba2396d.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tohoku-luxun/03_card_L.jpg": [
+    {
+      "file": "548f649500f14fb9.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/tohoku-luxun/03_card_R.jpg": [
+    {
+      "file": "8ab9955a960bae89.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/tohoku-luxun/04_card.jpg": [
+    {
+      "file": "fe277be5ad433d2c.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tohoku-luxun/cover-01.jpg": [
+    {
+      "file": "db1b8361d5557efd.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tohoku-luxun/cover-02.jpg": [
+    {
+      "file": "d19563c660c8ad32.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tohoku-luxun/cover-03.jpg": [
+    {
+      "file": "b599f2d6bda8f7d9.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-kaminarimon.jpg": [
+    {
+      "file": "9d5e2f73cb357313.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-kaminarimon/card1.jpg": [
+    {
+      "file": "7998aa68e361e3b7.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/tokyo-kaminarimon/card2.jpg": [
+    {
+      "file": "67c4c97e42193d81.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-kaminarimon/card4.jpg": [
+    {
+      "file": "17fc576c9a11713d.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/tokyo-kaminarimon/card5a.jpg": [
+    {
+      "file": "8dca98631bc19b53.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-kaminarimon/card5b.jpg": [
+    {
+      "file": "31961f560aab7563.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tokyo-kaminarimon/card6.jpg": [
+    {
+      "file": "00b1ff65c0a6b986.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-kaminarimon/card7.jpg": [
+    {
+      "file": "feecdea36e03b3fd.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tokyo-kaminarimon/cover.jpg": [
+    {
+      "file": "db80173013ac82de.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-kaminarimon/wide.jpg": [
+    {
+      "file": "7c7dd77c476508b6.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/tokyo-tower.jpg": [
+    {
+      "file": "cf56c704de1554da.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-tower/01.jpg": [
+    {
+      "file": "b71034bfcaaec6a0.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-tower/02.jpg": [
+    {
+      "file": "6a00e9d89784dfcc.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-tower/03.jpg": [
+    {
+      "file": "600e748cf0772fbb.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-tower/04.jpg": [
+    {
+      "file": "60026d669dbeb6fb.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-tower/05.jpg": [
+    {
+      "file": "713f4479ad898b99.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tokyo-tower/06.jpg": [
+    {
+      "file": "e3edb4b0aadfac09.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/tokyo-tower/07.jpg": [
+    {
+      "file": "82d16a310dd45158.webp",
+      "width": 720,
+      "height": 1552
+    }
+  ],
+  "img/towada.jpg": [
+    {
+      "file": "58a5489bee800f41.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/towada/01_card.jpg": [
+    {
+      "file": "34625d1fb52c7bd7.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/towada/02_card.jpg": [
+    {
+      "file": "2a9609fe475b31d5.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/towada/05_card.jpg": [
+    {
+      "file": "4dc9d4dd4c27a84b.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/towada/06_card_BR.jpg": [
+    {
+      "file": "b6a05500ba6b43ca.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/towada/06_card_TL.jpg": [
+    {
+      "file": "9092adbb00fd27cd.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/towada/07_card.jpg": [
+    {
+      "file": "162a7164fe92b67b.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/towada/09_card.jpg": [
+    {
+      "file": "5f357730b38a73e1.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/towada/09_card_alt.jpg": [
+    {
+      "file": "be1847f3fe89ef1a.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/towada/10_card.jpg": [
+    {
+      "file": "48de2c54fa360141.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/towada/cover-02.jpg": [
+    {
+      "file": "8d3d151a8a2024b4.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/trevarefabrikken/cafe.jpg": [
+    {
+      "file": "bd108000ed848d23.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "6b5cbfc4bf06b136.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/trevarefabrikken/coffee.jpg": [
+    {
+      "file": "f31d8f8c536d3616.webp",
+      "width": 600,
+      "height": 450
+    },
+    {
+      "file": "5d83abb9a6bc17a5.webp",
+      "width": 720,
+      "height": 540
+    }
+  ],
+  "img/trevarefabrikken/factory.jpg": [
+    {
+      "file": "a06624db6beb94c6.webp",
+      "width": 600,
+      "height": 843
+    },
+    {
+      "file": "2cd48063d5381c09.webp",
+      "width": 720,
+      "height": 1011
+    }
+  ],
+  "img/trevarefabrikken/rock-sauna.jpg": [
+    {
+      "file": "ad7c1fb78f71842c.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "fc05e0ba1bc04169.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/trevarefabrikken/sauna-window.jpg": [
+    {
+      "file": "a8077d1bba8842cc.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "f1017e23c9b5a48b.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/trevarefabrikken/sea-dip.jpg": [
+    {
+      "file": "b130b578f12f4c44.webp",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "file": "bd33c6674e2359fc.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/trevarefabrikken/sea-swim.jpg": [
+    {
+      "file": "7c62daf42c6230fc.webp",
+      "width": 600,
+      "height": 341
+    },
+    {
+      "file": "d2c5c67f0d9ab5a5.webp",
+      "width": 720,
+      "height": 409
+    }
+  ],
+  "img/trevarefabrikken/shore.jpg": [
+    {
+      "file": "b295bbb270403742.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "b4af3f7bd7006a2e.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/trevarefabrikken/terrace.jpg": [
+    {
+      "file": "13cb18dd74a499be.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "174b6f3d42150282.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/trevarefabrikken/waterline.jpg": [
+    {
+      "file": "ce5546c5207391a3.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "2223bd0be7ef3e0d.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under.jpg": [
+    {
+      "file": "6dcde0634f13517d.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "bb7aba0b97e925d2.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/under/aerial-overhead.jpg": [
+    {
+      "file": "43e208ce203b9d39.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "ba82a2389f5424b1.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/aerial.jpg": [
+    {
+      "file": "f7b75e8e934a94bd.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "d0f6fe7642e07e02.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/asparagus.jpg": [
+    {
+      "file": "fdd3e355bf37ddfa.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "92ef3b451411a681.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/bites.jpg": [
+    {
+      "file": "ae1d7ac525b52ec3.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "c52ffde3d864add6.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/bread.jpg": [
+    {
+      "file": "bff0976947c87ddb.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "4e7140186b8f9774.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/canape.jpg": [
+    {
+      "file": "0c4c721c7f34b944.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "56f93d1fbdd7b03c.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/coast.jpg": [
+    {
+      "file": "d7b093e56abdc3c5.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "5c809f0a9ab7a354.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/dessert.jpg": [
+    {
+      "file": "20868c8abbf93f75.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "1c06ea50ae768c45.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/dining-wide.jpg": [
+    {
+      "file": "6727ac6b2285e54b.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "2caba9e009c7ae7d.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/drink.jpg": [
+    {
+      "file": "a35d410718734c22.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "f1e082c225283149.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/under/entrance.jpg": [
+    {
+      "file": "364a1dda6307563f.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "7c8add8e99c96c83.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/fish.jpg": [
+    {
+      "file": "e67402bb8fa31868.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "47f8d4976dd912da.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/under/foyer.jpg": [
+    {
+      "file": "17d996eae4e2f925.webp",
+      "width": 600,
+      "height": 360
+    },
+    {
+      "file": "d8c1a61a187636f7.webp",
+      "width": 720,
+      "height": 432
+    }
+  ],
+  "img/under/main.jpg": [
+    {
+      "file": "5ea71c7a3aa7f274.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "5d2db6ce9dd7700f.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/under/menu.jpg": [
+    {
+      "file": "f854352e6e03aec2.webp",
+      "width": 600,
+      "height": 468
+    },
+    {
+      "file": "3b52ccd8e7ca7969.webp",
+      "width": 720,
+      "height": 562
+    }
+  ],
+  "img/under/night-aerial.jpg": [
+    {
+      "file": "2049cdd9901d6d60.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "5a6510318d5f8fe9.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/night.jpg": [
+    {
+      "file": "443a553267ee0076.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "fe502563dc30d5b4.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/plate.jpg": [
+    {
+      "file": "3ee1a31e9561604b.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "8e8e4aa319358778.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/under/seafood.jpg": [
+    {
+      "file": "07cb52bbeadee8cd.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "cc2014a2d3487d15.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/under/service.jpg": [
+    {
+      "file": "37ff89e0eb9c7374.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "50d351800bd5a656.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/under/table.jpg": [
+    {
+      "file": "7bf4e4f60c7edbb0.webp",
+      "width": 600,
+      "height": 800
+    },
+    {
+      "file": "66627af64c33c21f.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/under/waterline.jpg": [
+    {
+      "file": "b31fd89a28ba29a1.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "305f668b8c3e9dd7.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/under/window.jpg": [
+    {
+      "file": "be0a42a66864d3a4.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "ef9ad2e12d21905e.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/vienna-christmas.jpg": [
+    {
+      "file": "41f288afd71420e9.webp",
+      "width": 480,
+      "height": 852
+    },
+    {
+      "file": "ce2a409459f204b8.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/vienna-christmas/fiaker.jpg": [
+    {
+      "file": "a54c99c137390acf.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/vienna-christmas/landtmann.jpg": [
+    {
+      "file": "37c76d8322a966c6.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/vienna-christmas/maria-theresien.jpg": [
+    {
+      "file": "f07fefdd010609c6.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/vienna-christmas/mugs.jpg": [
+    {
+      "file": "3bbfb8ca1d402511.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/vienna-christmas/night.jpg": [
+    {
+      "file": "d5bd6a11a2afa0b0.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/vienna-christmas/ornaments.jpg": [
+    {
+      "file": "e93dde100cd911f8.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/vienna-christmas/soup.jpg": [
+    {
+      "file": "2c1da62b420b006a.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/vienna-christmas/stephansdom.jpg": [
+    {
+      "file": "59e11bddf89381db.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/volandstind.jpg": [
+    {
+      "file": "b35fa80b113a938b.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "20f1bd2d3f9122ee.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/volandstind/bridges.jpg": [
+    {
+      "file": "2d1c6e2a17f75020.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "b611c31f4bc1f8d1.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/volandstind/cloud.jpg": [
+    {
+      "file": "c377540d81b7bbbb.webp",
+      "width": 600,
+      "height": 451
+    },
+    {
+      "file": "e4c53af79b5a0b6e.webp",
+      "width": 720,
+      "height": 541
+    }
+  ],
+  "img/volandstind/cover.jpg": [
+    {
+      "file": "09df61b23c7f1170.webp",
+      "width": 600,
+      "height": 1067
+    },
+    {
+      "file": "239b090713ab59c6.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/volandstind/landscape.jpg": [
+    {
+      "file": "e2bfb2f4990fa7f6.webp",
+      "width": 600,
+      "height": 338
+    },
+    {
+      "file": "876c859350adf978.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/volandstind/tidal.jpg": [
+    {
+      "file": "9e6ed330a2efba13.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "f49007859bc4a9ce.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/volandstind/village.jpg": [
+    {
+      "file": "65d3bd99d83069bc.webp",
+      "width": 600,
+      "height": 1066
+    },
+    {
+      "file": "12d2f949717a2337.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/yamadera.jpg": [
+    {
+      "file": "d52bff2c48059741.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/yamadera/01.jpg": [
+    {
+      "file": "6e42b2d737b48c32.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/yamadera/02.jpg": [
+    {
+      "file": "618c4dd618408f2d.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/yamadera/03.jpg": [
+    {
+      "file": "5a61c3eec2283f9c.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/yamadera/04.jpg": [
+    {
+      "file": "d1ff8c8e387fce98.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/yamadera/05.jpg": [
+    {
+      "file": "122ff1f09bd0083a.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/yamadera/06.jpg": [
+    {
+      "file": "becfcd92107736c7.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/yamadera/07.jpg": [
+    {
+      "file": "2c99016e56817883.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/yamadera/08.jpg": [
+    {
+      "file": "25362f3e113216ac.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/yamadera/09.jpg": [
+    {
+      "file": "e5ebece386c2773a.webp",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "img/yamadera/cover3.jpg": [
+    {
+      "file": "b5b9a899c372127f.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ]
+}

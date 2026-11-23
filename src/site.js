@@ -104,16 +104,22 @@
   }
   var areas = $('areas');
   if (areas) {
+    var searchForm = document.querySelector('.story-search'), searchInput = $('story-query'), searchStatus = $('search-status'), selectedArea = '';
+    var normalizeSearch = function (s) { return s.normalize ? s.normalize('NFKC').toLocaleLowerCase().trim() : s.toLowerCase().trim(); };
     var chips = [].slice.call(areas.querySelectorAll('a')), secs = [].slice.call(document.querySelectorAll('.grpsec, .masonry .jp, #all > .card'));
     var pick = function (name, scroll) {
       if (name && !secs.some(function (x) { return (x.getAttribute('data-area') || '').split(' ').indexOf(name) !== -1; })) name = '';
       chips.forEach(function (c) { var on = c.getAttribute('data-area') === name; c.classList.toggle('on', on); if (on) { c.setAttribute('aria-current', 'true'); if (c.scrollIntoView && areas.scrollWidth > areas.clientWidth) areas.scrollLeft = c.offsetLeft - 20; } else c.removeAttribute('aria-current'); });
-      secs.forEach(function (x) { x.hidden = !!name && (x.getAttribute('data-area') || '').split(' ').indexOf(name) === -1; });
+      selectedArea = name;
+      var terms = searchInput ? normalizeSearch(searchInput.value).split(/\s+/).filter(Boolean) : [];
+      secs.forEach(function (x) { var text = normalizeSearch(x.getAttribute('data-search') || x.textContent || ''); x.hidden = (!!name && (x.getAttribute('data-area') || '').split(' ').indexOf(name) === -1) || !terms.every(function (term) { return text.indexOf(term) !== -1; }); });
+      if (searchStatus) searchStatus.textContent = secs.filter(function (x) { return !x.hidden; }).length + ' 篇文章';
       areas.classList.toggle('filtered', !!name);
       var vis = 0; secs.forEach(function (x) { if (x.parentNode && x.parentNode.id === 'all') { x.classList.toggle('big', !x.hidden && vis % 6 === 0); if (!x.hidden) vis++; } });
       areas.dispatchEvent(new Event('areachange'));
       if (scroll) areas.scrollIntoView({ block: 'start', behavior: 'smooth' });
     };
+    if (searchForm) { searchForm.hidden = false; searchForm.addEventListener('submit', function (e) { e.preventDefault(); }); searchInput.addEventListener('input', function () { pick(selectedArea, false); }); searchForm.addEventListener('reset', function () { setTimeout(function () { pick(selectedArea, false); }, 0); }); pick('', false); }
     var fromHash = function () { var h = decodeURIComponent(location.hash.slice(1)); return h === 'areas' ? '' : h; };
     areas.addEventListener('click', function (e) {
       var a = e.target.closest('a'); if (!a) return; e.preventDefault();
@@ -555,6 +561,7 @@
      舊版搬移 DOM 會讓 Lighthouse 每 3 秒算一次新的 LCP 與版面位移（手機 LCP 17 秒、CLS 0.2），transform 則都不算 */
   var track = $('track');
   if (track) {
+    track.classList.add('images-managed');
     var mobileHeroMode = matchMedia('(pointer:coarse)').matches || innerWidth <= 700;
     if (mobileHeroMode) { nativeHero(track); } else {
     var S = [].slice.call(track.children), N = S.length, v = 0, timer, heroReady = false, count = $('count');
@@ -636,6 +643,7 @@
   if (typeof IntersectionObserver !== 'undefined') {
     var observer = new IntersectionObserver(function (entries) { if (entries[0].isIntersecting) { loadSeriesNear(cur); observer.disconnect(); } }, { rootMargin: '300px' }); observer.observe(tk);
   } else loadSeriesNear(cur);
+  sec.dataset.imagesReady = 'true';
   var idx = function () { var w = tk.clientWidth; return w ? Math.max(0, Math.min(sl.length - 1, Math.round(tk.scrollLeft / w))) : 0; };
   var go = function (i) { i = (i + sl.length) % sl.length; loadSeriesNear(i); tk.scrollTo({ left: i * tk.clientWidth, behavior: 'smooth' }); };
   var sync = function () {

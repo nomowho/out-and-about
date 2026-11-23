@@ -629,12 +629,12 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
   #all>.card time,#all>.card .place{display:none}
   #all .ini{display:block;grid-area:i;font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-weight:700;font-size:44px;line-height:1;color:#fff;-webkit-text-stroke:1px #111;padding:0 10px 0 2px;margin:0}
   #all>.card .cat{grid-area:c;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;font-size:14px;letter-spacing:.02em;color:#111;align-self:start;padding-top:4px;margin:0}
-  #all>.card h3{grid-area:h;font-size:16px;line-height:1.6;font-weight:700;margin:10px 0 0}
+  #all>.card :is(h2,h3){grid-area:h;font-size:16px;line-height:1.6;font-weight:700;margin:10px 0 0}
   #all>.card.big{grid-template-columns:auto 1fr;grid-template-rows:auto auto 1fr;grid-template-areas:"f f" "i c" "i h";margin-bottom:40px}
   #all>.card.big figure{width:100vw;margin:0 0 22px calc(50% - 50vw);aspect-ratio:4/5!important}
   #all>.card.big .ini{font-size:84px;padding:0 18px 0 6px}
   #all>.card.big .cat{font-size:16px;padding-top:6px}
-  #all>.card.big h3{font-size:19px;line-height:1.55;margin-top:8px}
+  #all>.card.big :is(h2,h3){font-size:19px;line-height:1.55;margin-top:8px}
 }
 /* 首頁專題大圖：可左右滑所有系列專題（Nomo 11-19），圓形毛玻璃箭頭 */
 .tser-wrap{position:relative;margin-top:40px}
@@ -650,19 +650,19 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .tser-h,.tser-sub{transition:opacity .25s}
 @media(max-width:700px){.tser-wrap{margin-top:26px}.tser-arr{top:calc(100vw * 3 / 8);width:40px;height:40px}.tser-arr.l{left:14px}.tser-arr.r{right:14px}.tser-arr svg{width:18px;height:18px}}
 /* /stories/ 標題放大（Nomo 11-19） */
-#all>.card h3{font-size:30px;line-height:1.4;margin-top:10px;letter-spacing:.01em}
-#all>.card.land h3{font-size:34px}
-@media(min-width:701px) and (max-width:1000px){#all>.card h3,#all>.card.land h3{font-size:24px}}
-@media(max-width:700px){#all>.card h3{font-size:22px;line-height:1.45;margin-top:8px}#all>.card.big h3{font-size:30px;line-height:1.4}}
+#all>.card :is(h2,h3){font-size:30px;line-height:1.4;margin-top:10px;letter-spacing:.01em}
+#all>.card.land :is(h2,h3){font-size:34px}
+@media(min-width:701px) and (max-width:1000px){#all>.card :is(h2,h3),#all>.card.land :is(h2,h3){font-size:24px}}
+@media(max-width:700px){#all>.card :is(h2,h3){font-size:22px;line-height:1.45;margin-top:8px}#all>.card.big :is(h2,h3){font-size:30px;line-height:1.4}}
 /* 專題大圖箭頭內縮到內容區左右邊界（跟 PICK UP 同一條線，Nomo 11-19） */
 .tser-arr.l{left:max(24px,calc((100% - var(--w,1200px)) / 2 + 24px))}
 .tser-arr.r{right:max(24px,calc((100% - var(--w,1200px)) / 2 + 24px))}
 @media(max-width:700px){.tser-arr.l{left:20px}.tser-arr.r{right:20px}}
 /* /stories/ 標題縮小 30%（Nomo 11-19 第二次調整），並取消 balance：第一行先排滿，不留右側空白 */
-#all>.card h3{font-size:21px;line-height:1.5;text-wrap:wrap}
-#all>.card.land h3{font-size:24px}
-@media(min-width:701px) and (max-width:1000px){#all>.card h3,#all>.card.land h3{font-size:17px}}
-@media(max-width:700px){#all>.card h3{font-size:15px;line-height:1.6}#all>.card.big h3{font-size:21px;line-height:1.5}}
+#all>.card :is(h2,h3){font-size:21px;line-height:1.5;text-wrap:wrap}
+#all>.card.land :is(h2,h3){font-size:24px}
+@media(min-width:701px) and (max-width:1000px){#all>.card :is(h2,h3),#all>.card.land :is(h2,h3){font-size:17px}}
+@media(max-width:700px){#all>.card :is(h2,h3){font-size:15px;line-height:1.6}#all>.card.big :is(h2,h3){font-size:21px;line-height:1.5}}
 .list .card h3{text-wrap:wrap}
 /* 箭頭去白邊（Nomo 11-19） */
 .tser-arr{border:0;box-shadow:0 4px 18px rgba(0,0,0,.12)}
@@ -692,12 +692,12 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
   #all>.card time,#all>.card .place{display:none}
   #all .ini{display:block;grid-area:i;font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-weight:700;font-size:46px;line-height:.9;color:#fff;-webkit-text-stroke:1px #111;padding:0 10px 0 2px;margin:0}
   #all>.card .cat{grid-area:c;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;font-size:17px;letter-spacing:.01em;color:#111;padding-top:2px;margin:0}
-  #all>.card h3,#all>.card.land h3{grid-area:h;font-size:20px;line-height:1.75;font-weight:700;letter-spacing:.04em;margin:12px 0 0;text-wrap:wrap}
+  #all>.card :is(h2,h3),#all>.card.land :is(h2,h3){grid-area:h;font-size:20px;line-height:1.75;font-weight:700;letter-spacing:.04em;margin:12px 0 0;text-wrap:wrap}
 }
-@media(min-width:1001px){#all{grid-template-columns:repeat(4,1fr);gap:64px 36px}#all>.card h3,#all>.card.land h3{font-size:21px}}
+@media(min-width:1001px){#all{grid-template-columns:repeat(4,1fr);gap:64px 36px}#all>.card :is(h2,h3),#all>.card.land :is(h2,h3){font-size:21px}}
 
 /* 手機統一小圖（Nomo 11-20）：橫式卡片標題也跟其他卡同字級 */
-@media(max-width:700px){#all>.card.land h3{font-size:15px;line-height:1.6}}
+@media(max-width:700px){#all>.card.land :is(h2,h3){font-size:15px;line-height:1.6}}
 
 /* 專題輪播：清晰白底按鈕與照片下方頁碼 */
 .tser-arr{width:64px;height:64px;background:#fff;color:#111;border:0;box-shadow:0 2px 10px rgba(0,0,0,.16);-webkit-backdrop-filter:none;backdrop-filter:none;transition:background .2s,box-shadow .2s,transform .2s}
@@ -757,3 +757,14 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .hl-more{color:var(--ink);text-decoration:underline;text-decoration-color:#C8F500;text-decoration-thickness:2px;text-underline-offset:4px}
 .hl-more svg{stroke:var(--ink)}
 
+
+/* Progressive enhancement: images and native horizontal reading work without JavaScript. */
+@media(max-width:700px),(pointer:coarse){.cty-wrap,.headlines{overflow-x:auto;overflow-y:hidden;touch-action:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.cty-track,.hl-track{transform:none}.hl-track.run{animation:none!important}}
+noscript img{display:block;width:100%;height:100%;object-fit:cover}
+.story-search{margin:28px 0 36px;max-width:620px}.story-search label{font-size:20px;font-weight:700;display:block;margin-bottom:12px}.story-search>div{display:flex;border-bottom:2px solid #111;gap:12px}.story-search input{font:inherit;border:0;background:transparent;padding:12px 0;width:100%;min-width:0;outline-offset:4px}.story-search button{font:inherit;border:0;background:none;white-space:nowrap;padding:12px;cursor:pointer}.story-search button:hover{background:#c8f500}.story-search p{font-size:13px;color:#595959;margin-top:10px}
+/* Small text needs sufficient contrast on white; footer keeps its own dark-background palette. */
+.ahead .logo small,.head .logo small{color:#767676}.body figcaption,.covercap,.split figcaption,.by,.meta time,.toc li::before{color:#666}
+.series-guide{max-width:1170px;margin:0 auto 56px;padding:30px 24px;border-top:1px solid #111}.series-guide>h2{font-size:26px;margin-bottom:24px}.guide-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}.guide-columns h3{font-size:19px;margin-bottom:12px}.guide-columns p{font-size:15px;line-height:1.9;color:#333}.guide-columns ul{padding-left:1.2em;margin-top:14px}.guide-columns li{margin:8px 0}.series-guide a{color:#111;text-decoration:underline;text-decoration-color:#c8f500;text-decoration-thickness:3px;text-underline-offset:.2em}.guide-note{font-size:13px;color:#595959;margin-top:24px}@media(max-width:700px){.guide-columns{grid-template-columns:1fr;gap:28px}.series-guide{margin-bottom:20px}.series-guide>h2{font-size:23px}}
+
+figure>picture{display:contents}.pair .two>picture{display:contents}
+.tser.image-fallback .toh-one{visibility:visible}

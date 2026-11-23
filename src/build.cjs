@@ -19,6 +19,7 @@ const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
 // 系列專題：region／cat 型的系列自動收錄（新到舊）；沒有照片的系列（img 或 wide 為空）首頁先不放
 for (const s of SERIES) if (!s.ids) s.ids = postsNew.filter(p => (s.region && p.region === s.region) || (s.cat && hasCat(p, s.cat))).map(p => p.id);
+const SERIES_GUIDES = JSON.parse(read('series-guides.json'));
 const SERIES_SHOWN = SERIES.filter(s => s.img && s.wide);
 // 已刪除的系列：舊網址轉到新系列（Nomo 11-20），避免 Google 已收錄的連結變 404
 const SERIES_MOVED = { 'europe-architecture': 'architecture-walk', 'architecture-museum': 'architecture-walk' };
@@ -53,7 +54,11 @@ const iso = d => d.replace(/\./g, '-');
 const fixLinks = h => h.replace(/post\.html#([\w-]+)/g, '/stories/$1/').replace(/news\.html#([\w-]+)/g, '/news/$1/');
 const cut = (s, n) => { s = strip(s); if (s.length <= n) return s; const t = s.slice(0, n); const i = Math.max(t.lastIndexOf('。'), t.lastIndexOf('；')); return i > n * 0.5 ? t.slice(0, i + 1) : t.slice(0, n - 1) + '…'; };
 const url = { post: id => `/stories/${id}/`, news: id => `/news/${id}/`, cat: k => `/category/${k.toLowerCase()}/`, series: id => `/series/${id}/`, dest: r => `/destinations/${r.toLowerCase()}/` };
-const BUILD_DATE = new Date().toISOString().slice(0, 10);
+const BUILD_DATE = process.env.SITE_BUILD_DATE || new Date().toLocaleDateString('sv-SE', {timeZone:'Asia/Taipei'});
+const contentDates = require('./content-dates.cjs');
+const datesFile = path.join(SRC, 'content-dates.json');
+const dates = fs.existsSync(datesFile) ? JSON.parse(read('content-dates.json')) : {};
+const pageDates = new Map();
 
 /* 圖片尺寸（讀 JPEG 檔頭），給 width/height 與 srcset 用 */
 const dimCache = {};
@@ -71,14 +76,17 @@ function dims(rel) {
   } catch (e) {}
   return dimCache[rel] = out;
 }
+const MOBILE_MEDIA = JSON.parse(read('mobile-images/manifest.json'));
 const missing = [];
-function img(src, alt, { lazy = true, sizes = '100vw', cls = '', small = false } = {}) {
+function img(src, alt, { lazy = true, sizes = '100vw', cls = '', small = false, mobile = true } = {}) {
   const rel = src.replace(/^\//, ''), d = dims(rel), mrel = rel.replace(/\.[^.]+$/, '.m.jpg'), m = dims(mrel), srel = rel.replace(/\.[^.]+$/, '.s.jpg'), sm = small ? dims(srel) : null;
   if (!d) missing.push(rel);
   const lrel = rel.replace(/.[^.]+$/, '.l.jpg'), lg = dims(lrel);
   const parts = [sm && d && sm.w < d.w && (!m || sm.w < m.w) ? `/${srel} ${sm.w}w` : '', d && m && m.w < d.w ? `/${mrel} ${m.w}w` : '', lg && d && lg.w < d.w && (!m || lg.w > m.w) ? `/${lrel} ${lg.w}w` : '', d ? `/${rel} ${d.w}w` : ''].filter(Boolean);   // small＝另加 600px 縮圖（Photo Journal 瀑布流用）
   const srcset = parts.length > 1 ? ` srcset="${parts.join(', ')}" sizes="${sizes}"` : '';
-  return `<img src="/${srcset && m ? mrel : rel}"${srcset} alt="${esc(alt || '')}"${d ? ` width="${d.w}" height="${d.h}"` : ''}${lazy ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async"${cls ? ` class="${cls}"` : ''}>`;
+  const image = `<img src="/${srcset && m ? mrel : rel}"${srcset} alt="${esc(alt || '')}"${d ? ` width="${d.w}" height="${d.h}"` : ''}${lazy ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async"${cls ? ` class="${cls}"` : ''}>`;
+  const variants = mobile && MOBILE_MEDIA[rel];
+  return variants ? `<picture><source media="(max-width:700px)" type="image/webp" srcset="${variants.map(v => '/assets/mobile-images/' + v.file + ' ' + v.width + 'w').join(', ')}" sizes="${sizes}">${image}</picture>` : image;
 }
 const CARD_SIZES = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 50vw, 380px';   // 手機卡片左右各 20px 留白，標準確才會選 720px 縮圖（PageSpeed 11-18）
 const thumb = (p, lazy = true) => p.photo === false
@@ -96,6 +104,9 @@ function homeMobileSource(key) {
   if (!entry) throw new Error('Missing homepage image: ' + key);
   return '<source media="(max-width:700px)" type="image/webp" srcset="' + entry.variants.map(v => '/assets/home-images/' + v.file + ' ' + v.width + 'w').join(', ') + '" sizes="84vw">';
 }
+fs.mkdirSync(path.join(ROOT, 'assets', 'mobile-images'), {recursive:true});
+for (const variants of Object.values(MOBILE_MEDIA)) for (const v of variants) fs.copyFileSync(path.join(SRC,'mobile-images',v.file), path.join(ROOT,'assets','mobile-images',v.file));
+for (const file of ['analytics.js','image-fallback.js']) fs.copyFileSync(path.join(SRC,file),path.join(ROOT,'assets',file));
 const css = {};
 for (const t of ['home', 'post', 'news', 'category']) {
   css[t] = read(`templates/${t}.html`).match(/<style>([\s\S]*?)<\/style>/)[1].trim();
@@ -153,7 +164,7 @@ function page({ file, title, desc, metaDescription = desc, canonical, type = 'we
 <meta name="twitter:image" content="${image}">
 <meta name="theme-color" content="#ffffff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <link rel="icon" href="/assets/browser-logo.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="/assets/browser-logo.png">
 ${extraHead}<link rel="preload" href="/assets/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -195,12 +206,17 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
   <p>© 2026 Nomo · ${footNote}</p>
 </footer>
 <script src="/assets/site.js?v=${assetVersion('site.js')}" defer></script>
+${canonical === '/' ? `<script src="/assets/image-fallback.js?v=${assetVersion('image-fallback.js')}" defer></script>` : ''}
+${CFG.ga4 ? `<script src="/assets/analytics.js?v=${assetVersion('analytics.js')}" data-measurement="${esc(CFG.ga4)}" defer></script>` : ''}
 ${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${CFG.cfBeacon}"}'></script>` : ''}
 </body>
 </html>
 `;
   const out = path.join(ROOT, file);
   fs.mkdirSync(path.dirname(out), { recursive: true });
+  const fallback = dates[canonical] ? dates[canonical].date : BUILD_DATE;
+  dates[canonical] = contentDates.record(dates[canonical], contentDates.signature(html), fallback, BUILD_DATE);
+  if (!/^\/(stories|news)\/[^/]+\/$/.test(canonical) || canonical === '/news/archive/') pageDates.set(canonical, dates[canonical].date);
   fs.writeFileSync(out, html);
   return html;
 }
@@ -309,7 +325,14 @@ function placeLd(p, d) {
   return o;
 }
 const authorBox = hasSrc => `<aside class="author" aria-label="關於作者"><b>文・攝影｜Nomo</b><p>旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」。文章由親自走訪的紀錄改寫${hasSrc ? '，年代、數字與開放資訊的出處列在上方「資料來源」' : ''}。</p><a href="/about/">關於 Out and About ›</a></aside>`;
-const modOf = (p, d) => d.updated || (iso(p.date) > WEB_LAUNCH ? iso(p.date) : WEB_LAUNCH);
+const modOf = (p, d) => {
+  const key = 'article:' + p.id;
+  const fallback = d.updated || (iso(p.date) > WEB_LAUNCH ? iso(p.date) : WEB_LAUNCH);
+  const hash = crypto.createHash('sha256').update(JSON.stringify([p.title,p.cat,p.extraCats,d])).digest('hex');
+  dates[key] = contentDates.record(dates[key], hash, fallback, BUILD_DATE);
+  // An explicit editorial date may be more recent than the existing registry.
+  return dates[key].date > fallback ? dates[key].date : fallback;
+};
 
 for (const p of POSTS) {
   const d = POST_DETAIL[p.id];
@@ -366,6 +389,11 @@ for (const p of POSTS) {
 
 /* ── 外電頁 ── */
 newsAll.forEach(n => {
+  const key = 'news:' + n.id;
+  const hash = crypto.createHash('sha256').update(JSON.stringify(n)).digest('hex');
+  dates[key] = contentDates.record(dates[key], hash, n.updated || iso(n.date), BUILD_DATE);
+  const modified = dates[key].date;
+
   const i = newsAll.indexOf(n);
   const others = [...newsAll.slice(i + 1), ...newsAll.slice(0, i)].slice(0, 3);
   const newsRegion = REGION_ORDER.find(r => (n.place + ' ' + n.region).includes(REGION_ZH[r]) || (n.place + ' ' + n.region).includes(r));
@@ -402,7 +430,7 @@ newsAll.forEach(n => {
     </div></section>`;
   const ld = [
     { '@context': 'https://schema.org', '@type': 'NewsArticle', '@id': abs(u) + '#article', headline: cut(n.title, 110), description: desc, inLanguage: 'zh-Hant-TW',
-      datePublished: iso(n.date), dateModified: iso(n.date), image: [ogImg(null)], mainEntityOfPage: { '@type': 'WebPage', '@id': abs(u) },
+      datePublished: iso(n.date), dateModified: modified, image: [ogImg(null)], mainEntityOfPage: { '@type': 'WebPage', '@id': abs(u) },
       author: PERSON, publisher: ORG, contentLocation: { '@type': 'Place', name: n.place },
       isBasedOn: { '@type': 'NewsArticle', headline: n.srcTitle, url: n.url, publisher: { '@type': 'Organization', name: n.src } } },
     crumbLd([['Out and About', '/'], ['NEWS', '/news/'], [n.title, u]])
@@ -410,11 +438,11 @@ newsAll.forEach(n => {
   if (n.faq && n.faq.length) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: n.faq.map(([q, a]) => ({ '@type': 'Question', name: strip(q), acceptedAnswer: { '@type': 'Answer', text: strip(a) } })) });
   page({ file: `news/${n.id}/index.html`, title: `${n.title}｜Out and About`, desc, canonical: u, type: 'article', image: ogImg(null), style: 'news', nav: 'NEWS', main, ld, progress: true,
     footNote: '世界旅遊新訊編譯自國際媒體，著作權屬原刊登媒體', extraHead: `<meta property="article:published_time" content="${iso(n.date)}">\n` });
-  sitemap.push({ loc: u, lastmod: iso(n.date), images: [] });
+  sitemap.push({ loc: u, lastmod: modified, images: [] });
 });
 
 /* ── 列表頁（分類／系列／目的地） ── */
-function listPage({ file, u, label, h1, desc, posts, lead, leadImage, nav, crumb, groups, othersTitle, othersZh, others }) {
+function listPage({ file, u, label, h1, desc, posts, lead, leadImage, nav, crumb, groups, guide, othersTitle, othersZh, others }) {
   const grid = list => `<div class="grid">${list.map(p => postCard(p, { land: true, cardImage: u.startsWith('/category/') && POST_DETAIL[p.id] && (POST_DETAIL[p.id].cardsByCategory || {})[nav] })).join('')}</div>`;
   const main = `
     <section class="top">${lead ? `<div class="bg" style="background-image:url(/img/${lead.id}.m.jpg)"></div>` : ''}<div class="box">
@@ -424,6 +452,7 @@ function listPage({ file, u, label, h1, desc, posts, lead, leadImage, nav, crumb
         ${lead ? `<a href="${url.post(lead.id)}" aria-label="${esc(lead.title)}"><figure>${img(leadImage || `img/${lead.id}.jpg`, lead.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 600px' })}</figure></a>` : ''}
       </div>
     </div></section>
+${guide ? `<section class="series-guide" aria-label="旅行規劃"><h2>這趟旅行，怎麼安排？</h2><div class="guide-columns">${guide.map(([title, text, ids]) => `<div><h3>${esc(title)}</h3><p>${esc(text)}</p><ul>${ids.map(id => { if (!byId[id]) throw new Error('Unknown guide article: ' + id); return `<li><a href="${url.post(id)}">${esc(byId[id].zh)}</a></li>`; }).join('')}</ul></div>`).join('')}</div><p class="guide-note">天數與參觀時間為規劃建議，不含跨區交通；各景點的開放與預約資訊列在文章中。</p></section>` : ''}
     <section class="list box">${groups ? `<nav class="areas" id="areas" aria-label="依地區篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${posts.length}</small></a>${groups.map(([g, list]) => `<a href="#${encodeURIComponent(g)}" data-area="${esc(g)}">${g}<small>${list.length}</small></a>`).join('')}</nav>` + groups.map(([g, list]) => `<div class="grpsec" data-area="${esc(g)}"><h2 class="grp" id="${esc(g)}">${g}<small>${list.length}</small></h2>${grid(list)}</div>`).join('') : grid(posts)}</section>
     <section class="others box">
       <div class="sh"><h2>${othersTitle}</h2><span>${othersZh}</span></div>
@@ -445,7 +474,7 @@ for (const [k, c] of Object.entries(CATS)) {
 }
 for (const s of SERIES) {
   const posts = s.ids.map(i => byId[i]).filter(Boolean);
-  listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, posts, lead: byId[s.img] || leadOf(posts), leadImage: s.pageImage, nav: '', crumb: 'SERIES',
+  listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, guide: SERIES_GUIDES[s.id], posts, lead: byId[s.img] || leadOf(posts), leadImage: s.pageImage, nav: '', crumb: 'SERIES',
     othersTitle: 'More Series', othersZh: '其他系列專題',
     others: SERIES_SHOWN.filter(x => x.id !== s.id).map(x => ({ u: url.series(x.id), t: x.t, n: x.ids.length, img: x.card || (fs.existsSync(path.join(ROOT, 'img', x.img + '.jpg')) ? `img/${x.img}.jpg` : null) })) });
 }
@@ -535,7 +564,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const heroSizes = detail.heroImage
       ? `(max-width:700px) ${mobileWidth}vw, min(${(66 * desktopRatio).toFixed(2)}vh, ${Math.ceil(600 * desktopRatio)}px)`
       : '(max-width:700px) 84vw, 480px';
-    let photo = img(src, p.zh, { lazy: false, small: true, sizes: heroSizes });
+    let photo = img(src, p.zh, { lazy: false, small: true, mobile: false, sizes: heroSizes });
     const sources = [homeMobileSource('hero-' + p.id)];
     if (detail.heroMobileImage) {
       const mobile = detail.heroMobileImage, medium = mobile.replace(/\.[^.]+$/, '.m.jpg'), small = mobile.replace(/\.[^.]+$/, '.s.jpg');
@@ -547,7 +576,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       .map(f => `/${f.replace(/\.jpg$/, '.webp')} ${dims(f).w}w`).join(', ');
     if (webp) sources.push(`<source type="image/webp" srcset="${webp}" sizes="${heroSizes}">`);
     if (sources.length) photo = `<picture>${sources.join('')}${photo}</picture>`;
-    return `<a class="slide" href="${url.post(p.id)}" data-i="${i}"><figure>${i === 0 ? photo : photo.replace(' fetchpriority="high"', '').replace(/ (src|srcset)="/g, ' data-$1="')}</figure><div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div></a>`;
+    return `<a class="slide" href="${url.post(p.id)}" data-i="${i}"><figure>${i === 0 ? photo : photo.replace(' fetchpriority="high"', '').replace(/ (src|srcset)="/g, ' data-$1="')}${i ? `<noscript>${photo.replace(' fetchpriority="high"', ' loading="lazy"')}</noscript>` : ''}</figure><div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div></a>`;
   }).join('');
   const main = `
 <h1 class="vh">我出去一下就回來｜Out and About：Nomo（nomowho）的旅行雜誌</h1>
@@ -587,7 +616,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <p class="sub tser-sub">${esc(SERIES_SHOWN[0].tag)}</p>
   <div class="tser-wrap">
     <div class="tser-track" tabindex="0" aria-label="系列專題，左右滑動">${SERIES_SHOWN.map((S, si) => `<a class="toh-one" href="${url.series(S.id)}" data-en="${esc(S.en)}" data-tag="${esc(S.tag)}" aria-label="${esc(S.t)} 系列專題">
-      <figure>${('<picture>' + homeMobileSource('series-' + S.id).replace('sizes="84vw"', 'sizes="100vw"') + img(S.wide, S.t, { small: true, sizes: '100vw', lazy: true }).replace('<img ', `<img style="object-position:${S.widePos}" `) + '</picture>').replace(/ (src|srcset)="/g, ' data-$1="')}</figure>
+      <figure>${('<picture>' + homeMobileSource('series-' + S.id).replace('sizes="84vw"', 'sizes="100vw"') + img(S.wide, S.t, { mobile: false, small: true, sizes: '100vw', lazy: true }).replace('<img ', `<img style="object-position:${S.widePos}" `) + '</picture>').replace(/ (src|srcset)="/g, ' data-$1="')}<noscript>${img(S.wide, S.t, { sizes: '100vw' })}</noscript></figure>
       <div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span><span class="tser-count" aria-label="第 ${si + 1} 個專題，共 ${SERIES_SHOWN.length} 個">${String(si + 1).padStart(2, '0')}<i>/</i>${String(SERIES_SHOWN.length).padStart(2, '0')}</span></div><h3>${esc(S.t)}</h3><div class="place">${esc(S.d)}</div></div>
     </a>`).join('')}</div>
     <button class="tser-arr l" type="button" aria-label="上一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="tser-arr r" type="button" aria-label="下一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -656,7 +685,9 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <h2 id="policy">編輯原則</h2>
       <p>STORIES 的文章、照片都來自我自己走過的地方。</p>
       <p>年代、數字、開放時間與票價，會對照官方網站或可靠的資料來源；有查證的文章，出處列在文末的「資料來源」，並標上查閱日期。頁首的「更新」日期，是這篇文章最後一次改動內容的時間。</p>
-      <p>NEWS 世界旅遊新訊是編譯自國際媒體的報導，每一篇都標明原始媒體並附上原文連結，著作權屬於原刊登媒體。這個單元只保留最新 10 篇。</p>
+      <p>NEWS 世界旅遊新訊是編譯自國際媒體的報導，每一篇都標明原始媒體並附上原文連結，著作權屬於原刊登媒體。首頁呈現最新 10 篇，較早的報導仍可在<a href="/news/archive/">新聞存檔</a>閱讀。</p>
+      <h2 id="analytics">網站使用分析</h2>
+      <p>本站使用 Google Analytics 了解頁面瀏覽、文章捲動進度、推薦文章曝光與點擊，以及前往 Instagram 的點擊。分析不傳送站內搜尋框文字，網址會移除查詢參數；不啟用廣告個人化。若瀏覽器啟用「不要追蹤」或 Global Privacy Control，本站不載入 Google Analytics。Google 如何處理資料，可參閱<a href="https://policies.google.com/privacy" rel="noopener" target="_blank">隱私權政策</a>。</p>
       <h2 id="contact">更正與聯絡</h2>
       <p>如果您發現哪裡寫錯了，或開放資訊已經改變，歡迎到 Instagram <a href="https://www.instagram.com/nomowho/" rel="me noopener">@nomowho</a> 私訊告訴我，確認後會更正並更新日期。</p>
       <p class="pull">旅行終究會結束，但好奇心可以一直在路上。</p>
@@ -674,7 +705,8 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const cats = Object.keys(CATS).filter(k => postsNew.some(p => hasCat(p, k)));
     const cards = postsNew.map((p, i) => (isLand2(p)
       ? postCard(p, { cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' })
-      : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-area="${[p.cat, ...(p.extraCats || [])].map(k => k.toLowerCase()).join(' ')}" class="card`)
+      : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-search="${esc([p.title, p.zh, p.area, p.region, REGION_ZH[p.region], strip(POST_DETAIL[p.id].dek)].join(' '))}" data-area="${[p.cat, ...(p.extraCats || [])].map(k => k.toLowerCase()).join(' ')}" class="card`)
+      .replace(/<h3>/g, '<h2>').replace(/<\/h3>/g, '</h2>')
       .replace('<div class="meta"><span class="cat">', `<div class="meta"><b class="ini" aria-hidden="true">${p.cat[0]}</b><span class="cat">`)
       .replace(/(max-width:(?:560|700)px) calc(100vw - 40px)/, '(max-width:700px) 45vw') /* 手機統一小圖（Nomo 11-20），不再每 6 篇一張大圖 */).join('');
     const main = `
@@ -685,6 +717,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     </div></section>
     <section class="list box">
       <nav class="areas" id="areas" aria-label="依主題篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${POSTS.length}</small></a>${cats.map(k => `<a href="#${k.toLowerCase()}" data-area="${k.toLowerCase()}">${k}<small>${POSTS.filter(p => hasCat(p, k)).length}</small></a>`).join('')}</nav>
+      <form class="story-search" role="search" hidden><label for="story-query">找一篇旅行</label><div><input id="story-query" type="search" autocomplete="off" placeholder="地點、國家、建築或關鍵字"><button type="reset">清除</button></div><p id="search-status" role="status" aria-live="polite"></p></form>
       <div class="grid allgrid" id="all">${cards}</div>
     </section>`;
     const desc = `Out and About 全部 ${POSTS.length} 篇旅行故事：建築、藝術、歷史、自然、美食與旅行指南，遍及${regions.map(r => REGION_ZH[r]).join('、')}。`;
@@ -789,9 +822,10 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 const xml = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${sitemap.map(s => `<url><loc>${abs(s.loc)}</loc><lastmod>${s.lastmod}</lastmod>${s.images.slice(0, 20).map(i => `<image:image><image:loc>${xml(i)}</image:loc></image:image>`).join('')}</url>`).join('\n')}
+${sitemap.map(s => `<url><loc>${abs(s.loc)}</loc><lastmod>${pageDates.get(s.loc) || s.lastmod}</lastmod>${s.images.slice(0, 20).map(i => `<image:image><image:loc>${xml(i)}</image:loc></image:image>`).join('')}</url>`).join('\n')}
 </urlset>
 `);
+fs.writeFileSync(datesFile, JSON.stringify(dates, null, 2) + '\n');
 const BOTS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot', 'anthropic-ai', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Amazonbot', 'CCBot', 'Bytespider', 'meta-externalagent', 'DuckAssistBot'];
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `# Out and About：歡迎搜尋引擎與 AI 助理讀取、引用（請附出處）
 User-agent: *
