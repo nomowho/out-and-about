@@ -87,15 +87,24 @@ const thumb = (p, lazy = true) => p.photo === false
 const ogImg = p => abs(p && p.photo !== false ? `/img/${p.id}.jpg` : `/img/${TOP7[0].id}.jpg`);
 
 /* ── 共用版型 ── */
+const compactCSS = require('./compact-css.cjs');
+const HOME_MEDIA = JSON.parse(read('home-images/manifest.json'));
+fs.mkdirSync(path.join(ROOT, 'assets', 'home-images'), { recursive: true });
+for (const entry of Object.values(HOME_MEDIA)) for (const v of entry.variants) fs.copyFileSync(path.join(SRC, 'home-images', v.file), path.join(ROOT, 'assets', 'home-images', v.file));
+function homeMobileSource(key) {
+  const entry = HOME_MEDIA[key];
+  if (!entry) throw new Error('Missing homepage image: ' + key);
+  return '<source media="(max-width:700px)" type="image/webp" srcset="' + entry.variants.map(v => '/assets/home-images/' + v.file + ' ' + v.width + 'w').join(', ') + '" sizes="84vw">';
+}
 const css = {};
 for (const t of ['home', 'post', 'news', 'category']) {
   css[t] = read(`templates/${t}.html`).match(/<style>([\s\S]*?)<\/style>/)[1].trim();
-  fs.writeFileSync(path.join(ROOT, 'assets', `${t}.css`), css[t] + '\n');
+  fs.writeFileSync(path.join(ROOT, 'assets', `${t}.css`), compactCSS(css[t]) + '\n');
 }
 fs.copyFileSync(path.join(SRC, 'brand', 'nomo-logo.jpg'), path.join(ROOT, 'assets', 'nomo-logo.jpg'));
 fs.mkdirSync(path.join(ROOT, 'assets', 'fonts'), { recursive: true });
 for (const f of fs.readdirSync(path.join(SRC, 'fonts')).filter(f => /\.(woff2|txt)$/.test(f))) fs.copyFileSync(path.join(SRC, 'fonts', f), path.join(ROOT, 'assets', 'fonts', f));
-fs.writeFileSync(path.join(ROOT, 'assets', 'common.css'), read('fonts/latin.css') + '\n' + read('common.css'));
+fs.writeFileSync(path.join(ROOT, 'assets', 'common.css'), compactCSS(read('fonts/latin.css') + '\n' + read('common.css')) + '\n');
 fs.copyFileSync(path.join(SRC, 'site.js'), path.join(ROOT, 'assets', 'site.js'));
 const assetVersions = new Map();
 const assetVersion = name => {
@@ -525,7 +534,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       ? `(max-width:700px) ${mobileWidth}vw, min(${(66 * desktopRatio).toFixed(2)}vh, ${Math.ceil(600 * desktopRatio)}px)`
       : '(max-width:700px) 84vw, 480px';
     let photo = img(src, p.zh, { lazy: false, small: true, sizes: heroSizes });
-    const sources = [];
+    const sources = [homeMobileSource('hero-' + p.id)];
     if (detail.heroMobileImage) {
       const mobile = detail.heroMobileImage, medium = mobile.replace(/\.[^.]+$/, '.m.jpg'), small = mobile.replace(/\.[^.]+$/, '.s.jpg');
       const set = [small, medium, mobile].filter(f => dims(f)).map(f => `/${f} ${dims(f).w}w`).join(', ');
@@ -576,7 +585,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <p class="sub tser-sub">${esc(SERIES_SHOWN[0].tag)}</p>
   <div class="tser-wrap">
     <div class="tser-track" tabindex="0" aria-label="系列專題，左右滑動">${SERIES_SHOWN.map((S, si) => `<a class="toh-one" href="${url.series(S.id)}" data-en="${esc(S.en)}" data-tag="${esc(S.tag)}" aria-label="${esc(S.t)} 系列專題">
-      <figure>${img(S.wide, S.t, { small: true, sizes: '100vw', lazy: si > 0 }).replace('<img ', `<img style="object-position:${S.widePos}" `)}</figure>
+      <figure>${('<picture>' + homeMobileSource('series-' + S.id).replace('sizes="84vw"', 'sizes="100vw"') + img(S.wide, S.t, { small: true, sizes: '100vw', lazy: true }).replace('<img ', `<img style="object-position:${S.widePos}" `) + '</picture>').replace(/ (src|srcset)="/g, ' data-$1="')}</figure>
       <div class="toh-cap"><div class="meta"><span class="cat">SERIES</span><span>${S.ids.length} STORIES</span><span class="tser-count" aria-label="第 ${si + 1} 個專題，共 ${SERIES_SHOWN.length} 個">${String(si + 1).padStart(2, '0')}<i>/</i>${String(SERIES_SHOWN.length).padStart(2, '0')}</span></div><h3>${esc(S.t)}</h3><div class="place">${esc(S.d)}</div></div>
     </a>`).join('')}</div>
     <button class="tser-arr l" type="button" aria-label="上一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="tser-arr r" type="button" aria-label="下一個專題"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>

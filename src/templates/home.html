@@ -47,7 +47,7 @@ h1,h2,h3,h4{text-wrap:balance}
 .slide{flex:0 0 auto;width:var(--sw);cursor:pointer}
 .hero{--sh:min(66vh,600px);--sw:calc(var(--sh) * .8)}
 .slide figure{height:var(--sh);overflow:hidden;background:#eee}
-.slide img{transition:transform 1.2s}
+.hero-ready .slide img{transition:transform 1.2s}
 .slide.on img{transform:scale(1.02)}
 .slide .cap{padding:16px 2px 0;transition:opacity .5s}
 .slide:not(.on) .cap{opacity:1}
@@ -149,9 +149,9 @@ figure:has(.ph){position:relative}
 .dest li span{font-family:'Montserrat',sans-serif;font-size:12px;color:var(--gray)}
 
 footer{background:var(--ink);color:#fff;padding:56px 24px 40px;text-align:center}
-footer .logo small{color:#aaa}
+footer .logo small{color:#707070}
 footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;margin:30px 0 26px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500}
-footer p{font-size:11px;color:#999;font-family:'Montserrat',sans-serif}
+footer p{font-size:11px;color:#707070;font-family:'Montserrat',sans-serif}
 
 @media(max-width:1000px){
   .pick{grid-template-columns:1fr;gap:48px}

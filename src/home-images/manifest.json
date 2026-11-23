@@ -1,0 +1,326 @@
+{
+  "hero-seiryuji": {
+    "source": "img/seiryuji.jpg",
+    "compressionSource": "img/seiryuji.s.jpg",
+    "variants": [
+      {
+        "file": "hero-seiryuji-480.webp",
+        "width": 480,
+        "height": 852,
+        "bytes": 70584
+      },
+      {
+        "file": "hero-seiryuji-720.webp",
+        "width": 720,
+        "height": 1278,
+        "bytes": 145622
+      }
+    ]
+  },
+  "hero-the-twist": {
+    "source": "img/the-twist.jpg",
+    "compressionSource": "img/the-twist.s.jpg",
+    "variants": [
+      {
+        "file": "hero-the-twist-480.webp",
+        "width": 480,
+        "height": 854,
+        "bytes": 134960
+      },
+      {
+        "file": "hero-the-twist-600.webp",
+        "width": 600,
+        "height": 1067,
+        "bytes": 211980
+      }
+    ]
+  },
+  "hero-tivoli": {
+    "source": "img/tivoli/hero-mobile.jpg",
+    "compressionSource": "img/tivoli/hero-mobile.m.jpg",
+    "variants": [
+      {
+        "file": "hero-tivoli-480.webp",
+        "width": 480,
+        "height": 576,
+        "bytes": 77328
+      },
+      {
+        "file": "hero-tivoli-720.webp",
+        "width": 720,
+        "height": 864,
+        "bytes": 170896
+      }
+    ]
+  },
+  "hero-hotei-daibutsu": {
+    "source": "img/hotei-daibutsu.jpg",
+    "compressionSource": "img/hotei-daibutsu.s.jpg",
+    "variants": [
+      {
+        "file": "hero-hotei-daibutsu-480.webp",
+        "width": 480,
+        "height": 852,
+        "bytes": 30758
+      },
+      {
+        "file": "hero-hotei-daibutsu-720.webp",
+        "width": 720,
+        "height": 1278,
+        "bytes": 56068
+      }
+    ]
+  },
+  "hero-matera": {
+    "source": "img/matera/hero-mobile.jpg",
+    "compressionSource": "img/matera/hero-mobile.m.jpg",
+    "variants": [
+      {
+        "file": "hero-matera-480.webp",
+        "width": 480,
+        "height": 576,
+        "bytes": 41926
+      },
+      {
+        "file": "hero-matera-720.webp",
+        "width": 720,
+        "height": 864,
+        "bytes": 83552
+      }
+    ]
+  },
+  "hero-trevarefabrikken": {
+    "source": "img/trevarefabrikken/rock-sauna.jpg",
+    "compressionSource": "img/trevarefabrikken/rock-sauna.s.jpg",
+    "variants": [
+      {
+        "file": "hero-trevarefabrikken-480.webp",
+        "width": 480,
+        "height": 854,
+        "bytes": 80832
+      },
+      {
+        "file": "hero-trevarefabrikken-600.webp",
+        "width": 600,
+        "height": 1067,
+        "bytes": 124376
+      }
+    ]
+  },
+  "hero-berlengas": {
+    "source": "img/berlengas.jpg",
+    "compressionSource": "img/berlengas.s.jpg",
+    "variants": [
+      {
+        "file": "hero-berlengas-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 62688
+      },
+      {
+        "file": "hero-berlengas-720.webp",
+        "width": 720,
+        "height": 1280,
+        "bytes": 126152
+      }
+    ]
+  },
+  "hero-yamadera": {
+    "source": "img/yamadera.jpg",
+    "compressionSource": "img/yamadera.s.jpg",
+    "variants": [
+      {
+        "file": "hero-yamadera-480.webp",
+        "width": 480,
+        "height": 852,
+        "bytes": 51850
+      },
+      {
+        "file": "hero-yamadera-720.webp",
+        "width": 720,
+        "height": 1278,
+        "bytes": 110702
+      }
+    ]
+  },
+  "hero-under": {
+    "source": "img/under.jpg",
+    "compressionSource": "img/under.s.jpg",
+    "variants": [
+      {
+        "file": "hero-under-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 22214
+      },
+      {
+        "file": "hero-under-600.webp",
+        "width": 600,
+        "height": 1066,
+        "bytes": 30576
+      }
+    ]
+  },
+  "hero-alberobello": {
+    "source": "img/alberobello.jpg",
+    "compressionSource": "img/alberobello.s.jpg",
+    "variants": [
+      {
+        "file": "hero-alberobello-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 81048
+      },
+      {
+        "file": "hero-alberobello-720.webp",
+        "width": 720,
+        "height": 1280,
+        "bytes": 167274
+      }
+    ]
+  },
+  "series-japan": {
+    "source": "img/tokyo-kaminarimon/wide.jpg",
+    "compressionSource": "img/tokyo-kaminarimon/wide.s.jpg",
+    "variants": [
+      {
+        "file": "series-japan-480.webp",
+        "width": 480,
+        "height": 271,
+        "bytes": 28702
+      },
+      {
+        "file": "series-japan-720.webp",
+        "width": 720,
+        "height": 406,
+        "bytes": 50422
+      }
+    ]
+  },
+  "series-italy-drive": {
+    "source": "img/tivoli/series-wide.jpg",
+    "compressionSource": "img/tivoli/series-wide.s.jpg",
+    "variants": [
+      {
+        "file": "series-italy-drive-480.webp",
+        "width": 480,
+        "height": 271,
+        "bytes": 33606
+      },
+      {
+        "file": "series-italy-drive-720.webp",
+        "width": 720,
+        "height": 406,
+        "bytes": 70976
+      }
+    ]
+  },
+  "series-portugal": {
+    "source": "img/berlengas/series-wide.jpg",
+    "compressionSource": "img/berlengas/series-wide.s.jpg",
+    "variants": [
+      {
+        "file": "series-portugal-480.webp",
+        "width": 480,
+        "height": 288,
+        "bytes": 33016
+      },
+      {
+        "file": "series-portugal-720.webp",
+        "width": 720,
+        "height": 432,
+        "bytes": 69908
+      }
+    ]
+  },
+  "series-norway": {
+    "source": "img/reinebringen/cover.jpg",
+    "compressionSource": "img/reinebringen/cover.s.jpg",
+    "variants": [
+      {
+        "file": "series-norway-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 15326
+      },
+      {
+        "file": "series-norway-600.webp",
+        "width": 600,
+        "height": 338,
+        "bytes": 23124
+      }
+    ]
+  },
+  "series-architecture-walk": {
+    "source": "img/byrne-portugal/series-wide.jpg",
+    "compressionSource": "img/byrne-portugal/series-wide.s.jpg",
+    "variants": [
+      {
+        "file": "series-architecture-walk-480.webp",
+        "width": 480,
+        "height": 271,
+        "bytes": 17558
+      },
+      {
+        "file": "series-architecture-walk-720.webp",
+        "width": 720,
+        "height": 406,
+        "bytes": 34966
+      }
+    ]
+  },
+  "series-art-wander": {
+    "source": "img/borghese/hall.jpg",
+    "compressionSource": "img/borghese/hall.s.jpg",
+    "variants": [
+      {
+        "file": "series-art-wander-480.webp",
+        "width": 480,
+        "height": 277,
+        "bytes": 29022
+      },
+      {
+        "file": "series-art-wander-720.webp",
+        "width": 720,
+        "height": 416,
+        "bytes": 53976
+      }
+    ]
+  },
+  "series-tohoku-winter": {
+    "source": "img/oirase/content-01_card.jpg",
+    "compressionSource": "img/oirase/content-01_card.s.jpg",
+    "variants": [
+      {
+        "file": "series-tohoku-winter-480.webp",
+        "width": 480,
+        "height": 271,
+        "bytes": 42610
+      },
+      {
+        "file": "series-tohoku-winter-720.webp",
+        "width": 720,
+        "height": 406,
+        "bytes": 87622
+      }
+    ]
+  },
+  "series-nagoya": {
+    "source": "img/aoi-celestie/series-wide.jpg",
+    "compressionSource": "img/aoi-celestie/series-wide.s.jpg",
+    "variants": [
+      {
+        "file": "series-nagoya-480.webp",
+        "width": 480,
+        "height": 271,
+        "bytes": 24518
+      },
+      {
+        "file": "series-nagoya-720.webp",
+        "width": 720,
+        "height": 406,
+        "bytes": 43642
+      }
+    ]
+  }
+}

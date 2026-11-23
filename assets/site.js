@@ -491,6 +491,19 @@
   }
 
   // 輪播僅載入目前與相鄰兩張；移動後再預載，避免十張同時搶頻寬。
+  // Let the initial hero decode and reach a paint before competing requests or animation.
+  function whenHeroPainted(track, callback) {
+    var im = track.querySelector('img'), started = false;
+    if (!im) { callback(); return; }
+    function paint() { requestAnimationFrame(function () { requestAnimationFrame(callback); }); }
+    function ready() {
+      if (started) return; started = true;
+      try { if (im.decode) { im.decode().then(paint, paint); } else paint(); } catch (e) { paint(); }
+    }
+    if (im.complete) ready();
+    else { im.addEventListener('load', ready, { once: true }); im.addEventListener('error', ready, { once: true }); }
+  }
+
   function loadHeroNear(track, current, total) {
     [].forEach.call(track.children, function (slide) {
       var i = Number(slide.getAttribute('data-i'));
@@ -510,7 +523,7 @@
   function nativeHero(track) {
     var wrap = track.parentElement, originals = [].slice.call(track.children), n = originals.length;
     if (!n) return;
-    var held = false, focused = false, visible = true, resumeAt = 0, step = 0, current = -1, pending = 0, settleTimer;
+    var held = false, focused = false, visible = true, resumeAt = 0, step = 0, current = -1, pending = 0, settleTimer, heroReady = false;
     var count = $('count'), prev = $('prev'), next = $('next');
     wrap.classList.add('native-hero');
     for (var copy = 0; copy < 2; copy++) originals.forEach(function (slide) {
@@ -521,7 +534,7 @@
       pending = 0; if (!step) return;
       var i = Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / step)));
       if (i === current) return; current = i;
-      loadHeroNear(track, i % n, n);
+      if (heroReady) loadHeroNear(track, i % n, n);
       slides.forEach(function (slide, k) { slide.classList.toggle('on', i === k); });
       if (count) count.textContent = (i % n + 1) + ' / ' + n;
     }
@@ -540,6 +553,10 @@
       track.scrollLeft = (n + i) * step; current = -1; sync();
     }
     measure();
+    whenHeroPainted(track, function () {
+      heroReady = true; wrap.classList.add('hero-ready');
+      loadHeroNear(track, Math.max(0, current) % n, n); resumeAt = performance.now() + 3000;
+    });
     var width = track.clientWidth;
     addEventListener('resize', function () { if (track.clientWidth !== width) { width = track.clientWidth; measure(); } });
     function begin() { held = true; clearTimeout(settleTimer); }
@@ -566,7 +583,7 @@
       if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); go(e.key === 'ArrowLeft' ? -1 : 1); }
     });
     if (typeof IntersectionObserver !== 'undefined') new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }, { threshold: 0 }).observe(wrap);
-    setInterval(function () { if (!reduce && !document.hidden && visible && !held && !focused && performance.now() >= resumeAt) go(1); }, 3000);
+    setInterval(function () { if (heroReady && !reduce && !document.hidden && visible && !held && !focused && performance.now() >= resumeAt) go(1); }, 3000);
   }
 
   /* 首屏輪播（11-18 第三版）：投影片在 DOM 裡完全不動（不複製、不搬移），
@@ -576,11 +593,11 @@
   if (track) {
     var mobileHeroMode = matchMedia('(pointer:coarse)').matches || innerWidth <= 700;
     if (mobileHeroMode) { nativeHero(track); } else {
-    var S = [].slice.call(track.children), N = S.length, v = 0, timer, count = $('count');
+    var S = [].slice.call(track.children), N = S.length, v = 0, timer, heroReady = false, count = $('count');
     var prev = $('prev'), next = $('next'), wrap = track.parentElement, heroX = 0, dragFrame = 0;
     var mod = function (x) { return ((x % N) + N) % N; };
     var place = function (animate, dx) {
-      loadHeroNear(track, mod(v), N);
+      if (heroReady) loadHeroNear(track, mod(v), N);
       track.style.transition = animate ? '' : 'none';
       var gap = parseFloat(getComputedStyle(track).columnGap) || 24, w = S[0].offsetWidth, step = w + gap;
       S.forEach(function (el, k) { var p = k + N * Math.round((v - k) / N); el.style.transform = p === k ? '' : 'translateX(' + (p - k) * step + 'px)'; el.classList.toggle('on', mod(v) === k); });
@@ -636,7 +653,8 @@
       heroWidth = w; place(false);
     });
     addEventListener('load', function () { place(false); });
-    place(false); auto();
+    place(false);
+    whenHeroPainted(track, function () { heroReady = true; wrap.classList.add('hero-ready'); loadHeroNear(track, mod(v), N); auto(); });
     }
   }
 })();
@@ -645,10 +663,19 @@
 (function () {
   var tk = document.querySelector('.tser-track'); if (!tk) return;
   var sec = tk.closest('.tser'), sl = [].slice.call(tk.children), h = sec.querySelector('.tser-h'), sub = sec.querySelector('.tser-sub'), more = sec.querySelector('.tser-more'), cur = 0;
+  function loadSeriesNear(index) {
+    [index, (index + 1) % sl.length].forEach(function (i) {
+      [].forEach.call(sl[i].querySelectorAll('source[data-srcset]'), function (el) { el.srcset = el.dataset.srcset; el.removeAttribute('data-srcset'); });
+      [].forEach.call(sl[i].querySelectorAll('img[data-src]'), function (im) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); });
+    });
+  }
+  if (typeof IntersectionObserver !== 'undefined') {
+    var observer = new IntersectionObserver(function (entries) { if (entries[0].isIntersecting) { loadSeriesNear(cur); observer.disconnect(); } }, { rootMargin: '300px' }); observer.observe(tk);
+  } else loadSeriesNear(cur);
   var idx = function () { var w = tk.clientWidth; return w ? Math.max(0, Math.min(sl.length - 1, Math.round(tk.scrollLeft / w))) : 0; };
-  var go = function (i) { i = (i + sl.length) % sl.length; tk.scrollTo({ left: i * tk.clientWidth, behavior: 'smooth' }); };
+  var go = function (i) { i = (i + sl.length) % sl.length; loadSeriesNear(i); tk.scrollTo({ left: i * tk.clientWidth, behavior: 'smooth' }); };
   var sync = function () {
-    var i = idx(); if (i === cur) return; cur = i; var a = sl[i];
+    var i = idx(); if (i === cur) return; cur = i; loadSeriesNear(i); var a = sl[i];
     h.style.opacity = sub.style.opacity = 0;
     setTimeout(function () { h.textContent = a.getAttribute('data-en'); sub.textContent = a.getAttribute('data-tag'); h.style.opacity = sub.style.opacity = 1; }, 200);
     more.href = a.getAttribute('href');
