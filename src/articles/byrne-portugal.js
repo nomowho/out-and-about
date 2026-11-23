@@ -13,6 +13,8 @@ POST_DETAIL['byrne-portugal'] = {
     address:{ addressLocality:'Fronteira', addressRegion:'Alto Alentejo', addressCountry:'PT' }
   },
   cover:'img/byrne-portugal/cover.jpg',
+  cardZoom:1.077,
+  cardOrigin:'50% 100%',
   coverCap:"Gonçalo Byrne 設計的阿托萊魯什戰役解說中心，以紅色混凝土與中央裂隙，回應葡萄牙的戰爭記憶。",
   body:[
     { t:'p', text:'往 Marvão 的路上，我特地拐了一小時，只為了看一棟紅色的建築。然後，又是一個沒有人的景點，舒服。' },
