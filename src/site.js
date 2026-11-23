@@ -551,10 +551,13 @@
      舊版搬移 DOM 會讓 Lighthouse 每 3 秒算一次新的 LCP 與版面位移（手機 LCP 17 秒、CLS 0.2），transform 則都不算 */
   var track = $('track');
   if (track) {
-    /* 第 2–7 張輪播圖等整頁載入完才下載，不跟第一張大圖（LCP）搶頻寬 */
+    var mobileHeroMode = matchMedia('(pointer:coarse)').matches || innerWidth <= 700;
+    var mobileHeroSlides = $('mobileHeroSlides');
+    if (mobileHeroMode && mobileHeroSlides) track.replaceChildren(mobileHeroSlides.content.cloneNode(true));
+    /* 其餘輪播圖等整頁載入完才下載，不跟第一張大圖（LCP）搶頻寬 */
     var heroRest = function () { [].forEach.call(track.querySelectorAll('img[data-src]'), function (im) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }); };
     if (document.readyState === 'complete') heroRest(); else addEventListener('load', heroRest);
-    if (matchMedia('(pointer:coarse)').matches || innerWidth <= 700) { nativeHero(track); } else {
+    if (mobileHeroMode) { nativeHero(track); } else {
     var S = [].slice.call(track.children), N = S.length, v = 0, timer, count = $('count');
     var prev = $('prev'), next = $('next'), wrap = track.parentElement, heroX = 0, dragFrame = 0;
     var mod = function (x) { return ((x % N) + N) % N; };

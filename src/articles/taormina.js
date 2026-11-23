@@ -14,6 +14,7 @@ POST_DETAIL['taormina'] = {
     geo:[37.8522, 15.2922]
   },
   cover:'img/taormina/cover.jpg',
+  cardPortrait:'img/taormina/portrait-evening.jpg',
   coverCap:"陶爾米納古劇場的舞台遺構面向愛奧尼亞海，保留希臘選址與羅馬改建交疊的觀景視野。",
   body:[
     { t:'p', text:'如果你以為「海景第一排」是現代地產商發明的，那是因為你還沒看過兩千多年前的希臘人，在西西里島的懸崖上做了什麼。' },
