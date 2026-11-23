@@ -214,10 +214,30 @@ const plainLen = b => b.t === 'p' ? strip(b.text).length : 0;
 // 正文結尾落款「我出去一下就回來」：放在最後一段正文之後；文末的「→ 延伸閱讀」連結排在落款下方（外電頁不使用）
 // 落款連到關於頁：每篇文章多一條指向作者介紹的內部連結（E-E-A-T）
 const SIGNOFF = '<p class="signoff"><a href="/about/" aria-label="我出去一下就回來：關於 Out and About 與作者 Nomo"><span class="zh">我出去一下就回來</span><span class="en" lang="en">Out and About</span></a></p>';
-function withSignoff(htmls) {
+function readingLinks(manual, related) {
+  manual = manual.map(fixLinks);
+  const existing = new Set(manual.join('').matchAll(/href="(?:https:\/\/nomowho\.com)?\/stories\/([^/"?#]+)\//g).map(m => m[1]));
+  const extra = related.filter(p => !existing.has(p.id));
+  if (!manual.length && !extra.length) return '';
+  return `<nav class="related-reading" aria-label="延伸閱讀"><p class="reading-label">接著讀</p>${manual.join('')}${extra.length ? `<ul>${extra.map(p => `<li><a href="${url.post(p.id)}">${esc(p.title)}</a><span aria-hidden="true"> →</span></li>`).join('')}</ul>` : ''}</nav>`;
+}
+function withSignoff(htmls, related = []) {
   let i = htmls.length;
   while (i > 0 && /^<p>→/.test(htmls[i - 1])) i--;
-  return [...htmls.slice(0, i), SIGNOFF, ...htmls.slice(i)].join('');
+  return [...htmls.slice(0, i), SIGNOFF, readingLinks(htmls.slice(i), related)].join('');
+}
+function relatedPosts(p) {
+  const cats = new Set([p.cat, ...(p.extraCats || [])].filter(Boolean));
+  const candidates = POSTS.filter(x => x.id !== p.id && POST_DETAIL[x.id]);
+  const rank = x => {
+    const shared = [x.cat, ...(x.extraCats || [])].filter(c => cats.has(c)).length;
+    const country = !!p.region && x.region === p.region;
+    const area = country && !!p.area && x.area === p.area;
+    return (area ? 300 : country ? 200 : shared ? 100 : 0) + shared * 10;
+  };
+  // 同分以文章組合輪替，避免每篇永遠只推同樣三篇。
+  const tie = x => { let h = 0; for (const ch of p.id + '/' + x.id) h = (Math.imul(h, 31) + ch.charCodeAt(0)) >>> 0; return h; };
+  return candidates.sort((a, b) => rank(b) - rank(a) || tie(a) - tie(b)).slice(0, 3);
 }
 
 function layoutSides(body) {
@@ -277,9 +297,7 @@ for (const p of POSTS) {
   const title = d.seoTitle || p.title, desc = cut(d.dek, 155);
   const cover = d.cover || null;
   const images = [cover, ...d.body.flatMap(b => b.src ? [b.src] : (b.imgs || []).flat())].filter(Boolean);
-  const related = [...POSTS.filter(x => x.id !== p.id && x.region === p.region && x.area === p.area),
-    ...POSTS.filter(x => x.id !== p.id && x.region === p.region && x.area !== p.area),
-    ...POSTS.filter(x => x.id !== p.id && x.region !== p.region && x.cat === p.cat)].slice(0, 3);
+  const related = relatedPosts(p);
   const head = `
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a><i>›</i><a href="${url.cat(p.cat)}">${p.cat}</a><i>›</i><a href="${url.dest(p.region)}">${REGION_ZH[p.region] || p.region}</a></nav>
       <div class="meta"><a href="${url.cat(p.cat)}">${p.cat}</a><span>· ${areaEn(p)}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
@@ -298,7 +316,7 @@ for (const p of POSTS) {
         ${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}
         ${d.info ? '<li><a href="#info">旅行資訊</a></li>' : ''}${d.faq ? '<li><a href="#qa">常見問題</a></li>' : ''}${d.sources ? '<li><a href="#sources">資料來源</a></li>' : ''}
       </ol></div></nav>
-      <div class="body">${withSignoff(layoutSides(d.body).map(block))}</div>
+      <div class="body">${withSignoff(layoutSides(d.body).map(block), related)}</div>
       ${d.info ? `<section class="info" id="info"><div class="in"><h2><span class="en">Travel Info</span><span>旅行資訊</span></h2><dl>${d.info.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="note">開放時間與費用可能調整，出發前請以官方公告為準。</p></div></section>` : ''}
       ${d.faq ? `<section class="qa" id="qa"><h2><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${d.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
       ${d.sources ? `<section class="refs" id="sources"><h2><span class="en">Sources</span><span>資料來源</span></h2><ol>${d.sources.map(([t, h, note]) => `<li><a href="${h}" target="_blank" rel="noopener">${t}</a>${note ? `<span>${note}</span>` : ''}</li>`).join('')}</ol></section>` : ''}
@@ -330,7 +348,8 @@ for (const p of POSTS) {
 newsNew.forEach(n => {
   const i = newsNew.indexOf(n);
   const others = [...newsNew.slice(i + 1), ...newsNew.slice(0, i)].slice(0, 3);
-  const picks = TOP7.slice(0, 3);
+  const newsRegion = REGION_ORDER.find(r => (n.place + ' ' + n.region).includes(REGION_ZH[r]) || (n.place + ' ' + n.region).includes(r));
+  const picks = relatedPosts({ id: n.id, region: newsRegion });
   const u = url.news(n.id), desc = cut(n.dek || n.title, 155);
   const main = `<article>
     <div class="box"><nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<a href="/news/">NEWS</a>›<span>${n.region}</span></nav></div>
@@ -343,6 +362,7 @@ newsNew.forEach(n => {
     <div class="wrap">
       <div class="body">
         ${n.body.map(s => `${s.h ? `<h2>${s.h}</h2>` : ''}${s.p.map(t => `<p>${t}</p>`).join('')}`).join('')}
+        ${readingLinks([], picks)}
         ${n.faq && n.faq.length ? `<section class="qa" aria-labelledby="qa-h"><h2 id="qa-h"><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${n.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
         ${n.also ? `<div class="also"><b>ALSO</b>${n.also}</div>` : ''}
         <div class="source">

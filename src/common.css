@@ -739,3 +739,10 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .body a[href^="/stories/"],.body a[href^="https://nomowho.com/stories/"]{color:var(--ink);text-decoration-line:underline;text-decoration-color:#C8F500;text-decoration-thickness:3px;text-underline-offset:.22em;text-decoration-skip-ink:none}
 @media(hover:hover){.body a[href^="/stories/"]:hover,.body a[href^="https://nomowho.com/stories/"]:hover{background-color:rgba(200,245,0,.2)}}
 .body a[href^="/stories/"]:focus-visible,.body a[href^="https://nomowho.com/stories/"]:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+/* 正文讀完即接續其他文章，沿用品牌螢光綠底線。 */
+.body .related-reading{margin:30px 0 44px;padding:22px 0;border-top:1px solid var(--hair)}
+.body .related-reading .reading-label{font-size:14px;font-weight:700;letter-spacing:.1em;margin:0 0 14px}
+.body .related-reading ul{list-style:none;margin:0;padding:0}
+.body .related-reading li{margin:0 0 14px;line-height:1.85}
+.body .related-reading li:last-child{margin-bottom:0}
+.body .related-reading>p:not(.reading-label){margin:0 0 14px}
