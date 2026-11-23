@@ -125,14 +125,15 @@ const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: '我出去一�
 const crumbLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(p) })) });
 const listLd = (name, list) => ({ '@type': 'ItemList', name, numberOfItems: list.length, itemListElement: list.map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(x.u), name: x.n })) });
 
-function page({ file, title, desc, canonical, type = 'website', image, style, nav = '', main, ld = [], bodyCls = '', extraHead = '', progress = false, footNote = 'Text &amp; photography by Nomo' }) {
+// metaDescription 只用於搜尋摘要；desc 保留給分享卡片與文章結構化資料。
+function page({ file, title, desc, metaDescription = desc, canonical, type = 'website', image, style, nav = '', main, ld = [], bodyCls = '', extraHead = '', progress = false, footNote = 'Text &amp; photography by Nomo' }) {
   const html = `<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
-<meta name="description" content="${esc(desc)}">
+<meta name="description" content="${esc(metaDescription)}">
 <meta name="author" content="Nomo">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="${abs(canonical)}">
@@ -358,7 +359,7 @@ for (const p of POSTS) {
     crumbLd([['Out and About', '/'], [p.cat, url.cat(p.cat)], [title, u]])
   ];
   if (d.faq) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faq.map(([q, a]) => ({ '@type': 'Question', name: strip(q), acceptedAnswer: { '@type': 'Answer', text: strip(a) } })) });
-  page({ file: `stories/${p.id}/index.html`, title: `${title}｜Out and About`, desc, canonical: u, type: 'article', image: cover ? abs('/' + cover) : ogImg(p), style: 'post', nav: p.cat, main, ld, progress: true,
+  page({ file: `stories/${p.id}/index.html`, title: `${title}｜Out and About`, desc, metaDescription: strip(d.metaDescription || '').trim() || desc, canonical: u, type: 'article', image: cover ? abs('/' + cover) : ogImg(p), style: 'post', nav: p.cat, main, ld, progress: true,
     extraHead: `<meta property="article:published_time" content="${iso(p.date)}">\n${true ? `<meta property="article:modified_time" content="${modOf(p, d)}">\n` : ''}<meta property="article:author" content="Nomo">\n<meta property="article:section" content="${p.cat}">\n` });
   sitemap.push({ loc: u, lastmod: modOf(p, d), images: images.map(s => abs('/' + s)) });
 }
