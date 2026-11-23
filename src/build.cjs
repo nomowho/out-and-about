@@ -706,6 +706,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const cards = postsNew.map((p, i) => (isLand2(p)
       ? postCard(p, { cls: 'land', cover: true, csizes: '(max-width:700px) calc(100vw - 40px), (max-width:1000px) 100vw, 760px' })
       : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-search="${esc([p.title, p.zh, p.area, p.region, REGION_ZH[p.region], strip(POST_DETAIL[p.id].dek)].join(' '))}" data-area="${[p.cat, ...(p.extraCats || [])].map(k => k.toLowerCase()).join(' ')}" class="card`)
+      .replace(' loading="lazy"', i === 0 ? ' fetchpriority="high"' : ' loading="lazy"')
       .replace(/<h3>/g, '<h2>').replace(/<\/h3>/g, '</h2>')
       .replace('<div class="meta"><span class="cat">', `<div class="meta"><b class="ini" aria-hidden="true">${p.cat[0]}</b><span class="cat">`)
       .replace(/(max-width:(?:560|700)px) calc(100vw - 40px)/, '(max-width:700px) 45vw') /* 手機統一小圖（Nomo 11-20），不再每 6 篇一張大圖 */).join('');
