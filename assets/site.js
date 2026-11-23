@@ -224,56 +224,14 @@
     addEventListener('resize', upd); upd();
   });
 
-  /* 手機 Countries / Latest：首次互動後停用自動移動，讓原生捲動全權處理觸控與慣性。 */
-  function nativeCountries(cw) {
-    var wrap = cw.parentElement, originals = [].slice.call(cw.children), half = 0;
-    var held = false, interacting = false, focused = false, resumeAt = 0, lastTime = 0, position = 0, userControlled = false, animationFrame = 0;
-    wrap.classList.add(cw.classList.contains('hl-track') ? 'native-news' : 'native-countries');
-    var visible = true;
-    if (typeof IntersectionObserver !== 'undefined') new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }, { threshold: 0 }).observe(wrap);
-    for (var copy = 0; copy < 2; copy++) originals.forEach(function (c) {
-      var clone = c.cloneNode(true); clone.setAttribute('aria-hidden', 'true'); clone.tabIndex = -1; cw.appendChild(clone);
-    });
-    function measure() {
-      if (userControlled) return;
-      half = cw.children[originals.length].offsetLeft - cw.children[0].offsetLeft;
-      position = half; wrap.scrollLeft = position;
-    }
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure); else measure();
-    var width = wrap.clientWidth;
-    addEventListener('resize', function () { if (wrap.clientWidth !== width) { width = wrap.clientWidth; measure(); } });
-    // Once touched, this row belongs to native scrolling for the rest of this visit.
-    // Never resume scrollLeft animation while Safari may still be handling momentum.
-    function stopAuto() { userControlled = true; if (animationFrame) cancelAnimationFrame(animationFrame); }
-    function begin() { held = true; interacting = true; stopAuto(); }
-    function end() { held = false; resumeAt = performance.now() + 1800; }
-    wrap.addEventListener('touchstart', begin, { passive: true });
-    wrap.addEventListener('touchend', end, { passive: true });
-    wrap.addEventListener('touchcancel', end, { passive: true });
-    wrap.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'touch') begin(); }, { passive: true });
-    addEventListener('pointerup', function (e) { if (e.pointerType !== 'touch' && held) end(); }, { passive: true });
-    wrap.addEventListener('scroll', function () { if (interacting) resumeAt = performance.now() + 1800; }, { passive: true });
-    wrap.addEventListener('wheel', stopAuto, { passive: true });
-    wrap.addEventListener('focusin', function () { focused = true; stopAuto(); });
-    wrap.addEventListener('focusout', function () { focused = false; });
-    function frame(time) {
-      if (userControlled) return;
-      var dt = lastTime ? Math.min(time - lastTime, 50) : 0; lastTime = time;
-      if (half && !held && !focused && time >= resumeAt && !document.hidden && visible) {
-        if (interacting) { position = wrap.scrollLeft; interacting = false; }
-        if (!reduce) position += dt * 0.04224;
-        if (position >= 2 * half) position -= half;
-        else if (position < half) position += half;
-        if (!reduce || wrap.scrollLeft !== position) wrap.scrollLeft = position;
-      }
-      animationFrame = requestAnimationFrame(frame);
-    }
-    animationFrame = requestAnimationFrame(frame);
-  }
-
-  /* Countries 與 Latest 共用：自動循環、滑鼠及觸控拖曳。 */
+  /* Countries 與 Latest：手機只用原生手滑，桌機維持自動循環與滑鼠拖曳。 */
   function draggableMarquee(cw) {
-    if (matchMedia('(pointer:coarse)').matches || innerWidth <= 700) { nativeCountries(cw); return; }
+    if (innerWidth <= 700 || matchMedia('(pointer:coarse)').matches) {
+      var isNews = cw.classList.contains('hl-track');
+      cw.parentElement.classList.add(isNews ? 'native-news' : 'native-countries');
+      if (isNews) cw.parentElement.setAttribute('aria-label', '世界旅遊新訊，可左右滑動');
+      return;
+    }
     var originals = [].slice.call(cw.children), cwrap = cw.parentElement;
     originals.forEach(function (c) { var d = c.cloneNode(true); d.setAttribute('aria-hidden', 'true'); d.tabIndex = -1; cw.appendChild(d); });
     var distance = 0, half = 0, pointer = null, startX = 0, startY = 0, startDistance = 0, moved = false, focused = false, resumeAt = 0, lastTime = 0;
