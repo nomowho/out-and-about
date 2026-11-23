@@ -1,6 +1,6 @@
 // 系列專題：首頁 SERIES 色帶、首頁專題大圖與 /series/ 頁共用
 // ids：手動列出文章；或用 region（國家）／cat（分類）自動收錄，build 時依日期新到舊排（新文章會自動加入）
-// card：SERIES 卡片的直式圖（沒填就用 img/<img>.jpg）；img：卡片／專題頁用的文章 id（img/<id>.jpg）；wide：首頁專題大圖（橫式）。沒有照片的系列（目前挪威）首頁先不出現，專題頁照常
+// card：SERIES 卡片的直式圖（沒填就用 img/<img>.jpg）；img：卡片／專題頁用的文章 id（img/<id>.jpg）；wide：首頁專題大圖（橫式）。首頁僅顯示已設定 img 與 wide 的系列
 // 首頁順序＝這裡的排列順序（Nomo 11-20 指定，不再依篇數自動排）
 // 2026-11-20 Nomo 調整：刪除「歐洲建築巡禮」「建築與美術館」（舊網址轉到建築散策），新增深見系列＋建築散策＋藝術漫遊
 const SERIES = [
@@ -16,9 +16,9 @@ const SERIES = [
     d:'大西洋外海的碉堡小島，和阿連特茹平原上的建築。',
     intro:'葡萄牙的風景，總和大西洋脫不了關係。從佩尼謝外海、只能搭船抵達的貝倫加斯群島與海上碉堡，到阿連特茹平原上的現代建築，這個系列收錄我在葡萄牙走過的地方，寫給想避開人潮、往海邊與內陸走得更遠一點的人。',
     region:'Portugal' },
-  { id:'norway', t:'深見　挪威', en:'NORWAY', tag:'峽灣、建築與北極圈', wide:null, img:null,
-    d:'從奧斯陸、南岸到羅弗敦群島，照片整理中。',
-    intro:'挪威的風景很大，人很少。從奧斯陸的孟克美術館、耶夫納克橫跨河面的美術館 The Twist，到南岸的海底餐廳 Under、斯塔萬格的聖壇岩，一路往北到羅弗敦群島的山與鱈魚乾。這個系列收錄我在挪威走過的地方，照片正在整理中。',
+  { id:'norway', card:'img/reinebringen/cover.jpg', t:'深見　挪威', en:'NORWAY', tag:'峽灣、建築與北極圈', wide:'img/reinebringen/cover.jpg', widePos:'50% 60%', img:'reinebringen',
+    d:'從奧斯陸的美術館、南岸海底餐廳，到羅浮敦的山與漁村。',
+    intro:'從奧斯陸的孟克美術館、橫跨河面的 The Twist，到南岸的 Under 海底餐廳、Kunstsilo 與 Kilden，再往北走進卑爾根、聖壇岩和羅浮敦群島。這裡整理我在挪威的旅行：爬上 Reinebringen 看峽灣與漁村，在鱈魚乾架下聞魚腥味，到 Trevarefabrikken 蒸桑拿、跳進冰冷的海。',
     region:'Norway' },
   { id:'architecture-walk', card:'img/louvre-pyramid/cover.jpg', t:'建築散策', en:'ARCHITECTURE', tag:'為一棟建築，出發一趟旅行', wide:'img/byrne-portugal/series-wide.jpg', widePos:'50% 50%', img:'tokyo-tower',
     d:'從高第的聖家堂到山本理顯的校園，看建築怎麼改變一座城市。',
