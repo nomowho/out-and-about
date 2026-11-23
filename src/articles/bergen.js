@@ -83,9 +83,9 @@ POST_DETAIL['bergen'] = {
       "t": "pair",
       "imgs": [
         "img/bergen/avenue.jpg",
-        "img/bergen/hillside.jpg"
+        "img/bergen/waterfront-hillside.jpg"
       ],
-      "cap": "左：從卑爾根市區街道看港灣，不必登山也能找到視線開闊的位置。右：山坡住宅一路接到樹林，顯出城市與山的距離。"
+      "cap": "左：從卑爾根市區街道看港灣，不必登山也能找到視線開闊的位置。右：隔著港灣看卑爾根，岸邊建築、山坡住宅與森林層層相接，纜車軌道沿山勢向上延伸。"
     },
     {
       "t": "pair",
