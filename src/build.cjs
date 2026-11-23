@@ -102,6 +102,7 @@ for (const t of ['home', 'post', 'news', 'category']) {
   fs.writeFileSync(path.join(ROOT, 'assets', `${t}.css`), compactCSS(css[t]) + '\n');
 }
 fs.copyFileSync(path.join(SRC, 'brand', 'nomo-logo.jpg'), path.join(ROOT, 'assets', 'nomo-logo.jpg'));
+fs.copyFileSync(path.join(SRC, 'brand', 'browser-logo.png'), path.join(ROOT, 'assets', 'browser-logo.png'));
 fs.mkdirSync(path.join(ROOT, 'assets', 'fonts'), { recursive: true });
 for (const f of fs.readdirSync(path.join(SRC, 'fonts')).filter(f => /\.(woff2|txt)$/.test(f))) fs.copyFileSync(path.join(SRC, 'fonts', f), path.join(ROOT, 'assets', 'fonts', f));
 fs.writeFileSync(path.join(ROOT, 'assets', 'common.css'), compactCSS(read('fonts/latin.css') + '\n' + read('common.css')) + '\n');
@@ -120,7 +121,7 @@ const navLinks = on => `<a href="/news/"${on === 'NEWS' ? ' class="on" aria-curr
   Object.keys(CATS).map(k => { const c = [on === k ? 'on' : '', LITE.has(k) ? 'lite' : ''].filter(Boolean).join(' '); return `<a href="${url.cat(k)}"${c ? ` class="${c}"` : ''}${on === k ? ' aria-current="page"' : ''}>${k}</a>`; }).join('');
 
 const PERSON = { '@type': 'Person', '@id': abs('/#nomo'), name: 'Nomo', alternateName: 'nomowho', url: abs('/about/'), sameAs: ['https://www.instagram.com/nomowho/'], description: '旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」，寫建築、藝術、歷史與自然。' };
-const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho', 'Nomo'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/nomo-logo.jpg') }, sameAs: ['https://www.instagram.com/nomowho/'] };
+const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho', 'Nomo'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/browser-logo.png') }, sameAs: ['https://www.instagram.com/nomowho/'] };
 const crumbLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(p) })) });
 const listLd = (name, list) => ({ '@type': 'ItemList', name, numberOfItems: list.length, itemListElement: list.map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(x.u), name: x.n })) });
 
@@ -152,8 +153,8 @@ function page({ file, title, desc, canonical, type = 'website', image, style, na
 <meta name="theme-color" content="#ffffff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
-<link rel="icon" href="/assets/nomo-logo.jpg" type="image/jpeg" sizes="400x400">
-<link rel="apple-touch-icon" href="/assets/nomo-logo.jpg">
+<link rel="icon" href="/assets/browser-logo.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="/assets/browser-logo.png">
 ${extraHead}<link rel="preload" href="/assets/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/${style}.css?v=${assetVersion(style + '.css')}">
