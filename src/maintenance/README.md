@@ -51,3 +51,11 @@ python src/maintenance/gsc-compare.py C:/private/before.zip C:/private/after.zip
 手機實驗室基準：Under 91 / LCP 3.210s；青森 TOP10 93 / 2.798s；聖家堂 98 / 2.409s；全部文章 96 / 2.184s。都是 2026-11-23 的單次 Lighthouse 測量，CLS 0，並非真實使用者 Core Web Vitals。
 
 參考：[GA4 事件](https://developers.google.com/analytics/devguides/collection/ga4/events)、[Google CSP 文件](https://developers.google.com/tag-platform/security/guides/csp)、[sitemap lastmod](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)。
+
+## 上線後實測與收件確認
+
+最終手機效能：Under 93（LCP 2.663s）、青森 TOP10 97（2.379s）、聖家堂 96（2.223s）、全部文章 93（2.583s）、首頁 93（2.850s）。桌機首頁 100（0.710s）。這些頁面的無障礙、最佳做法與 SEO 稽核為 100。GA4 會增加外部腳本成本，不能宣稱每頁分數都比基準高。
+
+GA4 即時報表已看到四個文章深度事件、推薦曝光、推薦點擊及 IG 點擊；本次為驗證事件。自訂維度『來源文章』對應 article_path；目的連結使用 GA4 既有 link_url，不另建重複維度。
+
+實際模擬主互動腳本 404，備援恢復首頁十張與專題八張照片。391px 手機版搜尋加分類篩選無橫向溢出，正式首頁維持十篇與八組專題。

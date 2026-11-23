@@ -19,6 +19,7 @@ ctx.searchInput.value='ＵＮＤＥＲ';ctx.pick('architecture',false);assert.de
 ctx.searchInput.value='';ctx.pick('',false);assert(secs.every(x=>!x.hidden));
 console.log('PASS keyword search combines category and Unicode/case normalization');
 const html=read('stories/index.html');assert.equal((html.match(/data-search=/g)||[]).length,107);assert(html.includes('role="search" hidden'));assert(!/<h3>/.test(html.split('id="all">')[1].split('</section>')[0]));
+const firstPhoto=html.split('id="all">')[1].match(/<img[^>]+>/)[0];assert(firstPhoto.includes('fetchpriority="high"'));assert(!firstPhoto.includes('loading="lazy"'));
 const guides=JSON.parse(read('src/series-guides.json'));assert.equal(Object.keys(guides).length,8);for(const id of Object.keys(guides)){const h=read('series/'+id+'/index.html');assert(h.includes('旅行規劃'));assert.equal(guides[id].length,3);}
 console.log('PASS all 107 articles remain crawlable, eight guides have contextual links');
 const home=read('index.html');assert.equal((home.match(/<noscript>/g)||[]).length,17);assert(home.includes('image-fallback.js'));
