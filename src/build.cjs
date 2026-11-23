@@ -291,7 +291,7 @@ for (const p of POSTS) {
     ? `<header class="ahead noimg">${head}</header>`
     : split
       ? `<section class="split"><header class="ahead">${head}</header><figure>${img(cover, d.coverCap || p.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 44vw' })}${d.coverCap ? `<figcaption>${d.coverCap}</figcaption>` : ''}</figure></section>`
-      : `<div class="cover">${img(cover, d.coverCap || p.zh, { lazy: false, sizes: '100vw' }).replace('<img ', d.coverPos ? `<img style="object-position:${d.coverPos}" ` : '<img ')}</div>${d.coverCap ? `<p class="covercap">${d.coverCap}</p>` : ''}<header class="ahead">${head}</header>`;
+      : `<div class="cover">${img(cover, d.coverCap || p.zh, { lazy: false, sizes: '100vw' }).replace('<img ', (d.coverPos || Number.isFinite(d.coverSaturation)) ? `<img style="${d.coverPos ? `object-position:${d.coverPos};` : ''}${Number.isFinite(d.coverSaturation) ? `filter:saturate(${d.coverSaturation});` : ''}" ` : '<img ')}</div>${d.coverCap ? `<p class="covercap">${d.coverCap}</p>` : ''}<header class="ahead">${head}</header>`;
   const heads = d.body.filter(b => b.t === 'h');
   const main = `<article>${top}
       <nav class="toc" aria-label="目次"><div class="in"><h2>CONTENTS 目次</h2><ol>
