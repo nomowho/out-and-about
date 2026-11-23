@@ -486,8 +486,19 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const p = byId[id]; if (!p || p.photo === false) throw new Error('Invalid hero article: ' + id); return p;
   });
   const heroSlides = heroPosts.map((p, i) => {
-    const src = (POST_DETAIL[p.id] || {}).cardPortrait || `img/${p.id}.jpg`;
-    const photo = img(src, p.zh, { lazy: false, small: true, sizes: '(max-width:700px) 84vw, 480px' });
+    const detail = POST_DETAIL[p.id] || {};
+    const src = detail.heroImage || detail.cardPortrait || `img/${p.id}.jpg`;
+    const dimensions = dims(src), ratio = dimensions ? dimensions.w / dimensions.h : .8;
+    // object-fit:cover：橫圖填直框時，選圖寬度要包含左右被裁掉的部分。
+    const mobileWidth = Math.ceil(Math.max(.84, 1.008 * ratio) * 100 * 1.02);
+    const desktopRatio = Math.max(.8, ratio) * 1.02;
+    const heroSizes = `(max-width:700px) ${mobileWidth}vw, min(${(66 * desktopRatio).toFixed(2)}vh, ${Math.ceil(600 * desktopRatio)}px)`;
+    let photo = img(src, p.zh, { lazy: false, small: true, sizes: heroSizes });
+    if (detail.heroMobileImage) {
+      const mobile = detail.heroMobileImage, medium = mobile.replace(/\.[^.]+$/, '.m.jpg'), small = mobile.replace(/\.[^.]+$/, '.s.jpg');
+      const set = [small, medium, mobile].filter(f => dims(f)).map(f => `/${f} ${dims(f).w}w`).join(', ');
+      photo = `<picture><source media="(max-width:700px)" srcset="${set}" sizes="84vw">${photo}</picture>`;
+    }
     return `<a class="slide" href="${url.post(p.id)}" data-i="${i}"><figure>${i === 0 ? photo : photo.replace(' fetchpriority="high"', '').replace(/ (src|srcset)="/g, ' data-$1="')}</figure><div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div></a>`;
   }).join('');
   const main = `

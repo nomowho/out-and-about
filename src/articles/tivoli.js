@@ -13,6 +13,8 @@ POST_DETAIL['tivoli'] = {
     address:{ addressLocality:'Tivoli', addressRegion:'Lazio', addressCountry:'IT' }
   },
   cover:'img/tivoli/cover.jpg',
+  heroImage:'img/tivoli/hero-hq.jpg',
+  heroMobileImage:'img/tivoli/hero-mobile.jpg',
   coverCap:"蒂沃利哈德良別墅的卡諾普斯水池，以雕像與水景重新組合皇帝旅行中的地中海建築印象。",
   body:[
     { t:'p', text:'大家都知道丹麥有一座很有名的蒂沃利樂園，但它的名字其實來自義大利的這座山城。蒂沃利離羅馬不遠，兩千年前就是權力者的避暑地，用石頭和水打造了一座座美學實驗室。' },

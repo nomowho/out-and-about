@@ -11,6 +11,8 @@ POST_DETAIL['matera'] = {
     address:{ addressLocality:'Matera', addressRegion:'Basilicata', addressCountry:'IT' }
   },
   cover:'img/matera/cover.jpg',
+  heroImage:'img/matera/hero-hq.jpg',
+  heroMobileImage:'img/matera/hero-mobile.jpg',
   coverCap:"馬泰拉 Sassi 石窟區沿石灰岩坡地層疊展開，黃昏光線讓鑿岩住宅與後加石造立面更容易辨識。",
   body:[
     { t:'p', text:'第一眼看到馬泰拉，會以為走進了中東的古城：整片石灰岩峽谷上，房子一層疊一層，很多其實是往岩壁裡鑿出來的洞。' },

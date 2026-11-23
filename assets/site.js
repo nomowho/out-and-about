@@ -553,7 +553,7 @@
   if (track) {
     var mobileHeroMode = matchMedia('(pointer:coarse)').matches || innerWidth <= 700;
     /* 其餘輪播圖等整頁載入完才下載，不跟第一張大圖（LCP）搶頻寬 */
-    var heroRest = function () { [].forEach.call(track.querySelectorAll('img[data-src]'), function (im) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }); };
+    var heroRest = function () { [].forEach.call(track.querySelectorAll('source[data-srcset]'), function (source) { source.srcset = source.dataset.srcset; source.removeAttribute('data-srcset'); }); [].forEach.call(track.querySelectorAll('img[data-src]'), function (im) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }); };
     if (document.readyState === 'complete') heroRest(); else addEventListener('load', heroRest);
     if (mobileHeroMode) { nativeHero(track); } else {
     var S = [].slice.call(track.children), N = S.length, v = 0, timer, count = $('count');
