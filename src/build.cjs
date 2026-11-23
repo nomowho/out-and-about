@@ -100,7 +100,7 @@ const navLinks = on => `<a href="/news/"${on === 'NEWS' ? ' class="on" aria-curr
   Object.keys(CATS).map(k => { const c = [on === k ? 'on' : '', LITE.has(k) ? 'lite' : ''].filter(Boolean).join(' '); return `<a href="${url.cat(k)}"${c ? ` class="${c}"` : ''}${on === k ? ' aria-current="page"' : ''}>${k}</a>`; }).join('');
 
 const PERSON = { '@type': 'Person', '@id': abs('/#nomo'), name: 'Nomo', url: abs('/about/'), sameAs: ['https://www.instagram.com/nomowho/'], description: '旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」，寫建築、藝術、歷史與自然。' };
-const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: 'Out and About', alternateName: '我出去一下就回來', url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/logo.png') }, sameAs: ['https://www.instagram.com/nomowho/'] };
+const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: 'Out and About', alternateName: ['我出去一下就回來', '我出去一下', 'nomowho'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/logo.png') }, sameAs: ['https://www.instagram.com/nomowho/'] };
 const crumbLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(p) })) });
 const listLd = (name, list) => ({ '@type': 'ItemList', name, numberOfItems: list.length, itemListElement: list.map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(x.u), name: x.n })) });
 
@@ -557,13 +557,13 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       ${Object.entries(groups[r]).map(([a, n]) => `<li><a href="${url.dest(r)}${Object.keys(groups[r]).length > 1 ? '#' + encodeURIComponent(a) : ''}">${a}</a><span>${n}</span></li>`).join('')}
     </ul></div>`).join('')}</div>
 </section>`;
-  const desc = 'Out and About（我出去一下就回來）是 Nomo 的旅行雜誌：親自走訪的建築、藝術、歷史、自然與信仰之地，每篇附交通、旅行資訊與常見問題，另有每日世界旅遊新訊。';
+  const desc = 'Out and About「我出去一下就回來」（簡稱「我出去一下」）是 Nomo（@nomowho）的旅行雜誌：親自走訪的建築、藝術、歷史、自然與信仰之地，每篇附交通、旅行資訊與常見問題，另有每日世界旅遊新訊。';
   const ld = [{ '@context': 'https://schema.org', '@graph': [
-    { '@type': 'WebSite', '@id': abs('/#website'), url: abs('/'), name: 'Out and About', alternateName: ['我出去一下就回來', 'Out and About 旅行雜誌'], description: desc, inLanguage: 'zh-Hant-TW', publisher: { '@id': abs('/#org') }, author: { '@id': abs('/#nomo') } },
+    { '@type': 'WebSite', '@id': abs('/#website'), url: abs('/'), name: 'Out and About', alternateName: ['我出去一下就回來', '我出去一下', 'nomowho', 'Out and About 旅行雜誌'], description: desc, inLanguage: 'zh-Hant-TW', publisher: { '@id': abs('/#org') }, author: { '@id': abs('/#nomo') } },
     ORG, PERSON,
     Object.assign({ '@id': abs('/#latest') }, listLd('最新旅行文章', postsNew.slice(0, 20).map(p => ({ u: url.post(p.id), n: (POST_DETAIL[p.id] || {}).seoTitle || p.title }))))
   ] }];
-  page({ file: 'index.html', title: 'Out and About｜我出去一下就回來・Nomo 的旅行雜誌', desc, canonical: '/', image: ogImg(TOP7[0]), style: 'home', nav: '', main, ld, bodyCls: 'home' });
+  page({ file: 'index.html', title: '我出去一下就回來｜Out and About・Nomo 的旅行雜誌', desc, canonical: '/', image: ogImg(TOP7[0]), style: 'home', nav: '', main, ld, bodyCls: 'home' });
   sitemap.unshift({ loc: '/', lastmod: BUILD_DATE, images: [] });
 }
 
@@ -573,7 +573,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     <header class="ahead noimg"><div class="meta"><span>About</span></div><h1>關於我出去一下就回來</h1>
       <p class="motto"><span>走得遠一點，看得深一些。</span><span lang="en">Go Further. Look Closer.</span></p></header>
     <div class="body">
-      <p>Out and About　我出去一下就回來，是一份關於旅行、風景與文化的個人誌。</p>
+      <p>Out and About「我出去一下就回來」（簡稱「我出去一下」），是 Nomo（@nomowho）的旅行、風景與文化個人誌。</p>
       <p>旅行對我而言，不只是抵達某個地方，更是試著理解一座城市的性格、一棟建築的故事，以及那些藏在日常風景裡的歷史。</p>
       <p>這裡記錄我親自走過的地方，從山海之間的自然景色，到城市裡的建築、藝術、信仰與餐桌。以影像收藏瞬間，以文字延續旅程。</p>
       <p class="pull">一半故事，一半旅行資訊。</p>
