@@ -96,6 +96,12 @@
   }
 
   /* 國家頁：依地區篩選（網址 #地區 可直接帶入，例如從國家總覽點「青森」） */
+  var journalFilters = $('journal-filters');
+  if (journalFilters && location.hash) {
+    var oldCountry = decodeURIComponent(location.hash.slice(1)).toLowerCase();
+    var countryLink = [].slice.call(journalFilters.querySelectorAll('a')).find(function (a) { return a.getAttribute('href') === '/journal/' + oldCountry + '/'; });
+    if (countryLink) location.replace(countryLink.href);
+  }
   var areas = $('areas');
   if (areas) {
     var chips = [].slice.call(areas.querySelectorAll('a')), secs = [].slice.call(document.querySelectorAll('.grpsec, .masonry .jp, #all > .card'));

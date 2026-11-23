@@ -2,7 +2,7 @@
 // 用法：node src/build.cjs   （在專案根目錄執行；輸出直接寫到根目錄，圖片在 img/ 不搬動）
 // 資料：src/posts-data.js、src/news-data.js、src/series-data.js、src/articles/<id>.js
 // 版面 CSS：從 src/templates/*.html 的 <style> 抽出，再疊上 src/common.css（手機版與共用元件）
-const fs = require('fs'), path = require('path'), vm = require('vm');
+const fs = require('fs'), path = require('path'), vm = require('vm'), crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '..'), SRC = __dirname;
 const CFG = JSON.parse(fs.readFileSync(path.join(SRC, 'site.config.json'), 'utf8'));
 const SITE = CFG.url.replace(/\/$/, '');           // 正式網址（不含結尾斜線）
@@ -22,9 +22,10 @@ for (const s of SERIES) if (!s.ids) s.ids = postsNew.filter(p => (s.region && p.
 const SERIES_SHOWN = SERIES.filter(s => s.img && s.wide);
 // 已刪除的系列：舊網址轉到新系列（Nomo 11-20），避免 Google 已收錄的連結變 404
 const SERIES_MOVED = { 'europe-architecture': 'architecture-walk', 'architecture-museum': 'architecture-walk' };
-// 外電只上架最新 NEWS_MAX 篇；更舊的自動下架（頁面、sitemap、RSS 都拿掉），原始資料仍留在 news-data.js
+// 首頁保留最新十則；所有新聞內頁、存檔與 sitemap 持續公開。
 const NEWS_MAX = 10;
-const newsNew = [...NEWS].sort((a, b) => b.date.localeCompare(a.date)).slice(0, NEWS_MAX);
+const newsAll = [...NEWS].sort((a, b) => b.date.localeCompare(a.date));
+const newsNew = newsAll.slice(0, NEWS_MAX);
 // 網站版上線日：IG 改寫的文章以這天當作網站版的修改日期（除非文章自己有 updated）
 const WEB_LAUNCH = CFG.webLaunch || '2026-11-17';
 const TOP7 = [...POSTS].filter(p => p.photo !== false).sort((a, b) => b.likes - a.likes).slice(0, 7);
@@ -92,9 +93,18 @@ for (const t of ['home', 'post', 'news', 'category']) {
   fs.writeFileSync(path.join(ROOT, 'assets', `${t}.css`), css[t] + '\n');
 }
 fs.copyFileSync(path.join(SRC, 'brand', 'nomo-logo.jpg'), path.join(ROOT, 'assets', 'nomo-logo.jpg'));
-fs.copyFileSync(path.join(SRC, 'common.css'), path.join(ROOT, 'assets', 'common.css'));
+fs.mkdirSync(path.join(ROOT, 'assets', 'fonts'), { recursive: true });
+for (const f of fs.readdirSync(path.join(SRC, 'fonts')).filter(f => /\.(woff2|txt)$/.test(f))) fs.copyFileSync(path.join(SRC, 'fonts', f), path.join(ROOT, 'assets', 'fonts', f));
+fs.writeFileSync(path.join(ROOT, 'assets', 'common.css'), read('fonts/latin.css') + '\n' + read('common.css'));
 fs.copyFileSync(path.join(SRC, 'site.js'), path.join(ROOT, 'assets', 'site.js'));
-const ver = Date.now().toString(36);
+const assetVersions = new Map();
+const assetVersion = name => {
+  if (!assetVersions.has(name)) assetVersions.set(name, crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, 'assets', name))).digest('hex').slice(0, 12));
+  return assetVersions.get(name);
+};
+const pagedUrl = (base, number) => number === 1 ? base : base + 'page/' + number + '/';
+const pagination = (base, current, total) => total <= 1 ? '' : `<nav class="pagination" aria-label="分頁">${current > 1 ? `<a rel="prev" href="${pagedUrl(base, current - 1)}">← 上一頁</a>` : '<span></span>'}<span>第 ${current} / ${total} 頁</span>${current < total ? `<a rel="next" href="${pagedUrl(base, current + 1)}">下一頁 →</a>` : '<span></span>'}</nav>`;
+
 
 const LITE = new Set(['FOOD', 'GUIDE']);   // A3b：篇數還少的分類，選單字色較淡（Nomo 11-18）
 const navLinks = on => `<a href="/news/"${on === 'NEWS' ? ' class="on" aria-current="page"' : ''}>NEWS</a><a href="/destinations/"${on === 'COUNTRIES' ? ' class="on" aria-current="page"' : ''}>DESTINATIONS</a>` +
@@ -132,14 +142,13 @@ function page({ file, title, desc, canonical, type = 'website', image, style, na
 <meta name="twitter:image" content="${image}">
 <meta name="theme-color" content="#ffffff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <link rel="icon" href="/assets/nomo-logo.jpg" type="image/jpeg" sizes="400x400">
 <link rel="apple-touch-icon" href="/assets/nomo-logo.jpg">
-${extraHead}<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Montserrat:wght@300;500;700;800&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/${style}.css?v=${ver}">
-<link rel="stylesheet" href="/assets/common.css?v=${ver}">
+${extraHead}<link rel="preload" href="/assets/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/${style}.css?v=${assetVersion(style + '.css')}">
+<link rel="stylesheet" href="/assets/common.css?v=${assetVersion('common.css')}">
 ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
 </head>
 <body class="${bodyCls}">
@@ -174,7 +183,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/<
   <nav aria-label="頁尾"><a href="/about/">ABOUT</a><a href="/stories/">ALL STORIES</a>${navLinks('')}<a href="https://www.instagram.com/nomowho/" rel="me noopener">INSTAGRAM</a></nav>
   <p>© 2026 Nomo · ${footNote}</p>
 </footer>
-<script src="/assets/site.js?v=${ver}" defer></script>
+<script src="/assets/site.js?v=${assetVersion('site.js')}" defer></script>
 ${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${CFG.cfBeacon}"}'></script>` : ''}
 </body>
 </html>
@@ -345,9 +354,9 @@ for (const p of POSTS) {
 }
 
 /* ── 外電頁 ── */
-newsNew.forEach(n => {
-  const i = newsNew.indexOf(n);
-  const others = [...newsNew.slice(i + 1), ...newsNew.slice(0, i)].slice(0, 3);
+newsAll.forEach(n => {
+  const i = newsAll.indexOf(n);
+  const others = [...newsAll.slice(i + 1), ...newsAll.slice(0, i)].slice(0, 3);
   const newsRegion = REGION_ORDER.find(r => (n.place + ' ' + n.region).includes(REGION_ZH[r]) || (n.place + ' ' + n.region).includes(r));
   const picks = relatedPosts({ id: n.id, region: newsRegion });
   const u = url.news(n.id), desc = cut(n.dek || n.title, 155);
@@ -683,12 +692,24 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <div class="label">NEWS　世界旅遊新訊</div><h1>世界旅遊新訊</h1>
       <p>編譯自 Condé Nast Traveler、Dezeen 等國際旅遊與設計媒體，每天更新，每則都附原文出處。</p>
     </div></section>
-    <section class="list box newslist"><div class="grid">${newsNew.map((n, i) => newsCard(n, i === 0)).join('')}</div></section>`;
+    <section class="list box newslist"><div class="grid">${newsNew.map((n, i) => newsCard(n, i === 0)).join('')}</div><p class="archive-link"><a href="/news/archive/">查看全部新聞存檔 →</a></p></section>`;
     const desc = `Out and About 世界旅遊新訊：${newsNew.slice(0, 3).map(n => n.title).join('；')}。`.slice(0, 160);
     page({ file: 'news/index.html', title: '世界旅遊新訊 NEWS｜Out and About', desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: 'NEWS', main,
       ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '世界旅遊新訊', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
         mainEntity: listLd('世界旅遊新訊', newsNew.map(n => ({ u: url.news(n.id), n: n.title }))) }, crumbLd([['Out and About', '/'], ['NEWS', u]])] });
     sitemap.push({ loc: u, lastmod: newsNew.length ? iso(newsNew[0].date) : BUILD_DATE, images: [] });
+  }
+
+  /* 保留全部新聞網址，最新列表之外提供可搜尋的歷史存檔。 */
+  {
+    const base = '/news/archive/', size = 20, totalPages = Math.ceil(newsAll.length / size);
+    for (let number = 1; number <= totalPages; number++) {
+      const list = newsAll.slice((number - 1) * size, number * size), u = pagedUrl(base, number);
+      const desc = '所有已刊登的世界旅遊新訊，依發布日期排列；報導內容以發布當時與原文為準。';
+      const main = `<section class="top jtop"><div class="box"><nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<a href="/news/">NEWS</a>›<span>新聞存檔</span></nav><div class="label">NEWS ARCHIVE</div><h1>新聞存檔</h1><p>${desc}</p></div></section><section class="list box newslist"><div class="grid">${list.map((n, i) => newsCard(n, i === 0)).join('')}</div>${pagination(base, number, totalPages)}</section>`;
+      page({ file: u.slice(1) + 'index.html', title: `新聞存檔${number > 1 ? '｜第 ' + number + ' 頁' : ''}｜Out and About`, desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: 'NEWS', main });
+      sitemap.push({ loc: u, lastmod: iso(list[0].date), images: [] });
+    }
   }
 
   /* ── Photo Journal /journal/：全站照片瀑布流，點照片進文章 ── */
@@ -719,23 +740,33 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       if (!feats.length) items.push(...others);
     }
     const jRegions = regions.filter(r => items.some(it => it.p.region === r));
-    const u = '/journal/';
-    const strip = t => String(t).replace(/<[^>]+>/g, '');
-    const main = `
-    <section class="top jtop"><div class="box">
-      <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>PHOTO JOURNAL</span></nav>
-      <div class="label">PHOTO JOURNAL</div><h1>在世界亂走，拍下眼前</h1>
-    </div></section>
-    <section class="list box">
-      <nav class="areas jfilter" id="areas" aria-label="依國家篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="#${r.toLowerCase()}" data-area="${r.toLowerCase()}">${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
-      <div class="journal" id="masonry"><div class="jraw">${items.map(it => `
-        <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${(() => { const d = dims(it.src); return J_FEAT.has(it.src) ? ' data-land="1" data-feat="1"' : ''; })()}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: J_FEAT.has(it.src) ? '(max-width:1060px) 100vw, 1000px' : '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px', small: !J_FEAT.has(it.src), lazy: it !== items[0] })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
-      </div></div>
-    </section>`;
-    const desc = `Nomo 的旅行攝影日誌：${items.length} 張照片，走過${jRegions.map(r => REGION_ZH[r]).join('、')}，每張都連到背後的旅行故事。`;
-    page({ file: 'journal/index.html', title: `Photo Journal 攝影日誌｜${items.length} 張旅行照片｜Out and About`, desc, canonical: u, image: ogImg(postsNew[0]), style: 'category', nav: '', main,
-      ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: 'Photo Journal 攝影日誌', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') }, author: PERSON }] });
-    sitemap.push({ loc: u, lastmod: BUILD_DATE, images: items.slice(0, 20).map(it => abs('/' + it.src)) });
+    const PAGE_SIZE = 30;
+    const groups = [{ region: null, selected: items }, ...jRegions.map(region => ({ region, selected: items.filter(it => it.p.region === region) }))];
+    for (const { region, selected } of groups) {
+      const base = region ? '/journal/' + region.toLowerCase() + '/' : '/journal/';
+      const totalPages = Math.ceil(selected.length / PAGE_SIZE);
+      for (let number = 1; number <= totalPages; number++) {
+        const batch = selected.slice((number - 1) * PAGE_SIZE, number * PAGE_SIZE);
+        const u = pagedUrl(base, number), heading = region ? REGION_ZH[region] + '｜在世界亂走，拍下眼前' : '在世界亂走，拍下眼前';
+        const main = `
+        <section class="top jtop"><div class="box">
+          <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<a href="/journal/">PHOTO JOURNAL</a>${region ? '›<span>' + REGION_ZH[region] + '</span>' : ''}</nav>
+          <div class="label">PHOTO JOURNAL</div><h1>${heading}</h1>
+          <p>共 ${selected.length} 張照片・第 ${number} / ${totalPages} 頁</p>
+        </div></section>
+        <section class="list box">
+          <nav class="areas jfilter" id="journal-filters" aria-label="依國家篩選"><a href="/journal/"${!region ? ' class="on" aria-current="page"' : ''}>全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="/journal/${r.toLowerCase()}/"${region === r ? ' class="on" aria-current="page"' : ''}>${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
+          <div class="journal" id="masonry"><div class="jraw">${batch.map((it, i) => `
+            <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${J_FEAT.has(it.src) ? ' data-land="1" data-feat="1"' : ''}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: J_FEAT.has(it.src) ? '(max-width:1060px) 100vw, 1000px' : '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px', small: !J_FEAT.has(it.src), lazy: i !== 0 })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
+          </div></div>
+          ${pagination(base, number, totalPages)}
+        </section>`;
+        const desc = `Nomo 的${region ? REGION_ZH[region] : ''}旅行攝影日誌：共 ${selected.length} 張原創照片，第 ${number} 頁，每張都連到背後的旅行故事。`;
+        page({ file: u.slice(1) + 'index.html', title: `${region ? REGION_ZH[region] + '｜' : ''}Photo Journal 攝影日誌${number > 1 ? '｜第 ' + number + ' 頁' : ''}｜Out and About`, desc, canonical: u, image: abs('/' + batch[0].src), style: 'category', nav: '', main,
+          ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: heading, description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') }, author: PERSON }] });
+        sitemap.push({ loc: u, lastmod: BUILD_DATE, images: batch.slice(0, 20).map(it => abs('/' + it.src)) });
+      }
+    }
   }
   const h404 = page({ file: '404.html', title: '找不到這一頁｜Out and About', desc: '這個網址沒有內容。', canonical: '/404.html', image: ogImg(TOP7[0]), style: 'category', nav: '',
     main: `<div class="notfound"><h1>找不到這一頁</h1><p>可能是網址改了，下面是最新的文章。</p><p><a href="/">回首頁</a></p></div>
@@ -768,7 +799,7 @@ fs.writeFileSync(path.join(ROOT, 'llms.txt'), `# Out and About｜我出去一下
 ${Object.entries(CATS).map(([k, c]) => { const l = postsNew.filter(p => hasCat(p, k)); return l.length ? `## ${k} ${c.zh}\n\n${l.map(p => `- [${POST_DETAIL[p.id].seoTitle || p.title}](${abs(url.post(p.id))}): ${cut(POST_DETAIL[p.id].dek, 120)}`).join('\n')}\n` : ''; }).join('\n')}
 ## NEWS 世界旅遊新訊
 
-${newsNew.map(n => `- [${n.title}](${abs(url.news(n.id))}): ${cut(n.dek || '', 120)}`).join('\n')}
+${newsAll.map(n => `- [${n.title}](${abs(url.news(n.id))}): ${cut(n.dek || '', 120)}`).join('\n')}
 
 ## Optional
 
@@ -778,9 +809,9 @@ ${newsNew.map(n => `- [${n.title}](${abs(url.news(n.id))}): ${cut(n.dek || '', 1
 `);
 fs.writeFileSync(path.join(ROOT, 'llms-full.txt'), `# Out and About｜我出去一下就回來（完整內文）\n\n作者：Nomo（Instagram @nomowho）　網站：${abs('/')}\n\n` +
   postsNew.map(p => { const d = POST_DETAIL[p.id]; return `---\n\n# ${d.seoTitle || p.title}\n\n網址：${abs(url.post(p.id))}\n地點：${p.zh}，${p.area}，${REGION_ZH[p.region] || p.region}　分類：${p.cat}　發佈：${iso(p.date)}　更新：${modOf(p, d)}　作者：Nomo\n\n${strip(d.dek)}\n\n${mdBody(d)}\n${d.info ? `## 旅行資訊\n\n${d.info.map(([k, v]) => `- ${strip(k)}：${strip(v)}`).join('\n')}\n\n` : ''}${d.faq ? `## 常見問題\n\n${d.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}${d.sources ? `## 資料來源\n\n${d.sources.map(([t, h]) => `- ${strip(t)}：${h}`).join('\n')}\n\n` : ''}`; }).join('\n') +
-  newsNew.map(n => `---\n\n# ${n.title}\n\n網址：${abs(url.news(n.id))}\n類型：世界旅遊新訊（編譯）　地點：${n.place}　發佈：${iso(n.date)}　原文：${n.src}〈${n.srcTitle}〉 ${n.url}\n\n${strip(n.dek || '')}\n\n${n.body.map(s => `${s.h ? `## ${strip(s.h)}\n\n` : ''}${s.p.map(strip).join('\n\n')}`).join('\n\n')}\n\n${n.faq && n.faq.length ? `## 常見問題\n\n${n.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}`).join('\n'));
+  newsAll.map(n => `---\n\n# ${n.title}\n\n網址：${abs(url.news(n.id))}\n類型：世界旅遊新訊（編譯）　地點：${n.place}　發佈：${iso(n.date)}　原文：${n.src}〈${n.srcTitle}〉 ${n.url}\n\n${strip(n.dek || '')}\n\n${n.body.map(s => `${s.h ? `## ${strip(s.h)}\n\n` : ''}${s.p.map(strip).join('\n\n')}`).join('\n\n')}\n\n${n.faq && n.faq.length ? `## 常見問題\n\n${n.faq.map(([q, a]) => `Q：${strip(q)}\nA：${strip(a)}\n`).join('\n')}\n` : ''}`).join('\n'));
 const feedItems = [...postsNew.map(p => ({ t: POST_DETAIL[p.id].seoTitle || p.title, u: url.post(p.id), d: strip(POST_DETAIL[p.id].dek), date: p.date, c: p.cat })),
-  ...newsNew.map(n => ({ t: n.title, u: url.news(n.id), d: strip(n.dek || ''), date: n.date, c: 'NEWS' }))].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 40);
+  ...newsAll.map(n => ({ t: n.title, u: url.news(n.id), d: strip(n.dek || ''), date: n.date, c: 'NEWS' }))].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 40);
 fs.writeFileSync(path.join(ROOT, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>Out and About｜我出去一下就回來</title><link>${abs('/')}</link><description>Nomo 的旅行雜誌</description><language>zh-TW</language>
@@ -791,7 +822,7 @@ ${feedItems.map(f => `<item><title>${xml(f.t)}</title><link>${abs(f.u)}</link><g
 fs.writeFileSync(path.join(ROOT, '.nojekyll'), '');
 if (CFG.domain) fs.writeFileSync(path.join(ROOT, 'CNAME'), CFG.domain + '\n');
 
-{ const keep = new Set(newsNew.map(n => n.id)); const nd = path.join(ROOT, 'news');
+{ const keep = new Set([...newsAll.map(n => n.id), 'archive']); const nd = path.join(ROOT, 'news');
   if (fs.existsSync(nd)) for (const e of fs.readdirSync(nd, { withFileTypes: true })) if (e.isDirectory() && !keep.has(e.name)) { fs.rmSync(path.join(nd, e.name), { recursive: true, force: true }); console.log('news retired:', e.name); } }
-console.log(`built: ${POSTS.length} stories, ${newsNew.length}/${NEWS.length} news, ${Object.keys(CATS).length} categories, ${SERIES.length} series, ${regions.length} destinations → ${SITE}`);
+console.log(`built: ${POSTS.length} stories, ${newsAll.length} news (${newsNew.length} latest), ${Object.keys(CATS).length} categories, ${SERIES.length} series, ${regions.length} destinations → ${SITE}`);
 if (missing.length) console.warn('MISSING IMAGES:', [...new Set(missing)]);

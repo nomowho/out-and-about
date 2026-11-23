@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/bodoni-moda-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url(/assets/fonts/montserrat-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* Out and About 共用樣式：疊在各版型 CSS 之後。手機優先的修正都放這裡。 */
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:120px}
 body{overflow-x:hidden}
@@ -40,7 +57,7 @@ img{background:#eee}
 body.locked{overflow:hidden}
 
 /* 麵包屑（文章頁） */
-.ahead .crumb{font-family:'Montserrat','Noto Sans TC',sans-serif;font-size:11.5px;color:var(--gray);display:flex;gap:8px;justify-content:center;margin-bottom:18px}
+.ahead .crumb{font-family:'Montserrat','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',system-ui,sans-serif;font-size:11.5px;color:var(--gray);display:flex;gap:8px;justify-content:center;margin-bottom:18px}
 .ahead .crumb i{font-style:normal}
 .ahead .crumb a:hover{color:var(--ink)}
 .split .ahead .crumb{justify-content:flex-start}
@@ -198,7 +215,7 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 
 /* ── Stories：仿 IG 限時動態 ── */
 .stories{text-align:center}
-.stories h3 small{font-family:'Noto Sans TC',sans-serif;font-size:11px;font-weight:500;margin-left:6px}
+.stories h3 small{font-family:'PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',system-ui,sans-serif;font-size:11px;font-weight:500;margin-left:6px}
 .rings{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:18px 8px;margin:18px 0 6px}
 .ring{background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;color:var(--ink);font:inherit;padding:0}
 .ring .av{width:76px;height:76px;border-radius:50%;padding:3px;background:conic-gradient(from 210deg,#111,#8a8a8a,#111);display:block;transition:transform .25s}
@@ -210,7 +227,7 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 .sv-side{display:none}
 .ring:hover .av{transform:scale(1.05)}
 .ring b{font-size:13px;font-weight:700;line-height:1.3}
-.ring time{font-family:'Montserrat','Noto Sans TC',sans-serif;font-size:10.5px;color:var(--gray);line-height:1}
+.ring time{font-family:'Montserrat','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',system-ui,sans-serif;font-size:10.5px;color:var(--gray);line-height:1}
 .stories .lead{text-align:left;font-size:12.5px;line-height:1.75;color:#444;padding:12px 4px 0;border-top:1px solid var(--hair);margin-top:14px}
 
 .sv{position:fixed;inset:0;z-index:80;background:rgba(17,17,17,.94);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;touch-action:none}
@@ -271,7 +288,7 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .tm-pin:hover{transform:scale(1.08)}
 .tm-pin.country{background:rgba(17,17,17,.82);font-size:15px}
 .tm-pin.city{background:#fff;color:var(--ink);box-shadow:0 0 0 2px var(--ink),0 2px 6px rgba(0,0,0,.2);font-size:12px}
-.tm-pin .lb{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:6px;white-space:nowrap;font-family:'Noto Sans TC',sans-serif;font-size:12px;font-weight:700;color:var(--ink);text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff}
+.tm-pin .lb{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:6px;white-space:nowrap;font-family:'PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',system-ui,sans-serif;font-size:12px;font-weight:700;color:var(--ink);text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff}
 .tm-pin.city .lb{display:none}
 .tripmap.show-labels .tm-pin.city .lb{display:block}
 .tm-pop .tm-h{display:flex;align-items:baseline;gap:8px;margin:0 0 8px!important;border-bottom:1px solid var(--hair);padding-bottom:6px}
@@ -282,7 +299,7 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .tm-item span{font-size:13px;line-height:1.45;font-weight:700}
 .tm-item em{display:block;font-style:normal;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:500;color:var(--gray);letter-spacing:.06em}
 .tm-item:hover span{text-decoration:underline}
-.leaflet-container{font-family:'Noto Sans TC',sans-serif}
+.leaflet-container{font-family:'PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',system-ui,sans-serif}
 .leaflet-popup-content{margin:12px 14px}
 @media(max-width:700px){
   .mapwrap{padding:32px 0 0}
@@ -332,7 +349,7 @@ p,dd,dt,li,figcaption,h1,h2,h3{text-wrap:pretty}
 .head .share:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .sharemenu{position:absolute;top:calc(100% + 6px);right:0;z-index:40;min-width:168px;background:#fff;border:1px solid #e4e4e4;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:6px 0;display:flex;flex-direction:column}
 .sharemenu[hidden]{display:none}
-.sharemenu button,.sharemenu a{display:block;text-align:left;width:100%;padding:11px 18px;background:none;border:0;font:500 12px/1.4 'Montserrat','Noto Sans TC',sans-serif;letter-spacing:.06em;color:var(--ink);cursor:pointer;min-height:0}
+.sharemenu button,.sharemenu a{display:block;text-align:left;width:100%;padding:11px 18px;background:none;border:0;font:500 12px/1.4 'Montserrat','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',system-ui,sans-serif;letter-spacing:.06em;color:var(--ink);cursor:pointer;min-height:0}
 .sharemenu button:hover,.sharemenu a:hover{background:#f4f4f4}
 .sharetoast{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom));transform:translate(-50%,12px);background:#111;color:#fff;font-size:13px;letter-spacing:.06em;padding:10px 18px;opacity:0;transition:opacity .25s,transform .25s;z-index:60;pointer-events:none}
 .sharetoast.on{opacity:1;transform:translate(-50%,0)}
@@ -746,3 +763,9 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .body .related-reading li{margin:0 0 14px;line-height:1.85}
 .body .related-reading li:last-child{margin-bottom:0}
 .body .related-reading>p:not(.reading-label){margin:0 0 14px}
+
+/* 可爬取的日誌／新聞分頁，維持原有黑白編輯風格。 */
+.pagination{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:620px;margin:48px auto 64px;font-size:14px}
+.pagination a{display:inline-flex;align-items:center;min-height:44px;padding:8px 2px;border-bottom:2px solid #C8F500;color:var(--ink)}
+.pagination>span{color:var(--gray);white-space:nowrap}
+.archive-link{margin:32px 0 64px;text-align:center}.archive-link a{display:inline-block;padding:10px 0;border-bottom:3px solid #C8F500}
