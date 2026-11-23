@@ -188,7 +188,7 @@ POST_DETAIL['bergen'] = {
   "cardH": "img/bergen/bryggen.jpg",
   "cardV": true,
   "coverCap": "卑爾根港灣前的布呂根木屋與山坡住宅，呈現城市由貿易碼頭向山地展開的格局。",
-  "cardPortrait": "img/bergen/portrait-bryggen.jpg",
+  "cardPortrait": "img/bergen/bryggen.jpg",
   "sources": [
     [
       "Visit Bergen｜World Heritage City",
