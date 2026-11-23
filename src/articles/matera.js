@@ -11,7 +11,7 @@ POST_DETAIL['matera'] = {
     address:{ addressLocality:'Matera', addressRegion:'Basilicata', addressCountry:'IT' }
   },
   cover:'img/matera/cover.jpg',
-  heroImage:'img/matera/hero-hq.jpg',
+  heroImage:'img/matera/hero-desktop.jpg',
   heroMobileImage:'img/matera/hero-mobile.jpg',
   coverCap:"馬泰拉 Sassi 石窟區沿石灰岩坡地層疊展開，黃昏光線讓鑿岩住宅與後加石造立面更容易辨識。",
   body:[

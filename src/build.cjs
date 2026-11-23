@@ -374,14 +374,14 @@ newsNew.forEach(n => {
 });
 
 /* ── 列表頁（分類／系列／目的地） ── */
-function listPage({ file, u, label, h1, desc, posts, lead, nav, crumb, groups, othersTitle, othersZh, others }) {
+function listPage({ file, u, label, h1, desc, posts, lead, leadImage, nav, crumb, groups, othersTitle, othersZh, others }) {
   const grid = list => `<div class="grid">${list.map(p => postCard(p, { land: true, cardImage: u.startsWith('/category/') && POST_DETAIL[p.id] && (POST_DETAIL[p.id].cardsByCategory || {})[nav] })).join('')}</div>`;
   const main = `
     <section class="top">${lead ? `<div class="bg" style="background-image:url(/img/${lead.id}.m.jpg)"></div>` : ''}<div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>${crumb}</span>›<span>${h1}</span></nav>
       <div class="grid2">
         <div><div class="label">${label}</div><h1>${h1}</h1><p>${desc}</p><div class="count">${posts.length} ${posts.length === 1 ? 'STORY' : 'STORIES'}</div></div>
-        ${lead ? `<a href="${url.post(lead.id)}" aria-label="${esc(lead.title)}"><figure>${img(`img/${lead.id}.jpg`, lead.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 600px' })}</figure></a>` : ''}
+        ${lead ? `<a href="${url.post(lead.id)}" aria-label="${esc(lead.title)}"><figure>${img(leadImage || `img/${lead.id}.jpg`, lead.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 600px' })}</figure></a>` : ''}
       </div>
     </div></section>
     <section class="list box">${groups ? `<nav class="areas" id="areas" aria-label="依地區篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${posts.length}</small></a>${groups.map(([g, list]) => `<a href="#${encodeURIComponent(g)}" data-area="${esc(g)}">${g}<small>${list.length}</small></a>`).join('')}</nav>` + groups.map(([g, list]) => `<div class="grpsec" data-area="${esc(g)}"><h2 class="grp" id="${esc(g)}">${g}<small>${list.length}</small></h2>${grid(list)}</div>`).join('') : grid(posts)}</section>
@@ -392,7 +392,7 @@ function listPage({ file, u, label, h1, desc, posts, lead, nav, crumb, groups, o
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: h1, description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
     mainEntity: listLd(h1, posts.map(p => ({ u: url.post(p.id), n: (POST_DETAIL[p.id] || {}).seoTitle || p.title }))) },
     crumbLd([['Out and About', '/'], [h1, u]])];
-  page({ file, title: `${h1}｜${posts.length} 篇旅行文章｜Out and About`, desc: `${desc}共 ${posts.length} 篇，包括${posts.slice(0, 8).map(p => p.zh).join('、')}等，每篇附旅行資訊與常見問題。`.slice(0, 155), canonical: u, image: ogImg(lead), style: 'category', nav, main, ld });
+  page({ file, title: `${h1}｜${posts.length} 篇旅行文章｜Out and About`, desc: `${desc}共 ${posts.length} 篇，包括${posts.slice(0, 8).map(p => p.zh).join('、')}等，每篇附旅行資訊與常見問題。`.slice(0, 155), canonical: u, image: leadImage ? abs('/' + leadImage) : ogImg(lead), style: 'category', nav, main, ld });
   sitemap.push({ loc: u, lastmod: posts.length ? iso([...posts].sort((a, b) => b.date.localeCompare(a.date))[0].date) : BUILD_DATE, images: [] });
 }
 const leadOf = list => [...list].filter(p => p.photo !== false).sort((a, b) => b.likes - a.likes)[0];
@@ -405,7 +405,7 @@ for (const [k, c] of Object.entries(CATS)) {
 }
 for (const s of SERIES) {
   const posts = s.ids.map(i => byId[i]).filter(Boolean);
-  listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, posts, lead: byId[s.img] || leadOf(posts), nav: '', crumb: 'SERIES',
+  listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, posts, lead: byId[s.img] || leadOf(posts), leadImage: s.pageImage, nav: '', crumb: 'SERIES',
     othersTitle: 'More Series', othersZh: '其他系列專題',
     others: SERIES_SHOWN.filter(x => x.id !== s.id).map(x => ({ u: url.series(x.id), t: x.t, n: x.ids.length, img: x.card || (fs.existsSync(path.join(ROOT, 'img', x.img + '.jpg')) ? `img/${x.img}.jpg` : null) })) });
 }
@@ -494,11 +494,17 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     const desktopRatio = Math.max(.8, ratio) * 1.02;
     const heroSizes = `(max-width:700px) ${mobileWidth}vw, min(${(66 * desktopRatio).toFixed(2)}vh, ${Math.ceil(600 * desktopRatio)}px)`;
     let photo = img(src, p.zh, { lazy: false, small: true, sizes: heroSizes });
+    const sources = [];
     if (detail.heroMobileImage) {
       const mobile = detail.heroMobileImage, medium = mobile.replace(/\.[^.]+$/, '.m.jpg'), small = mobile.replace(/\.[^.]+$/, '.s.jpg');
       const set = [small, medium, mobile].filter(f => dims(f)).map(f => `/${f} ${dims(f).w}w`).join(', ');
-      photo = `<picture><source media="(max-width:700px)" srcset="${set}" sizes="84vw">${photo}</picture>`;
+      sources.push(`<source media="(max-width:700px)" srcset="${set}" sizes="84vw">`);
     }
+    const webp = [src.replace(/\.[^.]+$/, '.s.jpg'), src.replace(/\.[^.]+$/, '.m.jpg'), src.replace(/\.[^.]+$/, '.l.jpg'), src]
+      .filter(f => dims(f) && fs.existsSync(path.join(ROOT, f.replace(/\.jpg$/, '.webp'))))
+      .map(f => `/${f.replace(/\.jpg$/, '.webp')} ${dims(f).w}w`).join(', ');
+    if (webp) sources.push(`<source type="image/webp" srcset="${webp}" sizes="${heroSizes}">`);
+    if (sources.length) photo = `<picture>${sources.join('')}${photo}</picture>`;
     return `<a class="slide" href="${url.post(p.id)}" data-i="${i}"><figure>${i === 0 ? photo : photo.replace(' fetchpriority="high"', '').replace(/ (src|srcset)="/g, ' data-$1="')}</figure><div class="cap"><div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div><h2>${p.title}</h2></div></a>`;
   }).join('');
   const main = `

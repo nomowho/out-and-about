@@ -13,7 +13,7 @@ POST_DETAIL['tivoli'] = {
     address:{ addressLocality:'Tivoli', addressRegion:'Lazio', addressCountry:'IT' }
   },
   cover:'img/tivoli/cover.jpg',
-  heroImage:'img/tivoli/hero-hq.jpg',
+  heroImage:'img/tivoli/hero-desktop.jpg',
   heroMobileImage:'img/tivoli/hero-mobile.jpg',
   coverCap:"蒂沃利哈德良別墅的卡諾普斯水池，以雕像與水景重新組合皇帝旅行中的地中海建築印象。",
   body:[

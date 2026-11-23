@@ -16,7 +16,7 @@ const SERIES = [
     d:'大西洋外海的碉堡小島，和阿連特茹平原上的建築。',
     intro:'葡萄牙的風景，總和大西洋脫不了關係。從佩尼謝外海、只能搭船抵達的貝倫加斯群島與海上碉堡，到阿連特茹平原上的現代建築，這個系列收錄我在葡萄牙走過的地方，寫給想避開人潮、往海邊與內陸走得更遠一點的人。',
     region:'Portugal' },
-  { id:'norway', card:'img/reinebringen/cover.jpg', t:'深見　挪威', en:'NORWAY', tag:'峽灣、建築與北極圈', wide:'img/reinebringen/cover.jpg', widePos:'50% 60%', img:'reinebringen',
+  { id:'norway', pageImage:'img/reinebringen/norway-series.jpg', card:'img/reinebringen/cover.jpg', t:'深見　挪威', en:'NORWAY', tag:'峽灣、建築與北極圈', wide:'img/reinebringen/cover.jpg', widePos:'50% 60%', img:'reinebringen',
     d:'從奧斯陸的美術館、南岸海底餐廳，到羅浮敦的山與漁村。',
     intro:'從奧斯陸的孟克美術館、橫跨河面的 The Twist，到南岸的 Under 海底餐廳、Kunstsilo 與 Kilden，再往北走進卑爾根、聖壇岩和羅浮敦群島。這裡整理我在挪威的旅行：爬上 Reinebringen 看峽灣與漁村，在鱈魚乾架下聞魚腥味，到 Trevarefabrikken 蒸桑拿、跳進冰冷的海。',
     region:'Norway' },

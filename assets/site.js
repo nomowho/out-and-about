@@ -484,6 +484,22 @@
     startMap();
   }
 
+  // 輪播僅載入目前與相鄰兩張；移動後再預載，避免十張同時搶頻寬。
+  function loadHeroNear(track, current, total) {
+    [].forEach.call(track.children, function (slide) {
+      var i = Number(slide.getAttribute('data-i'));
+      var distance = ((i - current) % total + total) % total;
+      if (distance !== 0 && distance !== 1 && distance !== total - 1) return;
+      [].forEach.call(slide.querySelectorAll('source[data-srcset]'), function (source) {
+        source.srcset = source.dataset.srcset; source.removeAttribute('data-srcset');
+      });
+      [].forEach.call(slide.querySelectorAll('img[data-src]'), function (im) {
+        if (im.dataset.srcset) im.srcset = im.dataset.srcset;
+        im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset');
+      });
+    });
+  }
+
   /* 手機首屏：原生捲動與吸附，手勢及慣性期間不寫入捲動位置。 */
   function nativeHero(track) {
     var wrap = track.parentElement, originals = [].slice.call(track.children), n = originals.length;
@@ -499,6 +515,7 @@
       pending = 0; if (!step) return;
       var i = Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / step)));
       if (i === current) return; current = i;
+      loadHeroNear(track, i % n, n);
       slides.forEach(function (slide, k) { slide.classList.toggle('on', i === k); });
       if (count) count.textContent = (i % n + 1) + ' / ' + n;
     }
@@ -552,14 +569,12 @@
   var track = $('track');
   if (track) {
     var mobileHeroMode = matchMedia('(pointer:coarse)').matches || innerWidth <= 700;
-    /* 其餘輪播圖等整頁載入完才下載，不跟第一張大圖（LCP）搶頻寬 */
-    var heroRest = function () { [].forEach.call(track.querySelectorAll('source[data-srcset]'), function (source) { source.srcset = source.dataset.srcset; source.removeAttribute('data-srcset'); }); [].forEach.call(track.querySelectorAll('img[data-src]'), function (im) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-src'); im.removeAttribute('data-srcset'); }); };
-    if (document.readyState === 'complete') heroRest(); else addEventListener('load', heroRest);
     if (mobileHeroMode) { nativeHero(track); } else {
     var S = [].slice.call(track.children), N = S.length, v = 0, timer, count = $('count');
     var prev = $('prev'), next = $('next'), wrap = track.parentElement, heroX = 0, dragFrame = 0;
     var mod = function (x) { return ((x % N) + N) % N; };
     var place = function (animate, dx) {
+      loadHeroNear(track, mod(v), N);
       track.style.transition = animate ? '' : 'none';
       var gap = parseFloat(getComputedStyle(track).columnGap) || 24, w = S[0].offsetWidth, step = w + gap;
       S.forEach(function (el, k) { var p = k + N * Math.round((v - k) / N); el.style.transform = p === k ? '' : 'translateX(' + (p - k) * step + 'px)'; el.classList.toggle('on', mod(v) === k); });
