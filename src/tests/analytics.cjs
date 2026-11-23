@@ -6,7 +6,7 @@ function run(opts={}){
  const ctx={URL,Date,Object,WeakSet,WeakMap,clearTimeout(){},setTimeout:f=>{timers.push(f);return timers.length},requestAnimationFrame:f=>raf.push(f),innerHeight:500,location:{hostname:opts.host||'nomowho.com',origin:'https://nomowho.com',pathname:'/stories/the-twist/',search:'?private=secret'},navigator:opts.navigator||{},document:{currentScript:{dataset:{measurement:'G-EXAMPLE123'}},title:'Test article',referrer:'https://example.com/path?private=secret',visibilityState:'visible',readyState:'complete',querySelector:()=>body,querySelectorAll:()=>[rec],createElement:()=>image,head:{appendChild:n=>nodes.push(n)},addEventListener:(n,f)=>clicks[n]=f},addEventListener:(n,f,o)=>events[n]=f,IntersectionObserver:class{constructor(f){observed.push(f)}observe(){}unobserve(){}}};ctx.window=ctx;
  vm.runInNewContext(code,ctx);return {ctx,events,timers,raf,observed,nodes,clicks,rec};
 }
-const r=run();let entries=()=>r.ctx.dataLayer.map(a=>Array.from(a));
+const r=run();r.raf.shift()();r.raf.shift()();let entries=()=>r.ctx.dataLayer.map(a=>Array.from(a));
 assert(entries().some(a=>a[1]==='page_view'));assert(!JSON.stringify(entries()).includes('secret'));assert(!JSON.stringify(entries()).includes('not-sent'));
 assert.equal(entries().filter(a=>a[1]==='article_depth_25').length,1);assert.equal(entries().filter(a=>a[1]==='article_depth_50').length,1);
 r.events.scroll();r.raf.shift()();assert.equal(entries().filter(a=>a[1]==='article_depth_50').length,1);

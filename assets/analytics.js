@@ -14,7 +14,7 @@
   // Start after the first render, without competing with the main photo request.
   var loaded = false;
   function load() { if (loaded) return; loaded = true; var script = document.createElement('script'); script.async = true; script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id; document.head.appendChild(script); }
-  var afterLoad = function () { if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 }); else setTimeout(load, 1500); };
+  var afterLoad = function () { requestAnimationFrame(function () { requestAnimationFrame(function () { if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 }); else setTimeout(load, 1500); }); }); };
   if (document.readyState === 'complete') afterLoad(); else addEventListener('load', afterLoad, { once: true });
   addEventListener('pagehide', load, { once: true });
   var body = document.querySelector('article .body'), sent = {}, queued = false;
