@@ -81,7 +81,7 @@ body.locked{overflow:hidden}
 .card figure{position:relative}
 footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px;margin:28px auto 22px;max-width:720px;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:.12em}
 footer nav a{padding:6px 0;border:0}
-footer .logo small{color:#707070}
+footer .logo small{color:#aaa}
 footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 
 /* ── 平板以下 ── */
@@ -752,3 +752,8 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .pagination a{display:inline-flex;align-items:center;min-height:44px;padding:8px 2px;border-bottom:2px solid #C8F500;color:var(--ink)}
 .pagination>span{color:var(--gray);white-space:nowrap}
 .archive-link{margin:32px 0 64px;text-align:center}.archive-link a{display:inline-block;padding:10px 0;border-bottom:3px solid #C8F500}
+
+/* Latest：黑字與品牌綠底線，確保淺底上的閱讀對比。 */
+.hl-more{color:var(--ink);text-decoration:underline;text-decoration-color:#C8F500;text-decoration-thickness:2px;text-underline-offset:4px}
+.hl-more svg{stroke:var(--ink)}
+
