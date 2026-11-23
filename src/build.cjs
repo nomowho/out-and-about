@@ -100,8 +100,8 @@ const LITE = new Set(['FOOD', 'GUIDE']);   // A3b：篇數還少的分類，選�
 const navLinks = on => `<a href="/news/"${on === 'NEWS' ? ' class="on" aria-current="page"' : ''}>NEWS</a><a href="/destinations/"${on === 'COUNTRIES' ? ' class="on" aria-current="page"' : ''}>DESTINATIONS</a>` +
   Object.keys(CATS).map(k => { const c = [on === k ? 'on' : '', LITE.has(k) ? 'lite' : ''].filter(Boolean).join(' '); return `<a href="${url.cat(k)}"${c ? ` class="${c}"` : ''}${on === k ? ' aria-current="page"' : ''}>${k}</a>`; }).join('');
 
-const PERSON = { '@type': 'Person', '@id': abs('/#nomo'), name: 'Nomo', url: abs('/about/'), sameAs: ['https://www.instagram.com/nomowho/'], description: '旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」，寫建築、藝術、歷史與自然。' };
-const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/nomo-logo.jpg') }, sameAs: ['https://www.instagram.com/nomowho/'] };
+const PERSON = { '@type': 'Person', '@id': abs('/#nomo'), name: 'Nomo', alternateName: 'nomowho', url: abs('/about/'), sameAs: ['https://www.instagram.com/nomowho/'], description: '旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」，寫建築、藝術、歷史與自然。' };
+const ORG = { '@type': 'Organization', '@id': abs('/#org'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho', 'Nomo'], url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/nomo-logo.jpg') }, sameAs: ['https://www.instagram.com/nomowho/'] };
 const crumbLd = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(p) })) });
 const listLd = (name, list) => ({ '@type': 'ItemList', name, numberOfItems: list.length, itemListElement: list.map((x, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(x.u), name: x.n })) });
 
@@ -483,7 +483,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   const isLand = p => { const c = coverOf(p), d = c && dims(c); return !!(d && d.w > d.h * 1.15); };
 
   const main = `
-<h1 class="vh">Out and About｜我出去一下就回來：Nomo 的旅行雜誌</h1>
+<h1 class="vh">我出去一下就回來｜Out and About：Nomo（nomowho）的旅行雜誌</h1>
 <section class="hero" aria-label="精選文章" aria-roledescription="carousel">
   <div class="track" id="track">${TOP7.map((p, i) => `
     <a class="slide" href="${url.post(p.id)}" data-i="${i}">
@@ -506,7 +506,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <ul class="rings one"><li><a class="ring" href="/journal/" aria-label="打開 Photo Journal 攝影日誌，看全部旅行照片">
           <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" loading="lazy" decoding="async"></span>
         </a></li></ul>
-      <p class="bio"><span lang="en">🪐 Places, light, and passing moments.</span>在世界亂走，拍下眼前，無盡探索。</p>
+      <p class="bio">我是 Nomo（@nomowho），這裡是「我出去一下就回來」，也叫「我出去一下」。記錄我親自走過的建築、美術館、山海與餐廳。<br><span lang="en">Out and About · Travel &amp; Photography</span></p>
     </div>
     <a class="ig" href="https://www.instagram.com/nomowho/" rel="me noopener">在 Instagram 追蹤 @nomowho</a>
   </aside>
@@ -560,11 +560,11 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 </section>`;
   const desc = 'Out and About「我出去一下就回來」（簡稱「我出去一下」）是 Nomo（@nomowho）的旅行雜誌：親自走訪的建築、藝術、歷史、自然與信仰之地，每篇附交通、旅行資訊與常見問題，另有每日世界旅遊新訊。';
   const ld = [{ '@context': 'https://schema.org', '@graph': [
-    { '@type': 'WebSite', '@id': abs('/#website'), url: abs('/'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho', 'Out and About 旅行雜誌'], description: desc, inLanguage: 'zh-Hant-TW', publisher: { '@id': abs('/#org') }, author: { '@id': abs('/#nomo') } },
+    { '@type': 'WebSite', '@id': abs('/#website'), url: abs('/'), name: '我出去一下就回來', alternateName: ['我出去一下', 'Out and About', 'nomowho', 'Nomo', 'Out and About 旅行雜誌'], description: desc, inLanguage: 'zh-Hant-TW', publisher: { '@id': abs('/#org') }, author: { '@id': abs('/#nomo') } },
     ORG, PERSON,
     Object.assign({ '@id': abs('/#latest') }, listLd('最新旅行文章', postsNew.slice(0, 20).map(p => ({ u: url.post(p.id), n: (POST_DETAIL[p.id] || {}).seoTitle || p.title }))))
   ] }];
-  page({ file: 'index.html', title: '我出去一下就回來｜Out and About・Nomo 的旅行雜誌', desc, canonical: '/', image: ogImg(TOP7[0]), style: 'home', nav: '', main, ld, bodyCls: 'home' });
+  page({ file: 'index.html', title: '我出去一下就回來｜Nomo（nomowho）的旅行雜誌・Out and About', desc, canonical: '/', image: ogImg(TOP7[0]), style: 'home', nav: '', main, ld, bodyCls: 'home' });
   sitemap.unshift({ loc: '/', lastmod: BUILD_DATE, images: [] });
 }
 
@@ -574,7 +574,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     <header class="ahead noimg"><div class="meta"><span>About</span></div><h1>關於我出去一下就回來</h1>
       <p class="motto"><span>走得遠一點，看得深一些。</span><span lang="en">Go Further. Look Closer.</span></p></header>
     <div class="body">
-      <p>Out and About「我出去一下就回來」（簡稱「我出去一下」），是 Nomo（@nomowho）的旅行、風景與文化個人誌。</p>
+      <p><a href="/">我出去一下就回來｜Out and About 首頁</a>，是我 Nomo（@nomowho）的旅行、風景與文化個人誌，也叫「我出去一下」。</p>
       <p>旅行對我而言，不只是抵達某個地方，更是試著理解一座城市的性格、一棟建築的故事，以及那些藏在日常風景裡的歷史。</p>
       <p>這裡記錄我親自走過的地方，從山海之間的自然景色，到城市裡的建築、藝術、信仰與餐桌。以影像收藏瞬間，以文字延續旅程。</p>
       <p class="pull">一半故事，一半旅行資訊。</p>
@@ -599,7 +599,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <p class="pull">旅行終究會結束，但好奇心可以一直在路上。</p>
     </div></article>`;
   const desc = 'Out and About（我出去一下就回來）是 Nomo 的旅行、風景與文化個人誌：走得遠一點，看得深一些。親自走過的建築、藝術、歷史、自然與信仰，一半故事，一半旅行資訊。';
-  page({ file: 'about/index.html', title: '關於我出去一下就回來｜Out and About', desc, canonical: '/about/', image: ogImg(TOP7[0]), style: 'post', nav: '', main,
+  page({ file: 'about/index.html', title: '關於作者 Nomo（nomowho）｜我出去一下就回來', desc, canonical: '/about/', image: ogImg(TOP7[0]), style: 'post', nav: '', main,
     ld: [{ '@context': 'https://schema.org', '@type': 'AboutPage', '@id': abs('/about/'), name: '關於我出去一下就回來', inLanguage: 'zh-Hant-TW', mainEntity: PERSON, isPartOf: { '@id': abs('/#website') } }, crumbLd([['Out and About', '/'], ['關於', '/about/']])] });
   sitemap.push({ loc: '/about/', lastmod: BUILD_DATE, images: [] });
 
