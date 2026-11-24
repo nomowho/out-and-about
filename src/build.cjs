@@ -632,6 +632,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   <div class="band">
     <div class="sh"><h2>Latest</h2><span class="note">編譯自國際旅遊媒體</span></div>
     <div class="headlines" id="news" role="region" aria-label="世界旅遊新訊，會自動左右輪播"><div class="hl-track">${newsNew.map((n, i) => hlCard(n, i + 1)).join('')}</div></div>
+    <div class="morewrap"><a class="viewmore" href="/news/">View More　›</a></div>
   </div>
   <aside class="side">
     <div class="dbl stories journal-entry" id="journal">
