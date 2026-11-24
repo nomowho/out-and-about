@@ -13,7 +13,7 @@ POST_DETAIL['louvre-pyramid'] = {
     address:{ streetAddress:'99 Rue de Rivoli', addressLocality:'Paris', addressCountry:'FR' }
   },
   cover:'img/louvre-pyramid/cover.jpg', coverLayout:'split',
-  coverCap:"羅浮宮地下卡魯塞勒商場的倒金字塔，由貝聿銘事務所設計；玻璃尖端與小石金字塔相對，將自然光引入地下。",
+  coverCap:"羅浮宮地下的倒金字塔，貝聿銘設計的，玻璃尖端對著下面的小石金字塔，把光引進地下。",
   body:[
     { t:'p', text:'所有人都在地面上排隊拍大金字塔，但我更喜歡地下的這一座。它倒著懸在半空，像讓光與時間靜靜往下墜。' },
     { t:'h', id:'where', text:'羅浮宮倒金字塔的位置' },

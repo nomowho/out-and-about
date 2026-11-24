@@ -13,7 +13,7 @@ POST_DETAIL['izu'] = {
     address:{ addressLocality:'伊豆市', addressRegion:'靜岡縣', addressCountry:'JP' }
   },
   cover:'img/izu/cover-cover.jpg', coverLayout:'split',
-  coverCap:"修善寺竹林小徑入夜點燈，是伊豆溫泉街散步與白天不同的景觀，也適合接續住宿安排。",
+  coverCap:"入夜點燈的修善寺竹林，和白天是兩個樣子。",
   body:[
     { t:'p', text:'走進修善寺竹林小徑，光線很快暗了一階。竹葉把日光切碎在石板上，旁邊是桂川的水聲。這趟兩天一夜，我從三島往南，經過伊豆長岡、修善寺與湯島；離東京其實不算遠，但一進伊豆半島，節奏自然就慢了下來。' },
 
@@ -28,27 +28,27 @@ POST_DETAIL['izu'] = {
     { t:'h', id:'unagi', text:'三島：一碗 1856 年開始的鰻魚飯' },
     { t:'p', text:'三島是伊豆的入口，也是有名的鰻魚之城。「うなぎ桜家」創業於安政三年（1856 年），已經賣了一百六十多年。店裡會先把鰻魚泡在富士山雪水滲成的伏流水裡，去掉土味，再上炭火蒲燒。' },
     { t:'p', text:'蒲燒的炭香從門口就飄出來。端上桌的那碗，鰻魚厚得像在說話，油脂和醬汁之間有一種拿捏了上百年的平衡。人氣很高，中午常常排隊，最好開門前就到。' },
-    { t:'img', size:'side', src:'img/izu/content-unagi.jpg', cap:"三島鰻魚飯以蒲燒香氣與醬汁搭配白飯，是從三島進入伊豆半島時值得安排的一餐。" },
+    { t:'img', size:'side', src:'img/izu/content-unagi.jpg', cap:"三島的鰻魚飯，蒲燒的香氣配上一碗白飯。" },
 
     { t:'h', id:'katsuragi', text:'葛城山：一邊喝抹茶，一邊看富士山' },
     { t:'p', text:'從伊豆長岡搭纜車上葛城山，海拔 452 公尺，視野突然打開：駿河灣的銀色弧線橫在眼前，天氣好的時候看得到富士山的稜線。山頂的茶屋把抹茶端出來，背景就是整座海灣。這種搭配，大概只有伊豆做得到。' },
-    { t:'pair', imgs:['img/izu/content-katsuragi-2.jpg','img/izu/content-katsuragi-3.jpg'], cap:"左：葛城山觀景處可遠望富士山，視野取決於當天天候。右：山頂茶屋將抹茶與駿河灣景觀放在同一桌。" },
-    { t:'img', size:'wide', src:'img/izu/content-katsuragi-1.jpg', cap:"葛城山山頂的咖啡休息點，讓搭纜車看富士山與駿河灣的行程多了停留時間。" },
+    { t:'pair', imgs:['img/izu/content-katsuragi-2.jpg','img/izu/content-katsuragi-3.jpg'], cap:"左：葛城山上遠望富士山，看不看得到要看天氣。右：山頂的茶屋，抹茶配駿河灣。" },
+    { t:'img', size:'wide', src:'img/izu/content-katsuragi-1.jpg', cap:"山頂的咖啡休息點，看完富士山再坐一下。" },
 
     { t:'h', id:'shuzenji', text:'修善寺：空海用錫杖敲出來的溫泉' },
     { t:'p', text:'修善寺溫泉是伊豆最古老的溫泉，起源是一個關於孝順的傳說：807 年，弘法大師空海路過這裡，看到一個少年在冰冷的桂川裡替生病的父親擦洗身體。大師心生憐憫，用手上的法具獨鈷杵敲擊河中的岩石，熱泉隨即湧出，這就是溫泉街中央的「獨鈷之湯」。連溫泉，都是用故事煮出來的。' },
     { t:'p', text:'沿著桂川往上走，就是竹林小徑。這段路不長，卻是整個溫泉街最安靜的地方，傍晚點燈後更美。' },
-    { t:'pair', imgs:['img/izu/content-shuzenji-1.jpg','img/izu/content-shuzenji-2.jpg'], cap:"左：伊豆行程中的神社參拜空間，從拜殿與參道觀察布局。右：修善寺溫泉街的石板路，適合沿水岸慢慢步行。" },
+    { t:'pair', imgs:['img/izu/content-shuzenji-1.jpg','img/izu/content-shuzenji-2.jpg'], cap:"左：神社的拜殿和參道。右：修善寺溫泉街的石板路，沿著水邊慢慢走。" },
 
     { t:'h', id:'history', text:'鎌倉將軍、夏目漱石，都和這個小鎮有關' },
     { t:'p', text:'1204 年，鎌倉幕府的第二代將軍源賴家被幽禁在修善寺，同年在這裡遇害。幾百年後，作家夏目漱石來修善寺養病時一度病危，史稱「修善寺大患」，後來他把這段經歷寫進了隨筆。這個看起來很安靜的溫泉小鎮，見過的事比它看起來多。' },
-    { t:'img', size:'side', src:'img/izu/content-shuzenji-3.jpg', cap:"參拜路上遇見的鹿群，讓這段行程在神社建築與溫泉街之外，多了一次停留。" },
+    { t:'img', size:'side', src:'img/izu/content-shuzenji-3.jpg', cap:"參拜路上遇到的鹿，是行程裡的小驚喜。" },
 
     { t:'h', id:'yugashima', text:'湯島：在溪邊吃一頓川床料理' },
     { t:'p', text:'從修善寺再往天城山的方向坐約 30 分鐘巴士，就到湯島溫泉。我住的「湯ヶ島たつた」把餐桌直接搭在山溪邊，這就是「川床」，一種從江戶時代流傳下來、在河邊用餐的傳統。流水聲是背景音樂，端上來的是伊豆的山海食材，季節一換，菜就跟著換。' },
     { t:'p', text:'客房沿著溪流蓋，露天風呂也面向河。泡完溫泉，穿著浴衣在走廊站一下，窗外是黑色的竹林。這種靜，在東京要花錢都買不到。' },
-    { t:'pair', imgs:['img/izu/content-kawadoko.jpg','img/izu/content-ryokan-2.jpg'], cap:"左：湯島川床料理讓用餐與溪畔環境相連。右：入夜點燈的修善寺竹林，適合安排在晚間散步。" },
-    { t:'pair', imgs:['img/izu/content-ryokan-1.jpg','img/izu/content-ryokan-3.jpg'], cap:"左：伊豆旅館的夜間入口，接續白天山海行程。右：房間木牌鑰匙，留下這次溫泉住宿的小細節。" },
+    { t:'pair', imgs:['img/izu/content-kawadoko.jpg','img/izu/content-ryokan-2.jpg'], cap:"左：湯島的川床料理，坐在溪邊吃。右：入夜點燈的修善寺竹林。" },
+    { t:'pair', imgs:['img/izu/content-ryokan-1.jpg','img/izu/content-ryokan-3.jpg'], cap:"左：旅館的夜間入口。右：房間的木牌鑰匙，很有溫泉旅館的味道。" },
     { t:'p', text:'伊豆把一千年的事情，都塞進一個週末的行程裡，卻一點都不趕。你會選哪一種日本週末：東京的人潮，還是伊豆的靜？' },
     { t:'h', id:'more', text:'修善寺溫泉街值得停的地方' },
     { t:'p', text:'修善寺溫泉被列在「日本百名湯」裡，名字就來自空海在 807 年開創的修禪寺。今天的獨鈷之湯在桂川河中的一塊小洲上，已經改成免費的足湯，只能泡腳，不能下去泡澡。從修善寺站搭路線巴士到溫泉街，大約 8 分鐘。' },

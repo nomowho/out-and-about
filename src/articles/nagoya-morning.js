@@ -8,7 +8,7 @@ POST_DETAIL['nagoya-morning'] = {
   dek:'名古屋的「モーニング」是點一杯咖啡，就免費附上吐司、水煮蛋等早餐的喫茶店文化。本篇介紹兩種風格：名古屋站附近的昭和老店 Coffee House Kako（約 ¥500–650），和東區的精品烘豆店 AOI CELESTIE COFFEE ROASTERY（約 ¥600–900）。',
   updated:'2026-11-17',
   cover:'img/nagoya-morning/IMG_7234.jpg', coverLayout:'split',
-  coverCap:"厚切吐司、紅豆與蛋，是認識名古屋モーニング早餐文化的入口；各店搭配與加價方式不盡相同。",
+  coverCap:"厚吐司、紅豆和水煮蛋，名古屋早上就是這樣開始。",
   visit:'2026 年 5 月',
   body:[
     { t:'p', text:'名古屋早上八點，咖啡館的玻璃門一推開，先出來的是奶油烤吐司的香味，然後是昭和年代老歌的餘音。一坐下，點了一杯咖啡，服務生卻問：「蛋要水煮的嗎？吐司要幾片？」' },
@@ -19,14 +19,14 @@ POST_DETAIL['nagoya-morning'] = {
 
     { t:'h', id:'kako', text:'Coffee House Kako：走進昭和時光機' },
     { t:'p', text:'Kako 在名古屋站附近，厚重的木頭桌椅、磨砂玻璃燈罩，菜單上的字體像是從 1970 年代影印過來的。早餐組合沒有驚喜，就是那幾樣：厚切奶油吐司、水煮蛋、小沙拉。但名古屋人已經吃了幾十年，不需要驚喜，他們要的是那個氣味、那個座位、那份熟悉的沉默。' },
-    { t:'pair', imgs:['img/nagoya-morning/card3_IMG_7262.jpg','img/nagoya-morning/card1_IMG_7255.jpg'], cap:"左：Coffee House Kako 延續名古屋老喫茶店的早餐習慣。右：吧台咖啡器具，呈現以一杯飲料開始早晨的店內日常。" },
-    { t:'img', size:'side', src:'img/nagoya-morning/card2_IMG_7230.jpg', cap:"名古屋喫茶店的 MORNING MENU 說明早餐時段與搭配，點飲料前可先確認附餐內容。" },
+    { t:'pair', imgs:['img/nagoya-morning/card3_IMG_7262.jpg','img/nagoya-morning/card1_IMG_7255.jpg'], cap:"左：Coffee House Kako，老喫茶店的早晨。右：吧台上的咖啡器具，一杯飲料就是一個早上的開始。" },
+    { t:'img', size:'side', src:'img/nagoya-morning/card2_IMG_7230.jpg', cap:"菜單上寫著早餐時段和搭配，點咖啡前先看一眼。" },
     { t:'p', text:'點飲料就附厚切奶油吐司、水煮蛋和小沙拉，一個人大約 ¥500 到 ¥650。早上 7 點就開門，可以排在搭車出發前。' },
 
     { t:'h', id:'aoi', text:'AOI CELESTIE：精品咖啡的新モーニング' },
     { t:'p', text:'幾公里外，東區的 AOI CELESTIE COFFEE ROASTERY 說的是完全不同的空間語言：現代建築、裸木、精準的燈光，單品豆的產地標籤就掛在牆上。但它沒有拋棄名古屋的モーニング，改了一種做法：用自家烘焙的單品豆手沖，配一份細心設計的早餐，問的是「為什麼豐盛和品味不能同時存在？」' },
-    { t:'pair', imgs:['img/nagoya-morning/card4_IMG_8088.jpg','img/nagoya-morning/card6_IMG_7974.jpg'], cap:"左：AOI CELESTIE 將新式咖啡館帶進名古屋街角。右：落地窗座位與老喫茶的室內氣氛不同，早餐文化則延續其中。" },
-    { t:'img', size:'wide', src:'img/nagoya-morning/card5_IMG_8027.jpg', cap:"AOI CELESTIE 的吐司早餐，以分盛配料搭配咖啡，呈現名古屋モーニング的新式做法。" },
+    { t:'pair', imgs:['img/nagoya-morning/card4_IMG_8088.jpg','img/nagoya-morning/card6_IMG_7974.jpg'], cap:"左：AOI CELESTIE，名古屋街角的新式咖啡館。右：落地窗邊的位置，早餐習慣還在，氣氛不一樣。" },
+    { t:'img', size:'wide', src:'img/nagoya-morning/card5_IMG_8027.jpg', cap:"吐司配料分開放，是名古屋モーニング的新做法。" },
     { t:'p', text:'→ AOI CELESTIE 的建築另寫了一篇：<a href="post.html#aoi-celestie">永山祐子設計的藍色磁磚屋頂</a>' },
 
     { t:'h', id:'tips', text:'吃名古屋早餐的注意事項' },

@@ -12,7 +12,7 @@ POST_DETAIL['lofoten-stockfish'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/lofoten-stockfish/rows.jpg",
-      "cap": "捕撈後的鱈魚掛上戶外木架，不加鹽風乾約三個月；海灣旁的架子仍是漁村生產空間。"
+      "cap": "捕撈上來的鱈魚掛在戶外的木架上，不加鹽風乾約三個月，海灣旁的架子還是漁村的生產現場。"
     },
     {
       "t": "h",
@@ -29,7 +29,7 @@ POST_DETAIL['lofoten-stockfish'] = {
         "img/lofoten-stockfish/rack-portrait.jpg",
         "img/lofoten-stockfish/boats.jpg"
       ],
-      "cap": "左：鱈魚成對掛上羅浮敦魚架，以海風自然乾燥，不需加鹽。右：魚架下方停著小船，捕撈與加工緊鄰同一段漁港水岸。"
+      "cap": "左：鱈魚成對掛在魚架上，靠海風自然乾燥，不用加鹽。右：魚架下停著小船，捕魚和加工就在同一段水岸。"
     },
     {
       "t": "h",
@@ -45,7 +45,7 @@ POST_DETAIL['lofoten-stockfish'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/lofoten-stockfish/cloud.jpg",
-      "cap": "羅浮敦山海之間的魚架，所依賴的是冷而不過度冰凍的冬春氣候，並非只為觀光保留的裝置。"
+      "cap": "山和海之間的魚架，靠的是冷卻不會太冰的冬春氣候，不是為了觀光才留的。"
     },
     {
       "t": "h",
@@ -61,7 +61,7 @@ POST_DETAIL['lofoten-stockfish'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/lofoten-stockfish/close.jpg",
-      "cap": "成束魚頭也被掛上魚架乾燥，讓羅浮敦鱈魚加工不只利用魚身，並連向不同的出口市場。"
+      "cap": "魚頭也掛起來乾燥，鱈魚從頭到尾都用得到，賣到不同的市場。"
     },
     {
       "t": "h",
@@ -77,14 +77,14 @@ POST_DETAIL['lofoten-stockfish'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/lofoten-stockfish/packaged-stockfish.jpg",
-      "cap": "包裝上的 Tørrfisk 就是挪威風乾魚；從海邊木架到商店零食，同一項漁產發展出不同食用形式。"
+      "cap": "包裝上的 Tørrfisk 就是挪威的風乾魚，從海邊木架變成商店裡的零食。"
     },
     {
       "t": "img",
       "size": "wide",
       "fit": "natural",
       "src": "img/lofoten-stockfish/bundles.jpg",
-      "cap": "從魚架下方看風乾鱈魚，能理解成束懸掛的加工方式，也能近看漁村貿易延續至今的現場。"
+      "cap": "從魚架底下往上看，才看得懂成束掛起來的做法。"
     },
     {
       "t": "p",
@@ -135,5 +135,5 @@ POST_DETAIL['lofoten-stockfish'] = {
   "cover": "img/lofoten-stockfish/fish-heads-cover.jpg",
   "cardH": "img/lofoten-stockfish/cover.jpg",
   "cardV": true,
-  "coverCap": "羅浮敦魚架上的成束鱈魚頭，與魚身一樣利用海風乾燥，是漁村加工與出口產業的一部分。"
+  "coverCap": "成束的魚頭和魚身一樣靠海風吹乾，是漁村加工和出口的一環。"
 };

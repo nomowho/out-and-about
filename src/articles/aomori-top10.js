@@ -7,7 +7,7 @@ POST_DETAIL['aomori-top10'] = {
   dek:'青森冬天最值得去的 10 個地方：青龍寺昭和大佛、奧入瀨溪流、十和田湖、弘前洋館與前川國男建築、弘前紅磚倉庫美術館、青森縣立美術館、睡魔之家 WA RASSE、廣田神社、A-FACTORY 和青森港 AOMORI 地標。依青森市區、弘前、十和田・奧入瀨三區安排最順。',
   updated:'2026-11-17',
   cover:'img/aomori-top10/cover.jpg', coverLayout:'split',
-  coverCap:"弘前紅磚倉庫美術館的雪景，為這份青森冬季行程揭開序幕：老建築、藝術與雪地風景可以一起安排。",
+  coverCap:"弘前紅磚倉庫美術館的雪景，青森冬天的清單從這裡開始。",
   visit:'2025 年 12 月底至 2026 年 1 月初',
   body:[
     { t:'p', text:'手套戴戴脫脫，就是忍不住按快門。大佛肩上的雪、溪邊透著淡藍的冰瀑，還有奈良美智那隻在雪裡低著頭的巨型犬。青森的冬天很冷，但走到這些地方，總會想再多站一下。這是我的青森冬日清單，從第一名開始。' },
@@ -23,52 +23,52 @@ POST_DETAIL['aomori-top10'] = {
     ]},
 
     { t:'h', id:'no1', text:'1. 青龍寺昭和大佛：日本最大的青銅坐佛' },
-    { t:'img', size:'side', src:'img/aomori-top10/01_seiryuji.jpg', cap:"青龍寺的昭和大佛高 21.35 公尺；積雪覆上青銅佛身，是冬季參拜與暖季不同的景象。" },
+    { t:'img', size:'side', src:'img/aomori-top10/01_seiryuji.jpg', cap:"積雪蓋在昭和大佛肩上，冬天來才看得到。" },
     { t:'p', text:'站到大佛面前，要把頭仰起來才看得清祂的臉。佛身高 21.35 公尺，是日本最大的青銅坐佛，比奈良、鎌倉的都高。在暴風雪中，整座寺看起來像千年古蹟；結果一查，這尊大佛 1984 年才落成，比不少來看祂的人還年輕。' },
     { t:'p', text:'→ 完整介紹：<a href="post.html#seiryuji">青森昭和大佛（青龍寺）暴雪參拜全攻略</a>' },
 
     { t:'h', id:'no2', text:'2. 奧入瀨溪流：雪裡還在流動的 14 公里' },
     { t:'p', text:'溪岸和石頭裹著厚厚的雪，水還在縫隙間奔流，停下腳步就聽得見。從十和田湖的子之口到燒山約 14 公里，冬天最值得留意的是岩壁垂下的冰柱與冰瀑。不必走完全程；雪季先確認可以走的路段，再安排當季巴士或導覽，不能隨到隨搭。想好好慰勞自己，可以在星野奧入瀨溪流飯店住個兩晚。' },
-    { t:'img', size:'wide', src:'img/aomori-top10/02_oirase.jpg', cap:"奧入瀨溪流冬季仍有流水，覆雪岩石與岸邊冰瀑，讓同一段溪谷呈現不同的水景。" },
+    { t:'img', size:'wide', src:'img/aomori-top10/02_oirase.jpg', cap:"奧入瀨的溪水冬天還在流，岸邊的冰瀑是它另一個樣子。" },
     { t:'p', text:'→ 完整介紹：<a href="post.html#oirase">冬日限定的奧入瀨溪流</a>、<a href="post.html#hoshino-oirase">星野奧入瀨溪流飯店</a>' },
 
     { t:'h', id:'no3', text:'3. 十和田湖：日本第三深的湖，和一場人龍之戰' },
     { t:'p', text:'湖面看起來平靜，底下最深有 327 公尺，是日本第三深的湖。地方傳說裡，八郎太郎與南祖坊為了爭當湖主，打了七天七夜；湖畔的十和田神社也與這段傳說相連，記得走一趟開運小徑。' },
-    { t:'img', size:'side', src:'img/aomori-top10/03_towada.jpg', cap:"十和田神社參道通往湖畔信仰的核心，也連著十和田湖的人龍傳說。" },
+    { t:'img', size:'side', src:'img/aomori-top10/03_towada.jpg', cap:"十和田神社的參道，走到底就是人龍傳說的湖。" },
     { t:'p', text:'→ 完整介紹：<a href="post.html#towada">十和田湖的人龍之戰</a>' },
 
     { t:'h', id:'no4', text:'4. 弘前散步：洋館和前川國男的現代建築' },
     { t:'p', text:'紅圓頂、白牆、八角形雙塔，1906 年落成的舊弘前市立圖書館，是木匠堀江佐吉鑽研西洋建築的作品。再走到附近的市役所、市民會館，又換成前川國男的現代建築。這位曾在柯比意事務所工作的建築師，母親家族與弘前有淵源，市內至今留著八棟他的作品，連 1932 年的第一件作品「木村產業研究所」都還在。光看房子就值得留半天。' },
-    { t:'pair', imgs:['img/aomori-top10/04_hirosaki_meiji.jpg','img/aomori-top10/04_hirosaki_showa.jpg'], cap:"左：舊弘前市立圖書館的木造洋館，完成於 1906 年。右：前川國男的現代建築，提供另一條弘前建築散步線索。" },
+    { t:'pair', imgs:['img/aomori-top10/04_hirosaki_meiji.jpg','img/aomori-top10/04_hirosaki_showa.jpg'], cap:"左：舊弘前市立圖書館的木造洋館，1906 年蓋的。右：前川國男的現代建築，弘前的另一種味道。" },
 
     { t:'h', id:'no5', text:'5. 弘前紅磚倉庫美術館：屋頂是蘋果酒的金色' },
     { t:'p', text:'走近看，紅磚的顏色深深淺淺，屋頂卻泛著金光。這批百年倉庫最早用來釀日本酒，戰後成了蘋果酒工廠，經建築師田根剛改建，2020 年以美術館的身分開館。屋頂的鈦板特別做成「蘋果酒金」（シードル・ゴールド），隨光線變化會映出不同色澤。' },
-    { t:'img', size:'wide', src:'img/aomori-top10/05_brick.jpg', cap:"田根剛改造的弘前紅磚倉庫美術館，延續老倉庫的磚牆，也保留了釀造產業的歷史。" },
+    { t:'img', size:'wide', src:'img/aomori-top10/05_brick.jpg', cap:"老倉庫的紅磚牆留下來了，裡面換成了美術館。" },
 
     { t:'h', id:'no6', text:'6. 青森縣立美術館：冬天才看得到的白帽青森犬' },
     { t:'p', text:'冬季限定的白帽青森犬，坐在比地面低的戶外空間裡，光高度就有 8.5 公尺。雪積得厚了，頭上會多一頂白帽子，讓奈良美智這隻大狗看起來有點委屈，又有點可愛。冬季戶外通道關閉，要從館內隔著玻璃看牠。進了展場，也別錯過夏卡爾的《阿萊科》巨幅舞台背景畫。' },
-    { t:'img', size:'side', src:'img/aomori-top10/06_aomoriken.jpg', cap:"奈良美智的《青森犬》在冬天戴上雪帽，是青森縣立美術館與其他季節不同的觀看重點。" },
+    { t:'img', size:'side', src:'img/aomori-top10/06_aomoriken.jpg', cap:"《青森犬》冬天戴上雪帽，是青森縣立美術館最可愛的時候。" },
     { t:'p', text:'→ 完整介紹：<a href="post.html#aomori-museum">青森犬戴上厚厚白帽子</a>' },
 
     { t:'h', id:'no7', text:'7. 睡魔之家 WA RASSE：八月沒趕上，冬天來補看' },
     { t:'p', text:'八月沒跟上睡魔祭，冬天可以來這裡補看。館裡展示真正上過街的大型睡魔燈籠，靠近才看得清和紙透出的光、武將臉上的筆觸，還有撐起巨大身形的骨架。定時的囃子演奏與體驗也值得等，鼓棒拿到手，就輪到你加入青森的祭典節奏。' },
-    { t:'pair', imgs:['img/aomori-top10/07_nebuta_L.jpg','img/aomori-top10/07_nebuta_R.jpg'], cap:"左：睡魔之家 WA RASSE 以紅色立面面向青森港。右：館內展示大型睡魔燈籠，冬天也能認識青森祭典工藝。" },
+    { t:'pair', imgs:['img/aomori-top10/07_nebuta_L.jpg','img/aomori-top10/07_nebuta_R.jpg'], cap:"左：睡魔之家 WA RASSE 面向青森港。右：冬天也能看到大型的睡魔燈籠。" },
 
     { t:'h', id:'no8', text:'8. 廣田神社：手水舍裡漂著蘋果' },
     { t:'p', text:'參拜前，先被手水舍裡的蘋果吸引。水面漂著一顆顆果實，連淨手的地方都看得出來到了青森。這裡以祈求消災除厄的「病厄除」信仰聞名，也有睡魔造型的繪馬。從青森站步行約 15 分鐘，想在市區找個安靜的地方，可以繞進來看看。' },
-    { t:'pair', imgs:['img/aomori-top10/09_hirota_TL.jpg','img/aomori-top10/09_hirota_BR.jpg'], cap:"左：廣田神社的蘋果手水，將青森物產帶進參拜儀式。右：鳥居與睡魔繪馬，呈現在地信仰與祭典的連結。" },
+    { t:'pair', imgs:['img/aomori-top10/09_hirota_TL.jpg','img/aomori-top10/09_hirota_BR.jpg'], cap:"左：廣田神社的手水舍漂著蘋果。右：鳥居旁掛著睡魔繪馬。" },
 
     { t:'h', id:'no9', text:'9. A-FACTORY：喝一輪青森蘋果酒' },
     { t:'p', text:'在海邊吹過冷風，正好進來逛逛。玻璃後面是蘋果酒的釀造設備，貨架上是蘋果點心、果汁和各式青森土產，很難只買原本打算買的那一樣。二樓可以買試飲卡，比較不同 cidre 的甜度與風味；試飲區和商店的營業時間不同，記得留意。' },
-    { t:'img', size:'wide', src:'img/aomori-top10/08_afactory.jpg', cap:"青森站旁的 A-FACTORY 集合蘋果酒與地方物產，可接著睡魔之家安排港邊散步。" },
+    { t:'img', size:'wide', src:'img/aomori-top10/08_afactory.jpg', cap:"A-FACTORY 在青森站旁，蘋果酒和地方物產都在這裡。" },
 
     { t:'h', id:'no10', text:'10. 青森港 AOMORI 地標：拍一張「到青森了」' },
     { t:'p', text:'一片白雪裡，這排黃色字母特別顯眼。旁邊就是海，附近有八甲田丸和青森灣大橋，拍張合照就很有「到青森了」的感覺。地標在青森站旁的 A-BEACH，和 A-FACTORY、睡魔之家一起逛，剛好串成一段港邊散步。' },
-    { t:'img', size:'wide', src:'img/aomori-top10/10_shinaomori.jpg', cap:"A-BEACH 的 AOMORI 字母地標緊鄰車站與港灣，適合納入青森市區冬日步行路線。" },
+    { t:'img', size:'wide', src:'img/aomori-top10/10_shinaomori.jpg', cap:"AOMORI 字母地標就在港邊，「到青森了」拍一張。" },
 
     { t:'h', id:'end', text:'最後' },
     { t:'p', text:'這十站，有些要走進雪裡，有些能躲進室內慢慢看。行程別塞太滿，留點時間暖手，也留點時間給那些原本沒打算停下來的地方，像是一塊剛出爐的蘋果派。' },
-    { t:'img', size:'side', src:'img/aomori-top10/11_closing.jpg', cap:"用一份蘋果派為雪地行程暖身，也嚐嚐青森最有代表性的果物風味。" },
+    { t:'img', size:'side', src:'img/aomori-top10/11_closing.jpg', cap:"先吃一份蘋果派，再繼續在雪地裡走。" },
     { t:'p', text:'如果只能先選一站，你會去哪裡？' },
   ],
   info:[

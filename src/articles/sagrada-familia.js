@@ -15,37 +15,37 @@ POST_DETAIL['sagrada-familia'] = {
     geo:[41.4036, 2.1744]
   },
   cover:'img/sagrada-familia/content-card01.jpg',
-  coverCap:"造訪時的聖家堂仍立著吊車，高第留下的教堂設計在後世持續建造，塔群與工程一起構成當時的城市景觀。",
+  coverCap:"去的時候吊車還立在塔旁，教堂還在蓋。",
   body:[
     { t:'p', text:'1926 年 6 月的一個下午，一個衣著破舊的老人在巴塞隆納街頭被電車撞倒。路人和計程車司機以為他是流浪漢，遲遲沒有人送他去醫院。三天後，訃聞傳遍全球：Antoni Gaudí，73 歲，過世。他奉獻了 43 年的聖家堂，還沒蓋完。' },
 
     { t:'h', id:'start', text:'聖家堂一開始不是高第設計的' },
     { t:'p', text:'對。1882 年，聖家堂由另一位建築師 Francisco de Paula del Villar 開工，不到一年就因為和委託方意見不合而辭職。1883 年，31 歲的高第接手，他幾乎推翻了原本的新哥德式設計，從此把後半生都押在這座教堂上，晚年甚至直接住在工地裡。' },
-    { t:'img', size:'side', src:'img/sagrada-familia/content-card02.jpg', cap:"從周邊高處望向聖家堂，可辨認教堂塔群與巴塞隆納街區之間的尺度差異。" },
+    { t:'img', size:'side', src:'img/sagrada-familia/content-card02.jpg', cap:"從高處往下看，教堂和街區的尺度差很多。" },
 
     { t:'h', id:'nature', text:'高第的設計方法' },
     { t:'p', text:'高第不太靠平面圖，而是用懸掛的鏈條做模型：讓重力自己找出最穩定的曲線，再把模型倒過來，就是拱的形狀。懸鏈線、雙曲面、像樹一樣分叉的柱子，每一個決定都來自自然法則。他說過：自然界沒有直線。' },
     { t:'p', text:'外牆三個立面各講一段故事：東側的「誕生立面」雕滿動植物和耶穌誕生的場景，是高第生前親自監造完成的部分；西側的「受難立面」線條冷硬、像骨頭一樣，講的是耶穌受難。塔尖上還頂著一顆顆像水果的彩色雕飾。' },
-    { t:'pair', imgs:['img/sagrada-familia/content-card03.jpg','img/sagrada-familia/content-card04.jpg'], cap:"左：聖家堂受難立面以冷硬線條表達耶穌受難。右：密集雕刻讓外牆成為可逐段閱讀的宗教敘事。" },
-    { t:'img', size:'wide', src:'img/sagrada-familia/content-card09b.jpg', cap:"聖家堂青銅門以文字構成門面，突出的 JESUS 字樣將觀看重點帶回耶穌的故事。" },
+    { t:'pair', imgs:['img/sagrada-familia/content-card03.jpg','img/sagrada-familia/content-card04.jpg'], cap:"左：受難立面的線條又冷又硬。右：雕刻一整面，像一本可以慢慢讀的書。" },
+    { t:'img', size:'wide', src:'img/sagrada-familia/content-card09b.jpg', cap:"青銅門上直接寫著 JESUS，一眼就知道主角是誰。" },
 
     { t:'h', id:'fire', text:'1936 年的那把火' },
     { t:'p', text:'1936 年西班牙內戰爆發，聖家堂的工作室遭到焚燒，高第留下的圖紙和石膏模型幾乎全毀。接下來的幾十年，建築師們從殘存的模型碎片、老照片和高第的筆記裡，一點一點拼回這個天才的構想。' },
-    { t:'pair', imgs:['img/sagrada-familia/content-card05b.jpg','img/sagrada-familia/content-card06.jpg'], cap:"左：從聖家堂塔上看巴塞隆納，城市街廓與教堂形成對照。右：彩色果實塔飾，延續高第從自然取材的造型。" },
+    { t:'pair', imgs:['img/sagrada-familia/content-card05b.jpg','img/sagrada-familia/content-card06.jpg'], cap:"左：從塔上看巴塞隆納。右：彩色的果實塔飾，高第從大自然偷來的靈感。" },
 
     { t:'h', id:'permit', text:'聖家堂曾被說是違建' },
     { t:'p', text:'直到 2019 年，聖家堂都沒有正式的建築許可。開工 137 年後，教堂基金會才和巴塞隆納市政府達成協議、繳費取得許可。世界上最有名的建築之一，就這樣當了一百多年的「違建」。' },
     { t:'p', text:'聖家堂從 1882 年到今天，興建費用都來自門票和捐款，沒有靠政府預算。你買的每一張門票，都是這棟建築的一塊磚。' },
-    { t:'img', size:'full', src:'img/sagrada-familia/content-card07.jpg', cap:"高塔與施工吊車同框，記錄這次造訪時聖家堂的建造階段，也呈現大型教堂工程如何融入巴塞隆納日常。" },
+    { t:'img', size:'full', src:'img/sagrada-familia/content-card07.jpg', cap:"高塔和吊車同框，這是我去的時候的聖家堂。" },
 
     { t:'h', id:'tower', text:'2026 年，耶穌塔終於完成' },
     { t:'p', text:'2026 年剛好是高第逝世一百週年。這年 2 月 20 日，中央的「耶穌基督之塔」安上了十字架的上臂，聖家堂的最高點達到 172.5 公尺，成為世界最高的教堂建築。光是頂端的十字架就有 17 公尺高，差不多一棟五層樓。' },
     { t:'p', text:'但聖家堂還沒有全部完工，正面的「榮耀立面」等部分仍在施工。也許正因為一直沒蓋完，它才一直讓人想再回來。' },
-    { t:'img', size:'side', src:'img/sagrada-familia/content-card15.jpg', cap:"傍晚天色轉暗後，聖家堂塔群留下清楚輪廓，也顯出建築在巴塞隆納城市天際線中的位置。" },
+    { t:'img', size:'side', src:'img/sagrada-familia/content-card15.jpg', cap:"天色暗下來，塔群的輪廓反而更清楚。" },
 
     { t:'h', id:'visit', text:'參觀聖家堂的注意事項' },
     { t:'p', text:'聖家堂在市區的 Carrer de Mallorca 401，搭地鐵 L2 或 L5 到 Sagrada Família 站，出站就到。旺季門票常常賣完，建議提早在官網預約時段票；想登塔要另外買含登塔的票種。教堂是宗教場所，進入時要注意服裝，不要穿太短或露肩。' },
-    { t:'pair', imgs:['img/sagrada-familia/content-card13.jpg','img/sagrada-familia/content-card14.jpg'], cap:"左：聖家堂入口人流顯示預約參觀的重要性。右：從住宿窗口回望教堂，保留這趟巴塞隆納旅行的私人視角。" },
+    { t:'pair', imgs:['img/sagrada-familia/content-card13.jpg','img/sagrada-familia/content-card14.jpg'], cap:"左：入口人很多，記得先預約。右：從住的地方窗口回頭看教堂。" },
     { t:'h', id:'towers', text:'聖家堂的塔，和現在蓋到哪裡' },
     { t:'p', text:'高第的設計一共有 18 座塔：12 座代表十二使徒，4 座代表四位福音作者，再加上聖母瑪利亞塔和最高的耶穌基督塔。到 2026 年，已經完成 14 座：誕生立面和受難立面各 4 座使徒塔、4 座福音作者塔、聖母塔，以及耶穌基督塔。榮耀立面上那 4 座使徒塔，還在等。' },
     { t:'p', text:'近幾年的進度很快。2021 年 11 月 29 日，一顆 7 公尺高、十二個尖角的發光水晶星裝上了聖母塔；耶穌基督塔 2025 年 10 月 30 日先到 162.91 公尺，2026 年 2 月 20 日到達 172.5 公尺的全高，同年 6 月 10 日由教宗良十四世祝福啟用。塔的內部預計 2028 年完工。' },

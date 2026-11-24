@@ -13,7 +13,7 @@ POST_DETAIL['hoshino-oirase'] = {
     address:{ addressLocality:'十和田市', addressRegion:'青森縣', addressCountry:'JP' }
   },
   cover:'img/hoshino-oirase/cover-01.jpg', coverLayout:'split',
-  coverCap:"奧入瀨溪流飯店以岡本太郎的大型暖爐迎接住客，室內爐火與窗外雪林構成冬季住宿的核心景象。",
+  coverCap:"大廳的爐火燒著，窗外是一整片雪林。",
   visit:'2025 年 12 月底',
   body:[
     { t:'p', text:'十二月底走進奧入瀨溪流飯店，手指已經凍到不太聽使喚。推開門的瞬間，先聞到柴火味：木頭正在燃燒，空氣裡有一點煙，也有一點甜。大廳中央那團火安靜地燒著，窗外是一整片覆雪的森林。坐在沙發上喝著青森蘋果汁，我竟然放空到忘了把外套脫掉。' },
@@ -21,29 +21,29 @@ POST_DETAIL['hoshino-oirase'] = {
 
     { t:'h', id:'only', text:'住在奧入瀨溪流旁邊的理由' },
     { t:'p', text:'奧入瀨溪流從十和田湖的子之口一路流到燒山，全長約 14 公里，沿著這條溪谷，只有這一間度假飯店。住在這裡真正值錢的，是一天裡那些沒有遊客的時刻：白天的遊覽車還沒進來以前、傍晚最後一班車離開之後，溪谷重新回到森林自己。早上七點走出去，新雪上的腳印，是昨夜經過的動物留下的。' },
-    { t:'pair', imgs:['img/hoshino-oirase/02_card_L.jpg','img/hoshino-oirase/03_card.jpg'], cap:"左：雪夜中的奧入瀨溪流飯店，是溪谷冬季行程的住宿據點。右：飯店周邊森林，讓看雪不必等到正式出發。" },
+    { t:'pair', imgs:['img/hoshino-oirase/02_card_L.jpg','img/hoshino-oirase/03_card.jpg'], cap:"左：雪夜裡的飯店。右：出門前，窗外的森林就已經很好看。" },
 
     { t:'h', id:'okamoto', text:'岡本太郎留下的兩座大暖爐' },
     { t:'p', text:'飯店的兩個館各有一座巨大的暖爐，都是藝術家岡本太郎的作品。東館大廳迎接旅客的是「森之神話」，上面爬滿人、小鳥、蘑菇和森林精靈；西館「溪流 BASE」裡的是「河神」，像一棵從地板長到天花板的大樹。' },
     { t:'p', text:'岡本太郎在 1996 年 1 月過世，這兩座暖爐也成了他晚年留下的作品。坐在底下，柴火劈哩啪啦地響。有時候藝術不需要解釋，只需要在雪夜裡陪你坐一會兒。西館的溪流圖書室還提供咖啡和茶，可以就這樣窩一個下午。' },
-    { t:'pair', imgs:['img/hoshino-oirase/04_card_L.jpg','img/hoshino-oirase/04_card_R.jpg'], cap:"左：岡本太郎的《河神》以樹狀量體延伸室內高度。右：《森之神話》的爐火，讓藝術作品也參與飯店日常使用。" },
-    { t:'img', size:'wide', src:'img/hoshino-oirase/01_card_A.jpg', cap:"奧入瀨溪流飯店以大片玻璃保留森林視野，待在大廳也能觀察溪谷的冬季變化。" },
+    { t:'pair', imgs:['img/hoshino-oirase/04_card_L.jpg','img/hoshino-oirase/04_card_R.jpg'], cap:"左：岡本太郎的《河神》，長得像一棵樹。右：《森之神話》的爐火，是每天真的在燒的藝術。" },
+    { t:'img', size:'wide', src:'img/hoshino-oirase/01_card_A.jpg', cap:"大片玻璃把森林搬進大廳，坐著就能看雪。" },
 
     { t:'h', id:'hyobaku', text:'冰瀑之湯：泡在一面冰牆前' },
     { t:'p', text:'飯店的露天風呂面對溪流，冬天會變身成「冰瀑之湯」：大約從 12 月中旬開始，露天風呂旁的岩壁慢慢凍成一面冰瀑，最大可以長到高約 3.5 公尺、寬約 16 公尺，一直到隔年 3 月中旬都看得到。' },
     { t:'p', text:'它不是蓋出來的，是被冬天慢慢養大的。日照、氣溫、風向，每一天都在重新雕刻它的形狀。泡在八甲田山湧出的溫泉裡看它，熱氣往上飄，冰牆在夜裡泛著藍光。' },
-    { t:'img', size:'full', src:'img/hoshino-oirase/06_card.jpg', cap:"奧入瀨溪流飯店的冰瀑之湯，將露天溫泉與季節性冰壁放在同一處觀景空間。" },
+    { t:'img', size:'full', src:'img/hoshino-oirase/06_card.jpg', cap:"泡著溫泉，面前就是一面冰牆。" },
 
     { t:'h', id:'tour', text:'冬天的限定活動' },
     { t:'p', text:'每年 12 月中旬到 3 月上旬，飯店有「冰瀑點燈之旅」：晚上帶住客進溪谷，配合導覽時間替冰瀑和冰柱打燈，只有參加的人才看得到黑暗裡浮出來的藍色冰柱。天黑後還能到戶外的焚火露台，一圈椅子面向雪林，晚餐後端杯熱紅酒出去，臉被火烤得發燙，背後卻還是零下，人就浪漫地卡在這個溫差裡。' },
-    { t:'pair', imgs:['img/hoshino-oirase/07_card.jpg','img/hoshino-oirase/09_card_R.jpg'], cap:"左：飯店冰瀑點燈之旅提供冬夜溪谷導覽。右：夜間照明呈現與白天不同的雪林景象，須配合安排參加。" },
+    { t:'pair', imgs:['img/hoshino-oirase/07_card.jpg','img/hoshino-oirase/09_card_R.jpg'], cap:"左：冬夜的冰瀑點燈導覽。右：夜裡的雪林，跟白天是兩個樣子。" },
 
     { t:'h', id:'room', text:'房間和餐廳' },
     { t:'p', text:'房間用木質障子門、壓得很低的燈光，顏色刻意收斂，因為最漂亮的東西根本不在房間裡：拉開窗簾，就是結冰的溪谷和覆雪的枝椏。晚上把燈關掉躺著，什麼都看不見，只剩溪流一整夜沒有停過。' },
     { t:'p', text:'飯店也把森林搬進室內：苔綠色的地毯、像溪邊石頭一樣散落的圓形座墊，牆上畫著奧入瀨的植物與溪流。還有苔蘚散步、苔玉冰淇淋等以苔蘚為主題的體驗。' },
     { t:'p', text:'自助餐廳「青森蘋果廚房」的入口上方，吊著幾百顆紅色蘋果燈。在這裡可以一次比較不同品種的青森蘋果汁：津輕偏酸、王林帶花香、富士最甜。' },
-    { t:'pair', imgs:['img/hoshino-oirase/05_card_R.jpg','img/hoshino-oirase/08_card_TL.jpg'], cap:"左：客房以收斂的燈光與木質元素營造休息空間。右：青森蘋果廚房以蘋果燈呼應餐廳的地方食材主題。" },
-    { t:'img', size:'side', src:'img/hoshino-oirase/09_card_L.jpg', cap:"奧入瀨溪流飯店的窗邊休息區，適合在溪谷活動之間停留，把住宿時間留給窗外森林。" },
+    { t:'pair', imgs:['img/hoshino-oirase/05_card_R.jpg','img/hoshino-oirase/08_card_TL.jpg'], cap:"左：客房的燈光收得很柔，木頭讓人安靜下來。右：蘋果燈掛在餐廳，呼應青森的蘋果。" },
+    { t:'img', size:'side', src:'img/hoshino-oirase/09_card_L.jpg', cap:"窗邊的位置，什麼都不做就很好。" },
 
     { t:'h', id:'access', text:'冬天怎麼去奧入瀨溪流飯店' },
     { t:'p', text:'最方便的是飯店的接駁巴士，都要在 2 天前預約，額滿就截止：' },

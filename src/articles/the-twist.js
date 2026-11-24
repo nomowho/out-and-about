@@ -18,7 +18,7 @@ POST_DETAIL['the-twist'] = {
   "cover": "img/the-twist/cover.jpg",
   "cardH": "img/the-twist/cover.jpg",
   "cardV": true,
-  "coverCap": "BIG 設計的 The Twist 橫跨 Randselva 河，以 90 度扭轉接合兩岸，同時作為 Kistefos 的展館與橋梁。",
+  "coverCap": "The Twist 橫跨 Randselva 河，扭轉 90 度接起兩岸，是展館也是橋。",
   "body": [
     {
       "t": "p",
@@ -29,7 +29,7 @@ POST_DETAIL['the-twist'] = {
       "size": "wide",
       "src": "img/the-twist/river-view.jpg",
       "fit": "natural",
-      "cap": "從河岸看 The Twist，能讀出建築兩端不同的高度與寬度，造型直接回應跨河與展覽需求。"
+      "cap": "從河岸看，兩端的高度和寬度都不一樣，造型就是為了跨河和展覽。"
     },
     {
       "t": "h",
@@ -44,7 +44,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/entrance.jpg",
-      "cap": "Kistefos 入口連接樹林、雕塑與工業遺產路線；The Twist 是其中串連兩岸的重要節點。"
+      "cap": "Kistefos 的入口連著樹林、雕塑和老廠區，The Twist 是串起兩岸的那一點。"
     },
     {
       "t": "p",
@@ -54,7 +54,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "tall",
       "src": "img/the-twist/mill.jpg",
-      "cap": "Nybruket 紅磚建築保留 Kistefos 的老廠區尺度，與 The Twist 並置，呈現木漿產業到藝術園區的轉變。"
+      "cap": "Nybruket 的紅磚老建築，和 The Twist 站在一起，木漿工廠變成了藝術園區。"
     },
     {
       "t": "h",
@@ -69,13 +69,13 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/loop.jpg",
-      "cap": "The Twist 將兩岸步道接成環形參觀路線，增加展覽空間的同時，也減少遊客沿原路折返。"
+      "cap": "兩岸的步道接成一圈，展覽變多了，也不用原路走回頭。"
     },
     {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/overhead.jpg",
-      "cap": "俯看 The Twist 的中段扭轉，能清楚辨識兩端展覽空間如何在跨河處轉換方向。"
+      "cap": "從上面看中段的扭轉，兩端的展間在這裡轉了方向。"
     },
     {
       "t": "p",
@@ -94,13 +94,13 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/south.jpg",
-      "cap": "The Twist 入口的高挑量體，與另一端較低寬的空間形成對比，是扭轉造型帶來的空間差異。"
+      "cap": "入口這端比較高，另一端比較低寬，是扭轉帶來的差別。"
     },
     {
       "t": "img",
       "size": "tall",
       "src": "img/the-twist/entry-walk.jpg",
-      "cap": "沿步道走近 The Twist，連續銀白板條讓入口、外牆與扭轉段的關係逐漸清楚。"
+      "cap": "沿著步道走近，銀白色的板條慢慢把入口、外牆和扭轉段連在一起。"
     },
     {
       "t": "p",
@@ -110,7 +110,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "wide",
       "src": "img/the-twist/inside.jpg",
-      "cap": "The Twist 以直線構件排列出連續扭轉，室內牆面與天花板在行進中逐步交換方向。"
+      "cap": "直線的板條排出連續的扭轉，走在裡面牆和天花板慢慢換方向。"
     },
     {
       "t": "h",
@@ -131,7 +131,7 @@ POST_DETAIL['the-twist'] = {
         "img/the-twist/twist.jpg",
         "img/the-twist/window.jpg"
       ],
-      "cap": "左：The Twist 扭轉段讓牆面與頂部連續轉向。右：大窗沿 Randselva 河展開，把看展動線接回園區景觀。"
+      "cap": "左：扭轉的地方，牆壁連到天花板。右：大窗沿著河開，看展的時候風景也一起進來。"
     },
     {
       "t": "p",
@@ -141,7 +141,7 @@ POST_DETAIL['the-twist'] = {
       "t": "img",
       "size": "full",
       "src": "img/the-twist/bridge.jpg",
-      "cap": "回到 Kistefos 河岸，The Twist 的橋梁功能與雕塑般外形可以同時觀看。"
+      "cap": "回到河岸，橋和雕塑般的外形一起看。"
     },
     {
       "t": "h",
@@ -157,7 +157,7 @@ POST_DETAIL['the-twist'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/the-twist/restroom.jpg",
-      "cap": "The Twist 下層廁所以玻璃與鏡面延伸洗手區視線，建築參觀也延續到容易被忽略的服務空間。"
+      "cap": "下層的廁所用玻璃和鏡面把視線拉長，連這種地方也很好看。"
     },
     {
       "t": "p",
@@ -169,7 +169,7 @@ POST_DETAIL['the-twist'] = {
         "img/the-twist/projection.jpg",
         "img/the-twist/eyeball.jpg"
       ],
-      "cap": "左：廁所隔間的嘴唇影像，讓日常設施加入觀看內容。右：球體上的眼睛投影，改變了參觀者與影像彼此注視的關係。"
+      "cap": "左：廁所隔間裡的嘴唇影像。右：球體上的眼睛，觀眾和作品互相看著對方。"
     },
     {
       "t": "p",
@@ -180,7 +180,7 @@ POST_DETAIL['the-twist'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/the-twist/point-of-view.jpg",
-      "cap": "Elmgreen & Dragset 的《Points of View – Part 2》隔窗朝向室內，將觀看者與被觀看者的位置反轉。"
+      "cap": "Elmgreen & Dragset 的《Points of View – Part 2》，窗戶朝向室內，看的人變成被看的人。"
     },
     {
       "t": "h",
@@ -197,7 +197,7 @@ POST_DETAIL['the-twist'] = {
         "img/the-twist/red-sculpture.jpg",
         "img/the-twist/bear.jpg"
       ],
-      "cap": "左：當代雕塑與 Kistefos 舊廠房並置，形成不同年代的對話。右：熊頭與孩童身體的組合，讓林間散步多了一次辨認形象的停頓。"
+      "cap": "左：當代雕塑和老廠房站在一起。右：熊頭接在孩子的身體上，林間散步多了一個停頓。"
     },
     {
       "t": "p",

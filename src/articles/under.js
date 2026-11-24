@@ -15,7 +15,7 @@ POST_DETAIL['under'] = {
     }
   },
   "cover": "img/under/aerial.jpg",
-  "coverCap": "Snøhetta 設計的挪威 Under 海底餐廳，從 Lindesnes 岩岸斜向海床，將建築與用餐體驗一起放入海中。",
+  "coverCap": "Under 從 Lindesnes 的岩岸斜斜地沉進海裡，建築和用餐一起泡在水中。",
   "body": [
     {
       "t": "p",
@@ -33,7 +33,7 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/coast.jpg",
-      "cap": "Under 的入口留在岸上，用餐空間則沉入水下；從岩岸觀看，能讀出建築隨地形下降的配置。",
+      "cap": "入口在岸上，用餐的地方沉在水下，從岩岸看過去，建築順著地形往下。",
       "size": "wide"
     },
     {
@@ -43,13 +43,13 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/aerial.jpg",
-      "cap": "從空中看 Under，步道、入口與水下量體是一段連續動線，餐廳同時回應陸岸與海床。",
+      "cap": "從空中看，步道、入口和水下的量體連成一條線。",
       "size": "wide"
     },
     {
       "t": "img",
       "src": "img/under/aerial-overhead.jpg",
-      "cap": "Under 周邊由淺至深的水色，呈現岩岸地形與建築入海位置，也補足室內觀海窗看不到的環境。",
+      "cap": "周圍的水色由淺到深，是室內窗看不到的海岸。",
       "size": "wide"
     },
     {
@@ -64,7 +64,7 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/entrance.jpg",
-      "cap": "Under 的木質入口與粗糙混凝土外殼形成對比，為從海岸走向水下的參觀順序揭開序幕。",
+      "cap": "木頭的入口接上粗糙的混凝土外殼，走向水下的路從這裡開始。",
       "size": "wide"
     },
     {
@@ -94,7 +94,7 @@ POST_DETAIL['under'] = {
         "img/under/foyer.jpg",
         "img/under/waterline.jpg"
       ],
-      "cap": "左：橡木迎賓空間讓 Under 的入口保有暖色材質。右：直立窗標示海水高度，人在下降途中就能感知水面位置。"
+      "cap": "左：橡木的迎賓空間，入口還是暖的。右：直立窗標出海水的高度，往下走就知道水面在哪。"
     },
     {
       "t": "p",
@@ -107,13 +107,13 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/window.jpg",
-      "cap": "Under 的大型觀海窗將天然海域帶入用餐空間；窗外魚群與水母隨當時海況出現，並非人工水族展示。",
+      "cap": "大片的觀海窗把真正的海帶進來，窗外的魚和水母是當天海裡有什麼就有什麼，不是水族箱。",
       "size": "full"
     },
     {
       "t": "img",
       "src": "img/under/dining-wide.jpg",
-      "cap": "從階梯看 Under 用餐區，圓桌朝向海底觀景窗，讓每一桌與海景之間保有不同觀看角度。",
+      "cap": "從階梯往下看，圓桌都朝著海底的窗。",
       "size": "wide"
     },
     {
@@ -131,7 +131,7 @@ POST_DETAIL['under'] = {
         "img/under/table.jpg",
         "img/under/service.jpg"
       ],
-      "cap": "左：Under 餐桌緊鄰觀海視野，魚群成為當次用餐的一部分。右：桌邊介紹讓南挪威食材與料理做法有了具體說明。"
+      "cap": "左：餐桌貼著窗，魚就在旁邊游。右：桌邊的介紹，讓南挪威的食材有了名字。"
     },
     {
       "t": "p",
@@ -165,7 +165,7 @@ POST_DETAIL['under'] = {
         "img/under/canape.jpg",
         "img/under/bites.jpg"
       ],
-      "cap": "Under 的開場小點以不同器皿依序上桌，將整套菜單分成短小的品嚐段落，逐步進入主餐。"
+      "cap": "開場的小點心用不同的器皿一道一道上，整套菜單先分成小小的段落。"
     },
     {
       "t": "p",
@@ -177,12 +177,12 @@ POST_DETAIL['under'] = {
         "img/under/seafood.jpg",
         "img/under/asparagus.jpg"
       ],
-      "cap": "左：Under 的海鮮料理呼應南挪威沿岸食材。右：當次菜單以蘆筍搭配麴與野蒜，呈現蔬菜與發酵風味的組合。"
+      "cap": "左：海鮮料理，南挪威沿岸的食材。右：這次菜單的蘆筍配麴和野蒜，蔬菜和發酵的組合。"
     },
     {
       "t": "img",
       "src": "img/under/bread.jpg",
-      "cap": "Under 將酸種麵包與澤西牛乳奶油單列一段，讓發酵、穀物與乳製品也成為套餐主角。",
+      "cap": "酸種麵包和澤西牛乳奶油自己成一道，發酵、穀物和乳製品也是主角。",
       "size": "wide"
     },
     {
@@ -195,7 +195,7 @@ POST_DETAIL['under'] = {
         "img/under/plate.jpg",
         "img/under/fish.jpg"
       ],
-      "cap": "Under 套餐由海鮮延伸到蔬菜與發酵配料，照片保留當次出餐形式，菜色會依季節調整。"
+      "cap": "套餐從海鮮走到蔬菜和發酵配料，這是當次的菜色，會隨季節換。"
     },
     {
       "t": "p",
@@ -204,7 +204,7 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/main.jpg",
-      "cap": "當次 Under 牛肉料理搭配野生香草與根芹，讓套餐從沿海食材延伸到南挪威的陸地風味。",
+      "cap": "牛肉配野生香草和根芹，從海邊走到南挪威的陸地。",
       "size": "tall"
     },
     {
@@ -240,7 +240,7 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/drink.jpg",
-      "cap": "Under 的 The Meadow 無酒精搭餐，以果實、花草與發酵風味呼應料理，是這次用餐很驚喜的一段。",
+      "cap": "The Meadow 無酒精搭餐，用果實、花草和發酵，是這次用餐最驚喜的一段。",
       "size": "tall"
     },
     {
@@ -250,7 +250,7 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/dessert.jpg",
-      "cap": "Under 的甜點以果實、乳製品等風味收尾，延續當次菜單從海鮮走向陸地與季節收成的安排。",
+      "cap": "甜點用果實和乳製品收尾，從海鮮一路吃到陸地和季節的收成。",
       "size": "wide"
     },
     {
@@ -265,7 +265,7 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/menu.jpg",
-      "cap": "這次 Under 套餐與 The Meadow 飲品單，記錄大黃、花草與發酵食材如何在餐點和搭餐中反覆出現。",
+      "cap": "菜單和飲品單，大黃、花草和發酵食材一直重複出現。",
       "size": "wide"
     },
     {
@@ -329,13 +329,13 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/night.jpg",
-      "cap": "夜間 Under 的岸上入口與水下餐廳呈現不同光色，建築入海的路徑因此更加鮮明。",
+      "cap": "夜裡，岸上的入口和水下的餐廳亮著不同的光。",
       "size": "full"
     },
     {
       "t": "img",
       "src": "img/under/night-aerial.jpg",
-      "cap": "從夜間空拍回看 Under，沿岸步道接上水下亮光，完整呈現海底餐廳與 Lindesnes 海岸的位置關係。",
+      "cap": "夜間空拍，岸邊步道接上水下的亮光，看得出餐廳在 Lindesnes 的位置。",
       "size": "wide"
     },
     {

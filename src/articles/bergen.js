@@ -20,7 +20,7 @@ POST_DETAIL['bergen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/bergen/bryggen.jpg",
-      "cap": "布呂根港邊的尖頂立面，如今容納旅館、餐飲與商店，呈現老港區持續被使用的商業空間。"
+      "cap": "港邊的尖頂立面，現在是旅館、餐廳和商店，老港區還在被使用。"
     },
     {
       "t": "p",
@@ -35,7 +35,7 @@ POST_DETAIL['bergen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/bergen/quay.jpg",
-      "cap": "從港灣對岸回望布呂根，旅館與餐飲店沿舊港區展開；昔日貿易碼頭，也是今日旅人住宿與用餐的地方。"
+      "cap": "從港灣對岸回頭看，以前是貿易碼頭，現在是旅人住和吃的地方。"
     },
     {
       "t": "h",
@@ -61,14 +61,14 @@ POST_DETAIL['bergen'] = {
         "img/bergen/flowers.jpg",
         "img/bergen/street.jpg"
       ],
-      "cap": "左：離開布呂根碼頭，卑爾根散步路線轉入住宅街角。右：沿坡延伸的街道，呈現港城依山發展的地形。"
+      "cap": "左：離開碼頭，走進住宅的街角。右：街道順著山坡往上，港城就是這樣靠山蓋起來的。"
     },
     {
       "t": "img",
       "src": "img/bergen/window-seat.jpg",
       "size": "tall",
       "fit": "natural",
-      "cap": "卑爾根街角的窗邊座位，讓港口與世界遺產之外的市區散步，多了一處可以停留的地方。"
+      "cap": "街角的窗邊座位，離開港邊和世界遺產之後可以坐下來休息。"
     },
     {
       "t": "h",
@@ -85,7 +85,7 @@ POST_DETAIL['bergen'] = {
         "img/bergen/avenue.jpg",
         "img/bergen/waterfront-hillside.jpg"
       ],
-      "cap": "左：從卑爾根市區街道看港灣，不必登山也能找到視線開闊的位置。右：隔著港灣看卑爾根，岸邊建築、山坡住宅與森林層層相接，纜車軌道沿山勢向上延伸。"
+      "cap": "左：不用爬山，市區街道也看得到港灣。右：隔著港灣看，岸邊、山坡住宅和森林一層一層，纜車軌道沿著山往上。"
     },
     {
       "t": "pair",
@@ -93,7 +93,7 @@ POST_DETAIL['bergen'] = {
         "img/bergen/tree-lined-path.jpg",
         "img/bergen/stepped-gable.jpg"
       ],
-      "cap": "左：綠蔭步道沿坡而下，把卑爾根街景分成遠近幾層。右：階梯山牆與後方屋頂，適合放在同一段市區建築散步中細看。"
+      "cap": "左：綠蔭步道沿著坡往下，街景分成遠近幾層。右：階梯山牆和後面的屋頂，可以慢慢看。"
     },
     {
       "t": "h",
@@ -109,14 +109,14 @@ POST_DETAIL['bergen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/bergen/market.jpg",
-      "cap": "卑爾根魚市場集合海鮮與即食料理，也是從布呂根延伸認識港城飲食的方便一站。"
+      "cap": "魚市場有海鮮和現做的小吃，逛完布呂根接著來很方便。"
     },
     {
       "t": "img",
       "size": "wide",
       "fit": "natural",
       "src": "img/bergen/gulls.jpg",
-      "cap": "卑爾根港邊的海鳥與行人，共享碼頭外的步行空間；沿水岸慢走，也能看見城市日常。"
+      "cap": "港邊的海鳥和行人，沿水岸慢慢走就是城市的日常。"
     },
     {
       "t": "pair",
@@ -124,7 +124,7 @@ POST_DETAIL['bergen'] = {
         "img/bergen/blue-door.jpg",
         "img/bergen/square.jpg"
       ],
-      "cap": "左：卑爾根住宅街區的粉藍立面與老木門，適合在離開碼頭後慢慢步行尋訪。右：市中心的彩虹斑馬線，和布呂根彩色木屋一起串起這趟港城散步。"
+      "cap": "左：住宅區的粉藍立面和老木門，離開碼頭後慢慢逛。右：市中心的彩虹斑馬線，和布呂根的彩色木屋一起串起這趟散步。"
     },
     {
       "t": "h",
@@ -190,7 +190,7 @@ POST_DETAIL['bergen'] = {
   "coverSaturation": 1.15,
   "cardH": "img/bergen/bryggen.jpg",
   "cardV": true,
-  "coverCap": "卑爾根港灣前的布呂根木屋與山坡住宅，呈現城市由貿易碼頭向山地展開的格局。",
+  "coverCap": "港灣前的布呂根木屋和山坡上的住宅，城市從貿易碼頭一路往山上長。",
   "cardPortrait": "img/bergen/bryggen.jpg",
   "sources": [
     [

@@ -11,7 +11,7 @@ POST_DETAIL['stavanger'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/stavanger/swords-close.jpg",
-      "cap": "Fritz Røed 的三劍紀念碑，以一大兩小的青銅劍象徵交戰的國王；劍固定在岩石中，表達和平的意義。"
+      "cap": "一大兩小的青銅劍，代表交戰的國王，劍插在岩石裡，是和平的意思。"
     },
     {
       "t": "h",
@@ -31,7 +31,7 @@ POST_DETAIL['stavanger'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/stavanger/shore.jpg",
-      "cap": "退遠觀看斯塔萬格三劍紀念碑，能把青銅巨劍與哈弗斯峽灣的地理背景放在一起理解。"
+      "cap": "退遠一點看，青銅巨劍和哈弗斯峽灣放在同一個畫面裡。"
     },
     {
       "t": "h",
@@ -47,7 +47,7 @@ POST_DETAIL['stavanger'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/stavanger/park.jpg",
-      "cap": "三劍紀念碑周邊的草地與沙灘，讓歷史紀念空間也成為斯塔萬格日常使用的水岸公園。"
+      "cap": "周圍的草地和沙灘，紀念碑也是斯塔萬格人平常的水岸公園。"
     },
     {
       "t": "pair",
@@ -55,7 +55,7 @@ POST_DETAIL['stavanger'] = {
         "img/stavanger/walk.jpg",
         "img/stavanger/beach.jpg"
       ],
-      "cap": "左：哈弗斯峽灣岸邊的散步路線，適合接續三劍紀念碑參觀。右：近旁沙灘提供與青銅紀念碑不同的親水尺度。"
+      "cap": "左：峽灣邊的散步路線，看完劍可以接著走。右：旁邊的沙灘，比青銅碑親近多了。"
     },
     {
       "t": "p",
@@ -67,7 +67,7 @@ POST_DETAIL['stavanger'] = {
         "img/stavanger/tents.jpg",
         "img/stavanger/gathering.jpg"
       ],
-      "cap": "左：造訪時草地上的帳篷，記錄紀念碑周邊的當地活動。右：桌邊聚會讓這處戰役紀念地保有生活氣息。"
+      "cap": "左：草地上有人搭了帳篷。右：桌邊聚會，戰役紀念地也有生活的氣息。"
     },
     {
       "t": "h",
@@ -136,5 +136,5 @@ POST_DETAIL['stavanger'] = {
   "cardH": "img/stavanger/cover.jpg",
   "cardV": true,
   "updated": "2026-11-23",
-  "coverCap": "斯塔萬格三劍紀念碑 Sverd i fjell 立於哈弗斯峽灣旁，以插入岩石的巨劍，紀念與挪威統一相關的戰役。"
+  "coverCap": "三把巨劍插在哈弗斯峽灣旁的岩石裡，紀念統一挪威的那場戰役。"
 };

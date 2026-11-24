@@ -13,7 +13,7 @@ POST_DETAIL['preikestolen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/preikestolen/cliff.jpg",
-      "cap": "聖壇岩側面的垂直岩壁，呈現冰河退去後岩塊分離留下的斷崖，也是理解石台高度的角度。"
+      "cap": "側面的垂直岩壁，是冰河退去後岩塊分開留下的斷崖，才看得出石台有多高。"
     },
     {
       "t": "h",
@@ -34,7 +34,7 @@ POST_DETAIL['preikestolen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/preikestolen/trailhead.jpg",
-      "cap": "聖壇岩步道入口標示 Preikestolen，從這裡出發須安排往返步行及石台停留時間。"
+      "cap": "步道入口寫著 Preikestolen，往返和在石台停留的時間要先算好。"
     },
     {
       "t": "p",
@@ -46,7 +46,7 @@ POST_DETAIL['preikestolen'] = {
         "img/preikestolen/steps.jpg",
         "img/preikestolen/rock-trail.jpg"
       ],
-      "cap": "左：聖壇岩路線穿過森林石階。右：離開樹林後轉為裸岩坡，顯示這趟健行需面對不同路面。"
+      "cap": "左：路線先穿過森林的石階。右：離開樹林就是裸岩坡，一路路面一直在變。"
     },
     {
       "t": "p",
@@ -58,14 +58,14 @@ POST_DETAIL['preikestolen'] = {
         "img/preikestolen/boardwalk.jpg",
         "img/preikestolen/tarn.jpg"
       ],
-      "cap": "左：木棧道銜接聖壇岩沿線的濕地。右：岩間水潭提供不同於峽灣的近景變化，也是路途值得停看的景觀。"
+      "cap": "左：木棧道接著沿線的濕地。右：岩縫之間的水潭，是走路時的小風景。"
     },
     {
       "t": "img",
       "size": "wide",
       "fit": "natural",
       "src": "img/preikestolen/plateau.jpg",
-      "cap": "聖壇岩石台俯瞰呂瑟峽灣，開闊視野是完成約四公里上山路程後的主要觀看重點。"
+      "cap": "石台俯瞰呂瑟峽灣，走了約四公里的上山路，等的就是這個視野。"
     },
     {
       "t": "h",
@@ -81,7 +81,7 @@ POST_DETAIL['preikestolen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/preikestolen/approach.jpg",
-      "cap": "接近聖壇岩的沿崖路段，已能望見呂瑟峽灣；保留前方步道，可讓照片交代抵達石台的過程。"
+      "cap": "沿著崖邊走近的時候，已經看得到峽灣。"
     },
     {
       "t": "p",
@@ -92,7 +92,7 @@ POST_DETAIL['preikestolen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/preikestolen/rock-face.jpg",
-      "cap": "聖壇岩沿線的裂隙與岩壁，為冰河地形提供近景線索，遠處峽灣則呈現整體高低關係。"
+      "cap": "沿線的裂縫和岩壁，都是冰河留下來的，遠處就是峽灣。"
     },
     {
       "t": "p",
@@ -107,7 +107,7 @@ POST_DETAIL['preikestolen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/preikestolen/fjord-monochrome.jpg",
-      "cap": "以黑白觀看呂瑟峽灣，能更清楚分辨聖壇岩周圍的雲層、岩壁與水面層次。"
+      "cap": "換成黑白，雲、岩壁和水面的層次更清楚。"
     },
     {
       "t": "p",
@@ -136,7 +136,7 @@ POST_DETAIL['preikestolen'] = {
       "size": "wide",
       "fit": "natural",
       "src": "img/preikestolen/silhouette.jpg",
-      "cap": "陰雲中的聖壇岩，以人影對照斷崖高度；同一處石台會隨天候呈現不同視野。"
+      "cap": "陰天的聖壇岩，人影對照著斷崖的高度，同一個地方每次天氣都不一樣。"
     },
     {
       "t": "h",
@@ -156,7 +156,7 @@ POST_DETAIL['preikestolen'] = {
       "size": "tall",
       "fit": "natural",
       "src": "img/preikestolen/basecamp-lake.jpg",
-      "cap": "聖壇岩登山口附近的湖泊與木屋，是健行前後的停留環境，與高處裸露岩坡形成對比。"
+      "cap": "登山口附近的湖和木屋，走高處的裸岩坡之前先在這裡待一下。"
     },
     {
       "t": "p",
@@ -241,7 +241,7 @@ POST_DETAIL['preikestolen'] = {
   "cardH": "img/preikestolen/plateau.jpg",
   "cardV": true,
   "cardPortrait": "img/preikestolen/portrait-tight.jpg",
-  "coverCap": "挪威聖壇岩 Preikestolen 懸於呂瑟峽灣上方約 604 公尺，平坦石台與垂直岩壁形成這條健行路線最鮮明的地形。",
+  "coverCap": "聖壇岩懸在呂瑟峽灣上方約 604 公尺，平平的石台，垂直的岩壁。",
   "coverLayout": "split",
   "sources": [
     [

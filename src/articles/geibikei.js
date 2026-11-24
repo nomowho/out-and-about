@@ -13,39 +13,39 @@ POST_DETAIL['geibikei'] = {
     address:{ streetAddress:'東山町長坂字町 467', addressLocality:'一關市', addressRegion:'岩手縣', addressCountry:'JP' }
   },
   cover:'img/geibikei/cover-03.jpg', coverLayout:'split',
-  coverCap:"岩手猊鼻溪的冬季遊船穿行砂鐵川，積雪與石灰岩峭壁構成約 90 分鐘的溪谷行程。",
+  coverCap:"冬天的猊鼻溪，雪和石灰岩峭壁夾著砂鐵川。",
   visit:'2025 年 12 月底',
   body:[
     { t:'p', text:'十二月底到岩手縣一關市的猊鼻溪，還沒搭船，沿線就先被寶可夢包圍。但冬天來猊鼻溪，第一件事還是很實際：先確認今天有沒有開船。' },
 
     { t:'h', id:'kotatsu', text:'猊鼻溪的暖桌船' },
     { t:'p', text:'每年 12 月到 2 月是猊鼻溪冬季「こたつ舟」（暖桌船）的季節：船艙裡直接擺進日式暖桌，腿伸進被爐取暖，再沿著砂鐵川慢慢往峽谷裡走，往返大約 90 分鐘。外面是積雪和石灰岩峭壁，裡面卻可以窩著吃熱食，光這件事就值得冬天來一次。' },
-    { t:'pair', imgs:['img/geibikei/content-02_card.jpg','img/geibikei/content-03_card.jpg'], cap:"左：冬季暖桌船加上透明頂篷，保留觀景視線。右：乘客圍坐被爐，是猊鼻溪こたつ舟與暖季遊船最大的差別。" },
+    { t:'pair', imgs:['img/geibikei/content-02_card.jpg','img/geibikei/content-03_card.jpg'], cap:"左：暖桌船加了透明頂篷，風景一點都沒少。右：大家圍著暖桌坐，這是冬天才有的猊鼻溪。" },
 
     { t:'h', id:'nabe', text:'船上吃的「木流し鍋」的由來' },
     { t:'p', text:'以前砂鐵川流域會利用河水搬運木材，工人把山菜、蔬菜、雞肉和豬肉放進味噌湯裡煮來吃，後來就留下了這道「木流し鍋」。冬天坐在暖桌船裡，一邊吃熱鍋、一邊看雪和峽谷，是很難忘的一頓飯。' },
-    { t:'img', size:'side', src:'img/geibikei/content-04_card.jpg', cap:"猊鼻溪暖桌船的木流し鍋與便當，將砂鐵川流域昔日搬運木材工人的飲食，帶入冬季遊船體驗。" },
+    { t:'img', size:'side', src:'img/geibikei/content-04_card.jpg', cap:"船上吃的木流し鍋和便當，是以前載木材的人吃的味道。" },
 
     { t:'h', id:'rock', text:'猊鼻溪峭壁的年紀' },
     { t:'p', text:'猊鼻溪沿著砂鐵川延伸超過 2 公里，兩岸的石灰岩峭壁多在 50 公尺左右，最高超過 100 公尺。這些岩層形成於約 2.9 億到 2.5 億年前的古生代二疊紀，之後河水持續侵蝕抬升的地面，才慢慢切出今天的峽谷。' },
     { t:'p', text:'1925 年，猊鼻溪成為岩手縣第一個國家指定名勝，兩年後又入選「日本百景」。2025 年剛好滿 100 年，連乘船紀念券上都印了「百年」兩個字。' },
-    { t:'pair', imgs:['img/geibikei/content-07_card.jpg','img/geibikei/content-08_card.jpg'], cap:"左：猊鼻溪石灰岩壁由河流長期侵蝕形成。右：百年紀念券記錄了 1925 年指定國家名勝的重要節點。" },
+    { t:'pair', imgs:['img/geibikei/content-07_card.jpg','img/geibikei/content-08_card.jpg'], cap:"左：石灰岩壁是河水一點一點磨出來的。右：百年紀念券，猊鼻溪 1925 年就是國家名勝。" },
 
     { t:'h', id:'name', text:'「猊鼻」這個名字' },
     { t:'p', text:'「猊」是古語裡對獅子的稱呼。1910 年當地推動觀光時，因為上游攬勝丘對岸有一塊突出的鐘乳石，外型很像獅子的鼻子，就把這條溪谷取名為「猊鼻溪」。我對著那塊岩石看了好一陣子，老實說，還真是看不出來。' },
-    { t:'img', size:'full', src:'img/geibikei/content-05_card.jpg', cap:"雪後的猊鼻溪讓峭壁與倒影連在一起，從船上觀看，更能感受河流切出的峽谷尺度。" },
+    { t:'img', size:'full', src:'img/geibikei/content-05_card.jpg', cap:"雪後的峭壁連倒影都安靜。" },
 
     { t:'h', id:'oiwake', text:'會唱歌的船夫' },
     { t:'p', text:'猊鼻溪的舟主要靠船頭的船夫用一根長篙控制，往返都是人力撐船。回程時，船夫會唱當地流傳的民謠「げいび追分」，歌聲碰到兩側峭壁，再沿著溪谷傳回船上。作詞的鈴木朗月是一關市東山町人，猊鼻溪成為名勝後，他把這裡寫進歌詞，後來反而成了舟下行最有記憶點的聲音。' },
-    { t:'img', size:'wide', src:'img/geibikei/content-06_card.jpg', cap:"猊鼻溪遊船以人力長篙操舟，停泊岸邊的船也是觀察這項傳統遊覽方式的機會。" },
+    { t:'img', size:'wide', src:'img/geibikei/content-06_card.jpg', cap:"船夫用長篙撐船，是猊鼻溪一直傳下來的方式。" },
 
     { t:'h', id:'undama', text:'折返點的「運玉」' },
     { t:'p', text:'到了折返點，可以下船走到大猊鼻岩前，把「運玉」丟向岩壁上的「願掛之穴」。運玉一共有運、壽、福、緣、願、戀、愛、絆、祿、財 10 種，先挑自己想要的，再往洞口投，投進去據說就能討個好兆頭。洞口沒有大到可以亂丟，冬天手又冷，這一球是好球還是暴投，真的看當天手感。' },
-    { t:'img', size:'side', src:'img/geibikei/content-undama_card.jpg', cap:"猊鼻溪折返點的願掛之穴，是投擲運玉的目標；不同字樣的運玉承載不同祈願。" },
+    { t:'img', size:'side', src:'img/geibikei/content-undama_card.jpg', cap:"折返點的願掛之穴，運玉要丟進這個洞。" },
 
     { t:'h', id:'pokemon', text:'寶可夢列車的搭法' },
     { t:'p', text:'從一之關搭 JR 大船渡線前往猊鼻溪站，沿途有機會搭到「POKÉMON with YOU Train」，車廂幾乎被皮卡丘包場。猊鼻溪站設有寶可夢集章和錯視藝術；岩手縣的應援寶可夢是小拳石，官方甚至把「岩」這個共同元素玩成整套地方合作。列車只在公布的運行日行駛、而且全車指定席，想搭要事先查 JR 東日本的時刻表。' },
-    { t:'pair', imgs:['img/geibikei/content-pokemon_card_L.jpg','img/geibikei/content-pokemon_card_R.jpg'], cap:"左：猊鼻溪站的寶可夢布置，讓候車也成為行程的一部分。右：皮卡丘裝置連結 JR 大船渡線沿線的鐵道旅遊體驗。" },
+    { t:'pair', imgs:['img/geibikei/content-pokemon_card_L.jpg','img/geibikei/content-pokemon_card_R.jpg'], cap:"左：猊鼻溪站被寶可夢包圍。右：皮卡丘在月台上等車。" },
 
     { t:'h', id:'winter', text:'冬天去猊鼻溪的注意事項' },
     { t:'p', text:'猊鼻溪的舟全年都有開，但遇上大雪、低溫或河面狀況不佳時可能停航。官網首頁每天早上會公布當日是否正常運航和最終船時間，出發前一定要先看。冬季（11 月 21 日到 3 月 31 日）的班次是 10:00 到 15:00 每小時一班。' },
