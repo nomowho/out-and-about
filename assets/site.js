@@ -698,3 +698,21 @@
     el.addEventListener('click', function (e) { if (moved && e.detail !== 0) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
   });
 })();
+
+/* 首頁 Reels：桌機點卡片在站內跳 IG 官方播放器；手機（或不支援 dialog）照連結直接開 IG */
+(function () {
+  var dlg = document.querySelector('.reel-dlg'); if (!dlg || !dlg.showModal) return;
+  var fr = dlg.querySelector('.reel-frame');
+  document.querySelectorAll('.reel[data-reel]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (innerWidth <= 700 || e.metaKey || e.ctrlKey) return;
+      e.preventDefault();
+      fr.innerHTML = '<iframe src="https://www.instagram.com/reel/' + a.getAttribute('data-reel') + '/embed/" title="' + a.getAttribute('aria-label') + '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
+      dlg.showModal();
+    });
+  });
+  var close = function () { dlg.close(); };
+  dlg.querySelector('.reel-x').addEventListener('click', close);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+  dlg.addEventListener('close', function () { fr.innerHTML = ''; });
+})();

@@ -10,10 +10,10 @@ const abs = p => SITE + p;
 const read = f => fs.readFileSync(path.join(SRC, f), 'utf8');
 
 /* ── 載入資料 ── */
-const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.js'), read('series-data.js'), read('stories-data.js'), read('geo-data.js'),
+const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.js'), read('series-data.js'), read('stories-data.js'), read('geo-data.js'), read('reels-data.js'),
   ...fs.readdirSync(path.join(SRC, 'articles')).filter(f => f.endsWith('.js')).map(f => read('articles/' + f)),
-  ';({ POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES })'].join('\n');
-const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES } = vm.runInNewContext(code);
+  ';({ POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES, REELS })'].join('\n');
+const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES, REELS } = vm.runInNewContext(code);
 function hasCat(p, cat) { return p.cat === cat || (p.extraCats || []).includes(cat); }
 const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
@@ -171,7 +171,7 @@ function page({ file, title, desc, metaDescription = desc, canonical, type = 'we
 <meta name="twitter:image" content="${image}">
 <meta name="theme-color" content="#ffffff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; frame-src https://www.instagram.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <link rel="icon" href="/assets/browser-logo.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="/assets/browser-logo.png">
 ${extraHead}<link rel="preload" href="/assets/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -677,6 +677,16 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <div class="by">BY NOMO</div>
       ${(() => { const d = s.ids.map(id => byId[id]).filter(Boolean).map(p => p.date).sort().pop(); if (!d) return ''; const [y, m, dd] = d.split('.').map(Number); return `<time datetime="${iso(d)}">${y}年${m}月${dd}日</time>`; })()}
     </a>`).join('')}</div></div>
+</section>
+
+<section class="reels" aria-label="Instagram Reels">
+  <div class="box"><div class="sh"><h2>Reels</h2><a class="viewmore reels-more" href="https://www.instagram.com/nomowho/reels/" rel="noopener" target="_blank">View on Instagram　›</a></div></div>
+  <div class="reels-rail">${REELS.map(r => `
+    <a class="reel" href="https://www.instagram.com/reel/${r.code}/" data-reel="${r.code}" target="_blank" rel="noopener" aria-label="${esc(r.t)}（在 Instagram 播放）">
+      <figure>${img(`img/reels/${r.code}.jpg`, r.t, { small: true, sizes: '(max-width:700px) 44vw, 220px' })}<span class="reel-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l2.6 5.5M14.4 3L17 8.5"/><path d="M10.2 12.3v4.9l4.1-2.45z" class="f"/></svg></span></figure>
+      <h3>${esc(r.t)}</h3><div class="place">${esc(r.place)}</div>
+    </a>`).join('')}</div>
+  <dialog class="reel-dlg" aria-label="Reels 播放"><button class="reel-x" type="button" aria-label="關閉">×</button><div class="reel-frame"></div></dialog>
 </section>
 
 <section class="cty" aria-label="走過的國家">
