@@ -84,7 +84,7 @@ POST_DETAIL['the-twist'] = {
     {
       "t": "h",
       "id": "design",
-      "text": "為什麼偏偏要扭 90 度？"
+      "text": "偏偏要扭 90 度"
     },
     {
       "t": "p",
@@ -206,7 +206,7 @@ POST_DETAIL['the-twist'] = {
     {
       "t": "h",
       "id": "visit",
-      "text": "The Twist 怎麼去？冬天也能進去嗎？"
+      "text": "The Twist 怎麼去，冬天也能進去"
     },
     {
       "t": "p",

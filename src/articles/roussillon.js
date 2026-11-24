@@ -15,14 +15,14 @@ POST_DETAIL['roussillon'] = {
   },
   body:[
     { t:'p', text:'2016 年那趟南法盲旅，第一眼看到 Roussillon 那片紅色山壁的時候，我以為自己來到了西班牙。' },
-    { t:'h', id:'red', text:'Roussillon 的土為什麼是紅色的？' },
+    { t:'h', id:'red', text:'Roussillon 的紅土' },
     { t:'p', text:'Roussillon 位在沃克呂茲省的呂貝宏地區，被列入「法國最美村莊」。整座村子蓋在赭石（ocre）峭壁上，土壤含有大量的鐵氧化物，從黃、橘、紅到紫紅，深淺不一。村裡的房子也就地取材，牆面刷上這些暖色，整個小鎮像被夕陽包住。' },
     { t:'p', text:'這些赭土不只好看。1780 年，村民 Jean-Étienne Astier 發現赭土經過清洗、沉澱、乾燥之後，可以變成不會褪色、也沒有毒的天然顏料，Roussillon 從此成為法國重要的赭石產地。今天的舊採石場整理成「赭石小徑」（Sentier des Ocres），走一圈像走進一座紅色的峽谷。' },
-    { t:'h', id:'legend', text:'Roussillon 紅土的傳說是什麼？' },
+    { t:'h', id:'legend', text:'Roussillon 紅土的傳說' },
     { t:'p', text:'當地流傳一個淒美的故事：中世紀時，Roussillon 城堡的領主有位夫人叫 Sermonde，她愛上了一位吟遊詩人。善妒的領主殺了詩人，還把他的心煮成菜端給妻子吃。夫人知道真相後，奔到懸崖邊縱身一躍，她的鮮血染紅了整片土地。這個故事有好幾種版本，當然只是傳說，但站在血紅色的峭壁前，很難不想起它。' },
-    { t:'h', id:'spain', text:'Roussillon 曾經被西班牙統治嗎？' },
+    { t:'h', id:'spain', text:'Roussillon 和西班牙的關係' },
     { t:'p', text:'第一眼像西班牙，是很多人的共同感受。不過要分清楚：法國有兩個 Roussillon。南部庇里牛斯山下、靠近佩皮尼昂的「魯西永」地區，歷史上確實長期屬於亞拉岡王國和西班牙，直到 1659 年才劃歸法國；而呂貝宏山區這座紅土村 Roussillon 是另一個地方，名字據說來自拉丁文的「紅色田溝」。' },
-    { t:'h', id:'route', text:'Roussillon 可以和哪裡排在一起？' },
+    { t:'h', id:'route', text:'Roussillon 可以排在一起的地方' },
     { t:'p', text:'Roussillon 和戈爾德（Gordes）、碧泉村、索格島（L’Isle-sur-la-Sorgue）都在呂貝宏一帶，彼此距離不遠，很適合自駕排成一天。' },
   ],
   info:[

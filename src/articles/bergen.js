@@ -13,7 +13,7 @@ POST_DETAIL['bergen'] = {
     {
       "t": "h",
       "id": "bryggen",
-      "text": "布呂根為什麼是世界遺產？"
+      "text": "布呂根成為世界遺產的原因"
     },
     {
       "t": "img",
@@ -40,7 +40,7 @@ POST_DETAIL['bergen'] = {
     {
       "t": "h",
       "id": "colours",
-      "text": "為什麼這裡有那麼多彩色木屋？"
+      "text": "那麼多彩色木屋"
     },
     {
       "t": "p",
@@ -73,7 +73,7 @@ POST_DETAIL['bergen'] = {
     {
       "t": "h",
       "id": "view",
-      "text": "在卑爾根哪裡看全景？"
+      "text": "在卑爾根看全景的地方"
     },
     {
       "t": "p",
@@ -98,7 +98,7 @@ POST_DETAIL['bergen'] = {
     {
       "t": "h",
       "id": "market",
-      "text": "卑爾根的魚市場值得逛嗎？"
+      "text": "卑爾根的魚市場"
     },
     {
       "t": "p",

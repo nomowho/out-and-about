@@ -18,7 +18,7 @@ POST_DETAIL['preikestolen'] = {
     {
       "t": "h",
       "id": "what",
-      "text": "聖壇岩是怎麼形成的？"
+      "text": "聖壇岩的形成"
     },
     {
       "t": "p",
@@ -27,7 +27,7 @@ POST_DETAIL['preikestolen'] = {
     {
       "t": "h",
       "id": "hike",
-      "text": "聖壇岩步道難不難？"
+      "text": "聖壇岩步道的難度"
     },
     {
       "t": "img",
@@ -70,7 +70,7 @@ POST_DETAIL['preikestolen'] = {
     {
       "t": "h",
       "id": "photos",
-      "text": "聖壇岩怎麼拍？先換位置，再換鏡頭"
+      "text": "聖壇岩的拍法：先換位置，再換鏡頭"
     },
     {
       "t": "p",
@@ -125,7 +125,7 @@ POST_DETAIL['preikestolen'] = {
     {
       "t": "h",
       "id": "mi",
-      "text": "《不可能的任務》在聖壇岩拍了什麼？"
+      "text": "《不可能的任務》在聖壇岩拍的片段"
     },
     {
       "t": "p",

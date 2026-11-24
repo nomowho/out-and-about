@@ -16,7 +16,7 @@ POST_DETAIL['stavanger'] = {
     {
       "t": "h",
       "id": "swords",
-      "text": "石中劍在紀念什麼？"
+      "text": "石中劍紀念的事"
     },
     {
       "t": "p",
@@ -72,7 +72,7 @@ POST_DETAIL['stavanger'] = {
     {
       "t": "h",
       "id": "city",
-      "text": "斯塔萬格是什麼樣的城市？"
+      "text": "斯塔萬格這座城市"
     },
     {
       "t": "p",

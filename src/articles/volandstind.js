@@ -11,7 +11,7 @@ POST_DETAIL['volandstind'] = {
     {
       "t": "h",
       "id": "what",
-      "text": "Volandstind 為什麼叫羅浮敦的馬特洪峰？"
+      "text": "叫羅浮敦的馬特洪峰的 Volandstind"
     },
     {
       "t": "p",
@@ -27,7 +27,7 @@ POST_DETAIL['volandstind'] = {
     {
       "t": "h",
       "id": "cloud",
-      "text": "山頂的「蓋帽雲」是什麼？"
+      "text": "山頂的「蓋帽雲」"
     },
     {
       "t": "p",
@@ -51,7 +51,7 @@ POST_DETAIL['volandstind'] = {
     {
       "t": "h",
       "id": "bridge",
-      "text": "羅浮敦的橋為什麼這樣設計？"
+      "text": "羅浮敦的橋的設計"
     },
     {
       "t": "p",

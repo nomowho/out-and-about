@@ -240,7 +240,7 @@ POST_DETAIL['under'] = {
     {
       "t": "img",
       "src": "img/under/drink.jpg",
-      "cap": "Under 的 The Meadow 無酒精搭餐，以果實、花草與發酵風味呼應料理，是這次用餐令人驚豔的一段。",
+      "cap": "Under 的 The Meadow 無酒精搭餐，以果實、花草與發酵風味呼應料理，是這次用餐很驚喜的一段。",
       "size": "tall"
     },
     {

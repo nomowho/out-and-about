@@ -17,7 +17,7 @@ POST_DETAIL['lofoten-stockfish'] = {
     {
       "t": "h",
       "id": "how",
-      "text": "風乾鱈魚是怎麼做的？"
+      "text": "風乾鱈魚的做法"
     },
     {
       "t": "p",
@@ -34,7 +34,7 @@ POST_DETAIL['lofoten-stockfish'] = {
     {
       "t": "h",
       "id": "why",
-      "text": "為什麼只有羅浮敦做得出來？"
+      "text": "只有羅浮敦做得出來"
     },
     {
       "t": "p",
@@ -50,7 +50,7 @@ POST_DETAIL['lofoten-stockfish'] = {
     {
       "t": "h",
       "id": "history",
-      "text": "風乾鱈魚有多久的歷史？"
+      "text": "風乾鱈魚的歷史"
     },
     {
       "t": "p",
@@ -66,7 +66,7 @@ POST_DETAIL['lofoten-stockfish'] = {
     {
       "t": "h",
       "id": "export",
-      "text": "風乾鱈魚賣到哪裡？"
+      "text": "風乾鱈魚的市場"
     },
     {
       "t": "p",
