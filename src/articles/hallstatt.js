@@ -44,10 +44,10 @@ POST_DETAIL['hallstatt'] = {
     { t:'pair', imgs:['img/hallstatt/hillside.jpg','img/hallstatt/houses.jpg'], cap:"左右：哈修塔特的傳統木造房屋，沿著山坡一棟疊著一棟。" },
     { t:'h', id:'why', text:'哈修塔特為什麼會有人骨屋？' },
     { t:'p', text:'下山以後，我沿著湖邊石階往高處的聖母升天教堂（Katholische Pfarrkirche Mariä Himmelfahrt）爬，人骨屋就在它旁邊。墓園的墓碑旁還擺著小小的聖誕樹，墓園一角有扇小門，推開之後，幾百雙空洞的眼眶一起看著你。哈修塔特的明信片風景很多人看過，這個房間知道的人就少多了。' },
-    { t:'pair', imgs:['img/hallstatt/church.jpg','img/hallstatt/cross.jpg'], cap:"左：爬上石階，教堂旁就是人骨屋。右：十字架靜靜掛在牆上。" },
+    { t:'img', size:'tall', src:'img/hallstatt/cross.jpg', cap:"十字架靜靜掛在牆上。" },
     { t:'p', text:'小鎮被擠在湖和山之間，平地少得可憐，教堂旁的墓園也就那麼一小塊。當地人因此發展出一套罕見的喪葬文化，辦法很務實：遺體入土大約十到十五年後，把骨骸挖出來，洗乾淨、在太陽下曬白，再把頭骨和長骨移進墓園旁的人骨屋，空出位置給下一位。' },
     { t:'p', text:'人骨屋（Beinhaus）位在聖米迦勒小禮拜堂的下層，小禮拜堂本身建於 12 世紀。屋裡現在大約有 1,200 顆頭骨，整整齊齊排在木架上，下方堆著一層層的腿骨和臂骨。' },
-    { t:'img', size:'tall', src:'img/hallstatt/wall.jpg', cap:"頭骨整整齊齊排滿牆面，比想像中安靜。" },
+    { t:'pair', imgs:['img/hallstatt/church.jpg','img/hallstatt/wall.jpg'], cap:"左：爬上石階，教堂旁就是人骨屋。右：頭骨整整齊齊排滿牆面，比想像中安靜。" },
 
     { t:'h', id:'painted', text:'人骨屋頭骨上的彩繪代表什麼？' },
     { t:'p', text:'大約從 1720 年代開始，家屬會請人在頭骨上作畫，現在有約 610 顆是彩繪過的，以家庭為單位排列，每一顆都標著死亡日期。畫的大多是花草和十字架，額頭上再寫上名字和年份，有些字跡到今天還很清楚。這些圖案有宗教和象徵意義，反映了當時人們對死亡、生命和信仰的理解，每一種都有它的意思：' },
