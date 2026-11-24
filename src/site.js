@@ -219,9 +219,9 @@
   }
   /* SERIES 卡片列：桌機用左右箭頭一次移一張，可循環（到最後一張再按右回到第一張、在第一張按左跳到最後），手機用手指滑（原生捲動＋停在卡片開頭） */
   [].forEach.call(document.querySelectorAll('.railwrap'), function (w) {
-    var rail = w.querySelector('.rail'), L = w.querySelector('.rail-arr.l'), R = w.querySelector('.rail-arr.r');
+    var rail = w.querySelector('.rail, .reels-rail'), L = w.querySelector('.rail-arr.l'), R = w.querySelector('.rail-arr.r');
     if (!rail || !L || !R) return;
-    var step = function () { var c = rail.querySelector('.s'); return c ? c.getBoundingClientRect().width + (parseFloat(getComputedStyle(rail).columnGap) || 20) : 300; };
+    var step = function () { var c = rail.querySelector('.s, .reel'); return c ? c.getBoundingClientRect().width + (parseFloat(getComputedStyle(rail).columnGap) || 20) : 300; };
     var max = function () { return rail.scrollWidth - rail.clientWidth - 2; };
     var upd = function () { var none = rail.scrollWidth <= rail.clientWidth + 2; L.disabled = none; R.disabled = none; };
     L.addEventListener('click', function () { if (rail.scrollLeft <= 2) rail.scrollTo({ left: rail.scrollWidth, behavior: 'smooth' }); else rail.scrollBy({ left: -step(), behavior: 'smooth' }); });

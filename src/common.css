@@ -799,3 +799,12 @@ figure>picture{display:contents}.pair .two>picture{display:contents}
 @media(max-width:1000px){.reels-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 24px 4px}.reels-rail::-webkit-scrollbar{display:none}.reel{flex:0 0 calc((100% - 48px) / 3.4);scroll-snap-align:start}}
 @media(max-width:700px){.reels{margin-top:64px}.reels-rail{padding:0 20px 4px;gap:12px;scroll-padding-inline:20px}.reel{flex-basis:44vw}.reel h3{font-size:13px}}
 .reel-dlg{margin:auto;position:fixed;inset:0;width:fit-content;height:fit-content}
+/* Reels 增加到 9 支（Nomo 11-24）：桌機也改成左右滑，一次看 6 支，圓箭頭沿用 SERIES 樣式 */
+.reels-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;scroll-padding-inline:24px}
+.reels-rail::-webkit-scrollbar{display:none}
+.reel{flex:0 0 calc((100% - 80px) / 6);scroll-snap-align:start}
+.reels-wrap{max-width:var(--w,1200px);margin:0 auto}
+.reels-wrap .rail-arr{top:calc((min(100vw, var(--w,1200px)) - 48px - 80px) / 6 * 16 / 9 / 2 + 26px)}
+.reels-wrap .rail-arr.l{left:-8px}.reels-wrap .rail-arr.r{right:-8px}
+@media(max-width:1000px){.reel{flex-basis:calc((100% - 48px) / 3.4)}.reels-wrap .rail-arr{top:calc((100vw - 48px - 48px) / 3.4 * 16 / 9 / 2 + 26px)}.reels-wrap .rail-arr.l{left:8px}.reels-wrap .rail-arr.r{right:8px}}
+@media(max-width:700px){.reel{flex-basis:44vw}.reels-wrap .rail-arr{display:none}}

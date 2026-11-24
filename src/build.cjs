@@ -668,11 +668,12 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 
 <section class="reels" aria-label="Instagram Reels">
   <div class="box"><div class="sh"><h2>Reels</h2><a class="viewmore reels-more" href="https://www.instagram.com/nomowho/reels/" rel="noopener" target="_blank">View on Instagram　›</a></div></div>
+  <div class="railwrap reels-wrap"><button class="rail-arr l" type="button" aria-label="上一支 Reels"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="rail-arr r" type="button" aria-label="下一支 Reels"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
   <div class="reels-rail">${REELS.map(r => `
     <a class="reel" href="https://www.instagram.com/reel/${r.code}/" data-reel="${r.code}" target="_blank" rel="noopener" aria-label="${esc(r.t)}（在 Instagram 播放）">
       <figure>${img(`img/reels/${r.code}.jpg`, r.t, { small: true, sizes: '(max-width:700px) 44vw, 220px' })}<span class="reel-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l2.6 5.5M14.4 3L17 8.5"/><path d="M10.2 12.3v4.9l4.1-2.45z" class="f"/></svg></span></figure>
       <h3>${esc(r.t)}</h3><div class="place">${esc(r.place)}</div>
-    </a>`).join('')}</div>
+    </a>`).join('')}</div></div>
   <dialog class="reel-dlg" aria-label="Reels 播放"><button class="reel-x" type="button" aria-label="關閉">×</button><div class="reel-frame"></div></dialog>
 </section>
 
