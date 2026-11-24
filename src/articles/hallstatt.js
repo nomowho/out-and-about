@@ -41,11 +41,11 @@ POST_DETAIL['hallstatt'] = {
     { t:'p', text:'值得。冬天的湖面常常起霧，山頭覆著一層薄雪，湖邊的白色城堡和對岸的樹林都變成灰藍色的剪影。這種天氣拍不出明信片上的藍天，但多了一點只屬於冬天的安靜。從鎮上搭纜車上鹽礦區的觀景台，還能從高處看見整座小鎮縮成湖邊的一小撮屋頂。' },
     { t:'img', size:'wide', src:'img/hallstatt/view.jpg', cap:"霧散了以後，灰藍色的湖和雪山，是冬天才有的安靜。" },
 
+    { t:'pair', imgs:['img/hallstatt/hillside.jpg','img/hallstatt/houses.jpg'], cap:"左右：哈修塔特的傳統木造房屋，沿著山坡一棟疊著一棟。" },
     { t:'h', id:'why', text:'哈修塔特為什麼會有人骨屋？' },
     { t:'p', text:'下山以後，我沿著湖邊石階往高處的聖母升天教堂（Katholische Pfarrkirche Mariä Himmelfahrt）爬，人骨屋就在它旁邊。墓園的墓碑旁還擺著小小的聖誕樹，墓園一角有扇小門，推開之後，幾百雙空洞的眼眶一起看著你。哈修塔特的明信片風景很多人看過，這個房間知道的人就少多了。' },
     { t:'pair', imgs:['img/hallstatt/church.jpg','img/hallstatt/cross.jpg'], cap:"左：爬上石階，教堂旁就是人骨屋。右：十字架靜靜掛在牆上。" },
     { t:'p', text:'小鎮被擠在湖和山之間，平地少得可憐，教堂旁的墓園也就那麼一小塊。當地人因此發展出一套罕見的喪葬文化，辦法很務實：遺體入土大約十到十五年後，把骨骸挖出來，洗乾淨、在太陽下曬白，再把頭骨和長骨移進墓園旁的人骨屋，空出位置給下一位。' },
-    { t:'pair', imgs:['img/hallstatt/hillside.jpg','img/hallstatt/houses.jpg'], cap:"左右：房子一棟疊著一棟，擠在湖和山之間，難怪連墓園都要省著用。" },
     { t:'p', text:'人骨屋（Beinhaus）位在聖米迦勒小禮拜堂的下層，小禮拜堂本身建於 12 世紀。屋裡現在大約有 1,200 顆頭骨，整整齊齊排在木架上，下方堆著一層層的腿骨和臂骨。' },
     { t:'img', size:'tall', src:'img/hallstatt/wall.jpg', cap:"頭骨整整齊齊排滿牆面，比想像中安靜。" },
 
