@@ -42,7 +42,7 @@ POST_DETAIL['salzburg'] = {
     { t:'p', text:'走到主教座堂後面的 Kapitelplatz 廣場，會看到一顆巨大的金色球體，上面站著一個穿白襯衫的男人，望著遠方。這件作品叫《Sphaera》，是德國雕塑家 Stephan Balkenhol 在 2007 年為「薩爾茲堡藝術計畫」做的，連台座大約 9 公尺高。旁邊地上還畫著一副大型西洋棋盤，常常有人站在上面下棋。在一座滿是巴洛克建築的城裡，這顆金球反而成了大家最常拍的背景。' },
     { t:'pair', imgs:['img/salzburg/sphaera.jpg','img/salzburg/chess.jpg'], cap:"左：近看《Sphaera》，金球上站著那個穿白襯衫的男人。右：從要塞往下看 Kapitelplatz，金球旁的地上畫著大型棋盤。" },
     { t:'p', text:'天黑之後，舊城的街道一條一條亮起雪花形狀的燈。白天在城牆上覺得這座城很硬，晚上走在燈下，又覺得它其實很溫柔。' },
-    { t:'img', size:'tall', src:'img/salzburg/riverside.jpg', cap:"河邊的長椅鋪著羊毛皮墊，冬天的陽光照在岸邊，後面的布告欄寫著 Theater Konzert Kunst（劇場、音樂會、藝術）。" },
+    { t:'img', size:'tall', src:'img/salzburg/riverside.jpg', cap:"河邊的長椅鋪著羊毛皮墊，冬天的陽光照在岸邊，真是非常愜意有質感的城市。" },
     { t:'p', text:'→ 同一趟旅行：<a href="/stories/koenigssee/">德國國王湖</a>｜<a href="/stories/hallstatt/">哈修塔特</a>' }
   ],
   info:[
