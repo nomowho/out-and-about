@@ -67,7 +67,21 @@
   }
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href]'); if (!a) return;
-    if (recommendations.indexOf(a) !== -1) event('recommendation_click', { article_path: source, link_url: destination(a), link_position: recommendations.indexOf(a) + 1 });
+    if (recommendations.indexOf(a) !== -1) {
+      var values = { article_path: source, link_url: destination(a), link_position: recommendations.indexOf(a) + 1 };
+      // Same-tab navigation can freeze the queued event in the back/forward
+      // cache. Give the tag a bounded opportunity to flush, never trap a link
+      // when analytics is blocked, and preserve modified/new-tab clicks.
+      if (!e.defaultPrevented && e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey &&
+          (!a.target || a.target === '_self') && !(a.hasAttribute && a.hasAttribute('download'))) {
+        e.preventDefault();
+        var followed = false;
+        var follow = function () { if (followed) return; followed = true; location.assign(a.href); };
+        values.event_callback = follow; values.event_timeout = 150;
+        setTimeout(follow, 150);
+      }
+      event('recommendation_click', values);
+    }
     try { var u = new URL(a.href); if (u.hostname === 'instagram.com' || u.hostname === 'www.instagram.com') event('instagram_click', { article_path: source, link_url: destination(a) }); } catch (_) {}
   });
 }());
