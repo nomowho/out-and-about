@@ -446,7 +446,7 @@ newsAll.forEach(n => {
     { '@context': 'https://schema.org', '@type': 'NewsArticle', '@id': abs(u) + '#article', headline: cut(n.title, 110), description: desc, inLanguage: 'zh-Hant-TW',
       datePublished: iso(n.date), dateModified: modified, image: [ogImg(null)], mainEntityOfPage: { '@type': 'WebPage', '@id': abs(u) },
       author: PERSON, publisher: ORG, contentLocation: { '@type': 'Place', name: n.place },
-      isBasedOn: { '@type': 'NewsArticle', headline: n.srcTitle, url: n.url, publisher: { '@type': 'Organization', name: n.src } } },
+      isBasedOn: n.url },
     crumbLd([['Out and About', '/'], ['NEWS', '/news/'], [n.title, u]])
   ];
   if (n.faq && n.faq.length) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: n.faq.map(([q, a]) => ({ '@type': 'Question', name: strip(q), acceptedAnswer: { '@type': 'Answer', text: strip(a) } })) });
