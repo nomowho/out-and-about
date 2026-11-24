@@ -220,7 +220,7 @@
     "date": "2026-11-24"
   },
   "/stories/hallstatt/": {
-    "hash": "7996272748261f0d661895ba238a7fb5c87dbf833109f9f3b00477748dd040ab",
+    "hash": "12305d7732d89e3fd862273d068fd1f4470363190ff8a6dd45bf9710c53ffbc6",
     "date": "2026-11-24"
   },
   "/stories/vienna-christmas/": {
@@ -476,15 +476,15 @@
     "date": "2026-11-24"
   },
   "/category/architecture/": {
-    "hash": "86a9606accdce7975dc73927f9c93fb6d442286721e20f457079dd6bad6de368",
+    "hash": "77733871d8b2363c2ebf92519839251490e771606470e23ab469f73d2887faa9",
     "date": "2026-11-24"
   },
   "/category/art/": {
-    "hash": "709494aed73a729d466890e82c138707022ea80dcfcb6e0f098f4f0596aaeb03",
+    "hash": "da2369d693d5edd774e4e6c9829f9fe8dfa273ba28a59384d9ee987ad72068f7",
     "date": "2026-11-24"
   },
   "/category/history/": {
-    "hash": "6f2b222a49a5898447817af396d63e942406d851028720acd35662f4ccb294e9",
+    "hash": "9fcff92e26b13c728f3b24162b56affdbbc7e528d314249bc12b65d612db8a4c",
     "date": "2026-11-24"
   },
   "/category/nature/": {
@@ -496,7 +496,7 @@
     "date": "2026-11-24"
   },
   "/category/guide/": {
-    "hash": "daa2d733ff5dbe2918a8ceaf92f0266b0239ab780baf1ee34586373903f369b3",
+    "hash": "6c7a27a78e97f04dcb1c825cdcb08f5d8d22eddb2496038433c311c2b0db827b",
     "date": "2026-11-24"
   },
   "/series/japan/": {
@@ -516,11 +516,11 @@
     "date": "2026-11-24"
   },
   "/series/architecture-walk/": {
-    "hash": "8644d5d96f7f7f5458573e4262d4eb301edc708c64c376cfd383a9c013767c8e",
+    "hash": "b76f0a98c87c9acd04b8a85f5f7c504229f18ce10340ce5424112ee5d153e547",
     "date": "2026-11-24"
   },
   "/series/art-wander/": {
-    "hash": "44191290be4786696ff1652b7b769001552d0829fc494bc6f6f1d7f4c748a9c1",
+    "hash": "fb1784ec2ad555db835aa2273aa16ef514b615d4bfd50c4f2dc463a457b93d75",
     "date": "2026-11-24"
   },
   "/series/tohoku-winter/": {
@@ -556,7 +556,7 @@
     "date": "2026-11-24"
   },
   "/destinations/austria/": {
-    "hash": "eb9ccb5d180a65910086cefb8c1e42ab5261205d2c5544b7589cb71de881ae6e",
+    "hash": "5c079e077e35b523acaed87180730c3de3245ab2fbbf39a73c28086375fbe478",
     "date": "2026-11-24"
   },
   "/destinations/germany/": {
@@ -592,7 +592,7 @@
     "date": "2026-11-24"
   },
   "/destinations/": {
-    "hash": "d06188fa4b98ce691a45eea08b5ea99e773b1e1d7da7ad7a683e583923e9a5a0",
+    "hash": "222a2fa89e703443efb402ec670ae4b4e36f93e2a068a5cac0e405b3ee6f9a02",
     "date": "2026-11-24"
   },
   "/about/": {
@@ -600,7 +600,7 @@
     "date": "2026-11-23"
   },
   "/stories/": {
-    "hash": "84cef2e71b5c6f2d3ad9ef211ea6a8fe41a0a6466eb7908222c03ea4bf9393f9",
+    "hash": "b6bbeeff4ca5e1851ab876309adb3ccec53b1cb7feab743cb9581f505feae4bd",
     "date": "2026-11-24"
   },
   "/news/": {
@@ -916,7 +916,7 @@
     "date": "2026-11-22"
   },
   "article:salzburg": {
-    "hash": "f6329136733a81694240f1f37f3e3ebe3c13baa82dc2d615c289a75dc8ee1437",
+    "hash": "626aac18ebb9bc04ec70ad28e3dbe2b1c3b9d5f2b8a8af7a49628203245d5d4f",
     "date": "2026-11-24"
   },
   "article:hallstatt-beinhaus": {
