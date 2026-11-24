@@ -9,6 +9,7 @@ function makeLink({articlePath,date,edition='01',test=false}){
  if(!test&&![3,6].includes(d.getUTCDay()))throw Error('Choose Wednesday or Saturday (Taipei 21:00)');
  if(!/^\d{2}$/.test(edition)||edition==='00')throw Error('Invalid edition (01–99)');
  const slug=articlePath.split('/').at(-2),postId=(test?'qa_':'')+date.replace(/-/g,'')+'_'+slug+'_'+edition;
+ if(postId.length>96)throw Error('Post ID exceeds maximum length');
  const url=new URL('https://nomowho.com'+articlePath);
  for(const [k,v]of Object.entries({utm_source:'facebook',utm_medium:'social',utm_campaign:test?'nomogram_tracking_test':'nomogram_articles',utm_content:postId}))url.searchParams.set(k,v);
  return {post_id:postId,article_path:articlePath,scheduled_at:test?'':date+'T21:00:00+08:00',tracking_url:url.href,facebook_url:'',status:test?'test':'draft'};

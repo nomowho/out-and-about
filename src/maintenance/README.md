@@ -59,3 +59,7 @@ python src/maintenance/gsc-compare.py C:/private/before.zip C:/private/after.zip
 GA4 即時報表已看到四個文章深度事件、推薦曝光、推薦點擊及 IG 點擊；本次為驗證事件。自訂維度『來源文章』對應 article_path；目的連結使用 GA4 既有 link_url，不另建重複維度。
 
 實際模擬主互動腳本 404，備援恢復首頁十張與專題八張照片。391px 手機版搜尋加分類篩選無橫向溢出，正式首頁維持十篇與八組專題。
+
+## Facebook 每篇貼文歸因（2026-11-24）
+
+新增安全活動欄位與 facebook_landing／fb_post_id，保留乾淨網址與原隱私設定。規則、外部 CSV 對照工具、測試活動和報表判讀見 [facebook-attribution.md](facebook-attribution.md)。這批僅建立追蹤，不排程或發佈 Facebook 貼文。
