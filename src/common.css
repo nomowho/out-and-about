@@ -771,3 +771,8 @@ figure>picture{display:contents}.pair .two>picture{display:contents}
 
 /* Show the lead photo immediately; a 1.6s fade must not delay its first useful paint. */
 .cover img,.split figure img{animation:none!important;opacity:1}
+
+/* Official travel notes reuse the editorial news column. */
+.travel-notes{margin-top:2.5rem;border-top:1px solid #dadada;padding-top:.5rem}.travel-checked{font-size:12px;color:#767676}.travel-sources{padding-left:1.2em}.travel-sources li{margin:.45em 0}.travel-sources a{text-decoration:underline;text-decoration-color:#C8F500;text-decoration-thickness:3px;text-underline-offset:5px}
+
+.guide-entry{text-decoration:underline;text-decoration-color:#C8F500;text-decoration-thickness:3px;text-underline-offset:5px}

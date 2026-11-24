@@ -20,6 +20,9 @@ const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
 // 系列專題：region／cat 型的系列自動收錄（新到舊）；沒有照片的系列（img 或 wide 為空）首頁先不放
 for (const s of SERIES) if (!s.ids) s.ids = postsNew.filter(p => (s.region && p.region === s.region) || (s.cat && hasCat(p, s.cat))).map(p => p.id);
 const SERIES_GUIDES = JSON.parse(read('series-guides.json'));
+const NEWS_TRAVEL_NOTES = JSON.parse(read('news-travel-notes.json'));
+const AOMORI_GUIDE = JSON.parse(read('aomori-winter.json'));
+const guideUrl = '/guides/aomori-winter/';
 const SERIES_SHOWN = SERIES.filter(s => s.img && s.wide);
 // 已刪除的系列：舊網址轉到新系列（Nomo 11-20），避免 Google 已收錄的連結變 404
 const SERIES_MOVED = { 'europe-architecture': 'architecture-walk', 'architecture-museum': 'architecture-walk' };
@@ -51,6 +54,10 @@ const strip = s => String(s).replace(/<[^>]+>/g, '');
 // 避免段落最後一行只剩一個字：段尾最後 3 個中文字（含標點）綁在一起不斷行
 const noOrphan = h => h.replace(/([　-鿿＀-￯]{3})(<\/(?:p|dd|dt|figcaption|li|h2|h3)>)/g, '<span class="nw">$1</span>$2');
 const iso = d => d.replace(/\./g, '-');
+// Source dates have day precision. Serialize the beginning of that recorded day
+// in the publisher's timezone; do not change the day or invent an editing time.
+const structuredDates = value => Array.isArray(value) ? value.map(structuredDates) : value && typeof value === 'object'
+  ? Object.fromEntries(Object.entries(value).map(([key, item]) => [key, /^(datePublished|dateModified)$/.test(key) && /^\d{4}-\d{2}-\d{2}$/.test(item) ? item + 'T00:00:00+08:00' : structuredDates(item)])) : value;
 const fixLinks = h => h.replace(/post\.html#([\w-]+)/g, '/stories/$1/').replace(/news\.html#([\w-]+)/g, '/news/$1/');
 const cut = (s, n) => { s = strip(s); if (s.length <= n) return s; const t = s.slice(0, n); const i = Math.max(t.lastIndexOf('。'), t.lastIndexOf('；')); return i > n * 0.5 ? t.slice(0, i + 1) : t.slice(0, n - 1) + '…'; };
 const url = { post: id => `/stories/${id}/`, news: id => `/news/${id}/`, cat: k => `/category/${k.toLowerCase()}/`, series: id => `/series/${id}/`, dest: r => `/destinations/${r.toLowerCase()}/` };
@@ -171,7 +178,7 @@ ${extraHead}<link rel="preload" href="/assets/fonts/bodoni-moda-latin.woff2" as=
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/${style}.css?v=${assetVersion(style + '.css')}">
 <link rel="stylesheet" href="/assets/common.css?v=${assetVersion('common.css')}">
-${ld.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n')}
+${ld.map(x => `<script type="application/ld+json">${JSON.stringify(structuredDates(x)).replace(/</g, '\\u003c')}</script>`).join('\n')}
 </head>
 <body class="${bodyCls}">
 <a class="skip" href="#main">跳到主要內容</a>
@@ -390,7 +397,8 @@ for (const p of POSTS) {
 /* ── 外電頁 ── */
 newsAll.forEach(n => {
   const key = 'news:' + n.id;
-  const hash = crypto.createHash('sha256').update(JSON.stringify(n)).digest('hex');
+  const travel = NEWS_TRAVEL_NOTES[n.id];
+  const hash = crypto.createHash('sha256').update(JSON.stringify([n, travel])).digest('hex');
   dates[key] = contentDates.record(dates[key], hash, n.updated || iso(n.date), BUILD_DATE);
   const modified = dates[key].date;
 
@@ -409,12 +417,18 @@ newsAll.forEach(n => {
     </header>
     <div class="wrap">
       <div class="body">
-        ${n.body.map(s => `${s.h ? `<h2>${s.h}</h2>` : ''}${s.p.map(t => `<p>${t}</p>`).join('')}`).join('')}
+        ${n.body.filter(s => !travel || s.h !== '編者按').map(s => `${s.h ? `<h2>${s.h}</h2>` : ''}${s.p.map(t => `<p>${t}</p>`).join('')}`).join('')}
+        ${travel ? `<section class="travel-notes" aria-label="旅行安排">
+          ${travel.sections.map(s => `<h2>${s.h}</h2>${s.p.map(t => `<p>${t}</p>`).join('')}`).join('')}
+          <p class="travel-checked">旅行資訊查閱｜<time datetime="${travel.checked}">${travel.checked.replace(/-/g, '.')}</time></p>
+          <ul class="travel-sources">${travel.sources.map(([label, href]) => `<li><a href="${esc(href)}" target="_blank" rel="noopener">${esc(label)}</a></li>`).join('')}</ul>
+        </section>` : ''}
+
         ${readingLinks([], picks)}
         ${n.faq && n.faq.length ? `<section class="qa" aria-labelledby="qa-h"><h2 id="qa-h"><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${n.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
         ${n.also ? `<div class="also"><b>ALSO</b>${n.also}</div>` : ''}
         <div class="source">
-          本文由 Nomo 依下列報導編譯改寫，內容與數據以原文為準。Nomo 是旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」。<br>
+          新聞內容由 Nomo 依下列報導編譯，旅行安排另參考上列資料，票務與營運依各單位最新公告。Nomo 是旅遊內容創作者，經營 Instagram @nomowho「我出去一下就回來」。<br>
           原文：<b>${n.src}</b>〈${n.srcTitle}〉${n.srcAuthor ? `，${n.srcAuthor}` : ''}，${n.date}　<a href="${n.url}" target="_blank" rel="noopener nofollow">原文出處</a>
         </div>
       </div>
@@ -441,18 +455,45 @@ newsAll.forEach(n => {
   sitemap.push({ loc: u, lastmod: modified, images: [] });
 });
 
+/* ── 青森冬季行程：編輯建議，非另造親訪紀錄 ── */
+{
+  const g = AOMORI_GUIDE, u = guideUrl;
+  const key = 'guide:' + g.id;
+  const hash = crypto.createHash('sha256').update(JSON.stringify(g)).digest('hex');
+  dates[key] = contentDates.record(dates[key], hash, g.published, BUILD_DATE);
+  const modified = dates[key].date;
+  const heads = g.body.filter(b => b.t === 'h');
+  const related = g.related.map(id => byId[id]).filter(Boolean);
+  const main = `<article>
+    <section class="split"><header class="ahead">
+      <nav class="crumb" aria-label="位置"><a href="/">TOP</a><i>›</i><a href="/category/guide/">GUIDE</a><i>›</i><span>青森冬季行程</span></nav>
+      <div class="meta"><span>GUIDE · AOMORI</span><time datetime="${g.published}">${g.published.replace(/-/g, '.')}</time></div>
+      <h1>${g.title}</h1><p class="dek">${g.dek}</p>
+      <div class="by"><span>行程整理｜<b>Nomo</b></span><span>攝影｜Nomo</span><span>旅行資訊查閱｜<time datetime="${g.checked}">${g.checked.replace(/-/g, '.')}</time></span></div>
+    </header><figure>${img(g.cover, g.coverCap, { lazy: false, sizes: '(max-width:900px) 100vw, 44vw' })}<figcaption>${g.coverCap}</figcaption></figure></section>
+    <nav class="toc" aria-label="目次"><div class="in"><h2>CONTENTS 目次</h2><ol>${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}<li><a href="#sources">官方資料</a></li></ol></div></nav>
+    <div class="body">${g.body.map(block).join('')}${readingLinks([], related)}</div>
+    <section class="refs" id="sources"><h2><span class="en">Sources</span><span>官方資料</span></h2><ol>${g.sources.map(([label, href]) => `<li><a href="${esc(href)}" target="_blank" rel="noopener">${esc(label)}</a><span>查閱日期 ${g.checked}</span></li>`).join('')}</ol></section>
+    <aside class="author" aria-label="關於作者"><b>行程整理・攝影｜Nomo</b><p>本頁為冬季行程建議，搭配作者的親訪文章與照片；交通、開館資訊的出處列於上方「官方資料」。</p><a href="/about/">關於 Out and About ›</a></aside>
+  </article><section class="more"><div class="box"><div class="sh"><h2>More Stories</h2><span>各景點親訪文章</span></div><div class="grid">${related.slice(0,3).map(p => postCard(p,{place:false,land:true})).join('')}</div></div></section>`;
+  page({file:'guides/aomori-winter/index.html',title:g.title+'｜Out and About',desc:g.dek,canonical:u,type:'article',image:abs('/'+g.cover),style:'post',nav:'GUIDE',main,progress:true,
+    extraHead:`<meta property="article:published_time" content="${g.published}">\n<meta property="article:modified_time" content="${modified}">\n`,
+    ld:[{'@context':'https://schema.org','@type':'Article','@id':abs(u)+'#article',headline:g.title,description:g.dek,image:[g.cover,...g.body.filter(b=>b.src).map(b=>b.src)].map(s=>abs('/'+s)),datePublished:g.published,dateModified:modified,inLanguage:'zh-Hant-TW',author:PERSON,publisher:ORG,mainEntityOfPage:{'@type':'WebPage','@id':abs(u)},articleSection:'GUIDE 指南'},crumbLd([['Out and About','/'],['GUIDE','/category/guide/'],['青森冬季行程',u]])]});
+  sitemap.push({loc:u,lastmod:modified,images:[g.cover,...g.body.filter(b=>b.src).map(b=>b.src)].map(s=>abs('/'+s))});
+}
+
 /* ── 列表頁（分類／系列／目的地） ── */
-function listPage({ file, u, label, h1, desc, posts, lead, leadImage, nav, crumb, groups, guide, othersTitle, othersZh, others }) {
+function listPage({ file, u, label, h1, desc, posts, lead, leadImage, nav, crumb, groups, guide, guideLink, othersTitle, othersZh, others }) {
   const grid = list => `<div class="grid">${list.map(p => postCard(p, { land: true, cardImage: u.startsWith('/category/') && POST_DETAIL[p.id] && (POST_DETAIL[p.id].cardsByCategory || {})[nav] })).join('')}</div>`;
   const main = `
     <section class="top">${lead ? `<div class="bg" style="background-image:url(/img/${lead.id}.m.jpg)"></div>` : ''}<div class="box">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<span>${crumb}</span>›<span>${h1}</span></nav>
       <div class="grid2">
-        <div><div class="label">${label}</div><h1>${h1}</h1><p>${desc}</p><div class="count">${posts.length} ${posts.length === 1 ? 'STORY' : 'STORIES'}</div></div>
+        <div><div class="label">${label}</div><h1>${h1}</h1><p>${desc}</p><div class="count">${posts.length} ${posts.length === 1 ? 'STORY' : 'STORIES'}</div>${guideLink && !guide ? `<p><a class="guide-entry" href="${guideLink.href}">${guideLink.label} →</a></p>` : ''}</div>
         ${lead ? `<a href="${url.post(lead.id)}" aria-label="${esc(lead.title)}"><figure>${img(leadImage || `img/${lead.id}.jpg`, lead.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 600px' })}</figure></a>` : ''}
       </div>
     </div></section>
-${guide ? `<section class="series-guide" aria-label="旅行規劃"><h2>這趟旅行，怎麼安排？</h2><div class="guide-columns">${guide.map(([title, text, ids]) => `<div><h3>${esc(title)}</h3><p>${esc(text)}</p><ul>${ids.map(id => { if (!byId[id]) throw new Error('Unknown guide article: ' + id); return `<li><a href="${url.post(id)}">${esc(byId[id].zh)}</a></li>`; }).join('')}</ul></div>`).join('')}</div><p class="guide-note">天數與參觀時間為規劃建議，不含跨區交通；各景點的開放與預約資訊列在文章中。</p></section>` : ''}
+${guide ? `<section class="series-guide" aria-label="旅行規劃"><h2>這趟旅行，怎麼安排？</h2>${guideLink ? `<p><a href="${guideLink.href}">${guideLink.label} →</a></p>` : ''}<div class="guide-columns">${guide.map(([title, text, ids]) => `<div><h3>${esc(title)}</h3><p>${esc(text)}</p><ul>${ids.map(id => { if (!byId[id]) throw new Error('Unknown guide article: ' + id); return `<li><a href="${url.post(id)}">${esc(byId[id].zh)}</a></li>`; }).join('')}</ul></div>`).join('')}</div><p class="guide-note">天數與參觀時間為規劃建議，不含跨區交通；各景點的開放與預約資訊列在文章中。</p></section>` : ''}
     <section class="list box">${groups ? `<nav class="areas" id="areas" aria-label="依地區篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${posts.length}</small></a>${groups.map(([g, list]) => `<a href="#${encodeURIComponent(g)}" data-area="${esc(g)}">${g}<small>${list.length}</small></a>`).join('')}</nav>` + groups.map(([g, list]) => `<div class="grpsec" data-area="${esc(g)}"><h2 class="grp" id="${esc(g)}">${g}<small>${list.length}</small></h2>${grid(list)}</div>`).join('') : grid(posts)}</section>
     <section class="others box">
       <div class="sh"><h2>${othersTitle}</h2><span>${othersZh}</span></div>
@@ -468,13 +509,13 @@ const leadOf = list => [...list].filter(p => p.photo !== false).sort((a, b) => b
 const cardImg = p => p ? `img/${p.id}.jpg` : null;
 for (const [k, c] of Object.entries(CATS)) {
   const posts = postsNew.filter(p => hasCat(p, k));
-  listPage({ file: `category/${k.toLowerCase()}/index.html`, u: url.cat(k), label: 'CATEGORY　分類', h1: `${k} ${c.zh}`, desc: c.d, posts, lead: leadOf(posts), nav: k, crumb: 'CATEGORY',
+  listPage({ file: `category/${k.toLowerCase()}/index.html`, u: url.cat(k), label: 'CATEGORY　分類', h1: `${k} ${c.zh}`, desc: c.d, posts, lead: leadOf(posts), guideLink: k === 'GUIDE' ? {href: guideUrl, label: '青森冬季 3 天與 5 天行程'} : null, nav: k, crumb: 'CATEGORY',
     othersTitle: 'Other Categories', othersZh: '其他分類',
     others: Object.entries(CATS).filter(([x]) => x !== k).map(([x, v]) => { const l = POSTS.filter(p => hasCat(p, x)); return { u: url.cat(x), t: `${x}　${v.zh}`, n: l.length, img: cardImg(leadOf(l)) }; }) });
 }
 for (const s of SERIES) {
   const posts = s.ids.map(i => byId[i]).filter(Boolean);
-  listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, guide: SERIES_GUIDES[s.id], posts, lead: byId[s.img] || leadOf(posts), leadImage: s.pageImage, nav: '', crumb: 'SERIES',
+  listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, guide: SERIES_GUIDES[s.id], guideLink: s.id === 'tohoku-winter' ? {href: guideUrl, label: '青森冬季 3 天與 5 天行程'} : null, posts, lead: byId[s.img] || leadOf(posts), leadImage: s.pageImage, nav: '', crumb: 'SERIES',
     othersTitle: 'More Series', othersZh: '其他系列專題',
     others: SERIES_SHOWN.filter(x => x.id !== s.id).map(x => ({ u: url.series(x.id), t: x.t, n: x.ids.length, img: x.card || (fs.existsSync(path.join(ROOT, 'img', x.img + '.jpg')) ? `img/${x.img}.jpg` : null) })) });
 }
