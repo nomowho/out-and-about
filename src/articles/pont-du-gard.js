@@ -15,7 +15,7 @@ POST_DETAIL['pont-du-gard'] = {
     address:{ addressLocality:'Vers-Pont-du-Gard', addressCountry:'FR' }
   },
   body:[
-    { t:'p', text:'第一眼看到嘉德水道橋，會以為它就是一座橋。了解它的來歷之後才知道，它不只是一座橋。' },
+    { t:'p', text:'第一眼看到嘉德水道橋，會以為它就是一座橋。了解它的來歷之後才知道，它其實是一條水道。' },
     { t:'h', id:'why', text:'嘉德水道橋的用途' },
     { t:'p', text:'這是兩千年前古羅馬人為了喝到乾淨的水而蓋的。當時的尼姆是羅馬帝國在高盧的重要城市 Nemausus，城裡需要大量的水供應噴泉、浴場和住家。羅馬人找到 50 公里外、于澤（Uzès）附近的泉水，蓋了一條輸水道把水送進城，而嘉德水道橋，是這條輸水道跨越加爾東河（Gardon）的那一段。' },
     { t:'h', id:'engineering', text:'嘉德水道橋的厲害之處' },
