@@ -7,10 +7,29 @@
   window.gtag = function () { window.dataLayer.push(arguments); };
   var page = location.origin + location.pathname;
   var referrer = ''; try { var ref = new URL(document.referrer); referrer = ref.origin + ref.pathname; } catch (_) {}
+  // Accept only this site's four-field Facebook link contract. Keep URLs clean
+  // and send campaign values through the supported Google tag configuration.
+  var campaign = {}, postId = '';
+  try {
+    var inbound = new URL(location.origin + location.pathname + (location.search || ''));
+    var params = inbound.searchParams;
+    var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+    var unambiguous = keys.every(function (key) { return params.getAll(key).length === 1; });
+    var content = params.get('utm_content') || '', name = params.get('utm_campaign') || '';
+    var isTest = content.indexOf('qa_') === 0;
+    if (unambiguous && params.get('utm_source') === 'facebook' && params.get('utm_medium') === 'social' &&
+        content.length <= 96 && /^(?:qa_)?\d{8}_[a-z0-9]+(?:[-_][a-z0-9]+)*_\d{2}$/.test(content) &&
+        name === (isTest ? 'nomogram_tracking_test' : 'nomogram_articles')) {
+      postId = content;
+      campaign = { campaign_source: 'facebook', campaign_medium: 'social', campaign_name: name, campaign_content: postId };
+    }
+  } catch (_) {}
+
   gtag('js', new Date());
-  gtag('config', id, { send_page_view: false, page_location: page, page_referrer: referrer, allow_google_signals: false, allow_ad_personalization_signals: false });
-  function event(name, values) { gtag('event', name, Object.assign({ page_location: page, page_referrer: referrer }, values || {})); }
+  gtag('config', id, Object.assign({ send_page_view: false, page_location: page, page_referrer: referrer, allow_google_signals: false, allow_ad_personalization_signals: false }, campaign));
+  function event(name, values) { gtag('event', name, Object.assign({ page_location: page, page_referrer: referrer }, postId ? { fb_post_id: postId } : {}, values || {})); }
   event('page_view', { page_title: document.title });
+  if (postId) event('facebook_landing', { article_path: location.pathname });
   // Start after the first render, without competing with the main photo request.
   var loaded = false;
   function load() { if (loaded) return; loaded = true; var script = document.createElement('script'); script.async = true; script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id; document.head.appendChild(script); }

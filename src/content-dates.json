@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "b63a43bbdcb89b8d6f8e5726ec406c91757c186110a44d1e4ff8a91aaf9330ba",
+    "hash": "75a1651c22b8ac3ed168d90e1115922197e6239ca9dad3d7d10e3768de0fbe42",
     "date": "2026-11-24"
   },
   "/stories/dolomiti-winter/": {
@@ -464,15 +464,15 @@
     "date": "2026-11-24"
   },
   "/news/rapa-nui/": {
-    "hash": "715a825e96de1c162588f9c06c961da45885dbdd8ec1f702b47f464d3ad8f1ab",
+    "hash": "921caed086fa39b205cc51975773db541851d41dec132ab5f10ad9460c15b4a8",
     "date": "2026-11-24"
   },
   "/news/chiricahua/": {
-    "hash": "1bf5ce60c998dac257c748ace5be7c627457dfa4fecb5f18da5c178f5918dba5",
+    "hash": "da2bad827612f3870b13b45750c79669ea0c33ca8ca0cc9a3a7d2cc501944e34",
     "date": "2026-11-24"
   },
   "/news/beautiful-shops/": {
-    "hash": "61aa6390b5eef12b88683ee9cdfb5e0f23fc56aa22c910eeb58619a5aca90a52",
+    "hash": "c96c78fdb4105c6c0bba717ea43bef3431429e6dd563f838e378ad799ad4ead1",
     "date": "2026-11-24"
   },
   "/category/architecture/": {
@@ -604,11 +604,11 @@
     "date": "2026-11-23"
   },
   "/news/": {
-    "hash": "6f42356f09120a9dbf2878ea59ff055595c6401e5d338a4ada700329d6fd2efa",
+    "hash": "52fa5cad3436b6f00cef378ec61484c23bb8ff94f4ff986cb7a0c77e06afceef",
     "date": "2026-11-24"
   },
   "/news/archive/": {
-    "hash": "e9915c758a59c62f1cb8b180e0379c508271c81ae4a8d6874e40e49438a5e6b2",
+    "hash": "c81948b238195f3fbbff2c2f467c83a2128ebb354d3ea5772a2b4f6334ce5baf",
     "date": "2026-11-24"
   },
   "/journal/": {
@@ -1193,6 +1193,14 @@
   },
   "/guides/aomori-winter/": {
     "hash": "9b53648c28659966835b4e5f7875af283ae3097c930aabbe9369da7c887c55d1",
+    "date": "2026-11-24"
+  },
+  "news:rabat-theatre-royal-zha-2026": {
+    "hash": "cc12cd577fa2532c2936ee7f90171bf00c3a6d056e7ed58b3628e51ade17a78a",
+    "date": "2026-11-21"
+  },
+  "/news/rabat-theatre-royal-zha-2026/": {
+    "hash": "81bb31344f7a617b58f56cb455a3ef012bd88b8c7f136fc812cd8aa54e4c3214",
     "date": "2026-11-24"
   }
 }
