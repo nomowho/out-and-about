@@ -20,7 +20,7 @@ for(const bad of [query('person@example.com'),query('20261125_under_01')+'&utm_c
  const data=capture(bad);assert(!config(data).campaign_content,'Reject invalid/incomplete/ambiguous campaign');assert(!data.some(x=>x[1]==='facebook_landing'));assert(!JSON.stringify(data).includes('secret'));assert(!JSON.stringify(data).includes('person@'));
 }
 const qa=capture(query('qa_20261124_under_01').replace('nomogram_articles','nomogram_tracking_test'));
-assert.equal(config(qa).campaign_name,'nomogram_tracking_test');
+assert.equal(config(qa).campaign_name,'nomogram_tracking_test');assert.equal(config(qa).debug_mode,true);assert(!('debug_mode' in config(first)));
 assert(!config(capture(query('qa_20261124_under_01'))).campaign_content,'QA IDs must not enter real campaign');
 for(const n of [{globalPrivacyControl:true},{doNotTrack:'1'}])assert.equal(capture(query('20261125_under_01'),n).length,0);
 console.log('PASS Facebook campaign IDs, landing events, rejected parameters and privacy exclusions');

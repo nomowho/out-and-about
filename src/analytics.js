@@ -22,6 +22,7 @@
         name === (isTest ? 'nomogram_tracking_test' : 'nomogram_articles')) {
       postId = content;
       campaign = { campaign_source: 'facebook', campaign_medium: 'social', campaign_name: name, campaign_content: postId };
+      if (isTest) campaign.debug_mode = true;
     }
   } catch (_) {}
 

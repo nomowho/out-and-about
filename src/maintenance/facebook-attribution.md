@@ -11,7 +11,7 @@
 
 網站只接受完整且不重複的四個欄位、上述來源／媒介／活動，以及格式正確、最長 96 字元的代碼；其餘 query、fbclid、fragment 不傳入分析。透過 Google 支援的 `campaign_source/medium/name/content` 設定歸因，`page_location` 和 referrer 繼續使用乾淨網址。DNT/GPC、預覽排除、延後載入維持原設定。
 
-測試代碼前綴 `qa_`，活動固定為 `nomogram_tracking_test`，不與正式 `nomogram_articles` 混用。
+測試代碼前綴 `qa_`，活動固定為 `nomogram_tracking_test`，只對測試活動啟用 `debug_mode` 供 DebugView 核對參數，不與正式 `nomogram_articles` 混用。
 
 ## 產生連結與對照表
 
