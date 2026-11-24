@@ -54,7 +54,7 @@ const POSTS = [
   { id:'reinebringen', ig:'DKhfyZRB6_y', likes:123, photo:true, cat:'NATURE', extraCats:['GUIDE'], date:'2025.06.05', region:'Norway', area:'Lofoten', zh:'Reinebringen', title:'挪威羅浮敦 Reinebringen：近兩千階雪巴石階，爬上 Reine 峽灣全景' },
   { id:'trevarefabrikken', ig:'DJRmcQqhJ1M', likes:169, photo:true, cat:'ARCHITECTURE', extraCats:['FOOD','HISTORY','GUIDE'], date:'2025.05.05', region:'Norway', area:'Lofoten', zh:'Trevarefabrikken', title:'北極圈裡的靈魂工廠：老木工廠改成的旅館 Trevarefabrikken' },
   // ── 2026-11-20 舊 IG 匯入（56 篇，純文字版、photo:false；草稿與查證註記在 100_Todo/drafts/ig-import-2026-11/）──
-  { id:'salzburg',           ig:'DGqgUZEhaAe', likes:274, photo:false, cat:'HISTORY', extraCats:['ARCHITECTURE','ART','GUIDE'], date:'2025.03.01', region:'Austria', area:'Salzburg', zh:'薩爾茲堡', title:'一千年沒被打下來的城：薩爾茲堡的鹽、鐵招牌與莫札特' },
+  { id:'salzburg',           ig:'DGqgUZEhaAe', likes:274, photo:true, cat:'HISTORY', extraCats:['ARCHITECTURE','ART','GUIDE'], date:'2025.03.01', region:'Austria', area:'Salzburg', zh:'薩爾茲堡', title:'一千年沒被打下來的城：薩爾茲堡的鹽、鐵招牌與莫札特' },
   { id:'hallstatt-beinhaus', ig:'DFGBqBfBdUh', likes:137, photo:false, cat:'HISTORY', extraCats:['ART'], date:'2025.01.21', region:'Austria', area:'Hallstatt', zh:'哈修塔特人骨屋', title:'墓地太小，只好把頭骨請出來：哈修塔特人骨屋的 610 顆彩繪頭顱' },
   { id:'hallstatt-hideaway', ig:'DFAzgrShsVY', likes:187, photo:false, cat:'GUIDE', extraCats:['ARCHITECTURE','HISTORY','NATURE'],   date:'2025.01.19', region:'Austria', area:'Hallstatt', zh:'Hallstatt Hideaway', title:'被湖景叫醒的跨年早晨：住進 1740 年的哈修塔特森林官宅' },
   { id:'hallstatt',          ig:'DE9kxqQhTDx', likes:213, photo:false, cat:'HISTORY', extraCats:['ARCHITECTURE','NATURE'], date:'2025.01.18', region:'Austria', area:'Hallstatt', zh:'哈修塔特', title:'上帝的明信片其實是一座鹽礦：七千年前就有人在挖的哈修塔特' },
