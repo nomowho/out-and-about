@@ -13,7 +13,7 @@ POST_DETAIL['hallstatt'] = {
   updated:'2026-11-24',
   cover:'img/hallstatt/cover.jpg',
   coverPos:'50% 85%',  // 往上移、多留湖面（Nomo 11-24）
-  cardV:true,  // 直式卡片圖＝img/hallstatt.jpg（鐘樓與湖）
+  cardV:true,  // 直式卡片圖＝img/hallstatt.jpg（Nomo 11-24 指定 B0588E98：湖畔鐘樓與雪山）
   coverCap:"霧裡的哈修塔特，鐘樓從雲裡探出頭，就是明信片上的那個角度。",
   place:{
     alt:['Hallstatt','哈爾施塔特','Hallstätter See','哈爾施塔特湖','哈修塔特人骨屋','Beinhaus Hallstatt','Hallstatt Hideaway'],
