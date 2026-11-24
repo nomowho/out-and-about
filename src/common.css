@@ -798,3 +798,4 @@ figure>picture{display:contents}.pair .two>picture{display:contents}
 .reel-x{position:absolute;top:-44px;right:0;width:36px;height:36px;border:0;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:24px;line-height:1;cursor:pointer}
 @media(max-width:1000px){.reels-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 24px 4px}.reels-rail::-webkit-scrollbar{display:none}.reel{flex:0 0 calc((100% - 48px) / 3.4);scroll-snap-align:start}}
 @media(max-width:700px){.reels{margin-top:64px}.reels-rail{padding:0 20px 4px;gap:12px;scroll-padding-inline:20px}.reel{flex-basis:44vw}.reel h3{font-size:13px}}
+.reel-dlg{margin:auto;position:fixed;inset:0;width:fit-content;height:fit-content}
