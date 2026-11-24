@@ -3,6 +3,8 @@
   'use strict';
   var tag = document.currentScript, id = tag && tag.dataset.measurement;
   if (!id || !/^G-[A-Z0-9]+$/.test(id) || location.hostname !== 'nomowho.com' || navigator.globalPrivacyControl || navigator.doNotTrack === '1') return;
+  // Editor previews must never inflate the public site's audience.
+  if (new URL(location.origin + location.pathname + (location.search || '')).searchParams.has('preview')) return;
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
   var page = location.origin + location.pathname;
@@ -26,9 +28,13 @@
     }
   } catch (_) {}
 
+  // Set defaults before the tag initialises any automatically configured
+  // destination. Config-only defaults can arrive after its first page_view.
+  var settings = Object.assign({ send_page_view: false, page_location: page, page_referrer: referrer, allow_google_signals: false, allow_ad_personalization_signals: false }, campaign);
+  gtag('set', settings);
   gtag('js', new Date());
-  gtag('config', id, Object.assign({ send_page_view: false, page_location: page, page_referrer: referrer, allow_google_signals: false, allow_ad_personalization_signals: false }, campaign));
-  function event(name, values) { gtag('event', name, Object.assign({ page_location: page, page_referrer: referrer }, postId ? { fb_post_id: postId } : {}, values || {})); }
+  gtag('config', id, settings);
+  function event(name, values) { gtag('event', name, Object.assign({ page_location: page, page_referrer: referrer }, postId ? { fb_post_id: postId } : {}, campaign.debug_mode ? { debug_mode: true } : {}, values || {})); }
   event('page_view', { page_title: document.title });
   if (postId) event('facebook_landing', { article_path: location.pathname });
   // Start after the first render, without competing with the main photo request.

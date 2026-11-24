@@ -3,7 +3,7 @@ function run(opts={}){
  const events={},timers=[],raf=[],observed=[],nodes=[],clicks={},image={};
  const body={getBoundingClientRect:()=>({top:opts.top??-500,height:2000})};
  const rec={href:'https://nomowho.com/stories/under/?private=not-sent',getAttribute:()=>'/stories/under/'};
- const ctx={URL,Date,Object,WeakSet,WeakMap,clearTimeout(){},setTimeout:f=>{timers.push(f);return timers.length},requestAnimationFrame:f=>raf.push(f),innerHeight:500,location:{hostname:opts.host||'nomowho.com',origin:'https://nomowho.com',pathname:'/stories/the-twist/',search:'?private=secret'},navigator:opts.navigator||{},document:{currentScript:{dataset:{measurement:'G-EXAMPLE123'}},title:'Test article',referrer:'https://example.com/path?private=secret',visibilityState:'visible',readyState:'complete',querySelector:()=>body,querySelectorAll:()=>[rec],createElement:()=>image,head:{appendChild:n=>nodes.push(n)},addEventListener:(n,f)=>clicks[n]=f},addEventListener:(n,f,o)=>events[n]=f,IntersectionObserver:class{constructor(f){observed.push(f)}observe(){}unobserve(){}}};ctx.window=ctx;
+ const ctx={URL,Date,Object,WeakSet,WeakMap,clearTimeout(){},setTimeout:f=>{timers.push(f);return timers.length},requestAnimationFrame:f=>raf.push(f),innerHeight:500,location:{hostname:opts.host||'nomowho.com',origin:'https://nomowho.com',pathname:'/stories/the-twist/',search:opts.search??'?private=secret'},navigator:opts.navigator||{},document:{currentScript:{dataset:{measurement:'G-EXAMPLE123'}},title:'Test article',referrer:'https://example.com/path?private=secret',visibilityState:'visible',readyState:'complete',querySelector:()=>body,querySelectorAll:()=>[rec],createElement:()=>image,head:{appendChild:n=>nodes.push(n)},addEventListener:(n,f)=>clicks[n]=f},addEventListener:(n,f,o)=>events[n]=f,IntersectionObserver:class{constructor(f){observed.push(f)}observe(){}unobserve(){}}};ctx.window=ctx;
  vm.runInNewContext(code,ctx);return {ctx,events,timers,raf,observed,nodes,clicks,rec};
 }
 const r=run();r.raf.shift()();r.raf.shift()();let entries=()=>r.ctx.dataLayer.map(a=>Array.from(a));
@@ -15,4 +15,15 @@ let prevented=false;r.clicks.click({target:{closest:()=>r.rec},preventDefault:()
 r.clicks.click({target:{closest:()=>({href:'https://www.instagram.com/nomowho/?private=secret'})}});assert(entries().some(a=>a[1]==='instagram_click'));assert(!JSON.stringify(entries()).includes('secret'));
 assert.equal(r.nodes.length,0);r.timers[0]();assert.equal(r.nodes.length,1);assert(r.nodes[0].src.startsWith('https://www.googletagmanager.com/gtag/js?id=G-'));
 for(const options of [{navigator:{globalPrivacyControl:true}},{navigator:{doNotTrack:'1'}},{host:'localhost'}])assert(!run(options).ctx.dataLayer);
+// Preview visits must not initialise GA4 or enqueue events.
+for(const search of ['?preview=editor', '?preview', '?utm_source=facebook&preview=1'])
+ assert(!run({search}).ctx.dataLayer, 'Preview traffic must be excluded before GA4 starts');
+// Defaults must precede tag initialisation, including automatically routed tags.
+const startupEntries=entries(),defaults=startupEntries.find(a=>a[0]==='set');
+assert(defaults, 'Set global defaults before the Google tag starts');
+assert.equal(defaults[1].send_page_view,false);
+assert.equal(defaults[1].page_location,'https://nomowho.com/stories/the-twist/');
+assert.equal(defaults[1].allow_google_signals,false);
+assert.equal(defaults[1].allow_ad_personalization_signals,false);
+assert(startupEntries.indexOf(defaults)<startupEntries.findIndex(a=>a[0]==='js'));
 console.log('PASS GA4: sanitised URLs, depth deduplication, visible recommendations, normal links, deferred tag, DNT/GPC and preview exclusion');

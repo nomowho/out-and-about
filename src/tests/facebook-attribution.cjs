@@ -23,4 +23,11 @@ const qa=capture(query('qa_20261124_under_01').replace('nomogram_articles','nomo
 assert.equal(config(qa).campaign_name,'nomogram_tracking_test');assert.equal(config(qa).debug_mode,true);assert(!('debug_mode' in config(first)));
 assert(!config(capture(query('qa_20261124_under_01'))).campaign_content,'QA IDs must not enter real campaign');
 for(const n of [{globalPrivacyControl:true},{doNotTrack:'1'}])assert.equal(capture(query('20261125_under_01'),n).length,0);
+const qaDefaults=qa.find(a=>a[0]==='set');
+assert(qaDefaults, 'QA attribution must be available before Google tag initialisation');
+assert.equal(qaDefaults[1].debug_mode,true);
+assert.equal(qaDefaults[1].campaign_content,'qa_20261124_under_01');
+assert(events(qa).every(a=>a[2].debug_mode===true), 'Every QA event must be marked for DebugView');
+assert(events(first).every(a=>!('debug_mode' in a[2])), 'Do not mark real visitors as testers');
+assert.equal(capture(query('20261125_under_01')+'&preview=editor').length,0);
 console.log('PASS Facebook campaign IDs, landing events, rejected parameters and privacy exclusions');
