@@ -808,3 +808,5 @@ figure>picture{display:contents}.pair .two>picture{display:contents}
 .reels-wrap .rail-arr.l{left:-8px}.reels-wrap .rail-arr.r{right:-8px}
 @media(max-width:1000px){.reel{flex-basis:calc((100% - 48px) / 3.4)}.reels-wrap .rail-arr{top:calc((100vw - 48px - 48px) / 3.4 * 16 / 9 / 2 + 26px)}.reels-wrap .rail-arr.l{left:8px}.reels-wrap .rail-arr.r{right:8px}}
 @media(max-width:700px){.reel{flex-basis:44vw}.reels-wrap .rail-arr{display:none}}
+/* 薩爾茲堡 pair 裁切：往上露出 St. Peter 教堂尖塔頂（Nomo 11-24：照片往下移） */
+.pair img[src*="salzburg/old-town"]{object-position:50% 8%}
