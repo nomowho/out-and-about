@@ -55,7 +55,7 @@ const POSTS = [
   { id:'trevarefabrikken', ig:'DJRmcQqhJ1M', likes:169, photo:true, cat:'ARCHITECTURE', extraCats:['FOOD','HISTORY','GUIDE'], date:'2025.05.05', region:'Norway', area:'Lofoten', zh:'Trevarefabrikken', title:'北極圈裡的靈魂工廠：老木工廠改成的旅館 Trevarefabrikken' },
   // ── 2026-11-20 舊 IG 匯入（56 篇，純文字版、photo:false；草稿與查證註記在 100_Todo/drafts/ig-import-2026-11/）──
   { id:'salzburg',           ig:'DGqgUZEhaAe', likes:274, photo:true, cat:'HISTORY', extraCats:['ARCHITECTURE','ART','GUIDE'], date:'2025.03.01', region:'Austria', area:'Salzburg', zh:'薩爾茲堡', title:'千年沒被攻破的城堡：薩爾茲堡' },
-  { id:'hallstatt',          ig:'DE9kxqQhTDx', likes:213, photo:true, cat:'HISTORY', extraCats:['ARCHITECTURE','NATURE','ART','GUIDE'], date:'2025.01.18', region:'Austria', area:'Hallstatt', zh:'哈修塔特', title:'上帝的明信片，鹽礦、頭骨與一間老森林官宅：哈修塔特跨年夜住一晚' },
+  { id:'hallstatt',          ig:'DE9kxqQhTDx', likes:213, photo:true, cat:'HISTORY', extraCats:['ARCHITECTURE','NATURE','ART','GUIDE'], date:'2025.01.18', region:'Austria', area:'Hallstatt', zh:'哈修塔特', title:'上帝的明信片只有住一晚你才能體會：哈修塔特' },
   { id:'vienna-christmas',   ig:'DSMtrLWkpTS', likes:238, cat:'GUIDE', extraCats:['FOOD','HISTORY'],   date:'2025.12.13', region:'Austria', area:'Vienna',   zh:'維也納聖誕市集', title:'一杯熱紅酒換一個杯子：維也納聖誕市集一晚走完三座' },
   { id:'koenigssee',         ig:'DDkJSN0BdDr', likes:175, photo:false, cat:'NATURE', extraCats:['ARCHITECTURE','HISTORY','GUIDE'],  date:'2024.12.14', region:'Germany', area:'Bavaria', zh:'國王湖', title:'船夫一吹小號，山壁回了七次：只准電動船的德國國王湖' },
   { id:'eiskapelle',         ig:'DDrtHZthRMS', likes:159, photo:false, cat:'NATURE', extraCats:['GUIDE'],  date:'2024.12.17', region:'Germany', area:'Bavaria', zh:'冰教堂 Eiskapelle', title:'雪深到腰才爬到，冰教堂卻被雪崩埋了：它在 2025 年已經崩塌' },
