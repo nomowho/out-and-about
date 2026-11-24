@@ -26,6 +26,8 @@ const guideUrl = '/guides/aomori-winter/';
 const SERIES_SHOWN = SERIES.filter(s => s.img && s.wide);
 // 已刪除的系列：舊網址轉到新系列（Nomo 11-20），避免 Google 已收錄的連結變 404
 const SERIES_MOVED = { 'europe-architecture': 'architecture-walk', 'architecture-museum': 'architecture-walk' };
+// 2026-11-24 哈修塔特三篇合併：兩個舊文章網址轉到合併後的 /stories/hallstatt/
+const STORY_MOVED = { 'hallstatt-beinhaus': 'hallstatt', 'hallstatt-hideaway': 'hallstatt' };
 // 首頁保留最新十則；所有新聞內頁、存檔與 sitemap 持續公開。
 const NEWS_MAX = 10;
 const newsAll = [...NEWS].sort((a, b) => b.date.localeCompare(a.date));
@@ -568,6 +570,12 @@ for (const r of regions) {
   page({ file: 'destinations/index.html', title: `依國家找旅行｜${cards.length} 個國家｜Out and About`, desc, canonical: u, image: ogImg(cards[0].lead), style: 'category', nav: 'COUNTRIES', main, ld,
     extraHead: '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>\n' });
   sitemap.push({ loc: u, lastmod: BUILD_DATE, images: [] });
+}
+
+for (const [from, to] of Object.entries(STORY_MOVED)) {   // 已合併的文章：舊網址 → 新文章（meta refresh＋canonical）
+  const dest = '/stories/' + to + '/', out = path.join(ROOT, 'stories', from, 'index.html');
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, '<!DOCTYPE html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><title>這篇文章已合併｜Out and About</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="' + abs(dest) + '"><meta http-equiv="refresh" content="0; url=' + dest + '"></head><body><p>這篇文章已合併，請前往 <a href="' + dest + '">哈修塔特</a>。</p></body></html>\n');
 }
 
 /* ── 已取消的分類：舊網址轉到新分類 ── */
