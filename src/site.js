@@ -50,6 +50,28 @@
   onScroll();
 
 
+  /* 文章目次與快捷導覽：保留原生 details 鍵盤操作，手機預設收合。 */
+  var contents = $('contents'), contentsPanel = contents && contents.querySelector('details'), shortcuts = document.querySelector('.article-shortcuts');
+  if (contentsPanel && shortcuts) {
+    var root = document.documentElement;
+    root.classList.add('reading-page');
+    contentsPanel.open = innerWidth > 700;
+    var measureReadingHead = function () { root.style.setProperty('--reading-head-height', Math.ceil(head.getBoundingClientRect().height) + 'px'); };
+    measureReadingHead();
+    if (window.ResizeObserver) new ResizeObserver(measureReadingHead).observe(head);
+    else addEventListener('resize', measureReadingHead);
+    shortcuts.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if (a.getAttribute('href') === '#contents') {
+        contentsPanel.open = true;
+        contentsPanel.querySelector('summary').focus({ preventScroll: true });
+      }
+    });
+    var openContentsHash = function () { if (location.hash === '#contents') contentsPanel.open = true; };
+    openContentsHash(); addEventListener('hashchange', openContentsHash);
+  }
+
   /* 文末 More Stories：手機左右滑＋短線指示 */
   [].forEach.call(document.querySelectorAll('.more:not(.plain) .grid'), function (g) {
     var cards = g.children; if (cards.length < 2) return;

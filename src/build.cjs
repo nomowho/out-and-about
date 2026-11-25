@@ -191,6 +191,7 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(structuredDat
     <div class="tools r"><a class="header-search" href="/stories/#story-query"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span>找文章</span></a>${progress ? `<button type="button" class="share" id="shareBtn" aria-label="分享這篇文章" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14.5V3.5M7.75 7.5 12 3.25l4.25 4.25"/><path d="M8.5 10.5H6v10h12v-10h-2.5"/></svg><span>Share</span></button><div class="sharemenu" id="shareMenu" hidden><button type="button" data-share="copy">複製連結</button><a data-share="line" target="_blank" rel="noopener">LINE</a><a data-share="fb" target="_blank" rel="noopener">Facebook</a><a data-share="x" target="_blank" rel="noopener">X</a></div>` : ""}<a class="en ig" href="https://www.instagram.com/nomowho/" rel="me noopener">Instagram</a></div>
   </div>
   <nav class="nav" aria-label="分類">${navLinks(nav)}</nav>
+  ${main.includes('class="toc"') ? `<nav class="article-shortcuts" aria-label="文章快捷導覽"><a href="#contents">目次</a>${main.includes('id="info"') ? '<a href="#info">旅行資訊</a>' : ''}</nav>` : ''}
   ${progress ? '<div class="progress" id="progress"></div>' : ''}
 </header>
 <div class="drawer" id="drawer" hidden>
@@ -365,10 +366,10 @@ for (const p of POSTS) {
       : `<div class="cover">${img(cover, d.coverCap || p.zh, { lazy: false, sizes: '100vw' }).replace('<img ', (d.coverPos || Number.isFinite(d.coverSaturation)) ? `<img style="${d.coverPos ? `object-position:${d.coverPos};` : ''}${Number.isFinite(d.coverSaturation) ? `filter:saturate(${d.coverSaturation});` : ''}" ` : '<img ')}</div>${d.coverCap ? `<p class="covercap">${d.coverCap}</p>` : ''}<header class="ahead">${head}</header>`;
   const heads = d.body.filter(b => b.t === 'h');
   const main = `<article>${top}
-      <nav class="toc" aria-label="目次"><div class="in"><h2>CONTENTS 目次</h2><ol>
+      <nav class="toc" id="contents" aria-label="目次"><details class="in"><summary><h2>CONTENTS 目次</h2><span class="toc-action" aria-hidden="true"></span></summary><ol>
         ${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}
         ${d.info ? '<li><a href="#info">旅行資訊</a></li>' : ''}${d.faq ? '<li><a href="#qa">常見問題</a></li>' : ''}${d.sources ? '<li><a href="#sources">資料來源</a></li>' : ''}
-      </ol></div></nav>
+      </ol></details></nav>
       <div class="body">${withSignoff(layoutSides(d.body).map(block), related)}</div>
       ${d.info ? `<section class="info" id="info"><div class="in"><h2><span class="en">Travel Info</span><span>旅行資訊</span></h2><dl>${d.info.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="note">開放時間與費用可能調整，出發前請以官方公告為準。</p></div></section>` : ''}
       ${d.faq ? `<section class="qa" id="qa"><h2><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${d.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
@@ -474,7 +475,7 @@ newsAll.forEach(n => {
       <h1>${g.title}</h1><p class="dek">${g.dek}</p>
       <div class="by"><span>行程整理｜<b>Nomo</b></span><span>攝影｜Nomo</span><span>旅行資訊查閱｜<time datetime="${g.checked}">${g.checked.replace(/-/g, '.')}</time></span></div>
     </header><figure>${img(g.cover, g.coverCap, { lazy: false, sizes: '(max-width:900px) 100vw, 44vw' })}<figcaption>${g.coverCap}</figcaption></figure></section>
-    <nav class="toc" aria-label="目次"><div class="in"><h2>CONTENTS 目次</h2><ol>${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}<li><a href="#sources">官方資料</a></li></ol></div></nav>
+    <nav class="toc" id="contents" aria-label="目次"><details class="in"><summary><h2>CONTENTS 目次</h2><span class="toc-action" aria-hidden="true"></span></summary><ol>${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}<li><a href="#sources">官方資料</a></li></ol></details></nav>
     <div class="body">${g.body.map(block).join('')}${readingLinks([], related)}</div>
     <section class="refs" id="sources"><h2><span class="en">Sources</span><span>官方資料</span></h2><ol>${g.sources.map(([label, href]) => `<li><a href="${esc(href)}" target="_blank" rel="noopener">${esc(label)}</a><span>查閱日期 ${g.checked}</span></li>`).join('')}</ol></section>
     <aside class="author" aria-label="關於作者"><b>行程整理・攝影｜Nomo</b><p>本頁為冬季行程建議，搭配作者的親訪文章與照片；交通、開館資訊的出處列於上方「官方資料」。</p><a href="/about/">關於 Out and About ›</a></aside>
