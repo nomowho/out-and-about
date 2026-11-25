@@ -56,7 +56,7 @@ const SERIES = [
     ids:['tivoli','monserrate','regaleira','szentendre','koenigssee','the-twist','hotei-daibutsu','izu','fontaine-de-vaucluse','roussillon'] },
   { id:'odd-places', theme:true, card:'img/ear-of-dionysius/odd-card.jpg', t:'有趣的怪地方', en:'ODD PLACES', tag:'看起來不太對勁，所以要去', img:'the-twist',
     d:'戴墨鏡的大佛、扭成 90 度的美術館、沉在海裡的餐廳。',
-    intro:'有些地方第一眼看到會愣一下：戴墨鏡的布袋大佛、扭成 90 度的 The Twist、沉在海面下的 Under 餐廳、蓋在懸崖上的投入堂、牆上嵌滿遺骸的人骨禮拜堂，還有老鼠尺寸的商店街和躲在森林裡的木頭巨人。這個系列收的是我覺得「怎麼會這樣」的地方，每一個背後都有故事。',
+    intro:'有些地方第一眼看到會愣一下：戴墨鏡的布袋大佛、扭成 90 度的 The Twist、沉在海面下的 Under 餐廳、蓋在懸崖上的投入堂、牆上嵌滿遺骸的人骨禮拜堂，還有老鼠尺寸的商店街和躲在森林裡巨木巨人。這個系列收的是我的癖好景點，希望大家也會喜歡。',
     ids:['hotei-daibutsu','the-twist','under','ear-of-dionysius','nageiredo','evora','eiskapelle','anonymouse','forgotten-giants','obras-do-fidalgo','aufzug-cafe'] },
   { id:'roman-legacy', theme:true, card:'img/terme-di-caracalla.jpg', t:'羅馬人的遺產', en:'ROMAN LEGACY', tag:'兩千年前蓋的，現在還站著', img:'terme-di-caracalla',
     d:'浴場、別墅、劇場、水道橋，羅馬人蓋的東西還在。',
