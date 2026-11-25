@@ -1123,20 +1123,6 @@
     {
       "file": "0094c1ba3c0c6bef.webp",
       "width": 720,
-      "height": 405
-    }
-  ],
-  "img/eiskapelle/fan.jpg": [
-    {
-      "file": "8b06bf5ee76cb9c3.webp",
-      "width": 720,
-      "height": 1279
-    }
-  ],
-  "img/eiskapelle/fan2.jpg": [
-    {
-      "file": "43ebc29969249efe.webp",
-      "width": 720,
       "height": 1279
     }
   ],
@@ -1166,6 +1152,13 @@
       "file": "8c9c591ab6de16a5.webp",
       "width": 720,
       "height": 1279
+    }
+  ],
+  "img/eiskapelle/snow.jpg": [
+    {
+      "file": "00030ce7d4bd6094.webp",
+      "width": 720,
+      "height": 405
     }
   ],
   "img/eiskapelle/stream.jpg": [
