@@ -236,7 +236,7 @@
     "date": "2026-11-25"
   },
   "/stories/como-christmas/": {
-    "hash": "26eda220841e0c0da87f17518c9eb275cd34ed6fc5ea759ab54b2ce621c65d2f",
+    "hash": "bd63410b0359c7fda3ebe54e628ea901424cb2aa73e140ae81b75bb5c90d8250",
     "date": "2026-11-25"
   },
   "/stories/budapest-parliament/": {
@@ -612,103 +612,103 @@
     "date": "2026-11-25"
   },
   "/journal/": {
-    "hash": "868bcf3a9282a1febefc608fc098df63adeb861ca3565696526218b5cf73a207",
+    "hash": "f0f2f8d81d9083dab62a379fb3006286c511055b0069c5451344e9facb591b60",
     "date": "2026-11-25"
   },
   "/journal/page/2/": {
-    "hash": "23a07127b3b82ad0b71b7407563c4771929a51ac68dfb2fa58d11c8559170ce1",
+    "hash": "29ef5ee7cfe6896befed7c07766bb86657c58c9e65f6b4d2cca75a08422652e4",
     "date": "2026-11-25"
   },
   "/journal/page/3/": {
-    "hash": "3f7dca927f67ab7589704c499e7cfd44067f755ccba4fd6e93445fd1d7cd09f3",
+    "hash": "cf24086a44aedebcf190219632de437268cf72ca142edc662d2c2ecfe1a924cd",
     "date": "2026-11-25"
   },
   "/journal/page/4/": {
-    "hash": "96be8d89bbb9584fae3d3af54155d86a1e1789148a2f261e9ec33820e08919b1",
+    "hash": "bafa884f9efc6bf34b13ae53f7e97940ef6362e0d2a113cec6e2000edbaa683e",
     "date": "2026-11-25"
   },
   "/journal/page/5/": {
-    "hash": "ee28759fe9f076584e9c10c7cb28e738a0eb5cafdca022a626c6f361f8790bbe",
+    "hash": "805dfcc8de81c84772786a04e0977b4bc88baa94627eb93a4d52c39199f1327e",
     "date": "2026-11-25"
   },
   "/journal/page/6/": {
-    "hash": "a3b866aa7b9b322bd320f082880f1245683f7dee4823f1aece1e5b7722c3b239",
+    "hash": "abf37824d4c3304eda15d548bb4c8b98c87904e39fe8aaf294b29f4d56835b34",
     "date": "2026-11-25"
   },
   "/journal/page/7/": {
-    "hash": "2da2c19a054e1a9bf3b3d817706ef50f752ff7780fc997f84d22e96195b2344c",
+    "hash": "49375c0287391d1867bfe2541a5a4faaf96538c973ab28852f835838cd8eae09",
     "date": "2026-11-25"
   },
   "/journal/page/8/": {
-    "hash": "e8207122d8b34f6c75cd7470438051ebea0d60200cb35819cf5b8cf1ccbbbcce",
+    "hash": "6e72a6a98c23d01ab249e80008de99da15b18920ad36ed3f7e3e90669f5bfa8f",
     "date": "2026-11-25"
   },
   "/journal/page/9/": {
-    "hash": "d3674dd409eeb723ba09605f40188315acda55c88f3e5c4db743d54c8c9b2ca3",
+    "hash": "b95f65e19941beb2b16590cb313406492954aa1b3e47cb30e3c5e96a8555d2e2",
     "date": "2026-11-25"
   },
   "/journal/page/10/": {
-    "hash": "70997a5d735ce96130be421f128ed9e0b916409df22173bdcbe6211b6e920b5b",
+    "hash": "f0c09ed3079af7da14c7d23ac3acc90f010bd40d073c5eddb836ba2e42900791",
     "date": "2026-11-25"
   },
   "/journal/japan/": {
-    "hash": "d909c0c86dbf597e7ad9636b004286d6f870c5e988b461cd08d6b5f5f065214d",
+    "hash": "ef2add348b262d0caeecf72eb9f5e13812e3672ab2ecba2db03c86afcb6d8584",
     "date": "2026-11-25"
   },
   "/journal/japan/page/2/": {
-    "hash": "9fb81afa2ec4e614d1514875147864f3c54582552488c27eb12ac589fcb51199",
+    "hash": "ace2f6c3537ef794bf817299511d582f35aa978aa8906331bf0b194bbca23bef",
     "date": "2026-11-25"
   },
   "/journal/japan/page/3/": {
-    "hash": "7b32842a92be446e439dd9d118e5cf2f09a6f8a5e8737e25d603aa4697ef0cf4",
+    "hash": "c859cadab876bb74a31f60bae51d2c7f08816756af4547512a67ec30a2705804",
     "date": "2026-11-25"
   },
   "/journal/taiwan/": {
-    "hash": "0104d880322176aa784d80415d1b58c199767299353f6a2d7e0972d11b0e170a",
+    "hash": "ae4c030cc99dbb8e3a3cde782234ff4ae50e5999dbf8daa739a0272771cda76c",
     "date": "2026-11-25"
   },
   "/journal/italy/": {
-    "hash": "79b78a853c999a7effea34eadba35b59c611bb8f7c6017b2d419ab8641b96de0",
+    "hash": "10e42a9912000aaa07f805905ae90099014c53c9f5002aab7d35d9829a9716c0",
     "date": "2026-11-25"
   },
   "/journal/italy/page/2/": {
-    "hash": "aaa9b4867d59caadc099d567278c982bac882304127dd3ce9010accec33c0760",
+    "hash": "6b06a24a3e249c66cab77927f75c991dc0ab798ec2ae98f328a51ed7c036c303",
     "date": "2026-11-25"
   },
   "/journal/italy/page/3/": {
-    "hash": "94f400be10aaa13a7c80c6afe44be52ffd32d44e8704359f88257125be13a9b4",
+    "hash": "3aeb429f3a7e11206b44dbdd69afb00275e9fcda9afe67fa3fec8d3028347eb5",
     "date": "2026-11-25"
   },
   "/journal/spain/": {
-    "hash": "e4bd85a1da03f42afa3beb666a29223a8681033c67f34a8f812b92b78f15ce90",
+    "hash": "a0b79e287f80969a8e2b27fee1201a4f4123f0c5c0ac055c4ebb16c94815c588",
     "date": "2026-11-25"
   },
   "/journal/france/": {
-    "hash": "610881333374cf380ab0516189131e0675ca6f12fbc7e2cdcbd16d241a338424",
+    "hash": "33c0ecaa6c9bf9c3305dd3a785a2e9f615a1a00eee391a89bfaff544ed22841e",
     "date": "2026-11-25"
   },
   "/journal/portugal/": {
-    "hash": "89f18b49f73129eef43e60a6b39adae78fbd0cf5c239d7bd84f5860fa40a6b5f",
+    "hash": "fe2edf10fda113623c10118717eb1ec09c8c2af74dc3c3c6158e76dfc48120e5",
     "date": "2026-11-25"
   },
   "/journal/austria/": {
-    "hash": "d3cce939b74476a96d15fb18803d756e092df1f3fec0dd81816de5cda7f7272a",
+    "hash": "941935f4176d38a6bd6c1413181b19ce9c09d2ee8067525d5c61966d66be9762",
     "date": "2026-11-25"
   },
   "/journal/norway/": {
-    "hash": "f67ee4c4656145868bdaf4a3e7abbf5905028a711b603575cff4ac61f9884bff",
+    "hash": "4967326be2a8e40cb3f4a0d0c0631d0326ee90838c7b06d8634b76933c09e12d",
     "date": "2026-11-25"
   },
   "/journal/norway/page/2/": {
-    "hash": "af51c091a417b5475cecefdad9875a1dbfb067b50d7d0a4d64de5a4dfb1aa437",
+    "hash": "ce889e6a8ad53e0611b9c23f23d4bd0639bff8a1ecebd425bba1499927adb22c",
     "date": "2026-11-25"
   },
   "/journal/norway/page/3/": {
-    "hash": "29160da0effcf340c50f6fc7cfd878df1d5745dbd6b022e561b5ff1b8014eafa",
+    "hash": "e786bcf0a26a9998338ca3efb7bbe033b0b16d53c2e000e3c10389f00cb65a35",
     "date": "2026-11-25"
   },
   "/journal/vatican/": {
-    "hash": "3b529225c4cb418133dcabc2708188a0beebcb440dec993b48cd233e3d0f0777",
+    "hash": "eba640f54061535d8d51e2331851a966bd6e5e9bd338e77112c13dc0c9d0d281",
     "date": "2026-11-25"
   },
   "article:dolomiti-winter": {
@@ -944,7 +944,7 @@
     "date": "2026-11-25"
   },
   "article:como-christmas": {
-    "hash": "049808d0186021234f1beb657f85079fcbd8e7fcdf735add6b88c107d63cf279",
+    "hash": "0654861034b99bb4d683f4990f1d7104affe068ab3970528d01fd2e58d24df82",
     "date": "2026-11-25"
   },
   "article:budapest-parliament": {
