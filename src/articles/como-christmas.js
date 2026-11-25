@@ -23,6 +23,7 @@ POST_DETAIL['como-christmas'] = {
     { t:'h', id:'light', text:'Como光雕秀的看法' },
     { t:'p', text:'最精彩的是入夜後的光雕投影（Magic Light Festival）。主教座堂廣場上的 Broletto 塔樓、舊城門 Porta Torre，還有主教座堂的立面，都會被投上會動的圖案：雪花、星星、童話角色、彩色的窗戶。Como的老房子大多是平整的灰泥外牆，剛好成了最好的投影布幕，連一整排公寓都被畫成五顏六色的卡通房子。' },
     { t:'img', size:'wide', src:'img/como-christmas/arcade.jpg', cap:"市政廳一整排拱門也被投影上色，聖誕樹就站在廊下。" },
+    { t:'img', size:'wide', src:'img/como-christmas/nativity.jpg', cap:"教堂立面被投上一整幅聖誕壁畫，天使和馬槽就在大門兩旁，隔壁的老房子也灑滿了星星。" },
     { t:'h', id:'market', text:'Como聖誕市集賣的東西' },
     { t:'p', text:'主教座堂廣場上擺滿了木屋攤位，旁邊立著一棵掛滿燈的大聖誕樹。攤位賣的是手工藝品、聖誕裝飾、起司和臘腸，也少不了熱紅酒和義大利的聖誕麵包 panettone。歐洲的聖誕市集起源可追溯到中世紀，當時人們會在冬至前後於廣場擺攤，販售手工藝品與食物飲料，一起迎接冬至的到來；Como把這個傳統加上了湖區的悠閒，還有一點義大利式的熱鬧。' },
     { t:'img', size:'wide', src:'img/como-christmas/market.jpg', cap:"聖誕樹立在鐘樓旁，比三層樓的窗子還高，市集的木屋就圍在樹腳下。" },
