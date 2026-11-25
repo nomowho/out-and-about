@@ -1,7 +1,7 @@
 {
   "/": {
-    "hash": "d6e75932ca29e181c90559496b6abb74fc2bfc9a1332e6f8f22c04e7d19eb539",
-    "date": "2026-11-24"
+    "hash": "03d534c26b6797602d7c1ae9306f91dd096f0aa4eeaa33b4c276315200d39ce9",
+    "date": "2026-11-25"
   },
   "/stories/dolomiti-winter/": {
     "hash": "0759eea3e007c7e1bba85c3a76fb7c92466a405b4c234c0e8453cf1241ad9b1e",
@@ -468,12 +468,12 @@
     "date": "2026-11-24"
   },
   "/news/chiricahua/": {
-    "hash": "da2bad827612f3870b13b45750c79669ea0c33ca8ca0cc9a3a7d2cc501944e34",
-    "date": "2026-11-24"
+    "hash": "6a25aea5a62a66317d2c9e3daa4334b1b66a60b654c360792d91ec037d9edb20",
+    "date": "2026-11-25"
   },
   "/news/beautiful-shops/": {
-    "hash": "c96c78fdb4105c6c0bba717ea43bef3431429e6dd563f838e378ad799ad4ead1",
-    "date": "2026-11-24"
+    "hash": "d4560d78a558916de795a6a88a7113ab3d25bfda7f37e0ce7dc53c222bdcc503",
+    "date": "2026-11-25"
   },
   "/category/architecture/": {
     "hash": "260b5350e80a3df773184040dd459c32855e21bd8a8097deb3dbc09cf740af08",
@@ -604,12 +604,12 @@
     "date": "2026-11-25"
   },
   "/news/": {
-    "hash": "52fa5cad3436b6f00cef378ec61484c23bb8ff94f4ff986cb7a0c77e06afceef",
-    "date": "2026-11-24"
+    "hash": "5fffc439388f93ce0901272dc63bb83ffc8ccf4a712526afc4782e98138cd883",
+    "date": "2026-11-25"
   },
   "/news/archive/": {
-    "hash": "c81948b238195f3fbbff2c2f467c83a2128ebb354d3ea5772a2b4f6334ce5baf",
-    "date": "2026-11-24"
+    "hash": "18ae31cde006f551046155ce5c711fd032bcb6c6d12c20b1ab80d076b46bba0b",
+    "date": "2026-11-25"
   },
   "/journal/": {
     "hash": "904e72ca2f6c317ba061ce3a2ca6199cfd2b0ef24e079bc1d2cd85c95a71d798",
@@ -1200,7 +1200,15 @@
     "date": "2026-11-21"
   },
   "/news/rabat-theatre-royal-zha-2026/": {
-    "hash": "81bb31344f7a617b58f56cb455a3ef012bd88b8c7f136fc812cd8aa54e4c3214",
-    "date": "2026-11-24"
+    "hash": "b0b7a2d8918dea23518ed93d0598b0fb2c44af51031973b9355a0e90776690d9",
+    "date": "2026-11-25"
+  },
+  "news:thun-big-siegenthalergut-hotel-2026": {
+    "hash": "24117ace5c0cc3d94f91b20109e36fedef60837da2c575424245e39ac2edcc61",
+    "date": "2026-11-20"
+  },
+  "/news/thun-big-siegenthalergut-hotel-2026/": {
+    "hash": "404d946643dcb4652a4a1613041a333bd4d9b309d57aecb1ff61a991ecafbbae",
+    "date": "2026-11-25"
   }
 }
