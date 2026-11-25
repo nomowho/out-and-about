@@ -18,7 +18,7 @@ POST_DETAIL['eiskapelle'] = {
   },
   body:[
     { t:'p', text:'冬天的國王湖，渡輪只開到半路的聖巴爾多祿茂教堂，再往裡面的上湖到不了。既然船不能走，我們決定用腳走，挑了一條通往冰教堂（Eiskapelle）的步道。' },
-    { t:'pair', imgs:['img/eiskapelle/stump.jpg','img/eiskapelle/bosco.jpg'], cap:"左：湖邊草地上的老樹墩，頭上又長出一棵小樹。右：Bosco 在雪地的倒木上坐定，等人。" },
+    { t:'pair', imgs:['img/eiskapelle/stump.jpg','img/eiskapelle/bosco.jpg'], cap:"左：湖邊草地上的老樹墩，頭上又長出一棵小樹。右：雪地的倒木上，一隻小狗坐定了在等人。" },
     { t:'h', id:'trail', text:'從國王湖走到冰教堂的路' },
     { t:'p', text:'一開始很溫和：穿過樹林、跨過小溪，路邊有一座白牆紅窗的小禮拜堂。越往裡走，樹越高、路越窄，腳下的落葉泥地慢慢被青苔和積雪取代。兩側是瓦茨曼山東壁的大岩壁，雪崩沖下來的雪在山溝裡堆成一條條白色的扇形。' },
     { t:'img', size:'wide', src:'img/eiskapelle/forest.jpg', cap:"步道一開始是樹林裡的長椅和斑駁的光，很容易讓人以為這是一趟輕鬆的散步。" },
