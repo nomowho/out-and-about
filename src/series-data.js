@@ -54,7 +54,7 @@ const SERIES = [
     d:'羅馬、里斯本、布達佩斯、名古屋，從大城市出發一天來回的地方。',
     intro:'行程排到最後，常常會多出一天。這個系列收的都是從大城市出發、一天就能來回的地方：羅馬東邊的蒂沃利、里斯本旁邊的辛特拉、布達佩斯北邊的聖安德烈、薩爾茲堡附近的國王湖、奧斯陸開車一小時的 The Twist，還有名古屋近郊的布袋大佛和東京出發的伊豆。',
     ids:['tivoli','monserrate','regaleira','szentendre','koenigssee','the-twist','hotei-daibutsu','izu','fontaine-de-vaucluse','roussillon'] },
-  { id:'odd-places', theme:true, card:'img/the-twist.jpg', t:'有趣的怪地方', en:'ODD PLACES', tag:'看起來不太對勁，所以要去', img:'the-twist',
+  { id:'odd-places', theme:true, card:'img/ear-of-dionysius/odd-card.jpg', t:'有趣的怪地方', en:'ODD PLACES', tag:'看起來不太對勁，所以要去', img:'the-twist',
     d:'戴墨鏡的大佛、扭成 90 度的美術館、沉在海裡的餐廳。',
     intro:'有些地方第一眼看到會愣一下：戴墨鏡的布袋大佛、扭成 90 度的 The Twist、沉在海面下的 Under 餐廳、蓋在懸崖上的投入堂、牆上嵌滿遺骸的人骨禮拜堂，還有老鼠尺寸的商店街和躲在森林裡的木頭巨人。這個系列收的是我覺得「怎麼會這樣」的地方，每一個背後都有故事。',
     ids:['hotei-daibutsu','the-twist','under','ear-of-dionysius','nageiredo','evora','eiskapelle','anonymouse','forgotten-giants','obras-do-fidalgo','aufzug-cafe'] },
