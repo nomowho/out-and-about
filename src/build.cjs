@@ -10,10 +10,12 @@ const abs = p => SITE + p;
 const read = f => fs.readFileSync(path.join(SRC, f), 'utf8');
 
 /* ── 載入資料 ── */
-const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.js'), read('series-data.js'), read('stories-data.js'), read('geo-data.js'), read('reels-data.js'),
+const code = ['const POST_DETAIL = {};', read('posts-data.js'), read('news-data.js'), read('series-data.js'), read('stories-data.js'), read('geo-data.js'), read('reels-data.js'), read('english-names.js'),
   ...fs.readdirSync(path.join(SRC, 'articles')).filter(f => f.endsWith('.js')).map(f => read('articles/' + f)),
-  ';({ POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES, REELS })'].join('\n');
-const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES, REELS } = vm.runInNewContext(code);
+  ';({ POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES, REELS, EN_NAMES, EN_ENABLED })'].join('\n');
+const { POSTS, NEWS, SERIES, POST_DETAIL, STORIES, CITIES, REELS, EN_NAMES, EN_ENABLED } = vm.runInNewContext(code);
+// 旅行資訊最上面加一列「英文名稱」（景點｜城市, 國家；Nomo 2026-11-25）
+for (const p of POSTS) { const d = POST_DETAIL[p.id], e = EN_NAMES[p.id]; if (EN_ENABLED && d && e) { const [spot, city, country] = e; const place = [city, country].filter((x, i, a) => x && a.indexOf(x) === i).join(', '); d.info = [['英文名稱', spot + '｜' + place], ...(d.info || [])]; } }
 function hasCat(p, cat) { return p.cat === cat || (p.extraCats || []).includes(cat); }
 const byId = Object.fromEntries(POSTS.map(p => [p.id, p]));
 const postsNew = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
