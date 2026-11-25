@@ -846,3 +846,4 @@ html.reading-page{scroll-padding-top:calc(var(--reading-head-height,160px) + 12p
 /* 固定刊頭不做字級／分類列高度的逐格過場，避免捲動時文字重繪殘影。 */
 .head .logo b,.head .nav{transition:none}
 html{overflow-x:clip;max-width:100%;overscroll-behavior-x:none}body{overflow-x:clip;max-width:100%;overscroll-behavior-x:none}
+@media(max-width:700px){#all,.story-search,.stories-head{touch-action:pan-y pinch-zoom}.nav,.areas,.drag-scroll{overscroll-behavior-x:contain}}
