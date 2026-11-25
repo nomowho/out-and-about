@@ -859,3 +859,5 @@ html{overflow-x:clip;max-width:100%;overscroll-behavior-x:none}body{overflow-x:c
 .dest details.col>summary:hover h3{text-decoration:underline}
 .dest details.col ul{padding-bottom:6px}
 .dest li.dall a{font-size:13px;color:var(--gray)}
+/* 金蛇水神社卡片：保留下方完整石頭（Nomo 11-25） */
+img[src*="img/kaneja."]{object-position:50% 100%!important}
