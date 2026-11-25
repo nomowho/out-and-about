@@ -874,11 +874,25 @@
       "height": 1278
     }
   ],
+  "img/como-christmas/arcade.jpg": [
+    {
+      "file": "5d856ecbef98cf8a.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
   "img/como-christmas/church.jpg": [
     {
       "file": "540ada3acbb3f0b2.webp",
       "width": 720,
       "height": 980
+    }
+  ],
+  "img/como-christmas/church2.jpg": [
+    {
+      "file": "258688cc3be6c7ce.webp",
+      "width": 720,
+      "height": 406
     }
   ],
   "img/como-christmas/cover.jpg": [
@@ -900,6 +914,13 @@
       "file": "071916da4c2376d4.webp",
       "width": 720,
       "height": 540
+    }
+  ],
+  "img/como-christmas/tower.jpg": [
+    {
+      "file": "93072788ccad6ec4.webp",
+      "width": 720,
+      "height": 406
     }
   ],
   "img/dolomiti-winter/c02.jpg": [
@@ -4609,7 +4630,7 @@
     {
       "file": "fc9b095c7b95b4c4.webp",
       "width": 720,
-      "height": 1280
+      "height": 1288
     }
   ],
   "img/vienna-christmas/series-wide.jpg": [
