@@ -142,7 +142,7 @@
       secs.forEach(function (x) { var text = normalizeSearch(x.getAttribute('data-search') || x.textContent || ''); x.hidden = (!!name && (x.getAttribute('data-area') || '').split(' ').indexOf(name) === -1) || !terms.every(function (term) { return text.indexOf(term) !== -1; }); });
       if (searchStatus) searchStatus.textContent = secs.filter(function (x) { return !x.hidden; }).length + ' 篇文章';
       areas.classList.toggle('filtered', !!name);
-      var vis = 0; secs.forEach(function (x) { if (x.parentNode && x.parentNode.id === 'all') { x.classList.toggle('big', !x.hidden && vis % 6 === 0); if (!x.hidden) vis++; } });
+      /* 全部小圖：不再有大圖卡 */
       areas.dispatchEvent(new Event('areachange'));
       if (scroll) areas.scrollIntoView({ block: 'start', behavior: 'smooth' });
     };
