@@ -838,3 +838,7 @@ figure>picture{display:contents}.pair .two>picture{display:contents}
 html.reading-page{scroll-padding-top:calc(var(--reading-head-height,160px) + 12px)}
 .reading-page .toc[id],.reading-page .info[id],.reading-page .qa[id],.reading-page .refs[id],.reading-page .body h2[id]{scroll-margin-top:12px}
 @media(max-width:700px){.toc details.in{padding:0 18px}.toc summary{min-height:56px}.article-shortcuts{gap:22px}.article-shortcuts a{font-size:13px}}
+
+/* 搜尋輸入：保留底線狀態，不顯示全域黑色焦點外框。 */
+.story-search input:focus,.story-search input:focus-visible{outline:none;box-shadow:none}
+.story-search>div:focus-within{border-bottom-color:#C8F500}
