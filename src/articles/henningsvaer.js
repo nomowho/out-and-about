@@ -7,7 +7,7 @@
 // 造訪時間：同一趟羅浮敦行程 → 6 月
 // 照片：Nomo 2026-11-20 指示先不放；原始 IG 圖在 output/photos/_ig-import/C8zgeMIh1i2/
 POST_DETAIL['henningsvaer'] = {
-  seoTitle:'Henningsvær：北極圈的威尼斯，世界最美的島尖足球場與魚子醬工廠改建的美術館',
+  seoTitle:'羅浮敦 Lofoten｜Henningsvær：北極圈的威尼斯，世界最美的島尖足球場與魚子醬工廠改建的美術館',
   dek:'Henningsvær 是挪威羅浮敦群島上的小漁村，整個村子蓋在 Heimøya 和 Hellandsøya 兩座小島上，有「羅浮敦的威尼斯」之稱。島尖那座被岩石和大海包圍的足球場，常被說是世界最美的球場；岸邊的 KaviarFactory 則是由魚子醬工廠改建的當代美術館，2013 年開館。',
   updated:'2026-11-20',
   place:{
@@ -18,7 +18,7 @@ POST_DETAIL['henningsvaer'] = {
   body:[
     { t:'p', text:'無人機升到高空，畫面裡的 Henningsvær 像一盤被打翻的拼圖：大大小小的島散在藍色的海上，房子擠在其中兩塊上面，中間用細細的橋連著。最尖端那塊光禿禿的岩石島上，竟然躺著一座綠色的足球場。' },
     { t:'h', id:'venice', text:'叫「北極圈的威尼斯」的 Henningsvær' },
-    { t:'p', text:'Henningsvær 的村子蓋在 Heimøya 和 Hellandsøya 兩座小島上，島與島之間是窄窄的水道，漁船直接開到家門口，所以被叫做羅浮敦的威尼斯。紅、白、黃色的木屋貼著水邊排開，港口停滿漁船，曬鱈魚乾的木架一排一排，整個村子乾淨又可愛，可愛到有點像環球影城的片場。' },
+    { t:'p', text:'Henningsvær 的村子蓋在 Heimøya 和 Hellandsøya 兩座小島上，島與島之間是窄窄的水道，漁船直接開到家門口，所以被叫做羅浮敦（Lofoten）的威尼斯。紅、白、黃色的木屋貼著水邊排開，港口停滿漁船，曬鱈魚乾的木架一排一排，整個村子乾淨又可愛，可愛到有點像環球影城的片場。' },
     { t:'p', text:'村子裡有不少畫廊和咖啡館，在這個看似被世界遺忘的邊陲，反而有一股新的創作能量。' },
     { t:'h', id:'stadium', text:'Henningsvær 的足球場' },
     { t:'p', text:'球場在 Hellandsøya 島的南端。當地人把整片岩盤炸平，鋪上人工草皮，四周全是光滑的花崗岩和海，旁邊還有曬魚乾的木架。這是當地業餘球隊 Henningsvær IL 的主場，也對所有人開放，走路就能到。' },

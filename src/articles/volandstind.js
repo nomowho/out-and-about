@@ -1,6 +1,6 @@
 // Volandstind｜既有旅行紀錄配入 Nomo 原圖。
 POST_DETAIL['volandstind'] = {
-  "seoTitle": "羅浮敦的馬特洪峰 Volandstind：457 公尺的三角尖峰，幸運的話會戴上一頂雲做的帽子",
+  "seoTitle": "羅浮敦 Lofoten 的馬特洪峰 Volandstind：457 公尺的三角尖峰，幸運的話會戴上一頂雲做的帽子",
   "dek": "Volandstind 在挪威羅浮敦群島的 Flakstadøya 島上，海拔約 457 公尺，形狀尖銳、孤立在海灣和橋邊，被稱為「羅浮敦的馬特洪峰」。最好的觀景點在 Fredvang 雙橋附近；天氣對的時候，山頂會出現一圈蓋帽雲。",
   "visit": "6 月（午夜太陽季）",
   "body": [
@@ -11,7 +11,7 @@ POST_DETAIL['volandstind'] = {
     {
       "t": "h",
       "id": "what",
-      "text": "叫羅浮敦的馬特洪峰的 Volandstind"
+      "text": "叫羅浮敦（Lofoten）的馬特洪峰的 Volandstind"
     },
     {
       "t": "p",

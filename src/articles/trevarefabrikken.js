@@ -1,11 +1,11 @@
 // Nomo 親訪紀錄與官網資料。
 POST_DETAIL['trevarefabrikken'] = {
-  "seoTitle": "挪威 Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常",
+  "seoTitle": "挪威羅浮敦 Lofoten｜Trevarefabrikken：北極圈裡的靈魂工廠，桑拿、音樂與漁村的新日常",
   "dek": "位於羅浮敦群島 Henningsvær 的 Trevarefabrikken，從老木工廠變成住宿、咖啡、音樂與活動共存的地方。這次來到建築後方的臨海桑拿屋，蒸著 80 幾度的熱石桑拿，接著跳進 0 度的海，再衝回桑拿，很熱血，也很慶幸我還活著！",
   "body": [
     {
       "t": "p",
-      "text": "位於挪威羅浮敦群島的 Henningsvær，有一座面海而立的老工廠，名叫 Trevarefabrikken。來到這裡，可以喝咖啡、吃點東西，也可以蒸桑拿、聽音樂，甚至住下來。我這次最期待的，是建築後方臨海岩岸上的桑拿屋。"
+      "text": "位於挪威羅浮敦（Lofoten）群島的 Henningsvær，有一座面海而立的老工廠，名叫 Trevarefabrikken。來到這裡，可以喝咖啡、吃點東西，也可以蒸桑拿、聽音樂，甚至住下來。我這次最期待的，是建築後方臨海岩岸上的桑拿屋。"
     },
     {
       "t": "h",

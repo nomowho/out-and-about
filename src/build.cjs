@@ -783,7 +783,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     </div></section>
     <section class="list box">
       <nav class="areas" id="areas" aria-label="依主題篩選"><a href="#areas" data-area="" class="on" aria-current="true">全部<small>${POSTS.length}</small></a>${cats.map(k => `<a href="#${k.toLowerCase()}" data-area="${k.toLowerCase()}">${k}<small>${POSTS.filter(p => hasCat(p, k)).length}</small></a>`).join('')}</nav>
-      <form class="story-search" role="search" hidden><label for="story-query">找一篇旅行</label><div><input id="story-query" type="search" autocomplete="off" placeholder="地點、國家、建築或關鍵字"><button type="reset">清除</button></div><p id="search-status" role="status" aria-live="polite"></p></form>
+      <form class="story-search" role="search" hidden><label for="story-query">想去哪走走</label><div><input id="story-query" type="search" autocomplete="off" placeholder="地點、國家、建築或關鍵字"><button type="reset">清除</button></div><p id="search-status" role="status" aria-live="polite"></p></form>
       <div class="grid allgrid" id="all">${cards}</div>
     </section>`;
     const desc = `Out and About 全部 ${POSTS.length} 篇旅行故事：建築、藝術、歷史、自然、美食與旅行指南，遍及${regions.map(r => REGION_ZH[r]).join('、')}。`;
