@@ -1196,6 +1196,139 @@
       "height": 1278
     }
   ],
+  "img/hallstatt.jpg": [
+    {
+      "file": "791092afe35cc861.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/bedroom.jpg": [
+    {
+      "file": "7a618ceb0675148c.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/hallstatt/breakfast.jpg": [
+    {
+      "file": "d7b31a299a7babc4.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/hallstatt/church.jpg": [
+    {
+      "file": "28d647748978abb1.webp",
+      "width": 720,
+      "height": 1254
+    }
+  ],
+  "img/hallstatt/cover.jpg": [
+    {
+      "file": "3080464a014ab419.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/hallstatt/cross-skulls.jpg": [
+    {
+      "file": "9b089fed17bd85be.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/hallstatt/cross.jpg": [
+    {
+      "file": "ec299dcf8de8ec4d.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/fog.jpg": [
+    {
+      "file": "2ccd9a2710937e6f.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/hallstatt/hillside.jpg": [
+    {
+      "file": "71c4b0cdaf0cf120.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/houses.jpg": [
+    {
+      "file": "a65f9ae47454c98d.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/lake.jpg": [
+    {
+      "file": "ccb1cd577090b74e.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/lane.jpg": [
+    {
+      "file": "19792ab6133e9dee.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/room.jpg": [
+    {
+      "file": "7f3168610c91932f.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/hallstatt/skulls.jpg": [
+    {
+      "file": "81b645d60e1dc874.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/steeple.jpg": [
+    {
+      "file": "e9a2d95e78508cfe.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/street.jpg": [
+    {
+      "file": "71898f76b3838409.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/hallstatt/view.jpg": [
+    {
+      "file": "6f1d9b52fce887c3.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/hallstatt/wall.jpg": [
+    {
+      "file": "bb80415ec8ea33ef.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/hallstatt/window.jpg": [
+    {
+      "file": "5a2ce8508816e7ac.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
   "img/hengchun.jpg": [
     {
       "file": "8bc6301b3bd77424.webp",
@@ -1480,7 +1613,7 @@
     {
       "file": "b74063171d0299e3.webp",
       "width": 720,
-      "height": 1278
+      "height": 406
     }
   ],
   "img/kaneja/01_card.jpg": [
@@ -2845,6 +2978,97 @@
       "file": "00dd5bf9675ed0c1.webp",
       "width": 720,
       "height": 960
+    }
+  ],
+  "img/sagrada-familia/heritage-card.jpg": [
+    {
+      "file": "d728bd6fb768c1e5.webp",
+      "width": 720,
+      "height": 1284
+    }
+  ],
+  "img/salzburg.jpg": [
+    {
+      "file": "4e0eefa758f17ed5.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/arch.jpg": [
+    {
+      "file": "77628e077656c19c.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/chess.jpg": [
+    {
+      "file": "f4157072cf38b1d7.webp",
+      "width": 720,
+      "height": 1272
+    }
+  ],
+  "img/salzburg/cover.jpg": [
+    {
+      "file": "c651dd5f9d7937ac.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/salzburg/hall.jpg": [
+    {
+      "file": "4aa560e4a7b8767f.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/key.jpg": [
+    {
+      "file": "d94be31b1a3d1935.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/old-town.jpg": [
+    {
+      "file": "471210c10a709375.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/rail.jpg": [
+    {
+      "file": "6b7f14d86ef42654.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/riverside.jpg": [
+    {
+      "file": "fb1638453934f9af.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/signs.jpg": [
+    {
+      "file": "c68e6bf4e62bdeb2.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/sphaera.jpg": [
+    {
+      "file": "57f048dda94301a8.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/salzburg/window.jpg": [
+    {
+      "file": "1a38ec3efc2afc25.webp",
+      "width": 720,
+      "height": 1278
     }
   ],
   "img/scala-santa.jpg": [
@@ -4337,6 +4561,20 @@
       "file": "e93dde100cd911f8.webp",
       "width": 720,
       "height": 960
+    }
+  ],
+  "img/vienna-christmas/series-card.jpg": [
+    {
+      "file": "fc9b095c7b95b4c4.webp",
+      "width": 720,
+      "height": 840
+    }
+  ],
+  "img/vienna-christmas/series-wide.jpg": [
+    {
+      "file": "cef6e8c67de2b9c0.webp",
+      "width": 720,
+      "height": 406
     }
   ],
   "img/vienna-christmas/soup.jpg": [
