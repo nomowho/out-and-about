@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "03d534c26b6797602d7c1ae9306f91dd096f0aa4eeaa33b4c276315200d39ce9",
+    "hash": "a2dc67ce2ae619db1b1e24bcbeadb88fbe1ed4b6a11e384dcf003000bb7244e6",
     "date": "2026-11-25"
   },
   "/stories/dolomiti-winter/": {
@@ -500,36 +500,36 @@
     "date": "2026-11-25"
   },
   "/series/japan/": {
-    "hash": "e5e5bddef066074805631f57b15dc6b93f395a486ad76e0e3c10910bbb682278",
-    "date": "2026-11-24"
+    "hash": "150f0e376456e1ee8f337e27c9c9d2cbcda412cf342cb4992bb5ba84d67b813e",
+    "date": "2026-11-25"
   },
   "/series/italy-drive/": {
-    "hash": "315d6d495f3c27f0299e30572b6fa19b2b9287ab7293e2879a5f95121d538225",
-    "date": "2026-11-24"
+    "hash": "1b89bc485bfb4c6768abb9c911199f3b1e99925304420ff19ec266d9579ba0c1",
+    "date": "2026-11-25"
   },
   "/series/portugal/": {
-    "hash": "a93ff326204928c4ff3c2c520d1640fa7441b1db36db9d3562454961c54942da",
-    "date": "2026-11-24"
+    "hash": "96849331defb05d7afc764a2e8d957ceaa1b3eb9365be13423f8ef3be53b7734",
+    "date": "2026-11-25"
   },
   "/series/norway/": {
-    "hash": "2de0972fd06dea9e24482e811dbc242e1c7f81ba055cfd704460890fa3cbdee1",
+    "hash": "403bc820e21624cade5469c1d6f310bf132ea188d8ded7f53157ba31d202a061",
     "date": "2026-11-25"
   },
   "/series/architecture-walk/": {
-    "hash": "ed50bdadb4b0ab349b595f5a751fba5e19c16b14f41b3d0c183d85d6bdf42155",
+    "hash": "d70f2f53f8c15695d4b7e00ad7ff4cbff76824b6c98841908da6174ff2c96836",
     "date": "2026-11-25"
   },
   "/series/art-wander/": {
-    "hash": "d0fc3c7c5889c737a3369fd0be1e775bf7f3a2326713bc26c2760d7ab593b4f9",
-    "date": "2026-11-24"
+    "hash": "c90be1a5ca131215e31c5f2add7ef7cce345dd977e18e8ca52c50a61ee9d5842",
+    "date": "2026-11-25"
   },
   "/series/tohoku-winter/": {
-    "hash": "c86953884fa26362e2d55adfd16fb8754062a2b35829dc6d0385c5c69285ec32",
-    "date": "2026-11-24"
+    "hash": "ea495807674a6f8150e60dc434c8c645ac4804510670d8230bf08698fff809be",
+    "date": "2026-11-25"
   },
   "/series/nagoya/": {
-    "hash": "5c0cdbc4b65c11543e0fd6df11e8815901d0650b4d5bb8e2d1201ce2498773e4",
-    "date": "2026-11-24"
+    "hash": "232c42928b8e3d15949facfa60b2d18b9402d4ad4bfc491946ba1b1367a8a05c",
+    "date": "2026-11-25"
   },
   "/destinations/japan/": {
     "hash": "7b4b199223d5d7e947f9f8ed368ddf4e6035aa8562b7ac40d7e881676d5e3753",
@@ -1209,6 +1209,18 @@
   },
   "/news/thun-big-siegenthalergut-hotel-2026/": {
     "hash": "404d946643dcb4652a4a1613041a333bd4d9b309d57aecb1ff61a991ecafbbae",
+    "date": "2026-11-25"
+  },
+  "/series/heritage/": {
+    "hash": "53df22cb44e952dd21f47c2f9c3f8155aa4fb5d14612af98367d59cb85373edb",
+    "date": "2026-11-25"
+  },
+  "/series/christmas-markets/": {
+    "hash": "e1cc59abb6f6bcce273ef22a2427946a1abe5da4135a29f16762a69bd2433023",
+    "date": "2026-11-25"
+  },
+  "/series/pilgrimage/": {
+    "hash": "ef39ed1ec5222f162696b05ca5e557f501b6ebf922b4707eb8636de0c07122ef",
     "date": "2026-11-25"
   }
 }

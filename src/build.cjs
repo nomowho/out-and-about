@@ -25,7 +25,8 @@ const SERIES_GUIDES = JSON.parse(read('series-guides.json'));
 const NEWS_TRAVEL_NOTES = JSON.parse(read('news-travel-notes.json'));
 const AOMORI_GUIDE = JSON.parse(read('aomori-winter.json'));
 const guideUrl = '/guides/aomori-winter/';
-const SERIES_SHOWN = SERIES.filter(s => s.img && s.wide);
+const SERIES_SHOWN = SERIES.filter(s => !s.theme && s.img && s.wide);   // 首頁專題大圖
+const SERIES_THEMES = SERIES.filter(s => s.theme);   // 首頁 SERIES 區：跨國主題（Nomo 11-25）
 // 已刪除的系列：舊網址轉到新系列（Nomo 11-20），避免 Google 已收錄的連結變 404
 const SERIES_MOVED = { 'europe-architecture': 'architecture-walk', 'architecture-museum': 'architecture-walk' };
 // 2026-11-24 哈修塔特三篇合併：兩個舊文章網址轉到合併後的 /stories/hallstatt/
@@ -523,7 +524,7 @@ for (const s of SERIES) {
   const posts = s.ids.map(i => byId[i]).filter(Boolean);
   listPage({ file: `series/${s.id}/index.html`, u: url.series(s.id), label: 'SERIES　系列專題', h1: s.t, desc: s.intro || s.d, guide: SERIES_GUIDES[s.id], guideLink: s.id === 'tohoku-winter' ? {href: guideUrl, label: '青森冬季 3 天與 5 天行程'} : null, posts, lead: byId[s.img] || leadOf(posts), leadImage: s.pageImage, nav: '', crumb: 'SERIES',
     othersTitle: 'More Series', othersZh: '其他系列專題',
-    others: SERIES_SHOWN.filter(x => x.id !== s.id).map(x => ({ u: url.series(x.id), t: x.t, n: x.ids.length, img: x.card || (fs.existsSync(path.join(ROOT, 'img', x.img + '.jpg')) ? `img/${x.img}.jpg` : null) })) });
+    others: [...SERIES_THEMES, ...SERIES_SHOWN].filter(x => x.id !== s.id).map(x => ({ u: url.series(x.id), t: x.t, n: x.ids.length, img: x.card || (fs.existsSync(path.join(ROOT, 'img', x.img + '.jpg')) ? `img/${x.img}.jpg` : null) })) });
 }
 for (const [from, to] of Object.entries(SERIES_MOVED)) {   // 舊系列網址 → 新系列（meta refresh＋canonical，Google 視同轉址）
   const dest = url.series(to), out = path.join(ROOT, 'series', from, 'index.html');
@@ -692,7 +693,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 <section class="series">
   <div class="box"><div class="sh"><h2>SERIES</h2></div></div>
   <div class="railwrap"><button class="rail-arr l" type="button" aria-label="上一組系列" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="rail-arr r" type="button" aria-label="下一組系列"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-  <div class="rail">${SERIES_SHOWN.map((s, si) => `
+  <div class="rail">${SERIES_THEMES.map((s, si) => `
     <a class="s" href="${url.series(s.id)}">
       <figure>${img(s.card || `img/${s.img}.jpg`, s.t, { small: true, sizes: '(max-width:700px) 72vw, 300px' })}<span class="s-no" aria-hidden="true">${esc(s.en || ('No.' + String(si + 1).padStart(2, '0')))}</span><span class="stk" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7.5" y="7.5" width="12" height="10" rx="1.6"/><path d="M4.5 14.5V6.1c0-.9.7-1.6 1.6-1.6h10.4"/></svg></span></figure>
       <div class="k">SERIES · ${s.ids.length} ${s.ids.length === 1 ? 'STORY' : 'STORIES'}</div>

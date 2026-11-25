@@ -35,5 +35,18 @@ const SERIES = [
   { id:'nagoya', card:'img/hotei-daibutsu/cover.jpg', t:'被低估的城市　名古屋', en:'NAGOYA', tag:'名古屋，比你想的有趣', wide:'img/aoi-celestie/series-wide.jpg', widePos:'50% 50%', img:'nagoya-morning',
     d:'早餐、大學、大佛，名古屋比你想的有趣。',
     intro:'很多人只把名古屋當轉運站，我卻在這裡待得比預期還久。從昭和喫茶店到精品咖啡的早餐文化、永山祐子的藍色屋頂 AOI CELESTIE、山本理顯的校園，到被電車戴上墨鏡的布袋大佛，這個系列寫給願意多停一天、慢慢認識名古屋的人。',
-    ids:['nagoya-morning','aoi-celestie','nagoya-zokei','hotei-daibutsu'] }
+    ids:['nagoya-morning','aoi-celestie','nagoya-zokei','hotei-daibutsu'] },
+  // 2026-11-25 Nomo 定案：首頁 SERIES 區改放跨國主題（theme:true 只出現在 SERIES 區，不進首頁專題大圖）
+  { id:'heritage', theme:true, card:'img/alberobello.jpg', t:'先存起來的世界遺產', en:'HERITAGE', tag:'下次出發前，先翻這一頁', img:'alberobello',
+    d:'我走過的世界遺產，從多洛米蒂的山到西西里的火山。',
+    intro:'這裡收的都是聯合國教科文組織列名的世界遺產：多洛米蒂的山、阿爾貝羅貝洛的蘑菇屋、馬泰拉的石窟、埃特納火山、卑爾根的木屋碼頭、哈修塔特的湖，還有葡萄牙的修道院和法國的古羅馬水道橋。每一篇都是我自己走過的，先存起來，排行程的時候用得到。',
+    ids:['dolomiti-winter','sagrada-familia','alberobello','matera','siracusa','etna','catania','tivoli','bergen','salzburg','hallstatt','monserrate','regaleira','bom-jesus','tomar','evora','skogskyrkogarden','pont-du-gard'] },
+  { id:'christmas-markets', theme:true, card:'img/vienna-christmas.jpg', t:'聖誕市集特輯', en:'CHRISTMAS', tag:'十二月，往中歐走', img:'vienna-christmas',
+    d:'維也納、薩爾茲堡、科莫，十二月的中歐一路逛下去。',
+    intro:'十二月的中歐，天黑得早，市集的燈亮得也早。從維也納市政廳前的聖誕市集、薩爾茲堡的老城、跨年夜的哈修塔特，到國王湖、科莫湖畔的光雕和布達佩斯，這個系列收錄我在聖誕季走過的地方，順便把附近值得一去的美術館、圖書館和咖啡館也放進來。',
+    ids:['vienna-christmas','salzburg','hallstatt','como-christmas','koenigssee','eiskapelle','dolomiti-winter','vienna-library','secession','belvedere','hundertwasser','aufzug-cafe','budapest-parliament','szentendre'] },
+  { id:'pilgrimage', theme:true, card:'img/yamadera.jpg', t:'向神明借點運氣', en:'PILGRIMAGE', tag:'東方許願，西方朝聖', img:'yamadera',
+    d:'從山寺的千階石梯到羅馬的聖階，各地的人都在求點什麼。',
+    intro:'在日本，大家去神社求金運、求姻緣；在歐洲，信徒跪著爬上羅馬的聖階，等二十五年才開一次的聖門。這個系列收錄我走過的寺廟、神社和教堂：山寺、出雲大社、金蛇水神社、三德山投入堂，聖家堂、聖伯多祿大殿和葡萄牙的朝聖所。不一定要有信仰，走一趟也好。',
+    ids:['yamadera','seiryuji','towada','kaneja','hotei-daibutsu','izu','izumo-taisha','nageiredo','porta-santa','scala-santa','caravaggio','sagrada-familia','sagrada-familia-2','bom-jesus','tomar','evora','st-basil'] }
 ];
