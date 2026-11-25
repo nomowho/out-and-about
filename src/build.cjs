@@ -361,7 +361,7 @@ for (const p of POSTS) {
       <h1>${title}</h1>
       <p class="dek">${d.dek}</p>
       <div class="by"><span>文・攝影｜<b>Nomo</b></span>${d.visit ? `<span>造訪｜${d.visit}</span>` : ''}<span>${d.updated ? '更新' : '網站版'}｜<time datetime="${modOf(p, d)}">${modOf(p, d).replace(/-/g, '.')}</time></span><span>地點｜${p.zh}，${p.area}</span></div>`;
-  const split = d.coverLayout === 'split';
+  const split = d.coverLayout === 'split' || (d.coverLayout !== 'wide' && !!cover && (cd => !!cd && cd.h > cd.w * 1.1)(dims(cover))); /* 封面是直式照片就自動用左右分欄；要強制橫幅版型才寫 coverLayout:'wide' */
   const top = !cover
     ? `<header class="ahead noimg">${head}</header>`
     : split
