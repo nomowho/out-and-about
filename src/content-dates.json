@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "26fda45b058251dc019a8e73d0e1f5942aaa87814bcd0bb54dd95eeb309f1ae8",
+    "hash": "9c31374777dd7e93c19449015e1fc684e0509b6d90c5090dbc508e1f2c6c5e2b",
     "date": "2026-11-25"
   },
   "/stories/dolomiti-winter/": {
@@ -1233,6 +1233,10 @@
   },
   "/series/roman-legacy/": {
     "hash": "c7991f4180041af5d13632bdfc6454fe33ddcf6c8ad1edb798e08e7175a93ee1",
+    "date": "2026-11-25"
+  },
+  "/series/": {
+    "hash": "3894986e0e066282bc3f85aa96c28f3afa741d33050fe70864ddcc1daccab8db",
     "date": "2026-11-25"
   }
 }

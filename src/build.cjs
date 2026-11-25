@@ -701,6 +701,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <div class="by">BY NOMO</div>
       ${(() => { const d = s.ids.map(id => byId[id]).filter(Boolean).map(p => p.date).sort().pop(); if (!d) return ''; const [y, m, dd] = d.split('.').map(Number); return `<time datetime="${iso(d)}">${y}年${m}月${dd}日</time>`; })()}
     </a>`).join('')}</div></div>
+  <div class="morewrap"><a class="viewmore" href="/series/">View More　›</a></div>
 </section>
 
 <section class="cty" aria-label="走過的國家">
@@ -763,6 +764,30 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   page({ file: 'about/index.html', title: '關於作者 Nomo（nomowho）｜我出去一下就回來', desc, canonical: '/about/', image: ogImg(TOP7[0]), style: 'post', nav: '', main,
     ld: [{ '@context': 'https://schema.org', '@type': 'AboutPage', '@id': abs('/about/'), name: '關於我出去一下就回來', inLanguage: 'zh-Hant-TW', mainEntity: PERSON, isPartOf: { '@id': abs('/#website') } }, crumbLd([['Out and About', '/'], ['關於', '/about/']])] });
   sitemap.push({ loc: '/about/', lastmod: BUILD_DATE, images: [] });
+
+  /* ── 全部系列 /series/（Nomo 11-25：首頁 SERIES 的 View More 連過來；順序同首頁 SERIES 區） ── */
+  {
+    const all = [...SERIES_THEMES, ...SERIES_SHOWN];
+    const main = `<div class="box serx">
+  <p class="crumb"><a href="/">TOP</a> › SERIES</p>
+  <h1>SERIES</h1><p class="serx-sub">系列專題｜${all.length} 個主題，換個方式找下一趟旅行</p>
+  <div class="serx-grid">${all.map(s => `<a class="serx-c" href="${url.series(s.id)}"><figure>${img(s.card || ('img/' + s.img + '.jpg'), s.t, { small: true, sizes: '(max-width:700px) 50vw, 300px' })}</figure><span class="k">${esc(s.en)} · ${s.ids.length} STORIES</span><h2>${s.t}</h2><p>${esc(s.tag || '')}</p></a>`).join('')}</div>
+</div>
+<style>
+.serx{padding-top:36px;padding-bottom:96px}.serx .crumb{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.06em;color:var(--gray)}
+.serx h1{font-family:'Montserrat',sans-serif;font-weight:700;font-size:40px;margin-top:18px}.serx-sub{color:var(--gray);margin:6px 0 36px}
+.serx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 24px;border-top:1px solid var(--ink);padding-top:28px}
+.serx-c figure{aspect-ratio:4/5;overflow:hidden;margin:0}.serx-c img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.serx-c:hover img{transform:scale(1.03)}
+.serx-c .k{display:block;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:.06em;margin-top:14px;color:var(--gray)}
+.serx-c h2{font-size:18px;font-weight:700;margin-top:6px;line-height:1.45}.serx-c p{font-size:13px;color:#555;margin-top:4px}
+@media(max-width:900px){.serx-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.serx h1{font-size:30px}.serx-grid{grid-template-columns:repeat(2,1fr);gap:28px 14px}.serx-c h2{font-size:15px}}
+</style>`;
+    const desc = `Out and About 的系列專題：${all.map(s => s.t.replace(/　/g, ' ')).join('、')}，把親自走過的旅行依主題整理成一條路線。`;
+    page({ file: 'series/index.html', title: `SERIES 系列專題｜${all.length} 個旅行主題｜Out and About`, desc, canonical: '/series/', image: ogImg(postsNew[0]), style: 'category', nav: '', main,
+      ld: [crumbLd([['Out and About', '/'], ['SERIES', '/series/']])] });
+    sitemap.push({ loc: '/series/', lastmod: BUILD_DATE, images: [] });
+  }
 
   /* ── 全部文章 /stories/（Nomo 11-19）：首頁 PICK UP「看全部文章」連過來；依主圖方向不對稱（橫式跨兩欄、直式一欄），上方分類篩選 ── */
   {
