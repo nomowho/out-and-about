@@ -712,9 +712,10 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 <section class="dest box" id="dest">
   <div class="sh"><h2>Destinations</h2></div>
   <div class="cols">${regions.map(r => `
-    <div class="col"><h3><a href="${url.dest(r)}">${r.toUpperCase()}　${REGION_ZH[r]}</a></h3><ul>
+    <details class="col"><summary><h3>${r.toUpperCase()}　${REGION_ZH[r]}</h3><span class="dn">${Object.values(groups[r]).reduce((x, y) => x + y, 0)}</span><i aria-hidden="true"></i></summary><ul>
       ${Object.entries(groups[r]).map(([a, n]) => `<li><a href="${url.dest(r)}${Object.keys(groups[r]).length > 1 ? '#' + encodeURIComponent(a) : ''}">${a}</a><span>${n}</span></li>`).join('')}
-    </ul></div>`).join('')}</div>
+      <li class="dall"><a href="${url.dest(r)}">看全部 ${REGION_ZH[r]} 的文章 →</a></li>
+    </ul></details>`).join('')}</div>
 </section>`;
   const desc = 'Out and About「我出去一下就回來」（簡稱「我出去一下」）是 Nomo（@nomowho）的旅行雜誌：親自走訪的建築、藝術、歷史、自然與信仰之地，每篇附交通、旅行資訊與常見問題，另有每日世界旅遊新訊。';
   const ld = [{ '@context': 'https://schema.org', '@graph': [

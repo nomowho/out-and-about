@@ -847,3 +847,15 @@ html.reading-page{scroll-padding-top:calc(var(--reading-head-height,160px) + 12p
 .head .logo b,.head .nav{transition:none}
 html{overflow-x:clip;max-width:100%;overscroll-behavior-x:none}body{overflow-x:clip;max-width:100%;overscroll-behavior-x:none}
 @media(max-width:700px){#all,.story-search,.stories-head{touch-action:pan-y pinch-zoom}.nav,.areas,.drag-scroll{overscroll-behavior-x:contain}}
+/* 首頁 Destinations：只列國家，點開才顯示城市／地區（Nomo 11-25） */
+.dest .cols{align-items:start}
+.dest details.col{padding-top:0}
+.dest details.col>summary{list-style:none;display:flex;align-items:center;gap:10px;cursor:pointer;padding:16px 0;border-bottom:1px solid var(--hair)}
+.dest details.col>summary::-webkit-details-marker{display:none}
+.dest details.col>summary h3{margin:0;flex:1}
+.dest details.col>summary .dn{font-family:'Montserrat',sans-serif;font-size:12px;color:var(--gray)}
+.dest details.col>summary i{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
+.dest details.col[open]>summary i{transform:rotate(-135deg) translate(-1px,-1px)}
+.dest details.col>summary:hover h3{text-decoration:underline}
+.dest details.col ul{padding-bottom:6px}
+.dest li.dall a{font-size:13px;color:var(--gray)}
