@@ -4,11 +4,13 @@
 // ⚠️ IG 原文更正：「每到冬季第一片雪花飄落，冰教堂便甦醒」與事實相反：冰洞是夏季融水掏出來的，冬天會被雪崩雪堆蓋住（Nomo 冬天去正好看到被雪埋住）；
 //   「當氣溫驟降，積雪滑動形成冰層、陽光折射五彩光芒」為一般性描述，改寫成查得到的成因；圖卡上的冰洞照片引用自 Viktor Weiszhaupt，網站版不使用
 // 造訪時間：同一趟國王湖行程 → 12 月
-// 照片：Nomo 2026-11-20 指示先不放；原始 IG 圖在 output/photos/_ig-import/DDrtHZthRMS/
+// 照片：Nomo 2026-11-25 補上 13 張（output/photos/_待補照片/07_德國/eiskapelle_冰教堂 Eiskapelle/），4 號（倒木與青苔）未用
 POST_DETAIL['eiskapelle'] = {
   seoTitle:'國王湖冰教堂 Eiskapelle：冬天爬到雪腰深，才發現它被雪崩埋了；2025 年已完全崩塌',
   dek:'冰教堂（Eiskapelle）是德國貝希特斯加登國家公園裡、瓦茨曼山東壁山腳下的一片萬年雪原，夏天融水會在冰裡掏出一座拱形冰洞。從國王湖的聖巴爾多祿茂教堂出發就能走到。我在 12 月去，積雪深到腰，終點的冰洞卻被雪崩整個蓋住；而它已在 2025 年 9 月完全崩塌。',
-  updated:'2026-11-20',
+  updated:'2026-11-25',
+  cover:'img/eiskapelle/cover.jpg',
+  coverCap:"雪從岩壁一路堆到谷底，走到這裡，腳下已經沒有路了。",
   place:{
     alt:['Eiskapelle','Eiskapelle am Watzmann','Ice Chapel Königssee','冰教堂'],
     url:'https://www.nationalpark-berchtesgaden.bayern.de/',
@@ -16,9 +18,16 @@ POST_DETAIL['eiskapelle'] = {
   },
   body:[
     { t:'p', text:'冬天的國王湖，渡輪只開到半路的聖巴爾多祿茂教堂，再往裡面的上湖到不了。既然船不能走，我們決定用腳走，挑了一條通往冰教堂（Eiskapelle）的步道。' },
+    { t:'pair', imgs:['img/eiskapelle/stump.jpg','img/eiskapelle/bosco.jpg'], cap:"左：湖邊草地上的老樹墩，頭上又長出一棵小樹。右：Bosco 在雪地的倒木上坐定，等人。" },
     { t:'h', id:'trail', text:'從國王湖走到冰教堂的路' },
     { t:'p', text:'一開始很溫和：穿過樹林、跨過小溪，路邊有一座白牆紅窗的小禮拜堂。越往裡走，樹越高、路越窄，腳下的落葉泥地慢慢被青苔和積雪取代。兩側是瓦茨曼山東壁的大岩壁，雪崩沖下來的雪在山溝裡堆成一條條白色的扇形。' },
+    { t:'img', size:'wide', src:'img/eiskapelle/forest.jpg', cap:"步道一開始是樹林裡的長椅和斑駁的光，很容易讓人以為這是一趟輕鬆的散步。" },
+    { t:'img', size:'wide', src:'img/eiskapelle/chapel.jpg', cap:"路邊的白牆紅窗小禮拜堂，是這段路上少數看得到人味的地方。" },
+    { t:'pair', imgs:['img/eiskapelle/path.jpg','img/eiskapelle/moss.jpg'], cap:"左：落葉鋪成的泥地。右：再往裡走，青苔和積雪開始爬上樹根。" },
     { t:'p', text:'到後段，積雪已經過了腳踝，同行的朋友決定回頭。我手腳並用繼續往上，後面根本沒有路可言，踩錯一步整條腿就陷到腰，有一次差點整個人埋進雪裡。千辛萬苦爬到終點，眼前只有一座巨大的雪堆：冰教堂被雪崩整個蓋住了，什麼都看不到。' },
+    { t:'pair', imgs:['img/eiskapelle/fan.jpg','img/eiskapelle/fan2.jpg'], cap:"雪崩沖下來的雪，在岩壁下堆成一條條白色的扇形。" },
+    { t:'pair', imgs:['img/eiskapelle/nomo.jpg','img/eiskapelle/stream.jpg'], cap:"左：走到雪線之上，東壁的岩壁整面壓過來。右：融雪的溪床，再過去就是沒有路的雪地。" },
+    { t:'img', size:'wide', src:'img/eiskapelle/valley.jpg', cap:"兩側的岩壁越收越窄，雪堆把整條山谷塞滿。" },
     { t:'h', id:'what', text:'冰教堂' },
     { t:'p', text:'冰教堂位在瓦茨曼山東壁山腳，海拔大約 900 公尺，是德國海拔最低的一片萬年雪原。每年冬天，東壁的雪崩把大量雪沖進山谷，壓實之後撐過夏天。夏天山上的融水從冰底下流過，會在冰裡掏出寬可達 30 公尺、高 15 公尺的通道，盡頭是一個像教堂穹頂的冰窟，因此叫冰教堂。' },
     { t:'p', text:'也就是說，冰教堂其實是夏天和秋天才看得到的景色；冬天去，看到的就是我遇到的那座雪堆。冰窟本身也非常危險，冰塊隨時可能掉落，國家公園一直警告不要走進去。' },

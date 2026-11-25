@@ -902,6 +902,13 @@
       "height": 406
     }
   ],
+  "img/como-christmas/nativity.jpg": [
+    {
+      "file": "d47c64e50b7852c6.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
   "img/como-christmas/square.jpg": [
     {
       "file": "071916da4c2376d4.webp",
@@ -1089,6 +1096,97 @@
       "file": "ec81ec08243e10bc.webp",
       "width": 720,
       "height": 406
+    }
+  ],
+  "img/eiskapelle.jpg": [
+    {
+      "file": "43c6c5412deb87e0.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/eiskapelle/bosco.jpg": [
+    {
+      "file": "b28c5349f1dd9930.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/eiskapelle/chapel.jpg": [
+    {
+      "file": "46aa2ebf3023a1ab.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/eiskapelle/cover.jpg": [
+    {
+      "file": "0094c1ba3c0c6bef.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/eiskapelle/fan.jpg": [
+    {
+      "file": "8b06bf5ee76cb9c3.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/eiskapelle/fan2.jpg": [
+    {
+      "file": "43ebc29969249efe.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/eiskapelle/forest.jpg": [
+    {
+      "file": "0cf23b9345f4d402.webp",
+      "width": 720,
+      "height": 425
+    }
+  ],
+  "img/eiskapelle/moss.jpg": [
+    {
+      "file": "e9f4eedee84adad8.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/eiskapelle/nomo.jpg": [
+    {
+      "file": "8c102ba6363b8cf3.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/eiskapelle/path.jpg": [
+    {
+      "file": "8c9c591ab6de16a5.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/eiskapelle/stream.jpg": [
+    {
+      "file": "1d6fdc655f3c0f7c.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/eiskapelle/stump.jpg": [
+    {
+      "file": "cb2f8d396190f6e1.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/eiskapelle/valley.jpg": [
+    {
+      "file": "f094be3cb117d697.webp",
+      "width": 720,
+      "height": 405
     }
   ],
   "img/etna.jpg": [
