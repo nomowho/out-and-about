@@ -1946,6 +1946,104 @@
       "height": 1279
     }
   ],
+  "img/koenigssee/boat.jpg": [
+    {
+      "file": "0dbb990e1f7d48cc.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/koenigssee/cabin.jpg": [
+    {
+      "file": "f63d58fae8bd6e91.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/koenigssee/cardh.jpg": [
+    {
+      "file": "931c6e7388e284a8.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/koenigssee/churchv.jpg": [
+    {
+      "file": "9ac9bd50e5c2c9b4.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/koenigssee/cover.jpg": [
+    {
+      "file": "4bdb80d45d06f562.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/koenigssee/dock.jpg": [
+    {
+      "file": "3863a2556b898469.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/koenigssee/ducks.jpg": [
+    {
+      "file": "79600af7104a44fd.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/koenigssee/ferry.jpg": [
+    {
+      "file": "e3d2fa5ae2c8e073.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/koenigssee/horn.jpg": [
+    {
+      "file": "163f8a63a7a6f9d1.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/koenigssee/meadow.jpg": [
+    {
+      "file": "dbf6042618f98fcb.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/koenigssee/oldtree.jpg": [
+    {
+      "file": "512cab7cb5ce0c53.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/koenigssee/peak.jpg": [
+    {
+      "file": "719b94e380b9b2c1.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/koenigssee/valley.jpg": [
+    {
+      "file": "6e0dc7ed737b251e.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/koenigssee/xmas.jpg": [
+    {
+      "file": "dc2d41d95f8d8345.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
   "img/kunstsilo.jpg": [
     {
       "file": "0fb9ac3acb9ea2f1.webp",
