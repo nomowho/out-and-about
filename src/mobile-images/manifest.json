@@ -1100,9 +1100,14 @@
   ],
   "img/eiskapelle.jpg": [
     {
+      "file": "a6288b0187af8baf.webp",
+      "width": 480,
+      "height": 852
+    },
+    {
       "file": "43c6c5412deb87e0.webp",
       "width": 720,
-      "height": 405
+      "height": 1279
     }
   ],
   "img/eiskapelle/bosco.jpg": [

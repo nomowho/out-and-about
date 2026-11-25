@@ -10,6 +10,7 @@ POST_DETAIL['eiskapelle'] = {
   dek:'冰教堂（Eiskapelle）是德國貝希特斯加登國家公園裡、瓦茨曼山東壁山腳下的一片萬年雪原，夏天融水會在冰裡掏出一座拱形冰洞。從國王湖的聖巴爾多祿茂教堂出發就能走到。我在 12 月去，積雪深到腰，終點的冰洞卻被雪崩整個蓋住；而它已在 2025 年 9 月完全崩塌。',
   updated:'2026-11-25',
   cover:'img/eiskapelle/cover.jpg',
+  coverLayout:'split',
   coverCap:"雪崩沖下來的雪，在岩壁下堆成一條白色的扇形。",
   place:{
     alt:['Eiskapelle','Eiskapelle am Watzmann','Ice Chapel Königssee','冰教堂'],
