@@ -22,7 +22,7 @@ POST_DETAIL['como-christmas'] = {
     { t:'img', size:'wide', src:'img/como-christmas/square.jpg', cap:"廣場四面的建築各自投影不同圖案，粉色、藍色、金色疊在一起，站在中間要轉一圈才看得完。" },
     { t:'h', id:'light', text:'科莫光雕秀的看法' },
     { t:'p', text:'最精彩的是入夜後的光雕投影（Magic Light Festival）。主教座堂廣場上的 Broletto 塔樓、舊城門 Porta Torre，還有主教座堂的立面，都會被投上會動的圖案：雪花、星星、童話角色、彩色的窗戶。科莫的老房子大多是平整的灰泥外牆，剛好成了最好的投影布幕，連一整排公寓都被畫成五顏六色的卡通房子。' },
-    { t:'pair', imgs:['img/como-christmas/church.jpg','img/como-christmas/tower.jpg'], cap:"左：教堂的玫瑰窗被打成一圈藍色漩渦。右：鐘樓換上聖誕老人的圖案，連石頭牆都有了表情。" },
+    { t:'img', size:'wide', src:'img/como-christmas/church.jpg', cap:"教堂的玫瑰窗被打成一圈藍色漩渦，旁邊的鐘樓也跟著染藍。" },
     { t:'h', id:'market', text:'科莫聖誕市集賣的東西' },
     { t:'p', text:'主教座堂廣場上擺滿了木屋攤位，旁邊立著一棵掛滿燈的大聖誕樹。攤位賣的是手工藝品、聖誕裝飾、起司和臘腸，也少不了熱紅酒和義大利的聖誕麵包 panettone。歐洲的聖誕市集起源可追溯到中世紀，當時人們會在冬至前後於廣場擺攤，販售手工藝品與食物飲料，一起迎接冬至的到來；科莫把這個傳統加上了湖區的悠閒，還有一點義大利式的熱鬧。' },
     { t:'img', size:'wide', src:'img/como-christmas/market.jpg', cap:"聖誕樹立在鐘樓旁，比三層樓的窗子還高，市集的木屋就圍在樹腳下。" },
