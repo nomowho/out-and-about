@@ -874,6 +874,13 @@
       "height": 1278
     }
   ],
+  "img/como-christmas.jpg": [
+    {
+      "file": "3e23859f7733bc31.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
   "img/como-christmas/arcade.jpg": [
     {
       "file": "5d856ecbef98cf8a.webp",
@@ -4623,7 +4630,7 @@
     {
       "file": "fc9b095c7b95b4c4.webp",
       "width": 720,
-      "height": 1288
+      "height": 1280
     }
   ],
   "img/vienna-christmas/series-wide.jpg": [
