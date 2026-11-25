@@ -41,7 +41,7 @@ const SERIES = [
     d:'我走過的世界遺產，從多洛米蒂的山到西西里的火山。',
     intro:'這裡收的都是聯合國教科文組織列名的世界遺產：多洛米蒂的山、阿爾貝羅貝洛的蘑菇屋、馬泰拉的石窟、埃特納火山、卑爾根的木屋碼頭、哈修塔特的湖，還有葡萄牙的修道院和法國的古羅馬水道橋。每一篇都是我自己走過的，先存起來，排行程的時候用得到。',
     ids:['dolomiti-winter','sagrada-familia','alberobello','matera','siracusa','etna','catania','tivoli','bergen','salzburg','hallstatt','monserrate','regaleira','bom-jesus','tomar','evora','skogskyrkogarden','pont-du-gard'] },
-  { id:'christmas-markets', theme:true, card:'img/vienna-christmas.jpg', pageImage:'img/vienna-christmas/series-wide.jpg', t:'聖誕市集特輯', en:'CHRISTMAS', tag:'十二月，往中歐走', img:'vienna-christmas',
+  { id:'christmas-markets', theme:true, card:'img/vienna-christmas/series-card.jpg', pageImage:'img/vienna-christmas/series-wide.jpg', t:'聖誕市集特輯', en:'CHRISTMAS', tag:'十二月，往中歐走', img:'vienna-christmas',
     d:'維也納、薩爾茲堡、科莫，十二月的中歐一路逛下去。',
     intro:'十二月的中歐，天黑得早，市集的燈亮得也早。從維也納市政廳前的聖誕市集、薩爾茲堡的老城、跨年夜的哈修塔特，到國王湖、科莫湖畔的光雕和布達佩斯，這個系列收錄我在聖誕季走過的地方，順便把附近值得一去的美術館、圖書館和咖啡館也放進來。',
     ids:['vienna-christmas','salzburg','hallstatt','como-christmas','koenigssee','eiskapelle','dolomiti-winter','vienna-library','secession','belvedere','hundertwasser','aufzug-cafe','budapest-parliament','szentendre'] },
