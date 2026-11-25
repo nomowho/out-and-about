@@ -127,8 +127,24 @@
       history.replaceState(null, '', name ? '#' + encodeURIComponent(name) : location.pathname);
       pick(name, true);
     });
-    addEventListener('hashchange', function () { pick(fromHash(), true); });
-    if (location.hash) { pick(fromHash(), false); setTimeout(function () { areas.scrollIntoView({ block: 'start' }); }, 0); }
+    var focusStorySearch = function () {
+      if (location.hash !== '#story-query' || !searchInput) return false;
+      searchForm.scrollIntoView({ block: 'start', behavior: 'instant' });
+      searchInput.focus({ preventScroll: true });
+      return true;
+    };
+    addEventListener('hashchange', function () { pick(fromHash(), location.hash !== '#story-query'); focusStorySearch(); });
+    if (location.hash) {
+      pick(fromHash(), false);
+      if (!focusStorySearch()) setTimeout(function () { areas.scrollIntoView({ block: 'start' }); }, 0);
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href="/stories/#story-query"]');
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || location.pathname !== '/stories/') return;
+      e.preventDefault();
+      history.replaceState(null, '', location.pathname + location.search + '#story-query');
+      focusStorySearch();
+    });
   }
 
   /* Photo Journal：瀑布流（每張放進目前最矮的那一欄，欄底較齊）＋每隔幾張穿插一張橫式滿版；篩選或換欄數時重排 */

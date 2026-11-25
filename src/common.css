@@ -810,3 +810,13 @@ figure>picture{display:contents}.pair .two>picture{display:contents}
 @media(max-width:700px){.reel{flex-basis:44vw}.reels-wrap .rail-arr{display:none}}
 /* 薩爾茲堡 pair 裁切：往上露出 St. Peter 教堂尖塔頂（Nomo 11-24：照片往下移） */
 .pair img[src*="salzburg/old-town"]{object-position:50% 8%}
+
+/* 找文章：桌機刊頭與選單共用既有 stories 搜尋。 */
+.head .tools a.header-search{gap:7px;font-size:13px;white-space:nowrap}
+.header-search svg,.drawer-search svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}
+.header-search span{text-decoration:underline;text-decoration-color:#C8F500;text-decoration-thickness:2px;text-underline-offset:5px}
+.header-search:hover span{text-decoration-color:currentColor}
+.drawer-search{display:flex;align-items:center;gap:10px;min-height:48px;padding:12px 0;margin:8px 0 26px;border-bottom:2px solid #C8F500;font-size:17px}
+.drawer-search:hover{border-bottom-color:var(--ink)}
+.story-search{scroll-margin-top:180px}#story-query{scroll-margin-top:220px}
+@media(max-width:700px){.head .tools a.header-search{display:none}.story-search{scroll-margin-top:130px}#story-query{scroll-margin-top:180px}}
