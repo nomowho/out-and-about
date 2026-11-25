@@ -9,7 +9,7 @@ POST_DETAIL['munch'] = {
   cover:'img/munch/cover.jpg', coverLayout:'split',
   coverCap:"傾斜的塔頂和金屬外牆，MUNCH 是奧斯陸港灣的新地標。",
   body:[
-    { t:'p', text:'在奧斯陸港邊，有一隻靜靜趴著的沙蟲。牠的身體覆蓋著金屬的波紋，頭微微低向海灣，那是挪威送給畫家愛德華．孟克的致敬。' },
+    { t:'p', text:'在奧斯陸（Oslo）港邊，有一隻靜靜趴著的沙蟲。牠的身體覆蓋著金屬的波紋，頭微微低向海灣，那是挪威送給畫家愛德華．孟克（Munch）的致敬。' },
     { t:'h', id:'arch', text:'MUNCH 美術館的建築' },
     { t:'p', text:'建築由西班牙事務所 Estudio Herreros 設計，2021 年正式啟用。13 層樓高的塔樓，頂端像鞠躬一樣往港灣傾斜，外牆包著回收鋁製的穿孔金屬板，隨著天光變換深淺。設計者想把孟克畫裡那種不安、內斂又強烈的情緒，轉化成建築語言。' },
     { t:'img', size:'tall', src:'img/munch/facade.jpg', cap:"穿孔的金屬外牆，隨著光線明暗不同。" },

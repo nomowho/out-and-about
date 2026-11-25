@@ -21,7 +21,7 @@ POST_DETAIL['taormina'] = {
     { t:'p', text:'早在兩千多年前，希臘人就在西西里島的懸崖上蓋好了「海景第一排」。' },
     { t:'img', size:'full', src:'img/taormina/cavea.jpg', cap:"半圓的看台順著山勢蓋，風景就是舞台。" },
     { t:'h', id:'theatre', text:'陶爾米納古劇場' },
-    { t:'p', text:'西元前 3 世紀，希臘人看中了陶爾米納這塊懸崖，依著山勢鑿出一座半圓形的劇場（Teatro Antico di Taormina）。到了羅馬時期，劇場被大幅改建，從看悲劇的地方，變成了角鬥士表演的場地。' },
+    { t:'p', text:'西元前 3 世紀，希臘人看中了陶爾米納（Taormina）這塊懸崖，依著山勢鑿出一座半圓形的劇場（Teatro Antico di Taormina）。到了羅馬時期，劇場被大幅改建，從看悲劇的地方，變成了角鬥士表演的場地。' },
     { t:'img', size:'wide', src:'img/taormina/etna.jpg', cap:"從看台望出去，埃特納和海岸是最好的背景。" },
     { t:'p', text:'今天，殘存的磚牆和石柱正好把地中海的深藍和埃特納火山的山影框成一幅畫，這是整座島最驕傲的陽台。' },
     { t:'pair', imgs:['img/taormina/cavea2.jpg','img/taormina/olive.jpg'], cap:"左：古劇場的看台，到現在還有人坐著發呆。右：老城教堂前的橄欖樹。" },

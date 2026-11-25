@@ -15,7 +15,7 @@ POST_DETAIL['koenigssee'] = {
     address:{ addressLocality:'Schönau am Königssee', addressRegion:'Bayern', addressCountry:'DE' }
   },
   body:[
-    { t:'p', text:'冬天的國王湖，顏色比夏天更深。雪山壓在湖的兩側，湖水是一種偏綠的透明，靠岸邊的地方可以直接看到水底的石頭，幾隻綠頭鴨划過去，水面幾乎沒有波紋。' },
+    { t:'p', text:'冬天的國王湖（Königssee），顏色比夏天更深。雪山壓在湖的兩側，湖水是一種偏綠的透明，靠岸邊的地方可以直接看到水底的石頭，幾隻綠頭鴨划過去，水面幾乎沒有波紋。' },
     { t:'h', id:'clean', text:'國王湖這麼清澈的原因' },
     { t:'p', text:'國王湖是冰河在阿爾卑斯山裡切出來的狹長湖，兩側是陡峭的岩壁。從 1909 年開始，湖上只准電動船、手划船和腳踏船，一百多年來沒有柴油引擎攪動湖水，所以它常被稱為德國最乾淨的湖。' },
     { t:'h', id:'trumpet', text:'國王湖的小號回音' },

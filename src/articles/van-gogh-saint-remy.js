@@ -15,7 +15,7 @@ POST_DETAIL['van-gogh-saint-remy'] = {
     address:{ addressLocality:'Saint-Rémy-de-Provence', addressCountry:'FR' }
   },
   body:[
-    { t:'p', text:'在南法，到處都是梵谷的影子。真正想找他，要到聖雷米小鎮外的一座老修道院。' },
+    { t:'p', text:'在南法，到處都是梵谷（Van Gogh）的影子。真正想找他，要到聖雷米（Saint-Rémy）小鎮外的一座老修道院。' },
     { t:'h', id:'why', text:'梵谷住進聖雷米療養院的原因' },
     { t:'p', text:'1888 年 12 月，梵谷在亞爾和高更爭吵後割下自己的耳朵，之後又幾度發作。1889 年 5 月 8 日，他自願住進聖雷米的聖保羅療養院。這裡原本是一座中世紀修道院，有安靜的迴廊和花園，四周是麥田、橄欖樹和絲柏。' },
     { t:'h', id:'room', text:'梵谷在聖雷米療養院的房間' },

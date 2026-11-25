@@ -21,7 +21,7 @@ POST_DETAIL['hallstatt'] = {
     address:{ addressLocality:'Hallstatt', addressRegion:'Oberösterreich', addressCountry:'AT' }
   },
   body:[
-    { t:'p', text:'跨年那天早上，哈修塔特整座小鎮泡在霧裡。湖面像一塊沒打磨的鏡子，渡輪拖著一條白線開過去，對岸的山時隱時現。等霧慢慢散開，那座尖尖的教堂鐘樓才從雲裡探出頭來，跟明信片上的角度一模一樣。' },
+    { t:'p', text:'跨年那天早上，哈修塔特（Hallstatt）整座小鎮泡在霧裡。湖面像一塊沒打磨的鏡子，渡輪拖著一條白線開過去，對岸的山時隱時現。等霧慢慢散開，那座尖尖的教堂鐘樓才從雲裡探出頭來，跟明信片上的角度一模一樣。' },
     { t:'p', text:'我在哈修塔特只住了一晚，正好是跨年夜，卻看到三種完全不同的哈修塔特：一座靠鹽活下來的小鎮，一間把亡者名字畫在頭骨上的房間，還有一棟從 1740 年站到現在的老房子。' },
     { t:'pair', imgs:['img/hallstatt/steeple.jpg','img/hallstatt/lake.jpg'], cap:"左：從霧裡探出頭的鐘樓。右：湖面平得像一面鏡子。" },
 

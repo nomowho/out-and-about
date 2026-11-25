@@ -16,7 +16,7 @@ POST_DETAIL['matera'] = {
   heroMobileImage:'img/matera/hero-mobile.jpg',
   coverCap:"黃昏的光落在 Sassi 的石窟區，一層一層疊上去。",
   body:[
-    { t:'p', text:'第一眼看到馬泰拉，會以為走進了中東的古城：整片石灰岩峽谷上，房子一層疊一層，很多其實是往岩壁裡鑿出來的洞。' },
+    { t:'p', text:'第一眼看到馬泰拉（Matera），會以為走進了中東的古城：整片石灰岩峽谷上，房子一層疊一層，很多其實是往岩壁裡鑿出來的洞。' },
     { t:'img', size:'full', src:'img/matera/sassi.jpg', cap:"石窟和房子疊在一起，鐘樓在兩個 Sassi 之間的高地上。" },
     { t:'h', id:'sassi', text:'Sassi 石窟的由來' },
     { t:'p', text:'馬泰拉是世界上最古老、而且持續有人居住的城市之一。最早的居民直接拿工具往石灰岩峽谷裡鑿，鑿出來的洞穴就是家，這些石窟住宅叫作 Sassi，義大利文是「石頭」的意思。' },
