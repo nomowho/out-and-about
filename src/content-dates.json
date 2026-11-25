@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "32eb679f6de1500717304873a65da08e9dd7edf5ff7ba420b468afb9feafd8f0",
+    "hash": "26fda45b058251dc019a8e73d0e1f5942aaa87814bcd0bb54dd95eeb309f1ae8",
     "date": "2026-11-25"
   },
   "/stories/dolomiti-winter/": {
@@ -500,35 +500,35 @@
     "date": "2026-11-25"
   },
   "/series/japan/": {
-    "hash": "150f0e376456e1ee8f337e27c9c9d2cbcda412cf342cb4992bb5ba84d67b813e",
+    "hash": "fc4465eaac255daec937a22ee819f3fa0ffc0fdea90586d4fafd874868b6c6cf",
     "date": "2026-11-25"
   },
   "/series/italy-drive/": {
-    "hash": "1b89bc485bfb4c6768abb9c911199f3b1e99925304420ff19ec266d9579ba0c1",
+    "hash": "6d1bf2d0ed85c0ce131964894fc917412c9ceb6bfa22cb2e95eaded3ae18607a",
     "date": "2026-11-25"
   },
   "/series/portugal/": {
-    "hash": "96849331defb05d7afc764a2e8d957ceaa1b3eb9365be13423f8ef3be53b7734",
+    "hash": "4c1a14df8370e20967ab38313a9695fe8c80071b350519cac7be6160c8a466d5",
     "date": "2026-11-25"
   },
   "/series/norway/": {
-    "hash": "403bc820e21624cade5469c1d6f310bf132ea188d8ded7f53157ba31d202a061",
+    "hash": "c7a3a65c9d2f9caa9f78d9add4562dd2c5806d02bdb3f7a418030a50df8c9b4b",
     "date": "2026-11-25"
   },
   "/series/architecture-walk/": {
-    "hash": "d70f2f53f8c15695d4b7e00ad7ff4cbff76824b6c98841908da6174ff2c96836",
+    "hash": "e30ecb8af855f333229a70692eb4e1d08a2093895e893be0d01c667711b87cf4",
     "date": "2026-11-25"
   },
   "/series/art-wander/": {
-    "hash": "c90be1a5ca131215e31c5f2add7ef7cce345dd977e18e8ca52c50a61ee9d5842",
+    "hash": "1a1bf311e0a1823fe1b0c25a10a413de0aeefe54248a0b043712cb2ed43f95e3",
     "date": "2026-11-25"
   },
   "/series/tohoku-winter/": {
-    "hash": "ea495807674a6f8150e60dc434c8c645ac4804510670d8230bf08698fff809be",
+    "hash": "8a9e790a1605644403ea56ab98f7ebd16c3968e8a0e6212c693c40137c0f99bd",
     "date": "2026-11-25"
   },
   "/series/nagoya/": {
-    "hash": "232c42928b8e3d15949facfa60b2d18b9402d4ad4bfc491946ba1b1367a8a05c",
+    "hash": "b617170c33b5700abd9831f1057223cf0b40f3ef85973b8dfff60ce4e86529ff",
     "date": "2026-11-25"
   },
   "/destinations/japan/": {
@@ -1212,15 +1212,27 @@
     "date": "2026-11-25"
   },
   "/series/heritage/": {
-    "hash": "53df22cb44e952dd21f47c2f9c3f8155aa4fb5d14612af98367d59cb85373edb",
+    "hash": "c2ca452a7985e1318cffd52e6a58174a56e90dde4bde9a318d4ab8b0baf0b3b6",
     "date": "2026-11-25"
   },
   "/series/christmas-markets/": {
-    "hash": "e1cc59abb6f6bcce273ef22a2427946a1abe5da4135a29f16762a69bd2433023",
+    "hash": "b0aea3433d3e25a4bf20f3ed8372286a311f4f5ae181c37104609e98778c16ed",
     "date": "2026-11-25"
   },
   "/series/pilgrimage/": {
-    "hash": "ef39ed1ec5222f162696b05ca5e557f501b6ebf922b4707eb8636de0c07122ef",
+    "hash": "4f816c0388b800b0b2df9f884374b8921a94a43ef34c863d023eae07adffc7f3",
+    "date": "2026-11-25"
+  },
+  "/series/day-trips/": {
+    "hash": "daa89ca410aefd6fccb3aa944f21788cf4259b3c564db093361fd640f8a4a3af",
+    "date": "2026-11-25"
+  },
+  "/series/odd-places/": {
+    "hash": "75d99e72fb0751c775f1bf4da0369109f862a05ecaddc6087cdaf7ba24686f65",
+    "date": "2026-11-25"
+  },
+  "/series/roman-legacy/": {
+    "hash": "c7991f4180041af5d13632bdfc6454fe33ddcf6c8ad1edb798e08e7175a93ee1",
     "date": "2026-11-25"
   }
 }

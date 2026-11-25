@@ -48,5 +48,18 @@ const SERIES = [
   { id:'pilgrimage', theme:true, card:'img/hotei-daibutsu/cover.jpg', t:'向神明借點運氣', en:'PILGRIMAGE', tag:'東方許願，西方朝聖', img:'yamadera',
     d:'從山寺的千階石梯到羅馬的聖階，各地的人都在求點什麼。',
     intro:'在日本，大家去神社求金運、求姻緣；在歐洲，信徒跪著爬上羅馬的聖階，等二十五年才開一次的聖門。這個系列收錄我走過的寺廟、神社和教堂：山寺、出雲大社、金蛇水神社、三德山投入堂，聖家堂、聖伯多祿大殿和葡萄牙的朝聖所。不一定要有信仰，走一趟也好。',
-    ids:['yamadera','seiryuji','towada','kaneja','hotei-daibutsu','izu','izumo-taisha','nageiredo','porta-santa','scala-santa','caravaggio','sagrada-familia','sagrada-familia-2','bom-jesus','tomar','evora','st-basil'] }
+    ids:['yamadera','seiryuji','towada','kaneja','hotei-daibutsu','izu','izumo-taisha','nageiredo','porta-santa','scala-santa','caravaggio','sagrada-familia','sagrada-familia-2','bom-jesus','tomar','evora','st-basil'] },
+  // 2026-11-25 Nomo 新增第二批跨國主題
+  { id:'day-trips', theme:true, card:'img/tivoli.jpg', t:'一日遊必選', en:'DAY TRIPS', tag:'從市區出發，天黑前回來', img:'tivoli',
+    d:'羅馬、里斯本、布達佩斯、名古屋，從大城市出發一天來回的地方。',
+    intro:'行程排到最後，常常會多出一天。這個系列收的都是從大城市出發、一天就能來回的地方：羅馬東邊的蒂沃利、里斯本旁邊的辛特拉、布達佩斯北邊的聖安德烈、薩爾茲堡附近的國王湖、奧斯陸開車一小時的 The Twist，還有名古屋近郊的布袋大佛和東京出發的伊豆。',
+    ids:['tivoli','monserrate','regaleira','szentendre','koenigssee','the-twist','hotei-daibutsu','izu','fontaine-de-vaucluse','roussillon'] },
+  { id:'odd-places', theme:true, card:'img/the-twist.jpg', t:'有趣的怪地方', en:'ODD PLACES', tag:'看起來不太對勁，所以要去', img:'the-twist',
+    d:'戴墨鏡的大佛、扭成 90 度的美術館、沉在海裡的餐廳。',
+    intro:'有些地方第一眼看到會愣一下：戴墨鏡的布袋大佛、扭成 90 度的 The Twist、沉在海面下的 Under 餐廳、蓋在懸崖上的投入堂、牆上嵌滿遺骸的人骨禮拜堂，還有老鼠尺寸的商店街和躲在森林裡的木頭巨人。這個系列收的是我覺得「怎麼會這樣」的地方，每一個背後都有故事。',
+    ids:['hotei-daibutsu','the-twist','under','ear-of-dionysius','nageiredo','evora','eiskapelle','anonymouse','forgotten-giants','obras-do-fidalgo','aufzug-cafe'] },
+  { id:'roman-legacy', theme:true, card:'img/terme-di-caracalla.jpg', t:'羅馬人的遺產', en:'ROMAN LEGACY', tag:'兩千年前蓋的，現在還站著', img:'terme-di-caracalla',
+    d:'浴場、別墅、劇場、水道橋，羅馬人蓋的東西還在。',
+    intro:'羅馬人蓋東西是準備用很久的。卡拉卡拉浴場的牆、哈德良別墅的水池、陶爾米納看得到埃特納火山的古劇場，還有法國南部那座三層拱的嘉德水道橋，兩千年後都還站著。這個系列從羅馬城一路收到西西里和普羅旺斯，看一個帝國留下了什麼。',
+    ids:['terme-di-caracalla','tivoli','taormina','siracusa','ear-of-dionysius','scala-santa','aventine','pont-du-gard'] }
 ];
