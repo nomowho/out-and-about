@@ -32,7 +32,12 @@
   function setNav(off) { if (off === navOff) return; navOff = off; navT = Date.now(); head.classList.toggle('navoff', off); }
   function onScroll() {
     ticking = false;
-    if (head) head.classList.toggle('slim', scrollY > 120);
+    if (head) {
+      // 縮小與還原採不同門檻，避免 sticky 高度改變後的捲動錨定反覆觸發。
+      var compactY = Math.max(0, scrollY), wasSlim = head.classList.contains('slim');
+      if (!wasSlim && compactY > 160) head.classList.add('slim');
+      else if (wasSlim && compactY < 40) head.classList.remove('slim');
+    }
     /* 文章頁：往下讀時收起分類列，往上滑或回到頂端再出現（切換後 400ms 內不反向，避免頁面高度變化造成抖動） */
     if (head && bar) {
       var y = scrollY, d = y - lastY, now = Date.now();
