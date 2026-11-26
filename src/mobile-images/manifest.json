@@ -1117,6 +1117,13 @@
       "height": 1279
     }
   ],
+  "img/eiskapelle/cardh.jpg": [
+    {
+      "file": "bdd7ac09a33d711d.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
   "img/eiskapelle/chapel.jpg": [
     {
       "file": "46aa2ebf3023a1ab.webp",
@@ -4493,6 +4500,13 @@
       "file": "74f4625b4885074e.webp",
       "width": 720,
       "height": 1075
+    }
+  ],
+  "img/ueda-shoji-museum/cardh.jpg": [
+    {
+      "file": "4642cd7fe7455a29.webp",
+      "width": 720,
+      "height": 405
     }
   ],
   "img/ueda-shoji-museum/chairs.jpg": [
