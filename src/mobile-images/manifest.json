@@ -1,4 +1,72 @@
 {
+  "img/adachi-museum.jpg": [
+    {
+      "file": "2999b8d61dac551a.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "f507b075f744cd23.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/adachi-museum/cover.jpg": [
+    {
+      "file": "5d859f5ccf9a7afb.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/adachi-museum/frame.jpg": [
+    {
+      "file": "5c11f08c369c134b.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/adachi-museum/garden.jpg": [
+    {
+      "file": "288a84dc6d034a35.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/adachi-museum/panorama.jpg": [
+    {
+      "file": "68e28d5c34a1c17e.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/adachi-museum/sand.jpg": [
+    {
+      "file": "900723fc65dc1596.webp",
+      "width": 720,
+      "height": 418
+    }
+  ],
+  "img/adachi-museum/statue.jpg": [
+    {
+      "file": "63694623fcbf8506.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/adachi-museum/stone.jpg": [
+    {
+      "file": "005d8e161230471f.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/adachi-museum/window.jpg": [
+    {
+      "file": "05216ec4489608a2.webp",
+      "width": 720,
+      "height": 424
+    }
+  ],
   "img/alberobello.jpg": [
     {
       "file": "b45c826e92216314.webp",

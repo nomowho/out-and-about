@@ -4,13 +4,14 @@
 //   足立全康名言「庭園也是一幅畫」（nippon.com、日本政府廣報 Highlighting Japan、和樂）
 // ⚠️ IG 原文更正：「連續 20 年」更新為「至 2025 年排名連續 23 年」（2026-11-26 查證：足立官網、朝日、日經、讀賣；2026 年排名要到 2027 年 8 月才公布）
 // 造訪時間：9 月（Nomo 2026-11-20 確認）
-// 照片：Nomo 2026-11-26 補上 8 張（output/photos/_待補照片/01_日本/adachi-museum_足立美術館/）：首圖＝9、直式縮圖＝1（cardV，/stories/ 也用直式）；2 窗邊松樹、3 足立全康銅像（Nomo 11-26 確認）、1+8 並排（8＝「庭園日本一」石碑，刻 2003 年起連續 20 年）、4 全景、5 白砂松樹、7 窗框；原始 IG 圖在 output/photos/_ig-import/DAqun5phSWc/
+// 照片：Nomo 2026-11-26 補上 8 張（output/photos/_待補照片/01_日本/adachi-museum_足立美術館/）：首圖＝9、直式縮圖＝1（cardV，/stories/ 也用直式）、橫式縮圖＝4（cardh，11-26 Nomo 指定）；2 窗邊松樹、3 足立全康銅像（Nomo 11-26 確認）、1+8 並排（8＝「庭園日本一」石碑，刻 2003 年起連續 20 年）、4 全景、5 白砂松樹、7 窗框；原始 IG 圖在 output/photos/_ig-import/DAqun5phSWc/
 POST_DETAIL['adachi-museum'] = {
   seoTitle:'足立美術館：連續 23 年日本庭園第一，窗框就是畫框，島根最值得專程去的美術館',
   dek:'足立美術館在島根縣安來市，1970 年由在地實業家足立全康創立。約 16.5 公頃的日本庭園，從 2003 年起被美國日本庭園專門誌連續 23 年評為日本第一。他說「庭園也是一幅畫」，所以館內的窗戶都被當成畫框，把遠山和白砂青松裝進去。館藏還有 120 多件橫山大觀的畫。',
   updated:'2026-11-26',
   cover:'img/adachi-museum/cover.jpg',
   cardV:true,
+  cardH:'img/adachi-museum/cardh.jpg',
   coverCap:"白砂鋪成的小路繞進庭園，後面的山是被設計進畫面裡的。",
   place:{
     alt:['足立美術館','Adachi Museum of Art','あだちびじゅつかん'],
