@@ -11,6 +11,7 @@ POST_DETAIL['adachi-museum'] = {
   updated:'2026-11-26',
   cover:'img/adachi-museum/cover.jpg',
   cardV:true,
+  coverPos:'50% 90%',  // 首圖取景往下移、多取地面（Nomo 11-26）
   cardH:'img/adachi-museum/cardh.jpg',
   coverCap:"白砂鋪成的小路繞進庭園，後面的山是被設計進畫面裡的。",
   place:{
