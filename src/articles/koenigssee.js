@@ -11,6 +11,7 @@ POST_DETAIL['koenigssee'] = {
   updated:'2026-11-25',
   cover:'img/koenigssee/cover.jpg',
   cardH:'img/koenigssee/cardh.jpg',
+  cardV:true,
   coverCap:"紅色洋蔥頂的聖巴爾多祿茂教堂浮在湖的對岸，後面是還留著雪的山。",
   place:{
     alt:['Königssee','Koenigssee','Lake Königssee','St. Bartholomä','國王湖'],
