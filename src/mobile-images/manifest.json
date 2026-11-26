@@ -4368,6 +4368,88 @@
       "height": 1552
     }
   ],
+  "img/tottori-dunes.jpg": [
+    {
+      "file": "e41da17cb060c6e5.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "1f8d47c023bdd529.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tottori-dunes/cafe.jpg": [
+    {
+      "file": "8b2ed275c2f5047e.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/tottori-dunes/ceiling.jpg": [
+    {
+      "file": "5b6d37c341b01679.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/tottori-dunes/climb.jpg": [
+    {
+      "file": "cdc8fef17a2c2742.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/tottori-dunes/counter.jpg": [
+    {
+      "file": "3bb2ff89b534e487.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/tottori-dunes/cover.jpg": [
+    {
+      "file": "3fbaac2a52e06613.webp",
+      "width": 720,
+      "height": 423
+    }
+  ],
+  "img/tottori-dunes/drink.jpg": [
+    {
+      "file": "8fa7a4d046c333c7.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/tottori-dunes/entrance.jpg": [
+    {
+      "file": "2895a8d382aafdd0.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/tottori-dunes/pool.jpg": [
+    {
+      "file": "4ed7343306ed20f4.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/tottori-dunes/ridge.jpg": [
+    {
+      "file": "073b754ff79499b5.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/tottori-dunes/sea.jpg": [
+    {
+      "file": "412996ab19c1e20d.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
   "img/towada.jpg": [
     {
       "file": "58a5489bee800f41.webp",
