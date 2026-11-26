@@ -25,7 +25,7 @@ POST_DETAIL['ueda-shoji-museum'] = {
     { t:'pair', imgs:['img/ueda-shoji-museum/curve.jpg','img/ueda-shoji-museum/cube.jpg'], cap:"左：弧形的牆慢慢收進天空，連階梯的影子都好看。右：方方正正的清水模量體，一道光斜斜切在牆面上。" },
     { t:'img', size:'wide', src:'img/ueda-shoji-museum/side.jpg', cap:"繞到側面，幾塊方方正正的牆把天空切得很乾淨。" },
     { t:'p', text:'館內還有一間映像展示室，裝著號稱世界最大的相機鏡頭，走進去就像站在一台巨大的相機裡面，看著外面的景色被投射進來，非常適合一座攝影美術館。' },
-    { t:'img', size:'wide', src:'img/ueda-shoji-museum/glass.jpg', cap:"走廊一側全是玻璃，光斜斜地切進來，走著走著就不想趕時間了。" },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/glass.jpg', cap:"玻璃走廊裡，光從斜上方切進來，牆面被分成一明一暗，安靜又好看。" },
     { t:'h', id:'ueda', text:'植田正治，和「植田調」' },
     { t:'p', text:'植田正治是生於鳥取的攝影家，一輩子幾乎都在家鄉山陰拍照。他最有名的是在鳥取沙丘拍的系列作品：家人、朋友穿著整齊，像舞台劇演員一樣被安排在空曠的沙丘上，有人戴帽子、有人拿著傘，彼此保持距離、看向不同方向。畫面簡潔、乾淨，又帶著一點超現實的幽默。' },
     { t:'pair', imgs:['img/ueda-shoji-museum/chairs.jpg','img/ueda-shoji-museum/sign.jpg'], cap:"左：黑白的角落裡，椅子的影子比椅子還有型。右：展牆上的植田正治，站在斑駁的光影裡。" },
