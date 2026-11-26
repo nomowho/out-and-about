@@ -36,7 +36,7 @@ POST_DETAIL['ueda-shoji-museum'] = {
     { t:'p', text:'大山是這裡最重要的風景之一，海拔 1,729 公尺，是中國地方最高峰，因為山形和富士山很像，被叫做「伯耆富士」。美術館周圍是一大片稻田，天氣好的時候，大山就清清楚楚地立在稻田後面。' },
     { t:'img', size:'wide', src:'img/ueda-shoji-museum/daisen.jpg', cap:"夏天的大山，山頂壓著一朵雲，山腳下是一整片稻田。" },
     { t:'p', text:'看完展，我們幾個人也忍不住在稻田邊排成一列，各自擺出奇怪的姿勢，拍了一張向植田正治致敬的照片。在這裡，每個人都會變成植田調的演員。' },
-    { t:'img', size:'wide', src:'img/ueda-shoji-museum/shadow.jpg', cap:"高低錯落的清水模牆把天空切成幾塊，樹影落在牆面上，雲就在牆頭後面。" },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/shadow.jpg', cap:"高低錯落的清水模牆把天空切成幾塊，樹影落在牆面上，天上還有可愛的雲。" },
   ],
   info:[
     ['名稱','植田正治寫真美術館（Shoji Ueda Museum of Photography）'],
