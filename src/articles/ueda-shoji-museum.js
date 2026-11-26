@@ -4,11 +4,14 @@
 //   清水模牆面把大山框成像展品一樣；館內映像展示室裝有「世界最大的相機鏡頭」，可體驗身在相機裡（gltjp、japan-experience、japan.travel、tokyoartbeat）
 // ⚠️ 植田正治生平（1913 生於境港、2000 年過世）本次未查到可靠頁面，網站版只寫「生於鳥取」；「伯耆富士」為大山別稱，保留
 // 造訪時間：9 月（Nomo 2026-11-20 確認）
-// 照片：Nomo 2026-11-20 指示先不放；原始 IG 圖在 output/photos/_ig-import/DAyTjuLhWsA/
+// 照片：Nomo 2026-11-26 補上（output/photos/_待補照片/01_日本/ueda-shoji-museum_植田正治寫真美術館/）：封面＝01 水池倒映大山＋黑帽（直幅，自動分欄）、2/3 並排、4/5 並排、橫式縮圖＝IMG_6945（cardh）；直式縮圖＝封面同張。原始 IG 圖在 output/photos/_ig-import/DAyTjuLhWsA/
 POST_DETAIL['ueda-shoji-museum'] = {
   seoTitle:'植田正治寫真美術館：高松伸用清水模框住大山，鳥取攝影巨匠的「植田調」',
   dek:'植田正治寫真美術館在鳥取縣伯耆町的大山山腳，1995 年開館，由建築師高松伸設計。清水模的高牆把有「伯耆富士」之稱的大山框成一幅畫，水池倒映著山影。館內收藏攝影家植田正治約 12,000 件作品，他在沙丘上讓人物像擺設一樣站位的獨特風格，被稱為「植田調」。',
-  updated:'2026-11-20',
+  updated:'2026-11-26',
+  cover:'img/ueda-shoji-museum/cover.jpg',
+  cardH:'img/ueda-shoji-museum/cardh.jpg',
+  coverCap:"兩道清水模牆之間，水池把大山和天空一起倒了過來，山上還浮著一頂黑色圓頂禮帽。",
   place:{
     alt:['植田正治写真美術館','Shoji Ueda Museum of Photography','植田正治美術館'],
     url:'https://www.japan.travel/en/experiences-in-japan/155/',
@@ -16,15 +19,24 @@ POST_DETAIL['ueda-shoji-museum'] = {
   },
   body:[
     { t:'p', text:'穿過兩道清水模高牆中間的縫，視線一下子被拉向遠方：一池平靜的水，倒映著大山完整的三角形山影，水面上方還懸著一頂黑色的圓頂禮帽。那頂帽子不是裝飾，是植田正治（Shoji Ueda）照片裡常出現的符號。還沒進展廳，美術館就先替他擺好了一張照片。' },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/hat.jpg', cap:"有人伸手舉起黑色圓頂禮帽，剪影和遠方的大山疊在同一個畫框裡。" },
     { t:'h', id:'building', text:'植田正治寫真美術館的設計者' },
     { t:'p', text:'美術館在 1995 年開館，建築師是以強烈幾何造型聞名的高松伸。整座館由幾個清水模方塊組成，牆面之間刻意留出縫隙與開口，每一個開口都對準大山。有人說在這裡，連大山本身都像是被展示的作品之一。' },
+    { t:'pair', imgs:['img/ueda-shoji-museum/curve.jpg','img/ueda-shoji-museum/cube.jpg'], cap:"左：弧形的清水模牆和一排階梯，影子斜斜爬上牆面。右：方正的混凝土量體前，一個人慢慢走過。" },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/side.jpg', cap:"從側面看，弧形牆和幾個方塊把天空切成一塊一塊。" },
     { t:'p', text:'館內還有一間映像展示室，裝著號稱世界最大的相機鏡頭，走進去就像站在一台巨大的相機裡面，看著外面的景色被投射進來，非常適合一座攝影美術館。' },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/glass.jpg', cap:"玻璃走廊裡，一個人影站在斜斜切進來的光影中。" },
     { t:'h', id:'ueda', text:'植田正治，和「植田調」' },
     { t:'p', text:'植田正治是生於鳥取的攝影家，一輩子幾乎都在家鄉山陰拍照。他最有名的是在鳥取沙丘拍的系列作品：家人、朋友穿著整齊，像舞台劇演員一樣被安排在空曠的沙丘上，有人戴帽子、有人拿著傘，彼此保持距離、看向不同方向。畫面簡潔、乾淨，又帶著一點超現實的幽默。' },
+    { t:'pair', imgs:['img/ueda-shoji-museum/chairs.jpg','img/ueda-shoji-museum/sign.jpg'], cap:"左：黑白的牆面和三張椅子，連影子都被排進構圖裡。右：混凝土牆上的看板，一位戴眼鏡的人站在光影斑駁的畫面中。" },
     { t:'p', text:'這種把人當成構圖元素、在大自然裡「擺」出一張照片的手法，被稱為「植田調」（Ueda-chō），影響了很多後來的攝影師。美術館收藏了他約 12,000 件作品，展廳會輪流展出沙丘系列、人像和以山陰為主題的作品。' },
+    { t:'p', text:'回到台灣之後才發現，植田正治的作品其實不用跑到鳥取也看得到。2020 年 1 月 18 日到 3 月 1 日，「植田正治逝世二十年紀念回顧展」就在台北華山 1914 文化創意產業園區辦過，展出約 140 件家屬珍藏的作品。' },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/taipei.jpg', cap:"華山 1914 的展覽看板，紅磚牆前是一排植田調的老照片人物，上面寫著 2020.1.18 到 3.1。" },
     { t:'h', id:'daisen', text:'在植田正治寫真美術館看大山' },
     { t:'p', text:'大山是這裡最重要的風景之一，海拔 1,729 公尺，是中國地方最高峰，因為山形和富士山很像，被叫做「伯耆富士」。美術館周圍是一大片稻田，天氣好的時候，大山就清清楚楚地立在稻田後面。' },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/daisen.jpg', cap:"夏天的大山，山頂壓著一朵雲，山腳下是一整片稻田。" },
     { t:'p', text:'看完展，我們幾個人也忍不住在稻田邊排成一列，各自擺出奇怪的姿勢，拍了一張向植田正治致敬的照片。在這裡，每個人都會變成植田調的演員。' },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/shadow.jpg', cap:"外牆邊有人舉著相機，影子和牆上的樹影一起落在碎石地上。" },
   ],
   info:[
     ['名稱','植田正治寫真美術館（Shoji Ueda Museum of Photography）'],
@@ -33,15 +45,18 @@ POST_DETAIL['ueda-shoji-museum'] = {
     ['館藏','植田正治作品約 12,000 件'],
     ['必看','水池倒映大山的取景、映像展示室的巨型鏡頭、沙丘系列作品'],
     ['交通','開車較方便；JR 岸本站搭計程車約 5 分鐘'],
+    ['台灣展覽','2020 年 1 月 18 日至 3 月 1 日，台北華山 1914 文化創意產業園區曾辦「植田正治逝世二十年紀念回顧展」'],
     ['造訪時間','9 月'],
   ],
   faq:[
+    ['植田正治的展覽在台灣辦過嗎？','辦過。「植田正治逝世二十年紀念回顧展」於 2020 年 1 月 18 日至 3 月 1 日在台北華山 1914 文化創意產業園區展出，約 140 件家屬珍藏的作品。'],
     ['植田正治寫真美術館在哪裡？','在鳥取縣西伯郡伯耆町的大山山腳，距離米子市東南約 10 公里。'],
     ['植田正治寫真美術館是誰設計的？','由建築師高松伸設計，1995 年開館，以清水模牆面框住大山的景色聞名。'],
     ['什麼是植田調？','指攝影家植田正治把人物像擺設一樣安排在沙丘等自然場景中、構圖簡潔帶超現實感的獨特風格。'],
     ['植田正治寫真美術館收藏多少作品？','收藏植田正治約 12,000 件作品，展覽會輪流展出。'],
   ],
   sources:[
+    ['動區／數位時代｜植田正治回顧展登台（2020.1.18–3.1、約 140 件家屬珍藏作品）','https://www.shoppingdesign.com.tw/post/view/4871','查閱日期 2026-11-26；展覽地點與「西五館」另見 Nomo 現場看板照片'],
     ['GLTJP｜Shoji Ueda Museum of Photography（1995 年開館、高松伸、約 12,000 件）','https://www.gltjp.com/en/directory/item/18617/','查閱日期 2026-11-20'],
     ['Japan Experience｜Shoji Ueda Museum of Photography（伯耆町、米子東南約 10 公里）','https://www.japan-experience.com/all-about-japan/tottori/museums-and-galleries/shoji-ueda-museum-of-photography','查閱日期 2026-11-20'],
     ['Japan Travel（日本國家旅遊局）｜Immerse Yourself in Photography in Rural Tottori（世界最大相機鏡頭）','https://www.japan.travel/en/experiences-in-japan/155/','查閱日期 2026-11-20'],
