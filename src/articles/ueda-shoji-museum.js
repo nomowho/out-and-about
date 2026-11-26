@@ -31,7 +31,7 @@ POST_DETAIL['ueda-shoji-museum'] = {
     { t:'pair', imgs:['img/ueda-shoji-museum/chairs.jpg','img/ueda-shoji-museum/sign.jpg'], cap:"左：黑白的角落裡，椅子的影子比椅子還有型。右：展牆上的植田正治，站在斑駁的光影裡。" },
     { t:'p', text:'這種把人當成構圖元素、在大自然裡「擺」出一張照片的手法，被稱為「植田調」（Ueda-chō），影響了很多後來的攝影師。美術館收藏了他約 12,000 件作品，展廳會輪流展出沙丘系列、人像和以山陰為主題的作品。' },
     { t:'p', text:'回到台灣之後才發現，植田正治的作品其實來台灣展過。2020 年 1 月 18 日到 3 月 1 日，「植田正治逝世二十年紀念回顧展」就在台北華山 1914 文化創意產業園區辦過，展出約 140 件家屬珍藏的作品。' },
-    { t:'img', size:'wide', src:'img/ueda-shoji-museum/taipei.jpg', cap:"原來早在 2020 年，這些老照片就在華山 1914 等著大家，展期是 1.18 到 3.1。" },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/taipei.jpg', cap:"原來早在 2020 年，這些老照片就在華山 1914 等著大家。" },
     { t:'h', id:'daisen', text:'在植田正治寫真美術館看大山' },
     { t:'p', text:'大山是這裡最重要的風景之一，海拔 1,729 公尺，是中國地方最高峰，因為山形和富士山很像，被叫做「伯耆富士」。美術館周圍是一大片稻田，天氣好的時候，大山就清清楚楚地立在稻田後面。' },
     { t:'img', size:'wide', src:'img/ueda-shoji-museum/daisen.jpg', cap:"雲停在山頂上，像在等人拍照，山腳下是一整片稻田。" },
