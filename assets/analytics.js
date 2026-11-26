@@ -48,7 +48,7 @@
   function depth() {
     queued = false; if (!body || document.visibilityState === 'hidden') return;
     var rect = body.getBoundingClientRect(), ratio = Math.max(0, Math.min(1, (innerHeight - rect.top) / rect.height));
-    [25, 50, 75, 100].forEach(function (n) { if (ratio * 100 >= n && !sent[n]) { sent[n] = true; event('article_depth_' + n, { article_path: source, percent_scrolled: n }); } });
+    [25, 50, 75, 80, 100].forEach(function (n) { if (ratio * 100 >= n && !sent[n]) { sent[n] = true; event('article_depth_' + n, { article_path: source, percent_scrolled: n }); } });
   }
   addEventListener('scroll', function () { if (!queued && body) { queued = true; requestAnimationFrame(depth); } }, { passive: true });
   addEventListener('resize', depth, { passive: true }); depth();
