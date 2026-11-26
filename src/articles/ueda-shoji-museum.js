@@ -19,10 +19,10 @@ POST_DETAIL['ueda-shoji-museum'] = {
   },
   body:[
     { t:'p', text:'穿過兩道清水模高牆中間的縫，視線一下子被拉向遠方：一池平靜的水，倒映著大山完整的三角形山影，水面上方還懸著一頂黑色的圓頂禮帽。那頂帽子不是裝飾，是植田正治（Shoji Ueda）照片裡常出現的符號。還沒進展廳，美術館就先替他擺好了一張照片。' },
-    { t:'img', size:'wide', src:'img/ueda-shoji-museum/hat.jpg', cap:"帽子舉到剛剛好的高度，大山就乖乖站在後面。" },
+    { t:'img', size:'wide', src:'img/ueda-shoji-museum/hat.jpg', cap:"有人伸手對準了黑色圓頂禮帽，想在畫框幫大山戴上帽子。" },
     { t:'h', id:'building', text:'植田正治寫真美術館的設計者' },
     { t:'p', text:'美術館在 1995 年開館，建築師是以強烈幾何造型聞名的高松伸。整座館由幾個清水模方塊組成，牆面之間刻意留出縫隙與開口，每一個開口都對準大山。有人說在這裡，連大山本身都像是被展示的作品之一。' },
-    { t:'pair', imgs:['img/ueda-shoji-museum/curve.jpg','img/ueda-shoji-museum/cube.jpg'], cap:"左：弧形的牆慢慢收進天空，連階梯的影子都好看。右：方塊牆大到讓人想放慢腳步走過去。" },
+    { t:'pair', imgs:['img/ueda-shoji-museum/curve.jpg','img/ueda-shoji-museum/cube.jpg'], cap:"左：弧形的牆慢慢收進天空，連階梯的影子都好看。右：方方正正的清水模量體，一道光斜斜切在牆面上。" },
     { t:'img', size:'wide', src:'img/ueda-shoji-museum/side.jpg', cap:"繞到側面，幾塊方方正正的牆把天空切得很乾淨。" },
     { t:'p', text:'館內還有一間映像展示室，裝著號稱世界最大的相機鏡頭，走進去就像站在一台巨大的相機裡面，看著外面的景色被投射進來，非常適合一座攝影美術館。' },
     { t:'img', size:'wide', src:'img/ueda-shoji-museum/glass.jpg', cap:"走廊一側全是玻璃，光斜斜地切進來，走著走著就不想趕時間了。" },
