@@ -1,7 +1,7 @@
 {
   "/": {
-    "hash": "9c31374777dd7e93c19449015e1fc684e0509b6d90c5090dbc508e1f2c6c5e2b",
-    "date": "2026-11-25"
+    "hash": "8fba8056314a5cf46d115b906257f1c0e24323fe6097e2830615c46d2b51c428",
+    "date": "2026-11-26"
   },
   "/stories/dolomiti-winter/": {
     "hash": "ce9da8170cfb1e41af751ab4f36f83a6e48cebfcfeefe65db310df5326761e52",
@@ -464,16 +464,16 @@
     "date": "2026-11-24"
   },
   "/news/rapa-nui/": {
-    "hash": "cfb6c480381c74064ac38199c36ba05765f07ae75c9f40ed47270245d1ee33cc",
-    "date": "2026-11-25"
+    "hash": "3632289dc5e462a4a4167f31cccaf41e0f336c7404e98145656e72ce9ee2513d",
+    "date": "2026-11-26"
   },
   "/news/chiricahua/": {
-    "hash": "6a25aea5a62a66317d2c9e3daa4334b1b66a60b654c360792d91ec037d9edb20",
-    "date": "2026-11-25"
+    "hash": "de1f2ab93a294536eb42d134958391f89621302a896e0b4146c27eb514527470",
+    "date": "2026-11-26"
   },
   "/news/beautiful-shops/": {
-    "hash": "d4560d78a558916de795a6a88a7113ab3d25bfda7f37e0ce7dc53c222bdcc503",
-    "date": "2026-11-25"
+    "hash": "072322beaf047bc4e400a37d22d22c30b6312445eeb66c28e02b69ee78760f8c",
+    "date": "2026-11-26"
   },
   "/category/architecture/": {
     "hash": "84816f5e30ff7fd9399e6de270f6d746748588b2e8097de790717d507ffa18da",
@@ -604,12 +604,12 @@
     "date": "2026-11-25"
   },
   "/news/": {
-    "hash": "5fffc439388f93ce0901272dc63bb83ffc8ccf4a712526afc4782e98138cd883",
-    "date": "2026-11-25"
+    "hash": "a1db59018a6c89adab38775b1e22335fbea58d347b87ff47c2a659c635b13ba3",
+    "date": "2026-11-26"
   },
   "/news/archive/": {
-    "hash": "18ae31cde006f551046155ce5c711fd032bcb6c6d12c20b1ab80d076b46bba0b",
-    "date": "2026-11-25"
+    "hash": "fb2c19281b7ac17e66ba82daf771874ae206aef697332c287d57e3028fdd388a",
+    "date": "2026-11-26"
   },
   "/journal/": {
     "hash": "3629c30193b06697a86dfd91ebc8972c7024745e4b94f1fed5cbdba6e2788995",
@@ -1246,5 +1246,13 @@
   "/journal/germany/": {
     "hash": "8d483673aa70644c2ecf808adef745115f2a32b5ef1256f3f655bd69d51c1772",
     "date": "2026-11-25"
+  },
+  "news:naha-shuri-castle-seiden-restored-2026": {
+    "hash": "2238f5fed2f8cecc7639622defc70cbdc215fa38e136d9099bf7a3617e5c5a70",
+    "date": "2026-11-22"
+  },
+  "/news/naha-shuri-castle-seiden-restored-2026/": {
+    "hash": "56696e8bc09bd96cde8d70b44752bbf43199d6c00448473562b4458debd40c97",
+    "date": "2026-11-26"
   }
 }
