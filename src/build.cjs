@@ -238,9 +238,10 @@ ${CFG.cfBeacon ? `<script defer src="https://static.cloudflareinsights.com/beaco
 /* ── 卡片 ── */
 /* 橫式卡片格（3:2）：卡片圖是直式、主圖是橫式時改用主圖（Nomo 11-20） */
 const landCover = p => { const d = POST_DETAIL[p.id], c = p.photo !== false && d && d.cover, cd = c && dims(c), k = dims('img/' + p.id + '.jpg'); return !!(cd && cd.w > cd.h * 1.15 && k && k.h > k.w); };
+const hasCardH = p => p.photo !== false && !!(POST_DETAIL[p.id] && POST_DETAIL[p.id].cardH);   /* 11-26：直式封面的文章若指定了 cardH，橫式卡片格也用它（植田正治、冰教堂） */
 const postCard = (p, { extra = '', place = true, hidden = false, cls = '', cover = false, land = false, cardImage = '', csizes = '(max-width:560px) calc(100vw - 40px), (max-width:1000px) 100vw, 560px' } = {}) => `
   <a class="card${cls ? ' ' + cls : ''}"${hidden ? ' hidden' : ''} href="${url.post(p.id)}">
-    <figure>${extra}${cardImage ? img(cardImage, p.zh, { sizes: csizes, small: true }) : (cover || (land && landCover(p))) && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cardH || POST_DETAIL[p.id].cover, p.zh, { sizes: csizes, small: true }) : thumb(p)}</figure>
+    <figure>${extra}${cardImage ? img(cardImage, p.zh, { sizes: csizes, small: true }) : (cover || (land && (landCover(p) || hasCardH(p)))) && POST_DETAIL[p.id] && POST_DETAIL[p.id].cover ? img(POST_DETAIL[p.id].cardH || POST_DETAIL[p.id].cover, p.zh, { sizes: csizes, small: true }) : thumb(p)}</figure>
     <div class="meta"><span class="cat">${p.cat}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
     <h3>${p.title}</h3>${place ? `<div class="place">${p.zh}，${p.area}</div>` : ''}
   </a>`;

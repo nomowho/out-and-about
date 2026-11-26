@@ -811,6 +811,7 @@ figure>picture{display:contents}.pair .two>picture{display:contents}
 @media(max-width:700px){.reel{flex-basis:44vw}.reels-wrap .rail-arr{display:none}}
 /* 薩爾茲堡 pair 裁切：往上露出 St. Peter 教堂尖塔頂（Nomo 11-24：照片往下移） */
 .pair img[src*="salzburg/old-town"]{object-position:50% 8%}
+.pair img[src*="ueda-shoji-museum/cube"]{object-position:50% 100%}   /* 11-26 方塊牆前的人在最底，往下對齊才露出全身 */
 
 /* 找文章：桌機刊頭與選單共用既有 stories 搜尋。 */
 .head .tools a.header-search{gap:7px;font-size:13px;white-space:nowrap}

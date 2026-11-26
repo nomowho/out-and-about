@@ -4483,6 +4483,95 @@
       "height": 405
     }
   ],
+  "img/ueda-shoji-museum.jpg": [
+    {
+      "file": "bf26f2bf6ca6751d.webp",
+      "width": 480,
+      "height": 717
+    },
+    {
+      "file": "74f4625b4885074e.webp",
+      "width": 720,
+      "height": 1075
+    }
+  ],
+  "img/ueda-shoji-museum/chairs.jpg": [
+    {
+      "file": "8956db2dbda73a0a.webp",
+      "width": 720,
+      "height": 1007
+    }
+  ],
+  "img/ueda-shoji-museum/cover.jpg": [
+    {
+      "file": "836d5536914f1548.webp",
+      "width": 720,
+      "height": 1075
+    }
+  ],
+  "img/ueda-shoji-museum/cube.jpg": [
+    {
+      "file": "3dc0710dbb4bd1e4.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/ueda-shoji-museum/curve.jpg": [
+    {
+      "file": "c3493f12cbf87916.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/ueda-shoji-museum/daisen.jpg": [
+    {
+      "file": "36d21e1fffe305c7.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/ueda-shoji-museum/glass.jpg": [
+    {
+      "file": "071d83f42874badf.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/ueda-shoji-museum/hat.jpg": [
+    {
+      "file": "cb47010a421eb8a4.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/ueda-shoji-museum/shadow.jpg": [
+    {
+      "file": "34093fafd2764dd2.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/ueda-shoji-museum/side.jpg": [
+    {
+      "file": "81ec0711e20b828c.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/ueda-shoji-museum/sign.jpg": [
+    {
+      "file": "edff31bc4fc6b340.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/ueda-shoji-museum/taipei.jpg": [
+    {
+      "file": "32ed38836619b2fd.webp",
+      "width": 720,
+      "height": 561
+    }
+  ],
   "img/under.jpg": [
     {
       "file": "6dcde0634f13517d.webp",
