@@ -774,6 +774,18 @@
       "height": 406
     }
   ],
+  "img/budapest-parliament.jpg": [
+    {
+      "file": "3b13001a62c5dd54.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "ece8f149df14d205.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
   "img/budapest-parliament/arches.jpg": [
     {
       "file": "86bc257fa17299b5.webp",
@@ -3835,6 +3847,149 @@
       "height": 1279
     }
   ],
+  "img/szentendre.jpg": [
+    {
+      "file": "f123a2b815bbd572.webp",
+      "width": 480,
+      "height": 834
+    },
+    {
+      "file": "5c78341e9f65329a.webp",
+      "width": 720,
+      "height": 1251
+    }
+  ],
+  "img/szentendre/cardh.jpg": [
+    {
+      "file": "5c5c4ab9d5b3d49c.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/szentendre/church.jpg": [
+    {
+      "file": "67a30dfbb0ca8571.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/szentendre/clock.jpg": [
+    {
+      "file": "40fda7f16b366d49.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "e285e5a0f31ae3ff.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/szentendre/cover.jpg": [
+    {
+      "file": "a91cc99ac0750a6a.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/szentendre/dragon.jpg": [
+    {
+      "file": "de1438508cd71f30.webp",
+      "width": 480,
+      "height": 834
+    },
+    {
+      "file": "dd351dee97903f4d.webp",
+      "width": 720,
+      "height": 1251
+    }
+  ],
+  "img/szentendre/flags.jpg": [
+    {
+      "file": "a763c15262446059.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "151ac5b3325f6c1c.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/szentendre/lane.jpg": [
+    {
+      "file": "73eced19a36af22d.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "d96dae61251d8120.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/szentendre/paddle.jpg": [
+    {
+      "file": "8a2436e793b76724.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/szentendre/shop.jpg": [
+    {
+      "file": "8009655ca58baa3c.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "73f7ece01c2b9c81.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/szentendre/square.jpg": [
+    {
+      "file": "4a89308c82483f85.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/szentendre/tower.jpg": [
+    {
+      "file": "e3d6cc36f16182e6.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "2ca4ae70e8f7f235.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/szentendre/tree.jpg": [
+    {
+      "file": "4137c19c59c8e03a.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "870818e904fe7db9.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/szentendre/umbrella.jpg": [
+    {
+      "file": "04f255aedc4125f1.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "41281b8ffc31a7af.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
   "img/taormina/cavea.jpg": [
     {
       "file": "9490ac6c6ad57862.webp",
@@ -5217,6 +5372,103 @@
       "file": "59e11bddf89381db.webp",
       "width": 720,
       "height": 960
+    }
+  ],
+  "img/vienna-library.jpg": [
+    {
+      "file": "30dfecec4c83f94b.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "e882ab777336877f.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/vienna-library/cardh.jpg": [
+    {
+      "file": "ffcad104deffc411.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/vienna-library/cover.jpg": [
+    {
+      "file": "ab21199a681a60f1.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/vienna-library/door.jpg": [
+    {
+      "file": "629c96f794c852b1.webp",
+      "width": 480,
+      "height": 756
+    },
+    {
+      "file": "02684e99a060cb3d.webp",
+      "width": 720,
+      "height": 1133
+    }
+  ],
+  "img/vienna-library/emperor.jpg": [
+    {
+      "file": "ec1d4be23623ba3e.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "724a2adc07024cc4.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/vienna-library/fresco.jpg": [
+    {
+      "file": "688f3e289ff253c6.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/vienna-library/hall.jpg": [
+    {
+      "file": "ed826e497ff8a3ae.webp",
+      "width": 720,
+      "height": 427
+    }
+  ],
+  "img/vienna-library/ladder.jpg": [
+    {
+      "file": "3ceb24dc08d8a89b.webp",
+      "width": 720,
+      "height": 416
+    }
+  ],
+  "img/vienna-library/long.jpg": [
+    {
+      "file": "6565368cb8e173f5.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/vienna-library/shelf.jpg": [
+    {
+      "file": "db7375091dd6e75d.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/vienna-library/statue.jpg": [
+    {
+      "file": "57d5d2f5fc3329a3.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "dc313e5cdf324173.webp",
+      "width": 720,
+      "height": 1279
     }
   ],
   "img/volandstind.jpg": [
