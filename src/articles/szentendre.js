@@ -28,7 +28,7 @@ POST_DETAIL['szentendre'] = {
   updated:'2026-11-27',
   cover:'img/szentendre/cover.jpg',
   cardH:'img/szentendre/cardh.jpg',
-  coverPos:'50% 70%',   // 首圖取景下移 20%，露出右下角的狗（Nomo 11-27）
+  coverPos:'50% 100%',   // 首圖取景：11-27 先下移 20%（70%），再移到最下方（100%）要看到完整的狗（Nomo）
   cardV:true,   // /stories/ 用直式縮圖 img/<id>.jpg（Nomo 指定直式縮圖；橫幅首圖預設會被拿去裁切，11-27 修正）
   coverCap:"逆著光走進廣場，白色燈籠在頭頂排成一行，聖誕樹就站在盡頭。",
   place:{
