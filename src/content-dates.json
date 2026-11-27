@@ -240,15 +240,15 @@
     "date": "2026-11-25"
   },
   "/stories/budapest-parliament/": {
-    "hash": "7aeadad7d7570d8c4d6381d2248410745318dc2d29a91eb848f935e17061cc47",
+    "hash": "85d5d0e6983f6552cc3504d846c57d59a23e7029a273501b6429508f192a0890",
     "date": "2026-11-27"
   },
   "/stories/szentendre/": {
-    "hash": "cf35825950b629789db5924780c61d3679ac1cd75a02f3b3a21339d72189061a",
+    "hash": "3532ac84464b33b48926751611354f4b7b903b4397c9443e1b87735d26ef7ee9",
     "date": "2026-11-27"
   },
   "/stories/vienna-library/": {
-    "hash": "9fbc8abb74d6a4f8b5034d40b24fac6fe1f7742e4a912036b9e040ba99b87189",
+    "hash": "57df128130b4aa56e565fad6af9075462e5e712def2db7bb149e953e87b390d4",
     "date": "2026-11-27"
   },
   "/stories/secession/": {
@@ -948,15 +948,15 @@
     "date": "2026-11-25"
   },
   "article:budapest-parliament": {
-    "hash": "52e0734033294219b842bbd2106400d47696935c65c058b80dbde16e9c2e053f",
+    "hash": "1c417724e5fdbd78eea0b728a6776587247fc288ebdc834f303d6bf433f91fa3",
     "date": "2026-11-27"
   },
   "article:szentendre": {
-    "hash": "4c2bf56d50ef32c308293807d71ce3d7608eb7ed57631f797bf9e83cecf97368",
+    "hash": "0e5190fe3373c43877f21e448d7b8d64058a15ef18c4d5fc641611cce73118d4",
     "date": "2026-11-27"
   },
   "article:vienna-library": {
-    "hash": "7ed18c5cc3ddd11ea3f4bc22d3f92bdf64bfa1f014bb20e18597387d68813846",
+    "hash": "4f031f1072e7a09f820f9af57276496e715ea55458205a867f81fdffc088484a",
     "date": "2026-11-27"
   },
   "article:secession": {

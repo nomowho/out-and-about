@@ -28,7 +28,7 @@ POST_DETAIL['budapest-parliament'] = {
   cover:'img/budapest-parliament/cover.jpg',
   cardH:'img/budapest-parliament/cardh.jpg',
   // 不加 cardV：/stories/ 列表卡片用橫式縮圖 DSC00654（Nomo 11-27 破例指定，直式縮圖 DSC00606 仍保留給其他版位）
-  coverCap:"天色慢慢轉成粉紫色，河對岸的國會大廈安靜地等著入夜。",
+  coverCap:"傍晚的天空粉粉紫紫的，國會就在河對岸。",
   place:{
     alt:['Országház','Hungarian Parliament Building','Budapest Parliament','匈牙利國會大廈','布達佩斯國會大廈'],
     url:'https://www.parlament.hu/',
@@ -70,7 +70,7 @@ POST_DETAIL['budapest-parliament'] = {
     { t:'h', id:'petofi', text:'國會大廈代表的匈牙利精神' },
     { t:'p', text:'匈牙利人說起自由，很多人會想到詩人裴多菲（Petőfi Sándor），他是 1848 年革命的象徵人物。他寫的那首小詩，被翻成中文就是大家熟悉的「生命誠可貴，愛情價更高；若為自由故，兩者皆可拋」。站在這棟為了國家千年生日而蓋的國會前，會更懂得這句話在這片土地上的份量。' },
     { t:'p', text:'這個地方對自由的記憶也不只在詩裡。國會外牆曾經布滿兩次世界大戰和 1956 年革命留下的彈孔，到了 2013 年前後的整修，大部分彈孔都補平了，只有 Kossuth 廣場那一側的一扇窗邊，施工團隊刻意留下幾平方公尺沒有補，讓人還能看見那些痕跡。' },
-    { t:'img', size:'wide', src:'img/budapest-parliament/night.jpg', cap:"天黑以後整棟建築亮起來，連河面都跟著發光。" },
+    { t:'img', size:'wide', src:'img/budapest-parliament/night.jpg', cap:"天黑以後打上燈，河面上連倒影都是金色的。" },
     { t:'h', id:'stories', text:'比較少人提的幾個小故事' },
     { t:'p', text:'國會剛落成的時候，其實沒有什麼掌聲。當時的媒體反而挑毛病，批評顏色太鮮豔、鍍金太多，連人造大理石也被說了一頓。今天看起來最華麗的地方，在當年正是被批評的地方。' },
     { t:'p', text:'Steindl 不想在屋頂上立煙囪，所以暖氣是從附近建築的鍋爐房，用蒸氣管送進來的。夏天要降溫，從 1930 年代到 1994 年，則是把冰塊放進地下的礦道，替大樓降溫。' },

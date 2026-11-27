@@ -49,7 +49,7 @@ POST_DETAIL['vienna-library'] = {
     { t:'h', id:'fresco', text:'國事廳天花板上的壁畫' },
     { t:'p', text:'穹頂壁畫出自奧地利宮廷畫家 Daniel Gran（1694–1757）之手，1730 年完成，整個圖像計畫則是宮廷學者 Conrad Adolph von Albrecht 擬定的。主題是查理六世的「神化」：把這位建造圖書館、贊助藝術與科學的皇帝，畫成升入天界的英雄。' },
     { t:'p', text:'整座大廳也被分成「戰」與「和」兩側：靠入口的那一翼，壁畫畫的是世俗與戰事題材；靠近霍夫堡皇宮、原本是皇帝專用通道的後翼，畫的是天空與和平的寓言。' },
-    { t:'img', size:'wide', src:'img/vienna-library/fresco.jpg', cap:"抬頭看，天花板被畫滿了，連邊框的金色花紋都不放過。" },
+    { t:'img', size:'wide', src:'img/vienna-library/fresco.jpg', cap:"抬頭看，天花板整面都是畫，脖子會先痠。" },
     { t:'h', id:'books', text:'國事廳裡的藏書' },
     { t:'p', text:'大廳裡大約有 20 萬冊古書，年代從 1501 年到 1850 年，很多是皮革燙金的精裝本，整排看過去像一面會呼吸的牆。其中最珍貴的一批，是歐根親王（Prince Eugene of Savoy）的藏書，約 15,000 冊。歐根親王是那個時代最重要的藏書家之一，書多半來自法國和義大利，是透過藝術拍賣與他在歐洲各地的代理人買來的。他過世之後，皇室買下這批書，放進橢圓中央大廳。' },
     { t:'img', size:'wide', src:'img/vienna-library/shelf.jpg', cap:"每一座書架上方都掛著金色的標牌，連編號都做得這麼華麗。" },
