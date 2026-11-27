@@ -67,7 +67,7 @@ POST_DETAIL['szentendre'] = {
     { t:'h', id:'river', text:'逛完老城，走到河邊' },
     { t:'p', text:'老城離多瑙河岸只有幾步路。逛累了可以走到河邊坐一下，冬天的河面很安靜，我去的那天還看到有人站在板子上，在河上划槳。' },
     { t:'pair', imgs:['img/szentendre/tree.jpg','img/szentendre/lane.jpg'], cap:"左：河邊的樹把天空留得很大。右：巷子走到底，就是河。" },
-    { t:'img', size:'wide', src:'img/szentendre/paddle.jpg', cap:"冬天的河上也有人在划槳，水面安靜得像在陪他。" },
+    { t:'img', size:'wide', src:'img/szentendre/paddle.jpg', cap:"冬天的河上也有人在划槳，難道也有水上 Santa？" },
     { t:'h', id:'stories', text:'比較少人提的幾個小故事' },
     { t:'p', text:'聖安德烈（Szentendre）這個名字，匈牙利語是 Szent Endre，意思就是聖人安德烈。因為鎮上曾經住過這麼多民族，這座小鎮同時有好幾個名字：德語叫 Sankt Andrä，塞爾維亞語叫 Sentandreja，克羅埃西亞語叫 Senandrija。' },
     { t:'p', text:'鎮上有一條 Dalmát 街，紀念從達爾馬提亞來的移民。他們住在一座叫 Szamárhegy 的山坡上，名字的意思是「驢山」，據說是因為以前用驢子把飲用水運上山。直到 1980 年代，那條街上住的還幾乎都是達爾馬提亞人的後代。' },
