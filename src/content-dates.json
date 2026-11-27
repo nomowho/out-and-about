@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "896c84c475b41e1d62a8a697884a68ff2ba63b2cab3b1c61ba3a0b778225ca96",
+    "hash": "e34843ccc873669e9efbb371806be72249891b183c8f13c9284c4b11806ff200",
     "date": "2026-11-27"
   },
   "/stories/dolomiti-winter/": {
@@ -464,16 +464,16 @@
     "date": "2026-11-24"
   },
   "/news/rapa-nui/": {
-    "hash": "3632289dc5e462a4a4167f31cccaf41e0f336c7404e98145656e72ce9ee2513d",
-    "date": "2026-11-26"
+    "hash": "f86c1889e145ca68eb76bd60d14033598b20e12820681c3c5a35d51442987064",
+    "date": "2026-11-27"
   },
   "/news/chiricahua/": {
-    "hash": "de1f2ab93a294536eb42d134958391f89621302a896e0b4146c27eb514527470",
-    "date": "2026-11-26"
+    "hash": "b9ee889404dc77a7e31b7676310efcc8d5bebec6b501450da573765ab6fc407a",
+    "date": "2026-11-27"
   },
   "/news/beautiful-shops/": {
-    "hash": "072322beaf047bc4e400a37d22d22c30b6312445eeb66c28e02b69ee78760f8c",
-    "date": "2026-11-26"
+    "hash": "1f9b2c418130978aafefca47dc1766f951423de8ce5e64f14c7ddb65f73d1736",
+    "date": "2026-11-27"
   },
   "/category/architecture/": {
     "hash": "d21351243fc4ff5dfb476ff0b9a10bb58c530aed88628e9662589953ee303ff0",
@@ -604,12 +604,12 @@
     "date": "2026-11-26"
   },
   "/news/": {
-    "hash": "a1db59018a6c89adab38775b1e22335fbea58d347b87ff47c2a659c635b13ba3",
-    "date": "2026-11-26"
+    "hash": "f6e70cc7551a0fa03b14766829fd6e6909961fab242ad0677f30424a7298df59",
+    "date": "2026-11-27"
   },
   "/news/archive/": {
-    "hash": "fb2c19281b7ac17e66ba82daf771874ae206aef697332c287d57e3028fdd388a",
-    "date": "2026-11-26"
+    "hash": "33da8b8daa9be68704f64db39e3fe779266c49729992272310f633a219e11335",
+    "date": "2026-11-27"
   },
   "/journal/": {
     "hash": "97e6a8a6ecd39674d4e6023c2b7e8a431ad7d8a17c4284c7aa3bc41f301734fa",
@@ -1258,5 +1258,13 @@
   "/journal/japan/page/4/": {
     "hash": "19bd67459c55437deee52d270353240fcc8032130546c313d6863f6a01a04852",
     "date": "2026-11-26"
+  },
+  "news:brussels-kanal-centre-pompidou-museum-2026": {
+    "hash": "3ec51f8fd9eb33a91efc2a96b86fd8d4a5935922066a21988c4e9e4ebd2a23aa",
+    "date": "2026-11-26"
+  },
+  "/news/brussels-kanal-centre-pompidou-museum-2026/": {
+    "hash": "a5cafc0d776f3e3a41da444ef99975dd1ae0736dfc9f35e45e630b9da2ce64cb",
+    "date": "2026-11-27"
   }
 }
