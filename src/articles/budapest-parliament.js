@@ -64,7 +64,7 @@ POST_DETAIL['budapest-parliament'] = {
     { t:'p', text:'進議事廳之前，導覽員會先帶大家到議員的休息廳。天花板垂著巨大的水晶吊燈，地上鋪著厚厚的羊毛地毯，中間是一張紅絲絨圓沙發。最有意思的是柱子上的雕像：導覽員說，雕的是牧羊人、漁夫、鐵匠這些不同職業的平民，不是王公貴族，像是在提醒走過這裡的議員，別忘了自己在為誰服務。' },
     { t:'img', size:'wide', src:'img/budapest-parliament/hall.jpg', cap:"連休息的地方都這麼華麗，紅絲絨圓沙發就放在正中間。" },
     { t:'p', text:'國會的兩側各有一座一模一樣的議事廳，二戰之後匈牙利改成一院制，現在的議員在下議院廳開會，舊的上議院廳則改成會議與典禮用，導覽團看到的就是這一間。木頭長椅圍成一個大半圓，金色的拱廊從四周把它包起來，連窗台都閃著金色的光。' },
-    { t:'img', size:'wide', src:'img/budapest-parliament/chamber.jpg', cap:"議事廳的木長椅圍成一個大半圓，金色的拱廊從四周包住它。" },
+    { t:'img', size:'wide', src:'img/budapest-parliament/chamber.jpg', cap:"座位繞成一個大半圓，誰在發言、誰在打瞌睡，一眼就看得到。" },
     { t:'pair', imgs:['img/budapest-parliament/curtain.jpg','img/budapest-parliament/window.jpg'], cap:"左：隔著厚重的簾子往議事廳裡看。右：窗邊那排金色的小架子是放雪茄用的，連這種地方都鑲著金邊。" },
     { t:'p', text:'它到現在還是一個上班的地方。據導覽員說，裡面除了辦公室和議事廳，還有郵局、圖書館，甚至有理髮廳和醫生。' },
     { t:'h', id:'petofi', text:'國會大廈代表的匈牙利精神' },
