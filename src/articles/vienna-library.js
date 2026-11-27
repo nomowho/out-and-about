@@ -24,7 +24,7 @@ POST_DETAIL['vienna-library'] = {
   updated:'2026-11-27',
   cover:'img/vienna-library/cover.jpg',
   cardH:'img/vienna-library/cardh.jpg',
-  cardPos:'50% 65%',   // /stories/ 直式卡片取景下移 15%（Nomo 11-27）
+  cardPos:'50% 80%',   // /stories/ 直式卡片取景：11-27 先下移 15%（65%），再下移 15%（80%）（Nomo）
   coverCap:"天頂的壁畫從拱門一路畫到最深處，抬頭就停不下來。",
   place:{
     alt:['Prunksaal','State Hall Austrian National Library','Österreichische Nationalbibliothek','奧地利國家圖書館','國事廳'],
