@@ -27,7 +27,7 @@ POST_DETAIL['budapest-parliament'] = {
   updated:'2026-11-27',
   cover:'img/budapest-parliament/cover.jpg',
   cardH:'img/budapest-parliament/cardh.jpg',
-  cardV:true,   // /stories/ 用直式縮圖 img/<id>.jpg（Nomo 指定直式縮圖；橫幅首圖預設會被拿去裁切，11-27 修正）
+  // 不加 cardV：/stories/ 列表卡片用橫式縮圖 DSC00654（Nomo 11-27 破例指定，直式縮圖 DSC00606 仍保留給其他版位）
   coverCap:"天色慢慢轉成粉紫色，河對岸的國會大廈安靜地等著入夜。",
   place:{
     alt:['Országház','Hungarian Parliament Building','Budapest Parliament','匈牙利國會大廈','布達佩斯國會大廈'],
