@@ -774,6 +774,112 @@
       "height": 406
     }
   ],
+  "img/budapest-parliament/arches.jpg": [
+    {
+      "file": "86bc257fa17299b5.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/cardh.jpg": [
+    {
+      "file": "507459521fd492fb.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/chamber.jpg": [
+    {
+      "file": "d1b2f140426356cc.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/column.jpg": [
+    {
+      "file": "8b7605dbd0eeaa18.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/cover.jpg": [
+    {
+      "file": "e9408d8580d6ed7c.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/curtain.jpg": [
+    {
+      "file": "05d38373050b051a.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "20d828bcd5fdb248.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/budapest-parliament/front.jpg": [
+    {
+      "file": "81ad498019b9c87f.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/hall.jpg": [
+    {
+      "file": "fe5ac62d5b76b31a.webp",
+      "width": 720,
+      "height": 422
+    }
+  ],
+  "img/budapest-parliament/night.jpg": [
+    {
+      "file": "135d42208ca098cb.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/spire.jpg": [
+    {
+      "file": "5beabd5137a0582a.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/stairs.jpg": [
+    {
+      "file": "d12209238df5a3f8.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "13c7290f1c6e27cd.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/budapest-parliament/whole.jpg": [
+    {
+      "file": "3e0eb012ce40675e.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/budapest-parliament/window.jpg": [
+    {
+      "file": "b305d72adc72b38e.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "2b2dd13ba3a96984.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
   "img/byrne-portugal.jpg": [
     {
       "file": "6cf5577252903db1.webp",
