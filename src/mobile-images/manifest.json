@@ -3575,6 +3575,18 @@
       "height": 1279
     }
   ],
+  "img/secession/arts.jpg": [
+    {
+      "file": "9671f0de38c53f82.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "dfe4f77f3d8f51a9.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
   "img/secession/cardh.jpg": [
     {
       "file": "8f58435224a16084.webp",
@@ -3627,21 +3639,30 @@
       "height": 1279
     }
   ],
-  "img/secession/gold.jpg": [
+  "img/secession/genii.jpg": [
     {
-      "file": "c9408428e17becaf.webp",
-      "width": 480,
-      "height": 853
-    },
-    {
-      "file": "687b2fbb025ba8da.webp",
+      "file": "928657e15e4e3a61.webp",
       "width": 720,
-      "height": 1279
+      "height": 405
     }
   ],
   "img/secession/gorgon.jpg": [
     {
       "file": "e97ada0b29d7a126.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/secession/leftwall.jpg": [
+    {
+      "file": "e5febb910264350b.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/secession/rightwall.jpg": [
+    {
+      "file": "143ce3eb0cdbc806.webp",
       "width": 720,
       "height": 405
     }

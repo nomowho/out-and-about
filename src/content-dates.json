@@ -252,11 +252,11 @@
     "date": "2026-11-28"
   },
   "/stories/secession/": {
-    "hash": "2834607b6d88972aeb57de729ee1ec41eb9e794c16ffa20d51b5a1163295258e",
+    "hash": "b6b923f1f00a97c138640054627ad459a2c8c683bb90896ba7481b365b25f849",
     "date": "2026-11-28"
   },
   "/stories/hundertwasser/": {
-    "hash": "8c5ad3bafca9f7ccca75b1162ebdb4fad245f0ed6ffe865fd7d30ca98b028b00",
+    "hash": "2092e94ee42e5cde3eb0005b864833d4679f197ed2ae739e3159f30c9af01b78",
     "date": "2026-11-28"
   },
   "/stories/belvedere/": {
@@ -960,12 +960,12 @@
     "date": "2026-11-28"
   },
   "article:secession": {
-    "hash": "8b2a010578b17594b2485095c3158006d641e91ef0c490fceca6ae80d260bfc7",
+    "hash": "11d2eede6339cac3258f54a17741f5c0d2f4df965f5c715c26f3c6dba5f00087",
     "date": "2026-11-28"
   },
   "article:hundertwasser": {
-    "hash": "4e6c2e2caa7ddb50d2e585985d364bd88989e08c5e2a3ebf81b5b385bf0527a5",
-    "date": "2026-11-25"
+    "hash": "c1ee24bbc1b97d2a017b412f24097b05d5ef4743514789944ec508ccfd984719",
+    "date": "2026-11-28"
   },
   "article:belvedere": {
     "hash": "0a6c4584779ca7e89acf73f7c7f83ea91b3ce2424a688cba473a797f2aecbe19",

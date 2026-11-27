@@ -4,25 +4,36 @@
 // ⚠️ IG 原文更正：「52 間公寓、19 座陽台」中陽台數查無出處不寫，戶數寫「五十多戶」；「1977 年市政府邀請」本次未查到，改為「市政府委託」；
 //   「娶了日本太太、取日本名丰和百水」「愛穿兩隻不同顏色的襪子」查無可靠出處，不寫；「Stowasser 改名 Hundertwasser」保留（sto 在斯拉夫語是一百）
 // 造訪時間：同一趟維也納行程 → 12 月
-// 照片：Nomo 2026-11-20 指示先不放；原始 IG 圖在 output/photos/_ig-import/DBkt30oBpCe/
+// 照片：Nomo 2026-11-28 補上（output/photos/_待補照片/06_奧地利/hundertwasser_百水公寓/）：首圖＝DSC00023（轉角全景）、橫式縮圖 cardH＝DSC09934（彩色窗戶特寫）、直式縮圖＝DSC09932（加 cardV:true）；
+//   內文用 00004/09934/00025/09844/09842/09940/09942；未用：00001、00007、00031、09901（構圖與已用相近）、09922（有人入鏡）、09936（有路人）、09982
+//   圖說依 11-26～28 歸納：不擬人化、不寫廢話、不抒情收尾；人物不寫；本次只補照片與圖說，沒有擴寫文字
 POST_DETAIL['hundertwasser'] = {
   seoTitle:'維也納百水公寓：沒有直線、沒有一扇窗一樣，還有人住的童話公宅',
   dek:'百水公寓（Hundertwasserhaus）在維也納第三區，是藝術家百水先生和建築師 Krawina 合作、1985 年完工的市政府公宅。整棟樓沒有一條直線，每扇窗都不一樣，屋頂和陽台種了約 250 棵樹和灌木。因為至今仍有住戶，只能在外面看；對街的百水村可以進去逛。',
-  updated:'2026-11-20',
+  updated:'2026-11-28',
+  cover:'img/hundertwasser/cover.jpg',
+  cardH:'img/hundertwasser/cardh.jpg',
+  cardV:true,   // /stories/ 用直式縮圖 img/hundertwasser.jpg（Nomo 指定直式縮圖 DSC09932）
+  coverCap:"轉角的百水公寓，屋頂和陽台都是樹。",
   place:{
     alt:['Hundertwasserhaus','Hundertwasser House','Hundertwasser Village','百水公寓','百水屋'],
     address:{ streetAddress:'Kegelgasse 34-38', addressLocality:'Wien', addressCountry:'AT' }
   },
   body:[
     { t:'p', text:'在一整排灰白色的維也納公寓之間，突然冒出一棟像三歲小孩用水彩畫出來的房子：一格藍、一格粉紅、一格黃，窗框歪歪的，屋頂上還長著樹。冬天樹葉掉光了，枝枒從陽台伸出來，房子看起來像是自己長出來的。' },
+    { t:'img', size:'wide', src:'img/hundertwasser/facade.jpg', cap:"一格一個顏色，連窗框都不肯對齊。" },
     { t:'h', id:'who', text:'百水先生' },
     { t:'p', text:'百水（Hundertwasser）先生本名 Friedrich Stowasser，是維也納出身的畫家。Stowasser 的「Sto」在斯拉夫語裡是「一百」，他乾脆把名字改成 Hundertwasser，意思就是「百水」，因為他相信水是一切生命的源頭。他的作品橫跨繪畫、版畫、海報和建築，一輩子都在講同一件事：人應該和自然和平共處。' },
     { t:'p', text:'他痛恨直線和對稱，認為直線是「不屬於上帝的線」。所以有人叫他「奧地利的高第」：兩個人都不喜歡死板的幾何，都想讓建築像生物一樣長出來。' },
+    { t:'img', size:'wide', src:'img/hundertwasser/window.jpg', cap:"陽台上的植物，是住戶還是裝飾？大概兩者都是。" },
     { t:'h', id:'how', text:'百水公寓的來歷' },
     { t:'p', text:'這棟房子是維也納市政府委託興建的公宅，也是百水先生第一次把畫裡的理念真正蓋成建築。他和建築師 Josef Krawina 合作，1983 年動工、1985 年完工，地點就在第三區 Kegelgasse 和 Löwengasse 的轉角，剛好也是他小時候住過的街區。' },
     { t:'p', text:'整棟樓有五十多戶，每一扇窗戶的大小、形狀和顏色都不一樣，地板和走廊故意做成起伏不平。屋頂和陽台上種了大約 250 棵樹和灌木，他把這叫做「樹的租戶」：人住在樓裡，樹也有權住在樓上。' },
+    { t:'img', size:'wide', src:'img/hundertwasser/corner.jpg', cap:"冬天的樹只剩枝枒，彩色的牆反而更顯眼。" },
     { t:'h', id:'visit', text:'百水公寓的參觀' },
     { t:'p', text:'百水公寓到現在都還有住戶，只能從外面看。好在對面有一座「百水村」（Hundertwasser Village），用一樣的彩色磁磚、歪斜的柱子和不規則的地面打造，可以走進去感受那種一腳高一腳低的空間，裡面也有賣紀念品的小店。' },
+    { t:'pair', imgs:['img/hundertwasser/mosaic.jpg','img/hundertwasser/tower.jpg'], cap:"左：拱廊下的彩色磁磚圓柱。右：洋蔥頂的塔樓。" },
+    { t:'pair', imgs:['img/hundertwasser/village1.jpg','img/hundertwasser/village2.jpg'], cap:"百水村的店面，聖誕星星已經掛上了。" },
     { t:'p', text:'→ 同一趟維也納：<a href="/stories/secession/">分離派會館</a>｜<a href="/stories/belvedere/">美景宮</a>' }
   ],
   info:[
