@@ -53,7 +53,7 @@ POST_DETAIL['vienna-library'] = {
     { t:'h', id:'books', text:'國事廳裡的藏書' },
     { t:'p', text:'大廳裡大約有 20 萬冊古書，年代從 1501 年到 1850 年，很多是皮革燙金的精裝本，整排看過去像一面會呼吸的牆。其中最珍貴的一批，是歐根親王（Prince Eugene of Savoy）的藏書，約 15,000 冊。歐根親王是那個時代最重要的藏書家之一，書多半來自法國和義大利，是透過藝術拍賣與他在歐洲各地的代理人買來的。他過世之後，皇室買下這批書，放進橢圓中央大廳。' },
     { t:'img', size:'wide', src:'img/vienna-library/shelf.jpg', cap:"每一座書架上方都掛著金色的標牌，連編號都做得這麼華麗。" },
-    { t:'img', size:'wide', src:'img/vienna-library/ladder.jpg', cap:"木梯靠在書牆上，要拿最上面那一排，得先爬上去。" },
+    { t:'img', size:'wide', src:'img/vienna-library/ladder.jpg', cap:"木梯靠在書牆上，光看就想爬上去翻一本。" },
     { t:'img', size:'side', src:'img/vienna-library/door.jpg', cap:"門、書牆和圓框裡的胸像，全都嵌在同一面牆上。" },
     { t:'h', id:'treasures', text:'奧地利國家圖書館的鎮館之寶' },
     { t:'p', text:'國事廳只是整座圖書館的一小部分。現在的館藏超過 1,200 萬件，除了奧地利的出版品，還有大量手抄本、樂譜、地圖和紙莎草。館裡有九項藏品列入聯合國教科文組織的「世界記憶名錄」，其中最有名的幾件是：' },
