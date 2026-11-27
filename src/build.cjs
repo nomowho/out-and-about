@@ -126,6 +126,8 @@ for (const t of ['home', 'post', 'news', 'category']) {
 }
 fs.copyFileSync(path.join(SRC, 'brand', 'nomo-logo.jpg'), path.join(ROOT, 'assets', 'nomo-logo.jpg'));
 fs.copyFileSync(path.join(SRC, 'brand', 'browser-logo.png'), path.join(ROOT, 'assets', 'browser-logo.png'));
+fs.copyFileSync(path.join(SRC, 'brand', 'favicon.ico'), path.join(ROOT, 'favicon.ico'));
+fs.copyFileSync(path.join(SRC, 'brand', 'favicon-192.png'), path.join(ROOT, 'assets', 'favicon-192.png'));
 fs.mkdirSync(path.join(ROOT, 'assets', 'fonts'), { recursive: true });
 for (const f of fs.readdirSync(path.join(SRC, 'fonts')).filter(f => /\.(woff2|txt)$/.test(f))) fs.copyFileSync(path.join(SRC, 'fonts', f), path.join(ROOT, 'assets', 'fonts', f));
 fs.writeFileSync(path.join(ROOT, 'assets', 'common.css'), compactCSS(read('fonts/latin.css') + '\n' + read('common.css')) + '\n');
@@ -177,6 +179,8 @@ function page({ file, title, desc, metaDescription = desc, canonical, type = 'we
 <meta name="theme-color" content="#ffffff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; frame-src https://www.instagram.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<link rel="icon" href="/favicon.ico" sizes="48x48 96x96">
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="/assets/browser-logo.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="/assets/browser-logo.png">
 ${extraHead}<link rel="preload" href="/assets/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
