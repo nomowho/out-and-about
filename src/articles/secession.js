@@ -24,7 +24,7 @@ POST_DETAIL['secession'] = {
   },
   body:[
     { t:'p', text:'在維也納（Vienna）市中心的一片灰色石頭建築裡，這棟白盒子特別好認：方方正正的白牆，頂上頂著一顆金光閃閃的鏤空圓球。走近一點，門楣上刻著一行金字，那是整個藝術運動的宣言。' },
-    { t:'img', size:'wide', src:'img/secession/exterior.jpg', cap:"白盒子頂著金球，難怪被叫金色高麗菜。" },
+    { t:'img', size:'wide', src:'img/secession/exterior.jpg', cap:"灰灰的冬天，只有那顆球是亮的。" },
     { t:'h', id:'rebels', text:'維也納分離派' },
     { t:'p', text:'十九世紀末，維也納的藝術界由保守的藝術學院把持。1897 年，以克林姆為首的一群年輕藝術家受夠了，集體退出官方的藝術家協會，自立門戶，取名「分離派」（Secession）。他們想要的是更自由、更新的藝術，不分繪畫、建築或工藝。' },
     { t:'p', text:'門楣上那行字就是他們的口號：「Der Zeit ihre Kunst, der Kunst ihre Freiheit」，意思是「給時代屬於它的藝術，給藝術屬於它的自由」。旁邊的 Ver Sacrum（聖春）是他們發行的刊物名稱，入口上方還有三個纏著蛇的女妖頭像，分別代表繪畫、建築和雕塑。' },
