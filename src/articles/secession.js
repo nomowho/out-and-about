@@ -16,7 +16,6 @@ POST_DETAIL['secession'] = {
   cover:'img/secession/cover.jpg',
   cardH:'img/secession/cardh.jpg',
   cardV:true,   // /stories/ 用直式縮圖 img/secession.jpg（Nomo 指定直式縮圖 DSC02909）
-  coverPos:'50% 100%',   // 首圖已裁掉壁畫底邊（照片高度 87.6%）以下的牆面，取景貼齊最下方，底邊不被切也不露牆（Nomo 11-28）
   coverCap:"走進地下室，整面牆都是克林姆。",
   place:{
     alt:['Secession','Wiener Secession','Secessionsgebäude','Beethoven Frieze','維也納分離派會館','分離宮'],
