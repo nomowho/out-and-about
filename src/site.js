@@ -604,6 +604,13 @@
      舊版搬移 DOM 會讓 Lighthouse 每 3 秒算一次新的 LCP 與版面位移（手機 LCP 17 秒、CLS 0.2），transform 則都不算 */
   var track = $('track');
   if (track) {
+    /* 每次進站隨機排序：洗牌後重編 data-i，並立刻載入新的第一張 */
+    (function () {
+      var kids = [].slice.call(track.children);
+      for (var a = kids.length - 1; a > 0; a--) { var b = Math.floor(Math.random() * (a + 1)); var t = kids[a]; kids[a] = kids[b]; kids[b] = t; }
+      kids.forEach(function (el, k) { el.setAttribute('data-i', k); track.appendChild(el); });
+      loadHeroNear(track, 0, kids.length);
+    })();
     track.classList.add('images-managed');
     var mobileHeroMode = matchMedia('(pointer:coarse)').matches || innerWidth <= 700;
     if (mobileHeroMode) { nativeHero(track); } else {
