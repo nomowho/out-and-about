@@ -64,7 +64,7 @@ POST_DETAIL['budapest-parliament'] = {
     { t:'img', size:'wide', src:'img/budapest-parliament/hall.jpg', cap:"連休息的地方都這麼華麗，紅絲絨圓沙發就放在正中間。" },
     { t:'p', text:'國會的兩側各有一座一模一樣的議事廳，二戰之後匈牙利改成一院制，現在的議員在下議院廳開會，舊的上議院廳則改成會議與典禮用，導覽團看到的就是這一間。木頭長椅圍成一個大半圓，金色的拱廊從四周把它包起來，連窗台都閃著金色的光。' },
     { t:'img', size:'wide', src:'img/budapest-parliament/chamber.jpg', cap:"議事廳的木長椅圍成一個大半圓，金色的拱廊從四周包住它。" },
-    { t:'pair', imgs:['img/budapest-parliament/curtain.jpg','img/budapest-parliament/window.jpg'], cap:"左：隔著厚重的簾子往議事廳裡看。右：連窗台和彩色玻璃都閃著金色。" },
+    { t:'pair', imgs:['img/budapest-parliament/curtain.jpg','img/budapest-parliament/window.jpg'], cap:"左：隔著厚重的簾子往議事廳裡看。右：窗邊那排金色的小架子是放雪茄用的，連這種地方都鑲著金邊。" },
     { t:'p', text:'它到現在還是一個上班的地方。據導覽員說，裡面除了辦公室和議事廳，還有郵局、圖書館，甚至有理髮廳和醫生。' },
     { t:'h', id:'petofi', text:'國會大廈代表的匈牙利精神' },
     { t:'p', text:'匈牙利人說起自由，很多人會想到詩人裴多菲（Petőfi Sándor），他是 1848 年革命的象徵人物。他寫的那首小詩，被翻成中文就是大家熟悉的「生命誠可貴，愛情價更高；若為自由故，兩者皆可拋」。站在這棟為了國家千年生日而蓋的國會前，會更懂得這句話在這片土地上的份量。' },
