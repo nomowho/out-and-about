@@ -586,13 +586,6 @@
       "height": 960
     }
   ],
-  "img/belvedere-klimt/cover.jpg": [
-    {
-      "file": "9e4f3e0408a530c0.webp",
-      "width": 720,
-      "height": 1278
-    }
-  ],
   "img/belvedere-klimt/crowd.jpg": [
     {
       "file": "f92d273d7c24c2bc.webp",
@@ -617,6 +610,13 @@
       "file": "31b87b7ead7b2ad6.webp",
       "width": 720,
       "height": 960
+    }
+  ],
+  "img/belvedere-klimt/kiss.jpg": [
+    {
+      "file": "0041332b2f9f0036.webp",
+      "width": 720,
+      "height": 1278
     }
   ],
   "img/belvedere-klimt/schiele.jpg": [

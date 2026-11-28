@@ -661,7 +661,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       <ul class="rings one"><li><a class="ring" href="/about/" aria-label="關於 Nomo 與 Out and About">
           <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" loading="lazy" decoding="async"></span>
         </a></li></ul>
-      <p class="bio">我是 Nomo（@nomowho），這裡是「我出去一下就回來」，也叫「我出去一下」。記錄我親自走過的建築、美術館、山海與餐廳。<br><span lang="en">Out and About · Travel &amp; Photography</span></p>
+      <p class="bio">我是 Nomo，歡迎來到「我出去一下就回來」一起體驗世界。<br>🪐在世界亂走，拍下眼前，無盡探索。<br><span lang="en">Out and About · Travel &amp; Photography</span></p>
     </div>
     <a class="ig" href="https://www.instagram.com/nomowho/" rel="me noopener">在 Instagram 追蹤 @nomowho</a>
   </aside>

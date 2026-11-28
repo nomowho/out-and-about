@@ -1,7 +1,7 @@
 // 美景宮的克林姆｜2026-11-28 由 belvedere.js 拆出（Nomo 指示美景宮分兩篇：宮殿歷史建築／克林姆畫作）；原始來源同 IG 貼文 DBVKLqXBZO8（2024-10-20，152 讚），
 //   圖卡文字「在維也納的夢幻城堡與克林姆索吻」「克林姆的藏畫閣」與畫作標籤已併入；開頭擠到《吻》前排那段沿用舊版（來自 IG 原文）
-// 照片：Nomo 2026-11-28 補上（output/photos/_待補照片/06_奧地利/belvedere_美景宮/）：封面＝DSC09713（人群後的《吻》，直式自動分欄）、直式縮圖同張（img/belvedere-klimt.jpg，cardV:true）、
-//   橫式縮圖 cardH＝DSC09709（內文也用）；內文 IMG_4054 judith／4043 fritza＋4038 adele2／4050 sunflower／4039 bride＋4070 white／4072 schiele
+// 照片：Nomo 2026-11-28 補上（output/photos/_待補照片/06_奧地利/belvedere_美景宮/）：封面＝DSC09709（人群後的《吻》，橫幅；Nomo 2026-11-28 指定，原本用直式 DSC09713）、直式縮圖＝DSC09713（img/belvedere-klimt.jpg，cardV:true，內文也用 kiss.jpg）、
+//   橫式縮圖 cardH＝DSC09709（同封面）；內文 IMG_4054 judith／4043 fritza＋4038 adele2／4050 sunflower／4039 bride＋4070 white／4072 schiele
 //   畫作照片（克林姆、席勒皆 1918 年過世，作品已屬公有領域）列入 journal-exclude.json（框裱畫作不進 Journal）
 // 造訪時間：EXIF 12 月 24 日，iPhone 拍畫作 12:49–13:30、Sony 拍《吻》約當地 13:57；info 只寫 12 月
 // 查證（2026-11-28）：美景宮線上典藏（《吻》1908 Kunstschau 以 Liebespaar 展出、左下角未完成、1908-07-10 決定以 25,000 克朗購入、1909 年 6 月底完成、7-22 送達；
@@ -16,9 +16,9 @@ POST_DETAIL['belvedere-klimt'] = {
   seoTitle:'美景宮的克林姆：《吻》《茱蒂絲》《向日葵》到未完成的《新娘》，全世界最多的 24 幅克林姆油畫',
   dek:'維也納上美景宮擁有全世界最多的克林姆油畫，一共 24 幅：《吻》、《茱蒂絲》、《向日葵》、《芙莉莎・里德勒》，還有克林姆過世時留在畫架上的《新娘》。《吻》在 1908 年就被奧地利政府買下，之後再也沒有離開過美景宮，想看真跡只能來維也納。',
   updated:'2026-11-28',
-  cover:'img/belvedere-klimt/cover.jpg',
+  cover:'img/belvedere-klimt/crowd.jpg',
   cardV:true,   // /stories/ 用直式縮圖 img/belvedere-klimt.jpg（DSC09713）
-  cardH:'img/belvedere-klimt/crowd.jpg',   // 橫式卡片格用人群照（DSC09709）
+  cardH:'img/belvedere-klimt/crowd.jpg',   // 橫式卡片格同封面（DSC09709）
   coverCap:'前面一排後腦勺，後面是《吻》。',
   place:{
     alt:['Upper Belvedere','Oberes Belvedere','Belvedere Museum','Österreichische Galerie Belvedere','美景宮'],
@@ -28,11 +28,11 @@ POST_DETAIL['belvedere-klimt'] = {
   },
   body:[
     { t:'p', text:'走進展廳，第一眼看到的不是畫，是人。一群人圍成半圓，手機舉得高高的，前面一面深色牆上，掛著一幅金光閃閃的正方形畫布。擠到最前面，才終於看清楚那對在花叢上擁吻的戀人：克林姆的《吻》。' },
-    { t:'img', size:'wide', src:'img/belvedere-klimt/crowd.jpg', cap:'手機比人頭還多，大家都在等前面的人讓一下。' },
     { t:'h', id:'collection', text:'全世界最多克林姆油畫的美術館' },
     { t:'p', text:'美景宮收藏了 24 幅克林姆（Gustav Klimt）的油畫，是全世界最多的地方。很多畫是克林姆還在世時就進來的：1903 年下美景宮開了「現代美術館」，國家開始收奧地利的當代藝術，《吻》就是這樣被買進來的。之後布洛赫－鮑爾、萊德勒這些維也納的收藏家族，也把手上的克林姆肖像長期寄放在這裡。' },
     { t:'p', text:'最近一次大筆入藏是在 2012 年：收藏家 Peter Parzer 過世後，把《向日葵》和《家族》兩幅留給了美景宮，美景宮形容這是奧地利第二共和以來，館藏最重要的一筆。' },
     { t:'h', id:'kiss', text:'《吻》：國家花 25,000 克朗買下的未完成作品' },
+    { t:'img', size:'side', src:'img/belvedere-klimt/kiss.jpg', cap:'金色的畫掛在深色牆上，底下是一圈圈舉著手機的人。' },
     { t:'p', text:'《吻》第一次公開，是在 1908 年的維也納藝術展（Kunstschau Wien），當時的標題叫《戀人》（Liebespaar），掛在展廳正對入口、最好的那個位置。其實那時候畫還沒畫完，左下角還有沒上色的地方。同年 7 月 10 日，文化部的委員會就決定用 25,000 克朗買下它；展覽結束後，克林姆把畫帶回畫室繼續畫，到 1909 年 6 月底才完成，7 月 22 日送進現代美術館。' },
     { t:'p', text:'畫布是 180 × 180 公分的正方形。克林姆用了真的金箔、銀箔和鉑箔，再加上黃銅箔：背景先鋪一層薄薄的金屬箔，刷上深褐色的油樹脂，趁還沒乾，把無數細小的金、鉑、黃銅碎片灑上去。所以近看的背景像一層閃著碎光的霧，金色有深有淺。' },
     { t:'p', text:'兩個人被一件金色長袍包在一起，只露出臉、手和腳。男人身上是黑白的長方形，女人的衣服是圓形和花朵，兩種圖案在擁抱裡撞在一起。他們跪在一片開滿花的草地上，草地的邊緣就是懸崖。克林姆 1903 年去過義大利的拉溫納，聖維塔教堂的拜占庭金色馬賽克，被認為是他大量用金箔的起點。' },
