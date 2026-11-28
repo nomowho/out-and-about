@@ -396,6 +396,111 @@
       "height": 1278
     }
   ],
+  "img/aufzug-cafe.jpg": [
+    {
+      "file": "8d6f8e2f390607b5.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "4a777398af14fd96.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aufzug-cafe/cake.jpg": [
+    {
+      "file": "0e7ed9df70e42918.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "bc0890c90a4bb7c9.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/aufzug-cafe/cover.jpg": [
+    {
+      "file": "9c10bc1830516366.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/aufzug-cafe/front.jpg": [
+    {
+      "file": "851dcd824ce47830.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "01ff0ce1e549ac17.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/aufzug-cafe/glass.jpg": [
+    {
+      "file": "5281bd962c14be32.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/aufzug-cafe/lift.jpg": [
+    {
+      "file": "74f11a39a2f832c0.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "e4a257452ebc5b48.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/aufzug-cafe/menu.jpg": [
+    {
+      "file": "7627b8729cebe43f.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "1e67c1c6db51d87f.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/aufzug-cafe/official.jpg": [
+    {
+      "file": "23fbaf6e953ac67d.webp",
+      "width": 720,
+      "height": 486
+    }
+  ],
+  "img/aufzug-cafe/street.jpg": [
+    {
+      "file": "d54af289f063e7f5.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "9b0f1c404379fb1e.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/aufzug-cafe/table.jpg": [
+    {
+      "file": "efac3f7c71f3dcb0.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "cca18409665646d9.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
   "img/aventine.jpg": [
     {
       "file": "ea4c38151d17a05c.webp",
@@ -1849,6 +1954,101 @@
       "file": "ef3d9e14f1c932c8.webp",
       "width": 720,
       "height": 1278
+    }
+  ],
+  "img/hundertwasser.jpg": [
+    {
+      "file": "567a9da4ded1d2fc.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "0980e334785bed8f.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/hundertwasser/cardh.jpg": [
+    {
+      "file": "69237d9106bec73c.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/hundertwasser/corner.jpg": [
+    {
+      "file": "5de937de71fd96d5.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/hundertwasser/cover.jpg": [
+    {
+      "file": "6a9d91bffeb3b28d.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/hundertwasser/facade.jpg": [
+    {
+      "file": "aebf1b2baa7c08fc.webp",
+      "width": 720,
+      "height": 405
+    }
+  ],
+  "img/hundertwasser/mosaic.jpg": [
+    {
+      "file": "3660793046def61d.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "ba3219d7ff6d7f7d.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/hundertwasser/tower.jpg": [
+    {
+      "file": "eb6545621b5bded6.webp",
+      "width": 480,
+      "height": 852
+    },
+    {
+      "file": "1f5e83ed7f724aa8.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/hundertwasser/village1.jpg": [
+    {
+      "file": "f986d00d0f25e279.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "1dc9cbae0cad04ad.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/hundertwasser/village2.jpg": [
+    {
+      "file": "e3821a642e1dafac.webp",
+      "width": 480,
+      "height": 853
+    },
+    {
+      "file": "5947705854772f5a.webp",
+      "width": 720,
+      "height": 1279
+    }
+  ],
+  "img/hundertwasser/window.jpg": [
+    {
+      "file": "00ebd6bcd94eabd6.webp",
+      "width": 720,
+      "height": 405
     }
   ],
   "img/izu.jpg": [
