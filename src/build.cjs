@@ -211,7 +211,6 @@ ${ld.map(x => `<script type="application/ld+json">${JSON.stringify(structuredDat
     <p class="drawer-h">SERIES</p>
     <ul class="sm">${SERIES.map(s => `<li><a href="${url.series(s.id)}">${s.t}</a></li>`).join('')}</ul>
     <p class="drawer-h"><a href="/stories/">ALL STORIES</a></p>
-    <p class="drawer-h"><a href="/journal/">PHOTO JOURNAL</a></p>
     <p class="drawer-h"><a href="/destinations/">DESTINATIONS</a></p>
     <ul class="sm two">${regions.map(r => `<li><a href="${url.dest(r)}">${REGION_ZH[r]}</a></li>`).join('')}</ul>
     <p class="drawer-foot"><a href="/about/">關於 Out and About</a><a href="https://www.instagram.com/nomowho/" rel="me noopener">Instagram @nomowho</a></p>
@@ -658,8 +657,8 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
   </div>
   <aside class="side">
     <div class="dbl stories journal-entry" id="journal">
-      <h3>Photo Journal</h3>
-      <ul class="rings one"><li><a class="ring" href="/journal/" aria-label="打開 Photo Journal 攝影日誌，看全部旅行照片">
+      <h3>About</h3>
+      <ul class="rings one"><li><a class="ring" href="/about/" aria-label="關於 Nomo 與 Out and About">
           <span class="av"><img src="/img/story-avatar.jpg" alt="Nomo" width="400" height="400" loading="lazy" decoding="async"></span>
         </a></li></ul>
       <p class="bio">我是 Nomo（@nomowho），這裡是「我出去一下就回來」，也叫「我出去一下」。記錄我親自走過的建築、美術館、山海與餐廳。<br><span lang="en">Out and About · Travel &amp; Photography</span></p>
@@ -858,60 +857,21 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
     }
   }
 
-  /* ── Photo Journal /journal/：全站照片瀑布流，點照片進文章 ── */
+  /* ── Photo Journal 已取消（Nomo 2026-11-28）：/journal/ 轉到 /stories/，/journal/<國家>/ 轉到該國國家頁（含舊分頁），不進 sitemap。
+     精選設定 src/journal-exclude.json、journal-layout.json 保留不刪，日後要恢復可從 git 歷史找回原本的產生程式（commit a7d47bb68 以前） ── */
   {
-    const J_MAX = 6;   // 每篇最多取幾張，避免單篇洗版
-    // 精選規則（Nomo 11-18）：只放有主題、美、構圖好的照片；資訊型（告示、菜單、地圖、便當特寫）與插畫一律不放 → 名單在 src/journal-exclude.json
-    const J_LAYOUT = fs.existsSync(path.join(__dirname, 'journal-layout.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'journal-layout.json'), 'utf8')) : {};
-    const J_FEAT = new Set(J_LAYOUT.feature || []), J_NOFEAT = new Set(J_LAYOUT.nofeature || []);
-    const J_SKIP = new Set(fs.existsSync(path.join(__dirname, 'journal-exclude.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'journal-exclude.json'), 'utf8')) : []);
-    if (process.env.JOURNAL_DUMP) { const all = []; postsNew.filter(p => p.photo !== false && POST_DETAIL[p.id]).forEach(p => { const d = POST_DETAIL[p.id]; if (d.cover) all.push([p.id, d.cover, d.coverCap || '']); d.body.forEach(bk => { if (bk.src) all.push([p.id, bk.src, bk.cap || '']); else if (bk.imgs) bk.imgs.flat().forEach(x => all.push([p.id, x, ''])); }); }); fs.writeFileSync(process.env.JOURNAL_DUMP, JSON.stringify(all.filter(([, src]) => fs.existsSync(path.join(ROOT, src))))); }
-    const items = [];
-    postsNew.filter(p => p.photo !== false && POST_DETAIL[p.id]).forEach(p => {
-      const d = POST_DETAIL[p.id], list = [];
-      if (d.cover) list.push([d.cover, d.coverCap || '']);
-      d.body.forEach(bk => { if (bk.src) list.push([bk.src, bk.cap || '']); else if (bk.imgs) bk.imgs.flat().forEach(x => list.push([x, ''])); });
-      const ok = list.filter(([src, cap]) => fs.existsSync(path.join(ROOT, src)) && !J_SKIP.has(src) && !/^插畫/.test(cap));
-      const must = ok.filter(([src]) => J_FEAT.has(src)), rest = ok.filter(([src]) => !J_FEAT.has(src)).slice(0, Math.max(0, J_MAX - must.length));   // 指定滿版的一定收，其餘補到 J_MAX
-      ok.filter(x => must.includes(x) || rest.includes(x)).forEach(([src, cap]) => items.push({ p, src, cap }));
-    });
-    { // 小圖隨機排列（固定種子）、滿版照 feature 順序平均穿插（Nomo 11-18：照片牆不必照地點，滿版固定那 11 張）
-      let h = 2166136261; for (const ch of String(J_LAYOUT.seed || 'nomowho')) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); }
-      const rnd = () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 1e6) / 1e6; };
-      const feats = [...J_FEAT].map(src => items.find(it => it.src === src)).filter(Boolean);
-      const others = items.filter(it => !J_FEAT.has(it.src));
-      for (let i = others.length - 1; i > 0; i--) { const k = Math.floor(rnd() * (i + 1)); [others[i], others[k]] = [others[k], others[i]]; }
-      const per = Math.ceil(others.length / Math.max(1, feats.length)); items.length = 0;
-      feats.forEach((ft, i) => { items.push(ft, ...others.slice(i * per, (i + 1) * per)); });
-      if (!feats.length) items.push(...others);
-    }
-    const jRegions = regions.filter(r => items.some(it => it.p.region === r));
-    const PAGE_SIZE = 30;
-    const groups = [{ region: null, selected: items }, ...jRegions.map(region => ({ region, selected: items.filter(it => it.p.region === region) }))];
-    for (const { region, selected } of groups) {
-      const base = region ? '/journal/' + region.toLowerCase() + '/' : '/journal/';
-      const totalPages = Math.ceil(selected.length / PAGE_SIZE);
-      for (let number = 1; number <= totalPages; number++) {
-        const batch = selected.slice((number - 1) * PAGE_SIZE, number * PAGE_SIZE);
-        const u = pagedUrl(base, number), heading = region ? REGION_ZH[region] + '｜在世界亂走，拍下眼前' : '在世界亂走，拍下眼前';
-        const main = `
-        <section class="top jtop"><div class="box">
-          <nav class="crumb" aria-label="位置"><a href="/">TOP</a>›<a href="/journal/">PHOTO JOURNAL</a>${region ? '›<span>' + REGION_ZH[region] + '</span>' : ''}</nav>
-          <div class="label">PHOTO JOURNAL</div><h1>${heading}</h1>
-          <p>共 ${selected.length} 張照片・第 ${number} / ${totalPages} 頁</p>
-        </div></section>
-        <section class="list box">
-          <nav class="areas jfilter" id="journal-filters" aria-label="依國家篩選"><a href="/journal/"${!region ? ' class="on" aria-current="page"' : ''}>全部<small>${items.length}</small></a>${jRegions.map(r => `<a href="/journal/${r.toLowerCase()}/"${region === r ? ' class="on" aria-current="page"' : ''}>${REGION_ZH[r]}<small>${items.filter(it => it.p.region === r).length}</small></a>`).join('')}</nav>
-          <div class="journal" id="masonry"><div class="jraw">${batch.map((it, i) => `
-            <a class="jp" href="${url.post(it.p.id)}" data-area="${it.p.region.toLowerCase()}"${J_FEAT.has(it.src) ? ' data-land="1" data-feat="1"' : ''}><figure>${img(it.src, strip(it.cap) || it.p.zh, { sizes: J_FEAT.has(it.src) ? '(max-width:1060px) 100vw, 1000px' : '(max-width:700px) 50vw, (max-width:1100px) 33vw, 300px', small: !J_FEAT.has(it.src), lazy: i !== 0 })}</figure><span class="jc"><b>${it.p.zh}</b>${it.p.area}</span></a>`).join('')}
-          </div></div>
-          ${pagination(base, number, totalPages)}
-        </section>`;
-        const desc = `Nomo 的${region ? REGION_ZH[region] : ''}旅行攝影日誌：共 ${selected.length} 張原創照片，第 ${number} 頁，每張都連到背後的旅行故事。`;
-        page({ file: u.slice(1) + 'index.html', title: `${region ? REGION_ZH[region] + '｜' : ''}Photo Journal 攝影日誌${number > 1 ? '｜第 ' + number + ' 頁' : ''}｜Out and About`, desc, canonical: u, image: abs('/' + batch[0].src), style: 'category', nav: '', main,
-          ld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: heading, description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') }, author: PERSON }] });
-        sitemap.push({ loc: u, lastmod: BUILD_DATE, images: batch.slice(0, 20).map(it => abs('/' + it.src)) });
-      }
+    const jRoot = path.join(ROOT, 'journal');
+    const targets = new Map([['journal', '/stories/']]);
+    for (const r of regions) targets.set('journal/' + r.toLowerCase(), url.dest(r));
+    const walk = dir => fs.existsSync(dir) ? fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? [path.join(dir, e.name), ...walk(path.join(dir, e.name))] : []) : [];
+    const dirs = new Set([jRoot, ...walk(jRoot), ...[...targets.keys()].map(k => path.join(ROOT, k))]);
+    for (const dir of dirs) {
+      const rel = path.relative(ROOT, dir).split(path.sep).join('/');
+      if (/\/page$/.test(rel)) continue;                                  // journal/page、journal/<國>/page 只是分頁的上層資料夾
+      const key = rel.replace(/\/page\/\d+$/, '');
+      const dest = targets.get(key) || '/stories/';
+      fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(path.join(dir, 'index.html'), `<!DOCTYPE html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><title>Photo Journal 已結束｜Out and About</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="${abs(dest)}"><meta http-equiv="refresh" content="0; url=${dest}"></head><body><p>Photo Journal 已結束，照片都收在各篇文章裡，請前往 <a href="${dest}">${dest === '/stories/' ? '全部文章' : '國家頁'}</a>。</p></body></html>`);
     }
   }
   const h404 = page({ file: '404.html', title: '找不到這一頁｜Out and About', desc: '這個網址沒有內容。', canonical: '/404.html', image: ogImg(TOP7[0]), style: 'category', nav: '',
