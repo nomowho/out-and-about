@@ -1,6 +1,6 @@
 {
   "/": {
-    "hash": "ee3093b18c4c1579128897e6f979704c1d3d27a05ca65e95ca3b24b8721dfef4",
+    "hash": "2efb1b4a61840d62f26c6b1dc7808b5590013f591d313f3d065bc732db9443f1",
     "date": "2026-11-28"
   },
   "/stories/dolomiti-winter/": {
@@ -208,7 +208,7 @@
     "date": "2026-11-28"
   },
   "/stories/salzburg/": {
-    "hash": "4264d9707b6a7259564b871d70b4eaa4eb564c4bd7a9819fd4c2ef7232b7e395",
+    "hash": "a99c1034226515710e010e39e24ecda3ac482ba9c50f8cddf07ad84d5fcc30ae",
     "date": "2026-11-28"
   },
   "/stories/hallstatt-beinhaus/": {
@@ -220,11 +220,11 @@
     "date": "2026-11-24"
   },
   "/stories/hallstatt/": {
-    "hash": "c78f73468843cde5d21577ef6006c8ab6b1eff283fbf54a58790144a8bdfdf37",
+    "hash": "7ae02ba200ce200a102daee73298b06deab5867bd258835086fd0cda2943aed3",
     "date": "2026-11-28"
   },
   "/stories/vienna-christmas/": {
-    "hash": "df873bac9e5e8f05ee56429c0b9b16659a9403f7d3a6c89eebe9d2d6ada30e9e",
+    "hash": "5d4b7008080e9cef8a0d5f61363b808b12617872cac7735774d61aa7b1fc7ecc",
     "date": "2026-11-28"
   },
   "/stories/koenigssee/": {
@@ -248,23 +248,23 @@
     "date": "2026-11-28"
   },
   "/stories/vienna-library/": {
-    "hash": "98bb46c3a84a0da3b83017099b1f66a61e891b0b4e0f78e5e209f109c6183eb0",
+    "hash": "79e5fee09df91ec88d78d2ebc279f44623180f577c757c702d78b648f21e3e61",
     "date": "2026-11-28"
   },
   "/stories/secession/": {
-    "hash": "e3de030f110a02ca52bacf9db8f5c144ab55e94caf89a8f664225d6eea5f3b3f",
+    "hash": "07e2aa93f2e4b373bcaac7343a8426a281d8395f5389b69af747b763cc36cb43",
     "date": "2026-11-28"
   },
   "/stories/hundertwasser/": {
-    "hash": "ee2a8aa40da373b5d5ab14eda0caddfe0772d2e61d937c8044d3ae8d329e5838",
+    "hash": "fa91ee94b9952b7299824bc3695e1e02c0c28fb58a25da15ac5cca41f2217c33",
     "date": "2026-11-28"
   },
   "/stories/belvedere/": {
-    "hash": "bc79907d79a0f951eafef2e53f427d11a7ea36c1d25bc9ff87a3625773542e8e",
+    "hash": "e0935b9456268f3cf849d58105b683030c18f0bc58189e639b29799a58c20453",
     "date": "2026-11-28"
   },
   "/stories/aufzug-cafe/": {
-    "hash": "81f3af6ebfa1c8817db5e7e3b0d92a24e98401af338f435834ae9086563a1ef6",
+    "hash": "6c6eb1c22641006eb3c5ef9756a5da42fa79542d9e7426b38d8f065f6b122b13",
     "date": "2026-11-28"
   },
   "/stories/ueda-shoji-museum/": {
@@ -436,8 +436,8 @@
     "date": "2026-11-24"
   },
   "/news/ilulissat-greenland-new-airport-2026/": {
-    "hash": "b48e3a7833eb14681def1087f8f300ec25e65aef7924224ba2dec10bc653ac71",
-    "date": "2026-11-24"
+    "hash": "0e228dc36c12b2a1a2e21dd97ba7cab88128c71340f542d686eec5b83fb01b79",
+    "date": "2026-11-28"
   },
   "/news/kanagawa-silent-river-tree-sauna-2026/": {
     "hash": "117b37c6f8a1e1bc1203f25f1ef78c3a5b98aa4d73a9966163f4cdb0f839c78e",
@@ -476,123 +476,123 @@
     "date": "2026-11-28"
   },
   "/category/architecture/": {
-    "hash": "3c23884c0cff36667fbdafeda0ecd673fe9f5d0a4183f2010543c9134c0fcc1f",
+    "hash": "ef31ab1e15e3485c5f0c3ec8c321e97bf75842a2e0398acb63bcffb53091ee82",
     "date": "2026-11-28"
   },
   "/category/art/": {
-    "hash": "0b6a149abbd59a720dfc57ca8e8de91d81f757de2334fc41471c7ede57009e35",
+    "hash": "144851ce7052a80d5252501166be2443c2367515301f9b4cbd288f747aebeb9c",
     "date": "2026-11-28"
   },
   "/category/history/": {
-    "hash": "843fe47e60a0def010ebd42bac6538d367f1641ba90e53e2d9d08a2dee190ae8",
+    "hash": "aae127c584bac39656ca318c71139961d00a629911524a92b7b89ed15026c1be",
     "date": "2026-11-28"
   },
   "/category/nature/": {
-    "hash": "92be0800fbaf823831a2c1c19d90549045820ad517c481036dc43d9e9238a996",
-    "date": "2026-11-26"
+    "hash": "8e0b1d71822d11819dee72339f435c2b348dbefaa6c13a2a9edd411627cf7425",
+    "date": "2026-11-28"
   },
   "/category/food/": {
-    "hash": "17e23f4731d97c028188e7395e6c6258aa91d0743eda50be404e4f8f504b88b7",
+    "hash": "a0a0c9c30bcf2cb6e17c8f9a59cba810cb70cf666ee33d318a3b24e98f7569c0",
     "date": "2026-11-28"
   },
   "/category/guide/": {
-    "hash": "14cc32200d2274bb589e5c0d42b5090f5ab2a95f7fab8e10290b4adae7b4303b",
-    "date": "2026-11-27"
+    "hash": "c4acec3605a9aa63ee8f4b8cefce4d6bdcbaa8d189e664c107031de9287e24a8",
+    "date": "2026-11-28"
   },
   "/series/japan/": {
-    "hash": "00cbb3d862d44cbe9c7cd4403df8e6ec18836d38fe111e9604164b95c67b22fa",
-    "date": "2026-11-26"
+    "hash": "79154058cd523d644428aa713817be5189daebcd4b772d3136cebc1d0f44b2ed",
+    "date": "2026-11-28"
   },
   "/series/italy-drive/": {
-    "hash": "a43caae4a3670d5739b8994fa78557a937a85a41779d85dea59fbad1b275b15a",
-    "date": "2026-11-25"
+    "hash": "fd4a8cc9b68ddb9d17dee5090e1ea7f4fc5a33bab442948a593720498983fcfe",
+    "date": "2026-11-28"
   },
   "/series/portugal/": {
-    "hash": "4c1a14df8370e20967ab38313a9695fe8c80071b350519cac7be6160c8a466d5",
-    "date": "2026-11-25"
+    "hash": "690efe2ef5acf4fb5ef497cb3639b8d76e20f7a1f20dc8f2212023e1e0f62c45",
+    "date": "2026-11-28"
   },
   "/series/norway/": {
-    "hash": "c7a3a65c9d2f9caa9f78d9add4562dd2c5806d02bdb3f7a418030a50df8c9b4b",
-    "date": "2026-11-25"
+    "hash": "0d4ff65518c09e4dd7e0e97c81669f03e451babfc60d5110da1bd800cf23ff61",
+    "date": "2026-11-28"
   },
   "/series/architecture-walk/": {
-    "hash": "209415835abaa1d4270a95aae85a3b96efea437c349fc1fc48ed12866d80a081",
+    "hash": "5ebf7fd004c7f7437b659fa7b1e0a4e693752a480d916dbbf039fd8b42784d7e",
     "date": "2026-11-28"
   },
   "/series/art-wander/": {
-    "hash": "5f9c7a6be30b44c6a1ee01801e0bee87558b5c8840d320aeef46b3638f18d0dd",
+    "hash": "a3d23b95aefe5d8db6c835839d86290f0623e33d551274ce841e274599951cdc",
     "date": "2026-11-28"
   },
   "/series/tohoku-winter/": {
-    "hash": "8a9e790a1605644403ea56ab98f7ebd16c3968e8a0e6212c693c40137c0f99bd",
-    "date": "2026-11-25"
+    "hash": "82b7f2aa54649fbd5b7eae8e21696cbdf9c8a9dfe65a6290ab993dddb156656f",
+    "date": "2026-11-28"
   },
   "/series/nagoya/": {
-    "hash": "b617170c33b5700abd9831f1057223cf0b40f3ef85973b8dfff60ce4e86529ff",
-    "date": "2026-11-25"
+    "hash": "8b5706c54d555446f4018369cd258b84dea6df0afa16c07f3a176af7a66cb254",
+    "date": "2026-11-28"
   },
   "/destinations/japan/": {
-    "hash": "6c52463ecde531d68070c9405bae15feb03b0b59e2d293ecfd2091a208032e0e",
-    "date": "2026-11-26"
+    "hash": "afbc75fc7a4fa3a0062c70af8588c0355984e7bcdf52fc1c2946be7ef7b4ab26",
+    "date": "2026-11-28"
   },
   "/destinations/taiwan/": {
-    "hash": "b45b990779291d47a30e676adca15fcf88829afb2399dd99d3c52270c01c0d33",
-    "date": "2026-11-24"
+    "hash": "d7778cb46582f4514591a4b08ee4f6ed07d43b8e6aed3768d8a36772cd6fc4c9",
+    "date": "2026-11-28"
   },
   "/destinations/italy/": {
-    "hash": "0b16fa97cbe47c1155ace1f61085ebfe9c0d0f88055fd44002c8422f14750e49",
-    "date": "2026-11-25"
+    "hash": "9d3da2cfbef78d9895a844d8fa7956ac20eabf658c335170f82827eb0dad28c0",
+    "date": "2026-11-28"
   },
   "/destinations/spain/": {
-    "hash": "de5727c6b5d02202073c35f7972c2f1f6bd66270be0c93f564340243323b52d5",
-    "date": "2026-11-24"
+    "hash": "0cf6cc309020ec2fe2ff5dc911ccbbf273258a2bd22c4a922ac11a806eb22b4a",
+    "date": "2026-11-28"
   },
   "/destinations/france/": {
-    "hash": "16c85a2b33f740a3c52cc112001565627fde60d982ffb6fe1bca0feb4831d378",
-    "date": "2026-11-24"
+    "hash": "0f707ac34d5a0f0607857d1a27bb3737ebf0d645b49bbedc40e411ca4915468b",
+    "date": "2026-11-28"
   },
   "/destinations/portugal/": {
-    "hash": "d032a9e0cdddbbf715f7949347fc122267affa556725f49135fa60600d142474",
-    "date": "2026-11-24"
+    "hash": "360e1793c2ff085178686fca80b92446c6ad04acc89944b52c6669869b8ec659",
+    "date": "2026-11-28"
   },
   "/destinations/austria/": {
-    "hash": "f35015e6511fa17fed282efe8f93e2de053db03927408b678ec73d011e59f9af",
+    "hash": "2383df1c0a942d6c68e66afdd800c7204dff04556ef747245483f1487d5cde35",
     "date": "2026-11-28"
   },
   "/destinations/germany/": {
-    "hash": "179ff87ba359118dd3a959f3a7852eba9825add6f5f9756ef741dad7ff5e6188",
-    "date": "2026-11-25"
+    "hash": "cd8cb773c8fedf70c7c96fd67d2b927be587ef2e407471d4b35fcc59b8b7a38f",
+    "date": "2026-11-28"
   },
   "/destinations/hungary/": {
-    "hash": "55c6e55972e3700468aa481231980c5cd7033d709bbf746c723e8a80d1fe7f44",
-    "date": "2026-11-27"
+    "hash": "e9d6ea6ecb55db00909c12e7dd8333eeaf4ba7839cd2c1f5e2013e5ebac1d691",
+    "date": "2026-11-28"
   },
   "/destinations/norway/": {
-    "hash": "1c3d48198916eb34a3b1a6aee3dccadced8b17eede805d4cb9507e8cf1b2dc49",
-    "date": "2026-11-25"
+    "hash": "f6fa652ff7a6082e0758508944f88e33dd058a369145b347ea175644273b5b07",
+    "date": "2026-11-28"
   },
   "/destinations/sweden/": {
-    "hash": "02c5121ed9afa00081f626dfad9b6051fc5ec47d0d78f88de2860b616acb26d5",
-    "date": "2026-11-24"
+    "hash": "975d76b7209438fd30a31a138b72f996a34e372e4d08cd1d8970c267954dfbf3",
+    "date": "2026-11-28"
   },
   "/destinations/denmark/": {
-    "hash": "823af599e6015a8fd39eb64f512d8b33b16d628fb34cd0d065135f96afe36f7e",
-    "date": "2026-11-24"
+    "hash": "5156940cecdfa1b837caf991f15b718344490127d3284452776657d91f834ab9",
+    "date": "2026-11-28"
   },
   "/destinations/faroe/": {
-    "hash": "830331a0e887e38f311d5d12647b25a10825058cca97ecc094f0084ad0656a24",
-    "date": "2026-11-24"
+    "hash": "9ccbc5d2bc1be11f2ded2a7f86ede2551edfe5918f6e6be24c2942a64a9db54f",
+    "date": "2026-11-28"
   },
   "/destinations/russia/": {
-    "hash": "327e3f5cc3d45eba6b7624512a98eff5d94ad44097801f92a4d0c058ea5d223a",
-    "date": "2026-11-24"
+    "hash": "46bb0f43ef5a3ba75c22cc1462e98fa47e8393b9518c22ef9868778725f4eccc",
+    "date": "2026-11-28"
   },
   "/destinations/vatican/": {
-    "hash": "cc6b636b55fcf56cc93d6d7005493f4853970a457897c274a2f579ed4feb7819",
-    "date": "2026-11-24"
+    "hash": "c821f5b50a646b9059012b60679762bc0ae527c05b349993c820718564dda433",
+    "date": "2026-11-28"
   },
   "/destinations/": {
-    "hash": "78b5cc378c8d068876f0165352d4f439cf5b1b105adfeb6c3b3bb6c8a34744e7",
+    "hash": "b87e7eaff1d226c8da1bb04a6d46076b1980421ced4b0d6ead98c15cf71d7e60",
     "date": "2026-11-28"
   },
   "/about/": {
@@ -600,7 +600,7 @@
     "date": "2026-11-23"
   },
   "/stories/": {
-    "hash": "ea7aeaac28e5b712c246bcc0f23dea67fd8acec315d09c718bfa5726fe8a271e",
+    "hash": "ed317e4e1cb3a418aa522aa13861a6eb24ece70daa1329c5ec65ea8b2550c660",
     "date": "2026-11-28"
   },
   "/news/": {
@@ -612,103 +612,103 @@
     "date": "2026-11-28"
   },
   "/journal/": {
-    "hash": "f48aa09d89cb3175bc8622363a97a2674adcb68ca7fb06498939eb0ed3bb9334",
+    "hash": "22b8b85db0a17762ab96ca791edd5a0cca1d93afdd1d260b0870a536f5ca0cc8",
     "date": "2026-11-28"
   },
   "/journal/page/2/": {
-    "hash": "64d905af617bf98a816e2aa8e8769218876883776550326a1394297ce2b469a9",
+    "hash": "54a9c4980d697bf8d38d94e359c6771edecffbfd2f0e0b712e1d96b63ea8f10d",
     "date": "2026-11-28"
   },
   "/journal/page/3/": {
-    "hash": "b81c41b2c98ac7d096dbd2192d4e5bce39443be7c1bcb59bb9070e4fdc69b65c",
+    "hash": "eae9b90a98b00ad71882ddcf5845c46d560bd8c7a489e1af8e00d8bdd35e6889",
     "date": "2026-11-28"
   },
   "/journal/page/4/": {
-    "hash": "77ab6823a6cb7ddd30de1fa4f8926da4f91fd9b61a200d77ac86b4bb20f1e2ae",
+    "hash": "22f92a0f4174155a88a2297bf0b376da7359096dd3f69f1e9495dd3e32749a1c",
     "date": "2026-11-28"
   },
   "/journal/page/5/": {
-    "hash": "9190680ab5490ea76977b7b07305a795eb934b084e97a9d369034be0547bcbdb",
+    "hash": "459ea348444292a395b0e34a2e69a0de3d5740d04dcdff91e52d5d8b1b9b556b",
     "date": "2026-11-28"
   },
   "/journal/page/6/": {
-    "hash": "b0275319aaf1eb169d37523e264e96662a1a611f8a7faa05cc319c3680a32e3e",
+    "hash": "5089985c4f38e615293461289a4e8007bd2d9e67b6fbb2115c1d3fdb9af89f0d",
     "date": "2026-11-28"
   },
   "/journal/page/7/": {
-    "hash": "aa5111d3d2e5290de599016c717ba17439aaa752193219799d3372908ad01ae3",
+    "hash": "2c8e84b76e1f4e9627beb23972391ced45b2a3a42cc8212c15422e0364e57872",
     "date": "2026-11-28"
   },
   "/journal/page/8/": {
-    "hash": "f6ff5c4d8299642821627273cd7422302d2fadd51572596189f139407472a572",
+    "hash": "fd93ed82ea589c1f2fcb4d1bcdaca31258eb8fbf7e2b5dc136733e41ce562d84",
     "date": "2026-11-28"
   },
   "/journal/page/9/": {
-    "hash": "a51b13034bc8beb1192ac1da97426e6e5e9f9ad1af39ae0bffcd12675b5a1814",
+    "hash": "7ef00f2c294f3ca945ecf12b6e294bf2e13b8d266e352d2593344c7227bca9d3",
     "date": "2026-11-28"
   },
   "/journal/page/10/": {
-    "hash": "f8e061c8046065849c2fc1770a27b4a673a5a240f2c50e2aa5d924400e608fbc",
+    "hash": "5e335fb10c3cefb53137fadf76d8c9b6885fac6191f51e130d4631a5abdd817b",
     "date": "2026-11-28"
   },
   "/journal/japan/": {
-    "hash": "9c90d6d542c580fcd32d251eb2bccf613480dd7868a7c8b4f0b3fdf31755f1eb",
+    "hash": "569d92e0d1b3c5c6cad4888a9abb29877e2db51782e22be721121df28050e56b",
     "date": "2026-11-28"
   },
   "/journal/japan/page/2/": {
-    "hash": "79eb11fffcdb8b48cb2afde653b4a7ac5dd15bed20d823daa2a04329114ffad6",
+    "hash": "bb233628bd55f53aa1a8084ac0ba39dc7c2c4ccbbcca41f9bdff73d88ceda3c9",
     "date": "2026-11-28"
   },
   "/journal/japan/page/3/": {
-    "hash": "5ba160d62e010a88b0d75edd01dcb8e1b7b0988f1e59f296210bf4bdb541bcea",
+    "hash": "d15aaa969416d4c351f0733b6ebacad688463c33b4e2a7e9d62f435040f1492d",
     "date": "2026-11-28"
   },
   "/journal/taiwan/": {
-    "hash": "e99e400a681dfc45e2fc1087304191251cc4bacda0a1edafed0fea55b095ca9c",
+    "hash": "b27d3ea9c1f84ed72ee0674c63482950418c804a9b4ca2705e339829e24b3c48",
     "date": "2026-11-28"
   },
   "/journal/italy/": {
-    "hash": "7e47bf4dea50c5029b1875ace64e060dff439a154d58e80c1f05e0b44cb901c7",
+    "hash": "9807a2b2aa836f4db9f254dcc3d564af07195862acdffd952892df4358e03488",
     "date": "2026-11-28"
   },
   "/journal/italy/page/2/": {
-    "hash": "ee14d112ddfe6e98568727ca85be58c2f198878cd02ae211002a16976f5c347b",
+    "hash": "8855439e034fab6d836f1f0f0c26c1d574e74db5502614d62abaf5ffe78c3383",
     "date": "2026-11-28"
   },
   "/journal/italy/page/3/": {
-    "hash": "fdc282e60832d0cc3c36ecfc1200a92014cb73435f064839f273e1ee9cc6b09a",
+    "hash": "125d5bf6c6fa6ae8f19c0862d5c8d0bc5285a441d89ca9e091b3078a25cbba1c",
     "date": "2026-11-28"
   },
   "/journal/spain/": {
-    "hash": "4657d21e6d656eee89080d1ef8db92831913d4f7d92ae80a2cefbecb7bb64b89",
+    "hash": "8d457e6f6599c18b3a559554dd674d51980e9d00a8428aecc14ea21c0c56178b",
     "date": "2026-11-28"
   },
   "/journal/france/": {
-    "hash": "673835ff62fb6f3c9889d160e69260ae67ea077e70c478fba23bf3884cdaae0e",
+    "hash": "c76db568b7ffd1f2df82dcdd980dd8a394832fa24433d4c5d7029e7c39dee9c7",
     "date": "2026-11-28"
   },
   "/journal/portugal/": {
-    "hash": "5759607911defe8a8d21b1290349ace0f21bff66eb0fa36e298c5b142369e8d7",
+    "hash": "90dd7540a056de11ea7428589c86fbe68a70ad7c30cb6d9fa7b334ede51a3def",
     "date": "2026-11-28"
   },
   "/journal/austria/": {
-    "hash": "3b679ee5128ee54426c99fb66731da2ccc539df88107e181c6bd8bed3f983d5b",
+    "hash": "b1b34f73994a422aa895e1eb1e0dd8bb646f7e91e9f464fbe6236d3813735680",
     "date": "2026-11-28"
   },
   "/journal/norway/": {
-    "hash": "6a2e9230a03de648a6a7badf1e946583b829e4842b190e00e842f82528ba934b",
+    "hash": "d107076d909ee253e7ef18f354887c71647a348d2719371fc6656eb7645e2a8e",
     "date": "2026-11-28"
   },
   "/journal/norway/page/2/": {
-    "hash": "7b002b93a00ee66783b77c6647f2cbc94d256d60fdaa192b20b4b6bd455e090b",
+    "hash": "232a8a3666752c4bbba089033aa51e6b41df4b102edc8328c3b165a3bb569027",
     "date": "2026-11-28"
   },
   "/journal/norway/page/3/": {
-    "hash": "1fe7709ee55da8ef9994bd5422af9d1752454256f26140af6f1a318108ad4669",
+    "hash": "dd3f86d6bedba5032fe1dc809902ce9b546bf7d45e1baab1328e41f99b55ae60",
     "date": "2026-11-28"
   },
   "/journal/vatican/": {
-    "hash": "44eda6c9fb9539b86d970e38d88850ff4b2dc0de0c085ad8ab3c6962836dc502",
+    "hash": "7fb10c5c160624070d2ed7d441290687a15a5d5098537a42831663b9baf00b5d",
     "date": "2026-11-28"
   },
   "article:dolomiti-winter": {
@@ -960,7 +960,7 @@
     "date": "2026-11-28"
   },
   "article:secession": {
-    "hash": "11d2eede6339cac3258f54a17741f5c0d2f4df965f5c715c26f3c6dba5f00087",
+    "hash": "e94f3c086ea1c1d5f323041a25fb04212b83fc693b3786a27790925cfd401d8f",
     "date": "2026-11-28"
   },
   "article:hundertwasser": {
@@ -968,8 +968,8 @@
     "date": "2026-11-28"
   },
   "article:belvedere": {
-    "hash": "0a6c4584779ca7e89acf73f7c7f83ea91b3ce2424a688cba473a797f2aecbe19",
-    "date": "2026-11-25"
+    "hash": "390f397d1e79eec98904b3d8dc6ad3c45ec27c7d9dce201d697f1f939df2f813",
+    "date": "2026-11-28"
   },
   "article:aufzug-cafe": {
     "hash": "767d24aaba3aca50e88edb4cf8af5bbd793bd6205bf08724ec5663efbe3a7863",
@@ -1212,39 +1212,39 @@
     "date": "2026-11-27"
   },
   "/series/heritage/": {
-    "hash": "c2ca452a7985e1318cffd52e6a58174a56e90dde4bde9a318d4ab8b0baf0b3b6",
-    "date": "2026-11-25"
+    "hash": "86c599949aac5cd54403f707ba39bb6ddc3b38ffe7b27f03514fcbb4a9b412f8",
+    "date": "2026-11-28"
   },
   "/series/christmas-markets/": {
-    "hash": "7035495460bd9846b23585364f9159579856c48c4f21e405f73ff7375d57985e",
+    "hash": "f926e02ea4d33e3eb04cf3e37dd993763613546b1950445a7cc3c4accd3321ed",
     "date": "2026-11-28"
   },
   "/series/pilgrimage/": {
-    "hash": "4f816c0388b800b0b2df9f884374b8921a94a43ef34c863d023eae07adffc7f3",
-    "date": "2026-11-25"
+    "hash": "88406be56298dfa7b65c025169d3c8eed7938ae2d6ece42d983dfcc7a2a88d64",
+    "date": "2026-11-28"
   },
   "/series/day-trips/": {
-    "hash": "24a5f407a47620ae4f2ab80b54c0e824b9a34471bfffc68b5c920bce024c2943",
-    "date": "2026-11-27"
+    "hash": "50b4d6aeca4773aafda1288d5524b3d4bda9c34ef82f1a75fbe98b4c759ade26",
+    "date": "2026-11-28"
   },
   "/series/odd-places/": {
-    "hash": "7f3fec791a3e390b751f9922d766cacd3ef22effab12a64afc1766ff567c9de5",
+    "hash": "608b67af1f37852d36c8b118973e4cab247220a5f80a4c3e20e2d2a9c803aadf",
     "date": "2026-11-28"
   },
   "/series/roman-legacy/": {
-    "hash": "c7991f4180041af5d13632bdfc6454fe33ddcf6c8ad1edb798e08e7175a93ee1",
-    "date": "2026-11-25"
+    "hash": "fe83d6c34a630f66592d3d8608c2c9ea499e5460c06d4ac025424b0565869ca6",
+    "date": "2026-11-28"
   },
   "/series/": {
-    "hash": "3894986e0e066282bc3f85aa96c28f3afa741d33050fe70864ddcc1daccab8db",
-    "date": "2026-11-25"
+    "hash": "ee0db5a66b34130e2605e5b33f92fed9e1ecf7ae29a3d75d71a2f403d7c888c6",
+    "date": "2026-11-28"
   },
   "/journal/page/11/": {
-    "hash": "bd81ec3aa2006c719c8b67a176e16aa2a24066d383e6035cdec4fc4b073b7f8b",
+    "hash": "9b7f8975773be431ee3958b4c4a5bdf53f4ac8cf0224bb137ad251e11be842bf",
     "date": "2026-11-28"
   },
   "/journal/germany/": {
-    "hash": "8d74105923b451f9b2490473f3ff8a8f8156163a17e70308362180d976db22ca",
+    "hash": "22f884d9a36465520c6d359cccc82b0ad88dfd24721dff09f4fd1b28c02c11ff",
     "date": "2026-11-28"
   },
   "news:naha-shuri-castle-seiden-restored-2026": {
@@ -1256,7 +1256,7 @@
     "date": "2026-11-26"
   },
   "/journal/japan/page/4/": {
-    "hash": "1131c1f13022e8be5ecb6b84ec2b3ee8a04f5cbc306c6f5b1065097a78711707",
+    "hash": "7c64960f9c5e7f16d271fcecb70cf4762c4da289fc3fa8e3533624a5e995d63a",
     "date": "2026-11-28"
   },
   "news:brussels-kanal-centre-pompidou-museum-2026": {
@@ -1268,15 +1268,15 @@
     "date": "2026-11-28"
   },
   "/journal/page/12/": {
-    "hash": "b0f8e75e53c766477604d908835f3ad3361640fa20f03f3388f33c338c4db1e2",
+    "hash": "571427db73874a000ebd0c77d18e8cbecdb26ce65c54b4b162aa6e05131bcc6c",
     "date": "2026-11-28"
   },
   "/journal/hungary/": {
-    "hash": "36200c35f37a7b3921e15320f9c1daf0c86c0cf81a459abf966db18cb8ed2dd4",
+    "hash": "4b8ae07f55008f5acf1abf94417770e660a2353f14d0430bbc8d248cabc1b40f",
     "date": "2026-11-28"
   },
   "/journal/austria/page/2/": {
-    "hash": "ef8009b0e6eee22864cb5721bf0d2e7fb11036d6eaf62c1ae5934a5882924930",
+    "hash": "c82da31e35455d04604e8a42f8f3c305f9489c02e27bada75ee8188933ef2ec1",
     "date": "2026-11-28"
   },
   "news:london-museum-smithfield-market-2026": {
@@ -1288,7 +1288,15 @@
     "date": "2026-11-28"
   },
   "/journal/page/13/": {
-    "hash": "f23c83ed1f5197f6fdfe5db68434ecf312b3a51b8f0c8623e17e4df3266c7b6c",
+    "hash": "09e369dec49317e5ce7d981507add2b5ab05c2bd1237d376f92ed98b4763e64f",
+    "date": "2026-11-28"
+  },
+  "article:belvedere-klimt": {
+    "hash": "e0fb71de3dfa000c21c36927423d5ea6e7ee6b0050caed1edbf155eceb19f81c",
+    "date": "2026-11-28"
+  },
+  "/stories/belvedere-klimt/": {
+    "hash": "f36a7c8d4b062f04af3f9c3dbc488a7eeccea00f5395d897d2d62286c61887c5",
     "date": "2026-11-28"
   }
 }

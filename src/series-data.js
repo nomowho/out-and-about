@@ -44,7 +44,7 @@ const SERIES = [
   { id:'christmas-markets', theme:true, card:'img/vienna-christmas/series-card.jpg', pageImage:'img/vienna-christmas/series-wide.jpg', t:'聖誕市集特輯', en:'CHRISTMAS', tag:'十二月，往中歐走', img:'vienna-christmas',
     d:'維也納、薩爾茲堡、科莫，十二月的中歐一路逛下去。',
     intro:'十二月的中歐，天黑得早，市集的燈亮得也早。從維也納市政廳前的聖誕市集、薩爾茲堡的老城、跨年夜的哈修塔特，到國王湖、科莫湖畔的光雕和布達佩斯，這個系列收錄我在聖誕季走過的地方，順便把附近值得一去的美術館、圖書館和咖啡館也放進來。',
-    ids:['vienna-christmas','salzburg','hallstatt','como-christmas','koenigssee','eiskapelle','dolomiti-winter','vienna-library','secession','belvedere','hundertwasser','aufzug-cafe','budapest-parliament','szentendre'] },
+    ids:['vienna-christmas','salzburg','hallstatt','como-christmas','koenigssee','eiskapelle','dolomiti-winter','vienna-library','secession','belvedere','belvedere-klimt','hundertwasser','aufzug-cafe','budapest-parliament','szentendre'] },
   { id:'pilgrimage', theme:true, card:'img/hotei-daibutsu/cover.jpg', t:'向神明借點運氣', en:'PILGRIMAGE', tag:'東方許願，西方朝聖', img:'yamadera',
     d:'從山寺的千階石梯到羅馬的聖階，各地的人都在求點什麼。',
     intro:'在日本，大家去神社求金運、求姻緣；在歐洲，信徒跪著爬上羅馬的聖階，等二十五年才開一次的聖門。這個系列收錄我走過的寺廟、神社和教堂：山寺、出雲大社、金蛇水神社、三德山投入堂，聖家堂、聖伯多祿大殿和葡萄牙的朝聖所。不一定要有信仰，走一趟也好。',

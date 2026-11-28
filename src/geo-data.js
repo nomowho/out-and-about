@@ -78,7 +78,7 @@ const CITIES = [
   // 奧地利
   { id:'salzburg', zh:'薩爾茲堡', en:'Salzburg', region:'Austria', lat:47.8, lng:13.044, posts:['salzburg'] },
   { id:'hallstatt', zh:'哈修塔特', en:'Hallstatt', region:'Austria', lat:47.562, lng:13.649, posts:['hallstatt'] },
-  { id:'wien', zh:'維也納', en:'Vienna', region:'Austria', lat:48.208, lng:16.373, posts:['vienna-christmas','vienna-library','secession','hundertwasser','belvedere','aufzug-cafe'] },
+  { id:'wien', zh:'維也納', en:'Vienna', region:'Austria', lat:48.208, lng:16.373, posts:['vienna-christmas','vienna-library','secession','hundertwasser','belvedere','belvedere-klimt','aufzug-cafe'] },
   // 德國
   { id:'koenigssee', zh:'國王湖', en:'Königssee', region:'Germany', lat:47.553, lng:12.977, posts:['koenigssee','eiskapelle'] },
   // 匈牙利

@@ -550,6 +550,276 @@
       "height": 405
     }
   ],
+  "img/belvedere-klimt.jpg": [
+    {
+      "file": "5ab1d5e4b0e5cf70.webp",
+      "width": 480,
+      "height": 852
+    },
+    {
+      "file": "c74be3f8092b5a1b.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/belvedere-klimt/adele2.jpg": [
+    {
+      "file": "4805478e8dad1ce1.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "1b1eff9c0052d6d7.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere-klimt/bride.jpg": [
+    {
+      "file": "0d51a7d756e9cde6.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "2c0b8fbe9a98d1a7.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere-klimt/cover.jpg": [
+    {
+      "file": "9e4f3e0408a530c0.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/belvedere-klimt/crowd.jpg": [
+    {
+      "file": "f92d273d7c24c2bc.webp",
+      "width": 720,
+      "height": 428
+    }
+  ],
+  "img/belvedere-klimt/fritza.jpg": [
+    {
+      "file": "bb5ca97aac7f9ac6.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "e725e271af81a0fb.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere-klimt/judith.jpg": [
+    {
+      "file": "31b87b7ead7b2ad6.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere-klimt/schiele.jpg": [
+    {
+      "file": "71efccf452319713.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere-klimt/sunflower.jpg": [
+    {
+      "file": "ce378445ad92f065.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere-klimt/white.jpg": [
+    {
+      "file": "6fb6963a57b3cad1.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "bca2037303c59639.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere.jpg": [
+    {
+      "file": "56ce9d36fd388ce0.webp",
+      "width": 480,
+      "height": 852
+    },
+    {
+      "file": "29bfdea0dd42cffa.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/belvedere/atlas.jpg": [
+    {
+      "file": "56806eb443e3035d.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "38d8fb6f25940b46.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere/axis.jpg": [
+    {
+      "file": "1584d68ab3586e8d.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/belvedere/ceiling.jpg": [
+    {
+      "file": "4c78febdf3c2af0b.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/belvedere/cover.jpg": [
+    {
+      "file": "814042a48fa672bf.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/belvedere/gallery.jpg": [
+    {
+      "file": "e3e8fd9d381092fd.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "947c25c479d87e62.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere/gate.jpg": [
+    {
+      "file": "619718fe53a638ba.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/belvedere/iron.jpg": [
+    {
+      "file": "d344947ae182c3c9.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "fae024b939917d03.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere/lion.jpg": [
+    {
+      "file": "99074161990ae9c6.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "a31b41c781893487.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere/lower.jpg": [
+    {
+      "file": "98692d998a3ba75f.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/belvedere/marble.jpg": [
+    {
+      "file": "2b43af3f411c0cc9.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/belvedere/napoleon.jpg": [
+    {
+      "file": "b9f09e0413824266.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere/pavilion.jpg": [
+    {
+      "file": "eb071babfb15ec25.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/belvedere/roof.jpg": [
+    {
+      "file": "1479b4432bffb04a.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/belvedere/spider.jpg": [
+    {
+      "file": "05d2aac11196e8f1.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
+  "img/belvedere/stair.jpg": [
+    {
+      "file": "f3725baa57b720c5.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "58f21f88b7141521.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere/sun.jpg": [
+    {
+      "file": "ff040f1e38160362.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/belvedere/view.jpg": [
+    {
+      "file": "260d27ddc814e4c4.webp",
+      "width": 720,
+      "height": 406
+    }
+  ],
+  "img/belvedere/visitor.jpg": [
+    {
+      "file": "edb444f4a5b6e770.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "file": "4ae3a2667e9828ee.webp",
+      "width": 720,
+      "height": 960
+    }
+  ],
+  "img/belvedere/window.jpg": [
+    {
+      "file": "cf8c1a20de528a22.webp",
+      "width": 720,
+      "height": 1278
+    }
+  ],
   "img/bergen/avenue.jpg": [
     {
       "file": "d7e570c40724ef70.webp",
