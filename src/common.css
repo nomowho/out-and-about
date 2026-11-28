@@ -621,6 +621,7 @@ a.morebtn{display:flex;flex-direction:column;align-items:center;text-decoration:
 .nw{font:inherit!important;display:inline!important;margin:0!important;letter-spacing:inherit!important;color:inherit!important;text-transform:inherit!important}
 /* /stories/ 手機版（Nomo 11-19，參考 Casa BRUTUS）：每 6 篇一組，第一篇直式滿版大圖，接 5 篇左圖右字小卡 */
 #all .ini{display:none}
+#all .ini::before{content:attr(data-i)}   /* 首字徽章用 CSS 產生：純文字擷取（AI 爬蟲）不會讀到 NNATURE */
 @media(max-width:700px){
   #all{display:block}
   #all>.card{display:grid;grid-template-columns:44% auto 1fr;grid-template-rows:auto 1fr;grid-template-areas:"f i c" "f h h";column-gap:0;margin:0 0 30px;align-items:start}

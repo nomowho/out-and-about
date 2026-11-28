@@ -83,5 +83,29 @@
       event('recommendation_click', values);
     }
     try { var u = new URL(a.href); if (u.hostname === 'instagram.com' || u.hostname === 'www.instagram.com') event('instagram_click', { article_path: source, link_url: destination(a) }); } catch (_) {}
+    if (typeof a.closest !== 'function') return;
+    try {
+      // Table-of-contents jumps: which sections readers actually want.
+      var anchor = a.getAttribute && a.getAttribute('href') || '';
+      if (anchor.charAt(0) === '#' && anchor.length > 1 && a.closest('.toc')) event('toc_click', { article_path: source, section_id: anchor.slice(1, 61) });
+      // Clicks on cited sources (article Sources, news original, travel-note sources). Sends origin + path only.
+      if (a.closest('.refs, .travel-sources, .source')) {
+        var out = new URL(a.href);
+        if (out.hostname !== location.hostname) event('outbound_source_click', { article_path: source, link_url: out.origin + out.pathname, link_domain: out.hostname });
+      }
+    } catch (_) {}
+  });
+  // Site search ("找文章"): one event per settled query, with the result count so zero-result topics show up as gaps.
+  var searchTimer = 0, lastSearch = '';
+  document.addEventListener('input', function (e) {
+    var input = e.target; if (!input || input.id !== 'story-query') return;
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(function () {
+      var term = String(input.value || '').replace(/\s+/g, ' ').trim().slice(0, 50);
+      if (term.length < 2 || term === lastSearch) return;
+      lastSearch = term;
+      var status = document.querySelector('#search-status'), found = status && /(\d+)/.exec(status.textContent || '');
+      event('site_search', { search_term: term, result_count: found ? Number(found[1]) : undefined });
+    }, 1200);
   });
 }());

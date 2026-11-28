@@ -281,7 +281,7 @@ function withSignoff(htmls, related = []) {
   while (i > 0 && /^<p>→/.test(htmls[i - 1])) i--;
   return [...htmls.slice(0, i), SIGNOFF, readingLinks(htmls.slice(i), related)].join('');
 }
-function relatedPosts(p) {
+function relatedPosts(p, n = 3) {
   const cats = new Set([p.cat, ...(p.extraCats || [])].filter(Boolean));
   const candidates = POSTS.filter(x => x.id !== p.id && POST_DETAIL[x.id]);
   const rank = x => {
@@ -292,7 +292,7 @@ function relatedPosts(p) {
   };
   // 同分以文章組合輪替，避免每篇永遠只推同樣三篇。
   const tie = x => { let h = 0; for (const ch of p.id + '/' + x.id) h = (Math.imul(h, 31) + ch.charCodeAt(0)) >>> 0; return h; };
-  return candidates.sort((a, b) => rank(b) - rank(a) || tie(a) - tie(b)).slice(0, 3);
+  return candidates.sort((a, b) => rank(b) - rank(a) || tie(a) - tie(b)).slice(0, n);
 }
 
 function layoutSides(body) {
@@ -359,7 +359,7 @@ for (const p of POSTS) {
   const title = d.seoTitle || p.title, desc = cut(d.dek, 155);
   const cover = d.cover || null;
   const images = [cover, ...d.body.flatMap(b => b.src ? [b.src] : (b.imgs || []).flat())].filter(Boolean);
-  const related = relatedPosts(p);
+  const relatedPool = relatedPosts(p, 12), related = relatedPool.slice(0, 3);   // 文字版「接著讀」用前 3 篇；文末卡片改推排名接著的另外 3 篇（11-28，避免兩處推薦同一組）
   const head = `
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a><i>›</i><a href="${url.cat(p.cat)}">${p.cat}</a><i>›</i><a href="${url.dest(p.region)}">${REGION_ZH[p.region] || p.region}</a></nav>
       <div class="meta"><a href="${url.cat(p.cat)}">${p.cat}</a><span>· ${areaEn(p)}</span><time datetime="${iso(p.date)}">${p.date}</time></div>
@@ -373,21 +373,24 @@ for (const p of POSTS) {
       ? `<section class="split"><header class="ahead">${head}</header><figure>${img(cover, d.coverCap || p.zh, { lazy: false, sizes: '(max-width:900px) 100vw, 44vw' })}${d.coverCap ? `<figcaption>${d.coverCap}</figcaption>` : ''}</figure></section>`
       : `<div class="cover">${img(cover, d.coverCap || p.zh, { lazy: false, sizes: '100vw' }).replace('<img ', (d.coverPos || Number.isFinite(d.coverSaturation)) ? `<img style="${d.coverPos ? `object-position:${d.coverPos};` : ''}${Number.isFinite(d.coverSaturation) ? `filter:saturate(${d.coverSaturation});` : ''}" ` : '<img ')}</div>${d.coverCap ? `<p class="covercap">${d.coverCap}</p>` : ''}<header class="ahead">${head}</header>`;
   const heads = d.body.filter(b => b.t === 'h');
+  const bodyHtml = withSignoff(layoutSides(d.body).map(block), related);
+  const linkedInText = new Set([...((bodyHtml.match(/<nav class="related-reading"[\s\S]*?<\/nav>/) || [''])[0]).matchAll(/href="(?:https:\/\/nomowho\.com)?\/stories\/([^/"?#]+)\//g)].map(m => m[1]));
+  const moreCards = relatedPool.filter(x => !linkedInText.has(x.id)).slice(0, 3);
   const main = `<article>${top}
       <nav class="toc" id="contents" aria-label="目次"><details class="in"><summary><h2>CONTENTS 目次</h2><span class="toc-action" aria-hidden="true"></span></summary><ol>
         ${heads.map(b => `<li><a href="#${b.id}">${b.text}</a></li>`).join('')}
         ${d.info ? '<li><a href="#info">旅行資訊</a></li>' : ''}${d.faq ? '<li><a href="#qa">常見問題</a></li>' : ''}${d.sources ? '<li><a href="#sources">資料來源</a></li>' : ''}
       </ol></details></nav>
-      <div class="body">${withSignoff(layoutSides(d.body).map(block), related)}</div>
+      <div class="body">${bodyHtml}</div>
       ${d.info ? `<section class="info" id="info"><div class="in"><h2><span class="en">Travel Info</span><span>旅行資訊</span></h2><dl>${d.info.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="note">開放時間與費用可能調整，出發前請以官方公告為準。</p></div></section>` : ''}
       ${d.faq ? `<section class="qa" id="qa"><h2><span class="en">Q&amp;A</span><span>常見問題</span></h2><dl>${d.faq.map(([q, a]) => `<dt>${q}</dt><dd>${a}</dd>`).join('')}</dl></section>` : ''}
       ${d.sources ? `<section class="refs" id="sources"><h2><span class="en">Sources</span><span>資料來源</span></h2><ol>${d.sources.map(([t, h, note]) => `<li><a href="${h}" target="_blank" rel="noopener">${t}</a>${note ? `<span>${note}</span>` : ''}</li>`).join('')}</ol></section>` : ''}
       ${authorBox(!!d.sources)}
       <aside class="orig"><div class="in"><p><b>ORIGINALLY ON INSTAGRAM</b>這篇最早以圖卡形式發在 @nomowho，網站版補上了交通、時間與常見問題。</p><a href="${p.ig ? `https://www.instagram.com/nomowho/p/${p.ig}/` : 'https://www.instagram.com/nomowho/'}" target="_blank" rel="noopener">看 IG 原貼文</a></div></aside>
     </article>
-    ${related.length ? `<section class="more"><div class="box">
+    ${moreCards.length ? `<section class="more"><div class="box">
       <div class="sh"><h2>More Stories</h2><span>接著讀</span></div>
-      <div class="grid">${related.map(x => postCard(x, { place: false, land: true })).join('')}</div>
+      <div class="grid">${moreCards.map(x => postCard(x, { place: false, land: true })).join('')}</div>
     </div></section>` : ''}`;
   const u = url.post(p.id);
   const ld = [
@@ -476,6 +479,7 @@ newsAll.forEach(n => {
   const modified = dates[key].date;
   const heads = g.body.filter(b => b.t === 'h');
   const related = g.related.map(id => byId[id]).filter(Boolean);
+  const guideMore = relatedPosts({ id: 'aomori-winter', region: 'Japan', area: '青森', cat: 'GUIDE', extraCats: ['NATURE', 'ART'] }, 12).filter(x => !related.some(r => r.id === x.id)).slice(0, 3);   // 文字版已列出 6 篇親訪文，卡片改推同國家的其他文章（11-28）
   const main = `<article>
     <section class="split"><header class="ahead">
       <nav class="crumb" aria-label="位置"><a href="/">TOP</a><i>›</i><a href="/category/guide/">GUIDE</a><i>›</i><span>青森冬季行程</span></nav>
@@ -487,7 +491,7 @@ newsAll.forEach(n => {
     <div class="body">${g.body.map(block).join('')}${readingLinks([], related)}</div>
     <section class="refs" id="sources"><h2><span class="en">Sources</span><span>官方資料</span></h2><ol>${g.sources.map(([label, href]) => `<li><a href="${esc(href)}" target="_blank" rel="noopener">${esc(label)}</a><span>查閱日期 ${g.checked}</span></li>`).join('')}</ol></section>
     <aside class="author" aria-label="關於作者"><b>行程整理・攝影｜Nomo</b><p>本頁為冬季行程建議，搭配作者的親訪文章與照片；交通、開館資訊的出處列於上方「官方資料」。</p><a href="/about/">關於 Out and About ›</a></aside>
-  </article><section class="more"><div class="box"><div class="sh"><h2>More Stories</h2><span>各景點親訪文章</span></div><div class="grid">${related.slice(0,3).map(p => postCard(p,{place:false,land:true})).join('')}</div></div></section>`;
+  </article><section class="more"><div class="box"><div class="sh"><h2>More Stories</h2><span>接著讀</span></div><div class="grid">${guideMore.map(p => postCard(p,{place:false,land:true})).join('')}</div></div></section>`;
   page({file:'guides/aomori-winter/index.html',title:g.title+'｜Out and About',desc:g.dek,canonical:u,type:'article',image:abs('/'+g.cover),style:'post',nav:'GUIDE',main,progress:true,
     extraHead:`<meta property="article:published_time" content="${g.published}">\n<meta property="article:modified_time" content="${modified}">\n`,
     ld:[{'@context':'https://schema.org','@type':'Article','@id':abs(u)+'#article',headline:g.title,description:g.dek,image:[g.cover,...g.body.filter(b=>b.src).map(b=>b.src)].map(s=>abs('/'+s)),datePublished:g.published,dateModified:modified,inLanguage:'zh-Hant-TW',author:PERSON,publisher:ORG,mainEntityOfPage:{'@type':'WebPage','@id':abs(u)},articleSection:'GUIDE 指南'},crumbLd([['Out and About','/'],['GUIDE','/category/guide/'],['青森冬季行程',u]])]});
@@ -578,7 +582,7 @@ for (const r of regions) {
   const ld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': abs(u), name: '依國家找旅行', description: desc, inLanguage: 'zh-Hant-TW', isPartOf: { '@id': abs('/#website') },
     mainEntity: listLd('國家', cards.map(c => ({ u: url.dest(c.r), n: `${REGION_ZH[c.r]}旅行` }))) }, crumbLd([['Out and About', '/'], ['DESTINATIONS', u]])];
   page({ file: 'destinations/index.html', title: `依國家找旅行｜${cards.length} 個國家｜Out and About`, desc, canonical: u, image: ogImg(cards[0].lead), style: 'category', nav: 'COUNTRIES', main, ld,
-    extraHead: '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>\n' });
+    extraHead: '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>\n<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>\n' });
   sitemap.push({ loc: u, lastmod: BUILD_DATE, images: [] });
 }
 
@@ -712,7 +716,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
 <section class="cty" aria-label="走過的國家">
   <div class="box"><div class="sh"><h2>Countries</h2></div></div>
   <div class="cty-wrap"><div class="cty-track">${CTY_PICS.map(([r, src, pos]) => { const n = POSTS.filter(p => p.region === r).length; return `
-    <a class="ct" href="${url.dest(r)}"><figure>${img(src, REGION_ZH[r], { small: true, sizes: '280px' }).replace('<img ', `<img style="object-position:${pos}" `)}</figure><b>${REGION_ZH[r]}</b><span>${r.toUpperCase()} · ${n} ${n === 1 ? 'STORY' : 'STORIES'}</span></a>`; }).join('')}</div></div>
+    <a class="ct" href="${url.dest(r)}"><figure>${img(src, '', { small: true, sizes: '280px' }).replace('<img ', `<img style="object-position:${pos}" `)}</figure><b>${REGION_ZH[r]}</b><span>${r.toUpperCase()} · ${n} ${n === 1 ? 'STORY' : 'STORIES'}</span></a>`; }).join('')}</div></div>
 </section>
 
 <section class="dest box" id="dest">
@@ -805,7 +809,7 @@ for (const [oldCat, newCat] of [['faith', 'history']]) {
       : postCard(p, { cls: 'port' })).replace('<a class="card', `<a data-search="${esc([p.title, p.zh, p.area, p.region, REGION_ZH[p.region], strip(POST_DETAIL[p.id].dek)].join(' '))}" data-area="${[p.cat, ...(p.extraCats || [])].map(k => k.toLowerCase()).join(' ')}" class="card`)
       .replace(' loading="lazy"', i === 0 ? ' fetchpriority="high"' : ' loading="lazy"')
       .replace(/<h3>/g, '<h2>').replace(/<\/h3>/g, '</h2>')
-      .replace('<div class="meta"><span class="cat">', `<div class="meta"><b class="ini" aria-hidden="true">${p.cat[0]}</b><span class="cat">`)
+      .replace('<div class="meta"><span class="cat">', `<div class="meta"><b class="ini" aria-hidden="true" data-i="${p.cat[0]}"></b><span class="cat">`)
       .replace(/(max-width:(?:560|700)px) calc(100vw - 40px)/, '(max-width:700px) 45vw') /* 手機統一小圖（Nomo 11-20），不再每 6 篇一張大圖 */).join('');
     const main = `
     <section class="top jtop"><div class="box">

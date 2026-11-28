@@ -35,4 +35,22 @@ assert.equal(defaults[1].page_location,'https://nomowho.com/stories/the-twist/')
 assert.equal(defaults[1].allow_google_signals,false);
 assert.equal(defaults[1].allow_ad_personalization_signals,false);
 assert(startupEntries.indexOf(defaults)<startupEntries.findIndex(a=>a[0]==='js'));
+
+// New events (11-28): table-of-contents jumps, source clicks, site search.
+{
+ const q=run();q.raf.shift()();q.raf.shift()();const ev=()=>q.ctx.dataLayer.map(a=>Array.from(a));
+ const mk=(href,attr,closestHit)=>({href,getAttribute:()=>attr,closest:sel=>closestHit(sel)?{}:null});
+ q.clicks.click({target:{closest:()=>mk('https://nomowho.com/stories/the-twist/#qa','#qa',s=>s==='.toc')}});
+ assert.equal(ev().filter(a=>a[1]==='toc_click').length,1);assert.equal(ev().find(a=>a[1]==='toc_click')[2].section_id,'qa');
+ q.clicks.click({target:{closest:()=>mk('https://www.example.org/report?token=secret#x','https://www.example.org/report?token=secret#x',s=>/refs/.test(s))}});
+ const oc=ev().find(a=>a[1]==='outbound_source_click');assert(oc,'source click event');assert.equal(oc[2].link_url,'https://www.example.org/report');assert.equal(oc[2].link_domain,'www.example.org');assert(!JSON.stringify(ev()).includes('token=secret'));
+ q.clicks.click({target:{closest:()=>mk('https://nomowho.com/about/','/about/',s=>/refs/.test(s))}});
+ assert.equal(ev().filter(a=>a[1]==='outbound_source_click').length,1,'internal links are not source clicks');
+ const before=q.timers.length;
+ q.clicks.input({target:{id:'story-query',value:'  冰 教堂 '}});q.timers.at(-1)();
+ const ss=ev().find(a=>a[1]==='site_search');assert(ss,'site_search event');assert.equal(ss[2].search_term,'冰 教堂');
+ q.clicks.input({target:{id:'story-query',value:'冰 教堂'}});q.timers.at(-1)();assert.equal(ev().filter(a=>a[1]==='site_search').length,1,'same term is not resent');
+ q.clicks.input({target:{id:'story-query',value:'a'}});q.timers.at(-1)();assert.equal(ev().filter(a=>a[1]==='site_search').length,1,'one-character terms are ignored');
+ q.clicks.input({target:{id:'other',value:'abc'}});assert.equal(q.timers.length,before+3,'other inputs do not start a search timer');
+}
 console.log('PASS GA4: sanitised URLs, depth deduplication, visible recommendations, normal links, deferred tag, DNT/GPC and preview exclusion');
